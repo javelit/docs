@@ -179,6 +179,7 @@ site_menu:
   - category: Develop / API reference / Text elements / st.latex
     url: /develop/api-reference/text/st.latex
     isVersioned: true
+    visible: false
   - category: Develop / API reference / Text elements / st.text
     url: /develop/api-reference/text/st.text
     isVersioned: true

@@ -21,11 +21,17 @@ const Code = ({ code, children, language, img, lines }) => {
 
   useEffect(() => {
     // Get the language from the className, if it exists.
-    // Classname usually is `language-python`, `language-javascript`, `language-bash`, etc.
+    // Classname usually is `language-java`, `language-python`, `language-javascript`, `language-bash`, etc.
     let importLanguage = children.props.className?.substring(9);
 
-    // If no language, default to Phython
-    if (importLanguage === undefined || importLanguage === "undefined") {
+    // If no language, default to Java
+    if (
+      importLanguage === undefined ||
+      importLanguage === "undefined" ||
+      importLanguage === "java"
+    ) {
+      importLanguage = "java";
+    } else if (importLanguage === "python") {
       importLanguage = "python";
     }
     // Default `sh` language to `bash` for Prism import, since we use `sh` throughout our codebase but it's not a proper Prism import

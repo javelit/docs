@@ -1,4 +1,4 @@
-# Streamlit Docs
+# Jeamlit Docs
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1ddc1b5a-ec21-4b66-987d-feeb68854c28/deploy-status?branch=main)](https://app.netlify.com/sites/streamlit-docs/deploys)
 
@@ -32,7 +32,7 @@ Make sure you have [`npm`](https://docs.npmjs.com/downloading-and-installing-nod
 ### 2. Clone this repo:
 
 ```bash
-git clone https://github.com/streamlit/docs.git
+git clone https://github.com/cyrilou242/jeamlit-docs.git
 cd docs/
 ```
 
@@ -67,9 +67,11 @@ This repo follows a typical Next.js project structure. To contribute, you'll onl
 
 To add, edit, or delete content in our documentation, you have to modify Markdown (`.md`) files within folders and sub-folders in `content/` :
 
+- `deploy/` Contains `.md` files that populate the Deploy section.
+- `develop/`Contains `.md` files that populate the Develop section.
+- `get-started/`Contains `.md` files that populate the Get Started section.
 - `kb/` Contains `.md` files that populate the Knowledge Base.
-- `library/` Contains `.md` files that populate the Streamlit Library section.
-- `streamlit-cloud/`Contains `.md` files that populate the Streamlit Community Cloud section.
+- `cookie-settings.md` You'll never have to edit this file.
 - `gdpr-banner.md` You'll never have to edit this file.
 - `index.md` Contains text that populates the index page.
 - `menu.md` This is a special file containing only front matter that defines the docs Menu. You will need to add an entry on this file for each new page you create within the docs' site.
@@ -80,7 +82,7 @@ The directory structure of `content/` does not matter as the files will be recur
 
 Do you want to add a new page to the docs?
 
-1. First, decide which section the page should live in (Streamlit Library, Streamlit Community Cloud, or Knowledge Base).
+1. First, decide which section the page should live in (Deploy, Develop, Get Started or Knowledge Base).
 
 2. Next, navigate to the relevant folder and subfolder within `content/` and create a `.md` file whose filename mirrors the title of the page. E.g. For a page titled "Create a component", navigate to `content/develop/concepts/custom-components/` and create a file named `create-component.md`.
 
@@ -128,14 +130,18 @@ Create a header with `st.header`.
 Embed code blocks like so:
 
 ````markdown
-    ```python
-    import streamlit as st
+    ```java
+    import tech.catheu.jeamlit.core.Jt;
 
-    st.text("Hello world")
+    public class TestApp {
+        public static void main(String[] args) {
+            Jt.code("some code").use();
+        }
+    }
     ```
 ````
 
-We support syntax highlighting for Python, Bash, TOML, SQL, and JSX.
+We support syntax highlighting for Java, Python, Bash, TOML, SQL, and JSX.
 
 **Link to other pages in docs:**
 
@@ -198,7 +204,7 @@ To preview your changes, refresh your browser tab and visit the edited page!
 
 ### Add a new docstring to the API Reference
 
-Any time a new version of Streamlit is released, the docstrings stored in `python/streamlit.json` have to be updated by running `make docstrings` . This will build the necessary Docker image, and update the file with the documentation for the latest release on PyPi.
+Any time a new version of Streamlit is released, the docstrings stored in `python/streamlit.json` have to be updated by running `make docstrings` . This will build the necessary Docker image, and update the file with the documentation from the latest release on PyPi.
 
 If you need to regenerate all function signatures, across all versions, delete the content in `python/streamlit.json`, leaving the file in place, and run `make docstrings`. This will systematically install each version of streamlit, and generate the necessary function signatures in `streamlit.json`.
 
@@ -217,7 +223,7 @@ Suppose a new Streamlit release includes a `st.my_chart` function that you want 
    <Autofunction function="streamlit.my_chart" />
    ```
 
-4. Add the following under the "Chart elements" heading in `content/develop/api/api-reference.md`:
+4. Add the following under the "Chart elements" heading in `content/develop/api-reference/_index.md`:
    1. A RefCard MDX function containing the URL slug defined in `my_chart.md` . This is the card that will appear on the API Reference landing page.
    2. An Image MDX function containing alt text and the location of the image to be displayed on the card.
    3. A bold heading that will appear on the card (`#### Heading`). It appears below the card image.
@@ -252,13 +258,11 @@ Suppose a new Streamlit release includes a `st.my_chart` function that you want 
 
 The Knowledge Base (KB) is divided into five sections:
 
-1. **Tutorials:** Step-by-step examples of building different types of apps in Streamlit
-2. **Using Streamlit:** Frequently asked questions about using Streamlit Library
-3. **Deployment Issues:** Articles about deploying Streamlit apps
-4. **Streamlit Components:** Articles about Streamlit components
-5. **Installing Dependencies:** System and Python dependency issues while using or deploying Streamlit apps
+1. **FAQ:** ... frequently asked questions
+2. **Installing Dependencies:** System and Java dependency issues while using or deploying Jeamlit apps
+3. **Deployment Issues:** Articles about deploying Jeamlit apps
 
-If you know the answer to a Streamlit user's pain point and want to add it to the KB:
+If you know the answer to a Jeamlit user's pain point and want to add it to the KB:
 
 1. Decide which of the above sections your article belongs to
 2. Navigate to the relevant section's folder in `kb/` and
@@ -267,17 +271,17 @@ If you know the answer to a Streamlit user's pain point and want to add it to th
 
      ```markdown
      ---
-     title: How do I add a Component to the sidebar?
-     slug: /knowledge-base/components/add-component-sidebar
+     title: How do I fix the deployment issue on windows ?
+     slug: /knowledge-base/deploy/fix-on-windows
      ---
 
-     # How do I add a Component to the sidebar?
+     # How do I fix the deployment issue on windows ?
      ```
 
-4. Add a line to the existing `index.md` file in the same folder as your article. It should contain the title and URL slug specified in your article's front matter. This step ensures that users are able to discover your article in the index page of the relevant KB section. E.g.
+4. Add a line to the existing `_index.md` file in the same folder as your article. It should contain the title and URL slug specified in your article's front matter. This step ensures that users are able to discover your article in the index page of the relevant KB section. E.g.
 
    ```markdown
-   - [How do I add a Component to the sidebar?](/knowledge-base/components/add-component-sidebar)
+   - [How do I fix the deployment issue on windows ?](/knowledge-base/deploy/fix-on-windows)
    ```
 
 ## Publishing
@@ -285,7 +289,7 @@ If you know the answer to a Streamlit user's pain point and want to add it to th
 To publish your changes to the docs site:
 
 1. Create a new branch containing your changes.
-2. Create a Pull Request and mark Snehan as reviewers.
+2. Create a Pull Request and mark cyrilou242 as reviewer.
 3. Once the checks have completed, checkout the Preview build.
-4. Snehan will review your changes and merge your changes into the `main` branch.
+4. cyrilou242 will review your changes and merge your changes into the `main` branch.
 5. Once merged, your changes will be live at [https://docs.streamlit.io/](https://docs.streamlit.io/).

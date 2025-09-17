@@ -7,6 +7,7 @@ import Deprecation from "./deprecation";
 import { withRouter, useRouter } from "next/router";
 import Prism from "prismjs";
 import "prismjs/components/prism-python";
+import "prismjs/components/prism-java";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
 import "prismjs/plugins/line-highlight/prism-line-highlight";
 import "prismjs/plugins/line-highlight/prism-line-highlight.css";
@@ -86,7 +87,7 @@ const Autofunction = ({
       const codeWrap = document.createElement("div");
       codeWrap.setAttribute("class", styles.CodeBlockContainer);
       const codeTag = document.createElement("code");
-      codeTag.setAttribute("class", "language-python");
+      codeTag.setAttribute("class", "language-java");
       preTag.classList.add("line-numbers");
       codeTag.innerHTML = codeText;
       preTag.textContent = null;
