@@ -12,22 +12,22 @@ export default function Home({ window, menu }) {
   return (
     <Layout window={window}>
       <Head>
-        <title>404 | Streamlit Docs</title>
+        <title>404 | Jeamlit Docs</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="alternate icon" href="/favicon32.ico" />
         <meta name="theme-color" content="#ffffff" />
         <meta
-          content="Streamlit is an open-source app framework for Machine Learning and Data Science teams. Create beautiful data apps in hours, not weeks. All in pure Python. All for free."
+          content="Jeamlit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
           name="description"
         />
-        <meta content="Streamlit Docs" property="og:title" />
+        <meta content="Jeamlit Docs" property="og:title" />
         <meta
-          content="Streamlit is an open-source app framework for Machine Learning and Data Science teams. Create beautiful data apps in hours, not weeks. All in pure Python. All for free."
+          content="Jeamlit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
           property="og:description"
         />
-        <meta content="Streamlit Docs" name="twitter:title" />
+        <meta content="Jeamlit Docs" name="twitter:title" />
         <meta
-          content="Streamlit is an open-source app framework for Machine Learning and Data Science teams. Create beautiful data apps in hours, not weeks. All in pure Python. All for free."
+          content="Jeamlit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
           name="twitter:description"
         />
         <meta property="og:type" content="website" />
