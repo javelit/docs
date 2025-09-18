@@ -1,5 +1,5 @@
 ---
-title: Welcome to Streamlit
+title: Welcome to Jeamlit
 features:
   - title: Get started
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

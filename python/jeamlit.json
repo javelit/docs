@@ -1,0 +1,5851 @@
+{
+  "0.15.0": {
+    "Jt.textInput": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(String value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "maxChars",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "maxChars(Integer maxChars)",
+          "name": "maxChars",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "type",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "type(String type)",
+          "name": "type",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "autocomplete",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "autocomplete(String autocomplete)",
+          "name": "autocomplete",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "placeholder",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "placeholder(String placeholder)",
+          "name": "placeholder",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Convenience method for setting width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.String>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextInputComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "textInput(String label)",
+      "name": "textInput",
+      "returns": [
+        {
+          "type_name": "string",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.code": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "body",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "language",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "language(String language)",
+          "name": "language",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "lineNumbers",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "lineNumbers(boolean lineNumbers)",
+          "name": "lineNumbers",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "wrapLines",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "wrapLines(boolean wrapLines)",
+          "name": "wrapLines",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "height",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(String height)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "heightPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(int heightPixels)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.CodeComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "code(String body)",
+      "name": "code",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.pageLink": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "url",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "label(String label)",
+          "name": "label",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Set width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.PageLinkComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "pageLink(String url, String label)",
+      "name": "pageLink",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.textArea": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(String value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "height",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(String height)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "heightInPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(int heightInPixels)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "maxChars",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "maxChars(Integer maxChars)",
+          "name": "maxChars",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "placeholder",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "placeholder(String placeholder)",
+          "name": "placeholder",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Convenience method for setting width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.String>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.TextAreaComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "textArea(String label)",
+      "name": "textArea",
+      "returns": [
+        {
+          "type_name": "string",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.text": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "body",
+          "description": "The string to display.",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "body",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "body(String body)",
+          "name": "body",
+          "description": "The string to display.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TextComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.\n The tooltip can optionally contain Markdown, including the Markdown directives, see [tech.catheu.jeamlit.core.Jt#markdown] for details.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TextComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TextComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TextComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TextComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "text(String body)",
+      "name": "text",
+      "description": "Write text without Markdown or HTML parsing.\n For monospace text, use [Jt#code]",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.checkbox": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(boolean value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.@org.jetbrains.annotations.NotNull Boolean>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.CheckboxComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "checkbox(String label)",
+      "name": "checkbox",
+      "returns": [
+        {
+          "type_name": "NotNull Boolean",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.selectBox": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.util.List<T>",
+          "default": null,
+          "name": "options",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "index",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "index(Integer index)",
+          "name": "index",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Function<@org.jetbrains.annotations.Nullable T,java.lang.String>",
+              "default": null,
+              "name": "formatFunction",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "formatFunction(Function formatFunction)",
+          "name": "formatFunction",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<@org.jetbrains.annotations.NotNull T>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "placeholder",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "placeholder(String placeholder)",
+          "name": "placeholder",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "acceptNewOptions",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "acceptNewOptions(boolean acceptNewOptions)",
+          "name": "acceptNewOptions",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SelectBoxComponent<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "selectBox(String label, List options)",
+      "name": "selectBox",
+      "returns": [
+        {
+          "type_name": "Nullable T",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.expander": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "expanded",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "expanded(boolean expanded)",
+          "name": "expanded",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ExpanderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ExpanderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ExpanderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ExpanderComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "expander(String key, String label)",
+      "name": "expander",
+      "returns": [
+        {
+          "type_name": "JtContainer",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.formSubmitButton": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "type",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "type(String type)",
+          "name": "type",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "useContainerWidth",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "useContainerWidth(boolean useContainerWidth)",
+          "name": "useContainerWidth",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.Boolean>",
+              "default": null,
+              "name": "onClick",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onClick(Consumer onClick)",
+          "name": "onClick",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormSubmitButtonComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "formSubmitButton(String label)",
+      "name": "formSubmitButton",
+      "returns": [
+        {
+          "type_name": "boolean",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.container": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "height",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(Integer height)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ContainerComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Boolean",
+              "default": null,
+              "name": "border",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "border(Boolean border)",
+          "name": "border",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ContainerComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ContainerComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "container(String key)",
+      "name": "container",
+      "returns": [
+        {
+          "type_name": "JtContainer",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.popover": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.PopoverComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.PopoverComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "useContainerWidth",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "useContainerWidth(boolean useContainerWidth)",
+          "name": "useContainerWidth",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.PopoverComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.PopoverComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "popover(String key, String label)",
+      "name": "popover",
+      "returns": [
+        {
+          "type_name": "JtContainer",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.numberInput": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.lang.Class<T>",
+          "default": null,
+          "name": "valueClass",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "T",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(T value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "valueMin()",
+          "name": "valueMin",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "T",
+              "default": null,
+              "name": "minValue",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "minValue(T minValue)",
+          "name": "minValue",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "T",
+              "default": null,
+              "name": "maxValue",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "maxValue(T maxValue)",
+          "name": "maxValue",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "T",
+              "default": null,
+              "name": "step",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "step(T step)",
+          "name": "step",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "format",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "format(String format)",
+          "name": "format",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "placeholder",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "placeholder(String placeholder)",
+          "name": "placeholder",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Convenience method for setting width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<T>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.NumberInputComponent<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "numberInput(String label, Class valueClass)",
+      "name": "numberInput",
+      "returns": [
+        {
+          "type_name": "T",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.fileUploader": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.util.List<java.lang.String>",
+              "default": null,
+              "name": "types",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "type(List types)",
+          "name": "type",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.MultipleFiles",
+              "default": null,
+              "name": "acceptMultipleFiles",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "acceptMultipleFiles(MultipleFiles acceptMultipleFiles)",
+          "name": "acceptMultipleFiles",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.util.List<tech.catheu.jeamlit.core.JtUploadedFile>>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Convenience method for setting width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.media.FileUploaderComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "fileUploader(String label)",
+      "name": "fileUploader",
+      "returns": [
+        {
+          "type_name": "JtUploadedFile>",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.markdown": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "body",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "markdown(String body)",
+      "name": "markdown",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.html": {
+      "args": [
+        {
+          "type_name": "java.nio.file.Path",
+          "default": null,
+          "name": "filePath",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.HtmlComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.HtmlComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.HtmlComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "html(Path filePath)",
+      "name": "html",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.columns": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "int",
+          "default": null,
+          "name": "numColumns",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "numColumns",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "numColumns(int numColumns)",
+          "name": "numColumns",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.List<java.lang.@org.jetbrains.annotations.NotNull Double>",
+              "default": null,
+              "name": "widths",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "widths(List widths)",
+          "name": "widths",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.Gap",
+              "default": null,
+              "name": "gap",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "gap(Gap gap)",
+          "name": "gap",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.VerticalAlignment",
+              "default": null,
+              "name": "verticalAlignment",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "verticalAlignment(VerticalAlignment verticalAlignment)",
+          "name": "verticalAlignment",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "border",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "border(boolean border)",
+          "name": "border",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ColumnsComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "columns(String key, int numColumns)",
+      "name": "columns",
+      "returns": [
+        {
+          "type_name": "Columns",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.deepCopy": {
+      "args": [
+        {
+          "type_name": "T",
+          "default": null,
+          "name": "original",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "com.fasterxml.jackson.core.type.TypeReference<T>",
+          "default": null,
+          "name": "typeRef",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "signature": "deepCopy(T original, TypeReference typeRef)",
+      "name": "deepCopy",
+      "description": "Slow deep copy utility: serialize then deserialize json.\n Made available to be able to implement the behaviour of st.cache_data that does a copy on read.\n https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "returns": [
+        {
+          "type_name": "T",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.tableFromListColumns": {
+      "args": [
+        {
+          "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,Values>",
+          "default": null,
+          "name": "cols",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,Values>",
+              "default": null,
+              "name": "col2List",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofColumnsLists(Map col2List)",
+          "name": "ofColumnsLists",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,java.lang.@org.jetbrains.annotations.NotNull Object[]>",
+              "default": null,
+              "name": "col2Array",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofColumnsArrays(Map col2Array)",
+          "name": "ofColumnsArrays",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.SequencedCollection<java.lang.Object>",
+              "default": null,
+              "name": "objsList",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofObjsList(SequencedCollection objsList)",
+          "name": "ofObjsList",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Object[]",
+              "default": null,
+              "name": "objsArray",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofObjsArray(Object[] objsArray)",
+          "name": "ofObjsArray",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "tableFromListColumns(Map cols)",
+      "name": "tableFromListColumns",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.empty": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "height",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(Integer height)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ContainerComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Boolean",
+              "default": null,
+              "name": "border",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "border(Boolean border)",
+          "name": "border",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ContainerComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.ContainerComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "empty(String key)",
+      "name": "empty",
+      "returns": [
+        {
+          "type_name": "JtContainer",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.navigation": {
+      "args": [
+        {
+          "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder[]",
+          "default": null,
+          "name": "pages",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+              "default": null,
+              "name": "page",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "addPage(Builder page)",
+          "name": "addPage",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.NavigationComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "hidden()",
+          "name": "hidden",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.NavigationComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.NavigationComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "navigation(Builder[] pages)",
+      "name": "navigation",
+      "returns": [
+        {
+          "type_name": "JtPage",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.componentsState": {
+      "args": [],
+      "signature": "componentsState()",
+      "name": "componentsState",
+      "returns": [
+        {
+          "type_name": "tech.catheu.jeamlit.datastructure.TypedMap",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.switchPage": {
+      "args": [
+        {
+          "type_name": "java.lang.Class<?>",
+          "default": null,
+          "name": "pageApp",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "signature": "switchPage(Class pageApp)",
+      "name": "switchPage",
+      "returns": [],
+      "source": ""
+    },
+    "Jt.button": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "type",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "type(String type)",
+          "name": "type",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "useContainerWidth",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "useContainerWidth(boolean useContainerWidth)",
+          "name": "useContainerWidth",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.Boolean>",
+              "default": null,
+              "name": "onClick",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onClick(Consumer onClick)",
+          "name": "onClick",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ButtonComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "button(String label)",
+      "name": "button",
+      "returns": [
+        {
+          "type_name": "boolean",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.dateInput": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.time.LocalDate",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(LocalDate value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.time.LocalDate",
+              "default": null,
+              "name": "minValue",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "minValue(LocalDate minValue)",
+          "name": "minValue",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.time.LocalDate",
+              "default": null,
+              "name": "maxValue",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "maxValue(LocalDate maxValue)",
+          "name": "maxValue",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.time.@org.jetbrains.annotations.Nullable LocalDate>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "format",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "format(String format)",
+          "name": "format",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.DateInputComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "dateInput(String label)",
+      "name": "dateInput",
+      "returns": [
+        {
+          "type_name": "LocalDate",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.title": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "body",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "anchor",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "anchor(String anchor)",
+          "name": "anchor",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TitleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TitleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TitleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TitleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.TitleComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "title(String body)",
+      "name": "title",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.page": {
+      "args": [
+        {
+          "type_name": "java.lang.Class<?>",
+          "default": null,
+          "name": "pageApp",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "title",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "title(String title)",
+          "name": "title",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "urlPath",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "urlPath(String urlPath)",
+          "name": "urlPath",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [],
+          "signature": "home()",
+          "name": "home",
+          "description": "make the page the default homepage",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "section",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "section(String section)",
+          "name": "section",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.multipage.JtPage",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "page(Class pageApp)",
+      "name": "page",
+      "returns": [
+        {
+          "type_name": "tech.catheu.jeamlit.components.multipage.JtPage.Builder",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.error": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "body",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "body",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "body(String body)",
+          "name": "body",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.status.ErrorComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "icon",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "icon(String icon)",
+          "name": "icon",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.status.ErrorComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.status.ErrorComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Convenience method for setting width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.status.ErrorComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.status.ErrorComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "error(String body)",
+      "name": "error",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.echarts": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "chartOptionJson",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "height",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(int height)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(Integer width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.chart.EchartsComponent.Theme",
+              "default": null,
+              "name": "theme",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "theme(Theme theme)",
+          "name": "theme",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "theme",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "theme(String theme)",
+          "name": "theme",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.chart.EchartsComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "echarts(String chartOptionJson)",
+      "name": "echarts",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.divider": {
+      "args": [],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.text.MarkdownComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "divider()",
+      "name": "divider",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.slider": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "double",
+              "default": null,
+              "name": "min",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "min(double min)",
+          "name": "min",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "double",
+              "default": null,
+              "name": "max",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "max(double max)",
+          "name": "max",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "double",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(double value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "double",
+              "default": null,
+              "name": "step",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "step(double step)",
+          "name": "step",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "format",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "format(String format)",
+          "name": "format",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.Double>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {
+            "widthPixels": "Width in pixels (must be non-negative)"
+          },
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "Convenience method for setting width as integer pixels.",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.SliderComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "slider(String label)",
+      "name": "slider",
+      "returns": [
+        {
+          "type_name": "double",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.radio": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.util.List<T>",
+          "default": null,
+          "name": "options",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Integer",
+              "default": null,
+              "name": "index",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "index(Integer index)",
+          "name": "index",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Function<@org.jetbrains.annotations.Nullable T,java.lang.String>",
+              "default": null,
+              "name": "formatFunction",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "formatFunction(Function formatFunction)",
+          "name": "formatFunction",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<@org.jetbrains.annotations.NotNull T>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "horizontal",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "horizontal(boolean horizontal)",
+          "name": "horizontal",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.List<java.lang.String>",
+              "default": null,
+              "name": "captions",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "captions(List captions)",
+          "name": "captions",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent.Builder<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.RadioComponent<T>",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "radio(String label, List options)",
+      "name": "radio",
+      "returns": [
+        {
+          "type_name": "Nullable T",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.table": {
+      "args": [
+        {
+          "type_name": "java.lang.Object[]",
+          "default": null,
+          "name": "rows",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,Values>",
+              "default": null,
+              "name": "col2List",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofColumnsLists(Map col2List)",
+          "name": "ofColumnsLists",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,java.lang.@org.jetbrains.annotations.NotNull Object[]>",
+              "default": null,
+              "name": "col2Array",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofColumnsArrays(Map col2Array)",
+          "name": "ofColumnsArrays",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.SequencedCollection<java.lang.Object>",
+              "default": null,
+              "name": "objsList",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofObjsList(SequencedCollection objsList)",
+          "name": "ofObjsList",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Object[]",
+              "default": null,
+              "name": "objsArray",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofObjsArray(Object[] objsArray)",
+          "name": "ofObjsArray",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "table(Object[] rows)",
+      "name": "table",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.toggle": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "label",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "value",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "value(boolean value)",
+          "name": "value",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.function.Consumer<java.lang.@org.jetbrains.annotations.NotNull Boolean>",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(Consumer onChange)",
+          "name": "onChange",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "tech.catheu.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.input.ToggleComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "toggle(String label)",
+      "name": "toggle",
+      "returns": [
+        {
+          "type_name": "NotNull Boolean",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.cache": {
+      "args": [],
+      "signature": "cache()",
+      "name": "cache",
+      "description": "Returns the app cache.\n See https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "returns": [
+        {
+          "type_name": "tech.catheu.jeamlit.datastructure.TypedMap",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.sessionState": {
+      "args": [],
+      "signature": "sessionState()",
+      "name": "sessionState",
+      "returns": [
+        {
+          "type_name": "tech.catheu.jeamlit.datastructure.TypedMap",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.urlQueryParameters": {
+      "args": [],
+      "signature": "urlQueryParameters()",
+      "name": "urlQueryParameters",
+      "returns": [
+        {
+          "type_name": "java.util.Map<java.lang.String,java.util.List<java.lang.String>>",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.tableFromArrayColumns": {
+      "args": [
+        {
+          "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,java.lang.@org.jetbrains.annotations.NotNull Object[]>",
+          "default": null,
+          "name": "cols",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,Values>",
+              "default": null,
+              "name": "col2List",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofColumnsLists(Map col2List)",
+          "name": "ofColumnsLists",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.Map<java.lang.@org.jetbrains.annotations.NotNull String,java.lang.@org.jetbrains.annotations.NotNull Object[]>",
+              "default": null,
+              "name": "col2Array",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofColumnsArrays(Map col2Array)",
+          "name": "ofColumnsArrays",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.util.SequencedCollection<java.lang.Object>",
+              "default": null,
+              "name": "objsList",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofObjsList(SequencedCollection objsList)",
+          "name": "ofObjsList",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.Object[]",
+              "default": null,
+              "name": "objsArray",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "ofObjsArray(Object[] objsArray)",
+          "name": "ofObjsArray",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.data.TableComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "tableFromArrayColumns(Map cols)",
+      "name": "tableFromArrayColumns",
+      "returns": [
+        {
+          "type_name": "void",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.urlPath": {
+      "args": [],
+      "signature": "urlPath()",
+      "name": "urlPath",
+      "returns": [
+        {
+          "type_name": "java.lang.String",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.tabs": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        },
+        {
+          "type_name": "java.util.List<java.lang.@org.jetbrains.annotations.NotNull String>",
+          "default": null,
+          "name": "tabs",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.TabsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.TabsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.TabsComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "tabs(String key, List tabs)",
+      "name": "tabs",
+      "returns": [
+        {
+          "type_name": "Tabs",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.form": {
+      "args": [
+        {
+          "type_name": "java.lang.String",
+          "default": null,
+          "name": "key",
+          "description": "",
+          "is_optional": false
+        }
+      ],
+      "builderMethods": [
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "clearOnSubmit",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "clearOnSubmit(boolean clearOnSubmit)",
+          "name": "clearOnSubmit",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "enterToSubmit",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "enterToSubmit(boolean enterToSubmit)",
+          "name": "enterToSubmit",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "border",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "border(boolean border)",
+          "name": "border",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.lang.String",
+              "default": null,
+              "name": "height",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "height(String height)",
+          "name": "height",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "build()",
+          "name": "build",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "tech.catheu.jeamlit.components.layout.FormComponent",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "signature": "form(String key)",
+      "name": "form",
+      "returns": [
+        {
+          "type_name": "JtContainer",
+          "description": "",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    }
+  }
+}

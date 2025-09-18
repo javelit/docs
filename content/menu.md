@@ -43,7 +43,7 @@ site_menu:
     url: /develop/concepts/architecture
   - category: Develop / Concepts / Architecture and execution / Running your app
     url: /develop/concepts/architecture/run-your-app
-  - category: Develop / Concepts / Architecture and execution / Streamlit's architecture
+  - category: Develop / Concepts / Architecture and execution / Jeamlit's architecture
     url: /develop/concepts/architecture/architecture
   - category: Develop / Concepts / Architecture and execution / The app chrome
     url: /develop/concepts/architecture/app-chrome

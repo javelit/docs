@@ -18,6 +18,8 @@
 # Usage:
 #   uv run generate_llms_full_txt.py
 
+# TODO CYRIL - adapt this
+
 import json
 import re
 from typing import List, Dict, Optional, Tuple, Any

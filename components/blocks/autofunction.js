@@ -162,6 +162,7 @@ const Autofunction = ({
   let isClass;
   let isAttributeDict;
   let methods = [];
+  let builderMethods = [];
   let properties = [];
 
   if (streamlitFunction in docstrings || oldStreamlitFunction in docstrings) {
@@ -214,6 +215,10 @@ const Autofunction = ({
 
   if ("methods" in functionObject) {
     methods = functionObject.methods;
+  }
+
+  if ("builderMethods" in functionObject) {
+    builderMethods = functionObject.builderMethods;
   }
 
   if ("properties" in functionObject) {
@@ -401,6 +406,47 @@ const Autofunction = ({
     methodRows.push(row);
   }
 
+  let builderMethodRows = [];
+  for (const index in builderMethods) {
+    const row = {};
+    const method = builderMethods[index];
+    const slicedSlug = slug.slice().join("/");
+    const hrefName = `${functionObject.name}.${method.name}`
+      .toLowerCase()
+      .replace("streamlit", "st")
+      .replace(/[.,\/#!$%\^&\*;:{}=\-`~()]/g, "");
+    const type_name = method.signature
+      ? method.signature.match(/\((.*)\)/)[1]
+      : "";
+    const isDeprecated =
+      method.deprecated && method.deprecated.deprecated === true;
+    const deprecatedMarkup = isDeprecated
+      ? `
+      <div class="${styles.DeprecatedContent}">
+        <i class="material-icons-sharp">
+          delete
+        </i>
+        ${method.deprecated.deprecatedText}
+      </div>`
+      : "";
+    const description = method.description
+      ? method.description
+      : `<p>No description</p> `;
+    // Add a link to the method by appending the method name to the current URL using slug.slice();
+    row["title"] = `
+      <p class="${isDeprecated ? "deprecated" : ""}">
+        <a href="/${slicedSlug}#${hrefName}"><span class='bold'>${
+          method.name
+        }</span></a><span class='italic code'>(${type_name})</span>
+      </p>`;
+    row["body"] = `
+      ${deprecatedMarkup}
+      ${description}
+    `;
+
+    builderMethodRows.push(row);
+  }
+
   for (const index in properties) {
     const row = {};
     const property = properties[index];
@@ -463,7 +509,7 @@ const Autofunction = ({
           : {
               title: (
                 <>
-                  {isClass ? "Class description" : "Function signature"}
+                  {isClass ? "Class description" : "Method signature"}
                   <a
                     className={styles.Title.a}
                     href={functionObject.source}
@@ -486,11 +532,13 @@ const Autofunction = ({
       bodyRows={args.length ? args : null}
       foot={[
         methods.length ? { title: "Methods" } : null,
-        returns.length ? { title: "Returns" } : null,
+        builderMethods.length ? { title: "Chainable builder methods" } : null,
+        returns.length ? { title: "Returns after .use()" } : null,
         propertiesRows.length ? { title: "Attributes" } : null,
       ].filter((section) => section !== null)}
       footRows={[
         methods.length ? methodRows : null,
+        builderMethods.length ? builderMethodRows : null,
         returns.length ? returns : null,
         propertiesRows.length ? propertiesRows : null,
       ].filter((rows) => rows !== null)}

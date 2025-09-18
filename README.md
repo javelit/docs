@@ -204,55 +204,55 @@ To preview your changes, refresh your browser tab and visit the edited page!
 
 ### Add a new docstring to the API Reference
 
-Any time a new version of Streamlit is released, the docstrings stored in `python/streamlit.json` have to be updated by running `make docstrings` . This will build the necessary Docker image, and update the file with the documentation from the latest release on PyPi.
+Any time a new version of Jeamlit is released, the docstrings stored in `python/jeamlit.json` has to be updated by running `make docstrings`. This will update the json file with the documentation from the latest release on [maven.org](https://central.sonatype.com/artifact/tech.catheu/jeamlit).
 
-If you need to regenerate all function signatures, across all versions, delete the content in `python/streamlit.json`, leaving the file in place, and run `make docstrings`. This will systematically install each version of streamlit, and generate the necessary function signatures in `streamlit.json`.
+If you need to regenerate all function signatures, across all versions, delete `python/jeamlit.json` and run `make docstrings`. This will generate the `jeamlit.json` file with documentation for the last N releases. N is controlled by the `LOOKBACK` constant in the [python/build_java.py](python/build_java.py) script.
 
-Suppose a new Streamlit release includes a `st.my_chart` function that you want to include in the "Chart elements" section of the API Reference:
+Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to include in the "Chart elements" section of the API Reference:
 
 1. Run `make docstrings`
-2. Create Markdown file (`my_chart.md`) in `content/develop/api/charts/`
-3. Add the following to `my_chart.md`:
+2. Create Markdown file (`myChart.md`) in `content/develop/api/charts/`
+3. Add the following to `myChart.md`:
 
    ```markdown
    ---
    title: st.my_chart
-   slug: /develop/api-reference/charts/st.my_chart
+   slug: /develop/api-reference/charts/Jt.myChart
    ---
 
-   <Autofunction function="streamlit.my_chart" />
+   <Autofunction function="Jt.myChart" />
    ```
 
 4. Add the following under the "Chart elements" heading in `content/develop/api-reference/_index.md`:
-   1. A RefCard MDX function containing the URL slug defined in `my_chart.md` . This is the card that will appear on the API Reference landing page.
+   1. A RefCard MDX function containing the URL slug defined in `myChart.md` . This is the card that will appear on the API Reference landing page.
    2. An Image MDX function containing alt text and the location of the image to be displayed on the card.
    3. A bold heading that will appear on the card (`#### Heading`). It appears below the card image.
-   4. A brief description of the `st.my_chart` . It appears below the card heading.
-   5. A code block illustrating how to use `st.my_chart`. It appears below the card description and has a Copy icon that when clicked copies the code block to the users' clipboard.
+   4. A brief description of the `Jt.myChart`. It appears below the card heading.
+   5. A code block illustrating how to use `Jt.myChart`. It appears below the card description.
 
 ````markdown
-    <RefCard href="/develop/api-reference/charts/st.my_chart">
+    <RefCard href="/develop/api-reference/charts/Jt.myChart">
     <Image pure alt="Tux, the Linux mascot" src="/img/data-table.png" />
 
     #### My charts
 
     Display a chart using the MyChart library.
 
-    ```python
-    st.my_chart(my_data_frame)
+    ```java
+    Jt.myChart(my_data_frame)
     ```
 
     </RefCard>
 ````
 
-5. Add the following 2 new lines to `menu.md` so that `st.my_chart` appears in the Menu:
+5. Add the following 2 new lines to `menu.md` so that `Jt.myChart` appears in the Menu:
 
    ```YAML
-   - category: Streamlit Library / API Reference / Chart elements / st.my_chart
-     url: /develop/api-reference/charts/st.my_chart
+   - category: Develop / API Reference / Chart elements / Jt.myChart
+     url: /develop/api-reference/charts/Jt.myChart
    ```
 
-6. Save your changes and refresh the browser tab. If all went well, you should see a new entry in the Menu, a new card in the API Reference, and a new page for `st.my_chart`.
+6. Save your changes and refresh the browser tab. If all went well, you should see a new entry in the Menu, a new card in the API Reference, and a new page for `Jt.myChart`.
 
 ### Add to the Knowledge Base
 

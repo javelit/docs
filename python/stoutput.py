@@ -1,5 +1,8 @@
 """RST directive to insert an iframe into a doc.
 """
+
+# TODO CYRIL - adapt this
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 import re

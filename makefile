@@ -26,10 +26,6 @@ lint:
 search:
 	node ./scripts/build-search-index.js
 
-.PHONY: docstrings_image
-docstrings_image:
-	cd python && docker build -t streamlit-docstring-generator .
-
 .PHONY: docstrings
-docstrings: docstrings_image
-	docker-compose -f python/compose.yml -p streamlit-docs up
+docstrings:
+	cd python && python3 build_java.py
