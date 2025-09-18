@@ -217,7 +217,7 @@ Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to in
    ```markdown
    ---
    title: st.my_chart
-   slug: /develop/api-reference/charts/Jt.myChart
+   slug: /develop/api-reference/charts/jt.myChart
    ---
 
    <Autofunction function="Jt.myChart" />
@@ -231,7 +231,7 @@ Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to in
    5. A code block illustrating how to use `Jt.myChart`. It appears below the card description.
 
 ````markdown
-    <RefCard href="/develop/api-reference/charts/Jt.myChart">
+    <RefCard href="/develop/api-reference/charts/jt.myChart">
     <Image pure alt="Tux, the Linux mascot" src="/img/data-table.png" />
 
     #### My charts
@@ -249,10 +249,12 @@ Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to in
 
    ```YAML
    - category: Develop / API Reference / Chart elements / Jt.myChart
-     url: /develop/api-reference/charts/Jt.myChart
+     url: /develop/api-reference/charts/jt.myChart
    ```
 
 6. Save your changes and refresh the browser tab. If all went well, you should see a new entry in the Menu, a new card in the API Reference, and a new page for `Jt.myChart`.
+
+**NOTICE that in url and slug, `Jt` is in lower case `jt`. This is mandatory.**
 
 ### Add to the Knowledge Base
 
