@@ -1,7 +1,7 @@
 ---
-title: st.divider
-slug: /develop/api-reference/text/st.divider
-description: st.divider displays a horizontal rule in your app.
+title: Jt.divider
+slug: /develop/api-reference/text/jt.divider
+description: Jt.divider displays a horizontal rule in your app.
 ---
 
 <Autofunction function="streamlit.divider" />

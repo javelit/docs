@@ -1,14 +1,14 @@
 ---
-title: streamlit version
+title: jeamlit version
 slug: /develop/api-reference/cli/version
 ---
 
-## `$ streamlit version`
+## `$ jeamlit version`
 
-Print Streamlit's version number. This command is equivalent to executing `streamlit --version`.
+Print Jeamlit's version number. This command is equivalent to executing `jeamlit --version`.
 
 ### Syntax
 
 ```
-streamlit version
+jeamlit version
 ```

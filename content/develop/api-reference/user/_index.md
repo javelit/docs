@@ -1,6 +1,7 @@
 ---
 title: Authentication and user info
 slug: /develop/api-reference/user
+ignore: true
 ---
 
 # Authentication and user info

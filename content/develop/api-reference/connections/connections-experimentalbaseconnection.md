@@ -1,6 +1,7 @@
 ---
 title: st.connections.ExperimentalBaseConnection
 slug: /develop/api-reference/connections/st.connections.experimentalbaseconnection
+ignore: true
 ---
 
 <Important>

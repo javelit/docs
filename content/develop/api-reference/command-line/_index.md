@@ -5,27 +5,30 @@ slug: /develop/api-reference/cli
 
 # Command-line interface
 
-When you install Streamlit, a command-line (CLI) tool gets installed
-as well. The purpose of this tool is to run Streamlit apps, change Streamlit configuration options,
+When you use the Jeamlit fat jar — a jar that contains jeamlit and all its dependencies packaged together — a command-line (CLI) tool is available.
+The purpose of this tool is to run Jeamlit apps, change Jeamlit configuration options,
 and help you diagnose and fix issues.
 
 ## Available commands
 
-- [`streamlit cache clear`](/develop/api-reference/cli/cache): Clear the on-disk cache.
-- [`streamlit config show`](/develop/api-reference/cli/config): Show all configuration options.
-- [`streamlit docs`](/develop/api-reference/cli/docs): Open the Streamlit docs.
-- [`streamlit hello`](/develop/api-reference/cli/hello): Run an example Streamlit app.
-- [`streamlit help`](/develop/api-reference/cli/help): Show the available CLI commands.
-- [`streamlit init`](/develop/api-reference/cli/init): Create the files for a new Streamlit app.
-- [`streamlit run`](/develop/api-reference/cli/run): Run your Streamlit app.
-- [`streamlit version`](/develop/api-reference/cli/version): Show the version of Streamlit.
+{/\*
+
+- [`jeamlit cache clear`](/develop/api-reference/cli/cache): Clear the on-disk cache.
+- [`jeamlit config show`](/develop/api-reference/cli/config): Show all configuration options.
+- [`jeamlit docs`](/develop/api-reference/cli/docs): Open the Jeamlit docs.
+- [`jeamlit hello`](/develop/api-reference/cli/hello): Run an example Jeamlit app.
+- [`jeamlit init`](/develop/api-reference/cli/init): Create the files for a new Jeamlit app.
+  \*/}
+- [`jeamlit --help`](/develop/api-reference/cli/help): Show the available CLI commands.
+- [`jeamlit run`](/develop/api-reference/cli/run): Run your Jeamlit app.
+- [`jeamlit --version`](/develop/api-reference/cli/version): Show the version of Jeamlit.
 
 ### Run your app
 
-The most important command is `streamlit run`, which is summarized for convenience here:
+The most important command is `jeamlit run`, which is summarized for convenience here:
 
 ```bash
-streamlit run your_script.py
+jeamlit run YourApp.java
 ```
 
 At any time, in your terminal, you can stop the server with **Ctrl+C**.

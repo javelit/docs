@@ -1,6 +1,7 @@
 ---
 title: st.connections.BaseConnection
 slug: /develop/api-reference/connections/st.connections.baseconnection
+ignore: true
 ---
 
 <Tip>

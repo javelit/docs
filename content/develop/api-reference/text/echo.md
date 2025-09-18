@@ -2,6 +2,7 @@
 title: st.echo
 slug: /develop/api-reference/text/st.echo
 description: st.echo displays some code on the app, then execute it. Useful for tutorials.
+ignore: true
 ---
 
 <Autofunction function="streamlit.echo" />

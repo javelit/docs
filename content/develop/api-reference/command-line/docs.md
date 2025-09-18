@@ -1,6 +1,7 @@
 ---
 title: jeamlit docs
 slug: /develop/api-reference/cli/docs
+ignore: true
 ---
 
 ## `$ jeamlit docs`

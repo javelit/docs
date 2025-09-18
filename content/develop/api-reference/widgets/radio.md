@@ -1,7 +1,7 @@
 ---
-title: st.radio
-slug: /develop/api-reference/widgets/st.radio
-description: st.radio displays a radio button widget.
+title: Jt.radio
+slug: /develop/api-reference/widgets/jt.radio
+description: Jt.radio displays a radio button widget.
 ---
 
 <Autofunction function="streamlit.radio" />

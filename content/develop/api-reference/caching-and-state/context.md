@@ -2,6 +2,7 @@
 title: st.context
 slug: /develop/api-reference/caching-and-state/st.context
 description: st.context displays a read-only dict of cookies and headers
+ignore: true
 ---
 
 <Autofunction function="streamlit.context" />

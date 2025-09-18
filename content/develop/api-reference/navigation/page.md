@@ -1,7 +1,7 @@
 ---
-title: st.Page
-slug: /develop/api-reference/navigation/st.page
-description: st.Page initializes a StreamlitPage object for multipage apps
+title: Jt.page
+slug: /develop/api-reference/navigation/jt.page
+description: Jt.page initializes a JeamlitPage object for multipage apps
 ---
 
 <Autofunction function="streamlit.Page" />

@@ -1,6 +1,7 @@
 ---
 title: st.connections.SQLConnection
 slug: /develop/api-reference/connections/st.connections.sqlconnection
+ignore: true
 ---
 
 <Tip>

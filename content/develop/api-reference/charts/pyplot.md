@@ -2,6 +2,7 @@
 title: st.pyplot
 slug: /develop/api-reference/charts/st.pyplot
 description: st.pyplot displays a matplotlib.pyplot figure.
+ignore: true
 ---
 
 <Autofunction function="streamlit.pyplot" />

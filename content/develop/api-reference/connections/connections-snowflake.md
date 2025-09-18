@@ -1,6 +1,7 @@
 ---
 title: st.connections.SnowflakeConnection
 slug: /develop/api-reference/connections/st.connections.snowflakeconnection
+ignore: true
 ---
 
 <Tip>

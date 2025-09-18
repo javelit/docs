@@ -1,7 +1,7 @@
 ---
-title: st.empty
-slug: /develop/api-reference/layout/st.empty
-description: st.empty inserts a single-element container.
+title: Jt.empty
+slug: /develop/api-reference/layout/jt.empty
+description: Jt.empty inserts a single-element container.
 ---
 
 <Autofunction function="streamlit.empty" />

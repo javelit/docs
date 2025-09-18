@@ -2,6 +2,7 @@
 title: st.chat_input
 slug: /develop/api-reference/chat/st.chat_input
 description: st.chat_input displays a chat input widget.
+ignore: true
 ---
 
 <Tip>

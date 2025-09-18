@@ -1,7 +1,7 @@
 ---
-title: st.title
-slug: /develop/api-reference/text/st.title
-description: st.title displays text in title formatting.
+title: Jt.title
+slug: /develop/api-reference/text/jt.title
+description: Jt.title displays text in title formatting.
 ---
 
 <Autofunction function="streamlit.title" />

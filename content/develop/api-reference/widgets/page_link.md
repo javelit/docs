@@ -1,7 +1,7 @@
 ---
-title: st.page_link
-slug: /develop/api-reference/widgets/st.page_link
-description: st.page_link displays a link to another page in a multipage app or to an external page.
+title: Jt.pageLink
+slug: /develop/api-reference/widgets/jt.pagelink
+description: Jt.pageLink displays a link to another page in a multipage app or to an external page.
 ---
 
 <Tip>

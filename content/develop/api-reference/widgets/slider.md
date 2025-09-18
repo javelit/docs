@@ -1,7 +1,7 @@
 ---
-title: st.slider
-slug: /develop/api-reference/widgets/st.slider
-description: st.slider displays a slider widget.
+title: Jt.slider
+slug: /develop/api-reference/widgets/jt.slider
+description: Jt.slider displays a slider widget.
 ---
 
 <Autofunction function="streamlit.slider" />

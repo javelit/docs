@@ -2,6 +2,7 @@
 title: st.altair_chart
 slug: /develop/api-reference/charts/st.altair_chart
 description: st.altair_chart displays a chart using the Altair library.
+ignore: true
 ---
 
 <Autofunction function="streamlit.altair_chart" />

@@ -1,7 +1,7 @@
 ---
-title: st.checkbox
-slug: /develop/api-reference/widgets/st.checkbox
-description: st.checkbox displays a checkbox widget.
+title: Jt.checkbox
+slug: /develop/api-reference/widgets/jt.checkbox
+description: Jt.checkbox displays a checkbox widget.
 ---
 
 <Autofunction function="streamlit.checkbox" />

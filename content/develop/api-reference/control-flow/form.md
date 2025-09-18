@@ -1,7 +1,7 @@
 ---
-title: st.form
-slug: /develop/api-reference/execution-flow/st.form
-description: st.form creates a form that batches elements together with a “Submit" button.
+title: Jt.form
+slug: /develop/api-reference/execution-flow/jt.form
+description: Jt.form creates a form that batches elements together with a “Submit" button.
 ---
 
 <Tip>

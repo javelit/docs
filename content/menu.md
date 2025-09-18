@@ -137,56 +137,60 @@ site_menu:
   - category: Develop / API reference / PAGE ELEMENTS
   - category: Develop / API reference / Write and magic
     url: /develop/api-reference/write-magic
+    visible: false
   - category: Develop / API reference / Write and magic / st.write
     url: /develop/api-reference/write-magic/st.write
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Write and magic / st.write_stream
     url: /develop/api-reference/write-magic/st.write_stream
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Write and magic / magic
     url: /develop/api-reference/write-magic/magic
   - category: Develop / API reference / Text elements
     url: /develop/api-reference/text
   - category: Develop / API reference / Text elements / HEADINGS AND BODY
-  - category: Develop / API reference / Text elements / st.title
-    url: /develop/api-reference/text/st.title
+  - category: Develop / API reference / Text elements / Jt.title
+    url: /develop/api-reference/text/jt.title
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Text elements / st.header
     url: /develop/api-reference/text/st.header
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Text elements / st.subheader
     url: /develop/api-reference/text/st.subheader
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Text elements / st.markdown
-    url: /develop/api-reference/text/st.markdown
+    ignore: true
+  - category: Develop / API reference / Text elements / Jt.markdown
+    url: /develop/api-reference/text/jt.markdown
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Text elements / FORMATTED TEXT
   - category: Develop / API reference / Text elements / st.badge
     url: /develop/api-reference/text/st.badge
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Text elements / st.caption
     url: /develop/api-reference/text/st.caption
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Text elements / st.code
-    url: /develop/api-reference/text/st.code
+    ignore: true
+  - category: Develop / API reference / Text elements / Jt.code
+    url: /develop/api-reference/text/jt.code
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Text elements / st.divider
-    url: /develop/api-reference/text/st.divider
+  - category: Develop / API reference / Text elements / Jt.divider
+    url: /develop/api-reference/text/jt.divider
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Text elements / st.echo
     url: /develop/api-reference/text/st.echo
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Text elements / st.latex
     url: /develop/api-reference/text/st.latex
     isVersioned: true
@@ -199,103 +203,124 @@ site_menu:
     url: /develop/api-reference/text/st.help
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Text elements / st.html
-    url: /develop/api-reference/text/st.html
+    ignore: true
+  - category: Develop / API reference / Text elements / Jt.html
+    url: /develop/api-reference/text/jt.html
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Data elements
     url: /develop/api-reference/data
   - category: Develop / API reference / Data elements / st.dataframe
     url: /develop/api-reference/data/st.dataframe
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.data_editor
     url: /develop/api-reference/data/st.data_editor
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config
     url: /develop/api-reference/data/st.column_config
+    visible: false
   - category: Develop / API reference / Data elements / st.column_config / Column
     url: /develop/api-reference/data/st.column_config/st.column_config.column
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Text column
     url: /develop/api-reference/data/st.column_config/st.column_config.textcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Number column
     url: /develop/api-reference/data/st.column_config/st.column_config.numbercolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Checkbox column
     url: /develop/api-reference/data/st.column_config/st.column_config.checkboxcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Selectbox column
     url: /develop/api-reference/data/st.column_config/st.column_config.selectboxcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Datetime column
     url: /develop/api-reference/data/st.column_config/st.column_config.datetimecolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Date column
     url: /develop/api-reference/data/st.column_config/st.column_config.datecolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Time column
     url: /develop/api-reference/data/st.column_config/st.column_config.timecolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / JSON column
     url: /develop/api-reference/data/st.column_config/st.column_config.jsoncolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / List column
     url: /develop/api-reference/data/st.column_config/st.column_config.listcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Link column
     url: /develop/api-reference/data/st.column_config/st.column_config.linkcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Image column
     url: /develop/api-reference/data/st.column_config/st.column_config.imagecolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Area chart column
     url: /develop/api-reference/data/st.column_config/st.column_config.areachartcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Line chart column
     url: /develop/api-reference/data/st.column_config/st.column_config.linechartcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Bar chart column
     url: /develop/api-reference/data/st.column_config/st.column_config.barchartcolumn
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Progress column
     url: /develop/api-reference/data/st.column_config/st.column_config.progresscolumn
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Data elements / st.table
-    url: /develop/api-reference/data/st.table
+    ignore: true
+  - category: Develop / API reference / Data elements / Jt.table
+    url: /develop/api-reference/data/jt.table
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Data elements / st.metric
     url: /develop/api-reference/data/st.metric
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.json
     url: /develop/api-reference/data/st.json
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.experimental_data_editor
     url: /develop/api-reference/data/st.experimental_data_editor
     isVersioned: true
     visible: false
     isDeprecated: true
+    ignore: true
   - category: Develop / API reference / Chart elements
     url: /develop/api-reference/charts
   - category: Develop / API reference / Chart elements / SIMPLE
@@ -303,241 +328,260 @@ site_menu:
     url: /develop/api-reference/charts/st.area_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.bar_chart
     url: /develop/api-reference/charts/st.bar_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.line_chart
     url: /develop/api-reference/charts/st.line_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.map
     url: /develop/api-reference/charts/st.map
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.scatter_chart
     url: /develop/api-reference/charts/st.scatter_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / ADVANCED
   - category: Develop / API reference / Chart elements / st.altair_chart
     url: /develop/api-reference/charts/st.altair_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.bokeh_chart
     url: /develop/api-reference/charts/st.bokeh_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.graphviz_chart
     url: /develop/api-reference/charts/st.graphviz_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.plotly_chart
     url: /develop/api-reference/charts/st.plotly_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.pydeck_chart
     url: /develop/api-reference/charts/st.pydeck_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.pyplot
     url: /develop/api-reference/charts/st.pyplot
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.vega_lite_chart
     url: /develop/api-reference/charts/st.vega_lite_chart
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets
     url: /develop/api-reference/widgets
   - category: Develop / API reference / Input widgets / BUTTONS
-  - category: Develop / API reference / Input widgets / st.button
-    url: /develop/api-reference/widgets/st.button
+  - category: Develop / API reference / Input widgets / Jt.button
+    url: /develop/api-reference/widgets/jt.button
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / st.download_button
     url: /develop/api-reference/widgets/st.download_button
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Input widgets / st.form_submit_button
-    url: https://docs.streamlit.io/develop/api-reference/execution-flow/st.form_submit_button
+    ignore: true
+  - category: Develop / API reference / Input widgets / Jt.form_submit_button
+    url: https://docs.streamlit.io/develop/api-reference/execution-flow/jt.form_submit_button
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / st.link_button
     url: /develop/api-reference/widgets/st.link_button
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Input widgets / st.page_link
-    url: /develop/api-reference/widgets/st.page_link
+    ignore: true
+  - category: Develop / API reference / Input widgets / Jt.page_link
+    url: /develop/api-reference/widgets/jt.pagelink
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / SELECTIONS
-  - category: Develop / API reference / Input widgets / st.checkbox
-    url: /develop/api-reference/widgets/st.checkbox
+  - category: Develop / API reference / Input widgets / Jt.checkbox
+    url: /develop/api-reference/widgets/jt.checkbox
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / st.color_picker
     url: /develop/api-reference/widgets/st.color_picker
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.feedback
     url: /develop/api-reference/widgets/st.feedback
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.multiselect
     url: /develop/api-reference/widgets/st.multiselect
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.pills
     url: /develop/api-reference/widgets/st.pills
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Input widgets / st.radio
-    url: /develop/api-reference/widgets/st.radio
+    ignore: true
+  - category: Develop / API reference / Input widgets / Jt.radio
+    url: /develop/api-reference/widgets/jt.radio
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / st.segmented_control
     url: /develop/api-reference/widgets/st.segmented_control
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.selectbox
     url: /develop/api-reference/widgets/st.selectbox
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.select_slider
     url: /develop/api-reference/widgets/st.select_slider
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Input widgets / st.toggle
-    url: /develop/api-reference/widgets/st.toggle
+    ignore: true
+  - category: Develop / API reference / Input widgets / Jt.toggle
+    url: /develop/api-reference/widgets/jt.toggle
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / NUMERIC
-  - category: Develop / API reference / Input widgets / st.number_input
-    url: /develop/api-reference/widgets/st.number_input
+  - category: Develop / API reference / Input widgets / Jt.numberInput
+    url: /develop/api-reference/widgets/jt.numberinput
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Input widgets / st.slider
-    url: /develop/api-reference/widgets/st.slider
+  - category: Develop / API reference / Input widgets / Jt.slider
+    url: /develop/api-reference/widgets/jt.slider
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / DATE AND TIME
-  - category: Develop / API reference / Input widgets / st.date_input
-    url: /develop/api-reference/widgets/st.date_input
+  - category: Develop / API reference / Input widgets / Jt.dateInput
+    url: /develop/api-reference/widgets/jt.dateinput
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / st.time_input
     url: /develop/api-reference/widgets/st.time_input
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / TEXT
   - category: Develop / API reference / Input widgets / st.chat_input
     url: https://docs.streamlit.io/develop/api-reference/chat/st.chat_input
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Input widgets / st.text_area
-    url: /develop/api-reference/widgets/st.text_area
+    ignore: true
+  - category: Develop / API reference / Input widgets / Jt.text_area
+    url: /develop/api-reference/widgets/jt.textarea
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Input widgets / st.text_input
-    url: /develop/api-reference/widgets/st.text_input
+  - category: Develop / API reference / Input widgets / Jt.text_input
+    url: /develop/api-reference/widgets/jt.textinput
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Input widgets / MEDIA AND FILES
   - category: Develop / API reference / Input widgets / st.audio_input
     url: /develop/api-reference/widgets/st.audio_input
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.camera_input
     url: /develop/api-reference/widgets/st.camera_input
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Input widgets / st.data_editor
     url: https://docs.streamlit.io/develop/api-reference/data/st.data_editor
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Input widgets / st.file_uploader
-    url: /develop/api-reference/widgets/st.file_uploader
+    ignore: true
+  - category: Develop / API reference / Input widgets / Jt.fileUploader
+    url: /develop/api-reference/widgets/jt.fileuploader
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Media elements
     url: /develop/api-reference/media
   - category: Develop / API reference / Media elements / st.audio
     url: /develop/api-reference/media/st.audio
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Media elements / st.image
     url: /develop/api-reference/media/st.image
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Media elements / st.logo
     url: /develop/api-reference/media/st.logo
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Media elements / st.pdf
     url: /develop/api-reference/media/st.pdf
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Media elements / st.video
     url: /develop/api-reference/media/st.video
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Layouts and containers
     url: /develop/api-reference/layout
-  - category: Develop / API reference / Layouts and containers / st.columns
-    url: /develop/api-reference/layout/st.columns
+  - category: Develop / API reference / Layouts and containers / Jt.columns
+    url: /develop/api-reference/layout/jt.columns
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Layouts and containers / st.container
-    url: /develop/api-reference/layout/st.container
+  - category: Develop / API reference / Layouts and containers / Jt.container
+    url: /develop/api-reference/layout/jt.container
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Layouts and containers / st.dialog
     url: https://docs.streamlit.io/develop/api-reference/execution-flow/st.dialog
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Layouts and containers / st.empty
-    url: /develop/api-reference/layout/st.empty
+    ignore: true
+  - category: Develop / API reference / Layouts and containers / Jt.empty
+    url: /develop/api-reference/layout/jt.empty
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Layouts and containers / st.expander
-    url: /develop/api-reference/layout/st.expander
+  - category: Develop / API reference / Layouts and containers / Jt.expander
+    url: /develop/api-reference/layout/jt.expander
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Layouts and containers / st.form
-    url: https://docs.streamlit.io/develop/api-reference/execution-flow/st.form
+  - category: Develop / API reference / Layouts and containers / Jt.form
+    url: https://docs.streamlit.io/develop/api-reference/execution-flow/jt.form
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Layouts and containers / st.popover
-    url: /develop/api-reference/layout/st.popover
+  - category: Develop / API reference / Layouts and containers / Jt.popover
+    url: /develop/api-reference/layout/jt.popover
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Layouts and containers / st.sidebar
     url: /develop/api-reference/layout/st.sidebar
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Layouts and containers / st.tabs
-    url: /develop/api-reference/layout/st.tabs
+    ignore: true
+  - category: Develop / API reference / Layouts and containers / Jt.tabs
+    url: /develop/api-reference/layout/jt.tabs
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Chat elements
     url: /develop/api-reference/chat
+    visible: false
   - category: Develop / API reference / Chat elements / st.chat_input
     url: /develop/api-reference/chat/st.chat_input
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chat elements / st.chat_message
     url: /develop/api-reference/chat/st.chat_message
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chat elements / st.status
     url: https://docs.streamlit.io/develop/api-reference/status/st.status
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Chat elements / st.write_stream
     url: https://docs.streamlit.io/develop/api-reference/write-magic/st.write_stream
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements
     url: /develop/api-reference/status
   - category: Develop / API reference / Status elements / CALLOUTS
@@ -545,113 +589,128 @@ site_menu:
     url: /develop/api-reference/status/st.success
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.info
     url: /develop/api-reference/status/st.info
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.warning
     url: /develop/api-reference/status/st.warning
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Status elements / st.error
-    url: /develop/api-reference/status/st.error
+    ignore: true
+  - category: Develop / API reference / Status elements / Jt.error
+    url: /develop/api-reference/status/jt.error
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Status elements / st.exception
     url: /develop/api-reference/status/st.exception
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / OTHER
   - category: Develop / API reference / Status elements / st.progress
     url: /develop/api-reference/status/st.progress
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.spinner
     url: /develop/api-reference/status/st.spinner
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.status
     url: /develop/api-reference/status/st.status
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.toast
     url: /develop/api-reference/status/st.toast
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.balloons
     url: /develop/api-reference/status/st.balloons
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.snow
     url: /develop/api-reference/status/st.snow
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Third-party components
     url: https://streamlit.io/components
+    visible: false
+    ignore: true
   - category: Develop / API reference / APPLICATION LOGIC
   - category: Develop / API reference / Authentication and user info
     url: /develop/api-reference/user
+    visible: false
+    ignore: true
   - category: Develop / API reference / Authentication and user info / st.login
     url: /develop/api-reference/user/st.login
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Authentication and user info / st.logout
     url: /develop/api-reference/user/st.logout
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Authentication and user info / st.user
     url: /develop/api-reference/user/st.user
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Navigation and pages
     url: /develop/api-reference/navigation
-  - category: Develop / API reference / Navigation and pages / st.navigation
-    url: /develop/api-reference/navigation/st.navigation
+  - category: Develop / API reference / Navigation and pages / Jt.navigation
+    url: /develop/api-reference/navigation/jt.navigation
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Navigation and pages / st.Page
-    url: /develop/api-reference/navigation/st.page
+  - category: Develop / API reference / Navigation and pages / Jt.Page
+    url: /develop/api-reference/navigation/jt.page
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Navigation and pages / st.page_link
-    url: https://docs.streamlit.io/develop/api-reference/widgets/st.page_link
+  - category: Develop / API reference / Navigation and pages / Jt.page_link
+    url: https://docs.streamlit.io/develop/api-reference/widgets/jt.pagelink
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Navigation and pages / st.switch_page
-    url: /develop/api-reference/navigation/st.switch_page
+  - category: Develop / API reference / Navigation and pages / Jt.switchPage
+    url: /develop/api-reference/navigation/jt.switchpage
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Execution flow
     url: /develop/api-reference/execution-flow
   - category: Develop / API reference / Execution flow / st.dialog
     url: /develop/api-reference/execution-flow/st.dialog
     isVersioned: true
     visible: false
-  - category: Develop / API reference / Execution flow / st.form
-    url: /develop/api-reference/execution-flow/st.form
+    ignore: true
+  - category: Develop / API reference / Execution flow / Jt.form
+    url: /develop/api-reference/execution-flow/jt.form
     isVersioned: true
-    visible: false
-  - category: Develop / API reference / Execution flow / st.form_submit_button
-    url: /develop/api-reference/execution-flow/st.form_submit_button
+  - category: Develop / API reference / Execution flow / Jt.formSubmitButton
+    url: /develop/api-reference/execution-flow/jt.form_submit_button
     isVersioned: true
-    visible: false
   - category: Develop / API reference / Execution flow / st.fragment
     url: /develop/api-reference/execution-flow/st.fragment
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Execution flow / st.rerun
     url: /develop/api-reference/execution-flow/st.rerun
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Execution flow / st.stop
     url: /develop/api-reference/execution-flow/st.stop
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Execution flow / st.experimental_rerun
     url: /develop/api-reference/execution-flow/st.experimental_rerun
     isVersioned: true
     visible: false
     isDeprecated: true
+    ignore: true
   - category: Develop / API reference / Caching and state
     url: /develop/api-reference/caching-and-state
   - category: Develop / API reference / Caching and state / SERVER
@@ -659,80 +718,99 @@ site_menu:
     url: /develop/api-reference/caching-and-state/st.cache_data
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Caching and state / st.cache_resource
     url: /develop/api-reference/caching-and-state/st.cache_resource
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Caching and state / st.experimental_memo
     url: /develop/api-reference/caching-and-state/st.experimental_memo
     isVersioned: true
     visible: false
+    ignore: true
     isDeprecated: true
   - category: Develop / API reference / Caching and state / st.experimental_singleton
     url: /develop/api-reference/caching-and-state/st.experimental_singleton
     isVersioned: true
     visible: false
     isDeprecated: true
-  - category: Develop / API reference / Caching and state / st.session_state
-    url: /develop/api-reference/caching-and-state/st.session_state
+    ignore: true
+  - category: Develop / API reference / Caching and state / Jt.sessionState
+    url: /develop/api-reference/caching-and-state/jt.sessionstate
   - category: Develop / API reference / Caching and state / BROWSER
   - category: Develop / API reference / Caching and state / st.context
     url: /develop/api-reference/caching-and-state/st.context
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Caching and state / st.query_params
     url: /develop/api-reference/caching-and-state/st.query_params
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Caching and state / st.experimental_get_query_params
     url: /develop/api-reference/caching-and-state/st.experimental_get_query_params
     isVersioned: true
     visible: false
+    ignore: true
     isDeprecated: true
   - category: Develop / API reference / Caching and state / st.experimental_set_query_params
     url: /develop/api-reference/caching-and-state/st.experimental_set_query_params
     isVersioned: true
     visible: false
+    ignore: true
     isDeprecated: true
   - category: Develop / API reference / Connections and secrets
     url: /develop/api-reference/connections
+    visible: false
   - category: Develop / API reference / Connections and secrets / SECRETS
   - category: Develop / API reference / Connections and secrets / st.secrets
     url: /develop/api-reference/connections/st.secrets
+    visible: false
   - category: Develop / API reference / Connections and secrets / secrets.toml
     url: /develop/api-reference/connections/secrets.toml
+    visible: false
   - category: Develop / API reference / Connections and secrets / CONNECTIONS
+    visible: false
   - category: Develop / API reference / Connections and secrets / st.connection
     url: /develop/api-reference/connections/st.connection
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / SnowflakeConnection
     url: /develop/api-reference/connections/st.connections.snowflakeconnection
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / SQLConnection
     url: /develop/api-reference/connections/st.connections.sqlconnection
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / BaseConnection
     url: /develop/api-reference/connections/st.connections.baseconnection
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / st.experimental_connection
     url: /develop/api-reference/connections/st.experimental_connection
     isVersioned: true
     visible: false
     isDeprecated: true
+    ignore: true
   - category: Develop / API reference / Connections and secrets / SnowparkConnection
     url: /develop/api-reference/connections/st.connections.snowparkconnection
     isVersioned: true
     visible: false
+    ignore: true
     isDeprecated: true
   - category: Develop / API reference / Connections and secrets / ExperimentalBaseConnection
     url: /develop/api-reference/connections/st.connections.experimentalbaseconnection
     isVersioned: true
     visible: false
     isDeprecated: true
+    ignore: true
   - category: Develop / API reference / Custom components
     url: /develop/api-reference/custom-components
     isVersioned: false
@@ -740,31 +818,38 @@ site_menu:
     url: /develop/api-reference/custom-components/st.components.v1.declare_component
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Custom components / st.components.v1.html
     url: /develop/api-reference/custom-components/st.components.v1.html
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Custom components / st.components.v1.iframe
     url: /develop/api-reference/custom-components/st.components.v1.iframe
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Configuration
     url: /develop/api-reference/configuration
     isVersioned: false
+    visible: false
   - category: Develop / API reference / Configuration / config.toml
     url: /develop/api-reference/configuration/config.toml
   - category: Develop / API reference / Configuration / st.get_option
     url: /develop/api-reference/configuration/st.get_option
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Configuration / st.set_option
     url: /develop/api-reference/configuration/st.set_option
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Configuration / st.set_page_config
     url: /develop/api-reference/configuration/st.set_page_config
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / TOOLS
   - category: Develop / API reference / App testing
     url: /develop/api-reference/app-testing
@@ -772,27 +857,39 @@ site_menu:
     url: /develop/api-reference/app-testing/st.testing.v1.apptest
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / App testing / Testing element classes
     url: /develop/api-reference/app-testing/testing-element-classes
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Command line
     url: /develop/api-reference/cli
   - category: Develop / API reference / Command line / streamlit cache
     url: /develop/api-reference/cli/cache
+    visible: false
+    ignore: true
   - category: Develop / API reference / Command line / streamlit config
     url: /develop/api-reference/cli/config
+    visible: false
+    ignore: true
   - category: Develop / API reference / Command line / streamlit docs
     url: /develop/api-reference/cli/docs
+    visible: false
+    ignore: true
   - category: Develop / API reference / Command line / streamlit hello
     url: /develop/api-reference/cli/hello
-  - category: Develop / API reference / Command line / streamlit help
+    visible: false
+    ignore: true
+  - category: Develop / API reference / Command line / jeamlit --help
     url: /develop/api-reference/cli/help
   - category: Develop / API reference / Command line / streamlit init
     url: /develop/api-reference/cli/init
-  - category: Develop / API reference / Command line / streamlit run
+    visible: false
+    ignore: true
+  - category: Develop / API reference / Command line / jeamlit run
     url: /develop/api-reference/cli/run
-  - category: Develop / API reference / Command line / streamlit version
+  - category: Develop / API reference / Command line / jeamlit --version
     url: /develop/api-reference/cli/version
 
   - category: Develop / Tutorials

@@ -1,7 +1,7 @@
 ---
-title: st.toggle
-slug: /develop/api-reference/widgets/st.toggle
-description: st.toggle displays a toggle widget.
+title: Jt.toggle
+slug: /develop/api-reference/widgets/jt.toggle
+description: Jt.toggle displays a toggle widget.
 ---
 
 <Autofunction function="streamlit.toggle" />

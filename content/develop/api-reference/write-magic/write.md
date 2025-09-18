@@ -2,6 +2,7 @@
 title: st.write
 slug: /develop/api-reference/write-magic/st.write
 description: st.write writes arguments to the app.
+ignore: true
 ---
 
 <Autofunction function="streamlit.write" />

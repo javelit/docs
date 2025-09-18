@@ -1,7 +1,10 @@
 ---
 title: st.data_editor
 slug: /develop/api-reference/data/st.data_editor
-description: st.data_editor display a data editor widget that allows you to edit dataframes and many other data structures in a table-like UI.
+description:
+  st.data_editor display a data editor widget that allows you to edit dataframes
+  and many other data structures in a table-like UI.
+ignore: true
 ---
 
 <Tip>

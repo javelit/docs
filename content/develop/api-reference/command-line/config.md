@@ -1,6 +1,7 @@
 ---
 title: jeamlit config show
 slug: /develop/api-reference/cli/config
+ignore: true
 ---
 
 ## `$ jeamlit config show`

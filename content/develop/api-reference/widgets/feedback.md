@@ -2,6 +2,7 @@
 title: st.feedback
 slug: /develop/api-reference/widgets/st.feedback
 description: Collect user feedback or ratings with st.feedback
+ignore: true
 ---
 
 <Autofunction function="streamlit.feedback" />

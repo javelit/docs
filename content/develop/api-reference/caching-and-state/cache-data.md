@@ -1,7 +1,10 @@
 ---
 title: st.cache_data
 slug: /develop/api-reference/caching-and-state/st.cache_data
-description: st.cache_data is used to cache functions that return data (e.g. dataframe transforms, database queries, ML inference).
+description:
+  st.cache_data is used to cache functions that return data (e.g. dataframe
+  transforms, database queries, ML inference).
+ignore: true
 ---
 
 <Tip>

@@ -2,6 +2,7 @@
 title: st.dataframe
 slug: /develop/api-reference/data/st.dataframe
 description: st.dataframe displays a dataframe as an interactive table.
+ignore: true
 ---
 
 <Tip>

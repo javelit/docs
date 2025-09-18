@@ -2,6 +2,7 @@
 title: st.map
 slug: /develop/api-reference/charts/st.map
 description: st.map displays a map with points on it.
+ignore: true
 ---
 
 <Autofunction function="streamlit.map" />

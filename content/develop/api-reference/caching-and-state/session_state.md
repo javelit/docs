@@ -1,7 +1,7 @@
 ---
 title: Session State
-slug: /develop/api-reference/caching-and-state/st.session_state
-description: st.session_state is a way to share variables between reruns, for each user session.
+slug: /develop/api-reference/caching-and-state/jt.sessionstate
+description: Jt.sessionState is a way to share variables between reruns, for each user session.
 ---
 
 # Session State

@@ -1,6 +1,7 @@
 ---
 title: jeamlit cache
 slug: /develop/api-reference/cli/cache
+ignore: true
 ---
 
 ## `$ jeamlit cache clear`

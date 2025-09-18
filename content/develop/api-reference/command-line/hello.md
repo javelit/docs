@@ -1,7 +1,7 @@
 ---
 title: jeamlit hello
 slug: /develop/api-reference/cli/hello
-draft: true
+ignore: true
 ---
 
 ## `$ jeamlit hello`

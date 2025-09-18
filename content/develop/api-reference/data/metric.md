@@ -1,7 +1,10 @@
 ---
 title: st.metric
 slug: /develop/api-reference/data/st.metric
-description: st.metric displays a metric in big bold font, with an optional indicator of how the metric changed.
+description:
+  st.metric displays a metric in big bold font, with an optional indicator
+  of how the metric changed.
+ignore: true
 ---
 
 <Autofunction function="streamlit.metric" />

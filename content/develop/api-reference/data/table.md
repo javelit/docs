@@ -1,7 +1,7 @@
 ---
-title: st.table
-slug: /develop/api-reference/data/st.table
-description: st.table displays a static table.
+title: Jt.table
+slug: /develop/api-reference/data/jt.table
+description: Jt.table displays a static table.
 ---
 
 <Tip>

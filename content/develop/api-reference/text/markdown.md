@@ -1,7 +1,7 @@
 ---
-title: st.markdown
-slug: /develop/api-reference/text/st.markdown
-description: st.markdown displays string formatted as Markdown.
+title: Jt.markdown
+slug: /develop/api-reference/text/jt.markdown
+description: Jt.markdown displays string formatted as Markdown.
 ---
 
 <Autofunction function="streamlit.markdown" />

@@ -2,6 +2,7 @@
 title: jeamlit init
 slug: /develop/api-reference/cli/init
 draft: true
+ignore: true
 ---
 
 ## `$ jeamlit init`

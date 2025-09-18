@@ -1,6 +1,7 @@
 ---
 title: Testing element classes
 slug: /develop/api-reference/app-testing/testing-element-classes
+ignore: true
 ---
 
 # Testing element classes

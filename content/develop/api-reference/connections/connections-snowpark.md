@@ -1,6 +1,7 @@
 ---
 title: st.connections.SnowparkConnection
 slug: /develop/api-reference/connections/st.connections.snowparkconnection
+ignore: true
 ---
 
 <Tip>

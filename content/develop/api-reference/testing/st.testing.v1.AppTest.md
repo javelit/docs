@@ -1,6 +1,7 @@
 ---
 title: st.testing.v1.AppTest
 slug: /develop/api-reference/app-testing/st.testing.v1.apptest
+ignore: true
 ---
 
 <h1 style={{display: "none"}}></h1>

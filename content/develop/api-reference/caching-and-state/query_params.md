@@ -1,7 +1,10 @@
 ---
 title: st.query_params
 slug: /develop/api-reference/caching-and-state/st.query_params
-description: st.query_params reads and manipulates query parameters in the browser's URL bar.
+description:
+  st.query_params reads and manipulates query parameters in the browser's
+  URL bar.
+ignore: true
 ---
 
 ## st.query_params

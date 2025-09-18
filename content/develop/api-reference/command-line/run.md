@@ -1,21 +1,21 @@
 ---
-title: streamlit run
+title: jeamlit run
 slug: /develop/api-reference/cli/run
 ---
 
-## `$ streamlit run`
+## `$ jeamlit run`
 
-This command starts your Streamlit app.
+This command starts your Jeamlit app.
 
 ### Syntax
 
 ```
-streamlit run <entrypoint file> [-- config options] [script args]
+jeamlit run <entrypoint file> [-- config options] [script args]
 ```
 
 ### Arguments
 
-`<entrypoint file>`: The path to your entrypoint file for your Streamlit app. In a multipage app with `st.navigation`, your entrypoint file acts as a router between your pages. Otherwise, your entrypoint file is your app's homepage.
+`<entrypoint file>`: The path to your entrypoint file for your Jeamlit app. In a multipage app with `st.navigation`, your entrypoint file acts as a router between your pages. Otherwise, your entrypoint file is your app's homepage.
 
 ### Options
 
@@ -39,31 +39,31 @@ If you need to pass arguments directly to your script, you can pass them as posi
 - If your app is in your working directory, run it as follows:
 
   ```
-  streamlit run your_app.py
+  jeamlit run your_app.py
   ```
 
 - If your app is in a subdirectory, run it as follows:
 
   ```
-  streamlit run your_subdirectory/your_app.py
+  jeamlit run your_subdirectory/your_app.py
   ```
 
 - If your app is saved in a public GitHub repo or gist, run it as follows:
 
   ```
-  streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/master/streamlit_app.py
+  jeamlit run https://raw.githubusercontent.com/jeamlit/demo-uber-nyc-pickups/master/jeamlit_app.py
   ```
 
 - If you need to set one or more configuration options, run it as follows:
 
   ```
-  streamlit run your_app.py --client.showErrorDetails=False --theme.primaryColor=blue
+  jeamlit run your_app.py --client.showErrorDetails=False --theme.primaryColor=blue
   ```
 
 - If you need to pass an argument to your script, run it as follows:
 
   ```
-  streamlit run your_app.py "my list" of arguments
+  jeamlit run your_app.py "my list" of arguments
   ```
 
   Within your script, the following statement will be true:

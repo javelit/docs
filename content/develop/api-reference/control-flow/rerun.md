@@ -2,6 +2,7 @@
 title: st.rerun
 slug: /develop/api-reference/execution-flow/st.rerun
 description: st.rerun will rerun the script immediately.
+ignore: true
 ---
 
 <Autofunction function="streamlit.rerun" oldName="streamlit.experimental_rerun" />

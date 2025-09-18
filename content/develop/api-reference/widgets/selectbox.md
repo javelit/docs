@@ -2,6 +2,7 @@
 title: st.selectbox
 slug: /develop/api-reference/widgets/st.selectbox
 description: st.selectbox displays a select widget.
+ignore: true
 ---
 
 <Autofunction function="streamlit.selectbox" />
