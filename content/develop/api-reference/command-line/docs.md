@@ -1,14 +1,14 @@
 ---
-title: streamlit docs
+title: jeamlit docs
 slug: /develop/api-reference/cli/docs
 ---
 
-## `$ streamlit docs`
+## `$ jeamlit docs`
 
-Open the Streamlit docs in your default browser.
+Open the Jeamlit docs in your default browser.
 
 ### Syntax
 
 ```
-streamlit docs
+jeamlit docs
 ```

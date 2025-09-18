@@ -513,6 +513,8 @@ export async function getStaticPaths() {
     const fileContents = fs.readFileSync(articles[index], "utf8");
     const { data } = matter(fileContents);
 
+    if (data.ignore) continue;
+
     // Use slug instead of Category if it's present
     if ("slug" in data) {
       slug = data.slug;

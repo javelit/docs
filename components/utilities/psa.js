@@ -15,7 +15,7 @@ const Psa = () => {
           >
             forums
           </a>{" "}
-          are full of helpful information and Streamlit experts.
+          are full of helpful information and Jeamlit experts.
         </p>
       </article>
     </section>

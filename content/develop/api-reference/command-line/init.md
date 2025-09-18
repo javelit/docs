@@ -1,16 +1,17 @@
 ---
-title: streamlit init
+title: jeamlit init
 slug: /develop/api-reference/cli/init
+draft: true
 ---
 
-## `$ streamlit init`
+## `$ jeamlit init`
 
-This command creates the files for a new Streamlit app.
+This command creates the files for a new Jeamlit app.
 
 ### Syntax
 
 ```
-streamlit init <directory>
+jeamlit init <directory>
 ```
 
 ### Arguments
@@ -24,40 +25,42 @@ streamlit init <directory>
 1. In your current working directory (CWD), execute the following:
 
    ```bash
-   streamlit init
+   jeamlit init
    ```
 
-   Streamlit creates the following files:
+   Jeamlit creates the following files:
+
    ```
    CWD/
    ├── requirements.txt
-   └── streamlit_app.py
+   └── jeamlit_app.py
    ```
 
-2. In your terminal, Streamlit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
+2. In your terminal, Jeamlit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
 
-   This is equivalent to executing `streamlit run streamlit_app.py` from your current working directory.
+   This is equivalent to executing `jeamlit run jeamlit_app.py` from your current working directory.
 
-3. Begin editing your `streamlit_app.py` file and save your changes.
+3. Begin editing your `jeamlit_app.py` file and save your changes.
 
 #### Example 2: Create project files in another directory
 
 1. In your current working directory (CWD), execute the following:
 
    ```bash
-   streamlit init project
+   jeamlit init project
    ```
 
-   Streamlit creates the following files:
+   Jeamlit creates the following files:
+
    ```
    CWD/
    └── project/
        ├── requirements.txt
-       └── streamlit_app.py
+       └── jeamlit_app.py
    ```
 
-2. In your terminal, Streamlit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
+2. In your terminal, Jeamlit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
 
-   This is equivalent to executing `streamlit run project/streamlit_app.py` from your current working directory.
+   This is equivalent to executing `jeamlit run project/jeamlit_app.py` from your current working directory.
 
-3. Begin editing your `streamlit_app.py` file and save your changes.
+3. Begin editing your `jeamlit_app.py` file and save your changes.

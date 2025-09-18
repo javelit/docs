@@ -1,16 +1,17 @@
 ---
-title: streamlit hello
+title: jeamlit hello
 slug: /develop/api-reference/cli/hello
+draft: true
 ---
 
-## `$ streamlit hello`
+## `$ jeamlit hello`
 
-Run the Hello app, an example Streamlit app included with the Streamlit library.
+Run the Hello app, an example Jeamlit app included with the Jeamlit library.
 
 ### Syntax
 
 ```
-streamlit hello
+jeamlit hello
 ```
 
 ### Options
@@ -27,18 +28,18 @@ For a complete list of configuration options, see [`config.toml`](/develop/api-r
 
 #### Example 1: Run the Hello app with default settings
 
-To verify that Streamlit is installed correctly, this command runs an example app included in the Streamlit library. From any directory, execute the following:
+To verify that Jeamlit is installed correctly, this command runs an example app included in the Jeamlit library. From any directory, execute the following:
 
 ```
-streamlit hello
+jeamlit hello
 ```
 
-Streamlit will start the Hello app and open it in your default browser. The source for the Hello app can be [viewed in GitHub](https://github.com/streamlit/streamlit/tree/develop/lib/streamlit/hello).
+Jeamlit will start the Hello app and open it in your default browser. The source for the Hello app can be [viewed in GitHub](https://github.com/jeamlit/jeamlit/tree/develop/lib/jeamlit/hello).
 
 #### Example 2: Run the Hello app with a custom config option value
 
 To run the Hello app with a blue accent color, from any directory, execute the following:
 
 ```
-streamlit hello --theme.primaryColor=blue
+jeamlit hello --theme.primaryColor=blue
 ```
