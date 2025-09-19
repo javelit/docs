@@ -51,6 +51,7 @@ script-src \
   'unsafe-eval' \
   https://cdn.heapanalytics.com/ \
   https://cdn.eu.heap-api.com/ \
+  https://c.eu.heap-api.com/ \
   https://cdn.segment.com/ \
   https://www.google-analytics.com/ \
   https://www.googletagmanager.com/ \
