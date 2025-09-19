@@ -6,6 +6,7 @@ import { urlInChildren } from "../../lib/purejs/breadcrumbHelpers";
 import NavChild from "./navChild";
 
 import styles from "./navItem.module.css";
+import colors from "../colors.module.css";
 
 const NavItem = ({ page, slug, condensed, className }) => {
   let subNav;
@@ -94,28 +95,28 @@ const NavItem = ({ page, slug, condensed, className }) => {
 };
 
 const BG_CLASS = {
-  "red-70": styles.RedBackground,
-  "orange-70": styles.OrangeBackground,
-  "yellow-70": styles.YellowBackground,
-  "green-70": styles.GreenBackground,
-  "acqua-70": styles.AcquaBackground,
-  "lightBlue-70": styles.LightBlueBackground,
-  "darkBlue-70": styles.DarkBlueBackground,
-  "indigo-70": styles.IndigoBackground,
-  "gray-70": styles.GrayBackground,
+  "red-70": colors.RedBackground,
+  "orange-70": colors.OrangeBackground,
+  "yellow-70": colors.YellowBackground,
+  "green-70": colors.GreenBackground,
+  "acqua-70": colors.AcquaBackground,
+  "lightBlue-70": colors.LightBlueBackground,
+  "darkBlue-70": colors.DarkBlueBackground,
+  "indigo-70": colors.IndigoBackground,
+  "gray-70": colors.GrayBackground,
   unset: styles.TransparentBackground,
 };
 
 const FG_CLASS = {
-  "red-70": styles.RedForeground,
-  "orange-70": styles.OrangeForeground,
-  "yellow-70": styles.YellowForeground,
-  "green-70": styles.GreenForeground,
-  "acqua-70": styles.AcquaForeground,
-  "lightBlue-70": styles.LightBlueForeground,
-  "darkBlue-70": styles.DarkBlueForeground,
-  "indigo-70": styles.IndigoForeground,
-  "gray-70": styles.GrayForeground,
+  "red-70": colors.RedForegroundNormal,
+  "orange-70": colors.OrangeForegroundNormal,
+  "yellow-70": colors.YellowForegroundNormal,
+  "green-70": colors.GreenForegroundNormal,
+  "acqua-70": colors.AcquaForegroundNormal,
+  "lightBlue-70": colors.LightBlueForegroundNormal,
+  "darkBlue-70": colors.DarkBlueForegroundNormal,
+  "indigo-70": colors.IndigoForegroundNormal,
+  "gray-70": colors.GrayForegroundNormal,
   unset: styles.TransparentForeground,
 };
 

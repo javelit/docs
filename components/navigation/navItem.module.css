@@ -25,39 +25,6 @@ justified. The condensed menu requires hover to expand, which isn't mobile-frien
   @apply text-white !important;
 }
 
-/* Colors for heading icons */
-.RedBackground {
-  @apply bg-red-70;
-}
-
-.OrangeBackground {
-  @apply bg-orange-70;
-}
-
-.YellowBackground {
-  @apply bg-yellow-70;
-}
-
-.GreenBackground {
-  @apply bg-green-70;
-}
-
-.AcquaBackground {
-  @apply bg-acqua-70;
-}
-
-.LightBlueBackground {
-  @apply bg-lightBlue-70;
-}
-
-.DarkBlueBackground {
-  @apply bg-darkBlue-70;
-}
-
-.IndigoBackground {
-  @apply bg-indigo-70;
-}
-
 .CategoryName {
   @apply m-0 xl:my-0 font-bold font-sans xl:text-base xl:leading-6;
   @apply text-gray-80 !important;
@@ -69,39 +36,6 @@ justified. The condensed menu requires hover to expand, which isn't mobile-frien
 
 .CondensedCategoryName {
   @apply lg:my-1 lg:text-xs lg:leading-tight lg:tracking-tight;
-}
-
-/* Colors for active categories */
-.RedForeground {
-  @apply text-red-70;
-}
-
-.OrangeForeground {
-  @apply text-orange-70;
-}
-
-.YellowForeground {
-  @apply text-yellow-70;
-}
-
-.GreenForeground {
-  @apply text-green-70;
-}
-
-.AcquaForeground {
-  @apply text-acqua-70;
-}
-
-.LightBlueForeground {
-  @apply text-lightBlue-70;
-}
-
-.DarkBlueForeground {
-  @apply text-darkBlue-70;
-}
-
-.IndigoForeground {
-  @apply text-indigo-70;
 }
 
 /* Subnav styles */

@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Link from "next/link";
 
 import styles from "./tile.module.css";
+import colors from "../colors.module.css";
 import { useRouter } from "next/router";
 
 const Tile = ({
@@ -83,15 +84,15 @@ const Tile = ({
 };
 
 const BG_CLASS = {
-  "red-70": styles.RedBackground,
-  "orange-70": styles.OrangeBackground,
-  "yellow-70": styles.YellowBackground,
-  "green-70": styles.GreenBackground,
-  "acqua-70": styles.AcquaBackground,
-  "lightBlue-70": styles.LightBlueBackground,
-  "darkBlue-70": styles.DarkBlueBackground,
-  "indigo-70": styles.IndigoBackground,
-  "gray-70": styles.GrayBackground,
+  "red-70": colors.RedBackground,
+  "orange-70": colors.OrangeBackground,
+  "yellow-70": colors.YellowBackground,
+  "green-70": colors.GreenBackground,
+  "acqua-70": colors.AcquaBackground,
+  "lightBlue-70": colors.LightBlueBackground,
+  "darkBlue-70": colors.DarkBlueBackground,
+  "indigo-70": colors.IndigoBackground,
+  "gray-70": colors.GrayBackground,
   unset: styles.TransparentBackground,
 };
 

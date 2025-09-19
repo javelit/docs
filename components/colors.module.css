@@ -1,0 +1,110 @@
+/* Shared color background utilities */
+.RedBackground {
+  @apply bg-red-70;
+}
+
+.OrangeBackground {
+  @apply bg-acqua-70;
+}
+
+.YellowBackground {
+  @apply bg-yellow-70;
+}
+
+.GreenBackground {
+  @apply bg-green-70;
+}
+
+.AcquaBackground {
+  @apply bg-acqua-70;
+}
+
+.LightBlueBackground {
+  @apply bg-lightBlue-70;
+}
+
+.DarkBlueBackground {
+  @apply bg-darkBlue-70;
+}
+
+.IndigoBackground {
+  @apply bg-indigo-70;
+}
+
+.GrayBackground {
+  @apply bg-gray-70;
+}
+
+/* Shared color foreground utilities */
+.RedForeground {
+  @apply text-red-70 !important;
+}
+
+.OrangeForeground {
+  @apply text-orange-70 !important;
+}
+
+.YellowForeground {
+  @apply text-yellow-70 !important;
+}
+
+.GreenForeground {
+  @apply text-green-70 !important;
+}
+
+.AcquaForeground {
+  @apply text-acqua-70 !important;
+}
+
+.LightBlueForeground {
+  @apply text-lightBlue-70 !important;
+}
+
+.DarkBlueForeground {
+  @apply text-darkBlue-70 !important;
+}
+
+.IndigoForeground {
+  @apply text-indigo-70 !important;
+}
+
+.GrayForeground {
+  @apply text-gray-70 !important;
+}
+
+/* Shared color foreground utilities without !important (for navItem) */
+.RedForegroundNormal {
+  @apply text-red-70;
+}
+
+.OrangeForegroundNormal {
+  @apply text-orange-70;
+}
+
+.YellowForegroundNormal {
+  @apply text-yellow-70;
+}
+
+.GreenForegroundNormal {
+  @apply text-green-70;
+}
+
+.AcquaForegroundNormal {
+  @apply text-acqua-70;
+}
+
+.LightBlueForegroundNormal {
+  @apply text-lightBlue-70;
+}
+
+.DarkBlueForegroundNormal {
+  @apply text-darkBlue-70;
+}
+
+.IndigoForegroundNormal {
+  @apply text-indigo-70;
+}
+
+.GrayForegroundNormal {
+  @apply text-gray-70;
+}
