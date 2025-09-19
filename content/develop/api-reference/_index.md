@@ -2464,7 +2464,7 @@ Load a remote URL in an iframe.
 ```python
 from st.components.v1 import iframe
 iframe(
-    "docs.streamlit.io"
+    "docs.jeamlit.io"
 )
 ```
 

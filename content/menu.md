@@ -398,7 +398,7 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Input widgets / Jt.form_submit_button
-    url: https://docs.streamlit.io/develop/api-reference/execution-flow/jt.form_submit_button
+    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.form_submit_button
     isVersioned: true
   - category: Develop / API reference / Input widgets / st.link_button
     url: /develop/api-reference/widgets/st.link_button
@@ -471,7 +471,7 @@ site_menu:
     ignore: true
   - category: Develop / API reference / Input widgets / TEXT
   - category: Develop / API reference / Input widgets / st.chat_input
-    url: https://docs.streamlit.io/develop/api-reference/chat/st.chat_input
+    url: https://docs.jeamlit.io/develop/api-reference/chat/st.chat_input
     isVersioned: true
     visible: false
     ignore: true
@@ -493,7 +493,7 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Input widgets / st.data_editor
-    url: https://docs.streamlit.io/develop/api-reference/data/st.data_editor
+    url: https://docs.jeamlit.io/develop/api-reference/data/st.data_editor
     isVersioned: true
     visible: false
     ignore: true
@@ -536,7 +536,7 @@ site_menu:
     url: /develop/api-reference/layout/jt.container
     isVersioned: true
   - category: Develop / API reference / Layouts and containers / st.dialog
-    url: https://docs.streamlit.io/develop/api-reference/execution-flow/st.dialog
+    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/st.dialog
     isVersioned: true
     visible: false
     ignore: true
@@ -547,7 +547,7 @@ site_menu:
     url: /develop/api-reference/layout/jt.expander
     isVersioned: true
   - category: Develop / API reference / Layouts and containers / Jt.form
-    url: https://docs.streamlit.io/develop/api-reference/execution-flow/jt.form
+    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.form
     isVersioned: true
   - category: Develop / API reference / Layouts and containers / Jt.popover
     url: /develop/api-reference/layout/jt.popover
@@ -574,12 +574,12 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Chat elements / st.status
-    url: https://docs.streamlit.io/develop/api-reference/status/st.status
+    url: https://docs.jeamlit.io/develop/api-reference/status/st.status
     isVersioned: true
     visible: false
     ignore: true
   - category: Develop / API reference / Chat elements / st.write_stream
-    url: https://docs.streamlit.io/develop/api-reference/write-magic/st.write_stream
+    url: https://docs.jeamlit.io/develop/api-reference/write-magic/st.write_stream
     isVersioned: true
     visible: false
     ignore: true
@@ -673,7 +673,7 @@ site_menu:
     url: /develop/api-reference/navigation/jt.page
     isVersioned: true
   - category: Develop / API reference / Navigation and pages / Jt.page_link
-    url: https://docs.streamlit.io/develop/api-reference/widgets/jt.pagelink
+    url: https://docs.jeamlit.io/develop/api-reference/widgets/jt.pagelink
     isVersioned: true
   - category: Develop / API reference / Navigation and pages / Jt.switchPage
     url: /develop/api-reference/navigation/jt.switchpage

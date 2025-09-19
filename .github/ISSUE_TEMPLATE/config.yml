@@ -4,7 +4,7 @@ contact_links:
     url: https://discuss.streamlit.io/
     about: Please ask and answer questions here.
   - name: Streamlit documentation
-    url: https://docs.streamlit.io/
+    url: https://docs.jeamlit.io/
     about: To learn more about how Streamlit works.
   - name: Jeamlit docs README
     url: https://github.com/jeamlit/docs/blob/main/README.md

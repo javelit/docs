@@ -54,7 +54,7 @@ with st.echo():
 
 Additional resources:
 
-- [https://docs.streamlit.io/develop/concepts/configuration](https://docs.streamlit.io/develop/concepts/configuration)
+- [https://docs.jeamlit.io/develop/concepts/configuration](https://docs.jeamlit.io/develop/concepts/configuration)
 - [https://static-file-serving.streamlit.app/](https://static-file-serving.streamlit.app/)
 
 <Cloud name="static-file-serving" height="1000px" />

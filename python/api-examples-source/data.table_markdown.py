@@ -6,9 +6,9 @@ df = pd.DataFrame(
         "Command": ["**st.table**", "*st.dataframe*"],
         "Type": ["`static`", "`interactive`"],
         "Docs": [
-            "[:rainbow[docs]](https://docs.streamlit.io"
+            "[:rainbow[docs]](https://docs.jeamlit.io"
             "/develop/api-reference/data/st.dataframe)",
-            "[:open_book:](https://docs.streamlit.io"
+            "[:open_book:](https://docs.jeamlit.io"
             "/develop/api-reference/data/st.table)",
         ],
     }

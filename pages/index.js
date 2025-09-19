@@ -83,7 +83,7 @@ export default function Home({ window, menu }) {
           </React.Fragment>
         )}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://docs.streamlit.io/" />
+        <meta property="og:url" content="https://docs.jeamlit.io/" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta
           property="og:image"

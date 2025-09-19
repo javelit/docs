@@ -33,7 +33,7 @@ def run():
         of what Streamlit can do!
         ### Want to learn more?
         - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
+        - Jump into our [documentation](https://docs.jeamlit.io)
         - Ask a question in our [community
           forums](https://discuss.streamlit.io)
         ### See more complex demos

@@ -3834,7 +3834,7 @@
       ],
       "signature": "Jt.deepCopy(T original, com.fasterxml.jackson.core.type.TypeReference<T> typeRef)",
       "name": "deepCopy",
-      "description": "Slow deep copy utility: serialize then deserialize json.\n Made available to be able to implement the behaviour of st.cache_data that does a copy on read.\n https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "description": "Slow deep copy utility: serialize then deserialize json.\n Made available to be able to implement the behaviour of st.cache_data that does a copy on read.\n https://docs.jeamlit.io/get-started/fundamentals/advanced-concepts#caching",
       "returns": [
         {
           "type_name": "T",
@@ -6771,7 +6771,7 @@
       "args": [],
       "signature": "Jt.cache()",
       "name": "cache",
-      "description": "Returns the app cache.\n See https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "description": "Returns the app cache.\n See https://docs.jeamlit.io/get-started/fundamentals/advanced-concepts#caching",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",

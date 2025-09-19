@@ -6,7 +6,7 @@ import streamlit as st
 @st.cache_data
 def read_file_from_url(url):
     headers = {
-        "User-Agent": "StreamlitDocs/1.5.0 (https://docs.streamlit.io; hello@streamlit.io)"
+        "User-Agent": "StreamlitDocs/1.5.0 (https://docs.jeamlit.io; hello@streamlit.io)"
     }
     return requests.get(url, headers=headers).content
 

@@ -18,7 +18,7 @@ def intro():
         ### Want to learn more?
 
         - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
+        - Jump into our [documentation](https://docs.jeamlit.io)
         - Ask a question in our [community
           forums](https://discuss.streamlit.io)
 
@@ -42,7 +42,7 @@ def mapping_demo():
     st.write(
         """
         This demo shows how to use
-[`st.pydeck_chart`](https://docs.streamlit.io/develop/api-reference/charts/st.pydeck_chart)
+[`st.pydeck_chart`](https://docs.jeamlit.io/develop/api-reference/charts/st.pydeck_chart)
 to display geospatial data.
 """
     )

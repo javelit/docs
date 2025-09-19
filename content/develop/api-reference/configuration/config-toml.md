@@ -169,7 +169,7 @@ enforceSerializableSessionState = false
 #
 # This is useful when the Enum class gets re-defined during a script
 # re-run. For more information, check out the docs:
-# https://docs.streamlit.io/develop/concepts/design/custom-classes#enums
+# https://docs.jeamlit.io/develop/concepts/design/custom-classes#enums
 #
 # Allowed values:
 # - "off"          : Disables Enum coercion.
