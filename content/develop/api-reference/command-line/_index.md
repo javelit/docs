@@ -11,7 +11,7 @@ and help you diagnose and fix issues.
 
 ## Available commands
 
-{/\*
+{\*
 
 - [`jeamlit cache clear`](/develop/api-reference/cli/cache): Clear the on-disk cache.
 - [`jeamlit config show`](/develop/api-reference/cli/config): Show all configuration options.
