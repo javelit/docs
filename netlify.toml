@@ -32,6 +32,7 @@ connect-src \
   https://px.ads.linkedin.com/ \
   https://*.algolia.net/ \
   https://*.algolianet.com/ \
+  https://c.eu.heap-api.com/ \
 ; \
 default-src 'none' ; \
 font-src 'self' ; \
@@ -51,7 +52,6 @@ script-src \
   'unsafe-eval' \
   https://cdn.heapanalytics.com/ \
   https://cdn.eu.heap-api.com/ \
-  https://c.eu.heap-api.com/ \
   https://cdn.segment.com/ \
   https://www.google-analytics.com/ \
   https://www.googletagmanager.com/ \
