@@ -11,14 +11,14 @@ and help you diagnose and fix issues.
 
 ## Available commands
 
-{/\*
+{/\*\*
 
 - [`jeamlit cache clear`](/develop/api-reference/cli/cache): Clear the on-disk cache.
 - [`jeamlit config show`](/develop/api-reference/cli/config): Show all configuration options.
 - [`jeamlit docs`](/develop/api-reference/cli/docs): Open the Jeamlit docs.
 - [`jeamlit hello`](/develop/api-reference/cli/hello): Run an example Jeamlit app.
 - [`jeamlit init`](/develop/api-reference/cli/init): Create the files for a new Jeamlit app.
-  \*/}
+  \*\*/}
 - [`jeamlit --help`](/develop/api-reference/cli/help): Show the available CLI commands.
 - [`jeamlit run`](/develop/api-reference/cli/run): Run your Jeamlit app.
 - [`jeamlit --version`](/develop/api-reference/cli/version): Show the version of Jeamlit.
