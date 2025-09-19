@@ -4,11 +4,15 @@
 }
 
 .OrangeBackground {
-  @apply bg-acqua-70;
+  @apply bg-orange-70;
 }
 
 .YellowBackground {
   @apply bg-yellow-70;
+}
+
+.YellowBackground80 {
+  @apply bg-yellow-80;
 }
 
 .GreenBackground {
@@ -17,6 +21,10 @@
 
 .AcquaBackground {
   @apply bg-acqua-70;
+}
+
+.AcquaBackground100 {
+  @apply bg-acqua-100;
 }
 
 .LightBlueBackground {
@@ -48,12 +56,20 @@
   @apply text-yellow-70 !important;
 }
 
+.YellowForeground80 {
+  @apply text-yellow-80 !important;
+}
+
 .GreenForeground {
   @apply text-green-70 !important;
 }
 
 .AcquaForeground {
   @apply text-acqua-70 !important;
+}
+
+.AcquaForeground100 {
+  @apply text-acqua-100 !important;
 }
 
 .LightBlueForeground {
@@ -85,12 +101,20 @@
   @apply text-yellow-70;
 }
 
+.YellowForegroundNormal80 {
+  @apply text-yellow-80;
+}
+
 .GreenForegroundNormal {
   @apply text-green-70;
 }
 
 .AcquaForegroundNormal {
   @apply text-acqua-70;
+}
+
+.AcquaForegroundNormal100 {
+  @apply text-acqua-100;
 }
 
 .LightBlueForegroundNormal {
@@ -108,3 +132,70 @@
 .GrayForegroundNormal {
   @apply text-gray-70;
 }
+
+.RedHighlight em {
+  @apply border-b-red-70;
+}
+
+.OrangeHighlight em {
+  @apply border-b-orange-70;
+}
+
+.YellowHighlight em {
+  @apply border-b-yellow-70;
+}
+
+.YellowHighlight80 em {
+  @apply border-b-yellow-80;
+}
+
+.GreenHighlight em {
+  @apply border-b-green-70;
+}
+
+.AcquaHighlight em {
+  @apply border-b-acqua-70;
+}
+
+.AcquaHighlight100 em {
+  @apply border-b-acqua-100;
+}
+
+.LightBlueHighlight em {
+  @apply border-b-lightBlue-70;
+}
+
+.DarkBlueHighlight em {
+  @apply border-b-darkBlue-70;
+}
+
+.IndigoHighlight em {
+  @apply border-b-indigo-70;
+}
+
+.GrayHighlight em {
+  @apply border-b-gray-70;
+}
+
+/**
+before: streamlit theme
+after: jeamlit theme
+
+color 1 - get started
+before:  orange-70
+after:  red-70
+
+color 2 - develop
+before: indigo-70
+after: bg-yellow-80 --> yellow-80
+
+color 3 - deploy
+before: lightBlue-70
+after:bg-green-70
+
+
+color 4 - kb
+before: darkBlue-70
+after: acqua-100
+
+*/

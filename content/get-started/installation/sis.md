@@ -1,6 +1,7 @@
 ---
 title: Use Streamlit in Snowflake
 slug: /get-started/installation/streamlit-in-snowflake
+ignore: true
 ---
 
 # Use Streamlit in Snowflake to code in a secure environment
@@ -84,7 +85,6 @@ The databases in the above screenshot are as follows:
 1. In the upper-right corner, click the blue "<i style={{ verticalAlign: "-.25em" }} className={{ class: "material-icons-sharp" }}>add</i> **Streamlit App**" button.
 
 1. Enter your app details as follows:
-
    - App title: "Hello World"
    - App location: "STREAMLIT_DB" and "PUBLIC"
    - App warehouse: "COMPUTE_WH" (default) or "STREAMLIT_WH" (if you created a new warehouse)

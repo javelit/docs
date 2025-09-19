@@ -13,31 +13,31 @@ Go to our [Community Cloud quickstart](/deploy/streamlit-community-cloud/get-sta
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="arrow_forward"
         bold="Get started."
         href="/deploy/streamlit-community-cloud/get-started"
     >Learn about Streamlit Community Cloud accounts and how to create one.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="flight_takeoff"
         bold="Deploy your app."
         href="/deploy/streamlit-community-cloud/deploy-your-app"
     >A step-by-step guide on how to get your app deployed.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="settings"
         bold="Manage your app."
         href="/deploy/streamlit-community-cloud/manage-your-app"
     >Access logs, reboot apps, set favorites, and more. Jump into a GitHub codespace to edit your app in the cloud.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="share"
         bold="Share your app."
         href="/deploy/streamlit-community-cloud/share-your-app"
     >Share or embed your app.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="manage_accounts"
         bold="Manage your account."
         href="/deploy/streamlit-community-cloud/manage-your-account"

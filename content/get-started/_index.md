@@ -10,25 +10,25 @@ operating system, and how to create your first Streamlit app!
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="orange-70"
+        color="red-70"
         icon="downloading"
         bold="Installation"
         href="/get-started/installation"
     >helps you set up your development environment. Walk through installing Streamlit on Windows, macOS, or Linux. Alternatively, code right in your browser with GitHub Codespaces or Streamlit in Snowflake.</InlineCallout>
     <InlineCallout
-        color="orange-70"
+        color="red-70"
         icon="description"
         bold="Fundamentals"
         href="/get-started/fundamentals"
     >introduces you to Streamlit's data model and development flow. You'll learn what makes Streamlit the most powerful way to build data apps, including the ability to display and style data, draw charts and maps, add interactive widgets, customize app layouts, cache computation, and define themes.</InlineCallout>
     <InlineCallout
-        color="orange-70"
+        color="red-70"
         icon="auto_awesome"
         bold="First steps"
         href="/get-started/tutorials"
     >walks you through creating apps using core features to fetch and cache data, draw charts, plot information on a map, and use interactive widgets to filter results.</InlineCallout>
     <InlineCallout
-        color="orange-70"
+        color="red-70"
         icon="rocket_launch"
         bold="Use GitHub Codespaces"
         href="/get-started/installation/community-cloud"

@@ -11,31 +11,31 @@ The provided class, AppTest, simulates a running app and provides methods to set
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="science"
         bold="Get started"
         href="/develop/concepts/app-testing/get-started"
     >introduces you to the app testing framework and how to execute tests using <code>pytest</code>. Learn how to initialize and run simulated apps, including how to retrieve, manipulate, and inspect app elements.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="password"
         bold="Beyond the basics"
         href="/develop/concepts/app-testing/beyond-the-basics"
     >explains how to work with secrets and Session State within app tests, including how to test multipage apps.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="play_circle"
         bold="Automate your tests"
         href="/develop/concepts/app-testing/automate-tests"
     >with Continuous Integration (CI) to validate app changes over time.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="quiz"
         bold="Example"
         href="/develop/concepts/app-testing/examples"
     >puts together the concepts explained above. Check out an app with multiple tests in place.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="saved_search"
         bold="Cheat sheet"
         href="/develop/concepts/app-testing/cheat-sheet"

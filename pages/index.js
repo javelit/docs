@@ -65,7 +65,7 @@ export default function Home({ window, menu }) {
   return (
     <Layout window={window}>
       <Head>
-        <title>Streamlit documentation</title>
+        <title>Jeamlit documentation</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="alternate icon" href="/favicon32.ico" />
         <meta name="theme-color" content="#ffffff" />
@@ -115,7 +115,7 @@ export default function Home({ window, menu }) {
         <SideBar menu={menu} slug={[]} />
         <section className={styles.InnerContainer}>
           <article>
-            <H1>Streamlit documentation</H1>
+            <H1>Jeamlit documentation</H1>
             <p>
               <a href="https://www.streamlit.io">Streamlit</a> is an open-source
               Python framework for data scientists and AI/ML engineers to
@@ -139,7 +139,7 @@ export default function Home({ window, menu }) {
             <H2>How to use our docs</H2>
             <InlineCalloutContainer>
               <InlineCallout
-                color="orange-70"
+                color="red-70"
                 icon="rocket_launch"
                 bold="Get started"
                 href="/get-started"
@@ -148,7 +148,7 @@ export default function Home({ window, menu }) {
                 the fundamental concepts, and start coding!
               </InlineCallout>
               <InlineCallout
-                color="indigo-70"
+                color="yellow-80"
                 icon="description"
                 bold="Develop"
                 href="/develop"
@@ -158,7 +158,7 @@ export default function Home({ window, menu }) {
                 conceptual guides. Try out our step-by-step tutorials.
               </InlineCallout>
               <InlineCallout
-                color="lightBlue-70"
+                color="green-70"
                 icon="cloud"
                 bold="Deploy"
                 href="/deploy"
@@ -170,7 +170,7 @@ export default function Home({ window, menu }) {
                 options!
               </InlineCallout>
               <InlineCallout
-                color="darkBlue-70"
+                color="acqua-100"
                 icon="school"
                 bold="Knowledge base"
                 href="/knowledge-base"

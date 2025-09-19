@@ -2,7 +2,7 @@
 site_menu:
   - category: Get started
     url: /get-started
-    color: orange-70
+    color: red-70
     icon: rocket_launch
   - category: Get started / Installation
     url: /get-started/installation
@@ -34,7 +34,7 @@ site_menu:
 
   - category: Develop
     url: /develop
-    color: indigo-70
+    color: yellow-80
     icon: code
 
   - category: Develop / Concepts
@@ -1007,7 +1007,7 @@ site_menu:
 
   - category: Deploy
     url: /deploy
-    color: lightBlue-70
+    color: green-70
     icon: web_asset
   - category: Deploy / Concepts
     url: /deploy/concepts
@@ -1097,7 +1097,7 @@ site_menu:
 
   - category: Knowledge base
     url: /knowledge-base
-    color: darkBlue-70
+    color: acqua-100
     icon: school
   - category: Knowledge base / FAQ
     url: /knowledge-base/using-streamlit

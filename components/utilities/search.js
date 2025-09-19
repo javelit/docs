@@ -14,6 +14,7 @@ import {
 } from "react-instantsearch-dom";
 
 import styles from "./search.module.css";
+import colors from "../colors.module.css";
 
 const Search = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -136,13 +137,13 @@ const Search = () => {
   }, []);
 
   const searchClient = algoliasearch(
-    "XNXFGO6BQ1",
-    "dd82fd414de60db7ffbcbf30eca68013",
+    "K8RSXHA8Q5",
+    "6c54ab651cbcae207727c8572966e0ec",
   );
 
   function Hit(props) {
     const icon = props.hit.icon ? props.hit.icon : "text_snippet";
-    const color = props.hit.color ? props.hit.color : "orange-70";
+    const color = props.hit.color ? props.hit.color : "red-70";
     const category = props.hit.category ? props.hit.category : "Page";
     let snippet;
     if (
@@ -272,28 +273,32 @@ const Search = () => {
 };
 
 const HIGHLIGHT_COLOR = {
-  "red-70": styles.RedHighlight,
-  "orange-70": styles.OrangeHighlight,
-  "yellow-70": styles.YellowHighlight,
-  "green-70": styles.GreenHighlight,
-  "acqua-70": styles.AcquaHighlight,
-  "lightBlue-70": styles.LightBlueHighlight,
-  "darkBlue-70": styles.DarkBlueHighlight,
-  "indigo-70": styles.IndigoHighlight,
-  "gray-70": styles.GrayHighlight,
+  "red-70": colors.RedHighlight,
+  "orange-70": colors.OrangeHighlight,
+  "yellow-70": colors.YellowHighlight,
+  "yellow-80": colors.YellowHighlight80,
+  "green-70": colors.GreenHighlight,
+  "acqua-70": colors.AcquaHighlight,
+  "acqua-100": colors.AcquaHighlight100,
+  "lightBlue-70": colors.LightBlueHighlight,
+  "darkBlue-70": colors.DarkBlueHighlight,
+  "indigo-70": colors.IndigoHighlight,
+  "gray-70": colors.GrayHighlight,
   unset: styles.TransparentHighlight,
 };
 
 const ICON_COLOR = {
-  "red-70": styles.RedIcon,
-  "orange-70": styles.OrangeIcon,
-  "yellow-70": styles.YellowIcon,
-  "green-70": styles.GreenIcon,
-  "acqua-70": styles.AcquaIcon,
-  "lightBlue-70": styles.LightBlueIcon,
-  "darkBlue-70": styles.DarkBlueIcon,
-  "indigo-70": styles.IndigoIcon,
-  "gray-70": styles.GrayIcon,
+  "red-70": colors.RedBackground,
+  "orange-70": colors.OrangeBackground,
+  "yellow-70": colors.YellowBackground,
+  "yellow-80": colors.YellowBackground80,
+  "green-70": colors.GreenBackground,
+  "acqua-70": colors.AcquaBackground,
+  "acqua-100": colors.AcquaBackground100,
+  "lightBlue-70": colors.LightBlueBackground,
+  "darkBlue-70": colors.DarkBlueBackground,
+  "indigo-70": colors.IndigoBackground,
+  "gray-70": colors.GrayBackground,
   unset: styles.TransparentIcon,
 };
 

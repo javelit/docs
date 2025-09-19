@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import classNames from "classnames";
+import colors from "../colors.module.css";
 
 import styles from "./navChild.module.css";
 import { looksLikeVersionAndPlatformString } from "../../lib/next/utils";
@@ -138,15 +139,17 @@ const NavChild = ({ slug, page, color, className }) => {
 };
 
 const CIRCLE_CLASS = {
-  "red-70": styles.RedCircle,
-  "orange-70": styles.OrangeCircle,
-  "yellow-70": styles.YellowCircle,
-  "green-70": styles.GreenCircle,
-  "acqua-70": styles.AcquaCircle,
-  "lightBlue-70": styles.LightBlueCircle,
-  "darkBlue-70": styles.DarkBlueCircle,
-  "indigo-70": styles.IndigoCircle,
-  "gray-70": styles.GrayCircle,
+  "red-70": colors.RedBackground,
+  "orange-70": colors.OrangeBackground,
+  "yellow-70": colors.YellowBackground,
+  "yellow-80": colors.YellowBackground80,
+  "green-70": colors.GreenBackground,
+  "acqua-70": colors.AcquaBackground,
+  "acqua-100": colors.AcquaBackground100,
+  "lightBlue-70": colors.LightBlueBackground,
+  "darkBlue-70": colors.DarkBlueBackground,
+  "indigo-70": colors.IndigoBackground,
+  "gray-70": colors.GrayBackground,
   unset: styles.TransparentCircle,
 };
 

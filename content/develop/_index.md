@@ -9,25 +9,25 @@ Get all the information you need to build beautiful, performant web apps with St
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="book"
         bold="Concepts."
         href="/develop/concepts"
     >Learn how Streamlit works with in-depth guides to our execution model and features.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="list"
         bold="API reference."
         href="/develop/api-reference"
     >Learn about our API with function definitions and examples.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="auto_awesome"
         bold="Tutorials."
         href="/develop/tutorials"
     >Follow step-by-step instructions to build example apps and useful snippets.</InlineCallout>
     <InlineCallout
-        color="indigo-70"
+        color="yellow-80"
         icon="bolt"
         bold="Quick references."
         href="/develop/quick-reference"

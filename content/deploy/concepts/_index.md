@@ -15,13 +15,13 @@ If you're using Streamlit Community Cloud, we'll do most of the work for you!
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="build_circle"
         bold="Dependencies."
         href="/deploy/concepts/dependencies"
     >Understand the basics of configuring your deployment environment.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="password"
         bold="Secrets."
         href="/deploy/concepts/secrets"

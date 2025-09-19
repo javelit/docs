@@ -186,7 +186,7 @@ function getAllFilesInDirectory(articleDirectory, files) {
 
   console.log(`... uploading ${to_index.length} pages to Algolia.`);
 
-  const client = algoliasearch("XNXFGO6BQ1", process.env.ALGOLIA_SECRET);
+  const client = algoliasearch("K8RSXHA8Q5", process.env.ALGOLIA_SECRET);
 
   const index = client.initIndex("documentation");
   const tmp_index = client.initIndex("documentation_tmp");

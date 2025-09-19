@@ -213,7 +213,7 @@ https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/master/streaml
           <TilesContainer>
             <Tile
               size="third"
-              background="lightBlue-70"
+              background="green-70"
               color="white"
               icon="downloading"
               title="Install Streamlit"
@@ -393,7 +393,7 @@ st.altair_chart(chart_data)`}
         <Component label="Inline callout">
           <InlineCalloutContainer>
             <InlineCallout
-              color="indigo-70"
+              color="yellow-80"
               icon="school"
               bold="Tutorials"
               href="/"
@@ -403,7 +403,7 @@ st.altair_chart(chart_data)`}
               Streamlit.
             </InlineCallout>
             <InlineCallout
-              color="indigo-70"
+              color="yellow-80"
               icon="school"
               bold="Tutorials"
               href="/"

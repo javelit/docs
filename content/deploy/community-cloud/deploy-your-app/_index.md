@@ -25,25 +25,25 @@ When your app has everything it needs, deploying is easy. Just go to your worksp
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="description"
         bold="File organization."
         href="/deploy/streamlit-community-cloud/deploy-your-app/file-organization"
     >Learn how Community Cloud initializes your app and interprets paths. Learn where to put your configuration files.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="build_circle"
         bold="App dependencies."
         href="/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies"
     >Learn how to install dependencies and other Python libraries into your deployment environment.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="password"
         bold="Secrets management."
         href="/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"
     >Learn about the interface Community Cloud provides to securely upload your <code>secrets.toml</code> data.</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="flight_takeoff"
         bold="Deploy your app"
         href="/deploy/streamlit-community-cloud/deploy-your-app/deploy"

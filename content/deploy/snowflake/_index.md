@@ -14,21 +14,21 @@ Host your apps alongside your data in a single, global platform. Snowflake provi
         title="Streamlit in Snowflake Quickstart"
         text="Create a free trial account and deploy an app with Streamlit in Snowflake."
         link="/get-started/installation/streamlit-in-snowflake"
-        background="lightBlue-70"
+        background="green-70"
     />
     <Tile
         icon="code"
         title="Examples"
         text="Explore a wide variety of example apps in Snowflake Labs' snowflake-demo-streamlit repository."
         link="https://github.com/Snowflake-Labs/snowflake-demo-streamlit"
-        background="lightBlue-70"
+        background="green-70"
     />
     <Tile
         icon="book"
         title="Get started with Snowflake"
         text="Learn more in Snowflake's documentation."
         link="https://docs.snowflake.com/user-guide-getting-started"
-        background="lightBlue-70"
+        background="green-70"
     />
 </TileContainer>
 
@@ -36,19 +36,19 @@ There are three ways to host Streamlit apps in Snowflake:
 
 <InlineCalloutContainer>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="bolt"
         bold="Streamlit in Snowflake."
         href="https://docs.snowflake.com/developer-guide/streamlit/about-streamlit"
     >Run your Streamlit app as a native object in Snowflake. Enjoy an in-browser editor and minimal work to configure your environment. Share your app with other users in your Snowflake account through role-based access control (RBAC). This is a great way to deploy apps internally for your business. Check out Snowflake docs!</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="ac_unit"
         bold="Snowflake Native Apps."
         href="https://docs.snowflake.com/en/developer-guide/native-apps/adding-streamlit"
     >Package your app with data and share it with other Snowflake accounts. This is a great way to share apps and their underlying data with other organizations who use Snowflake. Check out Snowflake docs!</InlineCallout>
     <InlineCallout
-        color="lightBlue-70"
+        color="green-70"
         icon="web_asset"
         bold="Snowpark Container Services."
         href="https://docs.snowflake.com/en/developer-guide/snowpark-container-services/overview"

@@ -6,6 +6,6 @@ contact_links:
   - name: Streamlit documentation
     url: https://docs.streamlit.io/
     about: To learn more about how Streamlit works.
-  - name: Streamlit docs README
-    url: https://github.com/streamlit/docs/blob/main/README.md
-    about: To learn how Streamlit's documentation works.
+  - name: Jeamlit docs README
+    url: https://github.com/jeamlit/docs/blob/main/README.md
+    about: To learn how Jeamlit's documentation works.

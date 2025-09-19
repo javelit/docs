@@ -3,21 +3,21 @@ title: Welcome to Jeamlit
 features:
   - title: Get started
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    color: indigo-70
+    color: yellow-80
     icon: arrow_forward
     url: /get-started
     image: ""
   - title: API reference
     body: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
       fugit, sed quia.
-    color: orange-70
+    color: red-70
     icon: dvr
     url: /develop/api-reference
     image: ""
   - title: Topic guides
     body: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
       fugit, sed quia.
-    color: lightBlue-70
+    color: green-70
     icon: description
     url:
       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,

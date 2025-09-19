@@ -1,7 +1,7 @@
 If Algolia suddenly breaks, reimport this configuration file in its UI!
 
 How:
-1. Go here https://www.algolia.com/apps/XNXFGO6BQ1/explorer/configuration/documentation/searchable-attributes
+1. Go here https://dashboard.algolia.com/apps/K8RSXHA8Q5/explorer/configuration/documentation/searchable-attributes
 
   Or, if that doesn't work:
   - Open algolia.com
