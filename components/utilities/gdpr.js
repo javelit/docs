@@ -154,86 +154,56 @@ export default function GDPRBanner({
 
 function insertTelemetry() {
   (function () {
-    var i = "analytics",
-      analytics = (window[i] = window[i] || []);
-    if (!analytics.initialize)
-      if (analytics.invoked)
-        window.console &&
-          console.error &&
-          console.error("Segment snippet included twice.");
-      else {
-        analytics.invoked = !0;
-        analytics.methods = [
-          "trackSubmit",
-          "trackClick",
-          "trackLink",
-          "trackForm",
-          "pageview",
-          "identify",
-          "reset",
-          "group",
-          "track",
-          "ready",
-          "alias",
-          "debug",
-          "page",
-          "screen",
-          "once",
-          "off",
-          "on",
-          "addSourceMiddleware",
-          "addIntegrationMiddleware",
-          "setAnonymousId",
-          "addDestinationMiddleware",
-          "register",
-        ];
-        analytics.factory = function (e) {
-          return function () {
-            if (window[i].initialized)
-              return window[i][e].apply(window[i], arguments);
-            var n = Array.prototype.slice.call(arguments);
-            if (
-              ["track", "screen", "alias", "group", "page", "identify"].indexOf(
-                e,
-              ) > -1
-            ) {
-              var c = document.querySelector("link[rel='canonical']");
-              n.push({
-                __t: "bpc",
-                c: (c && c.getAttribute("href")) || void 0,
-                p: location.pathname,
-                u: location.href,
-                s: location.search,
-                t: document.title,
-                r: document.referrer,
+    ((window.heapReadyCb = window.heapReadyCb || []),
+      (window.heap = window.heap || []),
+      (heap.load = function (e, t) {
+        ((window.heap.envId = e),
+          (window.heap.clientConfig = t = t || {}),
+          (window.heap.clientConfig.shouldFetchServerConfig = !1));
+        var a = document.createElement("script");
+        ((a.type = "text/javascript"),
+          (a.async = !0),
+          (a.src =
+            "https://cdn.eu.heap-api.com/config/" + e + "/heap_config.js"));
+        var r = document.getElementsByTagName("script")[0];
+        r.parentNode.insertBefore(a, r);
+        var n = [
+            "init",
+            "startTracking",
+            "stopTracking",
+            "track",
+            "resetIdentity",
+            "identify",
+            "getSessionId",
+            "getUserId",
+            "getIdentity",
+            "addUserProperties",
+            "addEventProperties",
+            "removeEventProperty",
+            "clearEventProperties",
+            "addAccountProperties",
+            "addAdapter",
+            "addTransformer",
+            "addTransformerFn",
+            "onReady",
+            "addPageviewProperties",
+            "removePageviewProperty",
+            "clearPageviewProperties",
+            "trackPageview",
+          ],
+          i = function (e) {
+            return function () {
+              var t = Array.prototype.slice.call(arguments, 0);
+              window.heapReadyCb.push({
+                name: e,
+                fn: function () {
+                  heap[e] && heap[e].apply(heap, t);
+                },
               });
-            }
-            n.unshift(e);
-            analytics.push(n);
-            return analytics;
+            };
           };
-        };
-        for (var n = 0; n < analytics.methods.length; n++) {
-          var key = analytics.methods[n];
-          analytics[key] = analytics.factory(key);
-        }
-        analytics.load = function (key, n) {
-          var t = document.createElement("script");
-          t.type = "text/javascript";
-          t.async = !0;
-          t.setAttribute("data-global-segment-analytics-key", i);
-          t.src =
-            "https://cdn.segment.com/analytics.js/v1/" +
-            key +
-            "/analytics.min.js";
-          var r = document.getElementsByTagName("script")[0];
-          r.parentNode.insertBefore(t, r);
-          analytics._loadOptions = n;
-        };
-        analytics._writeKey = "qXL0WxKkXwhtEhm5BgiYXnZbZvKFIBmA";
-        analytics.SNIPPET_VERSION = "5.2.0";
-        analytics.load("qXL0WxKkXwhtEhm5BgiYXnZbZvKFIBmA");
-        analytics.page();
-      }
+        for (var p = 0; p < n.length; p++) heap[n[p]] = i(n[p]);
+      }));
+    heap.load("646205220");
   })();
 }
