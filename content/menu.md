@@ -14,6 +14,7 @@ site_menu:
     url: /get-started/installation/community-cloud
   - category: Get started / Installation / Use Snowflake
     url: /get-started/installation/streamlit-in-snowflake
+    ignore: true
   - category: Get started / Fundamentals
     url: /get-started/fundamentals
   - category: Get started / Fundamentals / Basic concepts
@@ -1086,6 +1087,7 @@ site_menu:
     url: /deploy/streamlit-community-cloud/status
   - category: Deploy / Snowflake
     url: /deploy/snowflake
+    ignore: true
   - category: Deploy / Other platforms
     url: /deploy/tutorials
   - category: Deploy / Other platforms / Docker

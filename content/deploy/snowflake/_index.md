@@ -1,6 +1,7 @@
 ---
 title: Streamlit in Snowflake
 slug: /deploy/snowflake
+ignore: true
 ---
 
 # Deploy Streamlit apps in Snowflake
