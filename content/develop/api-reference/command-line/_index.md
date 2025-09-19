@@ -18,7 +18,7 @@ and help you diagnose and fix issues.
 - [`jeamlit docs`](/develop/api-reference/cli/docs): Open the Jeamlit docs.
 - [`jeamlit hello`](/develop/api-reference/cli/hello): Run an example Jeamlit app.
 - [`jeamlit init`](/develop/api-reference/cli/init): Create the files for a new Jeamlit app.
-  \*/}
+  */}
 - [`jeamlit --help`](/develop/api-reference/cli/help): Show the available CLI commands.
 - [`jeamlit run`](/develop/api-reference/cli/run): Run your Jeamlit app.
 - [`jeamlit --version`](/develop/api-reference/cli/version): Show the version of Jeamlit.
