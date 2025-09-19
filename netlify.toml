@@ -5,6 +5,7 @@ publish = "out"
 [[plugins]]
 # Setting the plugin manually, so we can pick the version (see package.json).
 package = "@netlify/plugin-nextjs"
+# set NETLIFY_NEXT_PLUGIN_SKIP=true in Netlify project env vars
 
 # IMPORTANT: Keep this in sync with next.config.js
 [[headers]]
