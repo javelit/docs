@@ -1,15 +1,6 @@
 {
   "0.17.0": {
     "Jt.textInput": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -81,6 +72,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -92,7 +84,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -242,9 +234,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -256,7 +246,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Convenience method for setting width as integer pixels.",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -291,6 +281,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -302,7 +293,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -318,7 +309,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -342,7 +333,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -354,7 +345,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.textInput(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.textInput(String label)"
+        }
+      ],
       "name": "textInput",
       "returns": [
         {
@@ -367,15 +371,6 @@
       "source": ""
     },
     "Jt.code": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "body",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -493,6 +488,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -504,7 +500,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -516,6 +512,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -527,7 +524,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -539,6 +536,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -550,7 +548,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -566,7 +564,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -590,7 +588,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -602,7 +600,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.code(String body)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "body",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.code(String body)"
+        }
+      ],
       "name": "code",
       "returns": [
         {
@@ -615,22 +626,6 @@
       "source": ""
     },
     "Jt.pageLink": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "url",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -679,6 +674,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -690,7 +686,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -748,9 +744,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -762,7 +756,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Set width as integer pixels.",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -774,6 +768,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -785,7 +780,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -801,7 +796,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -825,7 +820,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -837,7 +832,39 @@
           "source": ""
         }
       ],
-      "signature": "Jt.pageLink(String url, String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "Class<?>",
+              "default": null,
+              "name": "pageClass",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.pageLink(Class<?> pageClass)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "url",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.pageLink(String url, String label)"
+        }
+      ],
       "name": "pageLink",
       "returns": [
         {
@@ -850,15 +877,6 @@
       "source": ""
     },
     "Jt.textArea": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -953,6 +971,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -964,7 +983,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1068,9 +1087,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -1082,7 +1099,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Convenience method for setting width as integer pixels.",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1117,6 +1134,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1128,7 +1146,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -1144,7 +1162,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -1168,7 +1186,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -1180,7 +1198,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.textArea(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.textArea(String label)"
+        }
+      ],
       "name": "textArea",
       "returns": [
         {
@@ -1193,15 +1224,6 @@
       "source": ""
     },
     "Jt.text": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "body",
-          "description": "The string to display.",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "paramDescriptions": {},
@@ -1240,7 +1262,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.\n The tooltip can optionally contain Markdown, including the Markdown directives, see [io.jeamlit.core.Jt#markdown] for details.",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TextComponent.Builder",
@@ -1300,6 +1322,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1311,7 +1334,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -1327,7 +1350,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -1351,7 +1374,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -1363,9 +1386,22 @@
           "source": ""
         }
       ],
-      "signature": "Jt.text(String body)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "body",
+              "description": "The string to display.",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.text(String body)"
+        }
+      ],
       "name": "text",
-      "description": "Write text without Markdown or HTML parsing.\n For monospace text, use [Jt#code]",
+      "description": "Write text without Markdown or HTML parsing.\n For monospace text, use  {@link Jt#code}",
       "returns": [
         {
           "type_name": "void",
@@ -1377,15 +1413,6 @@
       "source": ""
     },
     "Jt.checkbox": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -1434,6 +1461,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1445,7 +1473,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1503,6 +1531,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1514,7 +1543,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1526,6 +1555,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -1537,7 +1567,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1549,6 +1579,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1560,7 +1591,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -1576,7 +1607,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -1600,7 +1631,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -1612,7 +1643,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.checkbox(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.checkbox(String label)"
+        }
+      ],
       "name": "checkbox",
       "returns": [
         {
@@ -1625,22 +1669,6 @@
       "source": ""
     },
     "Jt.selectBox": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "List<T>",
-          "default": null,
-          "name": "options",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -1873,6 +1901,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1884,7 +1913,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -1900,7 +1929,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -1924,7 +1953,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -1936,7 +1965,27 @@
           "source": ""
         }
       ],
-      "signature": "Jt.selectBox(String label, List<T> options)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "List<T>",
+              "default": null,
+              "name": "options",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.selectBox(String label, List<T> options)"
+        }
+      ],
       "name": "selectBox",
       "returns": [
         {
@@ -1949,22 +1998,6 @@
       "source": ""
     },
     "Jt.expander": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -2013,6 +2046,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -2024,7 +2058,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ExpanderComponent.Builder",
@@ -2036,6 +2070,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2047,7 +2082,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -2063,7 +2098,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -2087,7 +2122,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -2099,7 +2134,27 @@
           "source": ""
         }
       ],
-      "signature": "Jt.expander(String key, String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.expander(String key, String label)"
+        }
+      ],
       "name": "expander",
       "returns": [
         {
@@ -2112,15 +2167,6 @@
       "source": ""
     },
     "Jt.formSubmitButton": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -2169,6 +2215,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2180,7 +2227,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
@@ -2261,6 +2308,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2272,7 +2320,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -2288,7 +2336,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -2312,7 +2360,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -2324,7 +2372,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.formSubmitButton(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.formSubmitButton(String label)"
+        }
+      ],
       "name": "formSubmitButton",
       "returns": [
         {
@@ -2337,15 +2398,6 @@
       "source": ""
     },
     "Jt.container": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -2394,6 +2446,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2405,7 +2458,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -2421,7 +2474,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -2445,7 +2498,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -2457,7 +2510,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.container(String key)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.container(String key)"
+        }
+      ],
       "name": "container",
       "returns": [
         {
@@ -2470,24 +2536,9 @@
       "source": ""
     },
     "Jt.popover": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2499,7 +2550,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.PopoverComponent.Builder",
@@ -2557,6 +2608,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2568,7 +2620,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -2584,7 +2636,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -2608,7 +2660,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -2620,7 +2672,27 @@
           "source": ""
         }
       ],
-      "signature": "Jt.popover(String key, String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.popover(String key, String label)"
+        }
+      ],
       "name": "popover",
       "returns": [
         {
@@ -2633,22 +2705,6 @@
       "source": ""
     },
     "Jt.numberInput": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "Class<T>",
-          "default": null,
-          "name": "valueClass",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -2968,6 +3024,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2979,7 +3036,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -2995,7 +3052,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -3019,7 +3076,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -3031,7 +3088,39 @@
           "source": ""
         }
       ],
-      "signature": "Jt.numberInput(String label, Class<T> valueClass)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.numberInput(String label)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "Class<T>",
+              "default": null,
+              "name": "valueClass",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.numberInput(String label, Class<T> valueClass)"
+        }
+      ],
       "name": "numberInput",
       "returns": [
         {
@@ -3044,15 +3133,6 @@
       "source": ""
     },
     "Jt.fileUploader": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -3101,6 +3181,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3112,7 +3193,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3216,9 +3297,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -3230,7 +3309,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Convenience method for setting width as integer pixels.",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3242,6 +3321,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3253,7 +3333,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -3269,7 +3349,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -3293,7 +3373,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -3305,7 +3385,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.fileUploader(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.fileUploader(String label)"
+        }
+      ],
       "name": "fileUploader",
       "returns": [
         {
@@ -3318,17 +3411,9 @@
       "source": ""
     },
     "Jt.markdown": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "body",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3340,7 +3425,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -3352,6 +3437,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3363,7 +3449,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -3375,6 +3461,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -3386,7 +3473,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -3398,6 +3485,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3409,7 +3497,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -3425,7 +3513,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -3449,7 +3537,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -3461,8 +3549,22 @@
           "source": ""
         }
       ],
-      "signature": "Jt.markdown(String body)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "body",
+              "description": "The text to display as Markdown.",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.markdown(String body)"
+        }
+      ],
       "name": "markdown",
+      "description": "Display string formatted as Markdown.\n  <p> \n Supported :\n  <ul> \n      <li> Emoji shortcodes, such as :+1: and :sunglasses:. For a list of all supported codes, see  <a href=\"https://www.webfx.com/tools/emoji-cheat-sheet/\"> https://www.webfx.com/tools/emoji-cheat-sheet/ </a> . </li> \n      <li> Tables </li> \n      <li> Strikethrough </li> \n      <li> Autolink: turns plain links such as URLs and email addresses into links </li> \n  </ul>",
       "returns": [
         {
           "type_name": "void",
@@ -3474,17 +3576,9 @@
       "source": ""
     },
     "Jt.html": {
-      "args": [
-        {
-          "type_name": "java.nio.file.Path",
-          "default": null,
-          "name": "filePath",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3496,7 +3590,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.HtmlComponent.Builder",
@@ -3508,6 +3602,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -3519,7 +3614,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.HtmlComponent.Builder",
@@ -3531,6 +3626,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3542,7 +3638,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -3558,7 +3654,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -3582,7 +3678,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -3594,8 +3690,34 @@
           "source": ""
         }
       ],
-      "signature": "Jt.html(java.nio.file.Path filePath)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "body",
+              "description": "The HTML code to insert.",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.html(String body)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "java.nio.file.Path",
+              "default": null,
+              "name": "filePath",
+              "description": "The path of the file containing the HTML code to insert.",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.html(java.nio.file.Path filePath)"
+        }
+      ],
       "name": "html",
+      "description": "Insert HTML into your app.\n  <p> \n Adding custom HTML to your app impacts safety, styling, and maintainability.\n We sanitize HTML with  <a href=\"https://github.com/cure53/DOMPurify\"> DOMPurify </a> , but inserting HTML remains a developer risk.\n Passing untrusted code to Jt.html or dynamically loading external code can increase the risk of vulnerabilities in your app.\n  <p> \n  {@code Jt.html}  content is not iframed. Executing JavaScript is not supported.",
       "returns": [
         {
           "type_name": "void",
@@ -3607,22 +3729,6 @@
       "source": ""
     },
     "Jt.columns": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "int",
-          "default": null,
-          "name": "numColumns",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -3740,6 +3846,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3751,7 +3858,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -3767,7 +3874,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -3791,7 +3898,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -3803,7 +3910,27 @@
           "source": ""
         }
       ],
-      "signature": "Jt.columns(String key, int numColumns)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "numColumns",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.columns(String key, int numColumns)"
+        }
+      ],
       "name": "columns",
       "returns": [
         {
@@ -3816,25 +3943,29 @@
       "source": ""
     },
     "Jt.deepCopy": {
-      "args": [
+      "overloads": [
         {
-          "type_name": "T",
-          "default": null,
-          "name": "original",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "com.fasterxml.jackson.core.type.TypeReference<T>",
-          "default": null,
-          "name": "typeRef",
-          "description": "",
-          "is_optional": false
+          "args": [
+            {
+              "type_name": "T",
+              "default": null,
+              "name": "original",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "com.fasterxml.jackson.core.type.TypeReference<T>",
+              "default": null,
+              "name": "typeRef",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.deepCopy(T original, com.fasterxml.jackson.core.type.TypeReference<T> typeRef)"
         }
       ],
-      "signature": "Jt.deepCopy(T original, com.fasterxml.jackson.core.type.TypeReference<T> typeRef)",
       "name": "deepCopy",
-      "description": "Slow deep copy utility: serialize then deserialize json.\n Made available to be able to implement the behaviour of st.cache_data that does a copy on read.\n https://docs.jeamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "description": "Slow deep copy utility: serialize then deserialize json.\n Made available to be able to implement the behaviour of st.cache_data that does a copy on read.\n https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
       "returns": [
         {
           "type_name": "T",
@@ -3846,15 +3977,6 @@
       "source": ""
     },
     "Jt.tableFromListColumns": {
-      "args": [
-        {
-          "type_name": "Map<@org.jetbrains.annotations.NotNull String,Values>",
-          "default": null,
-          "name": "cols",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -3949,6 +4071,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3960,7 +4083,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -3976,7 +4099,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -4000,7 +4123,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -4012,7 +4135,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.tableFromListColumns(Map<@org.jetbrains.annotations.NotNull String,Values> cols)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "Map<@org.jetbrains.annotations.NotNull String,Values>",
+              "default": null,
+              "name": "cols",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.tableFromListColumns(Map<@org.jetbrains.annotations.NotNull String,Values> cols)"
+        }
+      ],
       "name": "tableFromListColumns",
       "returns": [
         {
@@ -4025,15 +4161,6 @@
       "source": ""
     },
     "Jt.empty": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -4082,6 +4209,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4093,7 +4221,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -4109,7 +4237,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -4133,7 +4261,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -4145,7 +4273,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.empty(String key)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.empty(String key)"
+        }
+      ],
       "name": "empty",
       "returns": [
         {
@@ -4158,15 +4299,6 @@
       "source": ""
     },
     "Jt.navigation": {
-      "args": [
-        {
-          "type_name": "io.jeamlit.components.multipage.JtPage.Builder[]",
-          "default": null,
-          "name": "pages",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -4207,6 +4339,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4218,7 +4351,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -4234,7 +4367,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -4258,7 +4391,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -4270,7 +4403,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.navigation(io.jeamlit.components.multipage.JtPage.Builder[] pages)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "io.jeamlit.components.multipage.JtPage.Builder[]",
+              "default": null,
+              "name": "pages",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.navigation(io.jeamlit.components.multipage.JtPage.Builder[] pages)"
+        }
+      ],
       "name": "navigation",
       "returns": [
         {
@@ -4283,8 +4429,12 @@
       "source": ""
     },
     "Jt.componentsState": {
-      "args": [],
-      "signature": "Jt.componentsState()",
+      "overloads": [
+        {
+          "args": [],
+          "signature": "Jt.componentsState()"
+        }
+      ],
       "name": "componentsState",
       "returns": [
         {
@@ -4297,30 +4447,25 @@
       "source": ""
     },
     "Jt.switchPage": {
-      "args": [
+      "overloads": [
         {
-          "type_name": "Class<?>",
-          "default": null,
-          "name": "pageApp",
-          "description": "",
-          "is_optional": false
+          "args": [
+            {
+              "type_name": "Class<?>",
+              "default": null,
+              "name": "pageApp",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.switchPage(Class<?> pageApp)"
         }
       ],
-      "signature": "Jt.switchPage(Class<?> pageApp)",
       "name": "switchPage",
       "returns": [],
       "source": ""
     },
     "Jt.button": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -4461,6 +4606,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4472,7 +4618,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -4488,7 +4634,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -4512,7 +4658,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -4524,7 +4670,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.button(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.button(String label)"
+        }
+      ],
       "name": "button",
       "returns": [
         {
@@ -4537,15 +4696,6 @@
       "source": ""
     },
     "Jt.dateInput": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -4617,6 +4767,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4628,7 +4779,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4755,6 +4906,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -4766,7 +4918,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4778,6 +4930,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4789,7 +4942,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -4805,7 +4958,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -4829,7 +4982,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -4841,7 +4994,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.dateInput(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.dateInput(String label)"
+        }
+      ],
       "name": "dateInput",
       "returns": [
         {
@@ -4854,17 +5020,9 @@
       "source": ""
     },
     "Jt.title": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "body",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4876,7 +5034,7 @@
           ],
           "signature": "anchor(String anchor)",
           "name": "anchor",
-          "description": "",
+          "description": "The anchor name of the header that can be accessed with #anchor in the URL.\n If omitted, it generates an anchor using the body. If False, the anchor is not shown in the UI.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TitleComponent.Builder",
@@ -4888,6 +5046,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4899,7 +5058,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TitleComponent.Builder",
@@ -4911,6 +5070,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4922,7 +5082,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TitleComponent.Builder",
@@ -4934,6 +5094,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -4945,7 +5106,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TitleComponent.Builder",
@@ -4957,6 +5118,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4968,7 +5130,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -4984,7 +5146,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -5008,7 +5170,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -5020,8 +5182,22 @@
           "source": ""
         }
       ],
-      "signature": "Jt.title(String body)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "body",
+              "description": "The text to display. Markdown is supported, see  {@link #markdown(String)}  for more details.",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.title(String body)"
+        }
+      ],
       "name": "title",
+      "description": "Display text in title formatting.\n Each document should have a single st.title(), although this is not enforced.",
       "returns": [
         {
           "type_name": "void",
@@ -5033,15 +5209,6 @@
       "source": ""
     },
     "Jt.page": {
-      "args": [
-        {
-          "type_name": "Class<?>",
-          "default": null,
-          "name": "pageApp",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -5152,7 +5319,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.page(Class<?> pageApp)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "Class<?>",
+              "default": null,
+              "name": "pageApp",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.page(Class<?> pageApp)"
+        }
+      ],
       "name": "page",
       "returns": [
         {
@@ -5165,15 +5345,6 @@
       "source": ""
     },
     "Jt.error": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "body",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -5245,9 +5416,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -5259,7 +5428,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Convenience method for setting width as integer pixels.",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.status.ErrorComponent.Builder",
@@ -5271,6 +5440,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5282,7 +5452,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -5298,7 +5468,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -5322,7 +5492,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -5334,7 +5504,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.error(String body)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "body",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.error(String body)"
+        }
+      ],
       "name": "error",
       "returns": [
         {
@@ -5347,15 +5530,6 @@
       "source": ""
     },
     "Jt.echarts": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "chartOptionJson",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -5450,6 +5624,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5461,7 +5636,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -5477,7 +5652,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -5501,7 +5676,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -5513,7 +5688,44 @@
           "source": ""
         }
       ],
-      "signature": "Jt.echarts(String chartOptionJson)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "org.icepear.echarts.Chart<?,?>",
+              "default": null,
+              "name": "chart",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.echarts(org.icepear.echarts.Chart<?,?> chart)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "org.icepear.echarts.Option",
+              "default": null,
+              "name": "chartOption",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.echarts(org.icepear.echarts.Option chartOption)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "chartOptionJson",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.echarts(String chartOptionJson)"
+        }
+      ],
       "name": "echarts",
       "returns": [
         {
@@ -5526,9 +5738,9 @@
       "source": ""
     },
     "Jt.divider": {
-      "args": [],
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5540,7 +5752,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -5552,6 +5764,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5563,7 +5776,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -5575,6 +5788,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -5586,7 +5800,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -5598,6 +5812,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5609,7 +5824,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -5625,7 +5840,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -5649,7 +5864,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -5661,7 +5876,12 @@
           "source": ""
         }
       ],
-      "signature": "Jt.divider()",
+      "overloads": [
+        {
+          "args": [],
+          "signature": "Jt.divider()"
+        }
+      ],
       "name": "divider",
       "returns": [
         {
@@ -5674,15 +5894,6 @@
       "source": ""
     },
     "Jt.slider": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -5800,6 +6011,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5811,7 +6023,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -5915,9 +6127,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -5929,7 +6139,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Convenience method for setting width as integer pixels.",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -5941,6 +6151,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5952,7 +6163,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -5968,7 +6179,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -5992,7 +6203,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -6004,7 +6215,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.slider(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.slider(String label)"
+        }
+      ],
       "name": "slider",
       "returns": [
         {
@@ -6017,22 +6241,6 @@
       "source": ""
     },
     "Jt.radio": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "List<T>",
-          "default": null,
-          "name": "options",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -6265,6 +6473,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6276,7 +6485,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -6292,7 +6501,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -6316,7 +6525,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -6328,7 +6537,27 @@
           "source": ""
         }
       ],
-      "signature": "Jt.radio(String label, List<T> options)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "List<T>",
+              "default": null,
+              "name": "options",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.radio(String label, List<T> options)"
+        }
+      ],
       "name": "radio",
       "returns": [
         {
@@ -6341,15 +6570,6 @@
       "source": ""
     },
     "Jt.table": {
-      "args": [
-        {
-          "type_name": "Object[]",
-          "default": null,
-          "name": "rows",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -6444,6 +6664,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6455,7 +6676,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -6471,7 +6692,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -6495,7 +6716,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -6507,7 +6728,32 @@
           "source": ""
         }
       ],
-      "signature": "Jt.table(Object[] rows)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "List<Object>",
+              "default": null,
+              "name": "rows",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.table(List<Object> rows)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "Object[]",
+              "default": null,
+              "name": "rows",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.table(Object[] rows)"
+        }
+      ],
       "name": "table",
       "returns": [
         {
@@ -6520,15 +6766,6 @@
       "source": ""
     },
     "Jt.toggle": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "label",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -6577,6 +6814,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6588,7 +6826,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the text. If this is null (default), no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6646,6 +6884,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6657,7 +6896,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6669,6 +6908,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -6680,7 +6920,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6692,6 +6932,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6703,7 +6944,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -6719,7 +6960,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -6743,7 +6984,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -6755,7 +6996,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.toggle(String label)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.toggle(String label)"
+        }
+      ],
       "name": "toggle",
       "returns": [
         {
@@ -6768,10 +7022,14 @@
       "source": ""
     },
     "Jt.cache": {
-      "args": [],
-      "signature": "Jt.cache()",
+      "overloads": [
+        {
+          "args": [],
+          "signature": "Jt.cache()"
+        }
+      ],
       "name": "cache",
-      "description": "Returns the app cache.\n See https://docs.jeamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "description": "Returns the app cache.\n See https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
@@ -6783,8 +7041,12 @@
       "source": ""
     },
     "Jt.sessionState": {
-      "args": [],
-      "signature": "Jt.sessionState()",
+      "overloads": [
+        {
+          "args": [],
+          "signature": "Jt.sessionState()"
+        }
+      ],
       "name": "sessionState",
       "returns": [
         {
@@ -6797,8 +7059,12 @@
       "source": ""
     },
     "Jt.urlQueryParameters": {
-      "args": [],
-      "signature": "Jt.urlQueryParameters()",
+      "overloads": [
+        {
+          "args": [],
+          "signature": "Jt.urlQueryParameters()"
+        }
+      ],
       "name": "urlQueryParameters",
       "returns": [
         {
@@ -6811,15 +7077,6 @@
       "source": ""
     },
     "Jt.tableFromArrayColumns": {
-      "args": [
-        {
-          "type_name": "Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]>",
-          "default": null,
-          "name": "cols",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -6914,6 +7171,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6925,7 +7183,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -6941,7 +7199,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -6965,7 +7223,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -6977,7 +7235,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.tableFromArrayColumns(Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]> cols)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]>",
+              "default": null,
+              "name": "cols",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.tableFromArrayColumns(Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]> cols)"
+        }
+      ],
       "name": "tableFromArrayColumns",
       "returns": [
         {
@@ -6990,8 +7261,12 @@
       "source": ""
     },
     "Jt.urlPath": {
-      "args": [],
-      "signature": "Jt.urlPath()",
+      "overloads": [
+        {
+          "args": [],
+          "signature": "Jt.urlPath()"
+        }
+      ],
       "name": "urlPath",
       "returns": [
         {
@@ -7004,22 +7279,6 @@
       "source": ""
     },
     "Jt.tabs": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        },
-        {
-          "type_name": "List<@org.jetbrains.annotations.NotNull String>",
-          "default": null,
-          "name": "tabs",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -7045,6 +7304,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -7056,7 +7316,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.TabsComponent.Builder",
@@ -7068,6 +7328,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -7079,7 +7340,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -7095,7 +7356,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -7119,7 +7380,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -7131,7 +7392,27 @@
           "source": ""
         }
       ],
-      "signature": "Jt.tabs(String key, List<@org.jetbrains.annotations.NotNull String> tabs)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "List<@org.jetbrains.annotations.NotNull String>",
+              "default": null,
+              "name": "tabs",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.tabs(String key, List<@org.jetbrains.annotations.NotNull String> tabs)"
+        }
+      ],
       "name": "tabs",
       "returns": [
         {
@@ -7144,15 +7425,6 @@
       "source": ""
     },
     "Jt.form": {
-      "args": [
-        {
-          "type_name": "String",
-          "default": null,
-          "name": "key",
-          "description": "",
-          "is_optional": false
-        }
-      ],
       "builderMethods": [
         {
           "args": [
@@ -7224,6 +7496,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -7235,7 +7508,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7247,6 +7520,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -7258,7 +7532,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7293,6 +7567,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -7304,7 +7579,7 @@
           ],
           "signature": "key(String key)",
           "name": "key",
-          "description": "",
+          "description": "A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.",
           "returns": [
             {
               "type_name": "SELF",
@@ -7320,7 +7595,7 @@
           "args": [],
           "signature": "use()",
           "name": "use",
-          "description": "Shorthand for build().use()",
+          "description": "Put the widget in the app, in the MAIN container.",
           "returns": [
             {
               "type_name": "B",
@@ -7344,7 +7619,7 @@
           ],
           "signature": "use(.JtContainer container)",
           "name": "use",
-          "description": "Shorthand for build().use(Container)",
+          "description": "Put the widget in the app, in the provided container.",
           "returns": [
             {
               "type_name": "B",
@@ -7356,7 +7631,20 @@
           "source": ""
         }
       ],
-      "signature": "Jt.form(String key)",
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.form(String key)"
+        }
+      ],
       "name": "form",
       "returns": [
         {

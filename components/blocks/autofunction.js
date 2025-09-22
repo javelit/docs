@@ -164,6 +164,7 @@ const Autofunction = ({
   let methods = [];
   let builderMethods = [];
   let properties = [];
+  let overloads = [];
 
   if (streamlitFunction in docstrings || oldStreamlitFunction in docstrings) {
     functionObject =
@@ -225,11 +226,18 @@ const Autofunction = ({
     properties = functionObject.properties;
   }
 
+  // Get overloads from the new format
+  if ("overloads" in functionObject) {
+    overloads = functionObject.overloads;
+  }
+
   if (hideHeader !== undefined && hideHeader) {
     header = "";
   } else {
-    const name = functionObject.signature
-      ? `${functionObject.signature}`.split("(")[0].replace("streamlit", "st")
+    // Use first overload's signature for the header name
+    const firstSignature = overloads.length > 0 ? overloads[0].signature : "";
+    const name = firstSignature
+      ? `${firstSignature}`.split("(")[0].replace("streamlit", "st")
       : "";
     headerTitle = isAttributeDict ? (
       <H3 className={styles.Title}>
@@ -306,62 +314,78 @@ const Autofunction = ({
   let propertiesRows = [];
   let docstringProperties = []; // Used to avoid duplicates with @property
 
-  for (const index in functionObject.args) {
-    const row = {};
-    const param = functionObject.args[index];
-    docstringProperties.push(param.name);
-    const isDeprecated =
-      param.deprecated && param.deprecated.deprecated === true;
-    const deprecatedMarkup = isDeprecated
-      ? `
-      <div class="${styles.DeprecatedContent}">
-        <i class="material-icons-sharp ${styles.DeprecatedIcon}">
-          delete
-        </i>
-        ${param.deprecated.deprecatedText}
-      </div>`
-      : "";
-    const description = param.description
-      ? param.description
-      : `<p>No description</p> `;
+  // Process parameters from all overloads
+  if (overloads) {
+    overloads.forEach((overload, overloadIndex) => {
+      if (!overload.args) return;
 
-    if (param.is_optional) {
-      row["title"] = `
-        <p class="
-          ${isDeprecated ? "deprecated" : ""}
-          ${param.is_kwarg_only ? styles.Keyword : ""}
-        ">
-          ${param.name}
-          <span class='italic code'>(${param.type_name})</span>
-        </p> 
-      `;
-      row["body"] = `
-        ${deprecatedMarkup}
-        ${description}
-      `;
-    } else {
-      row["title"] = `
-        <p class="
-          ${isDeprecated ? "deprecated" : ""}
-          ${param.is_kwarg_only ? styles.Keyword : ""}
-        ">
-          <span class='bold'>${param.name}</span>
-          <span class='italic code'>(${param.type_name})</span>
-        </p>
-      `;
-      row["body"] = `
-        ${deprecatedMarkup}
-        ${description}
-      `;
-    }
-    // When "Parameters" are included in a class docstring, they are actually
-    // "Properties." Using "Properties" in the docstring does not result in
-    // individually parsed properties; using "Parameters" is a workaround.
-    if (isClass) {
-      propertiesRows.push(row);
-    } else {
-      args.push(row);
-    }
+      // Add overload separator if there are multiple overloads
+      if (overloads.length > 1 && overloadIndex > 0) {
+        args.push({
+          title:
+            "<hr style='margin: 10px 0; border: 0; border-top: 1px solid #ddd;'/>",
+          body: "",
+        });
+      }
+
+      for (const index in overload.args) {
+        const row = {};
+        const param = overload.args[index];
+        docstringProperties.push(param.name);
+        const isDeprecated =
+          param.deprecated && param.deprecated.deprecated === true;
+        const deprecatedMarkup = isDeprecated
+          ? `
+        <div class="${styles.DeprecatedContent}">
+          <i class="material-icons-sharp ${styles.DeprecatedIcon}">
+            delete
+          </i>
+          ${param.deprecated.deprecatedText}
+        </div>`
+          : "";
+        const description = param.description
+          ? param.description
+          : `<p>No description</p> `;
+
+        if (param.is_optional) {
+          row["title"] = `
+          <p class="
+            ${isDeprecated ? "deprecated" : ""}
+            ${param.is_kwarg_only ? styles.Keyword : ""}
+          ">
+            ${param.name}
+            <span class='italic code'>(${param.type_name})</span>
+          </p>
+        `;
+          row["body"] = `
+          ${deprecatedMarkup}
+          ${description}
+        `;
+        } else {
+          row["title"] = `
+          <p class="
+            ${isDeprecated ? "deprecated" : ""}
+            ${param.is_kwarg_only ? styles.Keyword : ""}
+          ">
+            <span class='bold'>${param.name}</span>
+            <span class='italic code'>(${param.type_name})</span>
+          </p>
+        `;
+          row["body"] = `
+          ${deprecatedMarkup}
+          ${description}
+        `;
+        }
+        // When "Parameters" are included in a class docstring, they are actually
+        // "Properties." Using "Properties" in the docstring does not result in
+        // individually parsed properties; using "Parameters" is a workaround.
+        if (isClass) {
+          propertiesRows.push(row);
+        } else {
+          args.push(row);
+        }
+      }
+    });
   }
 
   let methodRows = [];
@@ -501,6 +525,21 @@ const Autofunction = ({
     returns.push(row);
   }
 
+  // Generate signature content for all overloads
+  let signatureContent = "";
+  if (overloads.length === 1) {
+    // Single signature
+    signatureContent = `<p class='code'> ${overloads[0].signature}</p> `;
+  } else if (overloads.length > 1) {
+    // Multiple signatures
+    signatureContent = overloads
+      .map(
+        (overload, index) =>
+          `<p class='code' style='${index > 0 ? "margin-top: 8px;" : ""}'> ${overload.signature}</p>`,
+      )
+      .join("");
+  }
+
   body = (
     <Table
       head={
@@ -509,7 +548,11 @@ const Autofunction = ({
           : {
               title: (
                 <>
-                  {isClass ? "Class description" : "Method signature"}
+                  {isClass
+                    ? "Class description"
+                    : overloads.length > 1
+                      ? "Method signatures"
+                      : "Method signature"}
                   <a
                     className={styles.Title.a}
                     href={functionObject.source}
@@ -525,7 +568,7 @@ const Autofunction = ({
                   </a>
                 </>
               ),
-              content: `<p class='code'> ${functionObject.signature}</p> `,
+              content: signatureContent,
             }
       }
       body={args.length ? { title: "Parameters" } : null}

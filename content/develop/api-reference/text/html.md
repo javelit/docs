@@ -4,4 +4,4 @@ slug: /develop/api-reference/text/jt.html
 description: Jt.html renders arbitrary HTML strings to your app
 ---
 
-<Autofunction function="streamlit.html" />
+<Autofunction function="Jt.html" />
