@@ -105,7 +105,7 @@ const Cloud = ({ name, path, query, height, domain, stylePlaceholder }) => {
         <div className="flex-1">
           <a
             className="text-xs tracking-[0.05em] text-gray-80 hover:text-gray-70"
-            href="https://streamlit.io"
+            href="https://jeamlit.io"
             target="_blank"
             rel="noopener noreferrer"
           >
