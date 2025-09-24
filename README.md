@@ -286,6 +286,16 @@ If you know the answer to a Jeamlit user's pain point and want to add it to the 
    - [How do I fix the deployment issue on windows ?](/knowledge-base/deploy/fix-on-windows)
    ```
 
+#### Comment / hide in md files
+The .md files in the [content](content) folder are actually mdx files. 
+To comment, (ie not render a block) in a md file, use:
+```markdown
+{/*
+will not appear
+*/}
+will appear
+```
+
 ## Publishing
 
 To publish your changes to the docs site:
