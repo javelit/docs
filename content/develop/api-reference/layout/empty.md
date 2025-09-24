@@ -4,4 +4,4 @@ slug: /develop/api-reference/layout/jt.empty
 description: Jt.empty inserts a single-element container.
 ---
 
-<Autofunction function="streamlit.empty" />
+<Autofunction function="Jt.empty" />

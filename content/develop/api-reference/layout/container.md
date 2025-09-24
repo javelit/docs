@@ -4,4 +4,4 @@ slug: /develop/api-reference/layout/jt.container
 description: Jt.container inserts a multi-element container.
 ---
 
-<Autofunction function="streamlit.container" />
+<Autofunction function="Jt.container" />

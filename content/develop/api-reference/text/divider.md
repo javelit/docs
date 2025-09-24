@@ -4,7 +4,7 @@ slug: /develop/api-reference/text/jt.divider
 description: Jt.divider displays a horizontal rule in your app.
 ---
 
-<Autofunction function="streamlit.divider" />
+<Autofunction function="Jt.divider" />
 
 Here's what it looks like in action when you have multiple elements in the app:
 

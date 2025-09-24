@@ -5,7 +5,7 @@ description: Jt.button displays a button widget.
 keywords: button
 ---
 
-<Autofunction function="streamlit.button" />
+<Autofunction function="Jt.button" />
 
 ### Advanced functionality
 

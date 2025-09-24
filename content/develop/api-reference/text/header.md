@@ -5,4 +5,4 @@ description: st.header displays text in header formatting.
 ignore: true
 ---
 
-<Autofunction function="streamlit.header" />
+<Autofunction function="Jt.header" />

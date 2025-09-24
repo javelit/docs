@@ -4,7 +4,7 @@ slug: /develop/api-reference/text/jt.markdown
 description: Jt.markdown displays string formatted as Markdown.
 ---
 
-<Autofunction function="streamlit.markdown" />
+<Autofunction function="Jt.markdown" />
 
 ```python
 import streamlit as st

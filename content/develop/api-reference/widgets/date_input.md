@@ -5,4 +5,4 @@ description: Jt.dateInput displays a date input widget.
 keywords: calendar
 ---
 
-<Autofunction function="streamlit.date_input" />
+<Autofunction function="Jt.dateinput" />

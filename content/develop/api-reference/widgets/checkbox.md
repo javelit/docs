@@ -4,7 +4,7 @@ slug: /develop/api-reference/widgets/jt.checkbox
 description: Jt.checkbox displays a checkbox widget.
 ---
 
-<Autofunction function="streamlit.checkbox" />
+<Autofunction function="Jt.checkbox" />
 
 ### Featured videos
 

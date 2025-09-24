@@ -5,4 +5,4 @@ description: st.badge displays a colored badge or tag.
 ignore: true
 ---
 
-<Autofunction function="streamlit.badge" />
+<Autofunction function="Jt.badge" />

@@ -15,7 +15,7 @@ from pathlib import Path
 # Constants
 MAVEN_METADATA_URL = "https://repo1.maven.org/maven2/io/jeamlit/jeamlit/maven-metadata.xml"
 MAVEN_JAR_URL_TEMPLATE = "https://repo1.maven.org/maven2/io/jeamlit/jeamlit/{version}/jeamlit-{version}-javadoc.jar"
-LOOKBACK = 3
+LOOKBACK = 1
 OUTPUT_FILE = "jeamlit.json"
 
 

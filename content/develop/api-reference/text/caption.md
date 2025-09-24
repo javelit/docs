@@ -5,6 +5,6 @@ description: st.caption displays text in small font.
 ignore: true
 ---
 
-<Autofunction function="streamlit.caption" />
+<Autofunction function="Jt.caption" />
 
 <Image src="/images/api/st.caption.png" clean />

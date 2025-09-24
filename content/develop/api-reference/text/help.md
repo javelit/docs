@@ -5,4 +5,4 @@ description: st.help displays object's doc string, nicely formatted.
 ignore: true
 ---
 
-<Autofunction function="streamlit.help" />
+<Autofunction function="Jt.help" />

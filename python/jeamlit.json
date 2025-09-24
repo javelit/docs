@@ -1,8 +1,9 @@
 {
-  "0.17.0": {
+  "0.19.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -14,7 +15,7 @@
           ],
           "signature": "value(String value)",
           "name": "value",
-          "description": "",
+          "description": "The text value of this widget when it first renders. Defaults to empty string.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -26,6 +27,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -37,7 +39,7 @@
           ],
           "signature": "maxChars(Integer maxChars)",
           "name": "maxChars",
-          "description": "",
+          "description": "The maximum number of characters allowed in the text input.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -49,6 +51,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -60,7 +63,7 @@
           ],
           "signature": "type(String type)",
           "name": "type",
-          "description": "",
+          "description": "Can be \"default\" or \"password\". Determines if input masks the user's typed value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -96,6 +99,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -107,7 +111,7 @@
           ],
           "signature": "autocomplete(String autocomplete)",
           "name": "autocomplete",
-          "description": "",
+          "description": "An optional value that will be passed to the  <input>  element's autocomplete property. If unspecified, this value will be set to \"new-password\" for \"password\" inputs, and the empty string for \"default\" inputs.\n For more details, see  <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete\" target=\"_blank\"> https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete </a> .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -119,6 +123,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -130,7 +135,7 @@
           ],
           "signature": "placeholder(String placeholder)",
           "name": "placeholder",
-          "description": "",
+          "description": "An optional string displayed when the text input is empty.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -142,6 +147,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -153,7 +159,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the text input if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -165,6 +171,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -176,7 +183,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -188,6 +195,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -199,7 +207,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -211,6 +219,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -222,7 +231,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "Controls the widget width. Can be \"stretch\" (default) or a pixel value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -246,7 +255,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -258,6 +267,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<String>",
@@ -269,7 +279,7 @@
           ],
           "signature": "onChange(function.Consumer<String> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback invoked when the text input's value changes.\n The value passed in the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextInputComponent.Builder",
@@ -352,7 +362,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this input is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -360,6 +370,7 @@
         }
       ],
       "name": "textInput",
+      "description": "Display a single-line text input widget.",
       "returns": [
         {
           "type_name": "string",
@@ -373,6 +384,7 @@
     "Jt.code": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -384,7 +396,7 @@
           ],
           "signature": "language(String language)",
           "name": "language",
-          "description": "",
+          "description": "The language that the code is written in, for syntax highlighting. This defaults to  {@code java} .\n If this is  {@code null} , the code will be plain, monospace text.\n  <p> \n For a list of available language values, see list on  <a href=\"https://prismjs.com/#supported-languages\"> prismjs documentation </a> .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -396,6 +408,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -407,7 +420,7 @@
           ],
           "signature": "lineNumbers(boolean lineNumbers)",
           "name": "lineNumbers",
-          "description": "",
+          "description": "An optional boolean indicating whether to show line numbers to the left of the code block. This defaults to  {@code false} .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -419,6 +432,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -430,7 +444,7 @@
           ],
           "signature": "wrapLines(boolean wrapLines)",
           "name": "wrapLines",
-          "description": "",
+          "description": "An optional boolean indicating whether to wrap lines. This defaults to  {@code false} .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -442,6 +456,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -453,7 +468,7 @@
           ],
           "signature": "height(String height)",
           "name": "height",
-          "description": "",
+          "description": "The height of the code block element. This can be one of the following:\n  <p> \n  <ul> \n   <li> {@code content}  (default): The height of the element matches the height of its content. </li> \n   <li> {@code stretch} : The height of the element matches the height of its content or the height of the parent container, whichever is larger. If the element is not in a parent container, the height of the element matches the height of its content. </li> \n   <li> An integer specifying the height in pixels: The element has a fixed height. If the content is larger than the specified height, scrolling is enabled. </li> \n  </ul>",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -465,6 +480,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -476,7 +492,7 @@
           ],
           "signature": "height(int heightPixels)",
           "name": "height",
-          "description": "",
+          "description": "The height of the element in pixels. The element will have a fixed height. If the content is larger than the specified height, scrolling is enabled.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -500,7 +516,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -524,7 +540,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.CodeComponent.Builder",
@@ -607,7 +623,7 @@
               "type_name": "String",
               "default": null,
               "name": "body",
-              "description": "",
+              "description": "The string to display as code or monospace text.",
               "is_optional": false
             }
           ],
@@ -615,6 +631,7 @@
         }
       ],
       "name": "code",
+      "description": "Display a code block with optional syntax highlighting.",
       "returns": [
         {
           "type_name": "void",
@@ -628,6 +645,7 @@
     "Jt.pageLink": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -639,7 +657,7 @@
           ],
           "signature": "label(String label)",
           "name": "label",
-          "description": "",
+          "description": "The text to display for the link. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -651,6 +669,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -662,7 +681,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -698,6 +717,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -709,7 +729,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the link if set to true.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -721,6 +741,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -732,7 +753,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the link element. Use \"content\" to fit content, \"stretch\" to fill container, or a pixel value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -756,7 +777,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.PageLinkComponent.Builder",
@@ -839,7 +860,7 @@
               "type_name": "Class<?>",
               "default": null,
               "name": "pageClass",
-              "description": "",
+              "description": "The class of the page to link to in a multipage app.",
               "is_optional": false
             }
           ],
@@ -851,14 +872,14 @@
               "type_name": "String",
               "default": null,
               "name": "url",
-              "description": "",
+              "description": "The URL to link to",
               "is_optional": false
             },
             {
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "The text to display for the link. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -866,6 +887,7 @@
         }
       ],
       "name": "pageLink",
+      "description": "Display a link to another page in a multipage app or to an external page.\n  <p> \n If another page in a multipage app is specified, clicking the {Jt.pageLink} element stops the current page execution\n and runs the specified page as if the user clicked on it in the sidebar navigation.\n  <p> \n If an external page is specified, clicking the  {@code Jt.pageLink}  element opens a new tab to the specified page.\n The current script run will continue if not complete.",
       "returns": [
         {
           "type_name": "void",
@@ -879,6 +901,7 @@
     "Jt.textArea": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -890,7 +913,7 @@
           ],
           "signature": "value(String value)",
           "name": "value",
-          "description": "",
+          "description": "The initial text value when the widget renders. Defaults to empty string.\n If  {@code null} , will initialize empty and return  {@code null}  until the user provides input.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -902,6 +925,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -913,7 +937,7 @@
           ],
           "signature": "height(String height)",
           "name": "height",
-          "description": "",
+          "description": "The text area widget height. This can be \"content\", \"stretch\", or a pixel value. Minimum height is 2 lines.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -925,6 +949,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -936,7 +961,7 @@
           ],
           "signature": "height(int heightInPixels)",
           "name": "height",
-          "description": "",
+          "description": "The text area widget height in pixels. Minimum height is 2 lines.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -948,6 +973,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -959,7 +985,7 @@
           ],
           "signature": "maxChars(Integer maxChars)",
           "name": "maxChars",
-          "description": "",
+          "description": "The maximum number of characters allowed in the text area.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -995,6 +1021,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1006,7 +1033,7 @@
           ],
           "signature": "placeholder(String placeholder)",
           "name": "placeholder",
-          "description": "",
+          "description": "The text displayed when the text area is empty.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1018,6 +1045,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -1029,7 +1057,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the text area input if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1041,6 +1069,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -1052,7 +1081,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1064,6 +1093,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1075,7 +1105,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The widget width. Can be \"stretch\" (default) or a pixel value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1099,7 +1129,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1111,6 +1141,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<String>",
@@ -1122,7 +1153,7 @@
           ],
           "signature": "onChange(function.Consumer<String> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback function that will be called when the text area value changes.\n The value passed in the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.TextAreaComponent.Builder",
@@ -1205,7 +1236,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this input is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -1213,6 +1244,7 @@
         }
       ],
       "name": "textArea",
+      "description": "Display a multi-line text input widget.",
       "returns": [
         {
           "type_name": "string",
@@ -1286,7 +1318,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TextComponent.Builder",
@@ -1310,7 +1342,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TextComponent.Builder",
@@ -1415,6 +1447,7 @@
     "Jt.checkbox": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -1426,7 +1459,7 @@
           ],
           "signature": "value(boolean value)",
           "name": "value",
-          "description": "",
+          "description": "Preselect the checkbox when first rendered.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1438,6 +1471,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<@org.jetbrains.annotations.NotNull Boolean>",
@@ -1449,7 +1483,7 @@
           ],
           "signature": "onChange(function.Consumer<@org.jetbrains.annotations.NotNull Boolean> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback function invoked when the checkbox value changes.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1485,6 +1519,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -1496,7 +1531,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the checkbox if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1508,6 +1543,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -1519,7 +1555,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1543,7 +1579,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1567,7 +1603,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.CheckboxComponent.Builder",
@@ -1650,7 +1686,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this checkbox is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -1658,6 +1694,7 @@
         }
       ],
       "name": "checkbox",
+      "description": "Display a checkbox widget.",
       "returns": [
         {
           "type_name": "NotNull Boolean",
@@ -1671,6 +1708,7 @@
     "Jt.selectBox": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -1682,7 +1720,7 @@
           ],
           "signature": "index(Integer index)",
           "name": "index",
-          "description": "",
+          "description": "The index of the preselected option on first render. If  {@code null} , initializes empty and returns  {@code null}  until user selection.\n Defaults to 0 (the first option).",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1694,6 +1732,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Function<@org.jetbrains.annotations.Nullable T,String>",
@@ -1705,7 +1744,7 @@
           ],
           "signature": "formatFunction(function.Function<@org.jetbrains.annotations.Nullable T,String> formatFunction)",
           "name": "formatFunction",
-          "description": "",
+          "description": "Function to modify the display of the options. The  {@code Function}  receives the raw option object and returns a String that will be used as display label.\n Does not impact the return value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1717,6 +1756,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1728,7 +1768,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the widget label. If null, no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1740,6 +1780,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<@org.jetbrains.annotations.NotNull T>",
@@ -1751,7 +1792,7 @@
           ],
           "signature": "onChange(function.Consumer<@org.jetbrains.annotations.NotNull T> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback invoked when the selectbox value changes.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1763,6 +1804,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -1774,7 +1816,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disables the selectbox if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1786,6 +1828,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -1797,7 +1840,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1809,6 +1852,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1820,7 +1864,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1832,6 +1876,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -1843,7 +1888,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the selectbox in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1855,6 +1900,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -1866,7 +1912,7 @@
           ],
           "signature": "placeholder(String placeholder)",
           "name": "placeholder",
-          "description": "",
+          "description": "Text displayed when no option is selected. Default varies based on widget configuration.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1878,6 +1924,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -1889,7 +1936,7 @@
           ],
           "signature": "acceptNewOptions(boolean acceptNewOptions)",
           "name": "acceptNewOptions",
-          "description": "",
+          "description": "Whether the user can add a selection that isn't included in options.\n If this is  {@code false}  (default), the user can only select from the items in options.\n If this is  {@code true} , the user can enter a new item that doesn't exist in options.\n  <p> \n When a user enters a new item, it is returned by the widget as a string.\n The new item is not added to the widget's drop-down menu. Jeamlit will use a case-insensitive match\n from options before adding a new item.\n  <p> \n Only compatible with selectbox of  {@code String}  values.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder<T>",
@@ -1972,14 +2019,14 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this selection is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             },
             {
               "type_name": "List<T>",
               "default": null,
               "name": "options",
-              "description": "",
+              "description": "The list of options to choose from",
               "is_optional": false
             }
           ],
@@ -1987,6 +2034,7 @@
         }
       ],
       "name": "selectBox",
+      "description": "Display a select widget.",
       "returns": [
         {
           "type_name": "Nullable T",
@@ -2000,6 +2048,7 @@
     "Jt.expander": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -2011,7 +2060,7 @@
           ],
           "signature": "expanded(boolean expanded)",
           "name": "expanded",
-          "description": "",
+          "description": "The initial state of the expander. When set to  {@code true} , the expander starts in the expanded state. When  {@code false}  (default), the expander starts collapsed.\n Note that all content within the expander is computed and sent to the frontend regardless of the initial state.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ExpanderComponent.Builder",
@@ -2023,6 +2072,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2034,7 +2084,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ExpanderComponent.Builder",
@@ -2058,7 +2108,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ExpanderComponent.Builder",
@@ -2141,14 +2191,14 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this expander",
               "is_optional": false
             },
             {
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "The label for the expander header",
               "is_optional": false
             }
           ],
@@ -2156,6 +2206,7 @@
         }
       ],
       "name": "expander",
+      "description": "Insert a multi-element container that can be expanded/collapsed.\n  <p> \n Insert a container into your app that can be used to hold multiple elements and can be expanded or collapsed by the user.\n When collapsed, all that is visible is the provided label.\n  <p> \n To add elements to the returned expander:\n  <pre> \n  {@code\n var expander = Jt.expander(\"my-expander\", \"More details\").use();\n Jt.yourElement().use(expander);\n } \n  </pre> \n See examples below.",
       "returns": [
         {
           "type_name": "JtContainer",
@@ -2169,6 +2220,7 @@
     "Jt.formSubmitButton": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2180,7 +2232,7 @@
           ],
           "signature": "type(String type)",
           "name": "type",
-          "description": "",
+          "description": "The button type that determines its appearance and emphasis level. Can be \"primary\", \"secondary\" (default), or \"tertiary\".",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
@@ -2192,6 +2244,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2203,7 +2256,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
@@ -2239,6 +2292,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -2250,7 +2304,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disables the button if set to True. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
@@ -2262,6 +2316,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -2273,7 +2328,7 @@
           ],
           "signature": "useContainerWidth(boolean useContainerWidth)",
           "name": "useContainerWidth",
-          "description": "",
+          "description": "Controls the button width. If True, the button width matches the parent container width. If False (default), the button width matches its content width. This parameter is deprecated - use width() instead.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
@@ -2285,6 +2340,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<Boolean>",
@@ -2296,7 +2352,7 @@
           ],
           "signature": "onClick(function.Consumer<Boolean> onClick)",
           "name": "onClick",
-          "description": "",
+          "description": "An optional callable function that is invoked when the button is clicked.\n The callback receives the previous button click state as a parameter. In this case, the previous click state is always  {@code false} .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormSubmitButtonComponent.Builder",
@@ -2379,7 +2435,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "The text to display on the submit button",
               "is_optional": false
             }
           ],
@@ -2387,6 +2443,7 @@
         }
       ],
       "name": "formSubmitButton",
+      "description": "Display a form submit button.\n  <p> \n When clicked, all widget values inside the form will be sent from the user's browser to the Jeamlit server in a batch.\n  <p> \n Every form must have at least one  {@code Jt.formSubmitButton} . A  {@code Jt.formSubmitButton}  cannot exist outside a form.",
       "returns": [
         {
           "type_name": "boolean",
@@ -2400,6 +2457,7 @@
     "Jt.container": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -2411,7 +2469,7 @@
           ],
           "signature": "height(Integer height)",
           "name": "height",
-          "description": "",
+          "description": "The height of the container in pixels. When a fixed height is specified, the container will enable scrolling if content exceeds the specified height. It is recommended to use scrolling containers sparingly and avoid heights that exceed 500 pixels for optimal mobile experience.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ContainerComponent.Builder",
@@ -2423,6 +2481,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Boolean",
@@ -2434,7 +2493,7 @@
           ],
           "signature": "border(Boolean border)",
           "name": "border",
-          "description": "",
+          "description": "Whether to show a border around the container. If not specified (null), the border is automatically shown when the container has a fixed height, and hidden when height adapts to content.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ContainerComponent.Builder",
@@ -2517,7 +2576,7 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this container",
               "is_optional": false
             }
           ],
@@ -2525,6 +2584,7 @@
         }
       ],
       "name": "container",
+      "description": "Insert a multi-element container.\n  <p> \n Insert an invisible container into your app that can be used to hold multiple elements.\n This allows you to, for example, insert multiple elements into your app out of order.\n  <p> \n To add elements to the returned container:\n  <pre> \n  {@code\n var container = Jt.container(\"container-1\").use();\n Jt.yourElement().use(container);\n } \n  </pre> \n See examples below.",
       "returns": [
         {
           "type_name": "JtContainer",
@@ -2562,6 +2622,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -2573,7 +2634,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disables the popover button if set to True. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.PopoverComponent.Builder",
@@ -2585,6 +2646,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -2596,7 +2658,7 @@
           ],
           "signature": "useContainerWidth(boolean useContainerWidth)",
           "name": "useContainerWidth",
-          "description": "",
+          "description": "Controls the button width. If True, the button width matches the parent container width. If False (default), the button width matches its content width. This parameter is deprecated - use width() instead.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.PopoverComponent.Builder",
@@ -2679,14 +2741,14 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this popover",
               "is_optional": false
             },
             {
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "The label for the popover button. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -2694,6 +2756,7 @@
         }
       ],
       "name": "popover",
+      "description": "Insert a popover container.\n  <p> \n Inserts a multi-element container as a popover. It consists of a button-like element and a container that opens when the button is clicked.\n  <p> \n Opening and closing the popover will not trigger a rerun. Interacting with widgets inside of an open popover will\n rerun the app while keeping the popover open. Clicking outside of the popover will close it.\n  <p> \n To add elements to the returned popover:\n  <pre> \n  {@code\n var popover = Jt.popover(\"my-popover\", \"Advanced configuration\").use();\n Jt.yourElement().use(popover);\n } \n  </pre> \n See examples below.",
       "returns": [
         {
           "type_name": "JtContainer",
@@ -2707,6 +2770,7 @@
     "Jt.numberInput": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "T",
@@ -2718,7 +2782,7 @@
           ],
           "signature": "value(T value)",
           "name": "value",
-          "description": "",
+          "description": "The value of this widget when it first renders.\n If  {@code null} , initializes with no value and returns null until an input is provided to the component.\n The default behavior is to return the minimum value. If the minimum value is not set, the widget initializes\n with a value of  {@code 0} .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2730,21 +2794,7 @@
           "source": ""
         },
         {
-          "args": [],
-          "signature": "valueMin()",
-          "name": "valueMin",
-          "description": "",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "T",
@@ -2756,7 +2806,7 @@
           ],
           "signature": "minValue(T minValue)",
           "name": "minValue",
-          "description": "",
+          "description": "The minimum permitted value. For  {@code Integer}  and  {@code Long} , defaults to the corresponding minimum\n possible value.\n For  {@code Float}  and  {@code Double} , no minimum by default.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2768,6 +2818,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "T",
@@ -2779,7 +2830,7 @@
           ],
           "signature": "maxValue(T maxValue)",
           "name": "maxValue",
-          "description": "",
+          "description": "The maximum permitted value. For  {@code Integer}  and  {@code Long} , defaults to the corresponding maximum\n possible value.\n For  {@code Float}  and  {@code Double} , no maximum by default.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2791,6 +2842,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "T",
@@ -2802,7 +2854,7 @@
           ],
           "signature": "step(T step)",
           "name": "step",
-          "description": "",
+          "description": "The stepping interval. Defaults to 1 for  {@code Integer}  and  {@code Long} , 0.01 for floating points.\n Must be strictly positive.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2814,6 +2866,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2825,7 +2878,7 @@
           ],
           "signature": "format(String format)",
           "name": "format",
-          "description": "",
+          "description": "A printf-style format string controlling how numbers are displayed in the interface.\n The output must be purely numeric. This does not impact the return value of the widget.\n For more information about the formatting specification, see  <a href=\"https://github.com/alexei/sprintf.js?tab=readme-ov-file#format-specification\" target=\"_blank\"> sprintf.js </a> .\n  <p> \n For example,  {@code format=\"%0.1f\"}  adjusts the displayed decimal precision to only show one digit after the decimal.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2837,6 +2890,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2848,7 +2902,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the widget label. If null, no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2860,6 +2914,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2871,7 +2926,7 @@
           ],
           "signature": "placeholder(String placeholder)",
           "name": "placeholder",
-          "description": "",
+          "description": "An optional text displayed when the number input is empty, providing guidance to the user.\n If None, no placeholder is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2883,6 +2938,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -2894,7 +2950,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disables the number input if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2906,6 +2962,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -2917,7 +2974,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2929,6 +2986,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2940,7 +2998,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2952,6 +3010,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -2963,7 +3022,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -2975,9 +3034,7 @@
           "source": ""
         },
         {
-          "paramDescriptions": {
-            "widthPixels": "Width in pixels (must be non-negative)"
-          },
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -2989,7 +3046,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "Convenience method for setting width as integer pixels.",
+          "description": "The width of the number input in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -3001,6 +3058,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<T>",
@@ -3012,7 +3070,7 @@
           ],
           "signature": "onChange(function.Consumer<T> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback invoked when the number input's value changes.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.NumberInputComponent.Builder<T>",
@@ -3095,7 +3153,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this numeric input is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -3107,14 +3165,14 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this numeric input is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             },
             {
               "type_name": "Class<T>",
               "default": null,
               "name": "valueClass",
-              "description": "",
+              "description": "The number type class (Integer, Double, Float, etc.)",
               "is_optional": false
             }
           ],
@@ -3122,6 +3180,7 @@
         }
       ],
       "name": "numberInput",
+      "description": "Display a numeric input widget.",
       "returns": [
         {
           "type_name": "T",
@@ -3135,6 +3194,7 @@
     "Jt.fileUploader": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "List<String>",
@@ -3146,7 +3206,7 @@
           ],
           "signature": "type(List<String> types)",
           "name": "type",
-          "description": "",
+          "description": "The allowed file extensions or MIME types. If  {@code null} , all file types are allowed. Use file extensions like  {@code \".pdf\"}  or MIME types like  {@code \"image/png\"} .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3158,6 +3218,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.MultipleFiles",
@@ -3169,7 +3230,7 @@
           ],
           "signature": "acceptMultipleFiles(io.jeamlit.components.media.FileUploaderComponent.MultipleFiles acceptMultipleFiles)",
           "name": "acceptMultipleFiles",
-          "description": "",
+          "description": "Whether to accept more than one file in a submission. This can be one of the following values:\n  <ul> \n      <li> {@code MultipleFiles.FALSE}  (default): The user can only submit one file at a time. </li> \n      <li> {@code MultipleFiles.TRUE} : The user can upload multiple files at the same time. </li> \n      <li> {@code MultipleFiles.DIRECTORY} : The user can select a directory to upload all files in the directory and its subdirectories. If  {@code type}  is set, only files matching those type(s) will be uploaded. </li> \n  </ul>",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3205,6 +3266,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -3216,7 +3278,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the file uploader if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3228,6 +3290,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<List<io.jeamlit.core.JtUploadedFile>>",
@@ -3239,7 +3302,7 @@
           ],
           "signature": "onChange(function.Consumer<List<.JtUploadedFile>> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback invoked when the file uploader's value changes.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3251,6 +3314,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -3262,7 +3326,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3274,6 +3338,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -3285,7 +3350,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.media.FileUploaderComponent.Builder",
@@ -3392,7 +3457,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this file uploader is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -3400,6 +3465,7 @@
         }
       ],
       "name": "fileUploader",
+      "description": "Display a file uploader widget.",
       "returns": [
         {
           "type_name": "JtUploadedFile>",
@@ -3449,7 +3515,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -3473,7 +3539,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -3590,7 +3656,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.HtmlComponent.Builder",
@@ -3614,7 +3680,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.HtmlComponent.Builder",
@@ -3731,6 +3797,7 @@
     "Jt.columns": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -3742,7 +3809,7 @@
           ],
           "signature": "numColumns(int numColumns)",
           "name": "numColumns",
-          "description": "",
+          "description": "The number of columns to create. Must be between 2 and 12 inclusive. Each column will have equal width\n unless custom widths are specified.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.Builder",
@@ -3754,6 +3821,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "List<@org.jetbrains.annotations.NotNull Double>",
@@ -3765,7 +3833,7 @@
           ],
           "signature": "widths(List<@org.jetbrains.annotations.NotNull Double> widths)",
           "name": "widths",
-          "description": "",
+          "description": "A list of relative column widths. The list size must match the number of columns. For example, [0.7, 0.3]\n creates two columns with 70% and 30% width respectively. If not specified, all columns have equal width.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.Builder",
@@ -3777,6 +3845,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.Gap",
@@ -3788,7 +3857,7 @@
           ],
           "signature": "gap(io.jeamlit.components.layout.ColumnsComponent.Gap gap)",
           "name": "gap",
-          "description": "",
+          "description": "Controls the space between columns. Options are  {@code SMALL}  ( {@code 1rem}  gap, default),  {@code MEDIUM}  ( {@code 2rem}  gap),\n  {@code LARGE}  ( {@code 4rem}  gap), or  {@code NONE}  (no gap between columns).",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.Builder",
@@ -3800,6 +3869,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.VerticalAlignment",
@@ -3811,7 +3881,7 @@
           ],
           "signature": "verticalAlignment(io.jeamlit.components.layout.ColumnsComponent.VerticalAlignment verticalAlignment)",
           "name": "verticalAlignment",
-          "description": "",
+          "description": "The vertical alignment of the content inside the columns. Options are  {@code TOP}  (default),  {@code CENTER} , or  {@code BOTTOM} .",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.Builder",
@@ -3823,6 +3893,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -3834,7 +3905,7 @@
           ],
           "signature": "border(boolean border)",
           "name": "border",
-          "description": "",
+          "description": "Whether to show a border around the column containers.\n If this is  {@code false}  (default), no border is shown. If this is  {@code true} ,\n a border is shown around each column.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ColumnsComponent.Builder",
@@ -3917,14 +3988,14 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this columns container",
               "is_optional": false
             },
             {
               "type_name": "int",
               "default": null,
               "name": "numColumns",
-              "description": "",
+              "description": "The number of columns to create",
               "is_optional": false
             }
           ],
@@ -3932,6 +4003,7 @@
         }
       ],
       "name": "columns",
+      "description": "Insert containers laid out as side-by-side columns.\n  <p> \n Inserts a number of multi-element containers laid out side-by-side and returns a list of container objects.\n  <p> \n To add elements to the returned columns container:\n  <pre> \n  {@code\n var cols = Jt.columns(\"my-3-cols\", 3).use();\n Jt.yourElement().use(cols.col(1));\n Jt.yourElement().use(cols.col(0));\n Jt.yourElement().use(cols.col(2));\n } \n  </pre> \n See examples below.",
       "returns": [
         {
           "type_name": "Columns",
@@ -3965,7 +4037,7 @@
         }
       ],
       "name": "deepCopy",
-      "description": "Slow deep copy utility: serialize then deserialize json.\n Made available to be able to implement the behaviour of st.cache_data that does a copy on read.\n https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "description": "Return a deep copy of the provied object.\n  <p> \n Utility that may be useful in combination with the cache, to implement a copy on read behavior.\n For instance, you can get a value that is expensive to\n instantiate from the cache, but perform a deep copy to prevent mutations and side effects across sessions.",
       "returns": [
         {
           "type_name": "T",
@@ -3979,6 +4051,7 @@
     "Jt.tableFromListColumns": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,Values>",
@@ -3990,7 +4063,7 @@
           ],
           "signature": "ofColumnsLists(Map<@org.jetbrains.annotations.NotNull String,Values> col2List)",
           "name": "ofColumnsLists",
-          "description": "",
+          "description": "Creates a table from a map where each key is a column name and each value is a list of column data.\n All columns must have the same number of elements.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -4002,6 +4075,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]>",
@@ -4013,7 +4087,7 @@
           ],
           "signature": "ofColumnsArrays(Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]> col2Array)",
           "name": "ofColumnsArrays",
-          "description": "",
+          "description": "Creates a table from a map where each key is a column name and each value is an array of column data.\n All columns must have the same number of elements.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -4025,6 +4099,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "SequencedCollection<Object>",
@@ -4036,7 +4111,7 @@
           ],
           "signature": "ofObjsList(SequencedCollection<Object> objsList)",
           "name": "ofObjsList",
-          "description": "",
+          "description": "Creates a table from a list of objects, where each object represents a row and object properties become columns.\n Objects are serialized to extract their fields as table columns.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -4048,6 +4123,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Object[]",
@@ -4059,7 +4135,7 @@
           ],
           "signature": "ofObjsArray(Object[] objsArray)",
           "name": "ofObjsArray",
-          "description": "",
+          "description": "Creates a table from an array of objects, where each object represents a row and object properties become columns.\n Objects are serialized to extract their fields as table columns.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -4142,7 +4218,7 @@
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,Values>",
               "default": null,
               "name": "cols",
-              "description": "",
+              "description": "A map where keys are column names and values are collections of column data",
               "is_optional": false
             }
           ],
@@ -4150,6 +4226,7 @@
         }
       ],
       "name": "tableFromListColumns",
+      "description": "Display a static table.",
       "returns": [
         {
           "type_name": "void",
@@ -4163,6 +4240,7 @@
     "Jt.empty": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -4174,7 +4252,7 @@
           ],
           "signature": "height(Integer height)",
           "name": "height",
-          "description": "",
+          "description": "The height of the container in pixels. When a fixed height is specified, the container will enable scrolling if content exceeds the specified height. It is recommended to use scrolling containers sparingly and avoid heights that exceed 500 pixels for optimal mobile experience.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ContainerComponent.Builder",
@@ -4186,6 +4264,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Boolean",
@@ -4197,7 +4276,7 @@
           ],
           "signature": "border(Boolean border)",
           "name": "border",
-          "description": "",
+          "description": "Whether to show a border around the container. If not specified (null), the border is automatically shown when the container has a fixed height, and hidden when height adapts to content.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.ContainerComponent.Builder",
@@ -4280,7 +4359,7 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this container",
               "is_optional": false
             }
           ],
@@ -4288,6 +4367,7 @@
         }
       ],
       "name": "empty",
+      "description": "Insert a single-element container.\n  <p> \n Insert a container into your app that can be used to hold a single element.\n This allows you to, for example, remove elements at any point, or replace several elements at once (using a child multi-element container).\n  <p> \n To insert/replace/clear an element on the returned container:\n  <pre> \n  {@code\n var container = Jt.empty(\"empty-1\").use();\n Jt.yourElement().use(container);\n } \n  </pre> \n See examples below.",
       "returns": [
         {
           "type_name": "JtContainer",
@@ -4301,6 +4381,7 @@
     "Jt.navigation": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
@@ -4312,7 +4393,7 @@
           ],
           "signature": "addPage(io.jeamlit.components.multipage.JtPage.Builder page)",
           "name": "addPage",
-          "description": "",
+          "description": "Adds a page to the navigation. Pages can be added individually using this method or passed in the constructor.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.NavigationComponent.Builder",
@@ -4324,10 +4405,11 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [],
           "signature": "hidden()",
           "name": "hidden",
-          "description": "",
+          "description": "Hides the navigation menu from the user interface. The pages will still be accessible programmatically,\n but no navigation UI will be displayed. Useful for programmatic navigation or single-page apps.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.NavigationComponent.Builder",
@@ -4410,7 +4492,7 @@
               "type_name": "io.jeamlit.components.multipage.JtPage.Builder[]",
               "default": null,
               "name": "pages",
-              "description": "",
+              "description": "The pages to include in the navigation",
               "is_optional": false
             }
           ],
@@ -4418,6 +4500,7 @@
         }
       ],
       "name": "navigation",
+      "description": "Create a navigation component with multiple pages to create a multipage app.\n  <p> \n Call  {@code Jt.navigation}  in your entrypoint app class to define the available pages in your app.\n  {@code Jt.navigation}  use() returns the current page.\n  <p> \n When using  {@code Jt.navigation} , your entrypoint app class acts like a frame of common elements around each of your pages.\n  <p> \n The set of available pages can be updated with each rerun for dynamic navigation.\n By default,  {@code Jt.navogation}  displays the available pages in the sidebar if there is more than one page.\n This behavior can be changed using the  {@code position}  builder method.",
       "returns": [
         {
           "type_name": "JtPage",
@@ -4436,6 +4519,7 @@
         }
       ],
       "name": "componentsState",
+      "description": "Return the components state of the session. A session corresponds to an opened tab of the app.\n  <p> \n The current value of any component can be obtained from this map.\n When putting a component in the app, us the  {@code .key()}  method to define a specific key that will be easy\n to access from this map.",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
@@ -4462,12 +4546,14 @@
         }
       ],
       "name": "switchPage",
+      "description": "Programmatically switch the current page in a multipage app.\n  <p> \n When  {@code Jt.switchPage}  is called, the current page execution stops and the specified page runs as if the\n user clicked on it in the sidebar navigation. The specified page must be recognized by Jeamlit's multipage\n architecture (your main app class or an app class in the available pages).",
       "returns": [],
       "source": ""
     },
     "Jt.button": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4479,7 +4565,7 @@
           ],
           "signature": "type(String type)",
           "name": "type",
-          "description": "",
+          "description": "The button appearance type. Can be \"primary\", \"secondary\" (default), or \"tertiary\".",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ButtonComponent.Builder",
@@ -4491,6 +4577,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4502,7 +4589,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ButtonComponent.Builder",
@@ -4514,6 +4601,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4525,7 +4613,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed when the button is hovered over.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ButtonComponent.Builder",
@@ -4537,6 +4625,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -4548,7 +4637,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the button if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ButtonComponent.Builder",
@@ -4560,6 +4649,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -4571,7 +4661,7 @@
           ],
           "signature": "useContainerWidth(boolean useContainerWidth)",
           "name": "useContainerWidth",
-          "description": "",
+          "description": "Makes the button fill the width of its container if set to true.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ButtonComponent.Builder",
@@ -4583,6 +4673,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<Boolean>",
@@ -4594,7 +4685,7 @@
           ],
           "signature": "onClick(function.Consumer<Boolean> onClick)",
           "name": "onClick",
-          "description": "",
+          "description": "An optional callback invoked when this button is clicked.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ButtonComponent.Builder",
@@ -4677,7 +4768,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this button is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -4685,6 +4776,7 @@
         }
       ],
       "name": "button",
+      "description": "Display a button widget.",
       "returns": [
         {
           "type_name": "boolean",
@@ -4698,6 +4790,7 @@
     "Jt.dateInput": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "java.time.LocalDate",
@@ -4709,7 +4802,7 @@
           ],
           "signature": "value(java.time.LocalDate value)",
           "name": "value",
-          "description": "",
+          "description": "The value of this widget when it first renders. Can be a specific date or  {@code null}  for no initial value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4721,6 +4814,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "java.time.LocalDate",
@@ -4732,7 +4826,7 @@
           ],
           "signature": "minValue(java.time.LocalDate minValue)",
           "name": "minValue",
-          "description": "",
+          "description": "The minimum selectable date. If  {@code null} , defaults to ten years before the initial value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4744,6 +4838,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "java.time.LocalDate",
@@ -4755,7 +4850,7 @@
           ],
           "signature": "maxValue(java.time.LocalDate maxValue)",
           "name": "maxValue",
-          "description": "",
+          "description": "The maximum selectable date. If  {@code null} , defaults to ten years after the initial value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4791,6 +4886,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<java.time.@org.jetbrains.annotations.Nullable LocalDate>",
@@ -4802,7 +4898,7 @@
           ],
           "signature": "onChange(function.Consumer<java.time.@org.jetbrains.annotations.Nullable LocalDate> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback invoked when the date input's value changes.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4814,6 +4910,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4825,7 +4922,7 @@
           ],
           "signature": "format(String format)",
           "name": "format",
-          "description": "",
+          "description": "Controls how dates are displayed in the interface. Supported formats:  {@code YYYY/MM/DD} ,  {@code DD/MM/YYYY} ,  {@code MM/DD/YYYY} .\n You may also use a period ( {@code .} ) or hyphen ( {@code -} ) as separators.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4837,6 +4934,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -4848,7 +4946,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the date input if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4860,6 +4958,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -4871,7 +4970,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4883,6 +4982,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -4894,7 +4994,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "Controls the widget's width. Can be \"stretch\" to match parent container or a pixel value as string.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -4918,7 +5018,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.DateInputComponent.Builder",
@@ -5001,7 +5101,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this date input is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -5009,6 +5109,7 @@
         }
       ],
       "name": "dateInput",
+      "description": "Display a date input widget that can be configured to accept a single date or a date range.",
       "returns": [
         {
           "type_name": "LocalDate",
@@ -5082,7 +5183,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TitleComponent.Builder",
@@ -5106,7 +5207,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.TitleComponent.Builder",
@@ -5234,6 +5335,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5245,7 +5347,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
@@ -5326,7 +5428,7 @@
               "type_name": "Class<?>",
               "default": null,
               "name": "pageApp",
-              "description": "",
+              "description": "The class containing the main method for this page",
               "is_optional": false
             }
           ],
@@ -5334,6 +5436,7 @@
         }
       ],
       "name": "page",
+      "description": "Create a page for  {@code Jt.navigation}  in a multipage app.",
       "returns": [
         {
           "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
@@ -5347,6 +5450,7 @@
     "Jt.error": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5358,7 +5462,7 @@
           ],
           "signature": "body(String body)",
           "name": "body",
-          "description": "",
+          "description": "The error message content to display. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.status.ErrorComponent.Builder",
@@ -5370,6 +5474,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5381,7 +5486,7 @@
           ],
           "signature": "icon(String icon)",
           "name": "icon",
-          "description": "",
+          "description": "An icon to display with the error message. The following values are valid:\n  <ul> \n      <li> A single-character emoji. For example:  {@code \\ud83d\\udd25} . Emoji short codes are not supported. </li> \n      <li> An icon from the Material Symbols library (rounded style) in the format \":icon_name:\" where \"icon_name\" is the name of the icon in snake case. For example:  {@code :search:} . See full list of icons  <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\"> here </a> . </li> \n  </ul> \n If null (default), no icon is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.status.ErrorComponent.Builder",
@@ -5393,6 +5498,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5404,7 +5510,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.status.ErrorComponent.Builder",
@@ -5428,7 +5534,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.status.ErrorComponent.Builder",
@@ -5511,7 +5617,7 @@
               "type_name": "String",
               "default": null,
               "name": "body",
-              "description": "",
+              "description": "The error text to display. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -5519,6 +5625,7 @@
         }
       ],
       "name": "error",
+      "description": "Display error message.",
       "returns": [
         {
           "type_name": "void",
@@ -5532,6 +5639,7 @@
     "Jt.echarts": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -5543,7 +5651,7 @@
           ],
           "signature": "height(int height)",
           "name": "height",
-          "description": "",
+          "description": "The height of the chart in pixels.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
@@ -5555,6 +5663,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -5566,7 +5675,7 @@
           ],
           "signature": "width(Integer width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the chart in pixels. If null, the chart will use its default width.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
@@ -5578,6 +5687,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.components.chart.EchartsComponent.Theme",
@@ -5589,7 +5699,7 @@
           ],
           "signature": "theme(io.jeamlit.components.chart.EchartsComponent.Theme theme)",
           "name": "theme",
-          "description": "",
+          "description": "The chart theme using a predefined theme from the Theme enum.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
@@ -5601,6 +5711,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5612,7 +5723,7 @@
           ],
           "signature": "theme(String theme)",
           "name": "theme",
-          "description": "",
+          "description": "The chart theme using a custom theme name. Custom themes can be loaded through custom headers.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
@@ -5695,7 +5806,7 @@
               "type_name": "org.icepear.echarts.Chart<?,?>",
               "default": null,
               "name": "chart",
-              "description": "",
+              "description": "The ECharts  {@code Chart}  object to display",
               "is_optional": false
             }
           ],
@@ -5707,7 +5818,7 @@
               "type_name": "org.icepear.echarts.Option",
               "default": null,
               "name": "chartOption",
-              "description": "",
+              "description": "The ECharts  {@code Option}  object to display",
               "is_optional": false
             }
           ],
@@ -5719,7 +5830,7 @@
               "type_name": "String",
               "default": null,
               "name": "chartOptionJson",
-              "description": "",
+              "description": "The ECharts option as a JSON string",
               "is_optional": false
             }
           ],
@@ -5727,6 +5838,7 @@
         }
       ],
       "name": "echarts",
+      "description": "Display a chart using ECharts library.\n See  <a href=\"https://echarts.icepear.org/\" target=\"_blank\"> echarts-java documentation </a>  for more info.",
       "returns": [
         {
           "type_name": "void",
@@ -5776,7 +5888,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -5800,7 +5912,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.text.MarkdownComponent.Builder",
@@ -5883,6 +5995,7 @@
         }
       ],
       "name": "divider",
+      "description": "Display a horizontal rule.",
       "returns": [
         {
           "type_name": "void",
@@ -5896,6 +6009,7 @@
     "Jt.slider": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "double",
@@ -5907,7 +6021,7 @@
           ],
           "signature": "min(double min)",
           "name": "min",
-          "description": "",
+          "description": "The minimum permitted value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -5919,6 +6033,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "double",
@@ -5930,7 +6045,7 @@
           ],
           "signature": "max(double max)",
           "name": "max",
-          "description": "",
+          "description": "The maximum permitted value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -5942,6 +6057,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "double",
@@ -5953,7 +6069,7 @@
           ],
           "signature": "value(double value)",
           "name": "value",
-          "description": "",
+          "description": "The initial slider value. Defaults to the  {@code min}  value.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -5965,6 +6081,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "double",
@@ -5976,7 +6093,7 @@
           ],
           "signature": "step(double step)",
           "name": "step",
-          "description": "",
+          "description": "The stepping interval. Default is 1.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -5988,6 +6105,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -5999,7 +6117,7 @@
           ],
           "signature": "format(String format)",
           "name": "format",
-          "description": "",
+          "description": "A printf-style format string controlling how the interface should display numbers. This does not impact the return value.\n  <p> \n For information about formatting integers and floats, see  <a href=\"https://github.com/alexei/sprintf.js?tab=readme-ov-file#format-specification\" target=\"_blank\"> sprintf.js </a> .\n For example, format=\"%0.1f\" adjusts the displayed decimal precision to only show one digit after the decimal.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -6035,6 +6153,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -6046,7 +6165,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disable the slider if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -6058,6 +6177,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -6069,7 +6189,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -6081,6 +6201,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<Double>",
@@ -6092,7 +6213,7 @@
           ],
           "signature": "onChange(function.Consumer<Double> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback function invoked when the slider value changes.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -6104,6 +6225,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6115,7 +6237,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -6139,7 +6261,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.SliderComponent.Builder",
@@ -6222,7 +6344,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this slider is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -6230,6 +6352,7 @@
         }
       ],
       "name": "slider",
+      "description": "Display a slider widget.",
       "returns": [
         {
           "type_name": "double",
@@ -6243,6 +6366,7 @@
     "Jt.radio": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Integer",
@@ -6254,7 +6378,7 @@
           ],
           "signature": "index(Integer index)",
           "name": "index",
-          "description": "",
+          "description": "The index of the preselected option on first render. If  {@code null} , initializes empty and returns  {@code null}  until user selection.\n Defaults to 0 (the first option).",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6266,6 +6390,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Function<@org.jetbrains.annotations.Nullable T,String>",
@@ -6277,7 +6402,7 @@
           ],
           "signature": "formatFunction(function.Function<@org.jetbrains.annotations.Nullable T,String> formatFunction)",
           "name": "formatFunction",
-          "description": "",
+          "description": "Function to modify the display of the radio options. The  {@code Function}  receives the raw option object\n and returns a String that will be used as display label.\n Does not impact the return value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6289,6 +6414,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6300,7 +6426,7 @@
           ],
           "signature": "help(String help)",
           "name": "help",
-          "description": "",
+          "description": "A tooltip that gets displayed next to the widget label. If null, no tooltip is displayed.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6312,6 +6438,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<@org.jetbrains.annotations.NotNull T>",
@@ -6323,7 +6450,7 @@
           ],
           "signature": "onChange(function.Consumer<@org.jetbrains.annotations.NotNull T> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback invoked when the radio button's value changes.\n The value passed to the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6335,6 +6462,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -6346,7 +6474,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disables the radio buttons if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6358,6 +6486,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -6369,7 +6498,7 @@
           ],
           "signature": "horizontal(boolean horizontal)",
           "name": "horizontal",
-          "description": "",
+          "description": "Orients the radio group horizontally instead of vertically when set to true.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6381,6 +6510,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "List<String>",
@@ -6392,7 +6522,7 @@
           ],
           "signature": "captions(List<String> captions)",
           "name": "captions",
-          "description": "",
+          "description": "A list of captions to show below each radio button. If  {@code null}  (default), no captions are shown.\n Must match the size of the options list.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6404,6 +6534,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -6415,7 +6546,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6427,6 +6558,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -6438,7 +6570,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6450,6 +6582,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "int",
@@ -6461,7 +6594,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "",
+          "description": "The width of the radio group in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.RadioComponent.Builder<T>",
@@ -6544,14 +6677,14 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this radio selection is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             },
             {
               "type_name": "List<T>",
               "default": null,
               "name": "options",
-              "description": "",
+              "description": "The list of options to choose from",
               "is_optional": false
             }
           ],
@@ -6559,6 +6692,7 @@
         }
       ],
       "name": "radio",
+      "description": "Display a radio button widget.",
       "returns": [
         {
           "type_name": "Nullable T",
@@ -6572,6 +6706,7 @@
     "Jt.table": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,Values>",
@@ -6583,7 +6718,7 @@
           ],
           "signature": "ofColumnsLists(Map<@org.jetbrains.annotations.NotNull String,Values> col2List)",
           "name": "ofColumnsLists",
-          "description": "",
+          "description": "Creates a table from a map where each key is a column name and each value is a list of column data.\n All columns must have the same number of elements.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -6595,6 +6730,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]>",
@@ -6606,7 +6742,7 @@
           ],
           "signature": "ofColumnsArrays(Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]> col2Array)",
           "name": "ofColumnsArrays",
-          "description": "",
+          "description": "Creates a table from a map where each key is a column name and each value is an array of column data.\n All columns must have the same number of elements.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -6618,6 +6754,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "SequencedCollection<Object>",
@@ -6629,7 +6766,7 @@
           ],
           "signature": "ofObjsList(SequencedCollection<Object> objsList)",
           "name": "ofObjsList",
-          "description": "",
+          "description": "Creates a table from a list of objects, where each object represents a row and object properties become columns.\n Objects are serialized to extract their fields as table columns.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -6641,6 +6778,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Object[]",
@@ -6652,7 +6790,7 @@
           ],
           "signature": "ofObjsArray(Object[] objsArray)",
           "name": "ofObjsArray",
-          "description": "",
+          "description": "Creates a table from an array of objects, where each object represents a row and object properties become columns.\n Objects are serialized to extract their fields as table columns.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -6735,7 +6873,7 @@
               "type_name": "List<Object>",
               "default": null,
               "name": "rows",
-              "description": "",
+              "description": "The list of objects representing table rows",
               "is_optional": false
             }
           ],
@@ -6747,7 +6885,7 @@
               "type_name": "Object[]",
               "default": null,
               "name": "rows",
-              "description": "",
+              "description": "The array of objects representing table rows",
               "is_optional": false
             }
           ],
@@ -6755,6 +6893,7 @@
         }
       ],
       "name": "table",
+      "description": "Display a static table.",
       "returns": [
         {
           "type_name": "void",
@@ -6768,6 +6907,7 @@
     "Jt.toggle": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -6779,7 +6919,7 @@
           ],
           "signature": "value(boolean value)",
           "name": "value",
-          "description": "",
+          "description": "Preselect the toggle when first rendered.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6791,6 +6931,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "function.Consumer<@org.jetbrains.annotations.NotNull Boolean>",
@@ -6802,7 +6943,7 @@
           ],
           "signature": "onChange(function.Consumer<@org.jetbrains.annotations.NotNull Boolean> onChange)",
           "name": "onChange",
-          "description": "",
+          "description": "An optional callback function invoked when the toggle value changes.\n The value passed in the callback is the previous value of the component.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6838,6 +6979,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -6849,7 +6991,7 @@
           ],
           "signature": "disabled(boolean disabled)",
           "name": "disabled",
-          "description": "",
+          "description": "Disables the toggle if set to true. When disabled, users cannot interact with the widget.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6861,6 +7003,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
@@ -6872,7 +7015,7 @@
           ],
           "signature": "labelVisibility(.JtComponent.LabelVisibility labelVisibility)",
           "name": "labelVisibility",
-          "description": "",
+          "description": "The visibility of the label. The default is  {@code VISIBLE} .\n If this is  {@code HIDDEN} , Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is  {@code COLLAPSED} , Jeamlit displays no label or spacer.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6896,7 +7039,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -6920,7 +7063,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.input.ToggleComponent.Builder",
@@ -7003,7 +7146,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "",
+              "description": "A short label explaining to the user what this toggle is for. Markdown is supported, see  {@link io.jeamlit.core.Jt#markdown(String)}  for more details.",
               "is_optional": false
             }
           ],
@@ -7011,6 +7154,7 @@
         }
       ],
       "name": "toggle",
+      "description": "Display a toggle widget.",
       "returns": [
         {
           "type_name": "NotNull Boolean",
@@ -7029,7 +7173,7 @@
         }
       ],
       "name": "cache",
-      "description": "Returns the app cache.\n See https://docs.streamlit.io/get-started/fundamentals/advanced-concepts#caching",
+      "description": "Return the app cache. The app cache is shared across all sessions.\n Put values in this map that are meant to be shared across all users.\n For instance: database long-lived connections, ML models loaded weights, etc...\n  <p> \n See https://docs.jeamlit.io/get-started/fundamentals/advanced-concepts#caching",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
@@ -7048,6 +7192,7 @@
         }
       ],
       "name": "sessionState",
+      "description": "Return the session state Map of the session. A session corresponds to an opened tab of the app.\n  <p> \n The session state is maintained across re-runs.\n Values can be stored and persisted in this map.",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
@@ -7066,6 +7211,7 @@
         }
       ],
       "name": "urlQueryParameters",
+      "description": "Return the current query parameters as a map.\n  <p> \n For instance:  {@code ?key1=foo&key2=bar&key2=fizz}  will return\n {\"key1\": [\"foo\"], \"key2\": [\"bar\", \"fizz\"]}",
       "returns": [
         {
           "type_name": "Map<String,List<String>>",
@@ -7079,6 +7225,7 @@
     "Jt.tableFromArrayColumns": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,Values>",
@@ -7090,7 +7237,7 @@
           ],
           "signature": "ofColumnsLists(Map<@org.jetbrains.annotations.NotNull String,Values> col2List)",
           "name": "ofColumnsLists",
-          "description": "",
+          "description": "Creates a table from a map where each key is a column name and each value is a list of column data.\n All columns must have the same number of elements.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -7102,6 +7249,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]>",
@@ -7113,7 +7261,7 @@
           ],
           "signature": "ofColumnsArrays(Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]> col2Array)",
           "name": "ofColumnsArrays",
-          "description": "",
+          "description": "Creates a table from a map where each key is a column name and each value is an array of column data.\n All columns must have the same number of elements.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -7125,6 +7273,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "SequencedCollection<Object>",
@@ -7136,7 +7285,7 @@
           ],
           "signature": "ofObjsList(SequencedCollection<Object> objsList)",
           "name": "ofObjsList",
-          "description": "",
+          "description": "Creates a table from a list of objects, where each object represents a row and object properties become columns.\n Objects are serialized to extract their fields as table columns.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -7148,6 +7297,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "Object[]",
@@ -7159,7 +7309,7 @@
           ],
           "signature": "ofObjsArray(Object[] objsArray)",
           "name": "ofObjsArray",
-          "description": "",
+          "description": "Creates a table from an array of objects, where each object represents a row and object properties become columns.\n Objects are serialized to extract their fields as table columns.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.data.TableComponent.Builder",
@@ -7242,7 +7392,7 @@
               "type_name": "Map<@org.jetbrains.annotations.NotNull String,@org.jetbrains.annotations.NotNull Object[]>",
               "default": null,
               "name": "cols",
-              "description": "",
+              "description": "A map where keys are column names and values are arrays of column data",
               "is_optional": false
             }
           ],
@@ -7250,6 +7400,7 @@
         }
       ],
       "name": "tableFromArrayColumns",
+      "description": "Display a static table.",
       "returns": [
         {
           "type_name": "void",
@@ -7268,6 +7419,7 @@
         }
       ],
       "name": "urlPath",
+      "description": "Return the current url path.\n  <p> \n May be used for multipage apps.\n In a single page app, will always return  {@code \"/\"} .",
       "returns": [
         {
           "type_name": "String",
@@ -7281,6 +7433,7 @@
     "Jt.tabs": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -7292,7 +7445,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "",
+          "description": "The width of the element. This can be one of the following:\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.TabsComponent.Builder",
@@ -7316,7 +7469,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.TabsComponent.Builder",
@@ -7399,14 +7552,14 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this tabs container",
               "is_optional": false
             },
             {
               "type_name": "List<@org.jetbrains.annotations.NotNull String>",
               "default": null,
               "name": "tabs",
-              "description": "",
+              "description": "A list of tab labels",
               "is_optional": false
             }
           ],
@@ -7414,6 +7567,7 @@
         }
       ],
       "name": "tabs",
+      "description": "Insert containers separated into tabs.\n  <p> \n Inserts a number of multi-element containers as tabs.\n Tabs are a navigational element that allows users to easily move between groups of related content.\n  <p> \n To add elements to the returned tabs container:\n  <pre> \n  {@code\n var tabs = Jt.tabs(\"my-tabs\", List.of(\"E-commerce\", \"Industry\", \"Finance\")).use();\n // get tab by name\n Jt.yourElement().use(tabs.tab(\"E-commerce\"));\n // get tab by index\n Jt.yourElement().use(tabs.tab(2));\n } \n  </pre> \n See examples below.",
       "returns": [
         {
           "type_name": "Tabs",
@@ -7427,6 +7581,7 @@
     "Jt.form": {
       "builderMethods": [
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -7438,7 +7593,7 @@
           ],
           "signature": "clearOnSubmit(boolean clearOnSubmit)",
           "name": "clearOnSubmit",
-          "description": "",
+          "description": "If True, all widgets inside the form will be reset to their default values after the user presses the Submit button.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7450,6 +7605,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -7461,7 +7617,7 @@
           ],
           "signature": "enterToSubmit(boolean enterToSubmit)",
           "name": "enterToSubmit",
-          "description": "",
+          "description": "If True (default), pressing Enter while in a form widget is like clicking the first form submit button. If False, the user must click the submit button to submit the form.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7473,6 +7629,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "boolean",
@@ -7484,7 +7641,7 @@
           ],
           "signature": "border(boolean border)",
           "name": "border",
-          "description": "",
+          "description": "Whether to show a border around the form. Default is  {@code true} . It is recommended to only remove the border if there is another border or the form is small.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7508,7 +7665,7 @@
           ],
           "signature": "width(String width)",
           "name": "width",
-          "description": "The width of the text element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element. This can be one of the following:\n - \"content\" (default): The width of the element matches the width of its content, but doesn't exceed the width of the parent container.\n - \"stretch\": The width of the element matches the width of the parent container.\n - An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7532,7 +7689,7 @@
           ],
           "signature": "width(int widthPixels)",
           "name": "width",
-          "description": "The width of the text element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
+          "description": "The width of the element in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7544,6 +7701,7 @@
           "source": ""
         },
         {
+          "paramDescriptions": {},
           "args": [
             {
               "type_name": "String",
@@ -7555,7 +7713,7 @@
           ],
           "signature": "height(String height)",
           "name": "height",
-          "description": "",
+          "description": "The height of the form container. Can be \"content\" (default - matches height of content), \"stretch\" (matches content or parent container height), or a specific pixel value (sets a fixed height, enabling scrolling if content exceeds it).",
           "returns": [
             {
               "type_name": "io.jeamlit.components.layout.FormComponent.Builder",
@@ -7638,7 +7796,7 @@
               "type_name": "String",
               "default": null,
               "name": "key",
-              "description": "",
+              "description": "A unique string used to identify this form",
               "is_optional": false
             }
           ],
@@ -7646,6 +7804,7 @@
         }
       ],
       "name": "form",
+      "description": "Create a form that batches elements together with a 'Submit' button.\n  <p> \n A form is a container that visually groups other elements and widgets together, and contains a Submit button.\n When the form's Submit button is pressed, all widget values inside the form will be sent to Jeamlit in a batch.\n  <p> \n To add elements to the form:\n  <pre> \n  {@code\n var form = Jt.form(\"my-form-1\").use();\n Jt.yourElement().use(form);\n ...\n Jt.formSubmitButton(\"submit form\").use();\n } \n  </pre> \n  <p> \n Forms have a few constraints:\n  <ul> \n      <li> Every form must contain a  {@code Jt.formSubmitButton)} </li> \n      <li> {@code Jt.button}  and  {@code Jt.downloadButton}  cannot be added to a form </li> \n      <li> Forms can appear anywhere in your app (sidebar, columns, etc), but they cannot be embedded inside other forms </li> \n      <li> Within a form, the only widget that can have a callback function is  {@code Jt.formSubmitButton)} </li> \n  </ul>",
       "returns": [
         {
           "type_name": "JtContainer",

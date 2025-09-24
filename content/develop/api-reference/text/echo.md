@@ -5,7 +5,7 @@ description: st.echo displays some code on the app, then execute it. Useful for 
 ignore: true
 ---
 
-<Autofunction function="streamlit.echo" />
+<Autofunction function="Jt.echo" />
 
 ### Display code
 

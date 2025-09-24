@@ -4,4 +4,4 @@ slug: /develop/api-reference/text/jt.title
 description: Jt.title displays text in title formatting.
 ---
 
-<Autofunction function="streamlit.title" />
+<Autofunction function="Jt.title" />

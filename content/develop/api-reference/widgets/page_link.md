@@ -10,4 +10,4 @@ Check out our [tutorial](/develop/tutorials/multipage/st.page_link-nav) to learn
 
 </Tip>
 
-<Autofunction function="streamlit.page_link" />
+<Autofunction function="Jt.pagelink" />

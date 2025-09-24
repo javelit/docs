@@ -4,4 +4,4 @@ slug: /develop/api-reference/widgets/st.link_button
 ignore: true
 ---
 
-<Autofunction function="streamlit.link_button" />
+<Autofunction function="Jt.linkbutton" />

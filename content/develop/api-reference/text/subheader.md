@@ -5,4 +5,4 @@ description: st.subheader displays text in subheader formatting.
 ignore: true
 ---
 
-<Autofunction function="streamlit.subheader" />
+<Autofunction function="Jt.subheader" />

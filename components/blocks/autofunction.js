@@ -314,19 +314,10 @@ const Autofunction = ({
   let propertiesRows = [];
   let docstringProperties = []; // Used to avoid duplicates with @property
 
-  // Process parameters from all overloads
+  // Process parameters from all overloads - create signature-parameter pairs
   if (overloads) {
     overloads.forEach((overload, overloadIndex) => {
       if (!overload.args) return;
-
-      // Add overload separator if there are multiple overloads
-      if (overloads.length > 1 && overloadIndex > 0) {
-        args.push({
-          title:
-            "<hr style='margin: 10px 0; border: 0; border-top: 1px solid #ddd;'/>",
-          body: "",
-        });
-      }
 
       for (const index in overload.args) {
         const row = {};
@@ -347,8 +338,16 @@ const Autofunction = ({
           ? param.description
           : `<p>No description</p> `;
 
+        // Column 1: Method signature (only for first parameter of each overload)
+        if (index === "0") {
+          row["title"] = `<p class='code'>${overload.signature}</p>`;
+        } else {
+          row["title"] = ""; // Empty for subsequent parameters
+        }
+
+        // Column 2: Parameter details
         if (param.is_optional) {
-          row["title"] = `
+          row["body"] = `
           <p class="
             ${isDeprecated ? "deprecated" : ""}
             ${param.is_kwarg_only ? styles.Keyword : ""}
@@ -356,13 +355,11 @@ const Autofunction = ({
             ${param.name}
             <span class='italic code'>(${param.type_name})</span>
           </p>
-        `;
-          row["body"] = `
           ${deprecatedMarkup}
           ${description}
         `;
         } else {
-          row["title"] = `
+          row["body"] = `
           <p class="
             ${isDeprecated ? "deprecated" : ""}
             ${param.is_kwarg_only ? styles.Keyword : ""}
@@ -370,12 +367,11 @@ const Autofunction = ({
             <span class='bold'>${param.name}</span>
             <span class='italic code'>(${param.type_name})</span>
           </p>
-        `;
-          row["body"] = `
           ${deprecatedMarkup}
           ${description}
         `;
         }
+
         // When "Parameters" are included in a class docstring, they are actually
         // "Properties." Using "Properties" in the docstring does not result in
         // individually parsed properties; using "Parameters" is a workaround.
@@ -525,53 +521,10 @@ const Autofunction = ({
     returns.push(row);
   }
 
-  // Generate signature content for all overloads
-  let signatureContent = "";
-  if (overloads.length === 1) {
-    // Single signature
-    signatureContent = `<p class='code'> ${overloads[0].signature}</p> `;
-  } else if (overloads.length > 1) {
-    // Multiple signatures
-    signatureContent = overloads
-      .map(
-        (overload, index) =>
-          `<p class='code' style='${index > 0 ? "margin-top: 8px;" : ""}'> ${overload.signature}</p>`,
-      )
-      .join("");
-  }
-
   body = (
     <Table
-      head={
-        isAttributeDict
-          ? ""
-          : {
-              title: (
-                <>
-                  {isClass
-                    ? "Class description"
-                    : overloads.length > 1
-                      ? "Method signatures"
-                      : "Method signature"}
-                  <a
-                    className={styles.Title.a}
-                    href={functionObject.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={
-                      "View st." +
-                      functionObject.name +
-                      " source code on GitHub"
-                    }
-                  >
-                    [source]
-                  </a>
-                </>
-              ),
-              content: signatureContent,
-            }
-      }
-      body={args.length ? { title: "Parameters" } : null}
+      head={isAttributeDict ? "" : null}
+      body={args.length ? { title: "Method Signatures and Parameters" } : null}
       bodyRows={args.length ? args : null}
       foot={[
         methods.length ? { title: "Methods" } : null,
