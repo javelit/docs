@@ -855,7 +855,8 @@ site_menu:
     ignore: true
   - category: Develop / API reference / TOOLS
   - category: Develop / API reference / App testing
-    url: /develop/api-reference/app-testing
+    # url: /develop/api-reference/app-testing - for the moment no reference, simply linking to the concepts 
+    url: https://docs.jeamlit.io/develop/concepts/app-testing
   - category: Develop / API reference / App testing / st.testing.v1.AppTest
     url: /develop/api-reference/app-testing/st.testing.v1.apptest
     isVersioned: true

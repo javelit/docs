@@ -1,6 +1,11 @@
 ---
 title: App testing
 slug: /develop/api-reference/app-testing
+ignore: true
+# note: ignore: true but no matching ignore in _menu.md 
+# look for category: Develop / API reference / App testing in _menu.md
+# a link to another page is in place
+# the 2 pages may become different later 
 ---
 
 # App testing
