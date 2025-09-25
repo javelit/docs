@@ -1,6 +1,7 @@
 ---
 title: Work with Streamlit elements
 slug: /develop/tutorials/elements
+ignore: true
 ---
 
 # Work with Streamlit elements

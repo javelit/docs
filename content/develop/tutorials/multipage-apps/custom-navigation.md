@@ -1,7 +1,9 @@
 ---
 title: Build a custom navigation menu with `st.page_link`
 slug: /develop/tutorials/multipage/st.page_link-nav
-description: Streamlit makes it easy to build a custom navigation menu in your multipage app.
+description: Streamlit makes it easy to build a custom navigation menu in your multipage
+  app.
+ignore: true
 ---
 
 # Build a custom navigation menu with `st.page_link`

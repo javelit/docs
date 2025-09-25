@@ -1,6 +1,7 @@
 ---
 title: Build multipage apps
 slug: /develop/tutorials/multipage
+ignore: true
 ---
 
 # Build multipage apps

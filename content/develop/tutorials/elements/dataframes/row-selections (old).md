@@ -1,6 +1,7 @@
 ---
 title: Get dataframe row-selections from users (streamlit<1.35.0)
 slug: /develop/tutorials/elements/dataframe-row-selections-old
+ignore: true
 ---
 
 # Get dataframe row-selections from users (`streamlit<1.35.0`)

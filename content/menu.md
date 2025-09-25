@@ -894,7 +894,6 @@ site_menu:
     url: /develop/api-reference/cli/run
   - category: Develop / API reference / Command line / jeamlit --version
     url: /develop/api-reference/cli/version
-
   - category: Develop / Tutorials
     url: /develop/tutorials
     visible: false
@@ -1017,15 +1016,26 @@ site_menu:
     ignore: true
   - category: Develop / Tutorials / Elements
     url: /develop/tutorials/elements
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Elements / CHARTS
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Elements / Annotate an Altair chart
     url: /develop/tutorials/elements/annotate-an-altair-chart
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Elements / DATAFRAMES
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Elements / Get dataframe row-selections
     url: /develop/tutorials/elements/dataframe-row-selections
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Elements / Get dataframe row-selections (streamlit<1.35.0)
     url: /develop/tutorials/elements/dataframe-row-selections-old
     visible: false
+    ignore: true
   - category: Develop / Tutorials / Execution flow
     url: /develop/tutorials/execution-flow
     visible: false
@@ -1047,11 +1057,16 @@ site_menu:
     ignore: true
   - category: Develop / Tutorials / Multipage apps
     url: /develop/tutorials/multipage
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Multipage apps / Dynamic navigation
     url: /develop/tutorials/multipage/dynamic-navigation
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Multipage apps / Build navigation with st.page_link
     url: /develop/tutorials/multipage/st.page_link-nav
     visible: false
+    ignore: true
   - category: Develop / Quick reference
     url: /develop/quick-reference
   - category: Develop / Quick reference / Cheat sheet

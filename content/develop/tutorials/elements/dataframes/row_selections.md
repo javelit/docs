@@ -1,6 +1,7 @@
 ---
 title: Get dataframe row-selections from users
 slug: /develop/tutorials/elements/dataframe-row-selections
+ignore: true
 ---
 
 # Get dataframe row-selections from users

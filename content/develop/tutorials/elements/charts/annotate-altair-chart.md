@@ -1,6 +1,7 @@
 ---
 title: Annotate an Altair chart
 slug: /develop/tutorials/elements/annotate-an-altair-chart
+ignore: true
 ---
 
 # Annotate an Altair chart

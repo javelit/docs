@@ -15,6 +15,8 @@ A dense list of Streamlit commands with example syntax.
 
 </RefCard>
 
+{/*
+
 <RefCard href="/develop/quick-reference/release-notes">
 
 <h5>Release notes</h5>
@@ -31,7 +33,9 @@ Understand how we introduce new features and how you can get your hands on them 
 
 </RefCard>
 
-<RefCard href="https://roadmap.streamlit.app/">
+*/}
+
+<RefCard href="https://github.com/jeamlit/jeamlit/discussions/39">
 
 <h5>Roadmap</h5>
 
