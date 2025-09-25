@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Snowflake
 slug: /develop/tutorials/databases/snowflake
+ignore: true
 ---
 
 # Connect Streamlit to Snowflake

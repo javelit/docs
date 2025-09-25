@@ -1,6 +1,7 @@
 ---
 title: Build an LLM app using LangChain
 slug: /develop/tutorials/chat-and-llm-apps/llm-quickstart
+ignore: true
 ---
 
 # Build an LLM app using LangChain

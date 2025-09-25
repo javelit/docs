@@ -325,6 +325,8 @@ site_menu:
   - category: Develop / API reference / Chart elements
     url: /develop/api-reference/charts
   - category: Develop / API reference / Chart elements / SIMPLE
+    visible: false
+    ignore: true
   - category: Develop / API reference / Chart elements / st.area_chart
     url: /develop/api-reference/charts/st.area_chart
     isVersioned: true
@@ -397,15 +399,15 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Input widgets / Jt.form_submit_button
-    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.form_submit_button
+  - category: Develop / API reference / Input widgets / Jt.formSubmitButton
+    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.formsubmitbutton
     isVersioned: true
   - category: Develop / API reference / Input widgets / st.link_button
     url: /develop/api-reference/widgets/st.link_button
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Input widgets / Jt.page_link
+  - category: Develop / API reference / Input widgets / Jt.pageLink
     url: /develop/api-reference/widgets/jt.pagelink
     isVersioned: true
   - category: Develop / API reference / Input widgets / SELECTIONS
@@ -475,10 +477,10 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Input widgets / Jt.text_area
+  - category: Develop / API reference / Input widgets / Jt.textArea
     url: /develop/api-reference/widgets/jt.textarea
     isVersioned: true
-  - category: Develop / API reference / Input widgets / Jt.text_input
+  - category: Develop / API reference / Input widgets / Jt.textInput
     url: /develop/api-reference/widgets/jt.textinput
     isVersioned: true
   - category: Develop / API reference / Input widgets / MEDIA AND FILES
@@ -610,6 +612,8 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Status elements / OTHER
+    visible: false
+    ignore: true
   - category: Develop / API reference / Status elements / st.progress
     url: /develop/api-reference/status/st.progress
     isVersioned: true
@@ -669,10 +673,10 @@ site_menu:
   - category: Develop / API reference / Navigation and pages / Jt.navigation
     url: /develop/api-reference/navigation/jt.navigation
     isVersioned: true
-  - category: Develop / API reference / Navigation and pages / Jt.Page
+  - category: Develop / API reference / Navigation and pages / Jt.page
     url: /develop/api-reference/navigation/jt.page
     isVersioned: true
-  - category: Develop / API reference / Navigation and pages / Jt.page_link
+  - category: Develop / API reference / Navigation and pages / Jt.pageLink
     url: https://docs.jeamlit.io/develop/api-reference/widgets/jt.pagelink
     isVersioned: true
   - category: Develop / API reference / Navigation and pages / Jt.switchPage
@@ -689,7 +693,7 @@ site_menu:
     url: /develop/api-reference/execution-flow/jt.form
     isVersioned: true
   - category: Develop / API reference / Execution flow / Jt.formSubmitButton
-    url: /develop/api-reference/execution-flow/jt.form_submit_button
+    url: /develop/api-reference/execution-flow/jt.formsubmitbutton
     isVersioned: true
   - category: Develop / API reference / Execution flow / st.fragment
     url: /develop/api-reference/execution-flow/st.fragment
@@ -745,11 +749,9 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Caching and state / st.query_params
-    url: /develop/api-reference/caching-and-state/st.query_params
+  - category: Develop / API reference / Caching and state / Jt.urlQueryParameters
+    url: /develop/api-reference/caching-and-state/jt.urlqueryparameters
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Caching and state / st.experimental_get_query_params
     url: /develop/api-reference/caching-and-state/st.experimental_get_query_params
     isVersioned: true
@@ -895,64 +897,124 @@ site_menu:
 
   - category: Develop / Tutorials
     url: /develop/tutorials
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Authentication and personalization
     url: /develop/tutorials/authentication
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Authentication and personalization / Google Auth Platform
     url: /develop/tutorials/authentication/google
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Authentication and personalization / Microsoft Entra
     url: /develop/tutorials/authentication/microsoft
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Chat and LLM apps
     url: /develop/tutorials/chat-and-llm-apps
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Chat and LLM apps / Build a basic LLM chat app
     url: /develop/tutorials/chat-and-llm-apps/build-conversational-apps
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Chat and LLM apps / Build an LLM app using LangChain
     url: /develop/tutorials/chat-and-llm-apps/llm-quickstart
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Chat and LLM apps / Get chat response feedback
     url: /develop/tutorials/chat-and-llm-apps/chat-response-feedback
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Chat and LLM apps / Validate and edit chat responses
     url: /develop/tutorials/chat-and-llm-apps/validate-and-edit-chat-responses
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Configuration and theming
     url: /develop/tutorials/configuration-and-theming
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Configuration and theming / Use external font files
     url: /develop/tutorials/configuration-and-theming/external-fonts
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Configuration and theming / Use static font files
     url: /develop/tutorials/configuration-and-theming/static-fonts
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Configuration and theming / Use variable font files
     url: /develop/tutorials/configuration-and-theming/variable-fonts
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources
     url: /develop/tutorials/databases
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / AWS S3
     url: /develop/tutorials/databases/aws-s3
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / BigQuery
     url: /develop/tutorials/databases/bigquery
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Firestore
     url: https://blog.streamlit.io/streamlit-firestore/
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Google Cloud Storage
     url: /develop/tutorials/databases/gcs
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Microsoft SQL Server
     url: /develop/tutorials/databases/mssql
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / MongoDB
     url: /develop/tutorials/databases/mongodb
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / MySQL
     url: /develop/tutorials/databases/mysql
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Neon
     url: /develop/tutorials/databases/neon
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / PostgreSQL
     url: /develop/tutorials/databases/postgresql
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Private Google Sheet
     url: /develop/tutorials/databases/private-gsheet
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Public Google Sheet
     url: /develop/tutorials/databases/public-gsheet
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Snowflake
     url: /develop/tutorials/databases/snowflake
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Supabase
     url: /develop/tutorials/databases/supabase
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / Tableau
     url: /develop/tutorials/databases/tableau
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / TiDB
     url: /develop/tutorials/databases/tidb
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Connect to data sources / TigerGraph
     url: /develop/tutorials/databases/tigergraph
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Elements
     url: /develop/tutorials/elements
   - category: Develop / Tutorials / Elements / CHARTS
@@ -966,13 +1028,23 @@ site_menu:
     visible: false
   - category: Develop / Tutorials / Execution flow
     url: /develop/tutorials/execution-flow
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Execution flow / FRAGMENTS
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Execution flow / Rerun your app from a fragment
     url: /develop/tutorials/execution-flow/trigger-a-full-script-rerun-from-a-fragment
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Execution flow / Create a multiple-container fragment
     url: /develop/tutorials/execution-flow/create-a-multiple-container-fragment
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Execution flow / Start and stop a streaming fragment
     url: /develop/tutorials/execution-flow/start-and-stop-fragment-auto-reruns
+    visible: false
+    ignore: true
   - category: Develop / Tutorials / Multipage apps
     url: /develop/tutorials/multipage
   - category: Develop / Tutorials / Multipage apps / Dynamic navigation
@@ -986,24 +1058,18 @@ site_menu:
     url: /develop/quick-reference/cheat-sheet
   - category: Develop / Quick reference / Release notes
     url: /develop/quick-reference/release-notes
+    visible: false
+    ignore: true
   - category: Develop / Quick reference / Release notes / 2025
     url: /develop/quick-reference/release-notes/2025
-  - category: Develop / Quick reference / Release notes / 2024
-    url: /develop/quick-reference/release-notes/2024
-  - category: Develop / Quick reference / Release notes / 2023
-    url: /develop/quick-reference/release-notes/2023
-  - category: Develop / Quick reference / Release notes / 2022
-    url: /develop/quick-reference/release-notes/2022
-  - category: Develop / Quick reference / Release notes / 2021
-    url: /develop/quick-reference/release-notes/2021
-  - category: Develop / Quick reference / Release notes / 2020
-    url: /develop/quick-reference/release-notes/2020
-  - category: Develop / Quick reference / Release notes / 2019
-    url: /develop/quick-reference/release-notes/2019
+    visible: false
+    ignore: true
   - category: Develop / Quick reference / Pre-release features
     url: /develop/quick-reference/prerelease
+    visible: false
+    ignore: true
   - category: Develop / Quick reference/ Roadmap
-    url: https://roadmap.streamlit.app
+    url: https://github.com/jeamlit/jeamlit/discussions/39
 
   - category: Deploy
     url: /deploy

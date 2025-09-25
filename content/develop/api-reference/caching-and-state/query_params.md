@@ -1,13 +1,11 @@
 ---
-title: st.query_params
-slug: /develop/api-reference/caching-and-state/st.query_params
+title: Jt.urlQueryParameters
+slug: /develop/api-reference/caching-and-state/jt.urlqueryparameters
 description:
-  st.query_params reads and manipulates query parameters in the browser's
-  URL bar.
-ignore: true
+  Jt.urlQueryParameters returns query parameters in the browser's URL bar.
 ---
 
-## st.query_params
+## Jt.urlQueryParameters
 
 `st.query_params` provides a dictionary-like interface to access query parameters in your app's URL and is available as of Streamlit 1.30.0. It behaves similarly to `st.session_state` with the notable exception that keys may be repeated in an app's URL. Handling of repeated keys requires special consideration as explained below.
 
@@ -52,10 +50,14 @@ When a key is repeated in your app's URL (`?a=1&a=2&a=3`), dict-like methods wil
 
 `st.query_params` can't get or set embedding settings as described in [Embed your app](/deploy/streamlit-community-cloud/share-your-app/embed-your-app#embed-options). `st.query_params.embed` and `st.query_params.embed_options` will raise an `AttributeError` or `StreamlitAPIException` when trying to get or set their values, respectively.
 
-<Autofunction function="streamlit.query_params.clear" />
+<Autofunction function="Jt.urlQueryParameters" />
+
+{/*
 
 <Autofunction function="streamlit.query_params.from_dict" />
 
 <Autofunction function="streamlit.query_params.get_all" />
 
 <Autofunction function="streamlit.query_params.to_dict" />
+
+*/}

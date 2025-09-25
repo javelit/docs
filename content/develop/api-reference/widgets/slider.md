@@ -4,7 +4,7 @@ slug: /develop/api-reference/widgets/jt.slider
 description: Jt.slider displays a slider widget.
 ---
 
-<Autofunction function="streamlit.slider" />
+<Autofunction function="Jt.slider" />
 
 ### Featured videos
 

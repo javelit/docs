@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to TigerGraph
 slug: /develop/tutorials/databases/tigergraph
+ignore: true
 ---
 
 # Connect Streamlit to TigerGraph

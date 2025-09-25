@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Neon
 slug: /develop/tutorials/databases/neon
+ignore: true
 ---
 
 # Connect Streamlit to Neon

@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to TiDB
 slug: /develop/tutorials/databases/tidb
+ignore: true
 ---
 
 # Connect Streamlit to TiDB

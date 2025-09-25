@@ -4,4 +4,4 @@ slug: /develop/api-reference/widgets/jt.numberinput
 description: Jt.numberInput displays a numeric input widget.
 ---
 
-<Autofunction function="streamlit.number_input" />
+<Autofunction function="Jt.numberInput" />

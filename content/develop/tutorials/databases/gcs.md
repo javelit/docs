@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Google Cloud Storage
 slug: /develop/tutorials/databases/gcs
+ignore: true
 ---
 
 # Connect Streamlit to Google Cloud Storage

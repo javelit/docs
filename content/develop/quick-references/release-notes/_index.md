@@ -3,21 +3,21 @@ title: Release notes
 slug: /develop/quick-reference/release-notes
 description: A changelog of highlights and fixes for each version of Streamlit.
 keywords: changelog, release notes, version history
+ignore: true
 ---
 
 # Release notes
 
-This page lists highlights, bug fixes, and known issues for the latest release of Streamlit. If you're looking for information about nightly releases or experimental features, see [Pre-release features](/develop/quick-reference/prerelease).
+This page lists highlights, bug fixes, and known issues for the latest release of Jeamlit. 
+{/*
+If you're looking for information about nightly releases or experimental features, see [Pre-release features](/develop/quick-reference/prerelease).
+*/}
 
-## Upgrade Streamlit
+## Upgrade Jeamlit
 
 <Tip>
 
-To upgrade to the latest version of Streamlit, run:
-
-```bash
-pip install --upgrade streamlit
-```
+Find the latest version of Jeamlit in the [maven central repository](https://central.sonatype.com/artifact/io.jeamlit/jeamlit).
 
 </Tip>
 
@@ -77,9 +77,3 @@ _Release date: August 26, 2025_
 ## Older versions of Streamlit
 
 - [2025 release notes](/develop/quick-reference/release-notes/2025)
-- [2024 release notes](/develop/quick-reference/release-notes/2024)
-- [2023 release notes](/develop/quick-reference/release-notes/2023)
-- [2022 release notes](/develop/quick-reference/release-notes/2022)
-- [2021 release notes](/develop/quick-reference/release-notes/2021)
-- [2020 release notes](/develop/quick-reference/release-notes/2020)
-- [2019 release notes](/develop/quick-reference/release-notes/2019)

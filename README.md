@@ -291,10 +291,12 @@ The .md files in the [content](content) folder are actually mdx files.
 To comment, (ie not render a block) in a md file, use:
 ```markdown
 {/*
+
 will not appear
 */}
 will appear
 ```
+Make sure to put a blank line after the comment-opening string.
 
 ## Publishing
 

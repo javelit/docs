@@ -1,6 +1,7 @@
 ---
 title: Pre-release features
 slug: /develop/quick-reference/prerelease
+ignore: true
 ---
 
 # Pre-release features

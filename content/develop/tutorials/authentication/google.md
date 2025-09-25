@@ -2,6 +2,7 @@
 title: Use the Google Auth Platform to authenticate users
 slug: /develop/tutorials/authentication/google
 description: Learn how to authenticate users with Google's OpenID Connect (OIDC) service
+ignore: true
 ---
 
 # Use the Google Auth Platform to authenticate users

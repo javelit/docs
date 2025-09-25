@@ -4,4 +4,4 @@ slug: /develop/api-reference/widgets/jt.toggle
 description: Jt.toggle displays a toggle widget.
 ---
 
-<Autofunction function="streamlit.toggle" />
+<Autofunction function="Jt.toggle" />

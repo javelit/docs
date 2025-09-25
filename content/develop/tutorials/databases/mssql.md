@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Microsoft SQL Server
 slug: /develop/tutorials/databases/mssql
+ignore: true
 ---
 
 # Connect Streamlit to Microsoft SQL Server

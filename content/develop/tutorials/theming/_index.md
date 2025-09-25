@@ -1,6 +1,7 @@
 ---
 title: Customize your theme and configure your app
 slug: /develop/tutorials/configuration-and-theming
+ignore: true
 ---
 
 # Customize your theme and configure your app

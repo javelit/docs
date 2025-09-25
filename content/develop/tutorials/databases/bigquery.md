@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Google BigQuery
 slug: /develop/tutorials/databases/bigquery
+ignore: true
 ---
 
 # Connect Streamlit to Google BigQuery

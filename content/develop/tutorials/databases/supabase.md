@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Supabase
 slug: /develop/tutorials/databases/supabase
+ignore: true
 ---
 
 # Connect Streamlit to Supabase

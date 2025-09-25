@@ -314,13 +314,20 @@ const Autofunction = ({
   let propertiesRows = [];
   let docstringProperties = []; // Used to avoid duplicates with @property
 
-  // Process parameters from all overloads - create signature-parameter pairs
+  // Process parameters from all overloads - create one row per signature
   if (overloads) {
     overloads.forEach((overload, overloadIndex) => {
       if (!overload.args) return;
 
+      const row = {};
+
+      // Column 1: Method signature
+      row["title"] = `<p class='code'>${overload.signature}</p>`;
+
+      // Column 2: Combine all parameters with line breaks
+      const parameterDescriptions = [];
+
       for (const index in overload.args) {
-        const row = {};
         const param = overload.args[index];
         docstringProperties.push(param.name);
         const isDeprecated =
@@ -338,17 +345,11 @@ const Autofunction = ({
           ? param.description
           : `<p>No description</p> `;
 
-        // Column 1: Method signature (only for first parameter of each overload)
-        if (index === "0") {
-          row["title"] = `<p class='code'>${overload.signature}</p>`;
-        } else {
-          row["title"] = ""; // Empty for subsequent parameters
-        }
-
-        // Column 2: Parameter details
+        // Build parameter description
+        let parameterDescription;
         if (param.is_optional) {
-          row["body"] = `
-          <p class="
+          parameterDescription = `
+          <p style="margin-bottom: 0;" class="
             ${isDeprecated ? "deprecated" : ""}
             ${param.is_kwarg_only ? styles.Keyword : ""}
           ">
@@ -356,11 +357,10 @@ const Autofunction = ({
             <span class='italic code'>(${param.type_name})</span>
           </p>
           ${deprecatedMarkup}
-          ${description}
-        `;
+          ${description}`;
         } else {
-          row["body"] = `
-          <p class="
+          parameterDescription = `
+          <p style="margin-bottom: 0;" class="
             ${isDeprecated ? "deprecated" : ""}
             ${param.is_kwarg_only ? styles.Keyword : ""}
           ">
@@ -368,18 +368,22 @@ const Autofunction = ({
             <span class='italic code'>(${param.type_name})</span>
           </p>
           ${deprecatedMarkup}
-          ${description}
-        `;
+          ${description}`;
         }
 
-        // When "Parameters" are included in a class docstring, they are actually
-        // "Properties." Using "Properties" in the docstring does not result in
-        // individually parsed properties; using "Parameters" is a workaround.
-        if (isClass) {
-          propertiesRows.push(row);
-        } else {
-          args.push(row);
-        }
+        parameterDescriptions.push(parameterDescription);
+      }
+
+      // Join all parameters with line breaks
+      row["body"] = parameterDescriptions.join("<br/>");
+
+      // When "Parameters" are included in a class docstring, they are actually
+      // "Properties." Using "Properties" in the docstring does not result in
+      // individually parsed properties; using "Parameters" is a workaround.
+      if (isClass) {
+        propertiesRows.push(row);
+      } else {
+        args.push(row);
       }
     });
   }

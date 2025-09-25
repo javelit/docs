@@ -2,6 +2,7 @@
 title: Use static font files to customize your font
 slug: /develop/tutorials/configuration-and-theming/static-fonts
 description: Learn how to load an alternative font and use it in your app.
+ignore: true
 ---
 
 # Use static font files to customize your font

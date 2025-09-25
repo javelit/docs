@@ -2,6 +2,7 @@
 title: Use externally hosted fonts and fallbacks to customize your font
 slug: /develop/tutorials/configuration-and-theming/external-fonts
 description: Learn how to load an alternative font and use it in your app.
+ignore: true
 ---
 
 # Use externally hosted fonts and fallbacks to customize your font

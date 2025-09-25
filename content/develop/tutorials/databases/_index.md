@@ -1,6 +1,7 @@
 ---
 title: Connect to data sources
 slug: /develop/tutorials/databases
+ignore: true
 ---
 
 # Connect Streamlit to data sources

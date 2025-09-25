@@ -2,6 +2,7 @@
 title: Use Microsoft Entra to authenticate users
 slug: /develop/tutorials/authentication/microsoft
 description: Learn how to authenticate users with Microsoft Entra
+ignore: true
 ---
 
 # Use Microsoft Entra to authenticate users

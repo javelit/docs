@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to MySQL
 slug: /develop/tutorials/databases/mysql
+ignore: true
 ---
 
 # Connect Streamlit to MySQL

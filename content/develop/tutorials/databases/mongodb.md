@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to MongoDB
 slug: /develop/tutorials/databases/mongodb
+ignore: true
 ---
 
 # Connect Streamlit to MongoDB

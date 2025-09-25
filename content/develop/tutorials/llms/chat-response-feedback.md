@@ -1,6 +1,7 @@
 ---
 title: Collect user feedback about LLM responses
 slug: /develop/tutorials/chat-and-llm-apps/chat-response-feedback
+ignore: true
 ---
 
 # Collect user feedback about LLM responses

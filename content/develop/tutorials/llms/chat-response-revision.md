@@ -1,6 +1,7 @@
 ---
 title: Validate and edit chat responses
 slug: /develop/tutorials/chat-and-llm-apps/validate-and-edit-chat-responses
+ignore: true
 ---
 
 # Validate and edit chat responses

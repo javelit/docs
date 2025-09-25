@@ -1,6 +1,7 @@
 ---
 title: Authenticate users and personalize your app
 slug: /develop/tutorials/authentication
+ignore: true
 ---
 
 # Authenticate users and personalize your app

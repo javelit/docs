@@ -1,6 +1,7 @@
 ---
 title: Create a fragment across multiple containers
 slug: /develop/tutorials/execution-flow/create-a-multiple-container-fragment
+ignore: true
 ---
 
 # Create a fragment across multiple containers

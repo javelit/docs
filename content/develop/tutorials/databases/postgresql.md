@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to PostgreSQL
 slug: /develop/tutorials/databases/postgresql
+ignore: true
 ---
 
 # Connect Streamlit to PostgreSQL

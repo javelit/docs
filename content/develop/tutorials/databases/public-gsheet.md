@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to a public Google Sheet
 slug: /develop/tutorials/databases/public-gsheet
+ignore: true
 ---
 
 # Connect Streamlit to a public Google Sheet

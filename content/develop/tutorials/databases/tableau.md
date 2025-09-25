@@ -1,6 +1,7 @@
 ---
 title: Connect Streamlit to Tableau
 slug: /develop/tutorials/databases/tableau
+ignore: true
 ---
 
 # Connect Streamlit to Tableau

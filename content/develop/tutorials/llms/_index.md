@@ -1,6 +1,7 @@
 ---
 title: Build LLM apps
 slug: /develop/tutorials/chat-and-llm-apps
+ignore: true
 ---
 
 # Build LLM apps

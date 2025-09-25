@@ -4,4 +4,4 @@ slug: /develop/api-reference/widgets/jt.fileuploader
 description: Jt.fileUploader displays a file uploader widget.
 ---
 
-<Autofunction function="Jt.fileuploader" />
+<Autofunction function="Jt.fileUploader" />
