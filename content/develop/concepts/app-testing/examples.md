@@ -1,6 +1,7 @@
 ---
 title: App testing example
 slug: /develop/concepts/app-testing/examples
+ignore: true
 ---
 
 # App testing example

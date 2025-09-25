@@ -1,6 +1,7 @@
 ---
 title: Get started with app testing
 slug: /develop/concepts/app-testing/get-started
+ignore: true
 ---
 
 # Get started with app testing

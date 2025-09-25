@@ -124,14 +124,24 @@ site_menu:
     url: /develop/concepts/app-testing
   - category: Develop / Concepts / App testing / Get started
     url: /develop/concepts/app-testing/get-started
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App testing / Beyond the basics
     url: /develop/concepts/app-testing/beyond-the-basics
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App testing / Automate your tests
     url: /develop/concepts/app-testing/automate-tests
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App testing / Example
     url: /develop/concepts/app-testing/examples
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App testing / Cheat sheet
     url: /develop/concepts/app-testing/cheat-sheet
+    visible: false
+    ignore: true
 
   - category: Develop / API reference
     url: /develop/api-reference

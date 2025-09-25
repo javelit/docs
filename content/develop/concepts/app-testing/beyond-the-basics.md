@@ -1,6 +1,7 @@
 ---
 title: Beyond the basics of app testing
 slug: /develop/concepts/app-testing/beyond-the-basics
+ignore: true
 ---
 
 # Beyond the basics of app testing

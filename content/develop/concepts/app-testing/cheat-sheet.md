@@ -1,6 +1,7 @@
 ---
 title: App testing cheat sheet
 slug: /develop/concepts/app-testing/cheat-sheet
+ignore: true
 ---
 
 # App testing cheat sheet

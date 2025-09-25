@@ -1,6 +1,7 @@
 ---
 title: Automate your tests with CI
 slug: /develop/concepts/app-testing/automate-tests
+ignore: true
 ---
 
 # Automate your tests with CI
