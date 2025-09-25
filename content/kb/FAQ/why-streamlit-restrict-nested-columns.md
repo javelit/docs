@@ -1,6 +1,7 @@
 ---
 title: Why does Streamlit restrict nested st.columns?
 slug: /knowledge-base/using-streamlit/why-streamlit-restrict-nested-columns
+ignore: true
 ---
 
 # Why does Streamlit restrict nested `st.columns`?

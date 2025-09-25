@@ -1,6 +1,7 @@
 ---
 title: How do I upgrade to the latest version of Streamlit?
 slug: /knowledge-base/using-streamlit/how-upgrade-latest-version-streamlit
+ignore: true
 ---
 
 # How do I upgrade to the latest version of Streamlit?

@@ -1,6 +1,7 @@
 ---
 title: Argh. This app has gone over its resource limits
 slug: /knowledge-base/deploy/resource-limits
+ignore: true
 ---
 
 # Argh. This app has gone over its resource limits

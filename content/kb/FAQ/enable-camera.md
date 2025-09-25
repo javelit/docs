@@ -1,6 +1,7 @@
 ---
 title: Enabling camera or microphone access in your browser
 slug: /knowledge-base/using-streamlit/enable-camera
+ignore: true
 ---
 
 # Enabling camera or microphone access in your browser

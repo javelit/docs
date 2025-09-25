@@ -180,7 +180,9 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
           </a>
         </section>
         <div className={styles.Copyright}>
-          <span>&copy; {new Date().getFullYear()} Cyril de Catheu</span>
+          <span>
+            &copy; {new Date().getFullYear()} Jeamlit - Cyril de Catheu
+          </span>
           <button
             className="hover:opacity-80 ml-2"
             onClick={() => setIsTelemetryModalVisible(true)}

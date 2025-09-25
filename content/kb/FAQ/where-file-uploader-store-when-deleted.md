@@ -1,6 +1,7 @@
 ---
 title: Where does st.file_uploader store uploaded files and when do they get deleted?
 slug: /knowledge-base/using-streamlit/where-file-uploader-store-when-deleted
+ignore: true
 ---
 
 # Where does st.file_uploader store uploaded files and when do they get deleted?

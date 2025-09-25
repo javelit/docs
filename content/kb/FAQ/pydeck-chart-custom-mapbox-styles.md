@@ -1,6 +1,7 @@
 ---
 title: How can I make st.pydeck_chart use custom Mapbox styles?
 slug: /knowledge-base/using-streamlit/pydeck-chart-custom-mapbox-styles
+ignore: true
 ---
 
 # How can I make st.pydeck_chart use custom Mapbox styles?

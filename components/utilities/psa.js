@@ -7,15 +7,15 @@ const Psa = () => {
       <article>
         <h3 className={styles.Title}>Still have questions?</h3>
         <p className={styles.Text}>
-          Our{" "}
+          Go to our{" "}
           <a
-            href="https://discuss.streamlit.io"
+            href="https://github.com/jeamlit/jeamlit/discussions"
             target="_blank"
             className={styles.Link}
           >
-            forums
+            discussions forum
           </a>{" "}
-          are full of helpful information and Jeamlit experts.
+          for helpful information and advice from Jeamlit experts.
         </p>
       </article>
     </section>

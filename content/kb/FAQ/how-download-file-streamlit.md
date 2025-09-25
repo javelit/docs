@@ -1,6 +1,7 @@
 ---
 title: How to download a file in Streamlit?
 slug: /knowledge-base/using-streamlit/how-download-file-streamlit
+ignore: true
 ---
 
 # How to download a file in Streamlit?

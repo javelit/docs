@@ -1,6 +1,7 @@
 ---
 title: Invoking a Python subprocess in a deployed Streamlit app
 slug: /knowledge-base/deploy/invoking-python-subprocess-deployed-streamlit-app
+ignore: true
 ---
 
 # Invoking a Python subprocess in a deployed Streamlit app

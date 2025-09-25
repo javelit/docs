@@ -1,6 +1,7 @@
 ---
 title: What is serializable session state?
 slug: /knowledge-base/using-streamlit/serializable-session-state
+ignore: true
 ---
 
 # What is serializable session state?

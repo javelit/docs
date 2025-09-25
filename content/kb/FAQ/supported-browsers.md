@@ -1,6 +1,7 @@
 ---
 title: What browsers does Streamlit support?
 slug: /knowledge-base/using-streamlit/supported-browsers
+ignore: true
 ---
 
 # What browsers does Streamlit support?

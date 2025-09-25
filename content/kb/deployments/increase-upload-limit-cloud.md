@@ -1,6 +1,8 @@
 ---
-title: How do I increase the upload limit of st.file_uploader on Streamlit Community Cloud?
+title: How do I increase the upload limit of st.file_uploader on Streamlit Community
+  Cloud?
 slug: /knowledge-base/deploy/increase-file-uploader-limit-streamlit-cloud
+ignore: true
 ---
 
 # How do I increase the upload limit of st.file_uploader on Streamlit Community Cloud?

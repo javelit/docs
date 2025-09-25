@@ -1170,51 +1170,67 @@ site_menu:
   - category: Knowledge base / FAQ / How do I create an anchor link?
     url: /knowledge-base/using-streamlit/create-anchor-link
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / Enabling camera access in your browser
     url: /knowledge-base/using-streamlit/enable-camera
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How to download a file in Streamlit?
     url: /knowledge-base/using-streamlit/how-download-file-streamlit
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How to download a Pandas DataFrame as a CSV?
     url: /knowledge-base/using-streamlit/how-download-pandas-dataframe-csv
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How do I upgrade to the latest version of Streamlit?
     url: /knowledge-base/using-streamlit/how-upgrade-latest-version-streamlit
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How to insert elements out of order?
     url: /knowledge-base/using-streamlit/insert-elements-out-of-order
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How can I make st.pydeck_chart use custom Mapbox styles?
     url: /knowledge-base/using-streamlit/pydeck-chart-custom-mapbox-styles
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How to remove "· Streamlit" from the app title?
     url: /knowledge-base/using-streamlit/remove-streamlit-app-title
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How do you retrieve the filename of a file uploaded with st.file_uploader?
     url: /knowledge-base/using-streamlit/retrieve-filename-uploaded
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / Sanity checks
     url: /knowledge-base/using-streamlit/sanity-checks
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / How can I make Streamlit watch for changes in other modules I'm importing in my app?
     url: /knowledge-base/using-streamlit/streamlit-watch-changes-other-modules-importing-app
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / What browsers does Streamlit support?
     url: /knowledge-base/using-streamlit/supported-browsers
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / Where does st.file_uploader store uploaded files and when do they get deleted?
     url: /knowledge-base/using-streamlit/where-file-uploader-store-when-deleted
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / Widget updating for every second input when using session state
     url: /knowledge-base/using-streamlit/widget-updating-session-state
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / Why does Streamlit restrict nested st.columns?
     url: /knowledge-base/using-streamlit/why-streamlit-restrict-nested-columns
     visible: false
+    ignore: true
   - category: Knowledge base / FAQ / What is serializable session state?
     url: /knowledge-base/using-streamlit/serializable-session-state
     visible: false
+    ignore: true
   - category: Knowledge base / Installing dependencies
     url: /knowledge-base/dependencies
   - category: Knowledge base / Installing dependencies / How to install a package not on PyPI or Conda but available on GitHub
@@ -1231,40 +1247,54 @@ site_menu:
     visible: false
   - category: Knowledge base / Deployment issues
     url: /knowledge-base/deploy
+    visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / How can I deploy multiple Streamlit apps on different subdomains?
     url: /knowledge-base/deploy/deploy-multiple-streamlit-apps-different-subdomains
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / How do I deploy Streamlit on a domain so it appears to run on a regular port (i.e. port 80)?
     url: /knowledge-base/deploy/deploy-streamlit-domain-port-80
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / Does Streamlit support the WSGI Protocol? (aka Can I deploy Streamlit with gunicorn?)
     url: /knowledge-base/deploy/does-streamlit-support-wsgi-protocol
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / How do I increase the upload limit of st.file_uploader on Streamlit Community Cloud?
     url: /knowledge-base/deploy/increase-file-uploader-limit-streamlit-cloud
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / Invoking a Python subprocess in a deployed Streamlit app
     url: /knowledge-base/deploy/invoking-python-subprocess-deployed-streamlit-app
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / App is not loading when running remotely
     url: /knowledge-base/deploy/remote-start
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / Argh. This app has gone over its resource limits
     url: /knowledge-base/deploy/resource-limits
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / How do I share apps with viewers outside my organization?
     url: /knowledge-base/deploy/share-apps-with-viewers-outside-organization
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / Upgrade the Streamlit version of your app on Streamlit Community Cloud
     url: /knowledge-base/deploy/upgrade-streamlit-version-on-streamlit-cloud
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / Huh. This is isn't supposed to happen message after trying to log in
     url: /knowledge-base/deploy/huh-this-isnt-supposed-to-happen-message-after-trying-to-log-in
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / Login attempt to Streamlit Community Cloud fails with error 403
     url: /knowledge-base/deploy/login-attempt-to-streamlit-community-cloud-fails-with-error-403
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues / How to submit a support case for Streamlit Community Cloud
     url: /knowledge-base/deploy/how-to-submit-a-support-case-for-streamlit-community-cloud
     visible: false
+    ignore: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: How can I deploy multiple Streamlit apps on different subdomains?
 slug: /knowledge-base/deploy/deploy-multiple-streamlit-apps-different-subdomains
+ignore: true
 ---
 
 # How can I deploy multiple Streamlit apps on different subdomains?

@@ -1,6 +1,7 @@
 ---
 title: How to insert elements out of order?
 slug: /knowledge-base/using-streamlit/insert-elements-out-of-order
+ignore: true
 ---
 
 # How to insert elements out of order?

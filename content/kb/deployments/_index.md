@@ -1,6 +1,7 @@
 ---
 title: Deployment Issues
 slug: /knowledge-base/deploy
+ignore: true
 ---
 
 # Deployment-related questions and errors

@@ -5,6 +5,14 @@ slug: /knowledge-base/using-streamlit
 
 # FAQ
 
+We will add frequently asked questions about using Jeamlit here. In the meantime, please [open an issue](https://github.com/jeamlit/jeamlit/issues) 
+or [open a discussion thread](https://github.com/jeamlit/jeamlit/discussions) in the Github project.   
+
+If you feel something important is missing that everyone needs to know, 
+please [open a doc issue](https://github.com/jeamlit/docs/issues) or [submit a doc pull request](https://github.com/jeamlit/docs/pulls) and we'll be happy to review it!
+
+{/*
+
 Here are some frequently asked questions about using Streamlit. If you feel something important is missing that everyone needs to know, please [open an issue](https://github.com/streamlit/docs/issues) or [submit a pull request](https://github.com/streamlit/docs/pulls) and we'll be happy to review it!
 
 - [Sanity checks](/knowledge-base/using-streamlit/sanity-checks)
@@ -23,3 +31,5 @@ Here are some frequently asked questions about using Streamlit. If you feel some
 - [How do I enable camera access?](/knowledge-base/using-streamlit/enable-camera)
 - [Why does Streamlit restrict nested `st.columns`?](/knowledge-base/using-streamlit/why-streamlit-restrict-nested-columns)
 - [What is serializable session state?](/knowledge-base/using-streamlit/serializable-session-state)
+
+*/}

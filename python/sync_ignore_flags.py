@@ -48,7 +48,7 @@ def read_menu_ignored_urls():
 
 def find_matching_content_files(ignored_urls):
     """Find content files with slugs matching the ignored URLs"""
-    api_ref_path = "/Users/cyril/projects/jeamlit-docs/content/develop"
+    api_ref_path = "/Users/cyril/projects/jeamlit-docs/content"
     md_files = glob.glob(os.path.join(api_ref_path, "**", "*.md"), recursive=True)
 
     matches = []

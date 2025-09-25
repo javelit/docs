@@ -1,6 +1,7 @@
 ---
-title: How to remove "· Streamlit" from the app title?
+title: "How to remove \"\xB7 Streamlit\" from the app title?"
 slug: /knowledge-base/using-streamlit/remove-streamlit-app-title
+ignore: true
 ---
 
 # How to remove "· Streamlit" from the app title?

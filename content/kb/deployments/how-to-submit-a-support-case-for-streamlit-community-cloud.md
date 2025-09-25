@@ -1,6 +1,7 @@
 ---
 title: How to submit a support case for Streamlit Community Cloud
 slug: /knowledge-base/deploy/how-to-submit-a-support-case-for-streamlit-community-cloud
+ignore: true
 ---
 
 # How to submit a support case for Streamlit Community Cloud

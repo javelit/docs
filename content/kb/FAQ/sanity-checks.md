@@ -1,6 +1,7 @@
 ---
 title: Sanity checks
 slug: /knowledge-base/using-streamlit/sanity-checks
+ignore: true
 ---
 
 # Sanity checks
