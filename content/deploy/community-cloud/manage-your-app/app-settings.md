@@ -1,6 +1,7 @@
 ---
 title: App settings
 slug: /deploy/streamlit-community-cloud/manage-your-app/app-settings
+ignore: true
 ---
 
 # App settings

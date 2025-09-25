@@ -1,6 +1,7 @@
 ---
 title: Update your email
 slug: /deploy/streamlit-community-cloud/manage-your-account/update-your-email
+ignore: true
 ---
 
 # Update your email

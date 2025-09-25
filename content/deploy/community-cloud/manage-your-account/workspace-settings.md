@@ -1,6 +1,7 @@
 ---
 title: Workspace settings
 slug: /deploy/streamlit-community-cloud/manage-your-account/workspace-settings
+ignore: true
 ---
 
 # Workspace settings

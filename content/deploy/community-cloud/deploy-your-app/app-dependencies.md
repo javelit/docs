@@ -1,6 +1,7 @@
 ---
 title: App dependencies for your Community Cloud app
 slug: /deploy/streamlit-community-cloud/deploy-your-app/app-dependencies
+ignore: true
 ---
 
 # App dependencies for your Community Cloud app

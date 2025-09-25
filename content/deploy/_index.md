@@ -14,6 +14,9 @@ Get all the information you need to deploy your app and share it with your users
         bold="Concepts."
         href="/deploy/concepts"
     >Understand the basics of app deployment.</InlineCallout>
+    
+    {/*
+
     <InlineCallout
         color="green-70"
         icon="cloud"
@@ -32,4 +35,6 @@ Get all the information you need to deploy your app and share it with your users
         bold="Other platforms."
         href="/deploy/tutorials"
     >Learn how to deploy your app on a variety of platforms with our convenient collection of tutorials.</InlineCallout>
+
+    */}
 </InlineCalloutContainer>

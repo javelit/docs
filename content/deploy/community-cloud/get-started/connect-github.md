@@ -1,6 +1,7 @@
 ---
 title: Connect your GitHub account
 slug: /deploy/streamlit-community-cloud/get-started/connect-your-github-account
+ignore: true
 ---
 
 # Connect your GitHub account

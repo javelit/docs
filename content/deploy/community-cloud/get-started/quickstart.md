@@ -1,6 +1,7 @@
 ---
 title: Quickstart
 slug: /deploy/streamlit-community-cloud/get-started/quickstart
+ignore: true
 ---
 
 # Quickstart

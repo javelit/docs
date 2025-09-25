@@ -1,6 +1,7 @@
 ---
 title: Manage your GitHub connection
 slug: /deploy/streamlit-community-cloud/manage-your-account/manage-your-github-connection
+ignore: true
 ---
 
 # Manage your GitHub connection

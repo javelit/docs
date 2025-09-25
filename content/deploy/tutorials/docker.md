@@ -1,6 +1,7 @@
 ---
 title: Deploy Streamlit using Docker
 slug: /deploy/tutorials/docker
+ignore: true
 ---
 
 # Deploy Streamlit using Docker

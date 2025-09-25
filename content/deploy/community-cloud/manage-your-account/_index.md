@@ -1,6 +1,7 @@
 ---
 title: Manage your account
 slug: /deploy/streamlit-community-cloud/manage-your-account
+ignore: true
 ---
 
 # Manage your account

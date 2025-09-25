@@ -1,6 +1,7 @@
 ---
 title: Managing secrets when deploying your app
 slug: /deploy/concepts/secrets
+ignore: true
 ---
 
 # Managing secrets when deploying your app

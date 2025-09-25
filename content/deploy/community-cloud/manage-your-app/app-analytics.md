@@ -1,6 +1,7 @@
 ---
 title: App analytics
 slug: /deploy/streamlit-community-cloud/manage-your-app/app-analytics
+ignore: true
 ---
 
 # App analytics

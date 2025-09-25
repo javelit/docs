@@ -5,13 +5,19 @@ slug: /deploy/concepts
 
 # Deployment concepts
 
+Learn the fundamental concepts of app deployment.
+
+{/*
+
 Learn the fundamental concepts of app deployment. There are three main processes involved in deploying apps.
 
 - Install Python, Streamlit, and other dependencies in your deployment environment.
 - Securely handle your secrets and private information.
 - Remote start your app (`streamlit run`).
 
-If you're using Streamlit Community Cloud, we'll do most of the work for you!
+If you're using Jeamlit Community Cloud, we'll do most of the work for you!
+
+*/}
 
 <InlineCalloutContainer>
     <InlineCallout
@@ -20,10 +26,14 @@ If you're using Streamlit Community Cloud, we'll do most of the work for you!
         bold="Dependencies."
         href="/deploy/concepts/dependencies"
     >Understand the basics of configuring your deployment environment.</InlineCallout>
+
+{/*
     <InlineCallout
         color="green-70"
         icon="password"
         bold="Secrets."
         href="/deploy/concepts/secrets"
     >Understand the basics of secret management.</InlineCallout>
+
+*/}
 </InlineCalloutContainer>

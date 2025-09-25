@@ -1,6 +1,7 @@
 ---
 title: Create your account
 slug: /deploy/streamlit-community-cloud/get-started/create-your-account
+ignore: true
 ---
 
 # Create your account

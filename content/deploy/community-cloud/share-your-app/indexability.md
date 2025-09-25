@@ -1,6 +1,7 @@
 ---
 title: SEO and search indexability
 slug: /deploy/streamlit-community-cloud/share-your-app/indexability
+ignore: true
 ---
 
 # SEO and search indexability

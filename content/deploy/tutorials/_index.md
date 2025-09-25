@@ -1,6 +1,7 @@
 ---
 title: Deployment tutorials
 slug: /deploy/tutorials
+ignore: true
 ---
 
 # Deployment tutorials

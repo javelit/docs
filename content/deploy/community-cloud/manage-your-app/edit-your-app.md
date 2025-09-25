@@ -1,6 +1,7 @@
 ---
 title: Edit your app
 slug: /deploy/streamlit-community-cloud/manage-your-app/edit-your-app
+ignore: true
 ---
 
 # Edit your app

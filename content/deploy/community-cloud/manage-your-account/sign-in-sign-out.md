@@ -1,6 +1,7 @@
 ---
 title: Sign in & sign out
 slug: /deploy/streamlit-community-cloud/manage-your-account/sign-in-sign-out
+ignore: true
 ---
 
 # Sign in & sign out

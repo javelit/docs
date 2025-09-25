@@ -1,6 +1,7 @@
 ---
 title: Delete your account
 slug: /deploy/streamlit-community-cloud/manage-your-account/delete-your-account
+ignore: true
 ---
 
 # Delete your account

@@ -14,6 +14,9 @@ The knowledge base is a self-serve library of tips, step-by-step tutorials, and 
     bold="FAQ"
     href="/knowledge-base/using-streamlit"
   >Here are some frequently asked questions about using Streamlit.</InlineCallout>
+
+{/*
+
   <InlineCallout
     color="acqua-100"
     icon="downloading"
@@ -26,4 +29,8 @@ The knowledge base is a self-serve library of tips, step-by-step tutorials, and 
     bold="Deployment issues."
     href="/knowledge-base/deploy"
   >Have questions about deploying Streamlit apps to the cloud? This section covers deployment-related issues.</InlineCallout>
+
+*/}
+
 </InlineCalloutContainer>
+  

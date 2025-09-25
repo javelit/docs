@@ -39,6 +39,8 @@ const Code = ({ code, children, language, img, lines }) => {
       importLanguage = "bash";
     } else if (importLanguage === "js") {
       importLanguage = "javascript";
+    } else if (importLanguage === "xml") {
+      importLanguage = "markup";
     }
 
     // After we have the values, let's import just the necessary languages

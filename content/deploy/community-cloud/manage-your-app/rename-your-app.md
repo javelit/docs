@@ -3,6 +3,7 @@ title: Rename or change your app's GitHub coordinates
 slug: /deploy/streamlit-community-cloud/manage-your-app/rename-your-app
 description: Prevent view-only access when changing your GitHub username or repository
 keywords: View-only access, Can't edit app, Can't delete app, Can't reboot app
+ignore: true
 ---
 
 # Rename or change your app's GitHub coordinates

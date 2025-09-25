@@ -1,6 +1,7 @@
 ---
 title: Secrets management for your Community Cloud app
 slug: /deploy/streamlit-community-cloud/deploy-your-app/secrets-management
+ignore: true
 ---
 
 # Secrets management for your Community Cloud app

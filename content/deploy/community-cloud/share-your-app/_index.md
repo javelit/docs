@@ -1,6 +1,7 @@
 ---
 title: Share your app
 slug: /deploy/streamlit-community-cloud/share-your-app
+ignore: true
 ---
 
 # Share your app

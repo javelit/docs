@@ -1,6 +1,7 @@
 ---
 title: Deploy your app on Community Cloud
 slug: /deploy/streamlit-community-cloud/deploy-your-app/deploy
+ignore: true
 ---
 
 # Deploy your app on Community Cloud

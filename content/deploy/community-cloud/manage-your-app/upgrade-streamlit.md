@@ -1,6 +1,7 @@
 ---
 title: Upgrade your app's Streamlit version on Streamlit Community Cloud
 slug: /deploy/streamlit-community-cloud/manage-your-app/upgrade-streamlit
+ignore: true
 ---
 
 # Upgrade your app's Streamlit version on Streamlit Community Cloud

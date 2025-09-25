@@ -1,6 +1,7 @@
 ---
 title: Favorite your app
 slug: /deploy/streamlit-community-cloud/manage-your-app/favorite-your-app
+ignore: true
 ---
 
 # Favorite your app

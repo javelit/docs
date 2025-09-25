@@ -1,6 +1,7 @@
 ---
 title: Deploy Streamlit using Kubernetes
 slug: /deploy/tutorials/kubernetes
+ignore: true
 ---
 
 # Deploy Streamlit using Kubernetes

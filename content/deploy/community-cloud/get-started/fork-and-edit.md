@@ -1,6 +1,7 @@
 ---
 title: Fork and edit a public app
 slug: /deploy/streamlit-community-cloud/get-started/fork-and-edit-a-public-app
+ignore: true
 ---
 
 # Fork and edit a public app

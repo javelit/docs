@@ -1,6 +1,7 @@
 ---
 title: Status and limitations
 slug: /deploy/streamlit-community-cloud/status
+ignore: true
 ---
 
 # Status and limitations of Community Cloud

@@ -1,6 +1,7 @@
 ---
 title: Deploy an app from a template
 slug: /deploy/streamlit-community-cloud/get-started/deploy-from-a-template
+ignore: true
 ---
 
 # Deploy an app from a template

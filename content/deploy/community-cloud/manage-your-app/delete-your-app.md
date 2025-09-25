@@ -1,6 +1,7 @@
 ---
 title: Delete your app
 slug: /deploy/streamlit-community-cloud/manage-your-app/delete-your-app
+ignore: true
 ---
 
 # Delete your app

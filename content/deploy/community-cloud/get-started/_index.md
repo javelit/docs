@@ -1,6 +1,7 @@
 ---
 title: Get started with Streamlit Community Cloud
 slug: /deploy/streamlit-community-cloud/get-started
+ignore: true
 ---
 
 # Get started with Streamlit Community Cloud

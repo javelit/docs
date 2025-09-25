@@ -1,6 +1,7 @@
 ---
 title: Streamlit Community Cloud
 slug: /deploy/streamlit-community-cloud
+ignore: true
 ---
 
 # Welcome to Streamlit Community Cloud

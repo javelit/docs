@@ -1,6 +1,7 @@
 ---
 title: Share previews
 slug: /deploy/streamlit-community-cloud/share-your-app/share-previews
+ignore: true
 ---
 
 # Share previews

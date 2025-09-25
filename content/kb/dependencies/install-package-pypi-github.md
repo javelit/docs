@@ -1,6 +1,7 @@
 ---
 title: How to install a package not on PyPI/Conda but available on GitHub
 slug: /knowledge-base/dependencies/install-package-not-pypi-conda-available-github
+ignore: true
 ---
 
 # How to install a package not on PyPI/Conda but available on GitHub

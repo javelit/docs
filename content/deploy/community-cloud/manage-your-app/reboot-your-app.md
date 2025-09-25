@@ -1,6 +1,7 @@
 ---
 title: Reboot your app
 slug: /deploy/streamlit-community-cloud/manage-your-app/reboot-your-app
+ignore: true
 ---
 
 # Reboot your app

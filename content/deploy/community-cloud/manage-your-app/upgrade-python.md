@@ -1,6 +1,7 @@
 ---
 title: Upgrade your app's Python version on Community Cloud
 slug: /deploy/streamlit-community-cloud/manage-your-app/upgrade-python
+ignore: true
 ---
 
 # Upgrade your app's Python version on Community Cloud

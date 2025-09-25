@@ -1,6 +1,7 @@
 ---
 title: Installing dependencies
 slug: /knowledge-base/dependencies
+ignore: true
 ---
 
 # Installing dependencies

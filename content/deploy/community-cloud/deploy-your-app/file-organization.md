@@ -1,6 +1,7 @@
 ---
 title: File organization for your Community Cloud app
 slug: /deploy/streamlit-community-cloud/deploy-your-app/file-organization
+ignore: true
 ---
 
 # File organization for your Community Cloud app

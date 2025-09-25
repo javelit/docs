@@ -1081,85 +1081,163 @@ site_menu:
     url: /deploy/concepts/dependencies
   - category: Deploy / Concepts / Secrets
     url: /deploy/concepts/secrets
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud
     url: /deploy/streamlit-community-cloud
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started
     url: /deploy/streamlit-community-cloud/get-started
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Quickstart
     url: /deploy/streamlit-community-cloud/get-started/quickstart
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Create your account
     url: /deploy/streamlit-community-cloud/get-started/create-your-account
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Connect your GitHub account
     url: /deploy/streamlit-community-cloud/get-started/connect-your-github-account
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Explore your workspace
     url: /deploy/streamlit-community-cloud/get-started/explore-your-workspace
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Deploy from a template
     url: /deploy/streamlit-community-cloud/get-started/deploy-from-a-template
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Fork and edit a public app
     url: /deploy/streamlit-community-cloud/get-started/fork-and-edit-a-public-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Get started / Trust and security
     url: /deploy/streamlit-community-cloud/get-started/trust-and-security
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Deploy your app
     url: /deploy/streamlit-community-cloud/deploy-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Deploy your app / File organization
     url: /deploy/streamlit-community-cloud/deploy-your-app/file-organization
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Deploy your app / App dependencies
     url: /deploy/streamlit-community-cloud/deploy-your-app/app-dependencies
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Deploy your app / Secrets management
     url: /deploy/streamlit-community-cloud/deploy-your-app/secrets-management
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Deploy your app / Deploy!
     url: /deploy/streamlit-community-cloud/deploy-your-app/deploy
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app
     url: /deploy/streamlit-community-cloud/manage-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / App analytics
     url: /deploy/streamlit-community-cloud/manage-your-app/app-analytics
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / App settings
     url: /deploy/streamlit-community-cloud/manage-your-app/app-settings
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Delete your app
     url: /deploy/streamlit-community-cloud/manage-your-app/delete-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Edit your app
     url: /deploy/streamlit-community-cloud/manage-your-app/edit-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Favorite your app
     url: /deploy/streamlit-community-cloud/manage-your-app/favorite-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Reboot your app
     url: /deploy/streamlit-community-cloud/manage-your-app/reboot-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Rename your app in GitHub
     url: /deploy/streamlit-community-cloud/manage-your-app/rename-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Upgrade Python
     url: /deploy/streamlit-community-cloud/manage-your-app/upgrade-python
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your app / Upgrade Streamlit
     url: /deploy/streamlit-community-cloud/manage-your-app/upgrade-streamlit
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Share your app
     url: /deploy/streamlit-community-cloud/share-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Share your app / Embed your app
     url: /deploy/streamlit-community-cloud/share-your-app/embed-your-app
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Share your app / Search indexability
     url: /deploy/streamlit-community-cloud/share-your-app/indexability
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Share your app / Share previews
     url: /deploy/streamlit-community-cloud/share-your-app/share-previews
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your account
     url: /deploy/streamlit-community-cloud/manage-your-account
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your account / Sign in and sign out
     url: /deploy/streamlit-community-cloud/manage-your-account/sign-in-sign-out
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your account / Workspace settings
     url: /deploy/streamlit-community-cloud/manage-your-account/workspace-settings
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your account / Manage your GitHub connection
     url: /deploy/streamlit-community-cloud/manage-your-account/manage-your-github-connection
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your account / Update your email
     url: /deploy/streamlit-community-cloud/manage-your-account/update-your-email
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Manage your account / Delete your account
     url: /deploy/streamlit-community-cloud/manage-your-account/delete-your-account
+    visible: false
+    ignore: true
   - category: Deploy / Streamlit Community Cloud / Status and limitations
     url: /deploy/streamlit-community-cloud/status
+    visible: false
+    ignore: true
   - category: Deploy / Snowflake
     url: /deploy/snowflake
     ignore: true
   - category: Deploy / Other platforms
     url: /deploy/tutorials
+    visible: false
+    ignore: true
   - category: Deploy / Other platforms / Docker
     url: /deploy/tutorials/docker
+    visible: false
+    ignore: true
   - category: Deploy / Other platforms / Kubernetes
     url: /deploy/tutorials/kubernetes
+    visible: false
+    ignore: true
 
   - category: Knowledge base
     url: /knowledge-base
@@ -1230,21 +1308,27 @@ site_menu:
   - category: Knowledge base / FAQ / What is serializable session state?
     url: /knowledge-base/using-streamlit/serializable-session-state
     visible: false
-    ignore: true
+    ignore: true  
   - category: Knowledge base / Installing dependencies
     url: /knowledge-base/dependencies
+    visible: false
+    ignore: true
   - category: Knowledge base / Installing dependencies / How to install a package not on PyPI or Conda but available on GitHub
     url: /knowledge-base/dependencies/install-package-not-pypi-conda-available-github
     visible: false
+    ignore: true
   - category: Knowledge base / Installing dependencies / ImportError libGL.so.1 cannot open shared object file No such file or directory
     url: /knowledge-base/dependencies/libgl
     visible: false
+    ignore: true
   - category: Knowledge base / Installing dependencies / ModuleNotFoundError No module named
     url: /knowledge-base/dependencies/module-not-found-error
     visible: false
+    ignore: true
   - category: Knowledge base / Installing dependencies / ERROR No matching distribution found for
     url: /knowledge-base/dependencies/no-matching-distribution
     visible: false
+    ignore: true
   - category: Knowledge base / Deployment issues
     url: /knowledge-base/deploy
     visible: false

@@ -36,7 +36,7 @@ JEAMLIT_VERSION="0.19.0"
 # download the fat jar
 wget -O jeamlit-all.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
 # run your app
-java -jar jeamlit-all.jar MyApp.java
+java -jar jeamlit-all.jar run MyApp.java
 ```
 
 

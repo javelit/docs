@@ -1,6 +1,7 @@
 ---
 title: Manage your app
 slug: /deploy/streamlit-community-cloud/manage-your-app
+ignore: true
 ---
 
 # Manage your app

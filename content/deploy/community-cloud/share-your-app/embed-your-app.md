@@ -1,6 +1,7 @@
 ---
 title: Embed your app
 slug: /deploy/streamlit-community-cloud/share-your-app/embed-your-app
+ignore: true
 ---
 
 # Embed your app

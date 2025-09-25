@@ -1,6 +1,7 @@
 ---
 title: Explore your workspace
 slug: /deploy/streamlit-community-cloud/get-started/explore-your-workspace
+ignore: true
 ---
 
 # Explore your workspace
