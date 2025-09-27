@@ -6,6 +6,8 @@ description: Jt.checkbox displays a checkbox widget.
 
 <Autofunction function="Jt.checkbox" />
 
+{/*
+
 ### Featured videos
 
 Check out our video on how to use one of Streamlit's core functions, the checkbox! ☑
@@ -15,3 +17,4 @@ Check out our video on how to use one of Streamlit's core functions, the checkbo
 In the video below, we'll take it a step further and learn how to combine a [button](/develop/api-reference/widgets/st.button), [checkbox](/develop/api-reference/widgets/st.checkbox) and [radio button](/develop/api-reference/widgets/st.radio)!
 
 <YouTube videoId="EnXJBsCIl_A" />
+*/}

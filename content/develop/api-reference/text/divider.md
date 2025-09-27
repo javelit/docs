@@ -6,6 +6,8 @@ description: Jt.divider displays a horizontal rule in your app.
 
 <Autofunction function="Jt.divider" />
 
+{/*
+
 Here's what it looks like in action when you have multiple elements in the app:
 
 ```python
@@ -23,3 +25,4 @@ st.divider()  # 👈 Another horizontal rule
 ```
 
 <Image src="/images/api/st.divider.png" clean />
+*/}

@@ -6,6 +6,8 @@ description: Jt.markdown displays string formatted as Markdown.
 
 <Autofunction function="Jt.markdown" />
 
+{/*
+
 ```python
 import streamlit as st
 
@@ -22,3 +24,4 @@ st.markdown(md)
 ```
 
 <Cloud name="doc-markdown1" height="500px" />
+*/}
