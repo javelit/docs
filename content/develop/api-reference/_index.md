@@ -5,7 +5,7 @@ slug: /develop/api-reference
 
 # API reference
 
-Streamlit makes it easy for you to visualize, mutate, and share data. The API
+Jeamlit makes it easy for you to visualize, mutate, and share data. The API
 reference is organized by activity type, like displaying data or optimizing
 performance. Each section includes methods associated with the activity type,
 including examples.
@@ -49,7 +49,7 @@ st.write_stream(my_llm_stream)
 
 <h4>Magic</h4>
 
-Any time Streamlit sees either a variable or literal value on its own line, it automatically writes that to your app using `st.write`
+Any time Jeamlit sees either a variable or literal value on its own line, it automatically writes that to your app using `st.write`
 
 ```python
 "Hello **world**!"
@@ -241,7 +241,7 @@ st.html("<p>Foo bar.</p>")
 
 <h4>Annotated text</h4>
 
-Display annotated text in Streamlit apps. Created by [@tvst](https://github.com/tvst).
+Display annotated text in Jeamlit apps. Created by [@tvst](https://github.com/tvst).
 
 ```python
 annotated_text("This ", ("is", "verb"), " some ", ("annotated", "adj"), ("text", "noun"), " for those of ", ("you", "pronoun"), " who ", ("like", "verb"), " this sort of ", ("thing", "noun"), ".")
@@ -269,7 +269,7 @@ st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke
 
 <h4>Tags</h4>
 
-Add tags to your Streamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
+Add tags to your Jeamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
 
 ```python
 st_tags(label='# Enter Keywords:', text='Press enter to add more', value=['Zero', 'One', 'Two'], suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'], maxtags = 4, key='1')
@@ -295,12 +295,12 @@ nlu.load("sentiment").predict("I love NLU! <3")
 
 <Image pure alt="screenshot" src="/images/api/components/extras-mentions.jpg" />
 
-<h4>Streamlit Extras</h4>
+<h4>Jeamlit Extras</h4>
 
-A library with useful Streamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```python
-mention(label="An awesome Streamlit App", icon="streamlit",  url="https://extras.streamlit.app",)
+mention(label="An awesome Jeamlit App", icon="streamlit",  url="https://extras.streamlit.app",)
 ```
 
 </ComponentCard>
@@ -394,9 +394,9 @@ st.json(my_dict)
 
 <Image pure alt="screenshot" src="/images/api/components/aggrid.jpg" />
 
-<h4>Streamlit Aggrid</h4>
+<h4>Jeamlit Aggrid</h4>
 
-Implementation of Ag-Grid component for Streamlit. Created by [@PablocFonseca](https://github.com/PablocFonseca).
+Implementation of Ag-Grid component for Jeamlit. Created by [@PablocFonseca](https://github.com/PablocFonseca).
 
 ```python
 df = pd.DataFrame({'col1': [1, 2, 3], 'col2': [4, 5, 6]})
@@ -411,9 +411,9 @@ new_df = grid_return['data']
 
 <Image pure alt="screenshot" src="/images/api/components/folium.jpg" />
 
-<h4>Streamlit Folium</h4>
+<h4>Jeamlit Folium</h4>
 
-Streamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
+Jeamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
 
 ```python
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
@@ -430,7 +430,7 @@ st_data = st_folium(m, width=725)
 
 <h4>Pandas Profiling</h4>
 
-Pandas profiling component for Streamlit. Created by [@okld](https://github.com/okld/).
+Pandas profiling component for Jeamlit. Created by [@okld](https://github.com/okld/).
 
 ```python
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
@@ -479,9 +479,9 @@ selected_points = plotly_events(fig)
 
 <Image pure alt="screenshot" src="/images/api/components/extras-metric-cards.jpg" />
 
-<h4>Streamlit Extras</h4>
+<h4>Jeamlit Extras</h4>
 
-A library with useful Streamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```python
 from streamlit_extras.metric_cards import style_metric_cards
@@ -654,7 +654,7 @@ st.graphviz_chart(my_graphviz_spec)
 
 <h4>Plost</h4>
 
-A deceptively simple plotting library for Streamlit. Created by [@tvst](https://github.com/tvst).
+A deceptively simple plotting library for Jeamlit. Created by [@tvst](https://github.com/tvst).
 
 ```python
 import plost
@@ -697,9 +697,9 @@ st_echarts(options=options)
 
 <Image pure alt="screenshot" src="/images/api/components/folium.jpg" />
 
-<h4>Streamlit Folium</h4>
+<h4>Jeamlit Folium</h4>
 
-Streamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
+Jeamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
 
 ```python
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
@@ -712,9 +712,9 @@ st_data = st_folium(m, width=725)
 
 <Image pure alt="screenshot" src="/images/api/components/spacy.jpg" />
 
-<h4>Spacy-Streamlit</h4>
+<h4>Spacy-Jeamlit</h4>
 
-spaCy building blocks and visualizers for Streamlit apps. Created by [@explosion](https://github.com/explosion).
+spaCy building blocks and visualizers for Jeamlit apps. Created by [@explosion](https://github.com/explosion).
 
 ```python
 models = ["en_core_web_sm", "en_core_web_md"]
@@ -727,9 +727,9 @@ spacy_streamlit.visualize(models, "Sundar Pichai is the CEO of Google.")
 
 <Image pure alt="screenshot" src="/images/api/components/agraph.jpg" />
 
-<h4>Streamlit Agraph</h4>
+<h4>Jeamlit Agraph</h4>
 
-A Streamlit Graph Vis, based on [react-grah-vis](https://github.com/crubier/react-graph-vis). Created by [@ChrisDelClea](https://github.com/ChrisDelClea).
+A Jeamlit Graph Vis, based on [react-grah-vis](https://github.com/crubier/react-graph-vis). Created by [@ChrisDelClea](https://github.com/ChrisDelClea).
 
 ```python
 from streamlit_agraph import agraph, Node, Edge, Config
@@ -742,9 +742,9 @@ agraph(nodes=nodes, edges=edges, config=config)
 
 <Image pure alt="screenshot" src="/images/api/components/lottie.jpg" />
 
-<h4>Streamlit Lottie</h4>
+<h4>Jeamlit Lottie</h4>
 
-Integrate [Lottie](https://lottiefiles.com/) animations inside your Streamlit app. Created by [@andfanilo](https://github.com/andfanilo).
+Integrate [Lottie](https://lottiefiles.com/) animations inside your Jeamlit app. Created by [@andfanilo](https://github.com/andfanilo).
 
 ```python
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
@@ -772,9 +772,9 @@ selected_points = plotly_events(fig)
 
 <Image pure alt="screenshot" src="/images/api/components/extras-chart-annotations.jpg" />
 
-<h4>Streamlit Extras</h4>
+<h4>Jeamlit Extras</h4>
 
-A library with useful Streamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```python
 chart += get_annotations_chart(annotations=[("Mar 01, 2008", "Pretty good day for GOOG"), ("Dec 01, 2007", "Something's going wrong for GOOG & AAPL"), ("Nov 01, 2008", "Market starts again thanks to..."), ("Dec 01, 2009", "Small crash for GOOG after..."),],)
@@ -1139,9 +1139,9 @@ image = st.camera_input("Take a picture")
 
 <Image pure alt="screenshot" src="/images/api/components/elements.jpg" />
 
-<h4>Streamlit Elements</h4>
+<h4>Jeamlit Elements</h4>
 
-Create a draggable and resizable dashboard in Streamlit. Created by [@okls](https://github.com/okls).
+Create a draggable and resizable dashboard in Jeamlit. Created by [@okls](https://github.com/okls).
 
 ```python
 from streamlit_elements import elements, mui, html
@@ -1158,7 +1158,7 @@ with elements("new_element"):
 
 <h4>Tags</h4>
 
-Add tags to your Streamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
+Add tags to your Jeamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
 
 ```python
 from streamlit_tags import st_tags
@@ -1192,7 +1192,7 @@ for _ in stqdm(range(50)):
 
 <h4>Timeline</h4>
 
-Display a Timeline in Streamlit apps using [TimelineJS](https://timeline.knightlab.com/). Created by [@innerdoc](https://github.com/innerdoc).
+Display a Timeline in Jeamlit apps using [TimelineJS](https://timeline.knightlab.com/). Created by [@innerdoc](https://github.com/innerdoc).
 
 ```python
 from streamlit_timeline import timeline
@@ -1224,9 +1224,9 @@ st.image(value)
 
 <Image pure alt="screenshot" src="/images/api/components/ace.jpg" />
 
-<h4>Streamlit Ace</h4>
+<h4>Jeamlit Ace</h4>
 
-Ace editor component for Streamlit. Created by [@okld](https://github.com/okld).
+Ace editor component for Jeamlit. Created by [@okld](https://github.com/okld).
 
 ```python
 from streamlit_ace import st_ace
@@ -1241,9 +1241,9 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/chat.jpg" />
 
-<h4>Streamlit Chat</h4>
+<h4>Jeamlit Chat</h4>
 
-Streamlit Component for a Chatbot UI. Created by [@AI-Yash](https://github.com/AI-Yash).
+Jeamlit Component for a Chatbot UI. Created by [@AI-Yash](https://github.com/AI-Yash).
 
 ```python
 from streamlit_chat import message
@@ -1258,7 +1258,7 @@ message("Hello bot!", is_user=True)  # align's the message to the right
 
 <Image pure alt="screenshot" src="/images/api/components/option-menu.jpg" />
 
-<h4>Streamlit Option Menu</h4>
+<h4>Jeamlit Option Menu</h4>
 
 Select a single item from a list of options in a menu. Created by [@victoryhb](https://github.com/victoryhb).
 
@@ -1275,9 +1275,9 @@ option_menu("Main Menu", ["Home", 'Settings'],
 
 <Image pure alt="screenshot" src="/images/api/components/extras-toggle.jpg" />
 
-<h4>Streamlit Extras</h4>
+<h4>Jeamlit Extras</h4>
 
-A library with useful Streamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```python
 from streamlit_extras.stoggle import stoggle
@@ -1377,9 +1377,9 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 
 <Image pure alt="screenshot" src="/images/api/components/webrtc.jpg" />
 
-<h4>Streamlit Webrtc</h4>
+<h4>Jeamlit Webrtc</h4>
 
-Handling and transmitting real-time video/audio streams with Streamlit. Created by [@whitphx](https://github.com/whitphx).
+Handling and transmitting real-time video/audio streams with Jeamlit. Created by [@whitphx](https://github.com/whitphx).
 
 ```python
 from streamlit_webrtc import webrtc_streamer
@@ -1425,9 +1425,9 @@ image_comparison(img1="image1.jpg", img2="image2.jpg",)
 
 <Image pure alt="screenshot" src="/images/api/components/cropper.jpg" />
 
-<h4>Streamlit Cropper</h4>
+<h4>Jeamlit Cropper</h4>
 
-A simple image cropper for Streamlit. Created by [@turner-anderson](https://github.com/turner-anderson).
+A simple image cropper for Jeamlit. Created by [@turner-anderson](https://github.com/turner-anderson).
 
 ```python
 from streamlit_cropper import st_cropper
@@ -1457,9 +1457,9 @@ streamlit_image_coordinates("https://placekitten.com/200/300")
 
 <Image pure alt="screenshot" src="/images/api/components/lottie.jpg" />
 
-<h4>Streamlit Lottie</h4>
+<h4>Jeamlit Lottie</h4>
 
-Integrate [Lottie](https://lottiefiles.com/) animations inside your Streamlit app. Created by [@andfanilo](https://github.com/andfanilo).
+Integrate [Lottie](https://lottiefiles.com/) animations inside your Jeamlit app. Created by [@andfanilo](https://github.com/andfanilo).
 
 ```python
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
@@ -1604,9 +1604,9 @@ tab2.write("this is tab 2")
 
 <Image pure alt="screenshot" src="/images/api/components/elements.jpg" />
 
-<h4>Streamlit Elements</h4>
+<h4>Jeamlit Elements</h4>
 
-Create a draggable and resizable dashboard in Streamlit. Created by [@okls](https://github.com/okls).
+Create a draggable and resizable dashboard in Jeamlit. Created by [@okls](https://github.com/okls).
 
 ```python
 from streamlit_elements import elements, mui, html
@@ -1623,7 +1623,7 @@ with elements("new_element"):
 
 <h4>Pydantic</h4>
 
-Auto-generate Streamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
+Auto-generate Jeamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
 
 ```python
 import streamlit_pydantic as sp
@@ -1638,9 +1638,9 @@ sp.pydantic_form(key="my_form",
 
 <Image pure alt="screenshot" src="/images/api/components/pages.jpg" />
 
-<h4>Streamlit Pages</h4>
+<h4>Jeamlit Pages</h4>
 
-An experimental version of Streamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
+An experimental version of Jeamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
 
 ```python
 from st_pages import Page, show_pages, add_page_title
@@ -1657,9 +1657,9 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 
 <br />
 
-Streamlit provides a few commands to help you build conversational apps. These chat elements are designed to be used in conjunction with each other, but you can also use them separately.
+Jeamlit provides a few commands to help you build conversational apps. These chat elements are designed to be used in conjunction with each other, but you can also use them separately.
 
-`st.chat_message` lets you insert a chat message container into the app so you can display messages from the user or the app. Chat containers can contain other Streamlit elements, including charts, tables, text, and more. `st.chat_input` lets you display a chat input widget so the user can type in a message.
+`st.chat_message` lets you insert a chat message container into the app so you can display messages from the user or the app. Chat containers can contain other Jeamlit elements, including charts, tables, text, and more. `st.chat_input` lets you display a chat input widget so the user can type in a message.
 
 <TileContainer>
 <RefCard href="/develop/api-reference/chat/st.chat_input">
@@ -1923,9 +1923,9 @@ custom_notification_box(icon='info', textDisplay='We are almost done with your r
 
 <Image pure alt="screenshot" src="/images/api/components/extras-emojis.jpg" />
 
-<h4>Streamlit Extras</h4>
+<h4>Jeamlit Extras</h4>
 
-A library with useful Streamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```python
 from streamlit_extras.let_it_rain import rain
@@ -2150,7 +2150,7 @@ st_autorefresh(interval=2000, limit=100,
 
 <h4>Pydantic</h4>
 
-Auto-generate Streamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
+Auto-generate Jeamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
 
 ```python
 import streamlit_pydantic as sp
@@ -2165,9 +2165,9 @@ sp.pydantic_form(key="my_form",
 
 <Image pure alt="screenshot" src="/images/api/components/pages.jpg" />
 
-<h4>Streamlit Pages</h4>
+<h4>Jeamlit Pages</h4>
 
-An experimental version of Streamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
+An experimental version of Jeamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
 
 ```python
 from st_pages import Page, show_pages, add_page_title
@@ -2365,7 +2365,7 @@ OpenAI_key = "<YOUR_SECRET_KEY>"
 
 <ComponentSlider>
 
-<ComponentCard href="https://github.com/mkhorasani/Streamlit-Authenticator">
+<ComponentCard href="https://github.com/mkhorasani/Jeamlit-Authenticator">
 
 <Image pure alt="screenshot" src="/images/api/components/authenticator.jpg" />
 
@@ -2403,9 +2403,9 @@ st.write('ret: ' + ret)
 
 <Image pure alt="screenshot" src="/images/api/components/auth0.jpg" />
 
-<h4>Streamlit Auth0</h4>
+<h4>Jeamlit Auth0</h4>
 
-The fastest way to provide comprehensive login inside Streamlit. Created by [@conradbez](https://github.com/conradbez).
+The fastest way to provide comprehensive login inside Jeamlit. Created by [@conradbez](https://github.com/conradbez).
 
 ```python
 from auth0_component import login_button
@@ -2541,7 +2541,7 @@ st.set_page_config(
 
 <h4>st.testing.v1.AppTest</h4>
 
-`st.testing.v1.AppTest` simulates a running Streamlit app for testing.
+`st.testing.v1.AppTest` simulates a running Jeamlit app for testing.
 
 ```python
 from streamlit.testing.v1 import AppTest
@@ -2660,7 +2660,7 @@ at.button[0].click().run()
 A representation of `st.chat_input`.
 
 ```python
-at.chat_input[0].set_value("What is Streamlit?").run()
+at.chat_input[0].set_value("What is Jeamlit?").run()
 ```
 
 </RefCard>
@@ -2781,7 +2781,7 @@ at.slider[0].set_range(2,5).run()
 A representation of `st.text_area`.
 
 ```python
-at.text_area[0].input("Streamlit is awesome!").run()
+at.text_area[0].input("Jeamlit is awesome!").run()
 ```
 
 </RefCard>
@@ -2793,7 +2793,7 @@ at.text_area[0].input("Streamlit is awesome!").run()
 A representation of `st.text_input`.
 
 ```python
-at.text_input[0].input("Streamlit").run()
+at.text_input[0].input("Jeamlit").run()
 ```
 
 </RefCard>
@@ -2832,7 +2832,7 @@ at.toggle[0].set_value("True").run()
 
 <h4>Pandas Profiling</h4>
 
-Pandas profiling component for Streamlit. Created by [@okld](https://github.com/okld/).
+Pandas profiling component for Jeamlit. Created by [@okld](https://github.com/okld/).
 
 ```python
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
@@ -2847,9 +2847,9 @@ st_profile_report(pr)
 
 <Image pure alt="screenshot" src="/images/api/components/ace.jpg" />
 
-<h4>Streamlit Ace</h4>
+<h4>Jeamlit Ace</h4>
 
-Ace editor component for Streamlit. Created by [@okld](https://github.com/okld).
+Ace editor component for Jeamlit. Created by [@okld](https://github.com/okld).
 
 ```python
 from streamlit_ace import st_ace
@@ -2864,7 +2864,7 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/analytics.jpg" />
 
-<h4>Streamlit Analytics</h4>
+<h4>Jeamlit Analytics</h4>
 
 Track & visualize user interactions with your streamlit app. Created by [@jrieke](https://github.com/jrieke).
 
