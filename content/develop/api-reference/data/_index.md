@@ -7,12 +7,27 @@ slug: /develop/api-reference/data
 
 When you're working with data, it is extremely valuable to visualize that
 data quickly, interactively, and from multiple different angles. That's what
-Streamlit is actually built and optimized for.
+Jeamlit is actually built and optimized for.
 
-You can display data via [charts](#display-charts), and you can display it in
-raw form. These are the Streamlit commands you can use to display and interact with raw data.
+You can display data via [charts](/develop/api-reference/charts), and you can display it in
+raw form. These are the Jeamlit commands you can use to display and interact with raw data.
 
 <TileContainer>
+
+<RefCard href="/develop/api-reference/data/jt.table">
+<Image pure alt="screenshot" src="/images/api/table.jpg" />
+
+<h4>Static tables</h4>
+
+Display a static table.
+
+```java
+Jt.table(my_data).use();
+```
+
+</RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/data/st.dataframe">
 <Image pure alt="screenshot" src="/images/api/dataframe.jpg" />
 
@@ -20,7 +35,7 @@ raw form. These are the Streamlit commands you can use to display and interact w
 
 Display a dataframe as an interactive table.
 
-```python
+```java
 st.dataframe(my_data_frame)
 ```
 
@@ -33,7 +48,7 @@ st.dataframe(my_data_frame)
 
 Display a data editor widget.
 
-```python
+```java
 edited = st.data_editor(df, num_rows="dynamic")
 ```
 
@@ -46,21 +61,8 @@ edited = st.data_editor(df, num_rows="dynamic")
 
 Configure the display and editing behavior of dataframes and data editors.
 
-```python
+```java
 st.column_config.NumberColumn("Price (in USD)", min_value=0, format="$%d")
-```
-
-</RefCard>
-
-<RefCard href="/develop/api-reference/data/st.table">
-<Image pure alt="screenshot" src="/images/api/table.jpg" />
-
-<h4>Static tables</h4>
-
-Display a static table.
-
-```python
-st.table(my_data_frame)
 ```
 
 </RefCard>
@@ -71,7 +73,7 @@ st.table(my_data_frame)
 
 Display a metric in big bold font, with an optional indicator of how the metric changed.
 
-```python
+```java
 st.metric("My metric", 42, 2)
 ```
 
@@ -83,13 +85,15 @@ st.metric("My metric", 42, 2)
 
 Display object or string as a pretty-printed JSON string.
 
-```python
+```java
 st.json(my_dict)
 ```
 
 </RefCard>
+*/}
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/PablocFonseca/streamlit-aggrid">
@@ -195,3 +199,4 @@ style_metric_cards()
 </ComponentCard>
 
 </ComponentSlider>
+*/}

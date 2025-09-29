@@ -7,7 +7,7 @@ slug: /develop/api-reference/navigation
 
 <TileContainer>
 
-<RefCard href="/develop/api-reference/navigation/st.navigation">
+<RefCard href="/develop/api-reference/navigation/jt.navigation">
 
 <Image pure alt="screenshot" src="/images/api/navigation.jpg" />
 
@@ -15,17 +15,18 @@ slug: /develop/api-reference/navigation
 
 Configure the available pages in a multipage app.
 
-```python
-st.navigation({
-    "Your account" : [log_out, settings],
-    "Reports" : [overview, usage],
-    "Tools" : [search]
-})
+```java
+Map<String, List<Object>> pages = Map.of(
+    "Your account", List.of(logOut, settings),
+    "Reports", List.of(overview, usage),
+    "Tools", List.of(search)
+);
+Jt.navigation(pages).use();
 ```
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/navigation/st.page">
+<RefCard href="/develop/api-reference/navigation/jt.page">
 
 <Image pure alt="screenshot" src="/images/api/page.jpg" />
 
@@ -33,17 +34,17 @@ st.navigation({
 
 Define a page in a multipage app.
 
-```python
-home = st.Page(
-    "home.py",
-    title="Home",
-    icon=":material/home:"
-)
+```java
+Object home = Jt.page(
+    "home.java",
+    "Home",
+    ":material/home:"
+);
 ```
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/widgets/st.page_link">
+<RefCard href="/develop/api-reference/widgets/jt.pagelink">
 
 <Image pure alt="screenshot" src="/images/api/page_link.jpg" />
 
@@ -51,21 +52,21 @@ home = st.Page(
 
 Display a link to another page in a multipage app.
 
-```python
-st.page_link("app.py", label="Home", icon="🏠")
-st.page_link("pages/profile.py", label="Profile")
+```java
+Jt.pageLink("App.java", "Home", "🏠").use();
+Jt.pageLink("pages/Profile.java", "My profile").use();
 ```
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/navigation/st.switch_page">
+<RefCard href="/develop/api-reference/navigation/jt.switchpage">
 
 <h4>Switch page</h4>
 
 Programmatically navigates to a specified page.
 
-```python
-st.switch_page("pages/my_page.py")
+```java
+Jt.switchPage("pages/MyPage.java");
 ```
 
 </RefCard>

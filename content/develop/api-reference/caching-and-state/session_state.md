@@ -4,6 +4,16 @@ slug: /develop/api-reference/caching-and-state/jt.sessionstate
 description: Jt.sessionState is a way to share variables between reruns, for each user session.
 ---
 
+<Tip>
+
+This page only contains information on the `Jt.sessionState` API. For a deeper dive into Session State and how to use it, check out [Session State](/develop/concepts/architecture/session-state).
+
+</Tip>
+
+<Autofunction function="Jt.sessionState" />
+
+
+{/*
 # Session State
 
 Session State is a way to share variables between reruns, for each user session. In addition to the ability to store and persist state, Streamlit also exposes the ability to manipulate state using Callbacks. Session state also persists across apps inside a [multipage app](/develop/concepts/multipage-apps).
@@ -222,3 +232,5 @@ When `runner.enforceSerializableSessionState` is set to `true`, Session State im
   ```
 
   ![state-button-exception](/images/state_button_exception.png)
+
+*/}

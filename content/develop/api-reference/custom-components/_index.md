@@ -7,6 +7,7 @@ slug: /develop/api-reference/custom-components
 
 <TileContainer>
 
+{/*
 <RefCard href="/develop/api-reference/custom-components/st.components.v1.declare_component">
 
 <h4>Declare a component</h4>
@@ -23,20 +24,21 @@ declare_component(
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/custom-components/st.components.v1.html">
+*/}
+
+<RefCard href="/develop/api-reference/text/jt.html">
 
 <h4>HTML</h4>
 
-Display an HTML string in an iframe.
+Render an HTML string in your app.
 
-```python
-from st.components.v1 import html
-html(
-    "<p>Foo bar.</p>"
-)
+```java
+Jt.html("<p>Foo bar.</p>").use();
 ```
 
 </RefCard>
+
+{/*
 
 <RefCard href="/develop/api-reference/custom-components/st.components.v1.iframe">
 
@@ -52,5 +54,6 @@ iframe(
 ```
 
 </RefCard>
+*/}
 
 </TileContainer>

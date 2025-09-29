@@ -5,8 +5,11 @@ slug: /develop/api-reference/media
 
 # Media elements
 
-It's easy to embed images, videos, and audio files directly into your Streamlit apps.
+It's easy to embed images, videos, and audio files directly into your Jeamlit apps.
 
+***Coming soon.***
+
+{/*
 <TileContainer>
 <RefCard href="/develop/api-reference/media/st.image">
 
@@ -83,7 +86,9 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 
 </RefCard>
 </TileContainer>
+*/}
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/whitphx/streamlit-webrtc">
@@ -183,3 +188,4 @@ st_lottie(lottie_hello, key="hello")
 </ComponentCard>
 
 </ComponentSlider>
+*/}

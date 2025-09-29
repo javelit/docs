@@ -5,12 +5,12 @@ slug: /develop/api-reference/widgets
 
 # Input widgets
 
-With widgets, Streamlit allows you to bake interactivity directly into your apps with buttons, sliders, text inputs, and more.
+With widgets, Jeamlit allows you to bake interactivity directly into your apps with buttons, sliders, text inputs, and more.
 
 ## Button elements
 
 <TileContainer>
-<RefCard href="/develop/api-reference/widgets/st.button">
+<RefCard href="/develop/api-reference/widgets/jt.button">
 
 <Image pure alt="screenshot" src="/images/api/button.svg" />
 
@@ -18,12 +18,13 @@ With widgets, Streamlit allows you to bake interactivity directly into your apps
 
 Display a button widget.
 
-```python
-clicked = st.button("Click me")
+```java
+boolean clicked = Jt.button("Click me").use();
 ```
 
 </RefCard>
 
+{/*
 <RefCard href="/develop/api-reference/widgets/st.download_button">
 
 <Image pure alt="screenshot" src="/images/api/download_button.svg" />
@@ -32,26 +33,28 @@ clicked = st.button("Click me")
 
 Display a download button widget.
 
-```python
+```java
 st.download_button("Download file", file)
 ```
 
 </RefCard>
+*/}
 
-<RefCard href="/develop/api-reference/execution-flow/st.form_submit_button">
+<RefCard href="https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.formsubmitbutton">
 
 <Image pure alt="screenshot" src="/images/api/form_submit_button.svg" />
 
 <h4>Form button</h4>
 
-Display a form submit button. For use with `st.form`.
+Display a form submit button. For use with `Jt.form`.
 
-```python
-st.form_submit_button("Sign up")
+```java
+boolean submitted = Jt.formSubmitButton("Sign up").use();
 ```
 
 </RefCard>
 
+{/*
 <RefCard href="/develop/api-reference/widgets/st.link_button">
 
 <Image pure alt="screenshot" src="/images/api/link_button.svg" />
@@ -60,13 +63,14 @@ st.form_submit_button("Sign up")
 
 Display a link button.
 
-```python
+```java
 st.link_button("Go to gallery", url)
 ```
 
 </RefCard>
+*/}
 
-<RefCard href="/develop/api-reference/widgets/st.page_link">
+<RefCard href="/develop/api-reference/widgets/jt.pagelink">
 
 <Image pure alt="screenshot" src="/images/api/page_link.jpg" />
 
@@ -74,9 +78,9 @@ st.link_button("Go to gallery", url)
 
 Display a link to another page in a multipage app.
 
-```python
-st.page_link("app.py", label="Home", icon="🏠")
-st.page_link("pages/profile.py", label="My profile")
+```java
+Jt.pageLink(HomePage.class).use();
+Jt.pageLink("https://example.com", "Go to site").use();
 ```
 
 </RefCard>
@@ -87,7 +91,7 @@ st.page_link("pages/profile.py", label="My profile")
 
 <TileContainer>
 
-<RefCard href="/develop/api-reference/widgets/st.checkbox">
+<RefCard href="/develop/api-reference/widgets/jt.checkbox">
 
 <Image pure alt="screenshot" src="/images/api/checkbox.jpg" />
 
@@ -95,11 +99,13 @@ st.page_link("pages/profile.py", label="My profile")
 
 Display a checkbox widget.
 
-```python
-selected = st.checkbox("I agree")
+```java
+boolean selected = Jt.checkbox("I agree").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.color_picker">
 
 <Image pure alt="screenshot" src="/images/api/color_picker.jpg" />
@@ -108,7 +114,7 @@ selected = st.checkbox("I agree")
 
 Display a color picker widget.
 
-```python
+```java
 color = st.color_picker("Pick a color")
 ```
 
@@ -121,7 +127,7 @@ color = st.color_picker("Pick a color")
 
 Display a rating or sentiment button group.
 
-```python
+```java
 st.feedback("stars")
 ```
 
@@ -134,7 +140,7 @@ st.feedback("stars")
 
 Display a multiselect widget. The multiselect widget starts as empty.
 
-```python
+```java
 choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
 ```
 
@@ -147,12 +153,14 @@ choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
 
 Display a pill-button selection widget.
 
-```python
+```java
 st.pills("Tags", ["Sports", "AI", "Politics"])
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.radio">
+*/}
+
+<RefCard href="/develop/api-reference/widgets/jt.radio">
 
 <Image pure alt="screenshot" src="/images/api/radio.jpg" />
 
@@ -160,11 +168,13 @@ st.pills("Tags", ["Sports", "AI", "Politics"])
 
 Display a radio button widget.
 
-```python
-choice = st.radio("Pick one", ["cats", "dogs"])
+```java
+String choice = Jt.radio("Pick one", List.of("cats", "dogs")).use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.segmented_control">
 
 <Image pure alt="screenshot" src="/images/api/segmented_control.jpg" />
@@ -173,7 +183,7 @@ choice = st.radio("Pick one", ["cats", "dogs"])
 
 Display a segmented-button selection widget.
 
-```python
+```java
 st.segmented_control("Filter", ["Open", "Closed", "All"])
 ```
 
@@ -186,7 +196,7 @@ st.segmented_control("Filter", ["Open", "Closed", "All"])
 
 Display a slider widget to select items from a list.
 
-```python
+```java
 size = st.select_slider("Pick a size", ["S", "M", "L"])
 ```
 
@@ -199,12 +209,14 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 
 Display a select widget.
 
-```python
+```java
 choice = st.selectbox("Pick one", ["cats", "dogs"])
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.toggle">
+*/}
+
+<RefCard href="/develop/api-reference/widgets/jt.toggle">
 
 <Image pure alt="screenshot" src="/images/api/toggle.jpg" />
 
@@ -212,8 +224,8 @@ choice = st.selectbox("Pick one", ["cats", "dogs"])
 
 Display a toggle widget.
 
-```python
-activated = st.toggle("Activate")
+```java
+boolean activated = Jt.toggle("Activate").use();
 ```
 
 </RefCard>
@@ -223,7 +235,7 @@ activated = st.toggle("Activate")
 ## Numeric input elements
 
 <TileContainer>
-<RefCard href="/develop/api-reference/widgets/st.number_input">
+<RefCard href="/develop/api-reference/widgets/jt.numberinput">
 
 <Image pure alt="screenshot" src="/images/api/number_input.jpg" />
 
@@ -231,12 +243,12 @@ activated = st.toggle("Activate")
 
 Display a numeric input widget.
 
-```python
-choice = st.number_input("Pick a number", 0, 10)
+```java
+Number choice = Jt.numberInput("Pick a number").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.slider">
+<RefCard href="/develop/api-reference/widgets/jt.slider">
 
 <Image pure alt="screenshot" src="/images/api/slider.jpg" />
 
@@ -244,8 +256,8 @@ choice = st.number_input("Pick a number", 0, 10)
 
 Display a slider widget.
 
-```python
-number = st.slider("Pick a number", 0, 100)
+```java
+int number = Jt.slider("Pick a number").use();
 ```
 
 </RefCard>
@@ -256,7 +268,7 @@ number = st.slider("Pick a number", 0, 100)
 
 <TileContainer>
 
-<RefCard href="/develop/api-reference/widgets/st.date_input">
+<RefCard href="/develop/api-reference/widgets/jt.dateinput">
 
 <Image pure alt="screenshot" src="/images/api/date_input.jpg" />
 
@@ -264,11 +276,13 @@ number = st.slider("Pick a number", 0, 100)
 
 Display a date input widget.
 
-```python
-date = st.date_input("Your birthday")
+```java
+LocalDate date = Jt.dateInput("Your birthday").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.time_input">
 
 <Image pure alt="screenshot" src="/images/api/time_input.jpg" />
@@ -277,11 +291,12 @@ date = st.date_input("Your birthday")
 
 Display a time input widget.
 
-```python
+```java
 time = st.time_input("Meeting time")
 ```
 
 </RefCard>
+*/}
 
 </TileContainer>
 
@@ -289,7 +304,7 @@ time = st.time_input("Meeting time")
 
 <TileContainer>
 
-<RefCard href="/develop/api-reference/widgets/st.text_input">
+<RefCard href="/develop/api-reference/widgets/jt.textinput">
 
 <Image pure alt="screenshot" src="/images/api/text_input.jpg" />
 
@@ -297,12 +312,12 @@ time = st.time_input("Meeting time")
 
 Display a single-line text input widget.
 
-```python
-name = st.text_input("First name")
+```java
+String name = Jt.textInput("First name").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.text_area">
+<RefCard href="/develop/api-reference/widgets/jt.textarea">
 
 <Image pure alt="screenshot" src="/images/api/text_area.jpg" />
 
@@ -310,11 +325,13 @@ name = st.text_input("First name")
 
 Display a multi-line text input widget.
 
-```python
-text = st.text_area("Text to translate")
+```java
+String text = Jt.textArea("Text to translate").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/chat/st.chat_input">
 
 <Image pure alt="screenshot" src="/images/api/chat_input.jpg" />
@@ -323,19 +340,22 @@ text = st.text_area("Text to translate")
 
 Display a chat input widget.
 
-```python
+```java
 prompt = st.chat_input("Say something")
 if prompt:
     st.write(f"The user has sent: {prompt}")
 ```
 
 </RefCard>
+*/}
 
 </TileContainer>
 
 ## Other input elements
 
 <TileContainer>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.audio_input">
 
 <Image pure alt="screenshot" src="/images/api/audio_input.jpg" />
@@ -344,7 +364,7 @@ if prompt:
 
 Display a widget that allows users to record with their microphone.
 
-```python
+```java
 speech = st.audio_input("Record a voice message")
 ```
 
@@ -357,12 +377,14 @@ speech = st.audio_input("Record a voice message")
 
 Display a data editor widget.
 
-```python
+```java
 edited = st.data_editor(df, num_rows="dynamic")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.file_uploader">
+*/}
+
+<RefCard href="/develop/api-reference/widgets/jt.fileuploader">
 
 <Image pure alt="screenshot" src="/images/api/file_uploader.jpg" />
 
@@ -370,11 +392,13 @@ edited = st.data_editor(df, num_rows="dynamic")
 
 Display a file uploader widget.
 
-```python
-data = st.file_uploader("Upload a CSV")
+```java
+UploadedFile data = Jt.fileUploader("Upload a CSV").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.camera_input">
 
 <Image pure alt="screenshot" src="/images/api/camera_input.jpg" />
@@ -383,13 +407,16 @@ data = st.file_uploader("Upload a CSV")
 
 Display a widget that allows users to upload images directly from a camera.
 
-```python
+```java
 image = st.camera_input("Take a picture")
 ```
 
 </RefCard>
+*/}
+
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/okld/streamlit-elements">
@@ -546,3 +573,4 @@ stoggle(
 </ComponentCard>
 
 </ComponentSlider>
+*/}

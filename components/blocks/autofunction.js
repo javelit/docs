@@ -514,15 +514,17 @@ const Autofunction = ({
   for (const index in functionObject.returns) {
     const row = {};
     const param = functionObject.returns[index];
-    const description = param.description
-      ? param.description
-      : `<p>No description</p> `;
+    if (param.type_name !== "void") {
+      const description = param.description
+        ? param.description
+        : `<p>No description</p> `;
 
-    row["title"] =
-      `<p><span class='italic code'>(${param.type_name})</span></p> `;
-    row["body"] = `${description} `;
+      row["title"] =
+        `<p><span class='italic code'>(${param.type_name})</span></p> `;
+      row["body"] = `${description} `;
 
-    returns.push(row);
+      returns.push(row);
+    }
   }
 
   body = (

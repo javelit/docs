@@ -5,7 +5,10 @@ slug: /develop/api-reference/charts
 
 # Chart elements
 
-Streamlit supports several different charting libraries, and our goal is to
+Jeamlit only supports Apache Echarts for charting, but our goal is to continually add support for more charting libraries.
+
+{/*
+Jeamlit supports several different charting libraries, and our goal is to
 continually add support for more. Right now, the most basic library in our
 arsenal is [Matplotlib](https://matplotlib.org/). Then there are also
 interactive charting libraries like [Vega
@@ -13,10 +16,26 @@ Lite](https://vega.github.io/vega-lite/) (2D charts) and
 [deck.gl](https://github.com/uber/deck.gl) (maps and 3D charts). And
 finally we also provide a few chart types that are "native" to Streamlit,
 like `st.line_chart` and `st.area_chart`.
+*/}
 
 ## Simple chart elements
 
 <TileContainer>
+<RefCard href="/develop/api-reference/charts/jt.echarts">
+
+<Image pure alt="screenshot" src="/images/api/components/echarts.jpg" />
+
+<h4>ECharts</h4>
+
+Display a chart using the Apache ECharts library.
+
+```java
+Jt.echarts(myChartConfig).use();
+```
+
+</RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/charts/st.area_chart">
 <Image pure alt="screenshot" src="/images/api/area_chart.jpg" />
 
@@ -24,7 +43,7 @@ like `st.line_chart` and `st.area_chart`.
 
 Display an area chart.
 
-```python
+```java
 st.area_chart(my_data_frame)
 ```
 
@@ -36,7 +55,7 @@ st.area_chart(my_data_frame)
 
 Display a bar chart.
 
-```python
+```java
 st.bar_chart(my_data_frame)
 ```
 
@@ -48,7 +67,7 @@ st.bar_chart(my_data_frame)
 
 Display a line chart.
 
-```python
+```java
 st.line_chart(my_data_frame)
 ```
 
@@ -60,7 +79,7 @@ st.line_chart(my_data_frame)
 
 Display a line chart.
 
-```python
+```java
 st.scatter_chart(my_data_frame)
 ```
 
@@ -72,13 +91,15 @@ st.scatter_chart(my_data_frame)
 
 Display a map with points on it.
 
-```python
+```java
 st.map(my_data_frame)
 ```
 
 </RefCard>
+*/}
 </TileContainer>
 
+{/*
 ## Advanced chart elements
 
 <TileContainer>
@@ -89,7 +110,7 @@ st.map(my_data_frame)
 
 Display a matplotlib.pyplot figure.
 
-```python
+```java
 st.pyplot(my_mpl_figure)
 ```
 
@@ -101,7 +122,7 @@ st.pyplot(my_mpl_figure)
 
 Display a chart using the Altair library.
 
-```python
+```java
 st.altair_chart(my_altair_chart)
 ```
 
@@ -113,7 +134,7 @@ st.altair_chart(my_altair_chart)
 
 Display a chart using the Vega-Lite library.
 
-```python
+```java
 st.vega_lite_chart(my_vega_lite_chart)
 ```
 
@@ -125,7 +146,7 @@ st.vega_lite_chart(my_vega_lite_chart)
 
 Display an interactive Plotly chart.
 
-```python
+```java
 st.plotly_chart(my_plotly_chart)
 ```
 
@@ -137,7 +158,7 @@ st.plotly_chart(my_plotly_chart)
 
 Display an interactive Bokeh chart.
 
-```python
+```java
 st.bokeh_chart(my_bokeh_chart)
 ```
 
@@ -149,7 +170,7 @@ st.bokeh_chart(my_bokeh_chart)
 
 Display a chart using the PyDeck library.
 
-```python
+```java
 st.pydeck_chart(my_pydeck_chart)
 ```
 
@@ -161,13 +182,15 @@ st.pydeck_chart(my_pydeck_chart)
 
 Display a graph using the dagre-d3 library.
 
-```python
+```java
 st.graphviz_chart(my_graphviz_spec)
 ```
 
 </RefCard>
 </TileContainer>
+*/}
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/tvst/plost">
@@ -306,3 +329,4 @@ st.altair_chart(chart, use_container_width=True)
 </ComponentCard>
 
 </ComponentSlider>
+*/}

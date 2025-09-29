@@ -5,10 +5,11 @@ slug: /develop/api-reference/status
 
 # Display progress and status
 
-Streamlit provides a few methods that allow you to add animation to your
+Jeamlit provides a few methods that allow you to add animation to your
 apps. These animations include progress bars, status messages (like
 warnings), and celebratory balloons.
 
+{/*
 ## Animated status elements
 
 <TileContainer>
@@ -20,7 +21,7 @@ warnings), and celebratory balloons.
 
 Display a progress bar.
 
-```python
+```java
 for i in range(101):
   st.progress(i)
   do_something_slow()
@@ -35,7 +36,7 @@ for i in range(101):
 
 Temporarily displays a message while executing a block of code.
 
-```python
+```java
 with st.spinner("Please wait..."):
   do_something_slow()
 ```
@@ -49,7 +50,7 @@ with st.spinner("Please wait..."):
 
 Display output of long-running tasks in a container.
 
-```python
+```java
 with st.status('Running'):
   do_something_slow()
 ```
@@ -63,7 +64,7 @@ with st.status('Running'):
 
 Briefly displays a toast message in the bottom-right corner.
 
-```python
+```java
 st.toast('Butter!', icon='🧈')
 ```
 
@@ -76,7 +77,7 @@ st.toast('Butter!', icon='🧈')
 
 Display celebratory balloons!
 
-```python
+```java
 st.balloons()
 ```
 
@@ -89,16 +90,19 @@ st.balloons()
 
 Display celebratory snowflakes!
 
-```python
+```java
 st.snow()
 ```
 
 </RefCard>
 </TileContainer>
+*/}
 
 ## Simple callout messages
 
 <TileContainer>
+
+{/*
 <RefCard href="/develop/api-reference/status/st.success">
 
 <Image pure alt="screenshot" src="/images/api/success.jpg" />
@@ -107,7 +111,7 @@ st.snow()
 
 Display a success message.
 
-```python
+```java
 st.success("Match found!")
 ```
 
@@ -120,7 +124,7 @@ st.success("Match found!")
 
 Display an informational message.
 
-```python
+```java
 st.info("Dataset is updated every day at midnight.")
 ```
 
@@ -133,12 +137,14 @@ st.info("Dataset is updated every day at midnight.")
 
 Display warning message.
 
-```python
+```java
 st.warning("Unable to fetch image. Skipping...")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/status/st.error">
+*/}
+
+<RefCard href="/develop/api-reference/status/jt.error">
 
 <Image pure alt="screenshot" src="/images/api/error.jpg" />
 
@@ -146,11 +152,13 @@ st.warning("Unable to fetch image. Skipping...")
 
 Display error message.
 
-```python
-st.error("We encountered an error")
+```java
+Jt.error("We encountered an error").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/status/st.exception">
 
 <Image pure alt="screenshot" src="/images/api/exception.jpg" />
@@ -159,14 +167,17 @@ st.error("We encountered an error")
 
 Display an exception.
 
-```python
+```java
 e = RuntimeError("This is an exception of type RuntimeError")
 st.exception(e)
 ```
 
 </RefCard>
+*/}
+
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/Wirg/stqdm">
@@ -221,3 +232,4 @@ rain(emoji="🎈", font_size=54,
 </ComponentCard>
 
 </ComponentSlider>
+*/}

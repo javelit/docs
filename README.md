@@ -223,36 +223,36 @@ Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to in
    <Autofunction function="Jt.myChart" />
    ```
 
-4. Add the following under the "Chart elements" heading in `content/develop/api-reference/_index.md`:
+4. Add the following under the "Chart elements" heading in [content/develop/api-reference/_index.md](content/develop/api-reference/_index.md):
    1. A RefCard MDX function containing the URL slug defined in `myChart.md` . This is the card that will appear on the API Reference landing page.
    2. An Image MDX function containing alt text and the location of the image to be displayed on the card.
    3. A bold heading that will appear on the card (`#### Heading`). It appears below the card image.
    4. A brief description of the `Jt.myChart`. It appears below the card heading.
    5. A code block illustrating how to use `Jt.myChart`. It appears below the card description.
+    ````markdown
+        <RefCard href="/develop/api-reference/charts/jt.myChart">
+        <Image pure alt="Tux, the Linux mascot" src="/img/data-table.png" />
+    
+        #### My charts
+    
+        Display a chart using the MyChart library.
+    
+        ```java
+        Jt.myChart(my_data_frame)
+        ```
+    
+        </RefCard>
+    ````
+5. Perform a similar addition in the `_index.md` file that corresponds to the component section. For instance, [content/develop/api-reference/charts/_index.md](content/develop/api-reference/charts/_index.md)
 
-````markdown
-    <RefCard href="/develop/api-reference/charts/jt.myChart">
-    <Image pure alt="Tux, the Linux mascot" src="/img/data-table.png" />
-
-    #### My charts
-
-    Display a chart using the MyChart library.
-
-    ```java
-    Jt.myChart(my_data_frame)
-    ```
-
-    </RefCard>
-````
-
-5. Add the following 2 new lines to `menu.md` so that `Jt.myChart` appears in the Menu:
+6. Add the following 2 new lines to `menu.md` so that `Jt.myChart` appears in the Menu:
 
    ```YAML
    - category: Develop / API Reference / Chart elements / Jt.myChart
      url: /develop/api-reference/charts/jt.myChart
    ```
 
-6. Save your changes and refresh the browser tab. If all went well, you should see a new entry in the Menu, a new card in the API Reference, and a new page for `Jt.myChart`.
+7. Save your changes and refresh the browser tab. If all went well, you should see a new entry in the Menu, a new card in the API Reference, and a new page for `Jt.myChart`.
 
 **NOTICE that in url and slug, `Jt` is in lower case `jt`. This is mandatory.**
 

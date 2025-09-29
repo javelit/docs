@@ -7,10 +7,10 @@ slug: /develop/api-reference/layout
 
 ## Complex layouts
 
-Streamlit provides several options for controlling how different elements are laid out on the screen.
+Jeamlit provides several options for controlling how different elements are laid out on the screen.
 
 <TileContainer>
-<RefCard href="/develop/api-reference/layout/st.columns">
+<RefCard href="/develop/api-reference/layout/jt.columns">
 
 <Image pure alt="screenshot" src="/images/api/columns.jpg" />
 
@@ -18,14 +18,14 @@ Streamlit provides several options for controlling how different elements are la
 
 Insert containers laid out as side-by-side columns.
 
-```python
-col1, col2 = st.columns(2)
-col1.write("this is column 1")
-col2.write("this is column 2")
+```java
+var cols = Jt.columns("my-cols", 2).use();
+Jt.text("This is column 1").use(cols.col(0));
+Jt.text("This is column 2").use(cols.col(1));
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.container">
+<RefCard href="/develop/api-reference/layout/jt.container">
 
 <Image pure alt="screenshot" src="/images/api/container.jpg" />
 
@@ -33,14 +33,16 @@ col2.write("this is column 2")
 
 Insert a multi-element container.
 
-```python
-c = st.container()
-st.write("This will show last")
-c.write("This will show first")
-c.write("This will show second")
+```java
+var c = Jt.container("my-container").use();
+Jt.text("This will show last").use();
+Jt.text("This will show first").use(c);
+Jt.text("This will show second").use(c);
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/execution-flow/st.dialog">
 
 <Image pure alt="screenshot" src="/images/api/dialog.jpg" />
@@ -49,7 +51,7 @@ c.write("This will show second")
 
 Insert a modal dialog that can rerun independently from the rest of the script.
 
-```python
+```java
 @st.dialog("Sign up")
 def email_form():
     name = st.text_input("Name")
@@ -57,7 +59,9 @@ def email_form():
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.empty">
+*/}
+
+<RefCard href="/develop/api-reference/layout/jt.empty">
 
 <Image pure alt="screenshot" src="/images/api/empty.jpg" />
 
@@ -65,15 +69,15 @@ def email_form():
 
 Insert a single-element container.
 
-```python
-c = st.empty()
-st.write("This will show last")
-c.write("This will be replaced")
-c.write("This will show first")
+```java
+var e = Jt.empty("my-empty").use();
+Jt.text("This will show last").use();
+Jt.text("This will be replaced").use(e);
+Jt.text("This will show first").use(e);
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.expander">
+<RefCard href="/develop/api-reference/layout/jt.expander">
 
 <Image pure alt="screenshot" src="/images/api/expander.jpg" />
 
@@ -81,13 +85,13 @@ c.write("This will show first")
 
 Insert a multi-element container that can be expanded/collapsed.
 
-```python
-with st.expander("Open to see more"):
-  st.write("This is more content")
+```java
+var exp = Jt.expander("my-exp", "Open to see more").use();
+Jt.text("This is more content").use(exp);
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.popover">
+<RefCard href="/develop/api-reference/layout/jt.popover">
 
 <Image pure alt="screenshot" src="/images/api/popover.svg" />
 
@@ -95,12 +99,14 @@ with st.expander("Open to see more"):
 
 Insert a multi-element popover container that can be opened/closed.
 
-```python
-with st.popover("Settings"):
-  st.checkbox("Show completed")
+```java
+var pop = Jt.popover("my-pop", "Settings").use();
+Jt.checkbox("Show completed").use(pop);
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/layout/st.sidebar">
 
 <Image pure alt="screenshot" src="/images/api/sidebar.jpg" />
@@ -109,13 +115,15 @@ with st.popover("Settings"):
 
 Display items in a sidebar.
 
-```python
+```java
 st.sidebar.write("This lives in the sidebar")
 st.sidebar.button("Click me!")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.tabs">
+*/}
+
+<RefCard href="/develop/api-reference/layout/jt.tabs">
 
 <Image pure alt="screenshot" src="/images/api/tabs.jpg" />
 
@@ -123,15 +131,16 @@ st.sidebar.button("Click me!")
 
 Insert containers separated into tabs.
 
-```python
-tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
-tab1.write("this is tab 1")
-tab2.write("this is tab 2")
+```java
+var tabs = Jt.tabs("my-tabs", List.of("Tab 1", "Tab 2")).use();
+Jt.text("This is tab 1").use(tabs.tab(0));
+Jt.text("This is tab 2").use(tabs.tab(1));
 ```
 
 </RefCard>
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/okld/streamlit-elements">
@@ -186,3 +195,4 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 </ComponentCard>
 
 </ComponentSlider>
+*/}

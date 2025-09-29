@@ -5,21 +5,23 @@ slug: /develop/api-reference/text
 
 # Text elements
 
-Streamlit apps usually start with a call to `st.title` to set the
-app's title. After that, there are 2 heading levels you can use:
-`st.header` and `st.subheader`.
+Jeamlit apps usually start with a call to `Jt.title` to set the
+app's title. {/*After that, there are 2 heading levels you can use:
+`st.header` and `st.subheader`.*/}
 
-Pure text is entered with `st.text`, and Markdown with
-`st.markdown`.
+Pure text is entered with `Jt.text`, and Markdown with
+`Jt.markdown`.
 
+{/*
 We also offer a "swiss-army knife" command called `st.write`, which accepts
 multiple arguments, and multiple data types. And as described above, you can
 also use [magic commands](/develop/api-reference/write-magic/magic) in place of `st.write`.
+*/}
 
 ## Headings and body text
 
 <TileContainer>
-<RefCard href="/develop/api-reference/text/st.markdown">
+<RefCard href="/develop/api-reference/text/jt.markdown">
 
 <Image pure alt="screenshot" src="/images/api/markdown.jpg" />
 
@@ -27,12 +29,12 @@ also use [magic commands](/develop/api-reference/write-magic/magic) in place of 
 
 Display string formatted as Markdown.
 
-```python
-st.markdown("Hello **world**!")
+```java
+Jt.markdown("Hello **world**!").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.title">
+<RefCard href="/develop/api-reference/text/jt.title">
 
 <Image pure alt="screenshot" src="/images/api/title.jpg" />
 
@@ -40,11 +42,12 @@ st.markdown("Hello **world**!")
 
 Display text in title formatting.
 
-```python
-st.title("The app title")
+```java
+Jt.title("The app title").use();
 ```
 
 </RefCard>
+{/*
 <RefCard href="/develop/api-reference/text/st.header">
 
 <Image pure alt="screenshot" src="/images/api/header.jpg" />
@@ -53,7 +56,7 @@ st.title("The app title")
 
 Display text in header formatting.
 
-```python
+```java
 st.header("This is a header")
 ```
 
@@ -66,17 +69,19 @@ st.header("This is a header")
 
 Display text in subheader formatting.
 
-```python
+```java
 st.subheader("This is a subheader")
 ```
 
 </RefCard>
+*/}
 </TileContainer>
 
 ## Formatted text
 
 <TileContainer>
 
+{/*
 <RefCard href="/develop/api-reference/text/st.badge">
 
 <Image pure alt="screenshot" src="/images/api/badge.jpg" />
@@ -85,7 +90,7 @@ st.subheader("This is a subheader")
 
 Display a small, colored badge.
 
-```python
+```java
 st.badge("New")
 ```
 
@@ -98,12 +103,13 @@ st.badge("New")
 
 Display text in small font.
 
-```python
+```java
 st.caption("This is written small caption text")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.code">
+*/}
+<RefCard href="/develop/api-reference/text/jt.code">
 
 <Image pure alt="screenshot" src="/images/api/code.jpg" />
 
@@ -111,11 +117,12 @@ st.caption("This is written small caption text")
 
 Display a code block with optional syntax highlighting.
 
-```python
-st.code("a = 1234")
+```java
+Jt.code("int a = 1234;").use();
 ```
 
 </RefCard>
+{/*
 <RefCard href="/develop/api-reference/text/st.echo">
 
 <Image pure alt="screenshot" src="/images/api/code.jpg" />
@@ -124,13 +131,14 @@ st.code("a = 1234")
 
 Display some code on the app, then execute it. Useful for tutorials.
 
-```python
+```java
 with st.echo():
   st.write('This code will be printed')
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.text">
+*/}
+<RefCard href="/develop/api-reference/text/jt.text">
 
 <Image pure alt="screenshot" src="/images/api/text.jpg" />
 
@@ -138,11 +146,12 @@ with st.echo():
 
 Write fixed-width and preformatted text.
 
-```python
-st.text("Hello world")
+```java
+Jt.text("Hello world").use();
 ```
 
 </RefCard>
+{/*
 <RefCard href="/develop/api-reference/text/st.latex">
 
 <Image pure alt="screenshot" src="/images/api/latex.jpg" />
@@ -151,12 +160,13 @@ st.text("Hello world")
 
 Display mathematical expressions formatted as LaTeX.
 
-```python
+```java
 st.latex("\int a x^2 \,dx")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.divider">
+*/}
+<RefCard href="/develop/api-reference/text/jt.divider">
 
 <Image pure alt="screenshot" src="/images/api/divider.jpg" />
 
@@ -164,8 +174,8 @@ st.latex("\int a x^2 \,dx")
 
 Display a horizontal rule.
 
-```python
-st.divider()
+```java
+Jt.divider().use();
 ```
 
 </RefCard>
@@ -174,31 +184,36 @@ st.divider()
 ## Utilities
 
 <TileContainer>
+
+{/*
 <RefCard href="/develop/api-reference/text/st.help" size="half">
 
 <h4>Get help</h4>
 
-Display object’s doc string, nicely formatted.
+Display object's doc string, nicely formatted.
 
-```python
+```java
 st.help(st.write)
 st.help(pd.DataFrame)
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.html" size="half">
+*/}
+
+<RefCard href="/develop/api-reference/text/jt.html" size="half">
 
 <h4>Render HTML</h4>
 
-Renders HTML strings to your app.
+Render an HTML strings to your app.
 
-```python
-st.html("<p>Foo bar.</p>")
+```java
+Jt.html("<p>Foo bar.</p>").use();
 ```
 
 </RefCard>
 </TileContainer>
 
+{/*
 <ComponentSlider>
 <ComponentCard href="https://github.com/tvst/st-annotated-text">
 
@@ -270,3 +285,4 @@ mention(label="An awesome Streamlit App", icon="streamlit",  url="https://extras
 
 </ComponentCard>
 </ComponentSlider>
+*/}

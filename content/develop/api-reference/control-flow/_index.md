@@ -5,9 +5,10 @@ slug: /develop/api-reference/execution-flow
 
 # Execution flow
 
+{/*
 ## Change execution
 
-By default, Streamlit apps execute the script entirely, but we allow some functionality to handle control flow in your applications.
+By default, Jeamlit apps execute the script entirely, but we allow some functionality to handle control flow in your applications.
 
 <TileContainer>
 
@@ -68,46 +69,48 @@ st.stop()
 </RefCard>
 
 </TileContainer>
+*/}
 
 ## Group multiple widgets
 
-By default, Streamlit reruns your script everytime a user interacts with your app.
+By default, Jeamlit reruns your script everytime a user interacts with your app.
 However, sometimes it's a better user experience to wait until a group of related
-widgets is filled before actually rerunning the script. That's what `st.form` is for!
+widgets is filled before actually rerunning the script. That's what `Jt.form` is for!
 
 <TileContainer>
-<RefCard href="/develop/api-reference/execution-flow/st.form" size="half">
+<RefCard href="/develop/api-reference/execution-flow/jt.form" size="half">
 
 <h4>Forms</h4>
 
-Create a form that batches elements together with a “Submit" button.
+Create a form that batches elements together with a "Submit" button.
 
-```python
-with st.form(key='my_form'):
-    name = st.text_input("Name")
-    email = st.text_input("Email")
-    st.form_submit_button("Sign up")
+```java
+var form = Jt.form("my_form").use();
+String name = Jt.textInput("Name").use(form);
+String email = Jt.textInput("Email").use(form);
+boolean submitted = Jt.formSubmitButton("Sign up").use(form);
 ```
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/execution-flow/st.form_submit_button" size="half">
+<RefCard href="/develop/api-reference/execution-flow/jt.formsubmitbutton" size="half">
 
 <h4>Form submit button</h4>
 
 Display a form submit button.
 
-```python
-with st.form(key='my_form'):
-    name = st.text_input("Name")
-    email = st.text_input("Email")
-    st.form_submit_button("Sign up")
+```java
+var form = Jt.form("my_form").use();
+String name = Jt.textInput("Name").use(form);
+String email = Jt.textInput("Email").use(form);
+boolean submitted = Jt.formSubmitButton("Sign up").use(form);
 ```
 
 </RefCard>
 
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/kmcgrady/streamlit-autorefresh">
@@ -162,3 +165,4 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 </ComponentCard>
 
 </ComponentSlider>
+*/}

@@ -363,6 +363,8 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Chart elements / ADVANCED
+  - category: Develop / API reference / Chart elements / Jt.echarts
+    url: /develop/api-reference/charts/jt.echarts
   - category: Develop / API reference / Chart elements / st.altair_chart
     url: /develop/api-reference/charts/st.altair_chart
     isVersioned: true
@@ -734,11 +736,9 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Caching and state / st.cache_resource
-    url: /develop/api-reference/caching-and-state/st.cache_resource
+  - category: Develop / API reference / Caching and state / Jt.cache
+    url: /develop/api-reference/caching-and-state/jt.cache
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Caching and state / st.experimental_memo
     url: /develop/api-reference/caching-and-state/st.experimental_memo
     isVersioned: true
@@ -753,6 +753,8 @@ site_menu:
     ignore: true
   - category: Develop / API reference / Caching and state / Jt.sessionState
     url: /develop/api-reference/caching-and-state/jt.sessionstate
+  - category: Develop / API reference / Caching and state / Jt.componentsState
+    url: /develop/api-reference/caching-and-state/jt.componentsstate  
   - category: Develop / API reference / Caching and state / BROWSER
   - category: Develop / API reference / Caching and state / st.context
     url: /develop/api-reference/caching-and-state/st.context
