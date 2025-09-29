@@ -69,7 +69,7 @@ my_mpl_figure
 <br />
 
 <TileContainer>
-<RefCard href="/develop/api-reference/text/st.markdown">
+<RefCard href="/develop/api-reference/text/jt.markdown">
 
 <Image pure alt="screenshot" src="/images/api/markdown.jpg" />
 
@@ -82,7 +82,7 @@ Jt.markdown("Hello **world**!").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.title">
+<RefCard href="/develop/api-reference/text/jt.title">
 
 <Image pure alt="screenshot" src="/images/api/title.jpg" />
 
@@ -151,7 +151,7 @@ st.caption("This is written small caption text")
 */}
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.code">
+<RefCard href="/develop/api-reference/text/jt.code">
 
 <Image pure alt="screenshot" src="/images/api/code.jpg" />
 
@@ -195,7 +195,7 @@ st.latex("\int a x^2 \,dx")
 */}
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.text">
+<RefCard href="/develop/api-reference/text/jt.text">
 
 <Image pure alt="screenshot" src="/images/api/text.jpg" />
 
@@ -208,7 +208,7 @@ Jt.text("Hello world").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.divider">
+<RefCard href="/develop/api-reference/text/jt.divider">
 
 <Image pure alt="screenshot" src="/images/api/divider.jpg" />
 
@@ -237,11 +237,11 @@ st.help(pd.DataFrame)
 */}
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.html">
+<RefCard href="/develop/api-reference/text/jt.html">
 
 <h4>Render HTML</h4>
 
-Renders HTML strings to your app.
+Render an HTML string in your app.
 
 ```java
 Jt.html("<p>Foo bar.</p>").use();
@@ -376,7 +376,7 @@ st.column_config.NumberColumn("Price (in USD)", min_value=0, format="$%d")
 
 */}
 
-<RefCard href="/develop/api-reference/data/st.table">
+<RefCard href="/develop/api-reference/data/jt.table">
 <Image pure alt="screenshot" src="/images/api/table.jpg" />
 
 <h4>Static tables</h4>
@@ -848,7 +848,7 @@ st.altair_chart(chart, use_container_width=True)
 <br />
 
 <TileContainer>
-<RefCard href="/develop/api-reference/widgets/st.button">
+<RefCard href="/develop/api-reference/widgets/jt.button">
 
 <Image pure alt="screenshot" src="/images/api/button.svg" />
 
@@ -877,7 +877,7 @@ st.download_button("Download file", file)
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/execution-flow/st.form_submit_button">
+<RefCard href="https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.formsubmitbutton">
 
 <Image pure alt="screenshot" src="/images/api/form_submit_button.svg" />
 
@@ -906,7 +906,7 @@ st.link_button("Go to gallery", url)
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/widgets/st.page_link">
+<RefCard href="/develop/api-reference/widgets/jt.pagelink">
 
 <Image pure alt="screenshot" src="/images/api/page_link.jpg" />
 
@@ -920,7 +920,7 @@ Jt.pageLink("https://example.com", "Go to site").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.checkbox">
+<RefCard href="/develop/api-reference/widgets/jt.checkbox">
 
 <Image pure alt="screenshot" src="/images/api/checkbox.jpg" />
 
@@ -988,7 +988,7 @@ st.pills("Tags", ["Sports", "AI", "Politics"])
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/widgets/st.radio">
+<RefCard href="/develop/api-reference/widgets/jt.radio">
 
 <Image pure alt="screenshot" src="/images/api/radio.jpg" />
 
@@ -1043,7 +1043,7 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/widgets/st.toggle">
+<RefCard href="/develop/api-reference/widgets/jt.toggle">
 
 <Image pure alt="screenshot" src="/images/api/toggle.jpg" />
 
@@ -1056,7 +1056,7 @@ boolean activated = Jt.toggle("Activate").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.number_input">
+<RefCard href="/develop/api-reference/widgets/jt.numberinput">
 
 <Image pure alt="screenshot" src="/images/api/number_input.jpg" />
 
@@ -1069,7 +1069,7 @@ Number choice = Jt.numberInput("Pick a number").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.slider">
+<RefCard href="/develop/api-reference/widgets/jt.slider">
 
 <Image pure alt="screenshot" src="/images/api/slider.jpg" />
 
@@ -1082,7 +1082,7 @@ int number = Jt.slider("Pick a number").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.date_input">
+<RefCard href="/develop/api-reference/widgets/jt.dateinput">
 
 <Image pure alt="screenshot" src="/images/api/date_input.jpg" />
 
@@ -1126,7 +1126,7 @@ if prompt:
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/widgets/st.text_area">
+<RefCard href="/develop/api-reference/widgets/jt.textarea">
 
 <Image pure alt="screenshot" src="/images/api/text_area.jpg" />
 
@@ -1139,7 +1139,7 @@ String text = Jt.textArea("Text to translate").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.text_input">
+<RefCard href="/develop/api-reference/widgets/jt.textinput">
 
 <Image pure alt="screenshot" src="/images/api/text_input.jpg" />
 
@@ -1181,7 +1181,7 @@ edited = st.data_editor(df, num_rows="dynamic")
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/widgets/st.file_uploader">
+<RefCard href="/develop/api-reference/widgets/jt.fileuploader">
 
 <Image pure alt="screenshot" src="/images/api/file_uploader.jpg" />
 
@@ -1563,7 +1563,7 @@ st_lottie(lottie_hello, key="hello")
 <br />
 
 <TileContainer>
-<RefCard href="/develop/api-reference/layout/st.columns">
+<RefCard href="/develop/api-reference/layout/jt.columns">
 
 <Image pure alt="screenshot" src="/images/api/columns.jpg" />
 
@@ -1578,7 +1578,7 @@ Jt.text("This is column 2").use(cols.col(1));
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.container">
+<RefCard href="/develop/api-reference/layout/jt.container">
 
 <Image pure alt="screenshot" src="/images/api/container.jpg" />
 
@@ -1613,7 +1613,7 @@ def email_form():
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/layout/st.empty">
+<RefCard href="/develop/api-reference/layout/jt.empty">
 
 <Image pure alt="screenshot" src="/images/api/empty.jpg" />
 
@@ -1629,7 +1629,7 @@ Jt.text("This will show first").use(e);
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.expander">
+<RefCard href="/develop/api-reference/layout/jt.expander">
 
 <Image pure alt="screenshot" src="/images/api/expander.jpg" />
 
@@ -1643,7 +1643,7 @@ Jt.text("This is more content").use(exp);
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/layout/st.popover">
+<RefCard href="/develop/api-reference/layout/jt.popover">
 
 <Image pure alt="screenshot" src="/images/api/popover.svg" />
 
@@ -1674,7 +1674,7 @@ st.sidebar.button("Click me!")
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/layout/st.tabs">
+<RefCard href="/develop/api-reference/layout/jt.tabs">
 
 <Image pure alt="screenshot" src="/images/api/tabs.jpg" />
 
@@ -1955,7 +1955,7 @@ st.warning("Unable to fetch image. Skipping...")
 
 </RefCard>
 */}
-<RefCard href="/develop/api-reference/status/st.error">
+<RefCard href="/develop/api-reference/status/jt.error">
 
 <Image pure alt="screenshot" src="/images/api/error.jpg" />
 
@@ -2100,7 +2100,7 @@ if st.user.is_logged_in:
 
 <TileContainer>
 
-<RefCard href="/develop/api-reference/navigation/st.navigation">
+<RefCard href="/develop/api-reference/navigation/jt.navigation">
 
 <Image pure alt="screenshot" src="/images/api/navigation.jpg" />
 
@@ -2119,7 +2119,7 @@ Jt.navigation(pages).use();
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/navigation/st.page">
+<RefCard href="/develop/api-reference/navigation/jt.page">
 
 <Image pure alt="screenshot" src="/images/api/page.jpg" />
 
@@ -2137,7 +2137,7 @@ Object home = Jt.page(
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/widgets/st.page_link">
+<RefCard href="/develop/api-reference/widgets/jt.pagelink">
 
 <Image pure alt="screenshot" src="/images/api/page_link.jpg" />
 
@@ -2152,7 +2152,7 @@ Jt.pageLink("pages/Profile.java", "My profile").use();
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/navigation/st.switch_page">
+<RefCard href="/develop/api-reference/navigation/jt.switchpage">
 
 <h4>Switch page</h4>
 
@@ -2193,7 +2193,7 @@ def email_form():
 
 */}
 
-<RefCard href="/develop/api-reference/execution-flow/st.form" size="half">
+<RefCard href="/develop/api-reference/execution-flow/jt.form" size="half">
 
 <h4>Forms</h4>
 
@@ -2586,11 +2586,11 @@ declare_component(
 
 */}
 
-<RefCard href="/develop/api-reference/custom-components/st.components.v1.html">
+<RefCard href="/develop/api-reference/text/jt.html">
 
 <h4>HTML</h4>
 
-Display an HTML string in an iframe.
+Render an HTML string in your app.
 
 ```java
 Jt.html("<p>Foo bar.</p>").use();
