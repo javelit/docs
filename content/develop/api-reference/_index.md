@@ -857,10 +857,12 @@ st.altair_chart(chart, use_container_width=True)
 Display a button widget.
 
 ```java
-clicked = st.button("Click me")
+boolean clicked = Jt.button("Click me").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.download_button">
 
 <Image pure alt="screenshot" src="/images/api/download_button.svg" />
@@ -874,19 +876,22 @@ st.download_button("Download file", file)
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/execution-flow/st.form_submit_button">
 
 <Image pure alt="screenshot" src="/images/api/form_submit_button.svg" />
 
 <h4>Form button</h4>
 
-Display a form submit button. For use with `st.form`.
+Display a form submit button. For use with `Jt.form`.
 
 ```java
-st.form_submit_button("Sign up")
+boolean submitted = Jt.formSubmitButton("Sign up").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.link_button">
 
 <Image pure alt="screenshot" src="/images/api/link_button.svg" />
@@ -900,6 +905,7 @@ st.link_button("Go to gallery", url)
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/widgets/st.page_link">
 
 <Image pure alt="screenshot" src="/images/api/page_link.jpg" />
@@ -909,8 +915,8 @@ st.link_button("Go to gallery", url)
 Display a link to another page in a multipage app.
 
 ```java
-st.page_link("app.py", label="Home", icon="🏠")
-st.page_link("pages/profile.py", label="My profile")
+Jt.pageLink(HomePage.class).use();
+Jt.pageLink("https://example.com", "Go to site").use();
 ```
 
 </RefCard>
@@ -923,10 +929,12 @@ st.page_link("pages/profile.py", label="My profile")
 Display a checkbox widget.
 
 ```java
-selected = st.checkbox("I agree")
+boolean selected = Jt.checkbox("I agree").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.color_picker">
 
 <Image pure alt="screenshot" src="/images/api/color_picker.jpg" />
@@ -979,6 +987,7 @@ st.pills("Tags", ["Sports", "AI", "Politics"])
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/widgets/st.radio">
 
 <Image pure alt="screenshot" src="/images/api/radio.jpg" />
@@ -988,10 +997,12 @@ st.pills("Tags", ["Sports", "AI", "Politics"])
 Display a radio button widget.
 
 ```java
-choice = st.radio("Pick one", ["cats", "dogs"])
+String choice = Jt.radio("Pick one", List.of("cats", "dogs")).use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.segmented_control">
 
 <Image pure alt="screenshot" src="/images/api/segmented_control.jpg" />
@@ -1031,6 +1042,7 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/widgets/st.toggle">
 
 <Image pure alt="screenshot" src="/images/api/toggle.jpg" />
@@ -1040,7 +1052,7 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 Display a toggle widget.
 
 ```java
-activated = st.toggle("Activate")
+boolean activated = Jt.toggle("Activate").use();
 ```
 
 </RefCard>
@@ -1053,7 +1065,7 @@ activated = st.toggle("Activate")
 Display a numeric input widget.
 
 ```java
-choice = st.number_input("Pick a number", 0, 10)
+Number choice = Jt.numberInput("Pick a number").use();
 ```
 
 </RefCard>
@@ -1066,7 +1078,7 @@ choice = st.number_input("Pick a number", 0, 10)
 Display a slider widget.
 
 ```java
-number = st.slider("Pick a number", 0, 100)
+int number = Jt.slider("Pick a number").use();
 ```
 
 </RefCard>
@@ -1079,10 +1091,12 @@ number = st.slider("Pick a number", 0, 100)
 Display a date input widget.
 
 ```java
-date = st.date_input("Your birthday")
+LocalDate date = Jt.dateInput("Your birthday").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.time_input">
 
 <Image pure alt="screenshot" src="/images/api/time_input.jpg" />
@@ -1111,6 +1125,7 @@ if prompt:
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/widgets/st.text_area">
 
 <Image pure alt="screenshot" src="/images/api/text_area.jpg" />
@@ -1120,7 +1135,7 @@ if prompt:
 Display a multi-line text input widget.
 
 ```java
-text = st.text_area("Text to translate")
+String text = Jt.textArea("Text to translate").use();
 ```
 
 </RefCard>
@@ -1133,10 +1148,12 @@ text = st.text_area("Text to translate")
 Display a single-line text input widget.
 
 ```java
-name = st.text_input("First name")
+String name = Jt.textInput("First name").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.audio_input">
 
 <Image pure alt="screenshot" src="/images/api/audio_input.jpg" />
@@ -1163,6 +1180,7 @@ edited = st.data_editor(df, num_rows="dynamic")
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/widgets/st.file_uploader">
 
 <Image pure alt="screenshot" src="/images/api/file_uploader.jpg" />
@@ -1172,10 +1190,12 @@ edited = st.data_editor(df, num_rows="dynamic")
 Display a file uploader widget.
 
 ```java
-data = st.file_uploader("Upload a CSV")
+UploadedFile data = Jt.fileUploader("Upload a CSV").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/widgets/st.camera_input">
 
 <Image pure alt="screenshot" src="/images/api/camera_input.jpg" />
@@ -1189,7 +1209,10 @@ image = st.camera_input("Take a picture")
 ```
 
 </RefCard>
+*/}
 </TileContainer>
+
+{/*
 
 <ComponentSlider>
 
@@ -1348,6 +1371,9 @@ stoggle(
 
 </ComponentSlider>
 
+*/}
+
+{/*
 ### Media elements
 
 <br />
@@ -1428,6 +1454,8 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 
 </RefCard>
 </TileContainer>
+
+{/*
 
 <ComponentSlider>
 
@@ -1528,6 +1556,7 @@ st_lottie(lottie_hello, key="hello")
 </ComponentCard>
 
 </ComponentSlider>
+*/}
 
 ### Layouts and containers
 
@@ -1543,9 +1572,9 @@ st_lottie(lottie_hello, key="hello")
 Insert containers laid out as side-by-side columns.
 
 ```java
-col1, col2 = st.columns(2)
-col1.write("this is column 1")
-col2.write("this is column 2")
+var cols = Jt.columns("my-cols", 2).use();
+Jt.text("This is column 1").use(cols.col(0));
+Jt.text("This is column 2").use(cols.col(1));
 ```
 
 </RefCard>
@@ -1558,13 +1587,15 @@ col2.write("this is column 2")
 Insert a multi-element container.
 
 ```java
-c = st.container()
-st.write("This will show last")
-c.write("This will show first")
-c.write("This will show second")
+var c = Jt.container("my-container").use();
+Jt.text("This will show last").use();
+Jt.text("This will show first").use(c);
+Jt.text("This will show second").use(c);
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/execution-flow/st.dialog">
 
 <Image pure alt="screenshot" src="/images/api/dialog.jpg" />
@@ -1581,6 +1612,7 @@ def email_form():
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/layout/st.empty">
 
 <Image pure alt="screenshot" src="/images/api/empty.jpg" />
@@ -1590,10 +1622,10 @@ def email_form():
 Insert a single-element container.
 
 ```java
-c = st.empty()
-st.write("This will show last")
-c.write("This will be replaced")
-c.write("This will show first")
+var e = Jt.empty("my-empty").use();
+Jt.text("This will show last").use();
+Jt.text("This will be replaced").use(e);
+Jt.text("This will show first").use(e);
 ```
 
 </RefCard>
@@ -1606,8 +1638,8 @@ c.write("This will show first")
 Insert a multi-element container that can be expanded/collapsed.
 
 ```java
-with st.expander("Open to see more"):
-  st.write("This is more content")
+var exp = Jt.expander("my-exp", "Open to see more").use();
+Jt.text("This is more content").use(exp);
 ```
 
 </RefCard>
@@ -1620,11 +1652,13 @@ with st.expander("Open to see more"):
 Insert a multi-element popover container that can be opened/closed.
 
 ```java
-with st.popover("Settings"):
-  st.checkbox("Show completed")
+var pop = Jt.popover("my-pop", "Settings").use();
+Jt.checkbox("Show completed").use(pop);
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/layout/st.sidebar">
 
 <Image pure alt="screenshot" src="/images/api/sidebar.jpg" />
@@ -1639,6 +1673,7 @@ st.sidebar.button("Click me!")
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/layout/st.tabs">
 
 <Image pure alt="screenshot" src="/images/api/tabs.jpg" />
@@ -1648,14 +1683,16 @@ st.sidebar.button("Click me!")
 Insert containers separated into tabs.
 
 ```java
-tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
-tab1.write("this is tab 1")
-tab2.write("this is tab 2")
+var tabs = Jt.tabs("my-tabs", List.of("Tab 1", "Tab 2")).use();
+Jt.text("This is tab 1").use(tabs.tab(0));
+Jt.text("This is tab 2").use(tabs.tab(1));
 ```
 
 </RefCard>
 </TileContainer>
 
+
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/okld/streamlit-elements">
@@ -1711,6 +1748,9 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 
 </ComponentSlider>
 
+*/}
+
+{/*
 ### Chat elements
 
 <br />
@@ -1778,12 +1818,15 @@ st.write_stream(my_llm_stream)
 
 </RefCard>
 </TileContainer>
+*/}
 
 ### Status elements
 
 <br />
 
 <TileContainer>
+
+{/*
 <RefCard href="/develop/api-reference/status/st.progress">
 
 <Image pure alt="screenshot" src="/images/api/progress.jpg" />
@@ -1911,6 +1954,7 @@ st.warning("Unable to fetch image. Skipping...")
 ```
 
 </RefCard>
+*/}
 <RefCard href="/develop/api-reference/status/st.error">
 
 <Image pure alt="screenshot" src="/images/api/error.jpg" />
@@ -1920,10 +1964,12 @@ st.warning("Unable to fetch image. Skipping...")
 Display error message.
 
 ```java
-st.error("We encountered an error")
+Jt.error("We encountered an error").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/status/st.exception">
 
 <Image pure alt="screenshot" src="/images/api/exception.jpg" />
@@ -1938,8 +1984,11 @@ st.exception(e)
 ```
 
 </RefCard>
+*/}
 
 </TileContainer>
+
+{/*
 
 <ComponentSlider>
 
@@ -1996,7 +2045,11 @@ rain(emoji="🎈", font_size=54,
 
 </ComponentSlider>
 
+*/}
+
 ## App logic and configuration
+
+{/*
 
 ### Authentication and user info
 
@@ -2039,6 +2092,8 @@ if st.user.is_logged_in:
 </RefCard>
 </TileContainer>
 
+*/}
+
 ### Navigation and pages
 
 <br />
@@ -2054,11 +2109,12 @@ if st.user.is_logged_in:
 Configure the available pages in a multipage app.
 
 ```java
-st.navigation({
-    "Your account" : [log_out, settings],
-    "Reports" : [overview, usage],
-    "Tools" : [search]
-})
+Map<String, List<Object>> pages = Map.of(
+    "Your account", List.of(logOut, settings),
+    "Reports", List.of(overview, usage),
+    "Tools", List.of(search)
+);
+Jt.navigation(pages).use();
 ```
 
 </RefCard>
@@ -2072,11 +2128,11 @@ st.navigation({
 Define a page in a multipage app.
 
 ```java
-home = st.Page(
-    "home.py",
-    title="Home",
-    icon=":material/home:"
-)
+Object home = Jt.page(
+    "home.java",
+    "Home",
+    ":material/home:"
+);
 ```
 
 </RefCard>
@@ -2090,8 +2146,8 @@ home = st.Page(
 Display a link to another page in a multipage app.
 
 ```java
-st.page_link("app.py", label="Home", icon="🏠")
-st.page_link("pages/profile.py", label="My profile")
+Jt.pageLink("App.java", "Home", "🏠").use();
+Jt.pageLink("pages/Profile.java", "My profile").use();
 ```
 
 </RefCard>
@@ -2103,7 +2159,7 @@ st.page_link("pages/profile.py", label="My profile")
 Programmatically navigates to a specified page.
 
 ```java
-st.switch_page("pages/my_page.py")
+Jt.switchPage("pages/MyPage.java");
 ```
 
 </RefCard>
@@ -2115,6 +2171,9 @@ st.switch_page("pages/my_page.py")
 <br />
 
 <TileContainer>
+
+{/*
+
 <RefCard href="/develop/api-reference/execution-flow/st.dialog" size="full">
 
 <Image pure alt="screenshot" src="/images/api/dialog.jpg" />
@@ -2131,20 +2190,26 @@ def email_form():
 ```
 
 </RefCard>
+
+*/}
+
 <RefCard href="/develop/api-reference/execution-flow/st.form" size="half">
 
 <h4>Forms</h4>
 
-Create a form that batches elements together with a “Submit" button.
+Create a form that batches elements together with a "Submit" button.
 
 ```java
-with st.form(key='my_form'):
-    name = st.text_input("Name")
-    email = st.text_input("Email")
-    st.form_submit_button("Sign up")
+var form = Jt.form("my_form").use();
+String name = Jt.textInput("Name").use(form);
+String email = Jt.textInput("Email").use(form);
+boolean submitted = Jt.formSubmitButton("Sign up").use(form);
 ```
 
 </RefCard>
+
+{/*
+
 <RefCard href="/develop/api-reference/execution-flow/st.fragment" size="half">
 
 <h4>Fragments</h4>
@@ -2181,7 +2246,12 @@ st.stop()
 ```
 
 </RefCard>
+
+*/}
+
 </TileContainer>
+
+{/*
 
 <ComponentSlider>
 
@@ -2237,6 +2307,10 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 </ComponentCard>
 
 </ComponentSlider>
+
+*/}
+
+{/*
 
 ### Caching and state
 
@@ -2315,6 +2389,10 @@ st.context.headers
 </RefCard>
 
 </TileContainer>
+
+*/}
+
+{/*
 
 ### Connections and databases
 
@@ -2421,6 +2499,10 @@ OpenAI_key = "<YOUR_SECRET_KEY>"
 
 </TileContainer>
 
+*/}
+
+{/*
+
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/mkhorasani/Jeamlit-Authenticator">
@@ -2476,11 +2558,15 @@ st.write(user_info)
 
 </ComponentSlider>
 
+*/}
+
 ### Custom Components
 
 <br />
 
 <TileContainer>
+
+{/*
 
 <RefCard href="/develop/api-reference/custom-components/st.components.v1.declare_component">
 
@@ -2498,6 +2584,8 @@ declare_component(
 
 </RefCard>
 
+*/}
+
 <RefCard href="/develop/api-reference/custom-components/st.components.v1.html">
 
 <h4>HTML</h4>
@@ -2505,13 +2593,12 @@ declare_component(
 Display an HTML string in an iframe.
 
 ```java
-from st.components.v1 import html
-html(
-    "<p>Foo bar.</p>"
-)
+Jt.html("<p>Foo bar.</p>").use();
 ```
 
 </RefCard>
+
+{/*
 
 <RefCard href="/develop/api-reference/custom-components/st.components.v1.iframe">
 
@@ -2528,7 +2615,11 @@ iframe(
 
 </RefCard>
 
+*/}
+
 </TileContainer>
+
+{/*
 
 ### Configuration
 
@@ -2587,6 +2678,8 @@ st.set_page_config(
 </RefCard>
 </TileContainer>
 
+*/}
+
 ## Developer tools
 
 ### App testing
@@ -2595,25 +2688,24 @@ st.set_page_config(
 
 <TileContainer>
 
-<RefCard href="/develop/api-reference/app-testing/st.testing.v1.apptest" size="full">
+<RefCard href="/develop/concepts/app-testing" size="full">
 
-<h4>st.testing.v1.AppTest</h4>
+<h4>App Testing</h4>
 
-`st.testing.v1.AppTest` simulates a running Jeamlit app for testing.
+Learn how to test your Jeamlit applications with unit tests, integration tests, and automated testing frameworks. Ensure your apps work correctly across different scenarios and user interactions.
 
 ```java
-from streamlit.testing.v1 import AppTest
-
-at = AppTest.from_file("streamlit_app.py")
-at.secrets["WORD"] = "Foobar"
-at.run()
-assert not at.exception
-
-at.text_input("word").input("Bazbat").run()
-assert at.warning[0].value == "Try again."
+@Test
+public void testButtonIsVisible() {
+    PlaywrightUtils.runInSharedBrowser(testInfo, app, page -> {
+        assertThat(page.locator("jt-button").first()).isVisible(WAIT_1_SEC_MAX);
+    });
+}
 ```
 
 </RefCard>
+
+{/*
 
 <RefCard href="/develop/api-reference/app-testing/st.testing.v1.apptest#apptestfrom_file" size="full">
 
@@ -2880,7 +2972,11 @@ at.toggle[0].set_value("True").run()
 
 </RefCard>
 
+*/}
+
 </TileContainer>
+
+{/*
 
 <ComponentSlider>
 
@@ -2936,3 +3032,5 @@ with streamlit_analytics.track():
 </ComponentCard>
 
 </ComponentSlider>
+
+*/}
