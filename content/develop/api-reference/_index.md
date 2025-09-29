@@ -14,6 +14,8 @@ Browse our API below and click to learn more about any of our available commands
 
 ## Display almost anything
 
+{/*
+
 ### Write and magic
 
 <br />
@@ -26,7 +28,7 @@ Browse our API below and click to learn more about any of our available commands
 
 Write arguments to the app.
 
-```python
+```java
 st.write("Hello **world**!")
 st.write(my_data_frame)
 st.write(my_mpl_figure)
@@ -39,7 +41,7 @@ st.write(my_mpl_figure)
 
 Write generators or streams to the app with a typewriter effect.
 
-```python
+```java
 st.write_stream(my_generator)
 st.write_stream(my_llm_stream)
 ```
@@ -51,7 +53,7 @@ st.write_stream(my_llm_stream)
 
 Any time Jeamlit sees either a variable or literal value on its own line, it automatically writes that to your app using `st.write`
 
-```python
+```java
 "Hello **world**!"
 my_data_frame
 my_mpl_figure
@@ -59,6 +61,8 @@ my_mpl_figure
 
 </RefCard>
 </TileContainer>
+
+*/}
 
 ### Text elements
 
@@ -73,8 +77,8 @@ my_mpl_figure
 
 Display string formatted as Markdown.
 
-```python
-st.markdown("Hello **world**!")
+```java
+Jt.markdown("Hello **world**!").use();
 ```
 
 </RefCard>
@@ -86,9 +90,11 @@ st.markdown("Hello **world**!")
 
 Display text in title formatting.
 
-```python
-st.title("The app title")
+```java
+Jt.title("The app title").use();
 ```
+
+{/*
 
 </RefCard>
 <RefCard href="/develop/api-reference/text/st.header">
@@ -99,7 +105,7 @@ st.title("The app title")
 
 Display text in header formatting.
 
-```python
+```java
 st.header("This is a header")
 ```
 
@@ -112,7 +118,7 @@ st.header("This is a header")
 
 Display text in subheader formatting.
 
-```python
+```java
 st.subheader("This is a subheader")
 ```
 
@@ -125,7 +131,7 @@ st.subheader("This is a subheader")
 
 Display a small, colored badge.
 
-```python
+```java
 st.badge("New")
 ```
 
@@ -138,9 +144,11 @@ st.badge("New")
 
 Display text in small font.
 
-```python
+```java
 st.caption("This is written small caption text")
 ```
+
+*/}
 
 </RefCard>
 <RefCard href="/develop/api-reference/text/st.code">
@@ -151,9 +159,11 @@ st.caption("This is written small caption text")
 
 Display a code block with optional syntax highlighting.
 
-```python
-st.code("a = 1234")
+```java
+Jt.code("a = 1234").use();
 ```
+
+{/*
 
 </RefCard>
 <RefCard href="/develop/api-reference/text/st.echo">
@@ -164,7 +174,7 @@ st.code("a = 1234")
 
 Display some code in the app, then execute it. Useful for tutorials.
 
-```python
+```java
 with st.echo():
   st.write('This code will be printed')
 ```
@@ -178,9 +188,11 @@ with st.echo():
 
 Display mathematical expressions formatted as LaTeX.
 
-```python
+```java
 st.latex("\int a x^2 \,dx")
 ```
+
+*/}
 
 </RefCard>
 <RefCard href="/develop/api-reference/text/st.text">
@@ -191,8 +203,8 @@ st.latex("\int a x^2 \,dx")
 
 Write fixed-width and preformatted text.
 
-```python
-st.text("Hello world")
+```java
+Jt.text("Hello world").use();
 ```
 
 </RefCard>
@@ -204,9 +216,11 @@ st.text("Hello world")
 
 Display a horizontal rule.
 
-```python
-st.divider()
+```java
+Jt.divider().use();
 ```
+
+{/*
 
 </RefCard>
 <RefCard href="/develop/api-reference/text/st.help">
@@ -215,10 +229,12 @@ st.divider()
 
 Display object’s doc string, nicely formatted.
 
-```python
+```java
 st.help(st.write)
 st.help(pd.DataFrame)
 ```
+
+*/}
 
 </RefCard>
 <RefCard href="/develop/api-reference/text/st.html">
@@ -227,12 +243,15 @@ st.help(pd.DataFrame)
 
 Renders HTML strings to your app.
 
-```python
-st.html("<p>Foo bar.</p>")
+```java
+Jt.html("<p>Foo bar.</p>").use();
 ```
 
 </RefCard>
+
 </TileContainer>
+
+{/*
 
 <ComponentSlider>
 <ComponentCard href="https://github.com/tvst/st-annotated-text">
@@ -243,7 +262,7 @@ st.html("<p>Foo bar.</p>")
 
 Display annotated text in Jeamlit apps. Created by [@tvst](https://github.com/tvst).
 
-```python
+```java
 annotated_text("This ", ("is", "verb"), " some ", ("annotated", "adj"), ("text", "noun"), " for those of ", ("you", "pronoun"), " who ", ("like", "verb"), " this sort of ", ("thing", "noun"), ".")
 ```
 
@@ -257,7 +276,7 @@ annotated_text("This ", ("is", "verb"), " some ", ("annotated", "adj"), ("text",
 
 Provides a sketching canvas using [Fabric.js](http://fabricjs.com/). Created by [@andfanilo](https://github.com/andfanilo).
 
-```python
+```java
 st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke_color=stroke_color, background_color=bg_color, background_image=Image.open(bg_image) if bg_image else None, update_streamlit=realtime_update, height=150, drawing_mode=drawing_mode, point_display_radius=point_display_radius if drawing_mode == 'point' else 0, key="canvas",)
 ```
 
@@ -271,7 +290,7 @@ st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke
 
 Add tags to your Jeamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
 
-```python
+```java
 st_tags(label='# Enter Keywords:', text='Press enter to add more', value=['Zero', 'One', 'Two'], suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'], maxtags = 4, key='1')
 ```
 
@@ -285,7 +304,7 @@ st_tags(label='# Enter Keywords:', text='Press enter to add more', value=['Zero'
 
 Apply text mining on a dataframe. Created by [@JohnSnowLabs](https://github.com/JohnSnowLabs/).
 
-```python
+```java
 nlu.load("sentiment").predict("I love NLU! <3")
 ```
 
@@ -299,18 +318,23 @@ nlu.load("sentiment").predict("I love NLU! <3")
 
 A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
-```python
+```java
 mention(label="An awesome Jeamlit App", icon="streamlit",  url="https://extras.streamlit.app",)
 ```
 
 </ComponentCard>
 </ComponentSlider>
 
+*/}
+
 ### Data elements
 
 <br />
 
 <TileContainer>
+
+{/*
+
 <RefCard href="/develop/api-reference/data/st.dataframe">
 <Image pure alt="screenshot" src="/images/api/dataframe.jpg" />
 
@@ -318,7 +342,7 @@ mention(label="An awesome Jeamlit App", icon="streamlit",  url="https://extras.s
 
 Display a dataframe as an interactive table.
 
-```python
+```java
 st.dataframe(my_data_frame)
 ```
 
@@ -331,7 +355,7 @@ st.dataframe(my_data_frame)
 
 Display a data editor widget.
 
-```python
+```java
 edited = st.data_editor(df, num_rows="dynamic")
 ```
 
@@ -344,11 +368,13 @@ edited = st.data_editor(df, num_rows="dynamic")
 
 Configure the display and editing behavior of dataframes and data editors.
 
-```python
+```java
 st.column_config.NumberColumn("Price (in USD)", min_value=0, format="$%d")
 ```
 
 </RefCard>
+
+*/}
 
 <RefCard href="/develop/api-reference/data/st.table">
 <Image pure alt="screenshot" src="/images/api/table.jpg" />
@@ -357,11 +383,14 @@ st.column_config.NumberColumn("Price (in USD)", min_value=0, format="$%d")
 
 Display a static table.
 
-```python
-st.table(my_data_frame)
+```java
+Jt.table(my_data).use();
 ```
 
 </RefCard>
+
+{/*
+
 <RefCard href="/develop/api-reference/data/st.metric">
 <Image pure alt="screenshot" src="/images/api/metric.jpg" />
 
@@ -369,7 +398,7 @@ st.table(my_data_frame)
 
 Display a metric in big bold font, with an optional indicator of how the metric changed.
 
-```python
+```java
 st.metric("My metric", 42, 2)
 ```
 
@@ -381,13 +410,17 @@ st.metric("My metric", 42, 2)
 
 Display object or string as a pretty-printed JSON string.
 
-```python
+```java
 st.json(my_dict)
 ```
 
 </RefCard>
+
+*/}
+
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/PablocFonseca/streamlit-aggrid">
@@ -398,7 +431,7 @@ st.json(my_dict)
 
 Implementation of Ag-Grid component for Jeamlit. Created by [@PablocFonseca](https://github.com/PablocFonseca).
 
-```python
+```java
 df = pd.DataFrame({'col1': [1, 2, 3], 'col2': [4, 5, 6]})
 grid_return = AgGrid(df, editable=True)
 
@@ -415,7 +448,7 @@ new_df = grid_return['data']
 
 Jeamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
 
-```python
+```java
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
 folium.Marker([39.949610, -75.150282], popup="Liberty Bell", tooltip="Liberty Bell").add_to(m)
 
@@ -432,7 +465,7 @@ st_data = st_folium(m, width=725)
 
 Pandas profiling component for Jeamlit. Created by [@okld](https://github.com/okld/).
 
-```python
+```java
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
 pr = df.profile_report()
 
@@ -449,7 +482,7 @@ st_profile_report(pr)
 
 Get the coordinates of clicks on an image. Created by [@blackary](https://github.com/blackary/).
 
-```python
+```java
 from streamlit_image_coordinates import streamlit_image_coordinates
 value = streamlit_image_coordinates("https://placekitten.com/200/300")
 
@@ -466,7 +499,7 @@ st.write(value)
 
 Make Plotly charts interactive!. Created by [@null-jones](https://github.com/null-jones/).
 
-```python
+```java
 from streamlit_plotly_events import plotly_events
 fig = px.line(x=[1], y=[1])
 
@@ -483,7 +516,7 @@ selected_points = plotly_events(fig)
 
 A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
-```python
+```java
 from streamlit_extras.metric_cards import style_metric_cards
 col3.metric(label="No Change", value=5000, delta=0)
 
@@ -494,11 +527,30 @@ style_metric_cards()
 
 </ComponentSlider>
 
+*/}
+
 ### Chart elements
 
 <br />
 
 <TileContainer>
+
+<RefCard href="/develop/api-reference/charts/jt.echarts">
+
+<Image pure alt="screenshot" src="/images/api/components/echarts.jpg" />
+
+<h4>ECharts</h4>
+
+Display a chart using the Apache ECharts library.
+
+```java
+Jt.echarts(myChartConfig).use();
+```
+
+</RefCard>
+
+
+{/*
 
 <RefCard href="/develop/api-reference/charts/st.area_chart">
 <Image pure alt="screenshot" src="/images/api/area_chart.jpg" />
@@ -507,7 +559,7 @@ style_metric_cards()
 
 Display an area chart.
 
-```python
+```java
 st.area_chart(my_data_frame)
 ```
 
@@ -519,7 +571,7 @@ st.area_chart(my_data_frame)
 
 Display a bar chart.
 
-```python
+```java
 st.bar_chart(my_data_frame)
 ```
 
@@ -531,7 +583,7 @@ st.bar_chart(my_data_frame)
 
 Display a line chart.
 
-```python
+```java
 st.line_chart(my_data_frame)
 ```
 
@@ -543,7 +595,7 @@ st.line_chart(my_data_frame)
 
 Display a line chart.
 
-```python
+```java
 st.scatter_chart(my_data_frame)
 ```
 
@@ -555,7 +607,7 @@ st.scatter_chart(my_data_frame)
 
 Display a map with points on it.
 
-```python
+```java
 st.map(my_data_frame)
 ```
 
@@ -567,7 +619,7 @@ st.map(my_data_frame)
 
 Display a matplotlib.pyplot figure.
 
-```python
+```java
 st.pyplot(my_mpl_figure)
 ```
 
@@ -579,7 +631,7 @@ st.pyplot(my_mpl_figure)
 
 Display a chart using the Altair library.
 
-```python
+```java
 st.altair_chart(my_altair_chart)
 ```
 
@@ -591,7 +643,7 @@ st.altair_chart(my_altair_chart)
 
 Display a chart using the Vega-Lite library.
 
-```python
+```java
 st.vega_lite_chart(my_vega_lite_chart)
 ```
 
@@ -603,7 +655,7 @@ st.vega_lite_chart(my_vega_lite_chart)
 
 Display an interactive Plotly chart.
 
-```python
+```java
 st.plotly_chart(my_plotly_chart)
 ```
 
@@ -615,7 +667,7 @@ st.plotly_chart(my_plotly_chart)
 
 Display an interactive Bokeh chart.
 
-```python
+```java
 st.bokeh_chart(my_bokeh_chart)
 ```
 
@@ -627,7 +679,7 @@ st.bokeh_chart(my_bokeh_chart)
 
 Display a chart using the PyDeck library.
 
-```python
+```java
 st.pydeck_chart(my_pydeck_chart)
 ```
 
@@ -639,13 +691,17 @@ st.pydeck_chart(my_pydeck_chart)
 
 Display a graph using the dagre-d3 library.
 
-```python
+```java
 st.graphviz_chart(my_graphviz_spec)
 ```
 
 </RefCard>
+
+*/}
+
 </TileContainer>
 
+{/*
 <ComponentSlider>
 
 <ComponentCard href="https://github.com/tvst/plost">
@@ -656,7 +712,7 @@ st.graphviz_chart(my_graphviz_spec)
 
 A deceptively simple plotting library for Jeamlit. Created by [@tvst](https://github.com/tvst).
 
-```python
+```java
 import plost
 plost.line_chart(my_dataframe, x='time', y='stock_value', color='stock_name',)
 ```
@@ -671,7 +727,7 @@ plost.line_chart(my_dataframe, x='time', y='stock_value', color='stock_name',)
 
 High dimensional Interactive Plotting. Created by [@facebookresearch](https://github.com/facebookresearch).
 
-```python
+```java
 data = [{'dropout':0.1, 'lr': 0.001, 'loss': 10.0, 'optimizer': 'SGD'}, {'dropout':0.15, 'lr': 0.01, 'loss': 3.5, 'optimizer': 'Adam'}, {'dropout':0.3, 'lr': 0.1, 'loss': 4.5, 'optimizer': 'Adam'}]
 hip.Experiment.from_iterable(data).display()
 ```
@@ -686,7 +742,7 @@ hip.Experiment.from_iterable(data).display()
 
 High dimensional Interactive Plotting. Created by [@andfanilo](https://github.com/andfanilo).
 
-```python
+```java
 from streamlit_echarts import st_echarts
 st_echarts(options=options)
 ```
@@ -701,7 +757,7 @@ st_echarts(options=options)
 
 Jeamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
 
-```python
+```java
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
 st_data = st_folium(m, width=725)
 ```
@@ -716,7 +772,7 @@ st_data = st_folium(m, width=725)
 
 spaCy building blocks and visualizers for Jeamlit apps. Created by [@explosion](https://github.com/explosion).
 
-```python
+```java
 models = ["en_core_web_sm", "en_core_web_md"]
 spacy_streamlit.visualize(models, "Sundar Pichai is the CEO of Google.")
 ```
@@ -731,7 +787,7 @@ spacy_streamlit.visualize(models, "Sundar Pichai is the CEO of Google.")
 
 A Jeamlit Graph Vis, based on [react-grah-vis](https://github.com/crubier/react-graph-vis). Created by [@ChrisDelClea](https://github.com/ChrisDelClea).
 
-```python
+```java
 from streamlit_agraph import agraph, Node, Edge, Config
 agraph(nodes=nodes, edges=edges, config=config)
 ```
@@ -746,7 +802,7 @@ agraph(nodes=nodes, edges=edges, config=config)
 
 Integrate [Lottie](https://lottiefiles.com/) animations inside your Jeamlit app. Created by [@andfanilo](https://github.com/andfanilo).
 
-```python
+```java
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
 st_lottie(lottie_hello, key="hello")
 ```
@@ -761,7 +817,7 @@ st_lottie(lottie_hello, key="hello")
 
 Make Plotly charts interactive!. Created by [@null-jones](https://github.com/null-jones/).
 
-```python
+```java
 fig = px.line(x=[1], y=[1])
 selected_points = plotly_events(fig)
 ```
@@ -776,7 +832,7 @@ selected_points = plotly_events(fig)
 
 A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
-```python
+```java
 chart += get_annotations_chart(annotations=[("Mar 01, 2008", "Pretty good day for GOOG"), ("Dec 01, 2007", "Something's going wrong for GOOG & AAPL"), ("Nov 01, 2008", "Market starts again thanks to..."), ("Dec 01, 2009", "Small crash for GOOG after..."),],)
 st.altair_chart(chart, use_container_width=True)
 ```
@@ -784,6 +840,8 @@ st.altair_chart(chart, use_container_width=True)
 </ComponentCard>
 
 </ComponentSlider>
+
+*/}
 
 ### Input widgets
 
@@ -798,7 +856,7 @@ st.altair_chart(chart, use_container_width=True)
 
 Display a button widget.
 
-```python
+```java
 clicked = st.button("Click me")
 ```
 
@@ -811,7 +869,7 @@ clicked = st.button("Click me")
 
 Display a download button widget.
 
-```python
+```java
 st.download_button("Download file", file)
 ```
 
@@ -824,7 +882,7 @@ st.download_button("Download file", file)
 
 Display a form submit button. For use with `st.form`.
 
-```python
+```java
 st.form_submit_button("Sign up")
 ```
 
@@ -837,7 +895,7 @@ st.form_submit_button("Sign up")
 
 Display a link button.
 
-```python
+```java
 st.link_button("Go to gallery", url)
 ```
 
@@ -850,7 +908,7 @@ st.link_button("Go to gallery", url)
 
 Display a link to another page in a multipage app.
 
-```python
+```java
 st.page_link("app.py", label="Home", icon="🏠")
 st.page_link("pages/profile.py", label="My profile")
 ```
@@ -864,7 +922,7 @@ st.page_link("pages/profile.py", label="My profile")
 
 Display a checkbox widget.
 
-```python
+```java
 selected = st.checkbox("I agree")
 ```
 
@@ -877,7 +935,7 @@ selected = st.checkbox("I agree")
 
 Display a color picker widget.
 
-```python
+```java
 color = st.color_picker("Pick a color")
 ```
 
@@ -890,7 +948,7 @@ color = st.color_picker("Pick a color")
 
 Display a rating or sentiment button group.
 
-```python
+```java
 st.feedback("stars")
 ```
 
@@ -903,7 +961,7 @@ st.feedback("stars")
 
 Display a multiselect widget. The multiselect widget starts as empty.
 
-```python
+```java
 choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
 ```
 
@@ -916,7 +974,7 @@ choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
 
 Display a pill-button selection widget.
 
-```python
+```java
 st.pills("Tags", ["Sports", "AI", "Politics"])
 ```
 
@@ -929,7 +987,7 @@ st.pills("Tags", ["Sports", "AI", "Politics"])
 
 Display a radio button widget.
 
-```python
+```java
 choice = st.radio("Pick one", ["cats", "dogs"])
 ```
 
@@ -942,7 +1000,7 @@ choice = st.radio("Pick one", ["cats", "dogs"])
 
 Display a segmented-button selection widget.
 
-```python
+```java
 st.segmented_control("Filter", ["Open", "Closed", "All"])
 ```
 
@@ -955,7 +1013,7 @@ st.segmented_control("Filter", ["Open", "Closed", "All"])
 
 Display a select widget.
 
-```python
+```java
 choice = st.selectbox("Pick one", ["cats", "dogs"])
 ```
 
@@ -968,7 +1026,7 @@ choice = st.selectbox("Pick one", ["cats", "dogs"])
 
 Display a slider widget to select items from a list.
 
-```python
+```java
 size = st.select_slider("Pick a size", ["S", "M", "L"])
 ```
 
@@ -981,7 +1039,7 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 
 Display a toggle widget.
 
-```python
+```java
 activated = st.toggle("Activate")
 ```
 
@@ -994,7 +1052,7 @@ activated = st.toggle("Activate")
 
 Display a numeric input widget.
 
-```python
+```java
 choice = st.number_input("Pick a number", 0, 10)
 ```
 
@@ -1007,7 +1065,7 @@ choice = st.number_input("Pick a number", 0, 10)
 
 Display a slider widget.
 
-```python
+```java
 number = st.slider("Pick a number", 0, 100)
 ```
 
@@ -1020,7 +1078,7 @@ number = st.slider("Pick a number", 0, 100)
 
 Display a date input widget.
 
-```python
+```java
 date = st.date_input("Your birthday")
 ```
 
@@ -1033,7 +1091,7 @@ date = st.date_input("Your birthday")
 
 Display a time input widget.
 
-```python
+```java
 time = st.time_input("Meeting time")
 ```
 
@@ -1046,7 +1104,7 @@ time = st.time_input("Meeting time")
 
 Display a chat input widget.
 
-```python
+```java
 prompt = st.chat_input("Say something")
 if prompt:
     st.write(f"The user has sent: {prompt}")
@@ -1061,7 +1119,7 @@ if prompt:
 
 Display a multi-line text input widget.
 
-```python
+```java
 text = st.text_area("Text to translate")
 ```
 
@@ -1074,7 +1132,7 @@ text = st.text_area("Text to translate")
 
 Display a single-line text input widget.
 
-```python
+```java
 name = st.text_input("First name")
 ```
 
@@ -1087,7 +1145,7 @@ name = st.text_input("First name")
 
 Display a widget that allows users to record with their microphone.
 
-```python
+```java
 speech = st.audio_input("Record a voice message")
 ```
 
@@ -1100,7 +1158,7 @@ speech = st.audio_input("Record a voice message")
 
 Display a data editor widget.
 
-```python
+```java
 edited = st.data_editor(df, num_rows="dynamic")
 ```
 
@@ -1113,7 +1171,7 @@ edited = st.data_editor(df, num_rows="dynamic")
 
 Display a file uploader widget.
 
-```python
+```java
 data = st.file_uploader("Upload a CSV")
 ```
 
@@ -1126,7 +1184,7 @@ data = st.file_uploader("Upload a CSV")
 
 Display a widget that allows users to upload images directly from a camera.
 
-```python
+```java
 image = st.camera_input("Take a picture")
 ```
 
@@ -1143,7 +1201,7 @@ image = st.camera_input("Take a picture")
 
 Create a draggable and resizable dashboard in Jeamlit. Created by [@okls](https://github.com/okls).
 
-```python
+```java
 from streamlit_elements import elements, mui, html
 
 with elements("new_element"):
@@ -1160,7 +1218,7 @@ with elements("new_element"):
 
 Add tags to your Jeamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
 
-```python
+```java
 from streamlit_tags import st_tags
 
 st_tags(label='# Enter Keywords:', text='Press enter to add more', value=['Zero', 'One', 'Two'],
@@ -1177,7 +1235,7 @@ suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 
 
 The simplest way to handle a progress bar in streamlit app. Created by [@Wirg](https://github.com/Wirg).
 
-```python
+```java
 from stqdm import stqdm
 
 for _ in stqdm(range(50)):
@@ -1194,7 +1252,7 @@ for _ in stqdm(range(50)):
 
 Display a Timeline in Jeamlit apps using [TimelineJS](https://timeline.knightlab.com/). Created by [@innerdoc](https://github.com/innerdoc).
 
-```python
+```java
 from streamlit_timeline import timeline
 
 with open('example.json', "r") as f:
@@ -1211,7 +1269,7 @@ with open('example.json', "r") as f:
 
 Alternative for st.camera_input which returns the webcam images live. Created by [@blackary](https://github.com/blackary).
 
-```python
+```java
 from camera_input_live import camera_input_live
 
 image = camera_input_live()
@@ -1228,7 +1286,7 @@ st.image(value)
 
 Ace editor component for Jeamlit. Created by [@okld](https://github.com/okld).
 
-```python
+```java
 from streamlit_ace import st_ace
 
 content = st_ace()
@@ -1245,7 +1303,7 @@ content
 
 Jeamlit Component for a Chatbot UI. Created by [@AI-Yash](https://github.com/AI-Yash).
 
-```python
+```java
 from streamlit_chat import message
 
 message("My message")
@@ -1262,7 +1320,7 @@ message("Hello bot!", is_user=True)  # align's the message to the right
 
 Select a single item from a list of options in a menu. Created by [@victoryhb](https://github.com/victoryhb).
 
-```python
+```java
 from streamlit_option_menu import option_menu
 
 option_menu("Main Menu", ["Home", 'Settings'],
@@ -1279,7 +1337,7 @@ option_menu("Main Menu", ["Home", 'Settings'],
 
 A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
-```python
+```java
 from streamlit_extras.stoggle import stoggle
 
 stoggle(
@@ -1303,7 +1361,7 @@ stoggle(
 
 Display an image or list of images.
 
-```python
+```java
 st.image(numpy_array)
 st.image(image_bytes)
 st.image(file)
@@ -1319,7 +1377,7 @@ st.image("https://example.com/myimage.jpg")
 
 Display a logo in the upper-left corner of your app and its sidebar.
 
-```python
+```java
 st.logo("logo.jpg")
 ```
 
@@ -1332,7 +1390,7 @@ st.logo("logo.jpg")
 
 Display a PDF file.
 
-```python
+```java
 st.pdf("my_document.pdf")
 ```
 
@@ -1345,7 +1403,7 @@ st.pdf("my_document.pdf")
 
 Display an audio player.
 
-```python
+```java
 st.audio(numpy_array)
 st.audio(audio_bytes)
 st.audio(file)
@@ -1361,7 +1419,7 @@ st.audio("https://example.com/myaudio.mp3", format="audio/mp3")
 
 Display a video player.
 
-```python
+```java
 st.video(numpy_array)
 st.video(video_bytes)
 st.video(file)
@@ -1381,7 +1439,7 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 
 Handling and transmitting real-time video/audio streams with Jeamlit. Created by [@whitphx](https://github.com/whitphx).
 
-```python
+```java
 from streamlit_webrtc import webrtc_streamer
 
 webrtc_streamer(key="sample")
@@ -1397,7 +1455,7 @@ webrtc_streamer(key="sample")
 
 Provides a sketching canvas using [Fabric.js](http://fabricjs.com/). Created by [@andfanilo](https://github.com/andfanilo).
 
-```python
+```java
 from streamlit_drawable_canvas import st_canvas
 
 st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke_color=stroke_color, background_color=bg_color, background_image=Image.open(bg_image) if bg_image else None, update_streamlit=realtime_update, height=150, drawing_mode=drawing_mode, point_display_radius=point_display_radius if drawing_mode == 'point' else 0, key="canvas",)
@@ -1413,7 +1471,7 @@ st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke
 
 Compare images with a slider using [JuxtaposeJS](https://juxtapose.knightlab.com/). Created by [@fcakyon](https://github.com/fcakyon).
 
-```python
+```java
 from streamlit_image_comparison import image_comparison
 
 image_comparison(img1="image1.jpg", img2="image2.jpg",)
@@ -1429,7 +1487,7 @@ image_comparison(img1="image1.jpg", img2="image2.jpg",)
 
 A simple image cropper for Jeamlit. Created by [@turner-anderson](https://github.com/turner-anderson).
 
-```python
+```java
 from streamlit_cropper import st_cropper
 
 st_cropper(img, realtime_update=realtime_update, box_color=box_color, aspect_ratio=aspect_ratio)
@@ -1445,7 +1503,7 @@ st_cropper(img, realtime_update=realtime_update, box_color=box_color, aspect_rat
 
 Get the coordinates of clicks on an image. Created by [@blackary](https://github.com/blackary/).
 
-```python
+```java
 from streamlit_image_coordinates import streamlit_image_coordinates
 
 streamlit_image_coordinates("https://placekitten.com/200/300")
@@ -1461,7 +1519,7 @@ streamlit_image_coordinates("https://placekitten.com/200/300")
 
 Integrate [Lottie](https://lottiefiles.com/) animations inside your Jeamlit app. Created by [@andfanilo](https://github.com/andfanilo).
 
-```python
+```java
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
 
 st_lottie(lottie_hello, key="hello")
@@ -1484,7 +1542,7 @@ st_lottie(lottie_hello, key="hello")
 
 Insert containers laid out as side-by-side columns.
 
-```python
+```java
 col1, col2 = st.columns(2)
 col1.write("this is column 1")
 col2.write("this is column 2")
@@ -1499,7 +1557,7 @@ col2.write("this is column 2")
 
 Insert a multi-element container.
 
-```python
+```java
 c = st.container()
 st.write("This will show last")
 c.write("This will show first")
@@ -1515,7 +1573,7 @@ c.write("This will show second")
 
 Insert a modal dialog that can rerun independently from the rest of the script.
 
-```python
+```java
 @st.dialog("Sign up")
 def email_form():
     name = st.text_input("Name")
@@ -1531,7 +1589,7 @@ def email_form():
 
 Insert a single-element container.
 
-```python
+```java
 c = st.empty()
 st.write("This will show last")
 c.write("This will be replaced")
@@ -1547,7 +1605,7 @@ c.write("This will show first")
 
 Insert a multi-element container that can be expanded/collapsed.
 
-```python
+```java
 with st.expander("Open to see more"):
   st.write("This is more content")
 ```
@@ -1561,7 +1619,7 @@ with st.expander("Open to see more"):
 
 Insert a multi-element popover container that can be opened/closed.
 
-```python
+```java
 with st.popover("Settings"):
   st.checkbox("Show completed")
 ```
@@ -1575,7 +1633,7 @@ with st.popover("Settings"):
 
 Display items in a sidebar.
 
-```python
+```java
 st.sidebar.write("This lives in the sidebar")
 st.sidebar.button("Click me!")
 ```
@@ -1589,7 +1647,7 @@ st.sidebar.button("Click me!")
 
 Insert containers separated into tabs.
 
-```python
+```java
 tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
 tab1.write("this is tab 1")
 tab2.write("this is tab 2")
@@ -1608,7 +1666,7 @@ tab2.write("this is tab 2")
 
 Create a draggable and resizable dashboard in Jeamlit. Created by [@okls](https://github.com/okls).
 
-```python
+```java
 from streamlit_elements import elements, mui, html
 
 with elements("new_element"):
@@ -1625,7 +1683,7 @@ with elements("new_element"):
 
 Auto-generate Jeamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
 
-```python
+```java
 import streamlit_pydantic as sp
 
 sp.pydantic_form(key="my_form",
@@ -1642,7 +1700,7 @@ sp.pydantic_form(key="my_form",
 
 An experimental version of Jeamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
 
-```python
+```java
 from st_pages import Page, show_pages, add_page_title
 
 show_pages([ Page("streamlit_app.py", "Home", "🏠"),
@@ -1670,7 +1728,7 @@ Jeamlit provides a few commands to help you build conversational apps. These cha
 
 Display a chat input widget.
 
-```python
+```java
 prompt = st.chat_input("Say something")
 if prompt:
     st.write(f"The user has sent: {prompt}")
@@ -1685,7 +1743,7 @@ if prompt:
 
 Insert a chat message container.
 
-```python
+```java
 import numpy as np
 with st.chat_message("user"):
     st.write("Hello 👋")
@@ -1701,7 +1759,7 @@ with st.chat_message("user"):
 
 Display output of long-running tasks in a container.
 
-```python
+```java
 with st.status('Running'):
   do_something_slow()
 ```
@@ -1713,7 +1771,7 @@ with st.status('Running'):
 
 Write generators or streams to the app with a typewriter effect.
 
-```python
+```java
 st.write_stream(my_generator)
 st.write_stream(my_llm_stream)
 ```
@@ -1734,7 +1792,7 @@ st.write_stream(my_llm_stream)
 
 Display a progress bar.
 
-```python
+```java
 for i in range(101):
   st.progress(i)
   do_something_slow()
@@ -1749,7 +1807,7 @@ for i in range(101):
 
 Temporarily displays a message while executing a block of code.
 
-```python
+```java
 with st.spinner("Please wait..."):
   do_something_slow()
 ```
@@ -1763,7 +1821,7 @@ with st.spinner("Please wait..."):
 
 Display output of long-running tasks in a container.
 
-```python
+```java
 with st.status('Running'):
   do_something_slow()
 ```
@@ -1777,7 +1835,7 @@ with st.status('Running'):
 
 Briefly displays a toast message in the bottom-right corner.
 
-```python
+```java
 st.toast('Butter!', icon='🧈')
 ```
 
@@ -1790,7 +1848,7 @@ st.toast('Butter!', icon='🧈')
 
 Display celebratory balloons!
 
-```python
+```java
 do_something()
 
 # Celebrate when all done!
@@ -1806,7 +1864,7 @@ st.balloons()
 
 Display celebratory snowflakes!
 
-```python
+```java
 do_something()
 
 # Celebrate when all done!
@@ -1822,7 +1880,7 @@ st.snow()
 
 Display a success message.
 
-```python
+```java
 st.success("Match found!")
 ```
 
@@ -1835,7 +1893,7 @@ st.success("Match found!")
 
 Display an informational message.
 
-```python
+```java
 st.info("Dataset is updated every day at midnight.")
 ```
 
@@ -1848,7 +1906,7 @@ st.info("Dataset is updated every day at midnight.")
 
 Display warning message.
 
-```python
+```java
 st.warning("Unable to fetch image. Skipping...")
 ```
 
@@ -1861,7 +1919,7 @@ st.warning("Unable to fetch image. Skipping...")
 
 Display error message.
 
-```python
+```java
 st.error("We encountered an error")
 ```
 
@@ -1874,7 +1932,7 @@ st.error("We encountered an error")
 
 Display an exception.
 
-```python
+```java
 e = RuntimeError("This is an exception of type RuntimeError")
 st.exception(e)
 ```
@@ -1893,7 +1951,7 @@ st.exception(e)
 
 The simplest way to handle a progress bar in streamlit app. Created by [@Wirg](https://github.com/Wirg).
 
-```python
+```java
 from stqdm import stqdm
 
 for _ in stqdm(range(50)):
@@ -1910,7 +1968,7 @@ for _ in stqdm(range(50)):
 
 A custom notification box with the ability to close it out. Created by [@Socvest](https://github.com/Socvest).
 
-```python
+```java
 from streamlit_custom_notification_box import custom_notification_box
 
 styles = {'material-icons':{'color': 'red'}, 'text-icon-link-close-container': {'box-shadow': '#3896de 0px 4px'}, 'notification-text': {'':''}, 'close-button':{'':''}, 'link':{'':''}}
@@ -1927,7 +1985,7 @@ custom_notification_box(icon='info', textDisplay='We are almost done with your r
 
 A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
-```python
+```java
 from streamlit_extras.let_it_rain import rain
 
 rain(emoji="🎈", font_size=54,
@@ -1951,7 +2009,7 @@ rain(emoji="🎈", font_size=54,
 
 `st.login()` starts an authentication flow with an identity provider.
 
-```python
+```java
 st.login()
 ```
 
@@ -1962,7 +2020,7 @@ st.login()
 
 `st.logout()` removes a user's identity information.
 
-```python
+```java
 st.logout()
 ```
 
@@ -1973,7 +2031,7 @@ st.logout()
 
 `st.user` returns information about a logged-in user.
 
-```python
+```java
 if st.user.is_logged_in:
   st.write(f"Welcome back, {st.user.name}!")
 ```
@@ -1995,7 +2053,7 @@ if st.user.is_logged_in:
 
 Configure the available pages in a multipage app.
 
-```python
+```java
 st.navigation({
     "Your account" : [log_out, settings],
     "Reports" : [overview, usage],
@@ -2013,7 +2071,7 @@ st.navigation({
 
 Define a page in a multipage app.
 
-```python
+```java
 home = st.Page(
     "home.py",
     title="Home",
@@ -2031,7 +2089,7 @@ home = st.Page(
 
 Display a link to another page in a multipage app.
 
-```python
+```java
 st.page_link("app.py", label="Home", icon="🏠")
 st.page_link("pages/profile.py", label="My profile")
 ```
@@ -2044,7 +2102,7 @@ st.page_link("pages/profile.py", label="My profile")
 
 Programmatically navigates to a specified page.
 
-```python
+```java
 st.switch_page("pages/my_page.py")
 ```
 
@@ -2065,7 +2123,7 @@ st.switch_page("pages/my_page.py")
 
 Insert a modal dialog that can rerun independently from the rest of the script.
 
-```python
+```java
 @st.dialog("Sign up")
 def email_form():
     name = st.text_input("Name")
@@ -2079,7 +2137,7 @@ def email_form():
 
 Create a form that batches elements together with a “Submit" button.
 
-```python
+```java
 with st.form(key='my_form'):
     name = st.text_input("Name")
     email = st.text_input("Email")
@@ -2093,7 +2151,7 @@ with st.form(key='my_form'):
 
 Define a fragment to rerun independently from the rest of the script.
 
-```python
+```java
 @st.fragment(run_every="10s")
 def fragment():
     df = get_data()
@@ -2107,7 +2165,7 @@ def fragment():
 
 Rerun the script immediately.
 
-```python
+```java
 st.rerun()
 ```
 
@@ -2118,7 +2176,7 @@ st.rerun()
 
 Stops execution immediately.
 
-```python
+```java
 st.stop()
 ```
 
@@ -2135,7 +2193,7 @@ st.stop()
 
 Force a refresh without tying up a script. Created by [@kmcgrady](https://github.com/kmcgrady).
 
-```python
+```java
 from streamlit_autorefresh import st_autorefresh
 
 st_autorefresh(interval=2000, limit=100,
@@ -2152,7 +2210,7 @@ st_autorefresh(interval=2000, limit=100,
 
 Auto-generate Jeamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
 
-```python
+```java
 import streamlit_pydantic as sp
 
 sp.pydantic_form(key="my_form",
@@ -2169,7 +2227,7 @@ sp.pydantic_form(key="my_form",
 
 An experimental version of Jeamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
 
-```python
+```java
 from st_pages import Page, show_pages, add_page_title
 
 show_pages([ Page("streamlit_app.py", "Home", "🏠"),
@@ -2191,7 +2249,7 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 
 Function decorator to cache functions that return data (e.g. dataframe transforms, database queries, ML inference).
 
-```python
+```java
 @st.cache_data
 def long_function(param1, param2):
   # Perform expensive computation here or
@@ -2207,7 +2265,7 @@ def long_function(param1, param2):
 
 Function decorator to cache functions that return global resources (e.g. database connections, ML models).
 
-```python
+```java
 @st.cache_resource
 def init_model():
   # Return a global resource here
@@ -2225,7 +2283,7 @@ def init_model():
 
 Session state is a way to share variables between reruns, for each user session.
 
-```python
+```java
 st.session_state['key'] = value
 ```
 
@@ -2237,7 +2295,7 @@ st.session_state['key'] = value
 
 Get, set, or clear the query parameters that are shown in the browser's URL bar.
 
-```python
+```java
 st.query_params[key] = value
 st.query_params.clear()
 ```
@@ -2249,7 +2307,7 @@ st.query_params.clear()
 
 `st.context` provides a read-only interface to access cookies, headers, locale, and other browser-session information.
 
-```python
+```java
 st.context.cookies
 st.context.headers
 ```
@@ -2271,7 +2329,7 @@ st.context.headers
 
 Connect to a data source or API
 
-```python
+```java
 conn = st.connection('pets_db', type='sql')
 pet_owners = conn.query('select * from pet_owners')
 st.dataframe(pet_owners)
@@ -2292,7 +2350,7 @@ st.dataframe(pet_owners)
 
 A connection to Snowflake.
 
-```python
+```java
 conn = st.connection('snowflake')
 ```
 
@@ -2306,7 +2364,7 @@ conn = st.connection('snowflake')
 
 A connection to a SQL database using SQLAlchemy.
 
-```python
+```java
 conn = st.connection('sql')
 ```
 
@@ -2322,7 +2380,7 @@ conn = st.connection('sql')
 
 Build your own connection with `BaseConnection`.
 
-```python
+```java
 class MyConnection(BaseConnection[myconn.MyConnection]):
     def _connect(self, **kwargs) -> MyConnection:
         return myconn.connect(**self._secrets, **kwargs)
@@ -2344,7 +2402,7 @@ class MyConnection(BaseConnection[myconn.MyConnection]):
 
 Access secrets from a local TOML file.
 
-```python
+```java
 key = st.secrets["OpenAI_key"]
 ```
 
@@ -2355,7 +2413,7 @@ key = st.secrets["OpenAI_key"]
 
 Save your secrets in a per-project or per-profile TOML file.
 
-```python
+```java
 OpenAI_key = "<YOUR_SECRET_KEY>"
 ```
 
@@ -2373,7 +2431,7 @@ OpenAI_key = "<YOUR_SECRET_KEY>"
 
 A secure authentication module to validate user credentials. Created by [@mkhorasani](https://github.com/mkhorasani).
 
-```python
+```java
 import streamlit_authenticator as stauth
 
 authenticator = stauth.Authenticate( config['credentials'], config['cookie']['name'],
@@ -2390,7 +2448,7 @@ config['cookie']['key'], config['cookie']['expiry_days'], config['preauthorized'
 
 A simple synchronous way of accessing localStorage from your app. Created by [@gagangoku](https://github.com/gagangoku).
 
-```python
+```java
 from streamlit_ws_localstorage import injectWebsocketCode
 
 ret = conn.setLocalStorageVal(key='k1', val='v1')
@@ -2407,7 +2465,7 @@ st.write('ret: ' + ret)
 
 The fastest way to provide comprehensive login inside Jeamlit. Created by [@conradbez](https://github.com/conradbez).
 
-```python
+```java
 from auth0_component import login_button
 
 user_info = login_button(clientId, domain = domain)
@@ -2430,7 +2488,7 @@ st.write(user_info)
 
 Create and register a custom component.
 
-```python
+```java
 from st.components.v1 import declare_component
 declare_component(
     "custom_slider",
@@ -2446,7 +2504,7 @@ declare_component(
 
 Display an HTML string in an iframe.
 
-```python
+```java
 from st.components.v1 import html
 html(
     "<p>Foo bar.</p>"
@@ -2461,7 +2519,7 @@ html(
 
 Load a remote URL in an iframe.
 
-```python
+```java
 from st.components.v1 import iframe
 iframe(
     "docs.jeamlit.io"
@@ -2497,7 +2555,7 @@ your-project/
 
 Retrieve a single configuration option.
 
-```python
+```java
 st.get_option("theme.primaryColor")
 ```
 
@@ -2508,7 +2566,7 @@ st.get_option("theme.primaryColor")
 
 Set a single configuration option. (This is very limited.)
 
-```python
+```java
 st.set_option("deprecation.showPyplotGlobalUse", False)
 ```
 
@@ -2519,7 +2577,7 @@ st.set_option("deprecation.showPyplotGlobalUse", False)
 
 Configures the default settings of the page.
 
-```python
+```java
 st.set_page_config(
   page_title="My app",
   page_icon=":shark:",
@@ -2543,7 +2601,7 @@ st.set_page_config(
 
 `st.testing.v1.AppTest` simulates a running Jeamlit app for testing.
 
-```python
+```java
 from streamlit.testing.v1 import AppTest
 
 at = AppTest.from_file("streamlit_app.py")
@@ -2563,7 +2621,7 @@ assert at.warning[0].value == "Try again."
 
 `st.testing.v1.AppTest.from_file` initializes a simulated app from a file.
 
-```python
+```java
 from streamlit.testing.v1 import AppTest
 
 at = AppTest.from_file("streamlit_app.py")
@@ -2578,7 +2636,7 @@ at.run()
 
 `st.testing.v1.AppTest.from_string` initializes a simulated app from a string.
 
-```python
+```java
 from streamlit.testing.v1 import AppTest
 
 at = AppTest.from_string(app_script_as_string)
@@ -2593,7 +2651,7 @@ at.run()
 
 `st.testing.v1.AppTest.from_function` initializes a simulated app from a function.
 
-```python
+```java
 from streamlit.testing.v1 import AppTest
 
 at = AppTest.from_function(app_script_as_callable)
@@ -2614,7 +2672,7 @@ A representation of container elements, including:
 - `st.tabs`
 - The main body of the app.
 
-```python
+```java
 # at.sidebar returns a Block
 at.sidebar.button[0].click().run()
 assert not at.exception
@@ -2633,7 +2691,7 @@ The base class for representation of all elements, including:
 - `st.markdown`
 - `st.dataframe`
 
-```python
+```java
 # at.title returns a sequence of Title
 # Title inherits from Element
 assert at.title[0].value == "My awesome app"
@@ -2647,7 +2705,7 @@ assert at.title[0].value == "My awesome app"
 
 A representation of `st.button` and `st.form_submit_button`.
 
-```python
+```java
 at.button[0].click().run()
 ```
 
@@ -2659,7 +2717,7 @@ at.button[0].click().run()
 
 A representation of `st.chat_input`.
 
-```python
+```java
 at.chat_input[0].set_value("What is Jeamlit?").run()
 ```
 
@@ -2671,7 +2729,7 @@ at.chat_input[0].set_value("What is Jeamlit?").run()
 
 A representation of `st.checkbox`.
 
-```python
+```java
 at.checkbox[0].check().run()
 ```
 
@@ -2683,7 +2741,7 @@ at.checkbox[0].check().run()
 
 A representation of `st.color_picker`.
 
-```python
+```java
 at.color_picker[0].pick("#FF4B4B").run()
 ```
 
@@ -2695,7 +2753,7 @@ at.color_picker[0].pick("#FF4B4B").run()
 
 A representation of `st.date_input`.
 
-```python
+```java
 release_date = datetime.date(2023, 10, 26)
 at.date_input[0].set_value(release_date).run()
 ```
@@ -2708,7 +2766,7 @@ at.date_input[0].set_value(release_date).run()
 
 A representation of `st.multiselect`.
 
-```python
+```java
 at.multiselect[0].select("New York").run()
 ```
 
@@ -2720,7 +2778,7 @@ at.multiselect[0].select("New York").run()
 
 A representation of `st.number_input`.
 
-```python
+```java
 at.number_input[0].increment().run()
 ```
 
@@ -2732,7 +2790,7 @@ at.number_input[0].increment().run()
 
 A representation of `st.radio`.
 
-```python
+```java
 at.radio[0].set_value("New York").run()
 ```
 
@@ -2744,7 +2802,7 @@ at.radio[0].set_value("New York").run()
 
 A representation of `st.select_slider`.
 
-```python
+```java
 at.select_slider[0].set_range("A","C").run()
 ```
 
@@ -2756,7 +2814,7 @@ at.select_slider[0].set_range("A","C").run()
 
 A representation of `st.selectbox`.
 
-```python
+```java
 at.selectbox[0].select("New York").run()
 ```
 
@@ -2768,7 +2826,7 @@ at.selectbox[0].select("New York").run()
 
 A representation of `st.slider`.
 
-```python
+```java
 at.slider[0].set_range(2,5).run()
 ```
 
@@ -2780,7 +2838,7 @@ at.slider[0].set_range(2,5).run()
 
 A representation of `st.text_area`.
 
-```python
+```java
 at.text_area[0].input("Jeamlit is awesome!").run()
 ```
 
@@ -2792,7 +2850,7 @@ at.text_area[0].input("Jeamlit is awesome!").run()
 
 A representation of `st.text_input`.
 
-```python
+```java
 at.text_input[0].input("Jeamlit").run()
 ```
 
@@ -2804,7 +2862,7 @@ at.text_input[0].input("Jeamlit").run()
 
 A representation of `st.time_input`.
 
-```python
+```java
 at.time_input[0].increment().run()
 ```
 
@@ -2816,7 +2874,7 @@ at.time_input[0].increment().run()
 
 A representation of `st.toggle`.
 
-```python
+```java
 at.toggle[0].set_value("True").run()
 ```
 
@@ -2834,7 +2892,7 @@ at.toggle[0].set_value("True").run()
 
 Pandas profiling component for Jeamlit. Created by [@okld](https://github.com/okld/).
 
-```python
+```java
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
 pr = df.profile_report()
 
@@ -2851,7 +2909,7 @@ st_profile_report(pr)
 
 Ace editor component for Jeamlit. Created by [@okld](https://github.com/okld).
 
-```python
+```java
 from streamlit_ace import st_ace
 
 content = st_ace()
@@ -2868,7 +2926,7 @@ content
 
 Track & visualize user interactions with your streamlit app. Created by [@jrieke](https://github.com/jrieke).
 
-```python
+```java
 import streamlit_analytics
 
 with streamlit_analytics.track():
