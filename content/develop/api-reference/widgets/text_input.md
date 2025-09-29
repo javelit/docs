@@ -4,8 +4,10 @@ slug: /develop/api-reference/widgets/jt.textinput
 description: Jt.textInput displays a single-line text input widget.
 ---
 
-<Autofunction function="streamlit.text_input" />
+<Autofunction function="Jt.textInput" />
 
+
+{/*
 <br />
 
 Text input widgets can customize how to hide their labels with the `label_visibility` parameter. If "hidden", the label doesn’t show but there is still empty space for it above the widget (equivalent to `label=""`). If "collapsed", both the label and the space are removed. Default is "visible". Text input widgets can also be disabled with the `disabled` parameter, and can display an optional placeholder text when the text input is empty using the `placeholder` parameter:
@@ -46,3 +48,5 @@ with col2:
 ```
 
 <Cloud name="doc-text-input1" height="400px" />
+
+*/}
