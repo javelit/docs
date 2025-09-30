@@ -1,6 +1,7 @@
 ---
 title: Dataframes
 slug: /develop/concepts/design/dataframes
+ignore: true
 ---
 
 # Dataframes

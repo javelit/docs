@@ -1,6 +1,7 @@
 ---
 title: Customize fonts
 slug: /develop/concepts/configuration/theming-customize-fonts
+ignore: true
 ---
 
 # Customize fonts in your Streamlit app

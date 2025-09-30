@@ -24,14 +24,6 @@ Learn about the preferred method for defining multipage apps. `st.Page` and `st.
 
 </RefCard>
 
-<RefCard href="/develop/concepts/multipage-apps/pages-directory">
-
-<h5>Creating multipage apps using the <code>pages/</code> directory</h5>
-
-Define your multipage apps through directory structure. Place additional Python files in a `pages/` directory alongside your entrypoint file and pages are automatically shown in a navigation widget inside your app's sidebar.
-
-</RefCard>
-
 <RefCard href="/develop/concepts/multipage-apps/widgets">
 
 <h5>Working with widgets in multipage apps</h5>

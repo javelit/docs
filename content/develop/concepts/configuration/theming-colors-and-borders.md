@@ -1,6 +1,7 @@
 ---
 title: Colors and borders
 slug: /develop/concepts/configuration/theming-customize-colors-and-borders
+ignore: true
 ---
 
 # Customize colors and borders in your Streamlit app

@@ -1,6 +1,7 @@
 ---
 title: User authentication and information
 slug: /develop/concepts/connections/authentication
+ignore: true
 ---
 
 # User authentication and information

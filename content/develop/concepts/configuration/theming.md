@@ -1,6 +1,7 @@
 ---
 title: Theming
 slug: /develop/concepts/configuration/theming
+ignore: true
 ---
 
 # Theming overview

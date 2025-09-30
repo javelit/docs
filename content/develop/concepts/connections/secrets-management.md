@@ -1,6 +1,7 @@
 ---
 title: Secrets management
 slug: /develop/concepts/connections/secrets-management
+ignore: true
 ---
 
 # Secrets management

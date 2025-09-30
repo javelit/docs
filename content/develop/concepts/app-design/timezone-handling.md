@@ -1,6 +1,7 @@
 ---
 title: Working with timezones
 slug: /develop/concepts/design/timezone-handling
+ignore: true
 ---
 
 # Working with timezones

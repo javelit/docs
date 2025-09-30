@@ -1,6 +1,7 @@
 ---
 title: Connecting to data
 slug: /develop/concepts/connections/connecting-to-data
+ignore: true
 ---
 
 # Connecting to data

@@ -1,6 +1,7 @@
 ---
 title: Working with configuration options
 slug: /develop/concepts/configuration/options
+ignore: true
 ---
 
 # Working with configuration options

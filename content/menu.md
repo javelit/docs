@@ -56,6 +56,8 @@ site_menu:
     url: /develop/concepts/architecture/forms
   - category: Develop / Concepts / Architecture and execution / Fragments
     url: /develop/concepts/architecture/fragments
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Architecture and execution/ Widget behavior
     url: /develop/concepts/architecture/widget-behavior
   - category: Develop / Concepts / Multipage apps
@@ -64,8 +66,6 @@ site_menu:
     url: /develop/concepts/multipage-apps/overview
   - category: Develop / Concepts / Multipage apps / Page and navigation
     url: /develop/concepts/multipage-apps/page-and-navigation
-  - category: Develop / Concepts / Multipage apps / Pages directory
-    url: /develop/concepts/multipage-apps/pages-directory
   - category: Develop / Concepts / Multipage apps / Working with widgets
     url: /develop/concepts/multipage-apps/widgets
   - category: Develop / Concepts / App design
@@ -76,23 +76,39 @@ site_menu:
     url: /develop/concepts/design/buttons
   - category: Develop / Concepts / App design / Dataframes
     url: /develop/concepts/design/dataframes
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App design / Multithreading
     url: /develop/concepts/design/multithreading
   - category: Develop / Concepts / App design / Using custom classes
     url: /develop/concepts/design/custom-classes
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App design / Working with timezones
     url: /develop/concepts/design/timezone-handling
+    visible: false
+    ignore: true
   - category: Develop / Concepts / ADDITIONAL
   - category: Develop / Concepts / Connections, secrets, and authentication
     url: /develop/concepts/connections
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Connections, secrets, and authentication / Connecting to data
     url: /develop/concepts/connections/connecting-to-data
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Connections, secrets, and authentication / Secrets management
     url: /develop/concepts/connections/secrets-management
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Connections, secrets, and authentication / User authentication
     url: /develop/concepts/connections/authentication
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Connections, secrets, and authentication / Security reminders
     url: /develop/concepts/connections/security-reminders
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Custom components
     url: /develop/concepts/custom-components
   - category: Develop / Concepts / Custom components / Intro to custom components
@@ -105,21 +121,39 @@ site_menu:
     url: /develop/concepts/custom-components/limitations
   - category: Develop / Concepts / Custom components / Component gallery
     url: https://streamlit.io/components
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming
     url: /develop/concepts/configuration
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / Configuration options
     url: /develop/concepts/configuration/options
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / HTTPS support
     url: /develop/concepts/configuration/https-support
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / Serving static files
     url: /develop/concepts/configuration/serving-static-files
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / THEMING
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / Customize your theme
     url: /develop/concepts/configuration/theming
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / Customize colors and borders
     url: /develop/concepts/configuration/theming-customize-colors-and-borders
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Configuration and theming / Customize fonts
     url: /develop/concepts/configuration/theming-customize-fonts
+    visible: false
+    ignore: true
   - category: Develop / Concepts / App testing
     url: /develop/concepts/app-testing
   - category: Develop / Concepts / App testing / Get started

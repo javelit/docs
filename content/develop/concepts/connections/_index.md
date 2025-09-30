@@ -1,6 +1,7 @@
 ---
 title: Working with connections, secrets, and user authentication
 slug: /develop/concepts/connections
+ignore: true
 ---
 
 # Working with connections, secrets, and user authentication

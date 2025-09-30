@@ -1,6 +1,7 @@
 ---
 title: HTTPS support
 slug: /develop/concepts/configuration/https-support
+ignore: true
 ---
 
 # HTTPS support

@@ -1,6 +1,7 @@
 ---
 title: Configure and customize your app
 slug: /develop/concepts/configuration
+ignore: true
 ---
 
 # Configure and customize your app

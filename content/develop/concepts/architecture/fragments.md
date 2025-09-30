@@ -1,6 +1,7 @@
 ---
 title: Working with fragments
 slug: /develop/concepts/architecture/fragments
+ignore: true
 ---
 
 # Working with fragments

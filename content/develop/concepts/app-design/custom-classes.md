@@ -1,6 +1,7 @@
 ---
 title: Using custom Python classes in your Streamlit app
 slug: /develop/concepts/design/custom-classes
+ignore: true
 ---
 
 # Using custom Python classes in your Streamlit app

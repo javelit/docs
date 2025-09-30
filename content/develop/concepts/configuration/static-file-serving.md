@@ -1,6 +1,7 @@
 ---
 title: Static file serving
 slug: /develop/concepts/configuration/serving-static-files
+ignore: true
 ---
 
 # Static file serving

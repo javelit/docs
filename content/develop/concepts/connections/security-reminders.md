@@ -1,6 +1,7 @@
 ---
 title: Security reminders
 slug: /develop/concepts/connections/security-reminders
+ignore: true
 ---
 
 # Security reminders
