@@ -7,7 +7,7 @@ const SummaryTiles = () => {
       <Tile
         icon="install_desktop"
         title="Setup and installation"
-        text="Get set up to start working with Streamlit."
+        text="Get set up to start working with Jeamlit."
         background="red-70"
         link="/get-started/installation"
       />
@@ -20,13 +20,15 @@ const SummaryTiles = () => {
         link="/develop/api-reference"
       />
 
+      {/* TODO CYRIL
       <Tile
         icon="grid_view"
         title="App gallery"
         text="Try out awesome apps created by our users, and curated from our forums or Twitter."
         background="green-70"
-        link="https://streamlit.io/gallery"
+        link="https://jeamlit.io/gallery"
       />
+      */}
     </TileContainer>
   );
 };

@@ -30,12 +30,12 @@ const SocialCallout = () => {
             <article>
               <h5 className={styles.Subtitle}>GitHub</h5>
               <p className={styles.Text}>
-                View the Streamlit source code and issue tracker.
+                View the Jeamlit source code and issue tracker.
               </p>
             </article>
           </a>
         </li>
-        {/* YouTube */}
+        {/* YouTube TODO
         <li className={`group ${styles.ListItem}`}>
           <a
             className={`${styles.Link} not-link`}
@@ -65,7 +65,8 @@ const SocialCallout = () => {
             </article>
           </a>
         </li>
-        {/* Twitter */}
+        */}
+        {/* Twitter TODO
         <li className={`group ${styles.ListItem}`}>
           <a
             className={`${styles.Link} not-link`}
@@ -95,7 +96,8 @@ const SocialCallout = () => {
             </article>
           </a>
         </li>
-        {/* LinkedIn */}
+        */}
+        {/* LinkedIn TODO
         <li className={`group ${styles.ListItem}`}>
           <a
             className={`${styles.Link} not-link`}
@@ -125,7 +127,8 @@ const SocialCallout = () => {
             </article>
           </a>
         </li>
-        {/* Newsletter */}
+        */}
+        {/* Newsletter TODO
         <li className={`group ${styles.ListItem}`}>
           <a
             className={`${styles.Link} not-link`}
@@ -158,6 +161,7 @@ const SocialCallout = () => {
             </article>
           </a>
         </li>
+        */}
       </ul>
     </section>
   );

@@ -73,8 +73,8 @@ export default function Home({ window, menu }) {
           rel="canonical"
           href={`https://${process.env.NEXT_PUBLIC_HOSTNAME}`}
         />
-        <meta content="Streamlit Docs" property="og:title" />
-        <meta content="Streamlit Docs" name="twitter:title" />
+        <meta content="Jeamlit Docs" property="og:title" />
+        <meta content="Jeamlit Docs" name="twitter:title" />
         {description && (
           <React.Fragment>
             <meta content={description} name="description" />
@@ -117,10 +117,10 @@ export default function Home({ window, menu }) {
           <article>
             <H1>Jeamlit documentation</H1>
             <p>
-              <a href="https://www.streamlit.io">Streamlit</a> is an open-source
-              Python framework for data scientists and AI/ML engineers to
-              deliver dynamic data apps with only a few lines of code. Build and
-              deploy powerful data apps in minutes. Let's get started!
+              <a href="https://jeamlit.io">Jeamlit</a> is an open-source Java
+              framework for data and backend engineers to deliver dynamic data
+              apps with only a few lines of code. Build and deploy powerful data
+              apps in minutes. Let's get started!
             </p>
 
             <Spacer size="2rem" />
@@ -144,8 +144,8 @@ export default function Home({ window, menu }) {
                 bold="Get started"
                 href="/get-started"
               >
-                with Streamlit! Set up your development environment and learn
-                the fundamental concepts, and start coding!
+                with Jeamlit! Set up your development environment and learn the
+                fundamental concepts, and start coding!
               </InlineCallout>
               <InlineCallout
                 color="yellow-80"
@@ -153,7 +153,7 @@ export default function Home({ window, menu }) {
                 bold="Develop"
                 href="/develop"
               >
-                your Streamlit app! Our API reference explains each Streamlit
+                your Jeamlit app! Our API reference explains each Jeamlit
                 function with examples. Dive deep into all of our features with
                 conceptual guides. Try out our step-by-step tutorials.
               </InlineCallout>
@@ -163,11 +163,11 @@ export default function Home({ window, menu }) {
                 bold="Deploy"
                 href="/deploy"
               >
-                your Streamlit app! Streamlit Community Cloud our free platform
-                for deploying and sharing Streamlit apps. Streamlit in Snowflake
+                your Jeamlit app!{" "}
+                {/* Jeamlit Community Cloud our free platform  for deploying and sharing Jeamlit apps. Jeamlit in Snowflake
                 is an enterprise-class solution where you can house your data
                 and apps in one, unified, global system. Explore all your
-                options!
+                options! */}
               </InlineCallout>
               <InlineCallout
                 color="acqua-100"
@@ -176,8 +176,7 @@ export default function Home({ window, menu }) {
                 href="/knowledge-base"
               >
                 is a self-serve library of tips, tricks, and articles that
-                answer your questions about creating and deploying Streamlit
-                apps.
+                answer your questions about creating and deploying Jeamlit apps.
               </InlineCallout>
               {/* <InlineCallout color="green-70" icon="code" bold="Cookbook" href="/cookbook">
                 provides short code snippets that you can copy in for specific use cases.
@@ -187,12 +186,13 @@ export default function Home({ window, menu }) {
               </InlineCallout> */}
             </InlineCalloutContainer>
 
-            <H2 className="no-b-m">What's new</H2>
+            {/*
 
+            <H2 className="no-b-m">What's new</H2>
             <TileContainer>
               <RefCard
                 size="third"
-                href="/develop/api-reference/media/st.pdf?utm_source=streamlit"
+                href="/develop/api-reference/media/st.pdf?utm_source=jeamlit"
               >
                 <i className="material-icons-sharp">description</i>
                 <h4>PDF viewer</h4>
@@ -202,7 +202,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/data/st.dataframe?utm_source=streamlit"
+                href="/develop/api-reference/data/st.dataframe?utm_source=jeamlit"
               >
                 <i className="material-icons-sharp">ads_click</i>
                 <h4>Dataframe cell selection</h4>
@@ -213,7 +213,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/data/st.metric?utm_source=streamlit"
+                href="/develop/api-reference/data/st.metric?utm_source=jeamlit"
               >
                 <i className="material-icons-sharp">show_chart</i>
                 <h4>Metric sparklines</h4>
@@ -223,7 +223,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/data/st.column_config/st.column_config.listcolumn?utm_source=streamlit"
+                href="/develop/api-reference/data/st.column_config/st.column_config.listcolumn?utm_source=jeamlit"
               >
                 <i className="material-icons-sharp">settings</i>
                 <h4>
@@ -235,7 +235,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/widgets/st.file_uploader?utm_source=streamlit"
+                href="/develop/api-reference/widgets/st.file_uploader?utm_source=jeamlit"
               >
                 <i className="material-icons-sharp">folder</i>
                 <h4>Directory upload</h4>
@@ -246,7 +246,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/status/st.toast?utm_source=streamlit"
+                href="/develop/api-reference/status/st.toast?utm_source=jeamlit"
               >
                 <i className="material-icons-sharp">timer</i>
                 <h4>Toast duration</h4>
@@ -255,24 +255,27 @@ export default function Home({ window, menu }) {
                 </p>
               </RefCard>
             </TileContainer>
+            */}
+
+            {/*
 
             <H2 className="no-b-m">Latest blog posts</H2>
-
             <NewsContainer>
               <NewsFeed />
 
-              <Button link="https://blog.streamlit.io/" target="_blank">
+              <Button link="https://blog.jeamlit.io/" target="_blank">
                 View all updates
               </Button>
             </NewsContainer>
+            */}
 
             <NoteSplit
               background="gray-20"
               title="Join the community"
-              copy="Streamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas and help each other make their work better. Please come join us on the community forum. We love to hear your questions, ideas, and help you work through your bugs — stop by today!"
+              copy="Jeamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas, contribute to the codebase and help each other make their work better. Please come join us on the community forum. We love to hear your questions, ideas, and help you work through your bugs — stop by today!"
               button={{
                 text: "View forum",
-                link: "https://discuss.streamlit.io",
+                link: "https://github.com/jeamlit/jeamlit/discussions/",
                 target: "_blank",
               }}
               image="/join.png"

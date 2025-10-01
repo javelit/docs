@@ -1,6 +1,7 @@
 ---
 title: secrets.toml
 slug: /develop/api-reference/connections/secrets.toml
+ignore: true
 ---
 
 ## secrets.toml

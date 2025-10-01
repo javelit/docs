@@ -1,6 +1,7 @@
 ---
 title: Connections and databases
 slug: /develop/api-reference/connections
+ignore: true
 ---
 
 # Connections and databases

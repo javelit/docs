@@ -1,6 +1,7 @@
 ---
 title: st.secrets
 slug: /develop/api-reference/connections/st.secrets
+ignore: true
 ---
 
 ## st.secrets

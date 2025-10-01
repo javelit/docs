@@ -810,15 +810,19 @@ site_menu:
   - category: Develop / API reference / Connections and secrets
     url: /develop/api-reference/connections
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / SECRETS
   - category: Develop / API reference / Connections and secrets / st.secrets
     url: /develop/api-reference/connections/st.secrets
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / secrets.toml
     url: /develop/api-reference/connections/secrets.toml
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / CONNECTIONS
     visible: false
+    ignore: true
   - category: Develop / API reference / Connections and secrets / st.connection
     url: /develop/api-reference/connections/st.connection
     isVersioned: true
