@@ -1,63 +1,100 @@
 ---
-title: Install Streamlit
+title: Install Jeamlit
 slug: /get-started/installation
 ---
 
-# Install Streamlit
+# Install Jeamlit
 
-There are multiple ways to set up your development environment and install Streamlit. Read below to
-understand these options. Developing locally with Python installed on your own computer is the most
-common scenario.
+There are 2 main ways to install and run Jeamlit:
+- as a [standalone CLI and app runner](#standalone-cli-and-app-runner)
+- [embedded in an existing Java project](#embedded-server)
 
-## Summary for experts
+Read the [details](#details) to get more information about each option.
 
-1. Set up your Python development environment.
-2. Run:
+## Short Version
+
+Jeamlit requires A Java JDK >= `21`.
+
+### Standalone CLI and app runner
+1. Install:
+    <Code>
+    <code className="language-bash">
+    {`# recommended: install with jbang
+    jbang app install io.jeamlit:jeamlit:`}<JeamlitVersion />{`:all
+    `}
+    {`
+    `}
+    {`# vanilla
+    curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/`}<JeamlitVersion />{`/jeamlit-`}<JeamlitVersion />{`-all.jar`}
+    </code>
+    </Code>
+
+3. Validate the installation by running the Hello app:
    ```bash
-   pip install streamlit
-   ```
-3. Validate the installation by running our Hello app:
-   ```bash
-   streamlit hello
+   # jbang
+   jeamlit hello 
+   
+   # vanilla
+   java -jar jeamlit.jar hello
    ```
 4. Jump to our [Basic concepts](/get-started/fundamentals/main-concepts).
 
-## Installation steps for the rest of us
+### Embedded server
+1. Add the dependency to your project
+   <Code>
+   <code className="language-xml">
+   {`<dependency>
+     <groupId>io.jeamlit</groupId>
+     <artifactId>jeamlit</artifactId>
+     <version>`}<JeamlitVersion />{`</version>
+   </dependency>`}
+   </code>
+   </Code>
+2. Launch the server in your project:
+   ```java
+   void startJeamlitServer() {
+     // the Jeamlit app class
+     class MyApp {
+         public static void main(String[] args) {
+             Jt.text("Hello World").use();
+         }
+     }
+    
+     // prepare a Jeamlit server
+     var server = Server.builder(MyApp.class, 8888).build();
+    
+     // start the server - this is non-blocking
+     server.start();
+   }
+   ```
+
+
+## Details
 
 <TileContainer layout="list">
 
-<RefCard href="/get-started/installation/command-line" size="half">
+<RefCard href="/get-started/installation/standalone" size="half">
 
-<h5>Option 1: I'm comfortable with the command line</h5>
+<h5>Option 1: Standalone </h5>
 
-Install Streamlit on your own machine using tools like `venv` and `pip`.
-
-</RefCard>
-
-<RefCard href="/get-started/installation/anaconda-distribution" size="half">
-
-<h5>Option 2: I prefer a graphical interface</h5>
-
-Install Streamlit using the Anaconda Distribution graphical user interface. This is also the best
-approach if you're on Windows or don't have Python set up.
+Best for getting started, simple apps, education, testing, documentation and demos.  
+JBang-style dependency import included.
 
 </RefCard>
 
-<RefCard href="/get-started/installation/community-cloud" size="half">
+<RefCard href="/get-started/installation/embedded-vanilla" size="half">
 
-<h5>Option 3: I'd rather use a cloud-based environment</h5>
+<h5>Option 2: Embedded in a Maven/Gradle project</h5>
 
-Use Streamlit Community Cloud with GitHub Codespaces so you don't have to go through the trouble
-of installing Python and setting up an environment.
+Best for complex apps, existing systems and production systems.
 
 </RefCard>
 
-<RefCard href="/get-started/installation/streamlit-in-snowflake" size="half">
+<RefCard href="/get-started/installation/embedded-spring" size="half">
 
-<h5>Option 4: I need something secure, controlled, and in the cloud</h5>
+<h5>Option 3: Embedded in a Spring project</h5>
 
-Use Streamlit in Snowflake to code your apps in the cloud, right alongside your
-data with role-based access controls.
+Best for ... integrating Jeamlit in a Spring project. 
 
 </RefCard>
 

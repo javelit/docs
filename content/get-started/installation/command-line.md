@@ -1,5 +1,5 @@
 ---
-title: Install Streamlit using command line
+title: Install Jeamlit using command line
 slug: /get-started/installation/command-line
 ---
 

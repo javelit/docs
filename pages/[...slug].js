@@ -72,6 +72,7 @@ import Warning from "../components/blocks/warning";
 import YouTube from "../components/blocks/youTube";
 import Cloud from "../components/blocks/cloud";
 import SnowflakeTrial from "../components/blocks/snowflakeTrial";
+import JeamlitVersion from "../components/utilities/jeamlitVersion";
 
 import styles from "../components/layouts/container.module.css";
 
@@ -180,6 +181,7 @@ export default function Article({
     Download,
     Flex,
     SnowflakeTrial,
+    JeamlitVersion,
     Autofunction: (props) => (
       <Autofunction
         {...props}

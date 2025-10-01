@@ -6,15 +6,12 @@ site_menu:
     icon: rocket_launch
   - category: Get started / Installation
     url: /get-started/installation
-  - category: Get started / Installation / Use command line
-    url: /get-started/installation/command-line
-  - category: Get started / Installation / Use Anaconda Distribution
-    url: /get-started/installation/anaconda-distribution
-  - category: Get started / Installation / Use GitHub Codespaces
-    url: /get-started/installation/community-cloud
-  - category: Get started / Installation / Use Snowflake
-    url: /get-started/installation/streamlit-in-snowflake
-    ignore: true
+  - category: Get started / Installation / Standalone 
+    url: /get-started/installation/standalone
+  - category: Get started / Installation / Embedded
+    url: /get-started/installation/embedded-vanilla
+  - category: Get started / Installation / Embedded in Spring
+    url: /get-started/installation/embedded-spring  
   - category: Get started / Fundamentals
     url: /get-started/fundamentals
   - category: Get started / Fundamentals / Basic concepts

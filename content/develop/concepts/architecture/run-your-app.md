@@ -1,18 +1,21 @@
 ---
-title: Run your Streamlit app
+title: Run your Jeamlit app
 slug: /develop/concepts/architecture/run-your-app
 ---
 
-# Run your Streamlit app
+# Run your Jeamlit app
 
-Working with Streamlit is simple. First you sprinkle a few Streamlit commands into a normal Python script, and then you run it. We list few ways to run your script, depending on your use case.
+Working with Jeamlit is simple. First you sprinkle a few Jeamlit commands into a normal Java class, and then you run it. 
+We list few ways to run your script, depending on your use case.
 
-## Use streamlit run
+## Use jeamlit standalone fat-jar
 
-Once you've created your script, say `your_script.py`, the easiest way to run it is with `streamlit run`:
+
+
+Once you've created your Java class, say `MyApp.java`, the easiest way to run it is with `jeamlit run`:
 
 ```bash
-streamlit run your_script.py
+jeamlit run your_script.py
 ```
 
 As soon as you run the script as shown above, a local Streamlit server will spin up and your app will open in a new tab in your default web browser.
