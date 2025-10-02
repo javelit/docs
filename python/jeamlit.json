@@ -1,5 +1,5 @@
 {
-  "0.20.0": {
+  "0.28.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
@@ -362,20 +362,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this input is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this input is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.textInput(String label)"
         }
       ],
-      "examples": "Simple text input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TextInputApp {\n     public static void main(String[] args) {\n         String name = Jt.textInput(\"Your name\").use();\n\n         if (!name.isEmpty()) {\n             Jt.text(\"Hello, \" + name + \"!\").use();\n         }\n     }\n }\n</code></pre>\n <p>\n Text input with validation\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ValidatedTextInputApp {\n     public static void main(String[] args) {\n         String email = Jt.textInput(\"Email address\")\n                          .placeholder(\"Enter your email\")\n                          .use();\n\n         if (!email.isEmpty() &amp;&amp; !email.contains(\"@\")) {\n             Jt.error(\"Please enter a valid email address\").use();\n         } else if (!email.isEmpty()) {\n             Jt.text(\"Valid email: \" + email).use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple text input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TextInputApp {\n     public static void main(String[] args) {\n         String name = Jt.textInput(\"Your name\").use();\n\n         if (!name.isEmpty()) {\n             Jt.text(\"Hello, \" + name + \"!\").use();\n         }\n     }\n }\n</code></pre>\n <p>\n Text input with validation\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ValidatedTextInputApp {\n     public static void main(String[] args) {\n         String email = Jt.textInput(\"Email address\")\n                          .placeholder(\"Enter your email\")\n                          .use();\n\n         if (!email.isEmpty() &amp;&amp; !email.contains(\"@\")) {\n             Jt.error(\"Please enter a valid email address\").use();\n         } else if (!email.isEmpty()) {\n             Jt.text(\"Valid email: \" + email).use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "textInput",
       "description": "<p>Display a single-line text input widget.\n <p></p>",
       "returns": [
         {
           "type_name": "string",
-          "description": "",
+          "description": "The current string value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -631,13 +631,13 @@
           "signature": "Jt.code(String body)"
         }
       ],
-      "examples": "Simple code block\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class CodeApp {\n     public static void main(String[] args) {\n         Jt.code(\"public class HelloWorld {}\").use();\n     }\n }\n</code></pre>\n <p>\n Multi-line code with syntax highlighting\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class MultilineCodeApp {\n     public static void main(String[] args) {\n         String pythonCode = \"\"\"\n                 import numpy as np\n\n                 a = np.arange(15).reshape(3, 5)\n                 \"\"\";\n         Jt.code(pythonCode).language(\"python\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple code block\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class CodeApp {\n     public static void main(String[] args) {\n         Jt.code(\"public class HelloWorld {}\").use();\n     }\n }\n</code></pre>\n <p>\n Multi-line code with syntax highlighting\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class MultilineCodeApp {\n     public static void main(String[] args) {\n         String pythonCode = \"\"\"\n                 import numpy as np\n\n                 a = np.arange(15).reshape(3, 5)\n                 \"\"\";\n         Jt.code(pythonCode).language(\"python\").use();\n     }\n }\n</code></pre></p>",
       "name": "code",
       "description": "<p>Display a code block with optional syntax highlighting.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -862,7 +862,7 @@
               "type_name": "Class&lt;?&gt;",
               "default": null,
               "name": "pageClass",
-              "description": "<p>The class of the page to link to in a multipage app.</p>",
+              "description": "<p>The class of the page to link to in a multipage app. If null, target the home page.</p>",
               "is_optional": false
             }
           ],
@@ -881,20 +881,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>The text to display for the link. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>The text to display for the link. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.pageLink(String url, String label)"
         }
       ],
-      "examples": "A multipage app with the sidebar hidden.\n A footer replaces the sidebar. The footer contains links to all pages of the app and an external link.\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ToDelete {\n\n     public static class FirstPage {\n         public static void main(String[] args) {\n             Jt.title(\"First Page\").use();\n             Jt.text(\"first page content\").use();\n         }\n     }\n\n     public static class SecondPage {\n         public static void main(String[] args) {\n             Jt.title(\"Second Page\").use();\n             Jt.text(\"Second page content\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         var page = Jt\n                 .navigation(Jt.page(FirstPage.class).title(\"First page\").icon(\"🔥\"),\n                             Jt.page(SecondPage.class).title(\"Second page\").icon(\":favorite:\"))\n                 .hidden()\n                 .use();\n\n         Jt.divider().use();\n         Jt.pageLink(FirstPage.class).use();\n         Jt.pageLink(SecondPage.class).use();\n         Jt.pageLink(\"https://github.com/jeamlit/jeamlit\", \"Github project\").icon(\":link:\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>A multipage app with the sidebar hidden.\n A footer replaces the sidebar. The footer contains links to all pages of the app and an external link.\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ToDelete {\n\n     public static class FirstPage {\n         public static void main(String[] args) {\n             Jt.title(\"First Page\").use();\n             Jt.text(\"first page content\").use();\n         }\n     }\n\n     public static class SecondPage {\n         public static void main(String[] args) {\n             Jt.title(\"Second Page\").use();\n             Jt.text(\"Second page content\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         var page = Jt\n                 .navigation(Jt.page(FirstPage.class).title(\"First page\").icon(\"🔥\"),\n                             Jt.page(SecondPage.class).title(\"Second page\").icon(\":favorite:\"))\n                 .hidden()\n                 .use();\n\n         Jt.divider().use();\n         Jt.pageLink(FirstPage.class).use();\n         Jt.pageLink(SecondPage.class).use();\n         Jt.pageLink(\"https://github.com/jeamlit/jeamlit\", \"Github project\").icon(\":link:\").use();\n     }\n }\n</code></pre></p>",
       "name": "pageLink",
       "description": "<p>Display a link to another page in a multipage app or to an external page.\n <p>\n If another page in a multipage app is specified, clicking the <code>Jt.pageLink</code> element stops the current page execution\n and runs the specified page as if the user clicked on it in the sidebar navigation.\n <p>\n If an external page is specified, clicking the <code>Jt.pageLink</code> element opens a new tab to the specified page.\n The current script run will continue if not complete.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -1239,20 +1239,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this input is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this input is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.textArea(String label)"
         }
       ],
-      "examples": "Simple text area\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TextAreaApp {\n     public static void main(String[] args) {\n         String feedback = Jt.textArea(\"Your feedback\").use();\n\n         if (!feedback.isEmpty()) {\n             Jt.text(\"Thank you for your feedback!\").use();\n             Jt.text(\"Character count: \" + feedback.length()).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Text area for code input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class CodeTextAreaApp {\n     public static void main(String[] args) {\n         String code = Jt.textArea(\"Enter your Java code\")\n                         .height(200)\n                         .placeholder(\"public class MyClass {\\n    // Your code here\\n}\")\n                         .use();\n\n         if (!code.isEmpty()) {\n             Jt.text(\"Code preview:\").use();\n             Jt.code(code).language(\"java\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple text area\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TextAreaApp {\n     public static void main(String[] args) {\n         String feedback = Jt.textArea(\"Your feedback\").use();\n\n         if (!feedback.isEmpty()) {\n             Jt.text(\"Thank you for your feedback!\").use();\n             Jt.text(\"Character count: \" + feedback.length()).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Text area for code input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class CodeTextAreaApp {\n     public static void main(String[] args) {\n         String code = Jt.textArea(\"Enter your Java code\")\n                         .height(200)\n                         .placeholder(\"public class MyClass {\\n    // Your code here\\n}\")\n                         .use();\n\n         if (!code.isEmpty()) {\n             Jt.text(\"Code preview:\").use();\n             Jt.code(code).language(\"java\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "textArea",
       "description": "<p>Display a multi-line text input widget.\n <p></p>",
       "returns": [
         {
           "type_name": "string",
-          "description": "",
+          "description": "The current string value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -1436,13 +1436,13 @@
           "signature": "Jt.text(String body)"
         }
       ],
-      "examples": "<pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TextApp {\n     public static void main(String[] args) {\n         Jt.text(\"This is some plain text.\").use();\n\n         Jt.text(\"\"\"\n                         This is preformatted text.\n                         It preserves    spacing\n                         and line breaks.\n                         \"\"\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p><pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TextApp {\n     public static void main(String[] args) {\n         Jt.text(\"This is some plain text.\").use();\n\n         Jt.text(\"\"\"\n                         This is preformatted text.\n                         It preserves    spacing\n                         and line breaks.\n                         \"\"\").use();\n     }\n }\n</code></pre></p>",
       "name": "text",
       "description": "<p>Write text without Markdown or HTML parsing.\n For monospace text, use <code>Jt#code</code></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -1691,361 +1691,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this checkbox is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this checkbox is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.checkbox(String label)"
         }
       ],
-      "examples": "Basic checkbox usage\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class CheckboxApp {\n     public static void main(String[] args) {\n         boolean agree = Jt.checkbox(\"I agree\").use();\n\n         if (agree) {\n             Jt.text(\"Great!\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic checkbox usage\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class CheckboxApp {\n     public static void main(String[] args) {\n         boolean agree = Jt.checkbox(\"I agree\").use();\n\n         if (agree) {\n             Jt.text(\"Great!\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "checkbox",
       "description": "<p>Display a checkbox widget.\n <p></p>",
       "returns": [
         {
           "type_name": "NotNull Boolean",
-          "description": "",
-          "is_generator": false,
-          "return_name": null
-        }
-      ],
-      "source": ""
-    },
-    "Jt.selectBox": {
-      "builderMethods": [
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "Integer",
-              "default": null,
-              "name": "index",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "index(Integer index)",
-          "name": "index",
-          "description": "<p>The index of the preselected option on first render. If <code>null</code>, initializes empty and returns <code>null</code> until user selection.\n Defaults to 0 (the first option).</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "Function&lt;T, String&gt;",
-              "default": null,
-              "name": "formatFunction",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "formatFunction(function.Function&lt;T, String&gt; formatFunction)",
-          "name": "formatFunction",
-          "description": "<p>Function to modify the display of the options. The <code>Function</code> receives the raw option object and returns a String that will be used as display label.\n Does not impact the return value of the component.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "help",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "help(String help)",
-          "name": "help",
-          "description": "<p>A tooltip that gets displayed next to the widget label. If <code>null</code>, no tooltip is displayed.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "Consumer&lt;T&gt;",
-              "default": null,
-              "name": "onChange",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "onChange(function.Consumer&lt;T&gt; onChange)",
-          "name": "onChange",
-          "description": "<p>An optional callback invoked when the selectbox value changes.\n The value passed to the callback is the previous value of the component.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "boolean",
-              "default": null,
-              "name": "disabled",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "disabled(boolean disabled)",
-          "name": "disabled",
-          "description": "<p>Disables the selectbox if set to true. When disabled, users cannot interact with the widget.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
-              "default": null,
-              "name": "labelVisibility",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "labelVisibility(JtComponent.LabelVisibility labelVisibility)",
-          "name": "labelVisibility",
-          "description": "<p>The visibility of the label. The default is <code>VISIBLE</code>.\n If this is <code>HIDDEN</code>, Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is <code>COLLAPSED</code>, Jeamlit displays no label or spacer.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "width",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "width(String width)",
-          "name": "width",
-          "description": "<p>The width of the element. This can be one of the following:\n <ul>\n <li><code>content</code> (default): The width of the element matches the width of its content, but doesn&#39;t exceed the width of the parent container.</li>\n <li><code>stretch</code>: The width of the element matches the width of the parent container.</li>\n <li>An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.</li>\n </ul></p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "int",
-              "default": null,
-              "name": "widthPixels",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "width(int widthPixels)",
-          "name": "width",
-          "description": "<p>The width of the selectbox in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "placeholder",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "placeholder(String placeholder)",
-          "name": "placeholder",
-          "description": "<p>Text displayed when no option is selected. Default varies based on widget configuration.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "boolean",
-              "default": null,
-              "name": "acceptNewOptions",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "acceptNewOptions(boolean acceptNewOptions)",
-          "name": "acceptNewOptions",
-          "description": "<p>Whether the user can add a selection that isn&#39;t included in options.\n If this is <code>false</code> (default), the user can only select from the items in options.\n If this is <code>true</code>, the user can enter a new item that doesn&#39;t exist in options.\n <p>\n When a user enters a new item, it is returned by the widget as a string.\n The new item is not added to the widget&#39;s drop-down menu. Jeamlit will use a case-insensitive match\n from options before adding a new item.\n <p>\n Only compatible with selectbox of <code>String</code> values.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "key(String key)",
-          "name": "key",
-          "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
-          "returns": [
-            {
-              "type_name": "SELF",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [],
-          "signature": "use()",
-          "name": "use",
-          "description": "<p>Put the widget in the app, in the <code>MAIN</code> container.</p>",
-          "returns": [
-            {
-              "type_name": "B",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "io.jeamlit.core.JtContainer",
-              "default": null,
-              "name": "container",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "use(JtContainer container)",
-          "name": "use",
-          "description": "<p>Put the widget in the app, in the provided container.</p>",
-          "returns": [
-            {
-              "type_name": "B",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        }
-      ],
-      "overloads": [
-        {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "label",
-              "description": "<p>A short label explaining to the user what this selection is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
-              "is_optional": false
-            },
-            {
-              "type_name": "List&lt;T&gt;",
-              "default": null,
-              "name": "options",
-              "description": "<p>The list of options to choose from</p>",
-              "is_optional": false
-            }
-          ],
-          "signature": "Jt.selectBox(String label, List&lt;T&gt; options)"
-        }
-      ],
-      "examples": "Simple dropdown selection\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class SelectBoxApp {\n     public static void main(String[] args) {\n         String country = Jt.selectBox(\"Select your country\",\n                                       List.of(\"United States\", \"Canada\", \"United Kingdom\", \"Germany\", \"France\")).use();\n\n         if (country != null) {\n             Jt.text(\"Selected country: \" + country).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Dropdown with default value\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ProcessingSelectBoxApp {\n     public static void main(String[] args) {\n         String priority = Jt.selectBox(\"Task priority\",\n                                        List.of(\"Low\", \"Medium\", \"High\", \"Critical\"))\n                             .index(1)\n                             .use();\n         Jt.text(\"Priority: \" + priority).use();\n     }\n }\n</code></pre>",
-      "name": "selectBox",
-      "description": "<p>Display a select widget.\n <p></p>",
-      "returns": [
-        {
-          "type_name": "Nullable T",
-          "description": "",
+          "description": "The current NotNull Boolean value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -2212,13 +1871,13 @@
           "signature": "Jt.expander(String key, String label)"
         }
       ],
-      "examples": "Basic expander with explanation content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ExpanderApp {\n     public static void main(String[] args) {\n         var expander = Jt.expander(\"explanation\", \"See explanation\").use();\n\n         Jt.text(\"\"\"\n                 [A great explanation on the why and how of life.]\n                 \"\"\").use(expander);\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic expander with explanation content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ExpanderApp {\n     public static void main(String[] args) {\n         var expander = Jt.expander(\"explanation\", \"See explanation\").use();\n\n         Jt.text(\"\"\"\n                 [A great explanation on the why and how of life.]\n                 \"\"\").use(expander);\n     }\n }\n</code></pre></p>",
       "name": "expander",
       "description": "<p>Insert a multi-element container that can be expanded/collapsed.\n <p>\n Insert a container into your app that can be used to hold multiple elements and can be expanded or collapsed by the user.\n When collapsed, all that is visible is the provided label.\n <p>\n To add elements to the returned expander:\n <pre>\n <code>\n var expander = Jt.expander(&quot;my-expander&quot;, &quot;More details&quot;).use();\n Jt.yourElement().use(expander);\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
         {
           "type_name": "JtContainer",
-          "description": "",
+          "description": "The current JtContainer value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -2450,13 +2109,13 @@
           "signature": "Jt.formSubmitButton(String label)"
         }
       ],
-      "examples": "Basic form submit button\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormSubmitApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"contact\").use();\n\n         String name = Jt.textInput(\"Your Name\").use(form);\n         String message = Jt.textArea(\"Message\").use(form);\n\n         if (Jt.formSubmitButton(\"Send Message\").use(form)) {\n             Jt.text(\"Message sent successfully!\").use();\n             Jt.text(\"From: \" + name).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Multiple submit buttons in same form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class MultiSubmitApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"document\").use();\n\n         String title = Jt.textInput(\"Document Title\").use(form);\n         String content = Jt.textArea(\"Content\").use(form);\n\n         if (Jt.formSubmitButton(\"Save Draft\").key(\"save\").use(form)) {\n             Jt.text(\"Draft saved: \" + title).use();\n         }\n\n         if (Jt.formSubmitButton(\"Publish\").key(\"publish\").use(form)) {\n             Jt.text(\"Document published: \" + title).use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic form submit button\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormSubmitApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"contact\").use();\n\n         String name = Jt.textInput(\"Your Name\").use(form);\n         String message = Jt.textArea(\"Message\").use(form);\n\n         if (Jt.formSubmitButton(\"Send Message\").use(form)) {\n             Jt.text(\"Message sent successfully!\").use();\n             Jt.text(\"From: \" + name).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Multiple submit buttons in same form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class MultiSubmitApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"document\").use();\n\n         String title = Jt.textInput(\"Document Title\").use(form);\n         String content = Jt.textArea(\"Content\").use(form);\n\n         if (Jt.formSubmitButton(\"Save Draft\").key(\"save\").use(form)) {\n             Jt.text(\"Draft saved: \" + title).use();\n         }\n\n         if (Jt.formSubmitButton(\"Publish\").key(\"publish\").use(form)) {\n             Jt.text(\"Document published: \" + title).use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "formSubmitButton",
       "description": "<p>Display a form submit button.\n <p>\n When clicked, all widget values inside the form will be sent from the user&#39;s browser to the Jeamlit server in a batch.\n <p>\n Every form must have at least one <code>Jt.formSubmitButton</code>. A <code>Jt.formSubmitButton</code> cannot exist outside a form.\n <p></p>",
       "returns": [
         {
           "type_name": "boolean",
-          "description": "",
+          "description": "The current boolean value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -2592,13 +2251,13 @@
           "signature": "Jt.container(String key)"
         }
       ],
-      "examples": "Basic container usage and adding elements out of order\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ContainerApp {\n     public static void main(String[] args) {\n         var container = Jt.container(\"my-container\").use();\n\n         Jt.text(\"This is inside the container\").use(container);\n         Jt.text(\"This is outside the container\").use();\n         Jt.text(\"This is inside too\").use(container);\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic container usage and adding elements out of order\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ContainerApp {\n     public static void main(String[] args) {\n         var container = Jt.container(\"my-container\").use();\n\n         Jt.text(\"This is inside the container\").use(container);\n         Jt.text(\"This is outside the container\").use();\n         Jt.text(\"This is inside too\").use(container);\n     }\n }\n</code></pre></p>",
       "name": "container",
       "description": "<p>Insert a multi-element container.\n <p>\n Insert an invisible container into your app that can be used to hold multiple elements.\n This allows you to, for example, insert multiple elements into your app out of order.\n <p>\n To add elements to the returned container:\n <pre>\n <code>\n var container = Jt.container(&quot;container-1&quot;).use();\n Jt.yourElement().use(container);\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
         {
           "type_name": "JtContainer",
-          "description": "",
+          "description": "The current JtContainer value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -2758,20 +2417,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>The label for the popover button. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>The label for the popover button. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.popover(String key, String label)"
         }
       ],
-      "examples": "Settings popover\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class PopoverApp {\n     public static void main(String[] args) {\n         var settings = Jt.popover(\"settings\", \"⚙️ Settings\").use();\n\n         Jt.text(\"Configure your preferences:\").use(settings);\n         boolean notifications = Jt.checkbox(\"Enable notifications\").use(settings);\n         String theme = Jt.selectBox(\"Theme\", List.of(\"Light\", \"Dark\")).use(settings);\n\n         if (notifications) {\n             Jt.text(\"Notifications are enabled\").use();\n         }\n         Jt.text(\"The selected theme is \" + theme).use();\n     }\n }\n</code></pre>\n <p>\n Help popover with information\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class HelpPopoverApp {\n     public static void main(String[] args) {\n         Jt.text(\"Username:\").use();\n         Jt.textInput(\"Enter username\").use();\n\n         var help = Jt.popover(\"help\", \"❓ Help\").use();\n         Jt.text(\"**Username requirements:**\").use(help);\n         Jt.text(\"- Must be 3-20 characters long\").use(help);\n         Jt.text(\"- Only letters and numbers allowed\").use(help);\n         Jt.text(\"- Case sensitive\").use(help);\n     }\n }\n</code></pre>",
+      "examples": "<p>Settings popover\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class PopoverApp {\n     public static void main(String[] args) {\n         var settings = Jt.popover(\"settings\", \"⚙️ Settings\").use();\n\n         Jt.text(\"Configure your preferences:\").use(settings);\n         boolean notifications = Jt.checkbox(\"Enable notifications\").use(settings);\n         String theme = Jt.selectbox(\"Theme\", List.of(\"Light\", \"Dark\")).use(settings);\n\n         if (notifications) {\n             Jt.text(\"Notifications are enabled\").use();\n         }\n         Jt.text(\"The selected theme is \" + theme).use();\n     }\n }\n</code></pre>\n <p>\n Help popover with information\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class HelpPopoverApp {\n     public static void main(String[] args) {\n         Jt.text(\"Username:\").use();\n         Jt.textInput(\"Enter username\").use();\n\n         var help = Jt.popover(\"help\", \"❓ Help\").use();\n         Jt.text(\"**Username requirements:**\").use(help);\n         Jt.text(\"- Must be 3-20 characters long\").use(help);\n         Jt.text(\"- Only letters and numbers allowed\").use(help);\n         Jt.text(\"- Case sensitive\").use(help);\n     }\n }\n</code></pre></p>",
       "name": "popover",
       "description": "<p>Insert a popover container.\n <p>\n Inserts a multi-element container as a popover. It consists of a button-like element and a container that opens when the button is clicked.\n <p>\n Opening and closing the popover will not trigger a rerun. Interacting with widgets inside of an open popover will\n rerun the app while keeping the popover open. Clicking outside of the popover will close it.\n <p>\n To add elements to the returned popover:\n <pre><code class=\"language-java\"> var popover = Jt.popover(\"my-popover\", \"Advanced configuration\").use();\n Jt.yourElement().use(popover);\n</code></pre>\n See examples below.\n <p></p>",
       "returns": [
         {
           "type_name": "JtContainer",
-          "description": "",
+          "description": "The current JtContainer value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -3164,7 +2823,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this numeric input is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this numeric input is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
@@ -3176,7 +2835,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this numeric input is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this numeric input is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             },
             {
@@ -3190,13 +2849,13 @@
           "signature": "Jt.numberInput(String label, Class&lt;T&gt; valueClass)"
         }
       ],
-      "examples": "Simple number input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class NumberInputApp {\n     public static void main(String[] args) {\n         Number quantity = Jt.numberInput(\"Quantity\").minValue(1).maxValue(100).use();\n\n         if (quantity != null) {\n             Jt.text(\"You selected: \" + quantity).use();\n         }\n     }\n }\n</code></pre>\n\nInteger input with specific type\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TypedNumberInputApp {\n     public static void main(String[] args) {\n         Integer age = Jt.numberInput(\"Age\", Integer.class)\n                         .minValue(0)\n                         .maxValue(150)\n                         .use();\n\n         if (age != null) {\n             String category = age &lt; 18 ? \"Minor\" : age &lt; 65 ? \"Adult\" : \"Senior\";\n             Jt.text(\"Category: \" + category).use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple number input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class NumberInputApp {\n     public static void main(String[] args) {\n         Number quantity = Jt.numberInput(\"Quantity\").minValue(1).maxValue(100).use();\n\n         if (quantity != null) {\n             Jt.text(\"You selected: \" + quantity).use();\n         }\n     }\n }\n</code></pre></p>\n\n<p>Integer input with specific type\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TypedNumberInputApp {\n     public static void main(String[] args) {\n         Integer age = Jt.numberInput(\"Age\", Integer.class)\n                         .minValue(0)\n                         .maxValue(150)\n                         .use();\n\n         if (age != null) {\n             String category = age &lt; 18 ? \"Minor\" : age &lt; 65 ? \"Adult\" : \"Senior\";\n             Jt.text(\"Category: \" + category).use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "numberInput",
       "description": "<p>Display a numeric input widget.\n <p></p>",
       "returns": [
         {
           "type_name": "T",
-          "description": "",
+          "description": "The current T value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -3469,20 +3128,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this file uploader is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this file uploader is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.fileUploader(String label)"
         }
       ],
-      "examples": "Basic file upload with processing\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n import io.jeamlit.core.JtUploadedFile;\n\n import java.util.List;\n\n public class FileUploadApp {\n     public static void main(String[] args) {\n         var uploadedFiles = Jt.fileUploader(\"Choose a CSV file\")\n                               .type(List.of(\".csv\"))\n                               .use();\n\n         if (!uploadedFiles.isEmpty()) {\n             JtUploadedFile file = uploadedFiles.getFirst();\n             Jt.text(\"Uploaded file: \" + file.filename()).use();\n             Jt.text(\"File size: \" + file.content().length + \" bytes\").use();\n             Jt.text(\"Content type: \" + file.contentType()).use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic file upload with processing\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n import io.jeamlit.core.JtUploadedFile;\n\n import java.util.List;\n\n public class FileUploadApp {\n     public static void main(String[] args) {\n         var uploadedFiles = Jt.fileUploader(\"Choose a CSV file\")\n                               .type(List.of(\".csv\"))\n                               .use();\n\n         if (!uploadedFiles.isEmpty()) {\n             JtUploadedFile file = uploadedFiles.getFirst();\n             Jt.text(\"Uploaded file: \" + file.filename()).use();\n             Jt.text(\"File size: \" + file.content().length + \" bytes\").use();\n             Jt.text(\"Content type: \" + file.contentType()).use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "fileUploader",
       "description": "<p>Display a file uploader widget.\n <p></p>",
       "returns": [
         {
           "type_name": "JtUploadedFile>",
-          "description": "",
+          "description": "The current JtUploadedFile> value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -3642,13 +3301,13 @@
           "signature": "Jt.markdown(String body)"
         }
       ],
-      "examples": "Basic markdown formatting and colored text styling\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class MarkdownApp {\n     public static void main(String[] args) {\n         // Basic text formatting\n         Jt.markdown(\"*Jeamlit* is **really** ***cool***.\").use();\n\n         // Divider\n         Jt.markdown(\"---\").use();\n\n         // Emoji and line breaks\n         Jt.markdown(\"Here's a bouquet — :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic markdown formatting and colored text styling\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class MarkdownApp {\n     public static void main(String[] args) {\n         // Basic text formatting\n         Jt.markdown(\"*Jeamlit* is **really** ***cool***.\").use();\n\n         // Divider\n         Jt.markdown(\"---\").use();\n\n         // Emoji and line breaks\n         Jt.markdown(\"Here's a bouquet — :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:\").use();\n     }\n }\n</code></pre></p>",
       "name": "markdown",
       "description": "<p>Display string formatted as Markdown.\n <p>\n Supported :\n <ul>\n     <li>Emoji shortcodes, such as <code>:+1:</code> and <code>:sunglasses:</code>. For a list of all supported codes, see <a href=\"https://www.webfx.com/tools/emoji-cheat-sheet/\">https://www.webfx.com/tools/emoji-cheat-sheet/</a>.</li>\n     <li>Tables</li>\n     <li>Strikethrough</li>\n     <li>Autolink: turns plain links such as URLs and email addresses into links</li>\n </ul>\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -3796,13 +3455,13 @@
           "signature": "Jt.html(java.nio.file.Path filePath)"
         }
       ],
-      "examples": "Simple HTML content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class HtmlApp {\n     public static void main(String[] args) {\n         Jt.html(\"&lt;h3&gt;Custom HTML Header&lt;/h3&gt;\").use();\n         Jt.html(\"&lt;p style='color: blue;'&gt;This is blue text&lt;/p&gt;\").use();\n         Jt.html(\"&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;li&gt;Item 3&lt;/li&gt;&lt;/ul&gt;\").use();\n     }\n }\n</code></pre>\n\nLoading HTML from file\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.nio.file.Path;\n\n public class HtmlFileApp {\n     public static void main(String[] args) {\n         // Assumes you have a file \"content.html\" in your project\n         Jt.html(Path.of(\"content.html\")).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple HTML content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class HtmlApp {\n     public static void main(String[] args) {\n         Jt.html(\"&lt;h3&gt;Custom HTML Header&lt;/h3&gt;\").use();\n         Jt.html(\"&lt;p style='color: blue;'&gt;This is blue text&lt;/p&gt;\").use();\n         Jt.html(\"&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;li&gt;Item 3&lt;/li&gt;&lt;/ul&gt;\").use();\n     }\n }\n</code></pre></p>\n\n<p>Loading HTML from file\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.nio.file.Path;\n\n public class HtmlFileApp {\n     public static void main(String[] args) {\n         // Assumes you have a file \"content.html\" in your project\n         Jt.html(Path.of(\"content.html\")).use();\n     }\n }\n</code></pre></p>",
       "name": "html",
       "description": "<p>Insert HTML into your app.\n <p>\n Adding custom HTML to your app impacts safety, styling, and maintainability.\n We sanitize HTML with <a href=\"https://github.com/cure53/DOMPurify\">DOMPurify</a>, but inserting HTML remains a developer risk.\n Passing untrusted code to Jt.html or dynamically loading external code can increase the risk of vulnerabilities in your app.\n <p>\n <code>Jt.html</code> content is not iframed. Executing JavaScript is not supported.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4017,13 +3676,13 @@
           "signature": "Jt.columns(String key, int numColumns)"
         }
       ],
-      "examples": "Basic three-column layout with headers and content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ColumnsApp {\n     public static void main(String[] args) {\n         var cols = Jt.columns(\"main-cols\", 3).use();\n\n         Jt.title(\"A cat\").use(cols.col(0));\n         Jt.title(\"A dog\").use(cols.col(1));\n         Jt.title(\"An owl\").use(cols.col(2));\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic three-column layout with headers and content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ColumnsApp {\n     public static void main(String[] args) {\n         var cols = Jt.columns(\"main-cols\", 3).use();\n\n         Jt.title(\"A cat\").use(cols.col(0));\n         Jt.title(\"A dog\").use(cols.col(1));\n         Jt.title(\"An owl\").use(cols.col(2));\n     }\n }\n</code></pre></p>",
       "name": "columns",
       "description": "<p>Insert containers laid out as side-by-side columns.\n <p>\n Inserts a number of multi-element containers laid out side-by-side and returns a list of container objects.\n <p>\n To add elements to the returned columns container:\n <pre>\n <code>\n var cols = Jt.columns(&quot;my-3-cols&quot;, 3).use();\n Jt.yourElement().use(cols.col(1));\n Jt.yourElement().use(cols.col(0));\n Jt.yourElement().use(cols.col(2));\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
         {
           "type_name": "Columns",
-          "description": "",
+          "description": "The current Columns value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4052,13 +3711,13 @@
           "signature": "Jt.deepCopy(T original, com.fasterxml.jackson.core.type.TypeReference&lt;T&gt; typeRef)"
         }
       ],
-      "examples": "Safe copying from cache to prevent mutations\n <pre><code class=\"language-java\"> import java.util.ArrayList;\n import java.util.List;\n\n import io.jeamlit.core.Jt;\n\n import com.fasterxml.jackson.core.type.TypeReference;\n\n public class DeepCopyApp {\n     public static void main(String[] args) {\n         // init\n         List&lt;String&gt; sharedList = (List&lt;String&gt;) Jt.cache().get(\"shared_list\");\n         if (sharedList == null) {\n             sharedList = new ArrayList&lt;&gt;();\n             sharedList.add(\"item1\");\n             sharedList.add(\"item2\");\n             Jt.cache().put(\"shared_list\", sharedList);\n         }\n\n         // Create a safe copy to avoid mutations affecting other sessions\n         List&lt;String&gt; safeCopy = Jt.deepCopy(sharedList, new TypeReference&lt;&gt;() {\n         });\n\n         if (Jt.button(\"remove elements from user lists\").use()) {\n             safeCopy.clear();\n         }\n\n         Jt.text(\"Original list size: \" + sharedList.size()).use();\n         Jt.text(\"Safe copy size: \" + safeCopy.size()).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Safe copying from cache to prevent mutations\n <pre><code class=\"language-java\"> import java.util.ArrayList;\n import java.util.List;\n\n import io.jeamlit.core.Jt;\n\n import com.fasterxml.jackson.core.type.TypeReference;\n\n public class DeepCopyApp {\n     public static void main(String[] args) {\n         // init\n         List&lt;String&gt; sharedList = (List&lt;String&gt;) Jt.cache().get(\"shared_list\");\n         if (sharedList == null) {\n             sharedList = new ArrayList&lt;&gt;();\n             sharedList.add(\"item1\");\n             sharedList.add(\"item2\");\n             Jt.cache().put(\"shared_list\", sharedList);\n         }\n\n         // Create a safe copy to avoid mutations affecting other sessions\n         List&lt;String&gt; safeCopy = Jt.deepCopy(sharedList, new TypeReference&lt;&gt;() {\n         });\n\n         if (Jt.button(\"remove elements from user lists\").use()) {\n             safeCopy.clear();\n         }\n\n         Jt.text(\"Original list size: \" + sharedList.size()).use();\n         Jt.text(\"Safe copy size: \" + safeCopy.size()).use();\n     }\n }\n</code></pre></p>",
       "name": "deepCopy",
       "description": "<p>Return a deep copy of the provided object.\n <p>\n Utility that may be useful in combination with the cache, to implement a copy on read behavior.\n For instance, you can get a value that is expensive to\n instantiate from the cache, but perform a deep copy to prevent mutations and side effects across sessions.\n <p></p>",
       "returns": [
         {
           "type_name": "T",
-          "description": "",
+          "description": "The current T value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4194,13 +3853,13 @@
           "signature": "Jt.empty(String key)"
         }
       ],
-      "examples": "Dynamic content replacement\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class EmptyApp {\n     public static void main(String[] args) {\n         var placeholder = Jt.empty(\"content\").use();\n         String selected = Jt.selectBox(\"Choose content\",\n             List.of(\"None\", \"Text\", \"Button\")).use();\n\n         switch (selected) {\n             case \"Text\" -&gt; Jt.text(\"Dynamic text content\").use(placeholder);\n             case \"Button\" -&gt; {\n                 if (Jt.button(\"Dynamic button\").use(placeholder)) {\n                     Jt.text(\"Button clicked!\").use();\n                 }\n             }\n             // case \"None\" -&gt; container remains empty\n         }\n     }\n }\n</code></pre>\n <p>\n Simple animations\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;import tech.catheu.jeamlit.core.Jt;\n\n public class AnimationEmptyApp {\n     public static void main(String[] args) {\n         var emptyContainer = Jt.empty(\"content\").use();\n          for (i = 10; i&gt;=1; i--) {\n               Jt.text(i + \"!\").use(emptyContainer);\n                Thread.sleep(1000);\n           }\n           Jt.text(\"Happy new Year !\").use(emptyContainer);\n           Jt.button(\"rerun\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Dynamic content replacement\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class EmptyApp {\n     public static void main(String[] args) {\n         var placeholder = Jt.empty(\"content\").use();\n         String selected = Jt.selectbox(\"Choose content\",\n             List.of(\"None\", \"Text\", \"Button\")).use();\n\n         switch (selected) {\n             case \"Text\" -&gt; Jt.text(\"Dynamic text content\").use(placeholder);\n             case \"Button\" -&gt; {\n                 if (Jt.button(\"Dynamic button\").use(placeholder)) {\n                     Jt.text(\"Button clicked!\").use();\n                 }\n             }\n             // case \"None\" -&gt; container remains empty\n         }\n     }\n }\n</code></pre>\n <p>\n Simple animations\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;import tech.catheu.jeamlit.core.Jt;\n\n public class AnimationEmptyApp {\n     public static void main(String[] args) {\n         var emptyContainer = Jt.empty(\"content\").use();\n          for (i = 10; i&gt;=1; i--) {\n               Jt.text(i + \"!\").use(emptyContainer);\n                Thread.sleep(1000);\n           }\n           Jt.text(\"Happy new Year !\").use(emptyContainer);\n           Jt.button(\"rerun\").use();\n     }\n }\n</code></pre></p>",
       "name": "empty",
       "description": "<p>Insert a single-element container.\n <p>\n Insert a container into your app that can be used to hold a single element.\n This allows you to, for example, remove elements at any point, or replace several elements at once (using a child multi-element container).\n <p>\n To insert/replace/clear an element on the returned container:\n <pre>\n <code>\n var container = Jt.empty(&quot;empty-1&quot;).use();\n Jt.yourElement().use(container);\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
         {
           "type_name": "JtContainer",
-          "description": "",
+          "description": "The current JtContainer value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4328,13 +3987,13 @@
           "signature": "Jt.navigation(JtPage.Builder[] pages)"
         }
       ],
-      "examples": "Basic multipage navigation setup\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class NavigationApp {\n     public static class FirstPage {\n         public static void main(String[] args) {\n             Jt.title(\"First Page\").use();\n         }\n     }\n\n     public static class SecondPage {\n         public static void main(String[] args) {\n             Jt.title(\"Second Page\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         var page = Jt\n                 .navigation(Jt.page(FirstPage.class).title(\"First page\").icon(\"🔥\"),\n                             Jt.page(SecondPage.class).title(\"Second page\").icon(\":favorite:\"))\n                 .use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic multipage navigation setup\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class NavigationApp {\n     public static class FirstPage {\n         public static void main(String[] args) {\n             Jt.title(\"First Page\").use();\n         }\n     }\n\n     public static class SecondPage {\n         public static void main(String[] args) {\n             Jt.title(\"Second Page\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         var page = Jt\n                 .navigation(Jt.page(FirstPage.class).title(\"First page\").icon(\"🔥\"),\n                             Jt.page(SecondPage.class).title(\"Second page\").icon(\":favorite:\"))\n                 .use();\n     }\n }\n</code></pre></p>",
       "name": "navigation",
       "description": "<p>Create a navigation component with multiple pages to create a multipage app.\n <p>\n Call <code>Jt.navigation</code> in your entrypoint app class to define the available pages in your app.\n <code>Jt.navigation</code> use() returns the current page.\n <p>\n When using <code>Jt.navigation</code>, your entrypoint app class acts like a frame of common elements around each of your pages.\n <p>\n The set of available pages can be updated with each rerun for dynamic navigation.\n By default, <code>Jt.navigation</code> displays the available pages in the sidebar if there is more than one page.\n This behavior can be changed using the <code>position</code> builder method.\n <p></p>",
       "returns": [
         {
           "type_name": "JtPage",
-          "description": "",
+          "description": "The current JtPage value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4348,13 +4007,13 @@
           "signature": "Jt.componentsState()"
         }
       ],
-      "examples": "Accessing component values by key\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class ComponentsStateApp {\n     public static void main(String[] args) {\n         double volumeFromUse = Jt.slider(\"Volume\").key(\"volume\").min(0).max(100).value(50).use();\n         double volumeFromState = Jt.componentsState().getDouble(\"volume\");\n\n         Jt.text(\"Volume from slider return value: \" + volumeFromUse).use();\n         Jt.text(\"Value from components state map: \" + volumeFromState).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Accessing component values by key\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class ComponentsStateApp {\n     public static void main(String[] args) {\n         double volumeFromUse = Jt.slider(\"Volume\").key(\"volume\").min(0).max(100).value(50).use();\n         double volumeFromState = Jt.componentsState().getDouble(\"volume\");\n\n         Jt.text(\"Volume from slider return value: \" + volumeFromUse).use();\n         Jt.text(\"Value from components state map: \" + volumeFromState).use();\n     }\n }\n</code></pre></p>",
       "name": "componentsState",
       "description": "<p>Return the components state of the session. A session corresponds to an opened tab of the app.\n <p>\n The current value of any component can be obtained from this map.\n When putting a component in the app, us the <code>.key()</code> method to define a specific key that will be easy\n to access from this map.\n <p></p>",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
-          "description": "",
+          "description": "The current io.jeamlit.datastructure.TypedMap value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4369,14 +4028,14 @@
               "type_name": "Class&lt;?&gt;",
               "default": null,
               "name": "pageApp",
-              "description": "",
+              "description": "<p>The target page. If <code>null</code>, target the home page.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.switchPage(Class&lt;?&gt; pageApp)"
         }
       ],
-      "examples": "Conditional page switching with checkboxes\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class SwitchPageApp {\n     public static class WelcomePage {\n         public static void main(String[] args) {\n             Jt.title(\"Welcome Page\").use();\n             Jt.text(\"Please complete the requirements below to proceed:\").use();\n\n             boolean agreedToTerms = Jt.checkbox(\"I agree with Bob\").use();\n             boolean confirmedAge = Jt.checkbox(\"I agree with Alice\").use();\n\n             if (agreedToTerms &amp;&amp; confirmedAge) {\n                 Jt.text(\"All requirements met! Redirecting to dashboard...\").use();\n                 Jt.switchPage(DashboardPage.class);\n             } else {\n                 Jt.text(\"Please check both boxes to continue.\").use();\n             }\n         }\n     }\n\n     public static class DashboardPage {\n         public static void main(String[] args) {\n             Jt.title(\"Dashboard\").use();\n             Jt.text(\"Welcome to your dashboard!\").use();\n             Jt.text(\"You have successfully completed the requirements.\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         Jt.navigation(Jt.page(WelcomePage.class).title(\"Welcome\").icon(\"👋\").home(),\n                       Jt.page(DashboardPage.class).title(\"Dashboard\").icon(\"📊\"))\n           .hidden()\n           .use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Conditional page switching with checkboxes\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class SwitchPageApp {\n     public static class WelcomePage {\n         public static void main(String[] args) {\n             Jt.title(\"Welcome Page\").use();\n             Jt.text(\"Please complete the requirements below to proceed:\").use();\n\n             boolean agreedToTerms = Jt.checkbox(\"I agree with Bob\").use();\n             boolean confirmedAge = Jt.checkbox(\"I agree with Alice\").use();\n\n             if (agreedToTerms &amp;&amp; confirmedAge) {\n                 Jt.text(\"All requirements met! Redirecting to dashboard...\").use();\n                 Jt.switchPage(DashboardPage.class);\n             } else {\n                 Jt.text(\"Please check both boxes to continue.\").use();\n             }\n         }\n     }\n\n     public static class DashboardPage {\n         public static void main(String[] args) {\n             Jt.title(\"Dashboard\").use();\n             Jt.text(\"Welcome to your dashboard!\").use();\n             Jt.text(\"You have successfully completed the requirements.\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         Jt.navigation(Jt.page(WelcomePage.class).title(\"Welcome\").icon(\"👋\").home(),\n                       Jt.page(DashboardPage.class).title(\"Dashboard\").icon(\"📊\"))\n           .hidden()\n           .use();\n     }\n }\n</code></pre></p>",
       "name": "switchPage",
       "description": "<p>Programmatically switch the current page in a multipage app.\n <p>\n When <code>Jt.switchPage</code> is called, the current page execution stops and the specified page runs as if the\n user clicked on it in the sidebar navigation. The specified page must be recognized by Jeamlit&#39;s multipage\n architecture (your main app class or an app class in the available pages).\n <p></p>",
       "returns": [],
@@ -4600,20 +4259,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this button is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this button is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.button(String label)"
         }
       ],
-      "examples": "Basic button usage and interaction\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ButtonApp {\n     public static void main(String[] args) {\n         if (Jt.button(\"Say hello\").use()) {\n             Jt.text(\"Why hello there\").use();\n         } else {\n             Jt.text(\"Goodbye\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic button usage and interaction\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ButtonApp {\n     public static void main(String[] args) {\n         if (Jt.button(\"Say hello\").use()) {\n             Jt.text(\"Why hello there\").use();\n         } else {\n             Jt.text(\"Goodbye\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "button",
       "description": "<p>Display a button widget.\n <p></p>",
       "returns": [
         {
           "type_name": "boolean",
-          "description": "",
+          "description": "The current boolean value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4934,20 +4593,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this date input is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this date input is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.dateInput(String label)"
         }
       ],
-      "examples": "Simple date input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.time.LocalDate;\n import java.time.Period;\n\n public class DateInputApp {\n     public static void main(String[] args) {\n         LocalDate birthday = Jt.dateInput(\"Your birthday\").use();\n\n         if (birthday != null) {\n             int age = Period.between(birthday, LocalDate.now()).getYears();\n             Jt.text(\"You are \" + age + \" years old\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple date input\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.time.LocalDate;\n import java.time.Period;\n\n public class DateInputApp {\n     public static void main(String[] args) {\n         LocalDate birthday = Jt.dateInput(\"Your birthday\").use();\n\n         if (birthday != null) {\n             int age = Period.between(birthday, LocalDate.now()).getYears();\n             Jt.text(\"You are \" + age + \" years old\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "dateInput",
       "description": "<p>Display a date input widget that can be configured to accept a single date or a date range.\n <p></p>",
       "returns": [
         {
           "type_name": "LocalDate",
-          "description": "",
+          "description": "The current LocalDate value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -5131,13 +4790,13 @@
           "signature": "Jt.title(String body)"
         }
       ],
-      "examples": "Basic title and title with markdown formatting and styling\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TitleApp {\n     public static void main(String[] args) {\n         // Basic title\n         Jt.title(\"This is a title\").use();\n\n         // Title with Markdown and styling\n         Jt.title(\"_Jeamlit_ is **cool** :sunglasses:\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic title and title with markdown formatting and styling\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class TitleApp {\n     public static void main(String[] args) {\n         // Basic title\n         Jt.title(\"This is a title\").use();\n\n         // Title with Markdown and styling\n         Jt.title(\"_Jeamlit_ is **cool** :sunglasses:\").use();\n     }\n }\n</code></pre></p>",
       "name": "title",
-      "description": "<p>Display text in title formatting.\n Each document should have a single title(), although this is not enforced.\n <p></p>",
+      "description": "<p>Display text in title formatting.\n Each document should have a single <code>Jt.title()</code>, although this is not enforced.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -5270,13 +4929,13 @@
           "signature": "Jt.page(Class&lt;?&gt; pageApp)"
         }
       ],
-      "examples": "Basic page creation with custom title and icon\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class NavigationApp {\n     public static class FirstPage {\n         public static void main(String[] args) {\n             Jt.title(\"First Page\").use();\n         }\n     }\n\n     public static class SecondPage {\n         public static void main(String[] args) {\n             Jt.title(\"Second Page\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         var page = Jt\n                 .navigation(Jt.page(FirstPage.class).title(\"First page\").icon(\"🔥\"),\n                             Jt.page(SecondPage.class).title(\"Second page\").icon(\":favorite:\"))\n                 .use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic page creation with custom title and icon\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class NavigationApp {\n     public static class FirstPage {\n         public static void main(String[] args) {\n             Jt.title(\"First Page\").use();\n         }\n     }\n\n     public static class SecondPage {\n         public static void main(String[] args) {\n             Jt.title(\"Second Page\").use();\n         }\n     }\n\n     public static void main(String[] args) {\n         var page = Jt\n                 .navigation(Jt.page(FirstPage.class).title(\"First page\").icon(\"🔥\"),\n                             Jt.page(SecondPage.class).title(\"Second page\").icon(\":favorite:\"))\n                 .use();\n     }\n }\n</code></pre></p>",
       "name": "page",
       "description": "<p>Create a page for <code>Jt.navigation</code> in a multipage app.\n <p></p>",
       "returns": [
         {
           "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-          "description": "",
+          "description": "The current io.jeamlit.components.multipage.JtPage.Builder value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -5453,20 +5112,20 @@
               "type_name": "String",
               "default": null,
               "name": "body",
-              "description": "<p>The error text to display. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>The error text to display. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.error(String body)"
         }
       ],
-      "examples": "Simple error message\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ErrorApp {\n     public static void main(String[] args) {\n         String username = Jt.textInput(\"Username\").use();\n\n         if (username.isEmpty()) {\n             Jt.error(\"Username is required!\").use();\n         } else if (username.length() &lt; 3) {\n             Jt.error(\"Username must be at least 3 characters long.\").use();\n         }\n     }\n }\n</code></pre>\n <p>\n Error with markdown formatting\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormattedErrorApp {\n     public static void main(String[] args) {\n         Jt.error(\"**Connection Failed**: Unable to connect to the database. Please check your settings.\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple error message\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ErrorApp {\n     public static void main(String[] args) {\n         String username = Jt.textInput(\"Username\").use();\n\n         if (username.isEmpty()) {\n             Jt.error(\"Username is required!\").use();\n         } else if (username.length() &lt; 3) {\n             Jt.error(\"Username must be at least 3 characters long.\").use();\n         }\n     }\n }\n</code></pre>\n <p>\n Error with markdown formatting\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormattedErrorApp {\n     public static void main(String[] args) {\n         Jt.error(\"**Connection Failed**: Unable to connect to the database. Please check your settings.\").use();\n     }\n }\n</code></pre></p>",
       "name": "error",
       "description": "<p>Display error message.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -5674,13 +5333,13 @@
           "signature": "Jt.echarts(String chartOptionJson)"
         }
       ],
-      "examples": "Plot from a `Chart` (`Bar` extends `Chart`).\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import org.icepear.echarts.Bar;\n\n public class BarChartApp {\n     public static void main(String[] args) {\n         Bar bar = new Bar()\n                 .setLegend()\n                 .setTooltip(\"item\")\n                 .addXAxis(new String[] { \"Matcha Latte\", \"Milk Tea\", \"Cheese Cocoa\", \"Walnut Brownie\" })\n                 .addYAxis()\n                 .addSeries(\"2015\", new Number[] { 43.3, 83.1, 86.4, 72.4 })\n                 .addSeries(\"2016\", new Number[] { 85.8, 73.4, 65.2, 53.9 })\n                 .addSeries(\"2017\", new Number[] { 93.7, 55.1, 82.5, 39.1 });\n\n         Jt.echarts(bar).use();\n     }\n }\n</code></pre>\n\nPlot from an `Option`.\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import org.icepear.echarts.Option;\n import org.icepear.echarts.charts.bar.BarSeries;\n import org.icepear.echarts.components.coord.cartesian.CategoryAxis;\n import org.icepear.echarts.components.coord.cartesian.ValueAxis;\n import org.icepear.echarts.origin.util.SeriesOption;\n\n public class OptionChartApp {\n     public static void main(String[] args) {\n         CategoryAxis xAxis = new CategoryAxis()\n                 .setType(\"category\")\n                 .setData(new String[] { \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\" });\n\n         ValueAxis yAxis = new ValueAxis().setType(\"value\");\n\n         BarSeries series = new BarSeries()\n                 .setData(new Number[] { 120, 200, 150, 80, 70, 110, 130 })\n                 .setType(\"bar\");\n\n         Option option = new Option()\n                 .setXAxis(xAxis)\n                 .setYAxis(yAxis)\n                 .setSeries(new SeriesOption[] { series });\n\n         Jt.echarts(option).use();\n     }\n }\n</code></pre>\n\nPlot from a Json String\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import org.icepear.echarts.Option;\n import org.icepear.echarts.charts.bar.BarSeries;\n import org.icepear.echarts.components.coord.cartesian.CategoryAxis;\n import org.icepear.echarts.components.coord.cartesian.ValueAxis;\n import org.icepear.echarts.origin.util.SeriesOption;\n\n public class OptionChartApp {\n     public static void main(String[] args) {\n         String echartsOptionJson = \"\"\"\n                 {\n                   \"xAxis\": {\n                     \"type\": \"category\",\n                     \"data\": [\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"]\n                   },\n                   \"yAxis\": {\n                     \"type\": \"value\"\n                   },\n                   \"series\": [\n                     {\n                       \"data\": [150, 230, 224, 218, 135, 147, 260],\n                       \"type\": \"line\"\n                     }\n                   ]\n                 }\n                 \"\"\";\n\n         Jt.echarts(echartsOptionJson).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Plot from a <code>Chart</code> (<code>Bar</code> extends <code>Chart</code>).\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import org.icepear.echarts.Bar;\n\n public class BarChartApp {\n     public static void main(String[] args) {\n         Bar bar = new Bar()\n                 .setLegend()\n                 .setTooltip(\"item\")\n                 .addXAxis(new String[] { \"Matcha Latte\", \"Milk Tea\", \"Cheese Cocoa\", \"Walnut Brownie\" })\n                 .addYAxis()\n                 .addSeries(\"2015\", new Number[] { 43.3, 83.1, 86.4, 72.4 })\n                 .addSeries(\"2016\", new Number[] { 85.8, 73.4, 65.2, 53.9 })\n                 .addSeries(\"2017\", new Number[] { 93.7, 55.1, 82.5, 39.1 });\n\n         Jt.echarts(bar).use();\n     }\n }\n</code></pre></p>\n\n<p>Plot from an <code>Option</code>.\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import org.icepear.echarts.Option;\n import org.icepear.echarts.charts.bar.BarSeries;\n import org.icepear.echarts.components.coord.cartesian.CategoryAxis;\n import org.icepear.echarts.components.coord.cartesian.ValueAxis;\n import org.icepear.echarts.origin.util.SeriesOption;\n\n public class OptionChartApp {\n     public static void main(String[] args) {\n         CategoryAxis xAxis = new CategoryAxis()\n                 .setType(\"category\")\n                 .setData(new String[] { \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\" });\n\n         ValueAxis yAxis = new ValueAxis().setType(\"value\");\n\n         BarSeries series = new BarSeries()\n                 .setData(new Number[] { 120, 200, 150, 80, 70, 110, 130 })\n                 .setType(\"bar\");\n\n         Option option = new Option()\n                 .setXAxis(xAxis)\n                 .setYAxis(yAxis)\n                 .setSeries(new SeriesOption[] { series });\n\n         Jt.echarts(option).use();\n     }\n }\n</code></pre></p>\n\n<p>Plot from a JSON <code>String</code>\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import org.icepear.echarts.Option;\n import org.icepear.echarts.charts.bar.BarSeries;\n import org.icepear.echarts.components.coord.cartesian.CategoryAxis;\n import org.icepear.echarts.components.coord.cartesian.ValueAxis;\n import org.icepear.echarts.origin.util.SeriesOption;\n\n public class OptionChartApp {\n     public static void main(String[] args) {\n         String echartsOptionJson = \"\"\"\n                 {\n                   \"xAxis\": {\n                     \"type\": \"category\",\n                     \"data\": [\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"]\n                   },\n                   \"yAxis\": {\n                     \"type\": \"value\"\n                   },\n                   \"series\": [\n                     {\n                       \"data\": [150, 230, 224, 218, 135, 147, 260],\n                       \"type\": \"line\"\n                     }\n                   ]\n                 }\n                 \"\"\";\n\n         Jt.echarts(echartsOptionJson).use();\n     }\n }\n</code></pre></p>",
       "name": "echarts",
       "description": "<p>Display a chart using ECharts library.\n See <a href=\"https://echarts.icepear.org/\" target=\"_blank\">echarts-java documentation</a> for more info.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -5832,13 +5491,13 @@
           "signature": "Jt.divider()"
         }
       ],
-      "examples": "Basic section separator\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DividerApp {\n     public static void main(String[] args) {\n         Jt.title(\"Section 1\").use();\n         Jt.text(\"Content for section 1\").use();\n\n         Jt.divider().use();\n\n         Jt.title(\"Section 2\").use();\n         Jt.text(\"Content for section 2\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic section separator\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DividerApp {\n     public static void main(String[] args) {\n         Jt.title(\"Section 1\").use();\n         Jt.text(\"Content for section 1\").use();\n\n         Jt.divider().use();\n\n         Jt.title(\"Section 2\").use();\n         Jt.text(\"Content for section 2\").use();\n     }\n }\n</code></pre></p>",
       "name": "divider",
       "description": "<p>Display a horizontal rule.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6183,20 +5842,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this slider is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this slider is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.slider(String label)"
         }
       ],
-      "examples": "Basic integer slider usage\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class SliderApp {\n     public static void main(String[] args) {\n         int age = Jt.slider(\"How old are you?\")\n             .min(0)\n             .max(130)\n             .value(25)\n             .use();\n\n         Jt.text(\"I'm \" + age + \" years old\").use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic integer slider usage\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class SliderApp {\n     public static void main(String[] args) {\n         int age = Jt.slider(\"How old are you?\")\n             .min(0)\n             .max(130)\n             .value(25)\n             .use();\n\n         Jt.text(\"I'm \" + age + \" years old\").use();\n     }\n }\n</code></pre></p>",
       "name": "slider",
       "description": "<p>Display a slider widget.\n <p></p>",
       "returns": [
         {
           "type_name": "double",
-          "description": "",
+          "description": "The current double value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6517,7 +6176,7 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this radio selection is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this radio selection is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             },
             {
@@ -6531,13 +6190,354 @@
           "signature": "Jt.radio(String label, List&lt;T&gt; options)"
         }
       ],
-      "examples": "Simple radio selection\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class RadioApp {\n     public static void main(String[] args) {\n         String size = Jt.radio(\"Select size\",\n             List.of(\"Small\", \"Medium\", \"Large\")).use();\n\n         if (size != null) {\n             Jt.text(\"Selected size: \" + size).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Radio with custom objects\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ProductRadioApp {\n     public static void main(String[] args) {\n         record Product(String name, double price) {}\n\n         Product selected = Jt\n                 .radio(\"Choose product\",\n                        List.of(new Product(\"Basic Plan\", 9.99),\n                                new Product(\"Pro Plan\", 19.99),\n                                new Product(\"Enterprise Plan\", 49.99)))\n                 .formatFunction(e -&gt; e.name + \" ($\" + e.price + \")\")\n                 .use();\n\n         if (selected != null) {\n             Jt.text(\"You chose: \" + selected.name()).use();\n             Jt.text(\"Price: $\" + selected.price()).use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple radio selection\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class RadioApp {\n     public static void main(String[] args) {\n         String size = Jt.radio(\"Select size\",\n             List.of(\"Small\", \"Medium\", \"Large\")).use();\n\n         if (size != null) {\n             Jt.text(\"Selected size: \" + size).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Radio with custom objects\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ProductRadioApp {\n     public static void main(String[] args) {\n         record Product(String name, double price) {}\n\n         Product selected = Jt\n                 .radio(\"Choose product\",\n                        List.of(new Product(\"Basic Plan\", 9.99),\n                                new Product(\"Pro Plan\", 19.99),\n                                new Product(\"Enterprise Plan\", 49.99)))\n                 .formatFunction(e -&gt; e.name + \" ($\" + e.price + \")\")\n                 .use();\n\n         if (selected != null) {\n             Jt.text(\"You chose: \" + selected.name()).use();\n             Jt.text(\"Price: $\" + selected.price()).use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "radio",
       "description": "<p>Display a radio button widget.\n <p></p>",
       "returns": [
         {
           "type_name": "Nullable T",
-          "description": "",
+          "description": "The current Nullable T value of the component.",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.selectbox": {
+      "builderMethods": [
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "Integer",
+              "default": null,
+              "name": "index",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "index(Integer index)",
+          "name": "index",
+          "description": "<p>The index of the preselected option on first render. If <code>null</code>, initializes empty and returns <code>null</code> until user selection.\n Defaults to 0 (the first option).</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "Function&lt;T, String&gt;",
+              "default": null,
+              "name": "formatFunction",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "formatFunction(function.Function&lt;T, String&gt; formatFunction)",
+          "name": "formatFunction",
+          "description": "<p>Function to modify the display of the options. The <code>Function</code> receives the raw option object and returns a String that will be used as display label.\n Does not impact the return value of the component.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "help",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "help(String help)",
+          "name": "help",
+          "description": "<p>A tooltip that gets displayed next to the widget label. If <code>null</code>, no tooltip is displayed.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "Consumer&lt;T&gt;",
+              "default": null,
+              "name": "onChange",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "onChange(function.Consumer&lt;T&gt; onChange)",
+          "name": "onChange",
+          "description": "<p>An optional callback invoked when the selectbox value changes.\n The value passed to the callback is the previous value of the component.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "disabled",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "disabled(boolean disabled)",
+          "name": "disabled",
+          "description": "<p>Disables the selectbox if set to true. When disabled, users cannot interact with the widget.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "io.jeamlit.core.JtComponent.LabelVisibility",
+              "default": null,
+              "name": "labelVisibility",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "labelVisibility(JtComponent.LabelVisibility labelVisibility)",
+          "name": "labelVisibility",
+          "description": "<p>The visibility of the label. The default is <code>VISIBLE</code>.\n If this is <code>HIDDEN</code>, Jeamlit displays an empty spacer instead of the label, which can help keep the\n widget aligned with other widgets. If this is <code>COLLAPSED</code>, Jeamlit displays no label or spacer.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "width",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(String width)",
+          "name": "width",
+          "description": "<p>The width of the element. This can be one of the following:\n <ul>\n <li><code>content</code> (default): The width of the element matches the width of its content, but doesn&#39;t exceed the width of the parent container.</li>\n <li><code>stretch</code>: The width of the element matches the width of the parent container.</li>\n <li>An integer specifying the width in pixels: The element has a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.</li>\n </ul></p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "int",
+              "default": null,
+              "name": "widthPixels",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "width(int widthPixels)",
+          "name": "width",
+          "description": "<p>The width of the selectbox in pixels. The element will have a fixed width. If the specified width is greater than the width of the parent container, the width of the element matches the width of the parent container.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "placeholder",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "placeholder(String placeholder)",
+          "name": "placeholder",
+          "description": "<p>Text displayed when no option is selected. Default varies based on widget configuration.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "acceptNewOptions",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "acceptNewOptions(boolean acceptNewOptions)",
+          "name": "acceptNewOptions",
+          "description": "<p>Whether the user can add a selection that isn&#39;t included in options.\n If this is <code>false</code> (default), the user can only select from the items in options.\n If this is <code>true</code>, the user can enter a new item that doesn&#39;t exist in options.\n <p>\n When a user enters a new item, it is returned by the widget as a string.\n The new item is not added to the widget&#39;s drop-down menu. Jeamlit will use a case-insensitive match\n from options before adding a new item.\n <p>\n Only compatible with selectbox of <code>String</code> values.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.input.SelectBoxComponent.Builder&lt;T&gt;",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "key(String key)",
+          "name": "key",
+          "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [],
+          "signature": "use()",
+          "name": "use",
+          "description": "<p>Put the widget in the app, in the <code>MAIN</code> container.</p>",
+          "returns": [
+            {
+              "type_name": "B",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "io.jeamlit.core.JtContainer",
+              "default": null,
+              "name": "container",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "use(JtContainer container)",
+          "name": "use",
+          "description": "<p>Put the widget in the app, in the provided container.</p>",
+          "returns": [
+            {
+              "type_name": "B",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        }
+      ],
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "label",
+              "description": "<p>A short label explaining to the user what this selection is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
+              "is_optional": false
+            },
+            {
+              "type_name": "List&lt;T&gt;",
+              "default": null,
+              "name": "options",
+              "description": "<p>The list of options to choose from</p>",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.selectbox(String label, List&lt;T&gt; options)"
+        }
+      ],
+      "examples": "<p>Simple dropdown selection\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class SelectBoxApp {\n     public static void main(String[] args) {\n         String country = Jt.selectbox(\"Select your country\",\n                                       List.of(\"United States\", \"Canada\", \"United Kingdom\", \"Germany\", \"France\")).use();\n\n         if (country != null) {\n             Jt.text(\"Selected country: \" + country).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Dropdown with default value\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ProcessingSelectBoxApp {\n     public static void main(String[] args) {\n         String priority = Jt.selectbox(\"Task priority\",\n                                        List.of(\"Low\", \"Medium\", \"High\", \"Critical\"))\n                             .index(1)\n                             .use();\n         Jt.text(\"Priority: \" + priority).use();\n     }\n }\n</code></pre></p>",
+      "name": "selectbox",
+      "description": "<p>Display a select widget.\n <p></p>",
+      "returns": [
+        {
+          "type_name": "Nullable T",
+          "description": "The current Nullable T value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6661,13 +6661,13 @@
           "signature": "Jt.tableFromListColumns(Map&lt;String, Values&gt; cols)"
         }
       ],
-      "examples": "Basic table with data objects\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TableApp {\n     public static void main(String[] args) {\n         record Person(String name, int age, String city) {\n         }\n\n         List&lt;Object&gt; data = List.of(new Person(\"Alice\", 25, \"New York\"),\n                                     new Person(\"Bob\", 30, \"San Francisco\"),\n                                     new Person(\"Charlie\", 35, \"Chicago\"));\n\n         Jt.table(data).use();\n     }\n }\n</code></pre>\n\nBasic table with array of objects\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class TableArrayApp {\n     public static void main(String[] args) {\n         record Product(String name, double price, boolean inStock) {}\n\n         Product[] products = {\n             new Product(\"Laptop\", 999.99, true),\n             new Product(\"Mouse\", 25.50, false),\n             new Product(\"Keyboard\", 75.00, true)\n         };\n\n         Jt.table(products).use();\n     }\n }\n</code></pre>\n\nTable from column arrays\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.Map;\n\n public class TableColumnsArrayApp {\n     public static void main(String[] args) {\n         Map&lt;String, Object[]&gt; salesData = Map.of(\n                 \"Month\", new String[]{\"Jan\", \"Feb\", \"Mar\", \"Apr\"},\n                 \"Sales\", new Integer[]{1200, 1350, 1100, 1450},\n                 \"Target\", new Integer[]{1000, 1300, 1200, 1400},\n                 \"Achieved\", new Boolean[]{true, true, false, true}\n         );\n\n         Jt.tableFromArrayColumns(salesData).use();\n     }\n }\n</code></pre>\n\nTable from column lists\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.List;\n import java.util.Map;\n\n public class TableColumnsListApp {\n     public static void main(String[] args) {\n         Map&lt;String, List&lt;Object&gt;&gt; employeeData = Map.of(\n                 \"Name\", List.of(\"Alice\", \"Bob\", \"Charlie\", \"Diana\"),\n                 \"Department\", List.of(\"Engineering\", \"Sales\", \"Marketing\", \"Engineering\"),\n                 \"Salary\", List.of(95000, 75000, 68000, 102000),\n                 \"Remote\", List.of(true, false, true, true)\n         );\n\n         Jt.tableFromListColumns(employeeData).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic table with data objects\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TableApp {\n     public static void main(String[] args) {\n         record Person(String name, int age, String city) {\n         }\n\n         List&lt;Object&gt; data = List.of(new Person(\"Alice\", 25, \"New York\"),\n                                     new Person(\"Bob\", 30, \"San Francisco\"),\n                                     new Person(\"Charlie\", 35, \"Chicago\"));\n\n         Jt.table(data).use();\n     }\n }\n</code></pre></p>\n\n<p>Basic table with array of objects\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class TableArrayApp {\n     public static void main(String[] args) {\n         record Product(String name, double price, boolean inStock) {}\n\n         Product[] products = {\n             new Product(\"Laptop\", 999.99, true),\n             new Product(\"Mouse\", 25.50, false),\n             new Product(\"Keyboard\", 75.00, true)\n         };\n\n         Jt.table(products).use();\n     }\n }\n</code></pre></p>\n\n<p>Table from column arrays\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.Map;\n\n public class TableColumnsArrayApp {\n     public static void main(String[] args) {\n         Map&lt;String, Object[]&gt; salesData = Map.of(\n                 \"Month\", new String[]{\"Jan\", \"Feb\", \"Mar\", \"Apr\"},\n                 \"Sales\", new Integer[]{1200, 1350, 1100, 1450},\n                 \"Target\", new Integer[]{1000, 1300, 1200, 1400},\n                 \"Achieved\", new Boolean[]{true, true, false, true}\n         );\n\n         Jt.tableFromArrayColumns(salesData).use();\n     }\n }\n</code></pre></p>\n\n<p>Table from column lists\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.List;\n import java.util.Map;\n\n public class TableColumnsListApp {\n     public static void main(String[] args) {\n         Map&lt;String, List&lt;Object&gt;&gt; employeeData = Map.of(\n                 \"Name\", List.of(\"Alice\", \"Bob\", \"Charlie\", \"Diana\"),\n                 \"Department\", List.of(\"Engineering\", \"Sales\", \"Marketing\", \"Engineering\"),\n                 \"Salary\", List.of(95000, 75000, 68000, 102000),\n                 \"Remote\", List.of(true, false, true, true)\n         );\n\n         Jt.tableFromListColumns(employeeData).use();\n     }\n }\n</code></pre></p>",
       "name": "table",
       "description": "<p>Display a static table.\n <p></p>",
       "returns": [
         {
           "type_name": "void",
-          "description": "",
+          "description": "The current void value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6916,20 +6916,20 @@
               "type_name": "String",
               "default": null,
               "name": "label",
-              "description": "<p>A short label explaining to the user what this toggle is for. Markdown is supported, see <code>io.jeamlit.core.Jt#markdown(String)</code> for more details.</p>",
+              "description": "<p>A short label explaining to the user what this toggle is for. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
           "signature": "Jt.toggle(String label)"
         }
       ],
-      "examples": "Simple toggle\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ToggleApp {\n     public static void main(String[] args) {\n         boolean enabled = Jt.toggle(\"Enable notifications\").use();\n\n         Jt.text(\"Notifications: \" + (enabled ? \"Enabled\" : \"Disabled\")).use();\n     }\n }\n</code></pre>\n <p>\n Toggle with default value\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ToggleDefaultApp {\n     public static void main(String[] args) {\n         boolean autoSave = Jt.toggle(\"Auto-save\")\n             .value(true)\n             .use();\n\n         if (autoSave) {\n             Jt.text(\"Changes will be saved automatically\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Simple toggle\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ToggleApp {\n     public static void main(String[] args) {\n         boolean enabled = Jt.toggle(\"Enable notifications\").use();\n\n         Jt.text(\"Notifications: \" + (enabled ? \"Enabled\" : \"Disabled\")).use();\n     }\n }\n</code></pre>\n <p>\n Toggle with default value\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ToggleDefaultApp {\n     public static void main(String[] args) {\n         boolean autoSave = Jt.toggle(\"Auto-save\")\n             .value(true)\n             .use();\n\n         if (autoSave) {\n             Jt.text(\"Changes will be saved automatically\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "toggle",
       "description": "<p>Display a toggle widget.\n <p></p>",
       "returns": [
         {
           "type_name": "NotNull Boolean",
-          "description": "",
+          "description": "The current NotNull Boolean value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6943,13 +6943,13 @@
           "signature": "Jt.cache()"
         }
       ],
-      "examples": "Caching expensive computations\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class CacheApp {\n      public static void main(String[] args) {\n          String cacheKey = \"long_running_operation\";\n          Long result = Jt.cache().getLong(cacheKey);\n\n          if (result == null) {\n              Jt.text(\"Performing a long running operation. This will take a few seconds\").use();\n              result = long_running_operation();\n              Jt.cache().put(cacheKey, result);\n          }\n\n          Jt.text(\"Result of long operation: \" + result).use();\n          Jt.text(\"Refresh or Open the page in another tab: the long running operation result will be cached\").use();\n      }\n\n      private static long long_running_operation(){\n          try {\n              Thread.sleep(5000);\n          } catch (InterruptedException ignored) {\n          }\n          return 42;\n      }\n  }\n</code></pre>\n <p>\n Sharing data across users\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class SharedDataApp {\n     public static void main(String[] args) {\n         // initialization\n         Jt.cache().putIfAbsent(\"counter\", 0);\n         // increment visits\n         int totalVisits = Jt.cache().computeInt(\"counter\", (k, v) -&gt; v + 1);\n\n         Jt.text(\"Total app visits: \" + totalVisits).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Caching expensive computations\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class CacheApp {\n      public static void main(String[] args) {\n          String cacheKey = \"long_running_operation\";\n          Long result = Jt.cache().getLong(cacheKey);\n\n          if (result == null) {\n              Jt.text(\"Performing a long running operation. This will take a few seconds\").use();\n              result = long_running_operation();\n              Jt.cache().put(cacheKey, result);\n          }\n\n          Jt.text(\"Result of long operation: \" + result).use();\n          Jt.text(\"Refresh or Open the page in another tab: the long running operation result will be cached\").use();\n      }\n\n      private static long long_running_operation(){\n          try {\n              Thread.sleep(5000);\n          } catch (InterruptedException ignored) {\n          }\n          return 42;\n      }\n  }\n</code></pre>\n <p>\n Sharing data across users\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class SharedDataApp {\n     public static void main(String[] args) {\n         // initialization\n         Jt.cache().putIfAbsent(\"counter\", 0);\n         // increment visits\n         int totalVisits = Jt.cache().computeInt(\"counter\", (k, v) -&gt; v + 1);\n\n         Jt.text(\"Total app visits: \" + totalVisits).use();\n     }\n }\n</code></pre>\n <p>\n Deleting values in the cache:\n <pre>\n <code>\n // remove all values\n Jt.cache().clear();\n // remove a single key\n Jt.cache().remove(&quot;my_key&quot;);\n </code>\n </pre>\n <code>TypedMap</code> simply extends the java <code>Map</code> type with quality-of-life\n casting methods like <code>getInt</code>, <code>getDouble</code>, <code>getString</code>, etc...</p>",
       "name": "cache",
       "description": "<p>Return the app cache. The app cache is shared across all sessions.\n Put values in this map that are meant to be shared across all users.\n For instance: database long-lived connections, ML models loaded weights, etc...\n <p>\n See <a href=\"https://docs.jeamlit.io/get-started/fundamentals/advanced-concepts#caching\">documentation</a>.\n <p></p>",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
-          "description": "",
+          "description": "The current io.jeamlit.datastructure.TypedMap value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6963,13 +6963,13 @@
           "signature": "Jt.sessionState()"
         }
       ],
-      "examples": "Basic counter with session state\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class CounterApp {\n     public static void main(String[] args) {\n         // initialize a counter\n         Jt.sessionState().putIfAbsent(\"counter\", 0);\n\n         if (Jt.button(\"Increment\").use()) {\n             Jt.sessionState().computeInt(\"counter\", (k, v) -&gt; v + 1);\n         }\n\n         Jt.text(\"Counter: \" + Jt.sessionState().get(\"counter\")).use();\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic counter with session state\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class CounterApp {\n     public static void main(String[] args) {\n         // initialize a counter\n         Jt.sessionState().putIfAbsent(\"counter\", 0);\n\n         if (Jt.button(\"Increment\").use()) {\n             Jt.sessionState().computeInt(\"counter\", (k, v) -&gt; v + 1);\n         }\n\n         Jt.text(\"Counter: \" + Jt.sessionState().get(\"counter\")).use();\n     }\n }\n</code></pre></p>",
       "name": "sessionState",
       "description": "<p>Return the session state Map of the session. A session corresponds to an opened tab of the app.\n <p>\n The session state is maintained across re-runs.\n Values can be stored and persisted in this map.\n <p></p>",
       "returns": [
         {
           "type_name": "io.jeamlit.datastructure.TypedMap",
-          "description": "",
+          "description": "The current io.jeamlit.datastructure.TypedMap value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -6983,13 +6983,13 @@
           "signature": "Jt.urlQueryParameters()"
         }
       ],
-      "examples": "Using query parameters for app configuration\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class QueryParamsApp {\n     public static void main(String[] args) {\n         var params = Jt.urlQueryParameters();\n\n         String name = params.getOrDefault(\"name\", List.of(\"unknown user\")).get(0);\n\n         Jt.title(\"App Settings\").use();\n         Jt.text(\"Hello \" + name).use();\n         // URL: ?name=Alice would show:\n         // Hello Alice\n     }\n }\n</code></pre>",
+      "examples": "<p>Using query parameters for app configuration\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class QueryParamsApp {\n     public static void main(String[] args) {\n         var params = Jt.urlQueryParameters();\n\n         String name = params.getOrDefault(\"name\", List.of(\"unknown user\")).get(0);\n\n         Jt.title(\"App Settings\").use();\n         Jt.text(\"Hello \" + name).use();\n         // URL: ?name=Alice would show:\n         // Hello Alice\n     }\n }\n</code></pre></p>",
       "name": "urlQueryParameters",
-      "description": "<p>Return the current query parameters as a map.\n <p>\n For instance: <code>?key1=foo&amp;key2=bar&amp;key2=fizz</code> will return\n {&quot;key1&quot;: [&quot;foo&quot;], &quot;key2&quot;: [&quot;bar&quot;, &quot;fizz&quot;]}\n <p></p>",
+      "description": "<p>Return the current URL query parameters as a map.\n <p>\n For instance: <code>?key1=foo&amp;key2=bar&amp;key2=fizz</code> in the URL will return\n <code>{&quot;key1&quot;: [&quot;foo&quot;], &quot;key2&quot;: [&quot;bar&quot;, &quot;fizz&quot;]}</code>\n <p></p>",
       "returns": [
         {
           "type_name": "Map&lt;String, List&lt;String&gt;&gt;",
-          "description": "",
+          "description": "The current Map&lt;String, List&lt;String&gt;&gt; value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -7003,13 +7003,13 @@
           "signature": "Jt.urlPath()"
         }
       ],
-      "examples": "Conditional content based on current path\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class PathApp {\n     public static void main(String[] args) {\n         Jt.navigation(Jt.page(HomePage.class), Jt.page(DetailsPage.class)).use();\n\n         Jt.text(\"The current path is: \" + Jt.urlPath()).use();\n     }\n\n     public static class HomePage {\n         public static void main(String[] args) {\n             Jt.title(\"Home Page\").use();\n         }\n     }\n\n     public static class DetailsPage {\n         public static void main(String[] args) {\n             Jt.title(\"Details Page\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>Conditional content based on current path\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class PathApp {\n     public static void main(String[] args) {\n         Jt.navigation(Jt.page(HomePage.class), Jt.page(DetailsPage.class)).use();\n\n         Jt.text(\"The current path is: \" + Jt.urlPath()).use();\n     }\n\n     public static class HomePage {\n         public static void main(String[] args) {\n             Jt.title(\"Home Page\").use();\n         }\n     }\n\n     public static class DetailsPage {\n         public static void main(String[] args) {\n             Jt.title(\"Details Page\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "urlPath",
       "description": "<p>Return the current url path.\n <p>\n May be used for multipage apps.\n In a single page app, will always return <code>&quot;/&quot;</code>.\n <p></p>",
       "returns": [
         {
           "type_name": "String",
-          "description": "",
+          "description": "The current String value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -7152,13 +7152,13 @@
           "signature": "Jt.tabs(String key, List&lt;String&gt; tabs)"
         }
       ],
-      "examples": "Basic tabbed interface\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(\"content-tabs\", List.of(\"Overview\", \"Details\", \"Settings\")).use();\n\n         Jt.text(\"Welcome to the overview page\").use(tabs.tab(\"Overview\"));\n         Jt.text(\"Here are the details\").use(tabs.tab(\"Details\"));\n         Jt.text(\"Configure your settings here\").use(tabs.tab(\"Settings\"));\n     }\n }\n</code></pre>\n <p>\n Data analysis tabs\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DataTabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(\"analysis\", List.of(\"Sales\", \"Marketing\", \"Finance\")).use();\n\n         // Sales tab\n         Jt.title(\"Sales Dashboard\").use(tabs.tab(0));\n         Jt.text(\"Total sales: $100,000\").use(tabs.tab(0));\n\n         // Marketing tab\n         Jt.title(\"Marketing Metrics\").use(tabs.tab(1));\n         Jt.text(\"Conversion rate: 3.5%\").use(tabs.tab(1));\n\n         // Finance tab\n         Jt.title(\"Financial Overview\").use(tabs.tab(2));\n         Jt.text(\"Revenue growth: +15%\").use(tabs.tab(2));\n     }\n }\n</code></pre>",
+      "examples": "<p>Basic tabbed interface\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(\"content-tabs\", List.of(\"Overview\", \"Details\", \"Settings\")).use();\n\n         Jt.text(\"Welcome to the overview page\").use(tabs.tab(\"Overview\"));\n         Jt.text(\"Here are the details\").use(tabs.tab(\"Details\"));\n         Jt.text(\"Configure your settings here\").use(tabs.tab(\"Settings\"));\n     }\n }\n</code></pre>\n <p>\n Data analysis tabs\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DataTabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(\"analysis\", List.of(\"Sales\", \"Marketing\", \"Finance\")).use();\n\n         // Sales tab\n         Jt.title(\"Sales Dashboard\").use(tabs.tab(0));\n         Jt.text(\"Total sales: $100,000\").use(tabs.tab(0));\n\n         // Marketing tab\n         Jt.title(\"Marketing Metrics\").use(tabs.tab(1));\n         Jt.text(\"Conversion rate: 3.5%\").use(tabs.tab(1));\n\n         // Finance tab\n         Jt.title(\"Financial Overview\").use(tabs.tab(2));\n         Jt.text(\"Revenue growth: +15%\").use(tabs.tab(2));\n     }\n }\n</code></pre></p>",
       "name": "tabs",
       "description": "<p>Insert containers separated into tabs.\n <p>\n Inserts a number of multi-element containers as tabs.\n Tabs are a navigational element that allows users to easily move between groups of related content.\n <p>\n To add elements to the returned tabs container:\n <pre>\n <code>\n var tabs = Jt.tabs(&quot;my-tabs&quot;, List.of(&quot;E-commerce&quot;, &quot;Industry&quot;, &quot;Finance&quot;)).use();\n // get tab by name\n Jt.yourElement().use(tabs.tab(&quot;E-commerce&quot;));\n // get tab by index\n Jt.yourElement().use(tabs.tab(2));\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
         {
           "type_name": "Tabs",
-          "description": "",
+          "description": "The current Tabs value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -7390,13 +7390,13 @@
           "signature": "Jt.form(String key)"
         }
       ],
-      "examples": "User registration form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"registration\").use();\n\n         String name = Jt.textInput(\"Full Name\").use(form);\n         String email = Jt.textInput(\"Email\").use(form);\n         int age = Jt.numberInput(\"Age\", Integer.class).min(0).max(120).use(form);\n         boolean subscribe = Jt.checkbox(\"Subscribe to newsletter\").use(form);\n\n         if (Jt.formSubmitButton(\"Register\").use()) {\n             Jt.text(\"Welcome, \" + name + \"!\").use();\n             Jt.text(\"Email: \" + email).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Survey form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class SurveyFormApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"survey\").use();\n         double satisfaction = Jt.slider(\"Satisfaction (1-10)\").min(1).max(10).value(5).use(form);\n         String feedback = Jt.textArea(\"Additional feedback\").use(form);\n         String department = Jt.selectBox(\"Department\",\n                                          List.of(\"Engineering\", \"Marketing\", \"Sales\", \"Support\")).use(form);\n\n         if (Jt.formSubmitButton(\"Submit Survey\").use(form)) {\n             Jt.text(\"Thank you for your feedback!\").use();\n             Jt.text(\"Satisfaction: \" + satisfaction + \"/10\").use();\n         }\n     }\n }\n</code></pre>",
+      "examples": "<p>User registration form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"registration\").use();\n\n         String name = Jt.textInput(\"Full Name\").use(form);\n         String email = Jt.textInput(\"Email\").use(form);\n         int age = Jt.numberInput(\"Age\", Integer.class).min(0).max(120).use(form);\n         boolean subscribe = Jt.checkbox(\"Subscribe to newsletter\").use(form);\n\n         if (Jt.formSubmitButton(\"Register\").use()) {\n             Jt.text(\"Welcome, \" + name + \"!\").use();\n             Jt.text(\"Email: \" + email).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Survey form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class SurveyFormApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"survey\").use();\n         double satisfaction = Jt.slider(\"Satisfaction (1-10)\").min(1).max(10).value(5).use(form);\n         String feedback = Jt.textArea(\"Additional feedback\").use(form);\n         String department = Jt.selectbox(\"Department\",\n                                          List.of(\"Engineering\", \"Marketing\", \"Sales\", \"Support\")).use(form);\n\n         if (Jt.formSubmitButton(\"Submit Survey\").use(form)) {\n             Jt.text(\"Thank you for your feedback!\").use();\n             Jt.text(\"Satisfaction: \" + satisfaction + \"/10\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "form",
       "description": "<p>Create a form that batches elements together with a &#39;Submit&#39; button.\n <p>\n A form is a container that visually groups other elements and widgets together, and contains a Submit button.\n When the form&#39;s Submit button is pressed, all widget values inside the form will be sent to Jeamlit in a batch.\n <p>\n To add elements to the form:\n <pre>\n <code>\n var form = Jt.form(&quot;my-form-1&quot;).use();\n Jt.yourElement().use(form);\n ...\n Jt.formSubmitButton(&quot;submit form&quot;).use();\n </code>\n </pre>\n <p>\n Forms have a few constraints:\n <ul>\n     <li>Every form must contain a <code>Jt.formSubmitButton)</code></li>\n     <li><code>Jt.button</code> and <code>Jt.downloadButton</code> cannot be added to a form</li>\n     <li>Forms can appear anywhere in your app (sidebar, columns, etc), but they cannot be embedded inside other forms</li>\n     <li>Within a form, the only widget that can have a callback function is <code>Jt.formSubmitButton)</code></li>\n </ul>\n <p></p>",
       "returns": [
         {
           "type_name": "JtContainer",
-          "description": "",
+          "description": "The current JtContainer value of the component.",
           "is_generator": false,
           "return_name": null
         }

@@ -122,8 +122,6 @@ site_menu:
     ignore: true
   - category: Develop / Concepts / Configuration and theming
     url: /develop/concepts/configuration
-    visible: false
-    ignore: true
   - category: Develop / Concepts / Configuration and theming / Configuration options
     url: /develop/concepts/configuration/options
     visible: false
@@ -134,8 +132,6 @@ site_menu:
     ignore: true
   - category: Develop / Concepts / Configuration and theming / Serving static files
     url: /develop/concepts/configuration/serving-static-files
-    visible: false
-    ignore: true
   - category: Develop / Concepts / Configuration and theming / THEMING
     visible: false
     ignore: true

@@ -1,15 +1,17 @@
 ---
-title: Additional Streamlit features
+title: Additional Jeamlit features
 slug: /get-started/fundamentals/additional-features
 ---
 
-# Additional Streamlit features
+# Additional Jeamlit features
 
-So you've read all about Streamlit's [Basic concepts](/get-started/fundamentals/main-concepts) and gotten a taste of caching and Session State in [Advanced concepts](/get-started/fundamentals/advanced-concepts). But what about the bells and whistles? Here's a quick look at some extra features to take your app to the next level.
+So you've read all about Jeamlit's [Basic concepts](/get-started/fundamentals/main-concepts) and gotten a taste of caching and Session State in [Advanced concepts](/get-started/fundamentals/advanced-concepts). But what about the bells and whistles? Here's a quick look at some extra features to take your app to the next level.
+
+{/* theming not implemented yet
 
 ## Theming
 
-Streamlit supports Light and Dark themes out of the box. Streamlit will first
+Jeamlit supports Light and Dark themes out of the box. Jeamlit will first
 check if the user viewing an app has a Light or Dark mode preference set by
 their operating system and browser. If so, then that preference will be used.
 Otherwise, the Light theme is applied by default.
@@ -36,7 +38,7 @@ in the [theme option documentation](/develop/concepts/configuration/theming).
 <Note>
 
 The theme editor menu is available only in local development. If you've deployed your app using
-Streamlit Community Cloud, the "Edit active theme" button will no longer be displayed in the "Settings"
+Jeamlit Community Cloud, the "Edit active theme" button will no longer be displayed in the "Settings"
 menu.
 
 </Note>
@@ -48,75 +50,69 @@ your config.toml file, and watch as your app reruns with the new theme colors ap
 
 </Tip>
 
+*/}
+
 ## Pages
 
-As apps grow large, it becomes useful to organize them into multiple pages. This makes the app easier to manage as a developer and easier to navigate as a user. Streamlit provides a powerful way to create multipage apps using [`st.Page`](/develop/api-reference/navigation/st.page) and [`st.navigation`](/develop/api-reference/navigation/st.navigation). Just create your pages and connect them with navigation as follows:
+As apps grow large, it becomes useful to organize them into multiple pages. 
+This makes the app easier to manage as a developer and easier to navigate as a user. Jeamlit provides a 
+powerful way to create multipage apps using [`Jt.page`](/develop/api-reference/navigation/jt.page) and [`Jt.navigation`](/develop/api-reference/navigation/jt.navigation). 
+Just create your pages and connect them with navigation as follows:
 
-1. Create an entry point script that defines and connects your pages
-2. Create separate Python files for each page's content
-3. Use [`st.Page`](/develop/api-reference/navigation/st.page) to define your pages and [`st.navigation`](/develop/api-reference/navigation/st.navigation) to connect them
+1. Create an entry point class that defines and connects your pages
+2. Create separate Java classes for each page's content
+3. Use [`Jt.page`](/develop/api-reference/navigation/jt.page) to define your pages and [`Jt.navigation`](/develop/api-reference/navigation/jt.navigation) to connect them
 
 Here's an example of a three-page app:
 
 <details open>
-<summary><code>streamlit_app.py</code></summary>
+<summary><code>App.java</code></summary>
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
+import io.jeamlit.core.Page;
+import java.util.List;
 
-# Define the pages
-main_page = st.Page("main_page.py", title="Main Page", icon="🎈")
-page_2 = st.Page("page_2.py", title="Page 2", icon="❄️")
-page_3 = st.Page("page_3.py", title="Page 3", icon="🎉")
+public class App {
 
-# Set up navigation
-pg = st.navigation([main_page, page_2, page_3])
+    public static void main(String[] args) {
+        // register the pages
+        var currentPage = Jt.navigation(Jt.page(MainPage.class).title("Main Page").icon("🎈"),
+                                        Jt.page(Page2.class).title("Page 2").icon("❄️"),
+                                        Jt.page(Page3.class).title("Page 3").icon("🎉")).use();
+        // run the current page
+        currentPage.run();
+    }
 
-# Run the selected page
-pg.run()
+    // Page 1
+    public static class MainPage {
+        public static void main(String[] args) {
+            Jt.title("Main Page 🎈").use();
+            Jt.markdown("Welcome to the main page!").use();
+        }
+    }
+
+    // Page 2
+    public static class Page2 {
+        public static void main(String[] args) {
+            Jt.title("Page 2 ❄️").use();
+            Jt.text("This is the second page").use();
+        }
+    }
+
+    // Page 3
+    public static class Page3 {
+        public static void main(String[] args) {
+            Jt.title("Page 3 🎉").use();
+            Jt.markdown("This is the **third** page!").use();
+        }
+    }
+}
 ```
 
 </details>
 
-<details open>
-<summary><code>main_page.py</code></summary>
-
-```python
-import streamlit as st
-
-# Main page content
-st.markdown("# Main page 🎈")
-st.sidebar.markdown("# Main page 🎈")
-```
-
-</details>
-
-<details open>
-<summary><code>page_2.py</code></summary>
-
-```python
-import streamlit as st
-
-st.markdown("# Page 2 ❄️")
-st.sidebar.markdown("# Page 2 ❄️")
-```
-
-</details>
-
-<details open>
-<summary><code>page_3.py</code></summary>
-
-```python
-import streamlit as st
-
-st.markdown("# Page 3 🎉")
-st.sidebar.markdown("# Page 3 🎉")
-```
-
-</details>
-<br />
-
-Now run `streamlit run streamlit_app.py` and view your shiny new multipage app! The navigation menu will automatically appear, allowing users to switch between pages.
+Now run `jeamlit run App.java` and view your shiny new multipage app! The navigation menu will automatically appear, allowing users to switch between pages.
 
 <Image src="/images/mpa-v2-main-concepts.gif" />
 
@@ -124,21 +120,57 @@ Our documentation on [Multipage apps](/develop/concepts/multipage-apps) teaches 
 
 ## Custom components
 
-If you can't find the right component within the Streamlit library, try out custom components to extend Streamlit's built-in functionality. Explore and browse through popular, community-created components in the [Components gallery](https://streamlit.io/components). If you dabble in frontend development, you can build your own custom component with Streamlit's [components API](/develop/concepts/custom-components/intro).
+If you can't find the right component within the Jeamlit library, you can build your own 
+with Jeamlit's [components API](/develop/concepts/custom-components/intro). If you think a component should be part of the official Jeamlit library, 
+[reach out on the forum](https://github.com/jeamlit/jeamlit/discussions).
+
+{/*
+try out custom components to extend Jeamlit's built-in functionality. Explore and browse through popular, community-created components 
+in the [Components gallery](https://streamlit.io/components).
+*/}
 
 ## Static file serving
 
-As you learned in Streamlit fundamentals, Streamlit runs a server that clients connect to. That means viewers of your app don't have direct access to the files which are local to your app. Most of the time, this doesn't matter because Streamlt commands handle that for you. When you use `st.image(<path-to-image>)` your Streamlit server will access the file and handle the necessary hosting so your app viewers can see it. However, if you want a direct URL to an image or file you'll need to host it. This requires setting the correct configuration and placing your hosted files in a directory named `static`. For example, your project could look like:
+As you learned in Jeamlit fundamentals, Jeamlit runs a server that clients connect to. That means viewers of your app 
+don't have direct access to the files which are local to your app. 
+Most of the time, this doesn't matter because Jeamlit commands handle that for you. 
+When you use `Jt.image(<path-to-image>)` your Jeamlit server will access the file and handle the necessary 
+hosting so your app viewers can see it. However, if you want a direct URL to an image or file you'll need to 
+host it. 
+
+In **Standalone** mode, this requires creating a directory named `static` next to your app class.
+For example, your project could look like:
 
 ```bash
 your-project/
 ├── static/
 │   └── my_hosted-image.png
-└── streamlit_app.py
+└── YourApp.java
 ```
+
+In **Embedded** mode, this requires creating a directory named `static` in your `resources` folder.
+For example, your maven project could look like:
+```bash
+your-project/
+├── static/
+│   └── my_hosted-image.png
+├── src/
+│   └── main
+│       └── java
+│           └── YourApp.java
+│       └── resources
+│           └── static
+│               └── my_hosted-image.png
+└── pom.xml
+```
+
 
 To learn more, read our guide on [Static file serving](/develop/concepts/configuration/serving-static-files).
 
 ## App testing
 
-Good development hygiene includes testing your code. Automated testing allows you to write higher quality code, faster! Streamlit has a built-in testing framework that let's you build tests easily. Use your favorite testing framework to run your tests. We like [`pytest`](https://pypi.org/project/pytest/). When you test a Streamlit app, you simulate running the app, declare user input, and inspect the results. You can use GitHub workflows to automate your tests and get instant alerts about breaking changes. Learn more in our guide to [App testing](/develop/concepts/app-testing).
+Good development hygiene includes testing your code. Automated testing allows you to write higher quality code, 
+faster! Jeamlit has a built-in testing utilities. Learn more in our guide to [App testing](http://localhost:3000/develop/concepts/app-testing).
+{/*
+framework that let's you build tests easily. Use your favorite testing framework to run your tests. We like [`pytest`](https://pypi.org/project/pytest/). When you test a Jeamlit app, you simulate running the app, declare user input, and inspect the results. You can use GitHub workflows to automate your tests and get instant alerts about breaking changes. Learn more in our guide to [App testing](/develop/concepts/app-testing).
+*/}

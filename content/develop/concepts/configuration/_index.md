@@ -1,13 +1,13 @@
 ---
 title: Configure and customize your app
 slug: /develop/concepts/configuration
-ignore: true
 ---
 
 # Configure and customize your app
 
 <TileContainer>
 
+{/*
 <RefCard href="/develop/concepts/configuration/options">
 
 <h5>Configuration options</h5>
@@ -24,6 +24,8 @@ Understand how to configure SSL and TLS for your Streamlit app.
 
 </RefCard>
 
+*/}
+
 <RefCard href="/develop/concepts/configuration/serving-static-files">
 
 <h5>Static file serving</h5>
@@ -34,6 +36,7 @@ Understand how to host files alongside your app to make them accessible by URL. 
 
 </TileContainer>
 
+{/*
 ## Theming
 
 <TileContainer>
@@ -63,3 +66,5 @@ Understand the configuration options for customizing your app's font.
 </RefCard>
 
 </TileContainer>
+
+*/}
