@@ -485,11 +485,9 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Input widgets / st.selectbox
-    url: /develop/api-reference/widgets/st.selectbox
+  - category: Develop / API reference / Input widgets / Jt.selectbox
+    url: /develop/api-reference/widgets/jt.selectbox
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Input widgets / st.select_slider
     url: /develop/api-reference/widgets/st.select_slider
     isVersioned: true

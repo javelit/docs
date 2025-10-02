@@ -1,12 +1,13 @@
 ---
-title: st.selectbox
-slug: /develop/api-reference/widgets/st.selectbox
-description: st.selectbox displays a select widget.
-ignore: true
+title: Jt.selectbox
+slug: /develop/api-reference/widgets/jt.selectbox
+description: Jt.selectbox displays a select widget.
 ---
 
-<Autofunction function="streamlit.selectbox" />
+<Autofunction function="Jt.selectbox" />
 
+
+{/*
 <br />
 
 Select widgets can customize how to hide their labels with the `label_visibility` parameter. If "hidden", the label doesn’t show but there is still empty space for it above the widget (equivalent to `label=""`). If "collapsed", both the label and the space are removed. Default is "visible". Select widgets can also be disabled with the `disabled` parameter:
@@ -39,3 +40,5 @@ with col2:
 ```
 
 <Cloud name="doc-selectbox1" height="300px" />
+
+*/}

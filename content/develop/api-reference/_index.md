@@ -1016,7 +1016,9 @@ st.segmented_control("Filter", ["Open", "Closed", "All"])
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.selectbox">
+*/}
+
+<RefCard href="/develop/api-reference/widgets/jt.selectbox">
 
 <Image pure alt="screenshot" src="/images/api/selectbox.jpg" />
 
@@ -1029,6 +1031,9 @@ choice = st.selectbox("Pick one", ["cats", "dogs"])
 ```
 
 </RefCard>
+
+{/*
+
 <RefCard href="/develop/api-reference/widgets/st.select_slider">
 
 <Image pure alt="screenshot" src="/images/api/select_slider.jpg" />

@@ -201,7 +201,8 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/widgets/st.selectbox">
+*/}
+<RefCard href="/develop/api-reference/widgets/jt.selectbox">
 
 <Image pure alt="screenshot" src="/images/api/selectbox.jpg" />
 
@@ -210,11 +211,10 @@ size = st.select_slider("Pick a size", ["S", "M", "L"])
 Display a select widget.
 
 ```java
-choice = st.selectbox("Pick one", ["cats", "dogs"])
+String choice = Jt.selectbox("Pick one", List.of("cats", "dogs"))
 ```
 
 </RefCard>
-*/}
 
 <RefCard href="/develop/api-reference/widgets/jt.toggle">
 
