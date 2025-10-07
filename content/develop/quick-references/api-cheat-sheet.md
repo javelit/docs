@@ -17,9 +17,8 @@ This is a summary of the docs for the latest version of Jeamlit.
 <!-- Add to pom.xml -->
 <dependency>
     <groupId>tech.catheu</groupId>
-    <artifactId>jeamlit</artifactId>
-    <!-- find the latest version at https://central.sonatype.com/artifact/io.jeamlit/jeamlit-->    
-    <version>${jeamlit.version}</version>
+    <artifactId>jeamlit</artifactId>    
+    <version>${JEAMLIT_VERSION}</version>
 </dependency>
 
 // Import convention

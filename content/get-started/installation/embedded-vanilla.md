@@ -41,14 +41,14 @@ As with any Java project, you'll need:
 
 ### With Maven
 
-1. Add the Jeamlit dependency to your `pom.xml`: (replace `${jeamlit.version}` by <code><JeamlitVersion /></code>)
+1. Add the Jeamlit dependency to your `pom.xml`:
 
    ```xml
    <dependencies>
     <dependency>
         <groupId>io.jeamlit</groupId>
         <artifactId>jeamlit</artifactId>
-        <version>${jeamlit.version}</version>
+        <version>${JEAMLIT_VERSION}</version>
     </dependency>
 
     <!-- Optional: Add any other dependencies your app needs -->
@@ -79,17 +79,17 @@ As with any Java project, you'll need:
 
 ### With Gradle
 
-1. Add the Jeamlit dependency to your `build.gradle`: (replace `${jeamlit.version}` by <code><JeamlitVersion /></code>)
+1. Add the Jeamlit dependency to your `build.gradle`:
 
    ```gradle
    dependencies {
-   implementation 'io.jeamlit:jeamlit:${jeamlit.version}'
+    implementation 'io.jeamlit:jeamlit:${JEAMLIT_VERSION}'
     // Optional: Add any other dependencies your app needs
     implementation 'org.apache.commons:commons-math3:3.6.1'
 
     // Recommended: Add a logging implementation
     implementation 'ch.qos.logback:logback-classic:1.5.18'
-    }
+   }
    ```
 
 2. Make sure your `build.gradle` specifies Java >= 21:

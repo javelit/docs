@@ -52,11 +52,9 @@ In standalone mode, there are 2 ways to add dependencies to the Jeamlit app:
 1. **Command-line argument**  
     You can explicitly provide additional JAR files or directories via command-line argument. 
 
-    <Code>
-        <code className="language-bash">
-      {`java -jar jeamlit-`}<JeamlitVersion />{`-all.jar run MyApp.java -cp "/path/to/libs/*:/path/to/classes"`}
-        </code>
-    </Code>
+    ```bash
+    java -jar jeamlit-${JEAMLIT_VERSION}-all.jar run MyApp.java -cp "/path/to/libs/*:/path/to/classes"
+    ```
 
 2. **JBang-style Dependencies**   
    In standalone mode, you can declare dependencies directly in your Java file using JBang-style comments:

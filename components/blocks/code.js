@@ -7,6 +7,7 @@ import "prismjs/plugins/line-highlight/prism-line-highlight.css";
 import "prismjs/plugins/toolbar/prism-toolbar";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
+import getConfig from "next/config";
 
 import Image from "./image";
 
@@ -74,6 +75,15 @@ const Code = ({ code, children, language, img, lines }) => {
   if (children !== undefined && children.props !== undefined) {
     customCode = children.props.children;
     languageClass = children.props.className;
+  }
+
+  // Replace version placeholder with actual version
+  const { publicRuntimeConfig } = getConfig();
+  if (publicRuntimeConfig?.LATEST_VERSION && typeof customCode === "string") {
+    customCode = customCode.replace(
+      /\$\{JEAMLIT_VERSION\}/g,
+      publicRuntimeConfig.LATEST_VERSION,
+    );
   }
 
   if (img) {

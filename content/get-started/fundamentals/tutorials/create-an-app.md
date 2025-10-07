@@ -5,11 +5,11 @@ slug: /get-started/tutorials/create-an-app
 
 # Create an app
 
-If you've made it this far, chances are you've [installed Streamlit](/get-started/installation) and run through the basics in [Basic concepts](/get-started/fundamentals/main-concepts) and [Advanced concepts](/get-started/fundamentals/advanced-concepts). If not, now is a good time to take a look.
+If you've made it this far, chances are you've [installed Jeamlit](/get-started/installation) and run through the basics in [Basic concepts](/get-started/fundamentals/main-concepts) and [Advanced concepts](/get-started/fundamentals/advanced-concepts). If not, now is a good time to take a look.
 
-The easiest way to learn how to use Streamlit is to try things out yourself. As you read through this guide, test each method. As long as your app is running, every time you add a new element to your script and save, Streamlit's UI will ask if you'd like to rerun the app and view the changes. This allows you to work in a fast interactive loop: you write some code, save it, review the output, write some more, and so on, until you're happy with the results. The goal is to use Streamlit to create an interactive app for your data or model and along the way to use Streamlit to review, debug, perfect, and share your code.
+The easiest way to learn how to use Jeamlit is to try things out yourself. As you read through this guide, test each method. As long as your app is running, every time you add a new element to your script and save, Jeamlit's UI will ask if you'd like to rerun the app and view the changes. This allows you to work in a fast interactive loop: you write some code, save it, review the output, write some more, and so on, until you're happy with the results. The goal is to use Jeamlit to create an interactive app for your data or model and along the way to use Jeamlit to review, debug, perfect, and share your code.
 
-In this guide, you're going to use Streamlit's core features to
+In this guide, you're going to use Jeamlit's core features to
 create an interactive app; exploring a public Uber dataset for pickups and
 drop-offs in New York City. When you're finished, you'll know how to fetch
 and cache data, draw charts, plot information on a map, and use interactive
@@ -24,40 +24,47 @@ is available below](#lets-put-it-all-together).
 
 ## Create your first app
 
-Streamlit is more than just a way to make data apps, it’s also a community of creators that share their apps and ideas and help each other make their work better. Please come join us on the community forum. We love to hear your questions, ideas, and help you work through your bugs — stop by today!
+Jeamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas 
+and help each other make their work better. Please come join us on the [community forum](https://github.com/jeamlit/jeamlit/discussions/). We love to hear your questions, 
+ideas, and help you work through your bugs. Stop by today!
 
-1. The first step is to create a new Python script. Let's call it
-   `uber_pickups.py`.
+1. The first step is to create a new Java file. Let's call it
+   `App.java`.
 
-2. Open `uber_pickups.py` in your favorite IDE or text editor, then add these
+2. Open `App.java` in your favorite IDE or text editor, then add these
    lines:
 
-   ```python
-   import streamlit as st
-   import pandas as pd
-   import numpy as np
+   ```java
+   ///usr/bin/env jbang "$0" "$@" ; exit $?
+
+   //DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+   //DEPS tech.tablesaw:tablesaw-core:0.44.4
+
+   import io.jeamlit.core.Jt;
    ```
 
 3. Every good app has a title, so let's add one:
 
-   ```python
-   st.title('Uber pickups in NYC')
+   ```java
+   public class App {
+       public static void main(String[] args) {
+           Jt.title("Uber pickups in NYC").use();
+       }
+   }
    ```
 
-4. Now it's time to run Streamlit from the command line:
+4. Now it's time to run Jeamlit from the command line:
 
    ```bash
-   streamlit run uber_pickups.py
+   jeamlit run App.java
    ```
-
-   Running a Streamlit app is no different than any other Python script. Whenever you need to view the app, you can use this command.
 
    <Tip>
 
-   Did you know you can also pass a URL to `streamlit run`? This is great when combined with GitHub Gists. For example:
+   Did you know you can also pass a URL to `jeamlit run`? This is great when combined with GitHub. For example:
 
    ```bash
-   streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/master/streamlit_app.py
+   jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/main/examples/getting_started/App.java
    ```
 
    </Tip>
@@ -70,119 +77,134 @@ Streamlit is more than just a way to make data apps, it’s also a community of 
 Now that you have an app, the next thing you'll need to do is fetch the Uber
 dataset for pickups and drop-offs in New York City.
 
-1. Let's start by writing a function to load the data. Add this code to your
-   script:
-
-   ```python
-   DATE_COLUMN = 'date/time'
-   DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
-            'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
-
-   def load_data(nrows):
-       data = pd.read_csv(DATA_URL, nrows=nrows)
-       lowercase = lambda x: str(x).lower()
-       data.rename(lowercase, axis='columns', inplace=True)
-       data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
-       return data
+1. Let's start by writing a function to load the data. Add a download method to your
+   app:
+   
+   Imports: 
+   ```java
+   import java.io.BufferedReader;
+   import java.io.IOException;
+   import java.io.InputStream;
+   import java.io.InputStreamReader;
+   import java.net.URI;
+   import java.time.LocalDateTime;
+   import java.time.format.DateTimeFormatter;
+   import java.util.Locale;
+   import java.util.zip.GZIPInputStream;
+   import tech.tablesaw.api.IntColumn;
+   import tech.tablesaw.api.StringColumn;
+   import tech.tablesaw.api.Table;
+   import tech.tablesaw.selection.Selection;
    ```
 
-   You'll notice that `load_data` is a plain old function that downloads some
-   data, puts it in a Pandas dataframe, and converts the date column from text
+   Method:
+   ```java
+   static Table loadData(int nrows) {
+       final String DATE_COLUMN = "date/time";
+       final String DATA_URL = "https://github.com/jeamlit/public_assets/raw/refs/heads/main/examples/uber-raw-data-sep14.csv.gz";
+       try (InputStream in = URI.create(DATA_URL).toURL().openStream();
+            GZIPInputStream gzipIn = new GZIPInputStream(in);
+            InputStreamReader reader = new InputStreamReader(gzipIn);
+            BufferedReader br = new BufferedReader(reader)) {
+           // Read CSV
+           Table df = Table.read().csv(br);
+           // Convert column names to lowercase
+           df.columns().forEach(c -> c.setName(c.name().toLowerCase(Locale.ROOT)));
+           // Limit to nrows
+           df = df.first(nrows);
+           // Filter out points too far from Manhattan
+           Selection closeToManhattan = df.doubleColumn("lon").isBetweenInclusive(-74.03, -73.85640176685645);
+           df = df.where(closeToManhattan);
+
+           // Parse date/time column and create hour column
+           StringColumn dateStrCol = (StringColumn) df.column(DATE_COLUMN);
+           DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy H:mm:ss");
+           IntColumn hourColumn = IntColumn.create("hour");
+
+           for (int i = 0; i < dateStrCol.size(); i++) {
+               String dateStr = dateStrCol.getString(i);
+               LocalDateTime dt = LocalDateTime.parse(dateStr.trim(), formatter);
+               hourColumn.append(dt.getHour());
+           }
+
+           // Add hour column to table
+           df.addColumns(hourColumn);
+
+           return df;
+       } catch (IOException e) {
+           throw new RuntimeException("Failed to load dataset", e);
+       }
+   }
+   ```
+
+   You'll notice that `loadData` is a plain old function that downloads some
+   data, puts it in a [Tablesaw](https://jtablesaw.github.io/tablesaw/) dataframe, and converts the date column from text
    to datetime. The function accepts a single parameter (`nrows`), which
    specifies the number of rows that you want to load into the dataframe.
 
-2. Now let's test the function and review the output. Below your function, add
-   these lines:
+2. Now let's test the method. In your `main` method, below the title, add these lines:
 
-   ```python
-   # Create a text element and let the reader know the data is loading.
-   data_load_state = st.text('Loading data...')
-   # Load 10,000 rows of data into the dataframe.
-   data = load_data(10000)
-   # Notify the reader that the data was successfully loaded.
-   data_load_state.text('Loading data...done!')
+   ```java
+   // Create a text element and let the reader know the data is loading.
+   Jt.text("Loading data...").use();
+   // Load 10,000 rows of data into the dataframe.
+   Table data = loadData(10000);
+   // Notify the reader that the data was successfully loaded.
+   Jt.text("Loading data...done!").use();
    ```
 
-   You'll see a few buttons in the upper-right corner of your app asking if
-   you'd like to rerun the app. Choose **Always rerun**, and you'll see your
+   Save your file. The app will hot-reload. You'll see your
    changes automatically each time you save.
 
 Ok, that's underwhelming...
 
-It turns out that it takes a long time to download data, and load 10,000 lines
-into a dataframe. Converting the date column into datetime isn’t a quick job
-either. You don’t want to reload the data each time the app is updated –
-luckily Streamlit allows you to cache the data.
+It turns out that it takes a long time to download data and load 10,000 lines
+into a dataframe. You don't want to reload the data each time the app is updated –
+luckily Jeamlit allows you to cache the data.
 
 ## Effortless caching
 
-1. Try adding `@st.cache_data` before the `load_data` declaration:
+1. Replace your data loading code with this cached version:
 
-   ```python
-   @st.cache_data
-   def load_data(nrows):
+   ```java
+   // Load data with caching
+   Table data = (Table) Jt.cache().computeIfAbsent("data", k -> {
+       Jt.text("Loading data...").use();
+       Table df = loadData(10000);
+       return df;
+   });
+   Jt.text("Loading data...done!").use();
    ```
 
-2. Then save the script, and Streamlit will automatically rerun your app. Since
-   this is the first time you’re running the script with `@st.cache_data`, you won't
-   see anything change. Let’s tweak your file a little bit more so that you can
+2. Then save the script, and Jeamlit will automatically rerun your app. Since
+   this is the first time you're running the script with `Jt.cache()`, you won't
+   see anything change. Let's tweak your file a little bit more so that you can
    see the power of caching.
 
-3. Replace the line `data_load_state.text('Loading data...done!')` with this:
+3. Replace the line `Jt.text("Loading data...done!").use();` with this:
 
-   ```python
-   data_load_state.text("Done! (using st.cache_data)")
+   ```java
+   Jt.text("Loading data...done! (using Jt.cache())").use();
    ```
 
-4. Now save. See how the line you added appeared immediately? If you take a
-   step back for a second, this is actually quite amazing. Something magical is
-   happening behind the scenes, and it only takes one line of code to activate
-   it.
+4. Now save. See how the line you added appeared immediately? That's caching for you! 
 
-### How's it work?
+### How does it work?
 
-Let's take a few minutes to discuss how `@st.cache_data` actually works.
-
-When you mark a function with Streamlit’s cache annotation, it tells Streamlit
-that whenever the function is called that it should check two things:
-
-1. The input parameters you used for the function call.
-2. The code inside the function.
-
-If this is the first time Streamlit has seen both these items, with these exact
-values, and in this exact combination, it runs the function and stores the
-result in a local cache. The next time the function is called, if the two
-values haven't changed, then Streamlit knows it can skip executing the function
-altogether. Instead, it reads the output from the local cache and passes it on
-to the caller -- like magic.
-
-"But, wait a second," you’re saying to yourself, "this sounds too good to be
-true. What are the limitations of all this awesomesauce?"
-
-Well, there are a few:
-
-1. Streamlit will only check for changes within the current working directory.
-   If you upgrade a Python library, Streamlit's cache will only notice this if
-   that library is installed inside your working directory.
-2. If your function is not deterministic (that is, its output depends on random
-   numbers), or if it pulls data from an external time-varying source (for
-   example, a live stock market ticker service) the cached value will be
-   none-the-wiser.
-3. Lastly, you should avoid mutating the output of a function cached with `st.cache_data` since cached
-   values are stored by reference.
-
-While these limitations are important to keep in mind, they tend not to be an
-issue a surprising amount of the time. Those times, this cache is really
-transformational.
+`Jt.cache()` returns a `Map`. The map is thread safe, 
+it is shared between all sessions and it maintains its values across app reruns.  
+Be cautious about mutating 
+an element of the cache, as it will impact all users!   
+Learn more about the cache in the [advanced concepts](/get-started/fundamentals/advanced-concepts#caching).
 
 <Tip>
 
 Whenever you have a long-running computation in your code, consider
-refactoring it so you can use `@st.cache_data`, if possible. Please read [Caching](/develop/concepts/architecture/caching) for more details.
+refactoring it so you can use `Jt.cache()`, if possible. Please read [Caching](/develop/concepts/architecture/caching) for more details.
 
 </Tip>
 
-Now that you know how caching with Streamlit works, let’s get back to the Uber
+Now that you know how caching with Jeamlit works, let's get back to the Uber
 pickup data.
 
 ## Inspect the raw data
@@ -191,20 +213,17 @@ It's always a good idea to take a look at the raw data you're working with
 before you start working with it. Let's add a subheader and a printout of the
 raw data to the app:
 
-```python
-st.subheader('Raw data')
-st.write(data)
+```java
+Jt.markdown("## Raw data").use();
+Jt.table(data.first(6)).use();
 ```
 
 In the [Basic concepts](/get-started/fundamentals/main-concepts) guide you learned that
-[`st.write`](/develop/api-reference/write-magic/st.write) will render almost anything you pass
-to it. In this case, you're passing in a dataframe and it's rendering as an
-interactive table.
+[`Jt.table`](/develop/api-reference/data/jt.table) can render a Tablesaw dataframe as table. 
+In this case, you're passing in the first 6 rows of data to keep the table short.
 
-[`st.write`](/develop/api-reference/write-magic/st.write) tries to do the right thing based on
-the data type of the input. If it isn't doing what you expect you can use a
-specialized command like [`st.dataframe`](/develop/api-reference/data/st.dataframe)
-instead. For a full list, see [API reference](/develop/api-reference).
+[`Jt.table`](/develop/api-reference/data/jt.table) works with different data structures.
+For a full list of options, see [API reference](/develop/api-reference).
 
 ## Draw a histogram
 
@@ -214,33 +233,46 @@ Uber's busiest hours are in New York City.
 
 1. To start, let's add a subheader just below the raw data section:
 
-   ```python
-   st.subheader('Number of pickups by hour')
+   ```java
+   Jt.markdown("## Number of pickups by hour").use();
    ```
 
-2. Use NumPy to generate a histogram that breaks down pickup times binned by
+2. Use Tablesaw to generate a histogram that breaks down pickup times by
    hour:
 
-   ```python
-   hist_values = np.histogram(
-       data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
+   ```java
+   import org.icepear.echarts.Bar;
+   import org.icepear.echarts.components.coord.cartesian.CategoryAxis;
+   import org.icepear.echarts.components.tooltip.Tooltip;
+   ...
+
+   // Count pickups for each hour
+   Table counts = data.intColumn("hour").countByCategory().sortOn("Category");
    ```
 
-3. Now, let's use Streamlit's
-   [`st.bar_chart()`](/develop/api-reference/charts/st.bar_chart) method to draw this
+3. Now, let's use Jeamlit's
+   [`Jt.echarts()`](/develop/api-reference/charts/jt.echarts) method to draw this
    histogram.
 
-   ```python
-   st.bar_chart(hist_values)
+   ```java
+   // Create bar chart using ECharts
+   Bar barChart = new Bar()
+           .setTooltip(new Tooltip().setTrigger("axis"))
+           .addXAxis(new CategoryAxis().setData(counts.intColumn("Category").asObjectArray()))
+           .addYAxis()
+           .addSeries(counts.intColumn("Count").asObjectArray());
+   // Plot the bar chart
+   Jt.echarts(barChart).height(400).use();
    ```
 
 4. Save your script. This histogram should show up in your app right away.
    After a quick review, it looks like the busiest time is 17:00 (5 P.M.).
 
-To draw this diagram we used Streamlit's native `bar_chart()` method, but it's
-important to know that Streamlit supports more complex charting libraries like
-Altair, Bokeh, Plotly, Matplotlib and more. For a full list, see
-[supported charting libraries](/develop/api-reference/charts).
+To draw this diagram we used Jeamlit's `echarts()` method with Apache ECharts, a powerful
+charting library. Jeamlit supports complex visualizations through ECharts.
+{/* TODO CYRIL - add when there are more supported libariries
+For a full list, see [supported charting libraries](/develop/api-reference/charts).
+*/}
 
 ## Plot data on a map
 
@@ -249,61 +281,79 @@ times are for pickups, but what if we wanted to figure out where pickups were
 concentrated throughout the city. While you could use a bar chart to show this
 data, it wouldn't be easy to interpret unless you were intimately familiar with
 latitudinal and longitudinal coordinates in the city. To show pickup
-concentration, let's use Streamlit [`st.map()`](/develop/api-reference/charts/st.map)
-function to overlay the data on a map of New York City.
+concentration, let's use Jeamlit [`Jt.echarts()`](/develop/api-reference/charts/jt.echarts)
+with a geographic visualization to overlay the data on a map of Manhattan.
 
 1. Add a subheader for the section:
 
-   ```python
-   st.subheader('Map of all pickups')
+   ```java
+   Jt.markdown("**Map of all pickups**").use();
    ```
 
-2. Use the `st.map()` function to plot the data:
+2. Filter the data to show pickups at a specific hour (17:00):
 
-   ```python
-   st.map(data)
+   ```java
+   int hourToFilter = 17;
+   Table filteredData = data.where(data.intColumn("hour").isEqualTo(hourToFilter));
    ```
 
-3. Save your script. The map is fully interactive. Give it a try by panning or
-   zooming in a bit.
+3. Prepare the data for the map visualization:
 
-After drawing your histogram, you determined that the busiest hour for Uber
-pickups was 17:00. Let's redraw the map to show the concentration of pickups
-at 17:00.
+   ```java
+   import java.util.List;
+   import java.util.Map;
+   import java.util.stream.IntStream;
+   import org.icepear.echarts.Option;
+   import org.icepear.echarts.charts.scatter.ScatterSeries;
+   import org.icepear.echarts.components.series.ItemStyle;
+   ...
 
-1. Locate the following code snippet:
-
-   ```python
-   st.subheader('Map of all pickups')
-   st.map(data)
+   // Wrangle data for plotting
+   List<Double> lons = filteredData.doubleColumn("lon").asList();
+   List<Double> lats = filteredData.doubleColumn("lat").asList();
+   List<Map<String, Double[]>> plotData = IntStream.range(0, lons.size())
+            .mapToObj(i -> Map.of("value", new Double[]{lons.get(i), lats.get(i)}))
+            .toList();
    ```
 
-2. Replace it with:
+4. Create and display the map:
 
-   ```python
-   hour_to_filter = 17
-   filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
-   st.subheader(f'Map of all pickups at {hour_to_filter}:00')
-   st.map(filtered_data)
+   ```java
+   // Map chart config
+   Option mapOption = new Option()
+           .setGeo(Map.of("map", "manhattan",
+                          "roam", true,
+                          "zoom", 1.5,
+                          "center", new Double[]{-73.98, 40.75},
+                          "scaleLimit", Map.of("min", 1, "max", 10),
+                          "tooltip", Map.of("show", true)))
+           .setSeries(new ScatterSeries()
+                              .setData(plotData.toArray())
+                              .setCoordinateSystem("geo")
+                              .setSymbolSize(5)
+                              .setItemStyle(new ItemStyle().setColor("#b02a02").setOpacity(0.6)));
+   // Plot the chart
+   String mapBaseGeoJson = "https://raw.githubusercontent.com/jeamlit/public_assets/refs/heads/main/examples/manhattan.geo.json";
+   Jt.echarts(mapOption).withMap("manhattan", URI.create(mapBaseGeoJson)).height(600).border(true).use();
    ```
 
-3. You should see the data update instantly.
+5. Save your script. The map is fully interactive. Give it a try by panning or
+   zooming in a bit. Hover on a neighborhood to see its name.
 
-To draw this map we used the [`st.map`](/develop/api-reference/charts/st.map) function that's built into Streamlit, but
-if you'd like to visualize complex map data, we encourage you to take a look at
-the [`st.pydeck_chart`](/develop/api-reference/charts/st.pydeck_chart).
+To draw this map we used the [`Jt.echarts()`](/develop/api-reference/charts/jt.echarts) function with ECharts geo coordinates.
+This allows you to create rich, interactive geographic visualizations.
 
 ## Filter results with a slider
 
 In the last section, when you drew the map, the time used to filter results was
 hardcoded into the script, but what if we wanted to let a reader dynamically
-filter the data in real time? Using Streamlit's widgets you can. Let's add a
-slider to the app with the `st.slider()` method.
+filter the data in real time? Using Jeamlit's widgets you can. Let's add a
+slider to the app with the `Jt.slider()` method.
 
-1. Locate `hour_to_filter` and replace it with this code snippet:
+1. Locate `hourToFilter` and replace it with this code snippet:
 
-   ```python
-   hour_to_filter = st.slider('hour', 0, 23, 17)  # min: 0h, max: 23h, default: 17h
+   ```java
+   int hourToFilter = Jt.slider("Select an hour to show on the map").min(0).max(23).value(17).use().intValue();
    ```
 
 2. Use the slider and watch the map update in real time.
@@ -311,26 +361,27 @@ slider to the app with the `st.slider()` method.
 ## Use a button to toggle data
 
 Sliders are just one way to dynamically change the composition of your app.
-Let's use the [`st.checkbox`](/develop/api-reference/widgets/st.checkbox) function to add a
+Let's use the [`Jt.checkbox`](/develop/api-reference/widgets/jt.checkbox) function to add a
 checkbox to your app. We'll use this checkbox to show/hide the raw data
 table at the top of your app.
 
 1. Locate these lines:
 
-   ```python
-   st.subheader('Raw data')
-   st.write(data)
+   ```java
+   Jt.markdown("## Raw data").use();
+   Jt.table(data.first(6)).use();
    ```
 
 2. Replace these lines with the following code:
 
-   ```python
-   if st.checkbox('Show raw data'):
-       st.subheader('Raw data')
-       st.write(data)
+   ```java
+   if (Jt.checkbox("Show raw data").use()) {
+       Jt.markdown("## Raw data").use();
+       Jt.table(data.first(6)).use();
+   }
    ```
 
-We're sure you've got your own ideas. When you're done with this tutorial, check out all the widgets that Streamlit exposes in our [API Reference](/develop/api-reference).
+We're sure you've got your own ideas. When you're done with this tutorial, check out all the widgets that Jeamlit exposes in our [API Reference](/develop/api-reference).
 
 ## Let's put it all together
 
@@ -339,69 +390,171 @@ That's it, you've made it to the end. Here's the complete script for our interac
 <Tip>
 
 If you've skipped ahead, after you've created your script, the command to run
-Streamlit is `streamlit run [app name]`.
+Jeamlit is `jeamlit run App.java`.
 
 </Tip>
 
-```python
-import streamlit as st
-import pandas as pd
-import numpy as np
+```java
+///usr/bin/env jbang "$0" "$@" ; exit $?
 
-st.title('Uber pickups in NYC')
+//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS tech.tablesaw:tablesaw-core:0.44.4
 
-DATE_COLUMN = 'date/time'
-DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
-            'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.stream.IntStream;
+import java.util.zip.GZIPInputStream;
 
-@st.cache_data
-def load_data(nrows):
-    data = pd.read_csv(DATA_URL, nrows=nrows)
-    lowercase = lambda x: str(x).lower()
-    data.rename(lowercase, axis='columns', inplace=True)
-    data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
-    return data
+import io.jeamlit.core.Jt;
+import org.icepear.echarts.Bar;
+import org.icepear.echarts.Option;
+import org.icepear.echarts.charts.scatter.ScatterSeries;
+import org.icepear.echarts.components.coord.cartesian.CategoryAxis;
+import org.icepear.echarts.components.series.ItemStyle;
+import org.icepear.echarts.components.tooltip.Tooltip;
+import tech.tablesaw.api.IntColumn;
+import tech.tablesaw.api.StringColumn;
+import tech.tablesaw.api.Table;
+import tech.tablesaw.selection.Selection;
 
-data_load_state = st.text('Loading data...')
-data = load_data(10000)
-data_load_state.text("Done! (using st.cache_data)")
 
-if st.checkbox('Show raw data'):
-    st.subheader('Raw data')
-    st.write(data)
+public class App {
 
-st.subheader('Number of pickups by hour')
-hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
-st.bar_chart(hist_values)
+    public static void main(String[] args) {
+        // Load data with caching
+        Table data = (Table) Jt.cache().computeIfAbsent("data", k -> {
+            Jt.text("Loading data...").use();
+            Table df = loadData(10000);
+            return df;
+        });
+        Jt.text("Loading data...done! (using Jt.cache())").use();
 
-# Some number in the range 0-23
-hour_to_filter = st.slider('hour', 0, 23, 17)
-filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
+        // Title
+        Jt.title("Uber pickups in NYC").use();
 
-st.subheader('Map of all pickups at %s:00' % hour_to_filter)
-st.map(filtered_data)
+        // Checkbox to show raw data
+        if (Jt.checkbox("Show raw data").use()) {
+            Jt.markdown("## Raw data").use();
+            Jt.table(data.first(6)).use();
+        }
+
+        // Create histogram data for pickups by hour
+        Jt.markdown("## Number of pickups by hour").use();
+
+
+        // Count pickups for each hour - counts is a dataframe with columns Category and Count
+        Table counts = data.intColumn("hour").countByCategory().sortOn("Category");
+
+        // Create bar chart using java ECharts - see https://echarts.icepear.org/#/chart-apis/bar
+        Bar barChart = new Bar()
+                .setTooltip(new Tooltip().setTrigger("axis"))
+                .addXAxis(new CategoryAxis().setData(counts.intColumn("Category").asObjectArray()))
+                .addYAxis()
+                .addSeries(counts.intColumn("Count").asObjectArray());
+        // plot the bar chart
+        Jt.echarts(barChart).height(400).use();
+
+        // Slider for hour selection
+        int hourToFilter = Jt.slider("Select an hour to show on the map").min(0).max(23).value(17).use().intValue();
+
+        // Filter data based on selected hour
+        Table filteredData = data.where(data.intColumn("hour").isEqualTo(hourToFilter));
+
+        // Display filtered data on map
+        Jt.markdown("**Map of pickups at %d:00**".formatted(hourToFilter)).use();
+
+        // Create map visualization
+        // wrangle data for plotting --> list of points, with each point a {"value": [lon, lat]} - see https://echarts.apache.org/examples/en/editor.html?c=geo-graph
+        List<Double> lons = filteredData.doubleColumn("lon").asList();
+        List<Double> lats = filteredData.doubleColumn("lat").asList();
+        List<Map<String, Double[]>> plotData = IntStream.range(0, lons.size())
+                         .mapToObj(i -> Map.of("value", new Double[]{lons.get(i), lats.get(i)}))
+                         .toList();
+        // map chart config
+        Option mapOption = new Option()
+                .setGeo(Map.of("map", "manhattan",
+                               "roam", true,
+                               "zoom", 1.5,
+                               "center", new Double[]{-73.98, 40.75},
+                               "scaleLimit", Map.of("min", 1, "max", 10),
+                               "tooltip", Map.of("show", true)))
+                .setSeries(new ScatterSeries()
+                                   .setData(plotData.toArray())
+                                   .setCoordinateSystem("geo")
+                                   .setSymbolSize(5)
+                                   .setItemStyle(new ItemStyle().setColor("#b02a02").setOpacity(0.6)));
+        // plot the chart
+        String mapBaseGeoJson = "https://raw.githubusercontent.com/jeamlit/public_assets/refs/heads/main/examples/manhattan.geo.json";
+        Jt.echarts(mapOption).withMap("manhattan", URI.create(mapBaseGeoJson)).height(600).border(true).use();
+    }
+
+    static Table loadData(int nrows) {
+        final String DATE_COLUMN = "date/time";
+        final String DATA_URL = "https://github.com/jeamlit/public_assets/raw/refs/heads/main/examples/uber-raw-data-sep14.csv.gz";
+        try (InputStream in = URI.create(DATA_URL).toURL().openStream();
+             GZIPInputStream gzipIn = new GZIPInputStream(in);
+             InputStreamReader reader = new InputStreamReader(gzipIn);
+             BufferedReader br = new BufferedReader(reader)) {
+            // Read CSV
+            Table df = Table.read().csv(br);
+            // Convert column names to lowercase
+            df.columns().forEach(c -> c.setName(c.name().toLowerCase(Locale.ROOT)));
+            // Limit to nrows before filtering a few other rows - nrows is an approximate, it's ok for this example
+            df = df.first(nrows);
+            // Filter out the few points that are too far away from Manhattan
+            Selection closeToManhattan = df.doubleColumn("lon").isBetweenInclusive(-74.03, -73.85640176685645);
+            df = df.where(closeToManhattan);
+
+            // Parse date/time column and create hour column
+            StringColumn dateStrCol = (StringColumn) df.column(DATE_COLUMN);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy H:mm:ss");
+            IntColumn hourColumn = IntColumn.create("hour");
+
+            for (int i = 0; i < dateStrCol.size(); i++) {
+                String dateStr = dateStrCol.getString(i);
+                LocalDateTime dt = LocalDateTime.parse(dateStr.trim(), formatter);
+                hourColumn.append(dt.getHour());
+            }
+
+            // Add hour column to table
+            df.addColumns(hourColumn);
+
+            return df;
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load dataset", e);
+        }
+    }
+}
 ```
 
 ## Share your app
 
-After you’ve built a Streamlit app, it's time to share it! To show it off to the world you can use **Streamlit Community Cloud** to deploy, manage, and share your app for free.
+After you've built a Jeamlit app, it's time to share it! To show it off to the world you can share your Java file directly.
 
-It works in 3 simple steps:
+It works in simple steps:
 
-1. Put your app in a public GitHub repo (and make sure it has a requirements.txt!)
-2. Sign into [share.streamlit.io](https://share.streamlit.io)
-3. Click 'Deploy an app' and then paste in your GitHub URL
+1. Put your app in a public GitHub repo
+2. Share the URL with others - they can run it directly with `jeamlit run <URL>` 
+3. Or share the Java file and others can run it locally with `jeamlit run App.java` 
 
-That's it! 🎈 You now have a publicly deployed app that you can share with the world. Click to learn more about [how to use Streamlit Community Cloud](/deploy/streamlit-community-cloud).
+That's it! 🚠 You now have a shareable app.
 
 ## Get help
 
 That's it for getting started, now you can go and build your own apps! If you
 run into difficulties here are a few things you can do.
 
-- Check out our [community forum](https://discuss.streamlit.io/) and post a question
-- Quick help from command line with `streamlit help`
-- Go through our [Knowledge Base](/knowledge-base) for tips, step-by-step tutorials, and articles that answer your questions about creating and deploying Streamlit apps.
+- Check out our [community forum](https://github.com/jeamlit/jeamlit/discussions/) and post a question
+- Quick help from command line with `jeamlit --help` and `jeamlit run --help`
+- Go through our [Knowledge Base](/knowledge-base) for tips, step-by-step tutorials, and articles that answer your questions about creating and deploying Jeamlit apps.
 - Read more documentation! Check out:
-  - [Concepts](/develop/concepts) for things like caching, theming, and adding statefulness to apps.
-  - [API reference](/develop/api-reference/) for examples of every Streamlit command.
+  - [Concepts](/develop/concepts) for things like caching, {/* TODO CYRIL THEMING NOT IMPLEM theming, */}and adding statefulness to apps.
+  - [API reference](/develop/api-reference/) for examples of every Jeamlit command.

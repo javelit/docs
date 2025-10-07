@@ -146,32 +146,41 @@ You'll learn more advanced usage of `.use()` below.
 
 ### Display a table
 
-Jeamlit can display tables from two main data structures:
+Jeamlit can display tables from multiple data structures:
 
 1. **List of objects** - Each object becomes a row:
-
-```java
-record Person(String name, int age, String city) {}
-
-List<Person> people = List.of(
-    new Person("Alice", 30, "NYC"),
-    new Person("Bob", 25, "LA")
-);
-
-Jt.table(people).use();
-```
+    ```java
+    record Person(String name, int age, String city) {}
+    
+    List<Person> people = List.of(
+        new Person("Alice", 30, "NYC"),
+        new Person("Bob", 25, "LA")
+    );
+    
+    Jt.table(people).use();
+    ```
 
 2. **Map of column names to columns** - Each map entry is a column:
 
-```java
-Map<String, List<?>> data = Map.of(
-    "Product", List.of("Apple", "Banana", "Orange"),
-    "Price", List.of(1.2, 0.5, 0.8),
-    "Stock", List.of(100, 150, 75)
-);
+    ```java
+    Map<String, List<?>> data = Map.of(
+        "Product", List.of("Apple", "Banana", "Orange"),
+        "Price", List.of(1.2, 0.5, 0.8),
+        "Stock", List.of(100, 150, 75)
+    );
+    
+    Jt.table(data).use();
+    ```
 
-Jt.table(data).use();
-```
+3. **Dataframe** - A Tablesaw `Table`:
+    ```java
+    import tech.tablesaw.api.Table;
+   
+    ...   
+   
+    Table data = Table.read().csv("my_data.csv");
+    Jt.table(data).use();
+    ```
 
 ### Draw charts
 

@@ -1,11 +1,11 @@
 ---
-title: First steps building Streamlit apps
+title: First steps building Jeamlit apps
 slug: /get-started/tutorials
 ---
 
 # First steps building Streamlit apps
 
-If you've just read through our [Basic concepts](/get-started/fundamentals/main-concepts) and want to get your hands on Streamlit. Check out these tutorials. Make sure you have [installed Streamlit](/get-started/installation) so you can execute the code yourself.
+If you've just read through our [Basic concepts](/get-started/fundamentals/main-concepts) and want to get your hands on Jeamlit, check out these tutorials. Make sure you have [installed Jeamlit](/get-started/installation) so you can execute the code yourself.
 
 <InlineCalloutContainer>
     <InlineCallout

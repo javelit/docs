@@ -16,20 +16,16 @@ Read the [details](#details) to get more information about each option.
 Jeamlit requires A Java JDK >= `21`.
 
 ### Standalone CLI and app runner
-1. Install:
-    <Code>
-    <code className="language-bash">
-    {`# recommended: install with jbang
-    jbang app install io.jeamlit:jeamlit:`}<JeamlitVersion />{`:all
-    `}
-    {`
-    `}
-    {`# vanilla
-    curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/`}<JeamlitVersion />{`/jeamlit-`}<JeamlitVersion />{`-all.jar`}
-    </code>
-    </Code>
+1. Install: ([JBang](https://www.jbang.dev/) is highly recommended)
+    ```bash
+    # recommended: install with jbang
+    jbang app install io.jeamlit:jeamlit:${JEAMLIT_VERSION}:all
+   
+    # vanilla
+    curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
+    ```
 
-3. Validate the installation by running the Hello app:
+2. Validate the installation by running the Hello app:
    ```bash
    # jbang
    jeamlit hello 
@@ -41,15 +37,13 @@ Jeamlit requires A Java JDK >= `21`.
 
 ### Embedded server
 1. Add the dependency to your project
-   <Code>
-   <code className="language-xml">
-   {`<dependency>
+   ```xml
+   <dependency>
      <groupId>io.jeamlit</groupId>
      <artifactId>jeamlit</artifactId>
-     <version>`}<JeamlitVersion />{`</version>
-   </dependency>`}
-   </code>
-   </Code>
+     <version>${JEAMLIT_VERSION}</version>
+   </dependency>
+   ```
 2. Launch the server in your project:
    ```java
    void startJeamlitServer() {

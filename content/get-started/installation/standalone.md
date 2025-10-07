@@ -48,12 +48,10 @@ You have two options to install Jeamlit:
 
 1. Open a terminal and install Jeamlit:
 
-   <Code>
-   <code className="language-bash">
-   {`# Install Jeamlit with JBang
-   jbang app install io.jeamlit:jeamlit:`}<JeamlitVersion />{`:all`}
-   </code>
-   </Code>
+   ```bash
+   # Install Jeamlit with JBang
+   jbang app install io.jeamlit:jeamlit:${JEAMLIT_VERSION}:all
+   ```
 
 2. Verify the installation by running:
 
@@ -65,12 +63,10 @@ You have two options to install Jeamlit:
 
 1. Open a terminal and download the Jeamlit JAR:
 
-   <Code>
-   <code className="language-bash">
-   {`# Download Jeamlit JAR
-   curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/`}<JeamlitVersion />{`/jeamlit-`}<JeamlitVersion />{`-all.jar`}
-   </code>
-   </Code>
+   ```bash
+   # Download Jeamlit JAR
+   curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
+   ```
 
 2. Verify the installation by running:
 

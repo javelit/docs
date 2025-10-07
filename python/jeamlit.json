@@ -1,5 +1,5 @@
 {
-  "0.28.0": {
+  "0.34.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
@@ -5236,6 +5236,75 @@
             {
               "type_name": "String",
               "default": null,
+              "name": "mapName",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "java.net.URI",
+              "default": null,
+              "name": "geoJson",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "withMap(String mapName, java.net.URI geoJson)",
+          "name": "withMap",
+          "description": "<p>A GEO map to register.\n You can register multiple maps by calling this method multiple times.\n The geoJson URI should point to valid geoJson file. If you want Jeamlit to host the file, see <a href=\"/get-started/fundamentals/additional-features#static-file-serving\" target=\"_blank\">static file serving</a>.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "mapName",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "java.net.URI",
+              "default": null,
+              "name": "geoJson",
+              "description": "",
+              "is_optional": false
+            },
+            {
+              "type_name": "Map&lt;String, io.jeamlit.components.chart.EchartsComponent.SpecialAreaConfig&gt;",
+              "default": null,
+              "name": "specialAreas",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "withMap(String mapName, java.net.URI geoJson, Map&lt;String, io.jeamlit.components.chart.EchartsComponent.SpecialAreaConfig&gt; specialAreas)",
+          "name": "withMap",
+          "description": "<p>A GEO map to register.\n You can register multiple maps by calling this method multiple times.\n The geoJson URI should point to valid geoJson file. If you want Jeamlit to host the file, see [static file serving](/get-started/fundamentals/additional-features#static-file-serving).</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
               "name": "key",
               "description": "",
               "is_optional": false
@@ -6615,38 +6684,50 @@
         {
           "args": [
             {
-              "type_name": "List&lt;Object&gt;",
+              "type_name": "List&lt;E&gt;",
               "default": null,
               "name": "rows",
               "description": "<p>The list of objects representing table rows</p>",
               "is_optional": false
             }
           ],
-          "signature": "Jt.table(List&lt;Object&gt; rows)"
+          "signature": "Jt.table(List&lt;E&gt; rows)"
         },
         {
           "args": [
             {
-              "type_name": "Object[]",
+              "type_name": "Object",
+              "default": null,
+              "name": "dataframe",
+              "description": "<p>A tablesaw Table instance. tablesaw is an optional dependency, so this method is not typed.</p>",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.table(Object dataframe)"
+        },
+        {
+          "args": [
+            {
+              "type_name": "E[]",
               "default": null,
               "name": "rows",
               "description": "<p>The array of objects representing table rows</p>",
               "is_optional": false
             }
           ],
-          "signature": "Jt.table(Object[] rows)"
+          "signature": "Jt.table(E[] rows)"
         },
         {
           "args": [
             {
-              "type_name": "Map&lt;String, Object[]&gt;",
+              "type_name": "Map&lt;String, E[]&gt;",
               "default": null,
               "name": "cols",
               "description": "<p>A map where keys are column names and values are arrays of column data</p>",
               "is_optional": false
             }
           ],
-          "signature": "Jt.tableFromArrayColumns(Map&lt;String, Object[]&gt; cols)"
+          "signature": "Jt.tableFromArrayColumns(Map&lt;String, E[]&gt; cols)"
         },
         {
           "args": [
