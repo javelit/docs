@@ -1,5 +1,5 @@
 {
-  "0.34.0": {
+  "0.37.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
@@ -5303,6 +5303,30 @@
           "paramDescriptions": {},
           "args": [
             {
+              "type_name": "boolean",
+              "default": null,
+              "name": "border",
+              "description": "",
+              "is_optional": false
+            }
+          ],
+          "signature": "border(boolean border)",
+          "name": "border",
+          "description": "<p>Whether to show a border around the container. <code>False</code> by default.\n For more control on the border style, set a border using the echarts chart configuration.</p>",
+          "returns": [
+            {
+              "type_name": "io.jeamlit.components.chart.EchartsComponent.Builder",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "paramDescriptions": {},
+          "args": [
+            {
               "type_name": "String",
               "default": null,
               "name": "key",
@@ -5558,9 +5582,21 @@
         {
           "args": [],
           "signature": "Jt.divider()"
+        },
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "<p>A unique key to avoid collisions when calling this method multiple times.</p>",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.divider(String key)"
         }
       ],
-      "examples": "<p>Basic section separator\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DividerApp {\n     public static void main(String[] args) {\n         Jt.title(\"Section 1\").use();\n         Jt.text(\"Content for section 1\").use();\n\n         Jt.divider().use();\n\n         Jt.title(\"Section 2\").use();\n         Jt.text(\"Content for section 2\").use();\n     }\n }\n</code></pre></p>",
+      "examples": "<p>Basic section separator\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DividerApp {\n     public static void main(String[] args) {\n         Jt.title(\"Section 1\").use();\n         Jt.text(\"Content for section 1\").use();\n\n         Jt.divider().use();\n\n         Jt.title(\"Section 2\").use();\n         Jt.text(\"Content for section 2\").use();\n     }\n }\n</code></pre></p>\n\n<p>Basic section separator\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DividerApp {\n     public static void main(String[] args) {\n         Jt.title(\"Section 1\").use();\n         Jt.text(\"Content for section 1\").use();\n\n         Jt.divider().use();\n\n         Jt.title(\"Section 2\").use();\n         Jt.text(\"Content for section 2\").use();\n     }\n }\n</code></pre></p>",
       "name": "divider",
       "description": "<p>Display a horizontal rule.\n <p></p>",
       "returns": [
