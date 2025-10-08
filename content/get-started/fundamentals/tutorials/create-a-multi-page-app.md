@@ -5,570 +5,489 @@ slug: /get-started/tutorials/create-a-multipage-app
 
 # Create a multipage app
 
-In [Additional features](/get-started/fundamentals/additional-features), we introduced multipage apps, including how to define pages, structure and run multipage apps, and navigate between pages in the user interface. You can read more details in our guide to [Multipage apps](/develop/concepts/multipage-apps)
+In [Additional features](/get-started/fundamentals/additional-features), we introduced multipage apps, including how to define pages, structure and run multipage apps, and navigate between pages in the user interface. You can read more details in our guide to [Multipage apps](/develop/concepts/multipage-apps).
 
-In this guide, let’s put our understanding of multipage apps to use by converting the previous version of our `streamlit hello` app to a multipage app!
+In this tutorial, we'll build a multipage AI Assistant app using [Ollama](https://ollama.ai) as a local AI 
+model provider and [LangChain4j](https://docs.langchain4j.dev) in Java as the client library. This demonstrates 
+key concepts like page navigation, session state management, and how the main app acts as a shared canvas for 
+all pages. We will also encounter advanced concepts like [forms](/develop/concepts/architecture/forms) 
+and [empty containers](/develop/concepts/design/animate).
 
-## Motivation
+## Prerequisites
 
-Before Streamlit 1.10.0, the streamlit hello command was a large single-page app. As there was no support for multiple pages, we resorted to splitting the app's content using `st.selectbox` in the sidebar to choose what content to run. The content is comprised of three demos for plotting, mapping, and dataframes.
+Before starting, ensure you have:
+1. [Ollama](https://ollama.ai) installed and running (`ollama serve`)
+2. Required models pulled: `ollama pull gemma3:270m` and `ollama pull gemma3:1b`
 
-Here's what the code and single-page app looked like:
+<Tip>
+You can find the app files here: https://github.com/jeamlit/jeamlit/tree/main/examples/multipage_ai
+
+**Try it out before reading further with:**
+```bash
+jeamlit run  https://github.com/jeamlit/jeamlit/tree/main/examples/multipage_ai
+```
+</Tip>
+
+## App structure
+
+Our multipage app will have this structure:
+```
+AIAssistant.java          # Main entrypoint
+pages/
+  ├── ClassificationPage.java
+  └── ChatPage.java
+```
+
+## Create the main entrypoint
+
+The main entrypoint (`AIAssistant.java`) serves as the **canvas** for all pages. Elements placed in this entrypoint 
+appear on every page. The current page is run via `currentPage.run()`.
 
 <details>
-<summary><b><code>hello.py</code></b>  (👈 Toggle to expand)</summary>
-<br />
+<summary><code>AIAssistant.java</code> (click to expand)</summary>
 
-```python
-import streamlit as st
+```java
+/// usr/bin/env jbang "$0" "$@" ; exit $?
 
-def intro():
-    import streamlit as st
+//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS dev.langchain4j:langchain4j:0.36.2
+//DEPS dev.langchain4j:langchain4j-ollama:0.36.2
 
-    st.write("# Welcome to Streamlit! 👋")
-    st.sidebar.success("Select a demo above.")
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
 
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
+import io.jeamlit.core.Jt;
+import io.jeamlit.core.Shared;
+import pages.ChatPage;
+import pages.ClassificationPage;
 
-        **👈 Select a demo from the dropdown on the left** to see some examples
-        of what Streamlit can do!
+public class AIAssistant {
+    public static void main(String[] args) {
+        // Sidebar configuration - appears on ALL pages
+        Jt.title("🤖 AI Assistant").use(Jt.SIDEBAR);
 
-        ### Want to learn more?
+        // About section - appears on ALL pages
+        Jt.markdown("""
+                This demo showcases [LangChain4j](https://docs.langchain4j.dev) with [Ollama](https://ollama.ai) - completely free local AI!
 
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.jeamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
+                Navigate between pages to explore:
+                - 🏷️ **Classification**: Sentiment analysis
+                - 💬 **Chat**: Simple Q&A assistant
+                """).use(Jt.SIDEBAR);
 
-        ### See more complex demos
+        // Define navigation with multiple pages
+        JtPage currentPage = Jt
+                .navigation(Jt.page(ClassificationPage.class).title("Classification").home(),
+                            Jt.page(ChatPage.class).title("Chat"))
+                .use();
 
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
+        // Model selector in sidebar - appears on ALL pages
+        boolean ollamaRunning = checkOllamaConnection();
+        if (ollamaRunning) {
+            Jt.markdown("**Model Selection**").use(Jt.SIDEBAR);
+            Jt.text("✅ Ollama connected").use(Jt.SIDEBAR);
+            String currentModel = Jt.sessionState().getString("selected_model", "gemma3:270m");
 
-def mapping_demo():
-    import streamlit as st
-    import pandas as pd
-    import pydeck as pdk
+            List<String> models = List.of("gemma3:270m", "gemma3:1b");
+            String selectedModel = Jt.selectbox("Choose model", models)
+                                     .index(models.indexOf(currentModel))
+                                     .use(Jt.SIDEBAR);
 
-    from urllib.error import URLError
+            // Check if the selected model is loaded in Ollama
+            if (isModelLoaded(selectedModel)) {
+                // Store model in session state for pages to access
+                Jt.sessionState().put("selected_model", selectedModel);
 
-    st.markdown(f"# {list(page_names_to_funcs.keys())[2]}")
-    st.write(
-        """
-        This demo shows how to use
-[`st.pydeck_chart`](https://docs.jeamlit.io/develop/api-reference/charts/st.pydeck_chart)
-to display geospatial data.
-"""
-    )
-
-    @st.cache_data
-    def from_data_file(filename):
-        url = (
-            "http://raw.githubusercontent.com/streamlit/"
-            "example-data/master/hello/v1/%s" % filename
-        )
-        return pd.read_json(url)
-
-    try:
-        ALL_LAYERS = {
-            "Bike Rentals": pdk.Layer(
-                "HexagonLayer",
-                data=from_data_file("bike_rental_stats.json"),
-                get_position=["lon", "lat"],
-                radius=200,
-                elevation_scale=4,
-                elevation_range=[0, 1000],
-                extruded=True,
-            ),
-            "Bart Stop Exits": pdk.Layer(
-                "ScatterplotLayer",
-                data=from_data_file("bart_stop_stats.json"),
-                get_position=["lon", "lat"],
-                get_color=[200, 30, 0, 160],
-                get_radius="[exits]",
-                radius_scale=0.05,
-            ),
-            "Bart Stop Names": pdk.Layer(
-                "TextLayer",
-                data=from_data_file("bart_stop_stats.json"),
-                get_position=["lon", "lat"],
-                get_text="name",
-                get_color=[0, 0, 0, 200],
-                get_size=15,
-                get_alignment_baseline="'bottom'",
-            ),
-            "Outbound Flow": pdk.Layer(
-                "ArcLayer",
-                data=from_data_file("bart_path_stats.json"),
-                get_source_position=["lon", "lat"],
-                get_target_position=["lon2", "lat2"],
-                get_source_color=[200, 30, 0, 160],
-                get_target_color=[200, 30, 0, 160],
-                auto_highlight=True,
-                width_scale=0.0001,
-                get_width="outbound",
-                width_min_pixels=3,
-                width_max_pixels=30,
-            ),
+                // Execute the current page - this is where page content starts to execute
+                currentPage.run();
+            } else {
+                // model is not available - display error message
+                String errorMsg = """
+                       ⚠️ Model not available. \s
+                       Run:  \s
+                       `ollama run %s` \s
+                       and refresh this page.  \s
+                       Or make sure the model was not paused automatically by ollama!
+                       """.formatted(selectedModel);
+                Jt.error(errorMsg).use();
+            }
+        } else {
+            Jt.error("⚠️ Ollama is not running on port `11434`. Start ollama by running `ollama serve` and refresh this page.").use();
         }
-        st.sidebar.markdown("### Map Layers")
-        selected_layers = [
-            layer
-            for layer_name, layer in ALL_LAYERS.items()
-            if st.sidebar.checkbox(layer_name, True)
-        ]
-        if selected_layers:
-            st.pydeck_chart(
-                pdk.Deck(
-                    map_style="mapbox://styles/mapbox/light-v9",
-                    initial_view_state={
-                        "latitude": 37.76,
-                        "longitude": -122.4,
-                        "zoom": 11,
-                        "pitch": 50,
-                    },
-                    layers=selected_layers,
-                )
-            )
-        else:
-            st.error("Please choose at least one layer above.")
-    except URLError as e:
-        st.error(
-            """
-            **This demo requires internet access.**
-
-            Connection error: %s
-        """
-            % e.reason
-        )
-
-def plotting_demo():
-    import streamlit as st
-    import time
-    import numpy as np
-
-    st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
-    st.write(
-        """
-        This demo illustrates a combination of plotting and animation with
-Streamlit. We're generating a bunch of random numbers in a loop for around
-5 seconds. Enjoy!
-"""
-    )
-
-    progress_bar = st.sidebar.progress(0)
-    status_text = st.sidebar.empty()
-    last_rows = np.random.randn(1, 1)
-    chart = st.line_chart(last_rows)
-
-    for i in range(1, 101):
-        new_rows = last_rows[-1, :] + np.random.randn(5, 1).cumsum(axis=0)
-        status_text.text("%i%% Complete" % i)
-        chart.add_rows(new_rows)
-        progress_bar.progress(i)
-        last_rows = new_rows
-        time.sleep(0.05)
-
-    progress_bar.empty()
-
-    # Streamlit widgets automatically run the script from top to bottom. Since
-    # this button is not connected to any other logic, it just causes a plain
-    # rerun.
-    st.button("Re-run")
-
-
-def data_frame_demo():
-    import streamlit as st
-    import pandas as pd
-    import altair as alt
-
-    from urllib.error import URLError
-
-    st.markdown(f"# {list(page_names_to_funcs.keys())[3]}")
-    st.write(
-        """
-        This demo shows how to use `st.write` to visualize Pandas DataFrames.
-
-(Data courtesy of the [UN Data Explorer](http://data.un.org/Explorer.aspx).)
-"""
-    )
-
-    @st.cache_data
-    def get_UN_data():
-        AWS_BUCKET_URL = "http://streamlit-demo-data.s3-us-west-2.amazonaws.com"
-        df = pd.read_csv(AWS_BUCKET_URL + "/agri.csv.gz")
-        return df.set_index("Region")
-
-    try:
-        df = get_UN_data()
-        countries = st.multiselect(
-            "Choose countries", list(df.index), ["China", "United States of America"]
-        )
-        if not countries:
-            st.error("Please select at least one country.")
-        else:
-            data = df.loc[countries]
-            data /= 1000000.0
-            st.write("### Gross Agricultural Production ($B)", data.sort_index())
-
-            data = data.T.reset_index()
-            data = pd.melt(data, id_vars=["index"]).rename(
-                columns={"index": "year", "value": "Gross Agricultural Product ($B)"}
-            )
-            chart = (
-                alt.Chart(data)
-                .mark_area(opacity=0.3)
-                .encode(
-                    x="year:T",
-                    y=alt.Y("Gross Agricultural Product ($B):Q", stack=None),
-                    color="Region:N",
-                )
-            )
-            st.altair_chart(chart, use_container_width=True)
-    except URLError as e:
-        st.error(
-            """
-            **This demo requires internet access.**
-
-            Connection error: %s
-        """
-            % e.reason
-        )
-
-page_names_to_funcs = {
-    "—": intro,
-    "Plotting Demo": plotting_demo,
-    "Mapping Demo": mapping_demo,
-    "DataFrame Demo": data_frame_demo
-}
-
-demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
-page_names_to_funcs[demo_name]()
-```
-
-</details>
-
-<Cloud name="doc-hello" height="700px" />
-
-Notice how large the file is! Each app “page" is written as a function, and the selectbox is used to pick which page to display. As our app grows, maintaining the code requires a lot of additional overhead. Moreover, we’re limited by the `st.selectbox` UI to choose which “page" to run, we cannot customize individual page titles with `st.set_page_config`, and we’re unable to navigate between pages using URLs.
-
-## Convert an existing app into a multipage app
-
-Now that we've identified the limitations of a single-page app, what can we do about it? Armed with our knowledge from the previous section, we can convert the existing app to be a multipage app, of course! At a high level, we need to perform the following steps:
-
-1. Create a new `pages` folder in the same folder where the “entrypoint file" (`hello.py`) lives
-2. Rename our entrypoint file to `Hello.py` , so that the title in the sidebar is capitalized
-3. Create three new files inside of `pages`:
-   - `pages/1_📈_Plotting_Demo.py`
-   - `pages/2_🌍_Mapping_Demo.py`
-   - `pages/3_📊_DataFrame_Demo.py`
-4. Move the contents of the `plotting_demo`, `mapping_demo`, and `data_frame_demo` functions into their corresponding new files from Step 3
-5. Run `streamlit run Hello.py` to view your newly converted multipage app!
-
-Now, let’s walk through each step of the process and view the corresponding changes in code.
-
-## Create the entrypoint file
-
-<details open>
-<summary><code>Hello.py</code></summary>
-
-```python
-import streamlit as st
-
-st.set_page_config(
-    page_title="Hello",
-    page_icon="👋",
-)
-
-st.write("# Welcome to Streamlit! 👋")
-
-st.sidebar.success("Select a demo above.")
-
-st.markdown(
-    """
-    Streamlit is an open-source app framework built specifically for
-    Machine Learning and Data Science projects.
-    **👈 Select a demo from the sidebar** to see some examples
-    of what Streamlit can do!
-    ### Want to learn more?
-    - Check out [streamlit.io](https://streamlit.io)
-    - Jump into our [documentation](https://docs.jeamlit.io)
-    - Ask a question in our [community
-        forums](https://discuss.streamlit.io)
-    ### See more complex demos
-    - Use a neural net to [analyze the Udacity Self-driving Car Image
-        Dataset](https://github.com/streamlit/demo-self-driving)
-    - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-"""
-)
-```
-
-</details>
-<br />
-
-We rename our entrypoint file to `Hello.py` , so that the title in the sidebar is capitalized and only the code for the intro page is included. Additionally, we’re able to customize the page title and favicon — as it appears in the browser tab with `st.set_page_config`. We can do so for each of our pages too!
-
-<Image src="/images/mpa-hello.png" />
-
-Notice how the sidebar does not contain page labels as we haven’t created any pages yet.
-
-## Create multiple pages
-
-A few things to remember here:
-
-1. We can change the ordering of pages in our MPA by adding numbers to the beginning of each Python file. If we add a 1 to the front of our file name, Streamlit will put that file first in the list.
-2. The name of each Streamlit app is determined by the file name, so to change the app name you need to change the file name!
-3. We can add some fun to our app by adding emojis to our file names that will render in our Streamlit app.
-4. Each page will have its own URL, defined by the name of the file.
-
-Check out how we do all this below! For each new page, we create a new file inside the pages folder, and add the appropriate demo code into it.
-
-<br />
-
-<details>
-
-<summary><code>pages/1_📈_Plotting_Demo.py</code></summary>
-
-```python
-import streamlit as st
-import time
-import numpy as np
-
-st.set_page_config(page_title="Plotting Demo", page_icon="📈")
-
-st.markdown("# Plotting Demo")
-st.sidebar.header("Plotting Demo")
-st.write(
-    """This demo illustrates a combination of plotting and animation with
-Streamlit. We're generating a bunch of random numbers in a loop for around
-5 seconds. Enjoy!"""
-)
-
-progress_bar = st.sidebar.progress(0)
-status_text = st.sidebar.empty()
-last_rows = np.random.randn(1, 1)
-chart = st.line_chart(last_rows)
-
-for i in range(1, 101):
-    new_rows = last_rows[-1, :] + np.random.randn(5, 1).cumsum(axis=0)
-    status_text.text("%i%% Complete" % i)
-    chart.add_rows(new_rows)
-    progress_bar.progress(i)
-    last_rows = new_rows
-    time.sleep(0.05)
-
-progress_bar.empty()
-
-# Streamlit widgets automatically run the script from top to bottom. Since
-# this button is not connected to any other logic, it just causes a plain
-# rerun.
-st.button("Re-run")
-```
-
-</details>
-
-<Image src="/images/mpa-plotting-demo.png" />
-
-<details>
-<summary><code>pages/2_🌍_Mapping_Demo.py</code></summary>
-
-```python
-import streamlit as st
-import pandas as pd
-import pydeck as pdk
-from urllib.error import URLError
-
-st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
-
-st.markdown("# Mapping Demo")
-st.sidebar.header("Mapping Demo")
-st.write(
-    """This demo shows how to use
-[`st.pydeck_chart`](https://docs.jeamlit.io/develop/api-reference/charts/st.pydeck_chart)
-to display geospatial data."""
-)
-
-
-@st.cache_data
-def from_data_file(filename):
-    url = (
-        "http://raw.githubusercontent.com/streamlit/"
-        "example-data/master/hello/v1/%s" % filename
-    )
-    return pd.read_json(url)
-
-
-try:
-    ALL_LAYERS = {
-        "Bike Rentals": pdk.Layer(
-            "HexagonLayer",
-            data=from_data_file("bike_rental_stats.json"),
-            get_position=["lon", "lat"],
-            radius=200,
-            elevation_scale=4,
-            elevation_range=[0, 1000],
-            extruded=True,
-        ),
-        "Bart Stop Exits": pdk.Layer(
-            "ScatterplotLayer",
-            data=from_data_file("bart_stop_stats.json"),
-            get_position=["lon", "lat"],
-            get_color=[200, 30, 0, 160],
-            get_radius="[exits]",
-            radius_scale=0.05,
-        ),
-        "Bart Stop Names": pdk.Layer(
-            "TextLayer",
-            data=from_data_file("bart_stop_stats.json"),
-            get_position=["lon", "lat"],
-            get_text="name",
-            get_color=[0, 0, 0, 200],
-            get_size=15,
-            get_alignment_baseline="'bottom'",
-        ),
-        "Outbound Flow": pdk.Layer(
-            "ArcLayer",
-            data=from_data_file("bart_path_stats.json"),
-            get_source_position=["lon", "lat"],
-            get_target_position=["lon2", "lat2"],
-            get_source_color=[200, 30, 0, 160],
-            get_target_color=[200, 30, 0, 160],
-            auto_highlight=True,
-            width_scale=0.0001,
-            get_width="outbound",
-            width_min_pixels=3,
-            width_max_pixels=30,
-        ),
     }
-    st.sidebar.markdown("### Map Layers")
-    selected_layers = [
-        layer
-        for layer_name, layer in ALL_LAYERS.items()
-        if st.sidebar.checkbox(layer_name, True)
-    ]
-    if selected_layers:
-        st.pydeck_chart(
-            pdk.Deck(
-                map_style="mapbox://styles/mapbox/light-v9",
-                initial_view_state={
-                    "latitude": 37.76,
-                    "longitude": -122.4,
-                    "zoom": 11,
-                    "pitch": 50,
-                },
-                layers=selected_layers,
-            )
-        )
-    else:
-        st.error("Please choose at least one layer above.")
-except URLError as e:
-    st.error(
-        """
-        **This demo requires internet access.**
-        Connection error: %s
-    """
-        % e.reason
-    )
+
+    private static boolean checkOllamaConnection() {
+        try {
+            URL url = new URL("http://localhost:11434/api/tags");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setConnectTimeout(2000);
+            conn.setReadTimeout(2000);
+            int responseCode = conn.getResponseCode();
+            conn.disconnect();
+            return responseCode == 200;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private static boolean isModelLoaded(String modelName) {
+        try {
+            final URL url = new URL("http://localhost:11434/api/ps");
+            final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setConnectTimeout(2000);
+            conn.setReadTimeout(2000);
+
+            if (conn.getResponseCode() != 200) {
+                return false;
+            }
+
+            // Parse JSON response using Jackson
+            final var json = Shared.OBJECT_MAPPER.readValue(conn.getInputStream(), java.util.Map.class);
+            conn.disconnect();
+
+            // Check if the model field matches our selected model
+            final var models = (java.util.List<java.util.Map<String, Object>>) json.get("models");
+            if (models != null) {
+                for (var model : models) {
+                    if (modelName.equals(model.get("model"))) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+
+        } catch (Exception e) {
+            return false;
+        }
+    }
+}
 ```
 
 </details>
 
-<Image src="/images/mpa-mapping-demo.png" />
+### Key concepts
+
+**1. Page Navigation**
+
+The `Jt.navigation()` method defines which pages are available:
+
+```java
+JtPage currentPage = Jt
+    .navigation(Jt.page(ClassificationPage.class).title("Classification").home(),
+                Jt.page(ChatPage.class).title("Chat"))
+    .use();
+```
+
+This returns a `JtPage` object representing the currently selected page. Call `currentPage.run()` to execute that page's `main()` method.
+
+**2. The Canvas Pattern**
+
+Elements placed *before* and *after* `currentPage.run()` appear on **all pages**:
+- Sidebar title and about section
+- Model selection dropdown
+- Connection status
+
+Remember, Jeamlit apps are resolved top to bottom. While the `Jt.navigation` and `currentPage.run()` automatically add 
+a table of content in the sidebar and URL paths management, the app is still executed top to bottom. In this demo, 
+the entrypoint app does not call the current page if the ollama model is not available. The preconditions checks are not 
+duplicated in all pages! 
+
+**3. Session State for Shared Data**
+
+Session state allows sharing data between the main app and pages:
+
+```java
+// Main app stores the selected model
+Jt.sessionState().put("selected_model", selectedModel);
+
+// Pages retrieve the selected model
+String modelName = Jt.sessionState().getString("selected_model", "gemma3:270m");
+```
+
+This pattern is crucial for multipage apps - the model selection in the sidebar is available to both pages without duplicating code.
+
+## Create the pages
+
+Now let's create the two page classes. Each page is a separate Java class with a `main()` method.
+
+### Classification Page
 
 <details>
-<summary><code>pages/3_📊_DataFrame_Demo.py</code></summary>
+<summary><code>pages/ClassificationPage.java</code> (click to expand)</summary>
 
-```python
-import streamlit as st
-import pandas as pd
-import altair as alt
-from urllib.error import URLError
+```java
+package pages;
 
-st.set_page_config(page_title="DataFrame Demo", page_icon="📊")
+//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS dev.langchain4j:langchain4j:0.36.2
+//DEPS dev.langchain4j:langchain4j-ollama:0.36.2
 
-st.markdown("# DataFrame Demo")
-st.sidebar.header("DataFrame Demo")
-st.write(
-    """This demo shows how to use `st.write` to visualize Pandas DataFrames.
-(Data courtesy of the [UN Data Explorer](http://data.un.org/Explorer.aspx).)"""
-)
+import dev.langchain4j.model.ollama.OllamaChatModel;
+import dev.langchain4j.service.AiServices;
+import dev.langchain4j.service.UserMessage;
+import io.jeamlit.core.Jt;
 
+public class ClassificationPage {
 
-@st.cache_data
-def get_UN_data():
-    AWS_BUCKET_URL = "http://streamlit-demo-data.s3-us-west-2.amazonaws.com"
-    df = pd.read_csv(AWS_BUCKET_URL + "/agri.csv.gz")
-    return df.set_index("Region")
+    // Define the Sentiment enum
+    enum Sentiment {
+        POSITIVE,
+        NEUTRAL,
+        NEGATIVE
+    }
 
+    // Define the AI-powered Sentiment Analyzer interface
+    interface SentimentAnalyzer {
+        @UserMessage("Analyze sentiment of {{it}}")
+        Sentiment analyzeSentimentOf(String text);
+    }
 
-try:
-    df = get_UN_data()
-    countries = st.multiselect(
-        "Choose countries", list(df.index), ["China", "United States of America"]
-    )
-    if not countries:
-        st.error("Please select at least one country.")
-    else:
-        data = df.loc[countries]
-        data /= 1000000.0
-        st.write("### Gross Agricultural Production ($B)", data.sort_index())
+    public static void main(String[] args) {
+        Jt.title("🏷️ Sentiment Classification").use();
 
-        data = data.T.reset_index()
-        data = pd.melt(data, id_vars=["index"]).rename(
-            columns={"index": "year", "value": "Gross Agricultural Product ($B)"}
-        )
-        chart = (
-            alt.Chart(data)
-            .mark_area(opacity=0.3)
-            .encode(
-                x="year:T",
-                y=alt.Y("Gross Agricultural Product ($B):Q", stack=None),
-                color="Region:N",
-            )
-        )
-        st.altair_chart(chart, use_container_width=True)
-except URLError as e:
-    st.error(
-        """
-        **This demo requires internet access.**
-        Connection error: %s
-    """
-        % e.reason
-    )
+        Jt.markdown("""
+                    This page demonstrates **sentiment classification** using LangChain4j with Ollama. \s
+                    Enter some text below and the AI will classify its sentiment as POSITIVE, NEUTRAL, or NEGATIVE.
+                    """).use();
+
+        // Get model from session state (shared by main app)
+        String modelName = Jt.sessionState().getString("selected_model", "gemma3:270m");
+
+        // Text input for classification
+        Jt.markdown("""
+                    ### 📝 Input
+                    *💡 Try these examples:*
+                    """).use();
+
+        // Example buttons
+        String exampleValue = Jt.sessionState().computeIfAbsentString("input", k -> "I love this product! It's amazing and works perfectly.");
+
+        var col1 = Jt.columns("cols", 3).use();
+        if (Jt.button("Positive example").use(col1.col(0))) {
+            exampleValue = "This is absolutely wonderful! Best experience ever!";
+        }
+        if (Jt.button("Neutral example").use(col1.col(1))) {
+            exampleValue = "The product works as described. Nothing special.";
+        }
+        if (Jt.button("Negative example").use(col1.col(2))) {
+            exampleValue = "Terrible quality. Very disappointed with this purchase.";
+        }
+        Jt.sessionState().put("input", exampleValue);
+
+        String text = Jt
+                .textArea("Enter text to analyze")
+                .value(exampleValue)
+                .height(150)
+                .use();
+
+        // Classify button
+        if (Jt.button("Classify Sentiment").type("primary").use()) {
+            if (text.trim().isEmpty()) {
+                Jt.text("Please enter some text to analyze.").use();
+            } else {
+                try {
+                    Jt.text("Analyzing sentiment...").use();
+
+                    // Create Ollama model
+                    var chatModel = OllamaChatModel
+                            .builder()
+                            .baseUrl("http://localhost:11434")
+                            .modelName(modelName)
+                            .temperature(0.3)
+                            .build();
+
+                    // Create AI-powered Sentiment Analyzer
+                    SentimentAnalyzer analyzer = AiServices.create(SentimentAnalyzer.class, chatModel);
+
+                    // Analyze sentiment
+                    Sentiment sentiment = analyzer.analyzeSentimentOf(text);
+
+                    // Display result
+                    Jt.markdown("### 🎯 Result").key("classi-result").use();
+
+                    String emoji = switch (sentiment) {
+                        case POSITIVE -> "😊";
+                        case NEUTRAL -> "😐";
+                        case NEGATIVE -> "😞";
+                    };
+
+                    Jt.markdown("**Sentiment:** %s %s".formatted(emoji, sentiment)).use();
+
+                } catch (Exception e) {
+                    throw e;
+                }
+            }
+        }
+    }
+}
 ```
 
 </details>
 
-<Image src="/images/mpa-dataframe-demo.png" />
+![classification page screenshot](/images/get-started/multipage_classify.png)
 
-With our additional pages created, we can now put it all together in the final step below.
+### Chat Page
+
+<details>
+<summary><code>pages/ChatPage.java</code> (click to expand)</summary>
+
+```java
+package pages;
+
+//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS dev.langchain4j:langchain4j:0.36.2
+//DEPS dev.langchain4j:langchain4j-ollama:0.36.2
+
+import dev.langchain4j.model.ollama.OllamaChatModel;
+import dev.langchain4j.service.AiServices;
+import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
+import dev.langchain4j.service.V;
+import io.jeamlit.core.Jt;
+import io.jeamlit.core.JtContainer;
+
+public class ChatPage {
+
+    // Define the AI Assistant interface
+    interface Assistant {
+        @SystemMessage("You are a helpful AI assistant. Provide clear, concise, and accurate answers.")
+        @UserMessage("{{question}}")
+        String chat(@V("question") String question);
+    }
+
+    public static void main(String[] args) {
+        Jt.title("💬 Chat Assistant").use();
+
+        Jt.markdown("""
+                            This page demonstrates a **simple Q&A chat** using LangChain4j with Ollama.
+                            Ask any question and get an AI-powered response!
+                            """).use();
+
+        // Get model from session state (shared by main app)
+        String modelName = Jt.sessionState().getString("selected_model", "gemma3:270m");
+
+        // Form prevents reruns when typing - only reruns when button clicked
+        JtContainer formContainer = Jt.form("chat_input").use();
+
+        String question = Jt.textArea("Your question")
+                            .value("What is the meaning of life?")
+                            .height(100)
+                            .placeholder("Enter your question here...")
+                            .use(formContainer);
+
+        // Temperature slider - adjustable per request
+        double temperature = Jt.slider("Temperature - the higher the more creative")
+                .min(0.0)
+                .max(2.0)
+                .value(0.7)
+                .step(0.1)
+                .use(formContainer);
+
+        // Form submit button
+        if (Jt.formSubmitButton("Get Answer").type("primary").use(formContainer)) {
+            if (question.trim().isEmpty()) {
+                Jt.text("Please enter a question.").use();
+            } else {
+                try {
+                    // Empty container allows updating content in place
+                    var inPlaceContainer = Jt.empty("load-and-answer").use();
+
+                    // Show loading state
+                    Jt.text("Thinking...").use(inPlaceContainer);
+
+                    // Create Ollama model
+                    var chatModel = OllamaChatModel.builder()
+                                                   .baseUrl("http://localhost:11434")
+                                                   .modelName(modelName)
+                                                   .temperature(temperature)
+                                                   .build();
+
+                    // Create AI-powered Assistant
+                    Assistant assistant = AiServices.create(Assistant.class, chatModel);
+
+                    // Get answer
+                    String answer = assistant.chat(question);
+
+                    // Replace loading state with answer
+                    Jt.markdown("### 💡 Answer\n" + answer).use(inPlaceContainer);
+
+                } catch (Exception e) {
+                    Jt.error("Error getting answer: " + e.getMessage()).use();
+                }
+            }
+        }
+    }
+}
+```
+
+</details>
+
+![chat page screenshot](/images/get-started/multipage_chat.png)
+
+The Chat page demonstrates two advanced patterns for better user experience:
+
+**1. Forms for controlled reruns**
+
+As explained in the [basic concepts](/get-started/fundamentals/main-concepts#data-flow), a Jeamlit app re-runs 
+top-to-bottom every time a widget value is changed. Without a form, changing the text area or temperature slider 
+would trigger a full app rerun. With a form, the app only reruns when the submit button `Get answer` is clicked.
+Forms prevent the app from rerunning on every widget change. 
+
+```java
+JtContainer formContainer = Jt.form("chat_input").use();
+// Add inputs to form
+String question = Jt.textArea("Your question").use(formContainer);
+double temperature = Jt.slider("Temperature").use(formContainer);
+// app only reruns when this button is clicked
+if (Jt.formSubmitButton("Get Answer").use(formContainer)) { ... }
+```
+
+Learn more: [Forms documentation](/develop/concepts/architecture/forms)
+
+**2. Empty containers for dynamic updates**
+
+Empty containers allow replacing content in place without adding new elements. This creates a smooth loading → result transition:
+
+```java
+var inPlaceContainer = Jt.empty("load-and-answer").use();
+Jt.text("Thinking...").use(inPlaceContainer);  // Show loading state
+// ... AI processing ...
+Jt.markdown("### Answer\n" + answer).use(inPlaceContainer);  // Replace with result
+```
+
+Learn more: [Animation documentation](/develop/concepts/design/animate)
 
 ## Run the multipage app
 
-To run your newly converted multipage app, run:
+To run your multipage app:
 
 ```bash
-streamlit run Hello.py
+jeamlit run AIAssistant.java
 ```
 
-That’s it! The `Hello.py` script now corresponds to the main page of your app, and other scripts that Streamlit finds in the pages folder will also be present in the new page selector that appears in the sidebar.
-
-<Cloud name="doc-mpa-hello" height="700px" />
+The app will:
+1. Display the sidebar with navigation, about section, and model selector on all pages
+2. Allow switching between Classification and Chat pages
+3. Share the selected model between pages via session state
+4. Show page-specific content in the main area
 
 ## Next steps
 
-Congratulations! 🎉 If you've read this far, chances are you've learned to create both single-page and multipage apps. Where you go from here is entirely up to your creativity! We’re excited to see what you’ll build now that adding additional pages to your apps is easier than ever. Try adding more pages to the app we've just built as an exercise. Also, stop by the forum to show off your multipage apps with the Streamlit community! 🎈
+**It's never been so easy to try and demo [LangChain4j](https://docs.langchain4j.dev/)!**  
 
-Here are a few resources to help you get started:
+Congratulations! 🎉 If you've read this far, chances are you've learned to create both single-page and 
+multipage apps. Where you go from here is entirely up to your creativity! We’re excited to see what you’ll 
+build now that adding additional pages to your apps is easier than ever. Try adding more pages to the app 
+we've just built as an exercise. Also, stop by the [forum](https://github.com/jeamlit/jeamlit/discussions/) to show 
+off your multipage apps with the Jeamlit community! 🚡
 
-- Deploy your app for free on Streamlit's [Community Cloud](/deploy/streamlit-community-cloud).
-- Post a question or share your multipage app on our [community forum](https://discuss.streamlit.io/c/streamlit-examples/9).
-- Check out our documentation on [Multipage apps](/develop/concepts/multipage-apps).
-- Read through [Concepts](/develop/concepts) for things like caching, theming, and adding statefulness to apps.
-- Browse our [API reference](/develop/api-reference/) for examples of every Streamlit command.
+Here are some resources to continue learning:
+
+- Post a question or share your multipage app on our [community forum](https://github.com/jeamlit/jeamlit/discussions/).
+- Explore the full [Multipage apps documentation](/develop/concepts/multipage-apps)
+- Learn about [Forms](/develop/concepts/architecture/forms) for controlled reruns
+- Discover [Animation techniques](/develop/concepts/design/animate) with empty containers
+- Browse the [API reference](/develop/api-reference/) for all Jeamlit components
