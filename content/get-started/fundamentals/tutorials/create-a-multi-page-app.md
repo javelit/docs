@@ -474,9 +474,9 @@ The app will:
 3. Share the selected model between pages via session state
 4. Show page-specific content in the main area
 
-## Next steps
+**It's never been so easy to try and demo [LangChain4j](https://docs.langchain4j.dev/)!**
 
-**It's never been so easy to try and demo [LangChain4j](https://docs.langchain4j.dev/)!**  
+## Next steps
 
 Congratulations! 🎉 If you've read this far, chances are you've learned to create both single-page and 
 multipage apps. Where you go from here is entirely up to your creativity! We’re excited to see what you’ll 
