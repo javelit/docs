@@ -43,8 +43,7 @@ pages/
 The main entrypoint (`AIAssistant.java`) serves as the **canvas** for all pages. Elements placed in this entrypoint 
 appear on every page. The current page is run via `currentPage.run()`.
 
-<details>
-<summary><code>AIAssistant.java</code> (click to expand)</summary>
+<Collapse title="AIAssistant.java (click to expand)" expanded={false} >
 
 ```java
 /// usr/bin/env jbang "$0" "$@" ; exit $?
@@ -166,7 +165,7 @@ public class AIAssistant {
 }
 ```
 
-</details>
+</Collapse>
 
 ### Key concepts
 
@@ -215,8 +214,7 @@ Now let's create the two page classes. Each page is a separate Java class with a
 
 ### Classification Page
 
-<details>
-<summary><code>pages/ClassificationPage.java</code> (click to expand)</summary>
+<Collapse title="pages/ClassificationPage.java (click to expand)" expanded={false} >
 
 ```java
 package pages;
@@ -325,14 +323,13 @@ public class ClassificationPage {
 }
 ```
 
-</details>
+</Collapse>
 
 ![classification page screenshot](/images/get-started/multipage_classify.png)
 
 ### Chat Page
 
-<details>
-<summary><code>pages/ChatPage.java</code> (click to expand)</summary>
+<Collapse title="pages/ChatPage.java (click to expand)" expanded={false} >
 
 ```java
 package pages;
@@ -423,7 +420,7 @@ public class ChatPage {
 }
 ```
 
-</details>
+</Collapse>
 
 ![chat page screenshot](/images/get-started/multipage_chat.png)
 

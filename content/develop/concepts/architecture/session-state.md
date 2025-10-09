@@ -234,8 +234,8 @@ Learn more about Components State below.
 
 Note: this is an advanced example to showcase callbacks and `Jt.componentsState`. 
 The same app could be implemented in a simpler fashion: 
-<details>
-<summary>Click to see the simpler implementation</summary>
+
+<Collapse title="Click to see the simpler implementation" expanded={false} >
 ```java
 import io.jeamlit.core.Jt;
 import io.jeamlit.core.JtContainer;
@@ -277,7 +277,7 @@ public class Counter {
     }
 }
 ```
-</details> 
+</Collapse> 
 
 
 ## Advanced concepts
