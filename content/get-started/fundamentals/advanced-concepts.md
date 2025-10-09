@@ -16,13 +16,10 @@ To cache a value in Jeamlit, you simply need to put it in a dedicated `Map` that
 Example:
 
 ```java
-// initialization - this will only run once for all users
-if (!Jt.cache().contains("data")) {
-    Jt.cache().put("data", loadData());    
-}
+// get the cached value - compute it if it's absent
+var data = Jt.cache().computeIfAbsent("data", key -> loadData());
 
 // use the data in your app
-var data = Jt.cache().get("data");
 Jt.text("here is the data: " + data.toString()).use();
 ```
 
