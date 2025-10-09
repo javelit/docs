@@ -6,46 +6,37 @@ slug: /develop/concepts/architecture/run-your-app
 # Run your Jeamlit app
 
 Working with Jeamlit is simple. First you sprinkle a few Jeamlit commands into a normal Java class, and then you run it. 
-We list few ways to run your script, depending on your use case.
+We list few ways to run your app, depending on your use case.
 
-## Use jeamlit standalone fat-jar
-
-
-
+## Use jeamlit Standalone
 Once you've created your Java class, say `MyApp.java`, the easiest way to run it is with `jeamlit run`:
 
 ```bash
-jeamlit run your_script.py
+jeamlit run MyApp.java
 ```
 
-As soon as you run the script as shown above, a local Streamlit server will spin up and your app will open in a new tab in your default web browser.
+As soon as you run the script as shown above, a local Jeamlit server will spin up and your app will open in a new tab in your default web browser.
 
-### Pass arguments to your script
+### Pass a URL to jeamlit run
 
-When passing your script some custom arguments, they must be passed after two dashes. Otherwise the arguments get interpreted as arguments to Streamlit itself:
+You can also pass a URL to `jeamlit run`! This is great when your script is hosted remotely, such as a GitHub Gist. For example:
 
 ```bash
-streamlit run your_script.py [-- script args]
+jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/main/examples/getting_started/App.java
 ```
 
-### Pass a URL to streamlit run
-
-You can also pass a URL to `streamlit run`! This is great when your script is hosted remotely, such as a GitHub Gist. For example:
-
+You can also pass a GitHub folder! This is especially handy for multipage apps.
 ```bash
-streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/master/streamlit_app.py
+jeamlit run  https://github.com/jeamlit/jeamlit/tree/main/examples/multipage_ai
 ```
 
-## Run Streamlit as a Python module
+For a folder, the convention to find the app entrypoint is the following: 
+- if there is a single `.java` file at the root of the folder (other pages are put in a subfolder), this file is the entrypoint
+- if a file named `App.java` is present, it is the entrypoint
+- if a file named `Main.java` is present, it is the entrypoint
+- an error is thrown
 
-Another way of running Streamlit is to run it as a Python module. This is useful when configuring an IDE like PyCharm to work with Streamlit:
 
-```bash
-# Running
-python -m streamlit run your_script.py
-```
-
-```bash
-# is equivalent to:
-streamlit run your_script.py
-```
+## Use Jeamlit embedded
+You can embed Jeamlit in your existing Java project.
+See [quick installation](/get-started/installation#embedded-server) and [jeamlit embedded details](/get-started/installation/embedded-vanilla).
