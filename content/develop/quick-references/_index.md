@@ -11,7 +11,7 @@ slug: /develop/quick-reference
 
 <h5>Cheatsheet</h5>
 
-A dense list of Streamlit commands with example syntax.
+A dense list of Jeamlit commands with example syntax.
 
 </RefCard>
 
@@ -21,7 +21,7 @@ A dense list of Streamlit commands with example syntax.
 
 <h5>Release notes</h5>
 
-See how Streamlit has changed with each new version.
+See how Jeamlit has changed with each new version.
 
 </RefCard>
 

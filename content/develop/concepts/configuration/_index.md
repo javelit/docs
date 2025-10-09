@@ -12,7 +12,7 @@ slug: /develop/concepts/configuration
 
 <h5>Configuration options</h5>
 
-Understand the types of options available to you through Streamlit configuration.
+Understand the types of options available to you through Jeamlit configuration.
 
 </RefCard>
 
@@ -20,7 +20,7 @@ Understand the types of options available to you through Streamlit configuration
 
 <h5>HTTPS support</h5>
 
-Understand how to configure SSL and TLS for your Streamlit app.
+Understand how to configure SSL and TLS for your Jeamlit app.
 
 </RefCard>
 

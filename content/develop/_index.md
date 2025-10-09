@@ -5,7 +5,7 @@ slug: /develop
 
 # Develop
 
-Get all the information you need to build beautiful, performant web apps with Streamlit!
+Get all the information you need to build beautiful, performant web apps with Jeamlit!
 
 <InlineCalloutContainer>
     <InlineCallout
@@ -13,7 +13,7 @@ Get all the information you need to build beautiful, performant web apps with St
         icon="book"
         bold="Concepts."
         href="/develop/concepts"
-    >Learn how Streamlit works with in-depth guides to our execution model and features.</InlineCallout>
+    >Learn how Jeamlit works with in-depth guides to our execution model and features.</InlineCallout>
     <InlineCallout
         color="yellow-80"
         icon="list"
