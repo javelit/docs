@@ -75,7 +75,7 @@ Jt.code("public class MyApp { ... }").use();
 Jt.html("<p>Custom HTML content</p>").use();
 
 // Text with containers
-var container = Jt.container("my-container").use();
+var container = Jt.container().use();
 Jt.text("Text inside container").use(container);
 ```
 
@@ -196,12 +196,12 @@ Double value = Jt.slider("Pick value")
 import java.util.List;
 
 // Two equal columns
-var cols = Jt.columns("my-cols", 2).use();
+var cols = Jt.columns(2).use();
 Jt.text("Column 1").use(cols.col(0));
 Jt.text("Column 2").use(cols.col(1));
 
 // Three columns with custom widths
-var cols3 = Jt.columns("weighted-cols", 3)
+var cols3 = Jt.columns(3)
     .widths(List.of(0.5, 0.25, 0.25))
     .verticalAlignment(ColumnsComponent.VerticalAlignment.TOP)
     .gap(ColumnsComponent.Gap.SMALL)
@@ -216,7 +216,7 @@ var cols3 = Jt.columns("weighted-cols", 3)
 
 ```java
 // Create tabs
-var tabs = Jt.tabs("my-tabs", List.of("Tab 1", "Tab 2", "Tab 3")).use();
+var tabs = Jt.tabs(List.of("Tab 1", "Tab 2", "Tab 3")).use();
 
 // Add content to specific tabs
 Jt.text("Content for tab 1").use(tabs.tab("Tab 1"));
@@ -232,18 +232,18 @@ Jt.button("Button in tab 3").use(tabs.tab("Tab 3"));
 
 ```java
 // Simple container
-var container = Jt.container("main-container").use();
+var container = Jt.container().use();
 Jt.text("Inside container").use(container);
 
 // Expander
-var expander = Jt.expander("details", "Show Details")
+var expander = Jt.expander("Show Details")
     .expanded(false)
     .icon(":material/info:")
     .use();
 Jt.text("Hidden content").use(expander);
 
 // Popover
-var popover = Jt.popover("pop-key", "Click me").use();
+var popover = Jt.popover("Click me").use();
 Jt.text("Popover content").use(popover);
 ```
 
@@ -255,7 +255,7 @@ Jt.text("Popover content").use(popover);
 
 ```java
 // Forms group widgets together
-var form = Jt.form("login-form").use();
+var form = Jt.form().use();
 String username = Jt.textInput("Username").use(form);
 String password = Jt.textInput("Password")
     .type("password").use(form);
@@ -349,13 +349,13 @@ var placeholder = Jt.empty("status-area").use();
 Jt.text("Loading complete!").use(placeholder);
 
 // Container with borders and height
-var main = Jt.container("main")
+var main = Jt.container()
     .border(true)
     .height(400)
     .use();
 
 // Nested containers
-var nested = Jt.container("inner").use(main);
+var nested = Jt.container().use(main);
 Jt.text("Nested content").use(nested);
 ```
 
@@ -409,7 +409,7 @@ public class WeatherApp {
 
         if (Jt.button("Get Weather").use()) {
             // Display results
-            var cols = Jt.columns("weather-cols", 2).use();
+            var cols = Jt.columns(2).use();
             Jt.text("Temperature: 22°C").use(cols.col(0));
             Jt.text("Humidity: 65%").use(cols.col(1));
         }

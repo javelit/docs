@@ -41,8 +41,8 @@ presses `Ctrl+Enter`/`⌘+Enter` to submit the form.
 Before a form is submitted, all widgets within that form will have default values, just like widgets outside of a form have default values.
 
 ```java 
-var formContainer = Jt.form("my-form-id").use();
-double myNumber = Jt.slider("my-slider").value(10).use(formContainer);
+var formContainer = Jt.form().use();
+double myNumber = Jt.slider("pick a value").value(10).use(formContainer);
 Jt.formSubmitButton("Submit form").use(formContainer);
 
 // this is outside the form
@@ -63,7 +63,7 @@ other [container elements](/develop/api-reference/layout). That is, you call `.u
 `Jt.formSubmitButton` anywhere in the form container.
 
 ```java
-var formContainer = Jt.form("my-form").use();
+var formContainer = Jt.form().use();
 
 // This is writing directly to the main container (.use()) Since the form container is
 // defined above, this will appear below everything in the form

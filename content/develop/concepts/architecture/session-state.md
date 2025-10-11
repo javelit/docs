@@ -11,7 +11,7 @@ We define access to a Jeamlit app in a browser tab as a **session**. For each br
 
 Session State is a way to share variables between reruns, for each user session. In addition to the ability to store and persist state, Jeamlit also exposes the ability to manipulate state using Callbacks. Session state also persists across pages inside a [multipage app](/develop/concepts/multipage-apps).
 
-In this guide, we will illustrate the usage of **Session State** and **Callbacks** as we build a stateful Counter app.
+In this guide, we will illustrate the usage of **Session State**, **Components State** and **Callbacks** as we build a stateful Counter app.
 
 For details on the Session State and Callbacks API, please refer to our [Session State API Reference Guide](/develop/api-reference/caching-and-state/jt.sessionstate).
 
@@ -193,7 +193,7 @@ public class Counter {
         Jt.sessionState().putIfAbsent("last_updated", LocalDate.of(2025, 1, 1));
 
         // Create form
-        JtContainer form = Jt.form("my_form").use();
+        JtContainer form = Jt.form().use();
 
         // create input widgets with easy to retrieve keys
         Jt.dateInput("Enter the time")
@@ -225,10 +225,8 @@ public class Counter {
 ```
 
 Notice how in the callback function we obtain the current values of the input widgets with `Jt.componentsState`.
-`Jt.componentsState` contains the values of all input widgets. Contrary to `Jt.sessionState`, it is a **read-only** `Map`.
-Input widget values are managed by Jeamlit. 
-By default, unique widget keys are generated automatically, so you won't be able to find your widget value in the Components State.  
-To make it possible to retrieve a widget value by key, set the widget key manually with the `.key()` method.
+`Jt.componentsState` is a **read-only** `Map` that holds the values of input widgets that were assigned a key with `.key()`.  
+To retrieve a widget’s value by its key, you must manually set the widget’s key using `.key()`.
 
 Learn more about Components State below.
 
@@ -250,7 +248,7 @@ public class Counter {
         Jt.sessionState().putIfAbsent("last_updated", LocalDate.of(2025, 1, 1));
 
         // Create form
-        JtContainer form = Jt.form("my_form").use();
+        JtContainer form = Jt.form().use();
 
         // create input widgets with easy to retrieve keys
         LocalDate updateDate = Jt.dateInput("Enter the time")
@@ -284,15 +282,33 @@ public class Counter {
 
 ### Session State and Components State association
 
-Session State provides the functionality to store variables across reruns. 
-Components State (i.e. the value of a widget) is also stored in a session.
+**Session State** allows you to store variables across reruns.   
+In a multipage app, Session State variables are available across pages. 
 
-For clarity, these two state Maps are kept separate. 
-Components State is read-only to prevent out-of-order value modifications and to keep the framework mental model simple.
+**Components State** allows you to retrieve the value of any *keyed* input widget, at any point in the app logic, across reruns. 
+In a multipage app, **keyed** widget values are page-scoped. If the same key (e.g., `.key("my-key")`) is used on two 
+different pages, calling Jt.componentsState().get("my-key") will correctly return the value for the widget on the current page.   
+Components State is read-only to prevent out-of-order widget value mutations and to keep the framework mental model simple.
+
+By default, **keyed** input widget values are persisted even if the widget is not displayed in an app run.  
+This is simpler to understand with an example. Run: 
+```bash
+jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/WidgetPersistenceAfterNoRender.java
+```
+This can be disabled by calling `.noPersist()`. 
+
+In a multipage app, *keyed* widget values persist across pages. For example, if you navigate from Page1 to Page2 and 
+then return to Page1, the *keyed* widget values on Page1 remain intact.   
+To force a page to clear all its **keyed** values when left, use `Jt.page(...).noPersistWhenLeft`.
+Here is an example you can run:
+```bash
+jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/WidgetPersistenceMultiPage.java
+```
+
 
 ### Caveats and limitations
 
-Here are some limitations to keep in mind when using Session State:
+Here are some limitations to keep in mind when using Session State and Components State
 
 - Session State exists for as long as the tab is open and connected to the Jeamlit server. As soon as you close the tab, everything stored in Session State is lost.
 - Session State is not persisted. If the Jeamlit server crashes, then everything stored in Session State gets wiped

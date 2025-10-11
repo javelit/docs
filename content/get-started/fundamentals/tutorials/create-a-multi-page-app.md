@@ -263,7 +263,7 @@ public class ClassificationPage {
         // Example buttons
         String exampleValue = Jt.sessionState().computeIfAbsentString("input", k -> "I love this product! It's amazing and works perfectly.");
 
-        var col1 = Jt.columns("cols", 3).use();
+        var col1 = Jt.columns(3).use();
         if (Jt.button("Positive example").use(col1.col(0))) {
             exampleValue = "This is absolutely wonderful! Best experience ever!";
         }
@@ -367,7 +367,7 @@ public class ChatPage {
         String modelName = Jt.sessionState().getString("selected_model", "gemma3:270m");
 
         // Form prevents reruns when typing - only reruns when button clicked
-        JtContainer formContainer = Jt.form("chat_input").use();
+        JtContainer formContainer = Jt.form().use();
 
         String question = Jt.textArea("Your question")
                             .value("What is the meaning of life?")
@@ -434,7 +434,7 @@ would trigger a full app rerun. With a form, the app only reruns when the submit
 Forms prevent the app from rerunning on every widget change. 
 
 ```java
-JtContainer formContainer = Jt.form("chat_input").use();
+JtContainer formContainer = Jt.form().use();
 // Add inputs to form
 String question = Jt.textArea("Your question").use(formContainer);
 double temperature = Jt.slider("Temperature").use(formContainer);

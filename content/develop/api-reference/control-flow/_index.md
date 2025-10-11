@@ -85,7 +85,7 @@ widgets is filled before actually rerunning the script. That's what `Jt.form` is
 Create a form that batches elements together with a "Submit" button.
 
 ```java
-var form = Jt.form("my_form").use();
+var form = Jt.form().use();
 String name = Jt.textInput("Name").use(form);
 String email = Jt.textInput("Email").use(form);
 boolean submitted = Jt.formSubmitButton("Sign up").use(form);
@@ -100,7 +100,7 @@ boolean submitted = Jt.formSubmitButton("Sign up").use(form);
 Display a form submit button.
 
 ```java
-var form = Jt.form("my_form").use();
+var form = Jt.form().use();
 String name = Jt.textInput("Name").use(form);
 String email = Jt.textInput("Email").use(form);
 boolean submitted = Jt.formSubmitButton("Sign up").use(form);

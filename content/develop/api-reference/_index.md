@@ -1577,7 +1577,7 @@ st_lottie(lottie_hello, key="hello")
 Insert containers laid out as side-by-side columns.
 
 ```java
-var cols = Jt.columns("my-cols", 2).use();
+var cols = Jt.columns(2).use();
 Jt.text("This is column 1").use(cols.col(0));
 Jt.text("This is column 2").use(cols.col(1));
 ```
@@ -1592,7 +1592,7 @@ Jt.text("This is column 2").use(cols.col(1));
 Insert a multi-element container.
 
 ```java
-var c = Jt.container("my-container").use();
+var c = Jt.container().use();
 Jt.text("This will show last").use();
 Jt.text("This will show first").use(c);
 Jt.text("This will show second").use(c);
@@ -1643,7 +1643,7 @@ Jt.text("This will show first").use(e);
 Insert a multi-element container that can be expanded/collapsed.
 
 ```java
-var exp = Jt.expander("my-exp", "Open to see more").use();
+var exp = Jt.expander("Open to see more").use();
 Jt.text("This is more content").use(exp);
 ```
 
@@ -1657,7 +1657,7 @@ Jt.text("This is more content").use(exp);
 Insert a multi-element popover container that can be opened/closed.
 
 ```java
-var pop = Jt.popover("my-pop", "Settings").use();
+var pop = Jt.popover("Settings").use();
 Jt.checkbox("Show completed").use(pop);
 ```
 
@@ -1688,7 +1688,7 @@ st.sidebar.button("Click me!")
 Insert containers separated into tabs.
 
 ```java
-var tabs = Jt.tabs("my-tabs", List.of("Tab 1", "Tab 2")).use();
+var tabs = Jt.tabs(List.of("Tab 1", "Tab 2")).use();
 Jt.text("This is tab 1").use(tabs.tab(0));
 Jt.text("This is tab 2").use(tabs.tab(1));
 ```
@@ -2205,7 +2205,7 @@ def email_form():
 Create a form that batches elements together with a "Submit" button.
 
 ```java
-var form = Jt.form("my_form").use();
+var form = Jt.form().use();
 String name = Jt.textInput("Name").use(form);
 String email = Jt.textInput("Email").use(form);
 boolean submitted = Jt.formSubmitButton("Sign up").use(form);
