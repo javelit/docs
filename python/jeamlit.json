@@ -1,5 +1,5 @@
 {
-  "0.37.0": {
+  "0.38.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
@@ -315,6 +315,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -577,6 +592,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -804,6 +834,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -1192,6 +1237,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -1371,6 +1431,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -1644,6 +1719,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -1810,6 +1900,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -1856,22 +1961,15 @@
             {
               "type_name": "String",
               "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this expander</p>",
-              "is_optional": false
-            },
-            {
-              "type_name": "String",
-              "default": null,
               "name": "label",
               "description": "<p>The label for the expander header</p>",
               "is_optional": false
             }
           ],
-          "signature": "Jt.expander(String key, String label)"
+          "signature": "Jt.expander(String label)"
         }
       ],
-      "examples": "<p>Basic expander with explanation content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ExpanderApp {\n     public static void main(String[] args) {\n         var expander = Jt.expander(\"explanation\", \"See explanation\").use();\n\n         Jt.text(\"\"\"\n                 [A great explanation on the why and how of life.]\n                 \"\"\").use(expander);\n     }\n }\n</code></pre></p>",
+      "examples": "<p>Basic expander with explanation content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ExpanderApp {\n     public static void main(String[] args) {\n         var expander = Jt.expander(\"See explanation\").use();\n\n         Jt.text(\"\"\"\n                 [A great explanation on the why and how of life.]\n                 \"\"\").use(expander);\n     }\n }\n</code></pre></p>",
       "name": "expander",
       "description": "<p>Insert a multi-element container that can be expanded/collapsed.\n <p>\n Insert a container into your app that can be used to hold multiple elements and can be expanded or collapsed by the user.\n When collapsed, all that is visible is the provided label.\n <p>\n To add elements to the returned expander:\n <pre>\n <code>\n var expander = Jt.expander(&quot;my-expander&quot;, &quot;More details&quot;).use();\n Jt.yourElement().use(expander);\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
@@ -2055,6 +2153,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -2197,6 +2310,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -2239,19 +2367,11 @@
       ],
       "overloads": [
         {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this container</p>",
-              "is_optional": false
-            }
-          ],
-          "signature": "Jt.container(String key)"
+          "args": [],
+          "signature": "Jt.container()"
         }
       ],
-      "examples": "<p>Basic container usage and adding elements out of order\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ContainerApp {\n     public static void main(String[] args) {\n         var container = Jt.container(\"my-container\").use();\n\n         Jt.text(\"This is inside the container\").use(container);\n         Jt.text(\"This is outside the container\").use();\n         Jt.text(\"This is inside too\").use(container);\n     }\n }\n</code></pre></p>",
+      "examples": "<p>Basic container usage and adding elements out of order\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ContainerApp {\n     public static void main(String[] args) {\n         var container = Jt.container().use();\n\n         Jt.text(\"This is inside the container\").use(container);\n         Jt.text(\"This is outside the container\").use();\n         Jt.text(\"This is inside too\").use(container);\n     }\n }\n</code></pre></p>",
       "name": "container",
       "description": "<p>Insert a multi-element container.\n <p>\n Insert an invisible container into your app that can be used to hold multiple elements.\n This allows you to, for example, insert multiple elements into your app out of order.\n <p>\n To add elements to the returned container:\n <pre>\n <code>\n var container = Jt.container(&quot;container-1&quot;).use();\n Jt.yourElement().use(container);\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
@@ -2363,6 +2483,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -2409,22 +2544,15 @@
             {
               "type_name": "String",
               "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this popover</p>",
-              "is_optional": false
-            },
-            {
-              "type_name": "String",
-              "default": null,
               "name": "label",
               "description": "<p>The label for the popover button. Markdown is supported, see <code>Jt#markdown(String)</code> for more details.</p>",
               "is_optional": false
             }
           ],
-          "signature": "Jt.popover(String key, String label)"
+          "signature": "Jt.popover(String label)"
         }
       ],
-      "examples": "<p>Settings popover\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class PopoverApp {\n     public static void main(String[] args) {\n         var settings = Jt.popover(\"settings\", \"⚙️ Settings\").use();\n\n         Jt.text(\"Configure your preferences:\").use(settings);\n         boolean notifications = Jt.checkbox(\"Enable notifications\").use(settings);\n         String theme = Jt.selectbox(\"Theme\", List.of(\"Light\", \"Dark\")).use(settings);\n\n         if (notifications) {\n             Jt.text(\"Notifications are enabled\").use();\n         }\n         Jt.text(\"The selected theme is \" + theme).use();\n     }\n }\n</code></pre>\n <p>\n Help popover with information\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class HelpPopoverApp {\n     public static void main(String[] args) {\n         Jt.text(\"Username:\").use();\n         Jt.textInput(\"Enter username\").use();\n\n         var help = Jt.popover(\"help\", \"❓ Help\").use();\n         Jt.text(\"**Username requirements:**\").use(help);\n         Jt.text(\"- Must be 3-20 characters long\").use(help);\n         Jt.text(\"- Only letters and numbers allowed\").use(help);\n         Jt.text(\"- Case sensitive\").use(help);\n     }\n }\n</code></pre></p>",
+      "examples": "<p>Settings popover\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class PopoverApp {\n     public static void main(String[] args) {\n         var settings = Jt.popover(\"⚙️ Settings\").use();\n\n         Jt.text(\"Configure your preferences:\").use(settings);\n         boolean notifications = Jt.checkbox(\"Enable notifications\").use(settings);\n         String theme = Jt.selectbox(\"Theme\", List.of(\"Light\", \"Dark\")).use(settings);\n\n         if (notifications) {\n             Jt.text(\"Notifications are enabled\").use();\n         }\n         Jt.text(\"The selected theme is \" + theme).use();\n     }\n }\n</code></pre>\n <p>\n Help popover with information\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class HelpPopoverApp {\n     public static void main(String[] args) {\n         Jt.text(\"Username:\").use();\n         Jt.textInput(\"Enter username\").use();\n\n         var help = Jt.popover(\"❓ Help\").use();\n         Jt.text(\"**Username requirements:**\").use(help);\n         Jt.text(\"- Must be 3-20 characters long\").use(help);\n         Jt.text(\"- Only letters and numbers allowed\").use(help);\n         Jt.text(\"- Case sensitive\").use(help);\n     }\n }\n</code></pre></p>",
       "name": "popover",
       "description": "<p>Insert a popover container.\n <p>\n Inserts a multi-element container as a popover. It consists of a button-like element and a container that opens when the button is clicked.\n <p>\n Opening and closing the popover will not trigger a rerun. Interacting with widgets inside of an open popover will\n rerun the app while keeping the popover open. Clicking outside of the popover will close it.\n <p>\n To add elements to the returned popover:\n <pre><code class=\"language-java\"> var popover = Jt.popover(\"my-popover\", \"Advanced configuration\").use();\n Jt.yourElement().use(popover);\n</code></pre>\n See examples below.\n <p></p>",
       "returns": [
@@ -2776,6 +2904,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -3081,6 +3224,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -3247,6 +3405,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -3378,6 +3551,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -3615,6 +3803,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -3659,13 +3862,6 @@
         {
           "args": [
             {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this columns container</p>",
-              "is_optional": false
-            },
-            {
               "type_name": "int",
               "default": null,
               "name": "numColumns",
@@ -3673,10 +3869,10 @@
               "is_optional": false
             }
           ],
-          "signature": "Jt.columns(String key, int numColumns)"
+          "signature": "Jt.columns(int numColumns)"
         }
       ],
-      "examples": "<p>Basic three-column layout with headers and content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ColumnsApp {\n     public static void main(String[] args) {\n         var cols = Jt.columns(\"main-cols\", 3).use();\n\n         Jt.title(\"A cat\").use(cols.col(0));\n         Jt.title(\"A dog\").use(cols.col(1));\n         Jt.title(\"An owl\").use(cols.col(2));\n     }\n }\n</code></pre></p>",
+      "examples": "<p>Basic three-column layout with headers and content\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class ColumnsApp {\n     public static void main(String[] args) {\n         var cols = Jt.columns(3).use();\n\n         Jt.title(\"A cat\").use(cols.col(0));\n         Jt.title(\"A dog\").use(cols.col(1));\n         Jt.title(\"An owl\").use(cols.col(2));\n     }\n }\n</code></pre></p>",
       "name": "columns",
       "description": "<p>Insert containers laid out as side-by-side columns.\n <p>\n Inserts a number of multi-element containers laid out side-by-side and returns a list of container objects.\n <p>\n To add elements to the returned columns container:\n <pre>\n <code>\n var cols = Jt.columns(&quot;my-3-cols&quot;, 3).use();\n Jt.yourElement().use(cols.col(1));\n Jt.yourElement().use(cols.col(0));\n Jt.yourElement().use(cols.col(2));\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
@@ -3799,129 +3995,10 @@
           "source": ""
         },
         {
-          "paramDescriptions": {},
           "args": [],
-          "signature": "use()",
-          "name": "use",
-          "description": "<p>Put the widget in the app, in the <code>MAIN</code> container.</p>",
-          "returns": [
-            {
-              "type_name": "B",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "io.jeamlit.core.JtContainer",
-              "default": null,
-              "name": "container",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "use(JtContainer container)",
-          "name": "use",
-          "description": "<p>Put the widget in the app, in the provided container.</p>",
-          "returns": [
-            {
-              "type_name": "B",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        }
-      ],
-      "overloads": [
-        {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this container</p>",
-              "is_optional": false
-            }
-          ],
-          "signature": "Jt.empty(String key)"
-        }
-      ],
-      "examples": "<p>Dynamic content replacement\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class EmptyApp {\n     public static void main(String[] args) {\n         var placeholder = Jt.empty(\"content\").use();\n         String selected = Jt.selectbox(\"Choose content\",\n             List.of(\"None\", \"Text\", \"Button\")).use();\n\n         switch (selected) {\n             case \"Text\" -&gt; Jt.text(\"Dynamic text content\").use(placeholder);\n             case \"Button\" -&gt; {\n                 if (Jt.button(\"Dynamic button\").use(placeholder)) {\n                     Jt.text(\"Button clicked!\").use();\n                 }\n             }\n             // case \"None\" -&gt; container remains empty\n         }\n     }\n }\n</code></pre>\n <p>\n Simple animations\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;import tech.catheu.jeamlit.core.Jt;\n\n public class AnimationEmptyApp {\n     public static void main(String[] args) {\n         var emptyContainer = Jt.empty(\"content\").use();\n          for (i = 10; i&gt;=1; i--) {\n               Jt.text(i + \"!\").use(emptyContainer);\n                Thread.sleep(1000);\n           }\n           Jt.text(\"Happy new Year !\").use(emptyContainer);\n           Jt.button(\"rerun\").use();\n     }\n }\n</code></pre></p>",
-      "name": "empty",
-      "description": "<p>Insert a single-element container.\n <p>\n Insert a container into your app that can be used to hold a single element.\n This allows you to, for example, remove elements at any point, or replace several elements at once (using a child multi-element container).\n <p>\n To insert/replace/clear an element on the returned container:\n <pre>\n <code>\n var container = Jt.empty(&quot;empty-1&quot;).use();\n Jt.yourElement().use(container);\n </code>\n </pre>\n See examples below.\n <p></p>",
-      "returns": [
-        {
-          "type_name": "JtContainer",
-          "description": "The current JtContainer value of the component.",
-          "is_generator": false,
-          "return_name": null
-        }
-      ],
-      "source": ""
-    },
-    "Jt.navigation": {
-      "builderMethods": [
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-              "default": null,
-              "name": "page",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "addPage(JtPage.Builder page)",
-          "name": "addPage",
-          "description": "<p>Adds a page to the navigation. Pages can be added individually using this method or passed in the constructor.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.NavigationComponent.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [],
-          "signature": "hidden()",
-          "name": "hidden",
-          "description": "<p>Hides the navigation menu from the user interface. The pages will still be accessible programmatically,\n but no navigation UI will be displayed. Useful for programmatic navigation or single-page apps.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.NavigationComponent.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "key(String key)",
-          "name": "key",
-          "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -3975,9 +4052,29 @@
       ],
       "overloads": [
         {
+          "args": [],
+          "signature": "Jt.empty()"
+        }
+      ],
+      "examples": "<p>Dynamic content replacement\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class EmptyApp {\n     public static void main(String[] args) {\n         var placeholder = Jt.empty().use();\n         String selected = Jt.selectbox(\"Choose content\",\n             List.of(\"None\", \"Text\", \"Button\")).use();\n\n         switch (selected) {\n             case \"Text\" -&gt; Jt.text(\"Dynamic text content\").use(placeholder);\n             case \"Button\" -&gt; {\n                 if (Jt.button(\"Dynamic button\").use(placeholder)) {\n                     Jt.text(\"Button clicked!\").use();\n                 }\n             }\n             // case \"None\" -&gt; container remains empty\n         }\n     }\n }\n</code></pre>\n <p>\n Simple animations\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;import tech.catheu.jeamlit.core.Jt;\n\n public class AnimationEmptyApp {\n     public static void main(String[] args) {\n         var emptyContainer = Jt.empty().use();\n          for (i = 10; i&gt;=1; i--) {\n               Jt.text(i + \"!\").use(emptyContainer);\n                Thread.sleep(1000);\n           }\n           Jt.text(\"Happy new Year !\").use(emptyContainer);\n           Jt.button(\"rerun\").use();\n     }\n }\n</code></pre></p>",
+      "name": "empty",
+      "description": "<p>Insert a single-element container.\n <p>\n Insert a container into your app that can be used to hold a single element.\n This allows you to, for example, remove elements at any point, or replace several elements at once (using a child multi-element container).\n <p>\n To insert/replace/clear an element on the returned container:\n <pre>\n <code>\n var container = Jt.empty(&quot;empty-1&quot;).use();\n Jt.yourElement().use(container);\n </code>\n </pre>\n See examples below.\n <p></p>",
+      "returns": [
+        {
+          "type_name": "JtContainer",
+          "description": "The current JtContainer value of the component.",
+          "is_generator": false,
+          "return_name": null
+        }
+      ],
+      "source": ""
+    },
+    "Jt.navigation": {
+      "overloads": [
+        {
           "args": [
             {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder[]",
+              "type_name": "io.jeamlit.core.JtPage.Builder[]",
               "default": null,
               "name": "pages",
               "description": "<p>The pages to include in the navigation</p>",
@@ -3992,8 +4089,8 @@
       "description": "<p>Create a navigation component with multiple pages to create a multipage app.\n <p>\n Call <code>Jt.navigation</code> in your entrypoint app class to define the available pages in your app.\n <code>Jt.navigation</code> use() returns the current page.\n <p>\n When using <code>Jt.navigation</code>, your entrypoint app class acts like a frame of common elements around each of your pages.\n <p>\n The set of available pages can be updated with each rerun for dynamic navigation.\n By default, <code>Jt.navigation</code> displays the available pages in the sidebar if there is more than one page.\n This behavior can be changed using the <code>position</code> builder method.\n <p></p>",
       "returns": [
         {
-          "type_name": "JtPage",
-          "description": "The current JtPage value of the component.",
+          "type_name": "io.jeamlit.core.NavigationComponent.Builder",
+          "description": "The current io.jeamlit.core.NavigationComponent.Builder value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -4201,6 +4298,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -4546,6 +4658,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -4736,6 +4863,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -4804,117 +4946,6 @@
       "source": ""
     },
     "Jt.page": {
-      "builderMethods": [
-        {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "title",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "title(String title)",
-          "name": "title",
-          "description": "",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "icon",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "icon(String icon)",
-          "name": "icon",
-          "description": "<p>An icon to display with the error message. The following values are valid:\n <ul>\n     <li>A single-character emoji. For example: <code>🔥</code>. Emoji short codes are not supported.</li>\n     <li>An icon from the Material Symbols library (rounded style) in the format <code>:icon_name:</code> where <code>icon_name</code> is the name of the icon in snake case. For example: <code>:search:</code>. See full list of icons <a href=\"https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded&selected=Material+Symbols+Rounded:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f\" target=\"_blank\">here</a>.</li>\n </ul>\n If <code>null</code> (default), no icon is displayed.</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "urlPath",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "urlPath(String urlPath)",
-          "name": "urlPath",
-          "description": "",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "paramDescriptions": {},
-          "args": [],
-          "signature": "home()",
-          "name": "home",
-          "description": "<p>make the page the default homepage</p>",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        },
-        {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "section",
-              "description": "",
-              "is_optional": false
-            }
-          ],
-          "signature": "section(String section)",
-          "name": "section",
-          "description": "",
-          "returns": [
-            {
-              "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-              "description": "",
-              "is_generator": false,
-              "return_name": null
-            }
-          ],
-          "source": ""
-        }
-      ],
       "overloads": [
         {
           "args": [
@@ -4934,8 +4965,8 @@
       "description": "<p>Create a page for <code>Jt.navigation</code> in a multipage app.\n <p></p>",
       "returns": [
         {
-          "type_name": "io.jeamlit.components.multipage.JtPage.Builder",
-          "description": "The current io.jeamlit.components.multipage.JtPage.Builder value of the component.",
+          "type_name": "io.jeamlit.core.JtPage.Builder",
+          "description": "The current io.jeamlit.core.JtPage.Builder value of the component.",
           "is_generator": false,
           "return_name": null
         }
@@ -5054,6 +5085,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -5348,6 +5394,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -5527,6 +5588,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -5900,6 +5976,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -6223,6 +6314,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -6575,6 +6681,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -6665,6 +6786,21 @@
           "signature": "key(String key)",
           "name": "key",
           "description": "<p>A string to use as the unique key for the widget.\n If this is omitted, a key will be generated for the widget based on its content.\n No two widgets may have the same key.</p>",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
           "returns": [
             {
               "type_name": "SELF",
@@ -6986,6 +7122,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -7208,6 +7359,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -7252,13 +7418,6 @@
         {
           "args": [
             {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this tabs container</p>",
-              "is_optional": false
-            },
-            {
               "type_name": "List&lt;String&gt;",
               "default": null,
               "name": "tabs",
@@ -7266,10 +7425,10 @@
               "is_optional": false
             }
           ],
-          "signature": "Jt.tabs(String key, List&lt;String&gt; tabs)"
+          "signature": "Jt.tabs(List&lt;String&gt; tabs)"
         }
       ],
-      "examples": "<p>Basic tabbed interface\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(\"content-tabs\", List.of(\"Overview\", \"Details\", \"Settings\")).use();\n\n         Jt.text(\"Welcome to the overview page\").use(tabs.tab(\"Overview\"));\n         Jt.text(\"Here are the details\").use(tabs.tab(\"Details\"));\n         Jt.text(\"Configure your settings here\").use(tabs.tab(\"Settings\"));\n     }\n }\n</code></pre>\n <p>\n Data analysis tabs\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DataTabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(\"analysis\", List.of(\"Sales\", \"Marketing\", \"Finance\")).use();\n\n         // Sales tab\n         Jt.title(\"Sales Dashboard\").use(tabs.tab(0));\n         Jt.text(\"Total sales: $100,000\").use(tabs.tab(0));\n\n         // Marketing tab\n         Jt.title(\"Marketing Metrics\").use(tabs.tab(1));\n         Jt.text(\"Conversion rate: 3.5%\").use(tabs.tab(1));\n\n         // Finance tab\n         Jt.title(\"Financial Overview\").use(tabs.tab(2));\n         Jt.text(\"Revenue growth: +15%\").use(tabs.tab(2));\n     }\n }\n</code></pre></p>",
+      "examples": "<p>Basic tabbed interface\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(List.of(\"Overview\", \"Details\", \"Settings\")).use();\n\n         Jt.text(\"Welcome to the overview page\").use(tabs.tab(\"Overview\"));\n         Jt.text(\"Here are the details\").use(tabs.tab(\"Details\"));\n         Jt.text(\"Configure your settings here\").use(tabs.tab(\"Settings\"));\n     }\n }\n</code></pre>\n <p>\n Data analysis tabs\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class DataTabsApp {\n     public static void main(String[] args) {\n         var tabs = Jt.tabs(List.of(\"Sales\", \"Marketing\", \"Finance\")).use();\n\n         // Sales tab\n         Jt.title(\"Sales Dashboard\").use(tabs.tab(0));\n         Jt.text(\"Total sales: $100,000\").use(tabs.tab(0));\n\n         // Marketing tab\n         Jt.title(\"Marketing Metrics\").use(tabs.tab(1));\n         Jt.text(\"Conversion rate: 3.5%\").use(tabs.tab(1));\n\n         // Finance tab\n         Jt.title(\"Financial Overview\").use(tabs.tab(2));\n         Jt.text(\"Revenue growth: +15%\").use(tabs.tab(2));\n     }\n }\n</code></pre></p>",
       "name": "tabs",
       "description": "<p>Insert containers separated into tabs.\n <p>\n Inserts a number of multi-element containers as tabs.\n Tabs are a navigational element that allows users to easily move between groups of related content.\n <p>\n To add elements to the returned tabs container:\n <pre>\n <code>\n var tabs = Jt.tabs(&quot;my-tabs&quot;, List.of(&quot;E-commerce&quot;, &quot;Industry&quot;, &quot;Finance&quot;)).use();\n // get tab by name\n Jt.yourElement().use(tabs.tab(&quot;E-commerce&quot;));\n // get tab by index\n Jt.yourElement().use(tabs.tab(2));\n </code>\n </pre>\n See examples below.\n <p></p>",
       "returns": [
@@ -7453,6 +7612,21 @@
           "source": ""
         },
         {
+          "args": [],
+          "signature": "noPersist()",
+          "name": "noPersist",
+          "description": "",
+          "returns": [
+            {
+              "type_name": "SELF",
+              "description": "",
+              "is_generator": false,
+              "return_name": null
+            }
+          ],
+          "source": ""
+        },
+        {
           "paramDescriptions": {},
           "args": [],
           "signature": "use()",
@@ -7495,19 +7669,11 @@
       ],
       "overloads": [
         {
-          "args": [
-            {
-              "type_name": "String",
-              "default": null,
-              "name": "key",
-              "description": "<p>A unique string used to identify this form</p>",
-              "is_optional": false
-            }
-          ],
-          "signature": "Jt.form(String key)"
+          "args": [],
+          "signature": "Jt.form()"
         }
       ],
-      "examples": "<p>User registration form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"registration\").use();\n\n         String name = Jt.textInput(\"Full Name\").use(form);\n         String email = Jt.textInput(\"Email\").use(form);\n         int age = Jt.numberInput(\"Age\", Integer.class).min(0).max(120).use(form);\n         boolean subscribe = Jt.checkbox(\"Subscribe to newsletter\").use(form);\n\n         if (Jt.formSubmitButton(\"Register\").use()) {\n             Jt.text(\"Welcome, \" + name + \"!\").use();\n             Jt.text(\"Email: \" + email).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Survey form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class SurveyFormApp {\n     public static void main(String[] args) {\n         var form = Jt.form(\"survey\").use();\n         double satisfaction = Jt.slider(\"Satisfaction (1-10)\").min(1).max(10).value(5).use(form);\n         String feedback = Jt.textArea(\"Additional feedback\").use(form);\n         String department = Jt.selectbox(\"Department\",\n                                          List.of(\"Engineering\", \"Marketing\", \"Sales\", \"Support\")).use(form);\n\n         if (Jt.formSubmitButton(\"Submit Survey\").use(form)) {\n             Jt.text(\"Thank you for your feedback!\").use();\n             Jt.text(\"Satisfaction: \" + satisfaction + \"/10\").use();\n         }\n     }\n }\n</code></pre></p>",
+      "examples": "<p>User registration form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n public class FormApp {\n     public static void main(String[] args) {\n         var form = Jt.form().use();\n\n         String name = Jt.textInput(\"Full Name\").use(form);\n         String email = Jt.textInput(\"Email\").use(form);\n         int age = Jt.numberInput(\"Age\", Integer.class).min(0).max(120).use(form);\n         boolean subscribe = Jt.checkbox(\"Subscribe to newsletter\").use(form);\n\n         if (Jt.formSubmitButton(\"Register\").use()) {\n             Jt.text(\"Welcome, \" + name + \"!\").use();\n             Jt.text(\"Email: \" + email).use();\n         }\n     }\n }\n</code></pre>\n <p>\n Survey form\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class SurveyFormApp {\n     public static void main(String[] args) {\n         var form = Jt.form().use();\n         double satisfaction = Jt.slider(\"Satisfaction (1-10)\").min(1).max(10).value(5).use(form);\n         String feedback = Jt.textArea(\"Additional feedback\").use(form);\n         String department = Jt.selectbox(\"Department\",\n                                          List.of(\"Engineering\", \"Marketing\", \"Sales\", \"Support\")).use(form);\n\n         if (Jt.formSubmitButton(\"Submit Survey\").use(form)) {\n             Jt.text(\"Thank you for your feedback!\").use();\n             Jt.text(\"Satisfaction: \" + satisfaction + \"/10\").use();\n         }\n     }\n }\n</code></pre></p>",
       "name": "form",
       "description": "<p>Create a form that batches elements together with a &#39;Submit&#39; button.\n <p>\n A form is a container that visually groups other elements and widgets together, and contains a Submit button.\n When the form&#39;s Submit button is pressed, all widget values inside the form will be sent to Jeamlit in a batch.\n <p>\n To add elements to the form:\n <pre>\n <code>\n var form = Jt.form(&quot;my-form-1&quot;).use();\n Jt.yourElement().use(form);\n ...\n Jt.formSubmitButton(&quot;submit form&quot;).use();\n </code>\n </pre>\n <p>\n Forms have a few constraints:\n <ul>\n     <li>Every form must contain a <code>Jt.formSubmitButton)</code></li>\n     <li><code>Jt.button</code> and <code>Jt.downloadButton</code> cannot be added to a form</li>\n     <li>Forms can appear anywhere in your app (sidebar, columns, etc), but they cannot be embedded inside other forms</li>\n     <li>Within a form, the only widget that can have a callback function is <code>Jt.formSubmitButton)</code></li>\n </ul>\n <p></p>",
       "returns": [
