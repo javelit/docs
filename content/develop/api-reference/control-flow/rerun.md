@@ -1,21 +1,24 @@
 ---
-title: st.rerun
-slug: /develop/api-reference/execution-flow/st.rerun
-description: st.rerun will rerun the script immediately.
-ignore: true
+title: Jt.rerun
+slug: /develop/api-reference/execution-flow/jt.rerun
+description: Jt.rerun will rerun the script immediately.
 ---
 
-<Autofunction function="streamlit.rerun" oldName="streamlit.experimental_rerun" />
+<Autofunction function="Jt.rerun" />
 
-### Caveats for `st.rerun`
+### Caveats for `Jt.rerun`
 
-`st.rerun` is one of the tools to control the logic of your app. While it is great for prototyping, there can be adverse side effects:
+`Jt.rerun` is one of the tools to control the logic of your app. While it is great for prototyping, there can be adverse side effects:
 
-- Additional script runs may be inefficient and slower.
+- Additional app runs may be inefficient and slower.
 - Excessive reruns may complicate your app's logic and be harder to follow.
 - If misused, infinite looping may crash your app.
 
-In many cases where `st.rerun` works, [callbacks](/develop/api-reference/caching-and-state/st.session_state#use-callbacks-to-update-session-state) may be a cleaner alternative. [Containers](/develop/api-reference/layout) may also be helpful.
+In many cases where `Jt.rerun` works, [callbacks](/develop/api-reference/caching-and-state/st.session_state#use-callbacks-to-update-session-state) may be a cleaner alternative. 
+[Containers](/develop/api-reference/layout) may also be helpful.
+
+
+{/*
 
 ### A simple example in three variations
 
@@ -58,3 +61,5 @@ if st.button("Baz"):
 
 container.header(st.session_state.value)
 ```
+
+*/}

@@ -23,29 +23,39 @@ Understand how buttons work with explanations and examples to avoid common mista
 
 </RefCard>
 
+{/* TODO DATAFRAMES
+
 <RefCard href="/develop/concepts/design/dataframes">
 
 <h5>Dataframes</h5>
 
-Dataframes are a great way to display and edit data in a tabular format. Understand the UI and options available in Streamlit.
+Dataframes are a great way to display and edit data in a tabular format. Understand the UI and options available in Jeamlit.
 
 </RefCard>
+
+*/}
+
+{/*
 
 <RefCard href="/develop/concepts/design/custom-classes">
 
-<h5>Using custom Python classes in your Streamlit app</h5>
+<h5>Using custom Python classes in your Jeamlit app</h5>
 
-Understand the impact of defining your own Python classes within Streamlit's rerun model.
+Understand the impact of defining your own Python classes within Jeamlit's rerun model.
 
 </RefCard>
+
+*/}
 
 <RefCard href="/develop/concepts/design/multithreading">
 
 <h5>Multithreading</h5>
 
-Understand how to use multithreading within Streamlit apps.
+Understand how to use multithreading within Jeamlit apps.
 
 </RefCard>
+
+{/* TODO TIMEZONE 
 
 <RefCard href="/develop/concepts/design/timezone-handling">
 
@@ -54,5 +64,7 @@ Understand how to use multithreading within Streamlit apps.
 Understand how to localize time to your users.
 
 </RefCard>
+
+*/}
 
 </TileContainer>

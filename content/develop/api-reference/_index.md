@@ -2229,17 +2229,23 @@ def fragment():
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/execution-flow/st.rerun">
+
+*/}
+
+<RefCard href="/develop/api-reference/execution-flow/jt.rerun">
 
 <h4>Rerun script</h4>
 
 Rerun the script immediately.
 
 ```java
-st.rerun()
+Jt.rerun()
 ```
 
 </RefCard>
+
+{/*
+
 <RefCard href="/develop/api-reference/execution-flow/st.stop">
 
 <h4>Stop execution</h4>

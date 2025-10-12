@@ -6,92 +6,69 @@ description: Understand Streamlit's features for creating multipage apps
 
 # Overview of multipage apps
 
-Streamlit provides two built-in mechanisms for creating multipage apps. The simplest method is to use a `pages/` directory. However, the preferred and more customizable method is to use `st.navigation`.
+## `Jt.page` and `Jt.navigation`
 
-## `st.Page` and `st.navigation`
+With `Jt.navigation` and `Jt.page` you can declare any Java class {/* TODO implement callable support or `Callable` */} 
+as a page in your app. Furthermore, you can define common elements for your pages in your entrypoint file (the file you pass to `jeamlit run`). 
+With these methods, your entrypoint file becomes like a picture frame shared by all your pages.
 
-If you want maximum flexibility in defining your multipage app, we recommend using `st.Page` and `st.navigation`. With `st.Page` you can declare any Python file or `Callable` as a page in your app. Furthermore, you can define common elements for your pages in your entrypoint file (the file you pass to `streamlit run`). With these methods, your entrypoint file becomes like a picture frame shared by all your pages.
-
-You must include `st.navigation` in your entrypoint file to configure your app's navigation menu. This is also how your entrypoint file serves as the router between your pages.
+You must include `Jt.navigation` in your entrypoint file to configure your app's navigation menu. This is also how 
+your entrypoint file serves as the router between your pages.
 
 ## Page terminology
 
-A page has four identifying pieces as follows:
+A page has three identifying pieces as follows:
 
-- **Page source**: This is a Python file or callable function with the page's source code.
-- **Page label**: This is how the page is identified within the navigation menu. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_one</i>.
-- **Page title**: This is the content of the HTML `<title>` element and how the page is identified within a browser tab. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_two</i>.
-- **Page URL pathname**: This is the relative path of the page from the root URL of the app. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_3</i>.
+- **Page class**: This is a Java class {/* or callable function */} with the page's source code.
+- **Page title**: This is how the page is identified within the navigation menu and the browser tab. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_one</i> and <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_two</i>.
+- **Page URL path**: This is the relative path of the page from the root URL of the app. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_3</i>.
 
-Additionly, a page can have two icons as follows:
-
+Additionally, a page can have 1 icon as follows:
+{/* TODO implement this favicon thing 
 - **Page favicon**: This is the icon next to your page title within a browser tab. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_4</i>.
+*/}
 - **Page icon**: This is the icon next to your page label in the navigation menu. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_5</i>.
+- ***Page favicon** support is not implemented yet*
 
+{/* todo implement favicon
 Typically, the page icon and favicon are the same, but it's possible make them different.
+*/}
 
 <div style={{ maxWidth: '564px', margin: 'auto' }}>
-<Image caption="1. Page label, 2.Page titles, 3. Page URL pathname, 4.Page favicon, 5. Page icon" src="/images/page_parts.jpg" frame />
+<Image caption="1. Page title, 2.Page title, 3. Page URL path, 4.Page favicon, 5. Page icon" src="/images/page_parts.jpg" frame />
 </div>
 
 ## Automatic page labels and URLs
 
-If you use `st.Page` without declaring the page title or URL pathname, Streamlit falls back on automatically determining the page label, title, and URL pathname in the same manner as when you use a `pages/` directory with the default navigation menu. This section describes this naming convention which is shared between the two approaches to multipage apps.
+If you use `Jt.page` without declaring the page title or URL pathname, Jeamlit automatically determines 
+the page title and URL path based on the Class name. This section describes this naming convention.
 
-### Parts of filenames and callables
-
-Filenames are composed of four different parts as follows (in order):
-
-1. `number`: A non-negative integer.
-2. `separator`: Any combination of underscore (`"_"`), dash (`"-"`), and space (`" "`).
-3. `identifier`: Everything up to, but not including, `".py"`.
-4. `".py"`
-
-For callables, the function name is the `identifier`, including any leading or trailing underscores.
-
-### How Streamlit converts filenames into labels and titles
-
-Within the navigation menu, Streamlit displays page labels and titles as follows:
-
-1. If your page has an `identifier`, Streamlit displays the `identifier`. Any underscores within the page's `identifier` are treated as spaces. Therefore, leading and trailing underscores are not shown. Sequential underscores appear as a single space.
-2. Otherwise, if your page has a `number` but does not have an `identifier`, Streamlit displays the `number`, unmodified. Leading zeros are included, if present.
-3. Otherwise, if your page only has a `separator` with no `number` and no `identifier`, Streamlit will not display the page in the sidebar navigation.
-
-The following filenames and callables would all display as "Awesome page" in the sidebar navigation.
-
-- `"Awesome page.py"`
-- `"Awesome_page.py"`
-- `"02Awesome_page.py"`
-- `"--Awesome_page.py"`
-- `"1_Awesome_page.py"`
-- `"33 - Awesome page.py"`
-- `Awesome_page()`
-- `_Awesome_page()`
-- `__Awesome_page__()`
-
-### How Streamlit converts filenames into URL pathnames
-
-Your app's homepage is associated to the root URL of app. For all other pages, their `identifier` or `number` becomes their URL pathname as follows:
-
-- If your page has an `identifier` that came from a filename, Streamlit uses the `identifier` with one modification. Streamlit condenses each consecutive grouping of spaces (`" "`) and underscores (`"_"`) to a single underscore.
-- Otherwise, if your page has an `identifier` that came from the name of a callable, Streamlit uses the `identifier` unmodified.
-- Otherwise, if your page has a `number` but does not have an `identifier`, Streamlit uses the `number`. Leading zeros are included, if present.
-
-For each filename in the list above, the URL pathname would be "Awesome_page" relative to the root URL of the app. For example, if your app was running on `localhost` port `8501`, the full URL would be `localhost:8501/awesome_page`. For the last two callables, however, the pathname would include the leading and trailing underscores to match the callable name exactly.
+For example, `Jt.page(MyPage.class)` will have: 
+- **title**: `My Page` → Jeamlit assumes Camel Case
+- **url path**: `/MyPage` → Jeamlit simply uses the class simple name
 
 ## Navigating between pages
 
-The primary way users navigate between pages is through the navigation widget. Both methods for defining multipage apps include a default navigation menu that appears in the sidebar. When a user clicks this navigation widget, the app reruns and loads the selected page. Optionally, you can hide the default navigation UI and build your own with [`st.page_link`](/develop/api-reference/widgets/st.page_link). For more information, see [Build a custom navigation menu with `st.page_link`](/develop/tutorials/multipage/st.page_link-nav).
+The primary way users navigate between pages is through the navigation widget. The menu that appears in the sidebar is 
+generated when `Jt.navigation` is used. When a user clicks a page of the navigation widget, the app reruns 
+and loads the selected page. Optionally, you can hide the default navigation UI with `Jt.navigation(...).hidden()` and
+build your own with [`Jt.pageLink`](/develop/api-reference/widgets/jt.pagelink). 
+{/*  TODO tutorials 
+For more information, see [Build a custom navigation menu with `st.page_link`](/develop/tutorials/multipage/st.page_link-nav).
+*/}
 
-If you need to programmatically switch pages, use [`st.switch_page`](/develop/api-reference/navigation/st.switch_page).
+If you need to programmatically switch pages, use [`Jt.switchPage`](/develop/api-reference/navigation/jt.switchpage).
 
-Users can also navigate between pages using URLs as noted above. When multiple files have the same URL pathname, Streamlit picks the first one (based on the ordering in the navigation menu. Users can view a specific page by visiting the page's URL.
+Users can also navigate between pages using URLs as noted above. 
 
 <Important>
-    Navigating between pages by URL creates a new browser session. In particular, clicking markdown links to other pages resets ``st.session_state``. In order to retain values in ``st.session_state``, handle page switching through Streamlit navigation commands and widgets, like ``st.navigation``, ``st.switch_page``, ``st.page_link``, and the built-in navigation menu.
+    Navigating between pages by URL creates a new browser session. In particular, clicking markdown links to other pages 
+resets the [Session State](/develop/concepts/architecture/session-state). In order to retain values in 
+`Jt.session_state`, handle page switching through Jeamlit navigation commands and widgets, like `Jt.navigation`, 
+`Jt.switchPage`, `Jt.pageLink`, and the built-in navigation menu.
 </Important>
 
-If a user tries to access a URL for a page that does not exist, they will see a modal like the one below, saying "Page not found."
+If a user tries to access a URL for a page that does not exist, they will see a 404 page saying "Page not found."
 
 <div style={{ maxWidth: '75%', margin: 'auto' }}>
 <Image alt="Page not found" src="/images/mpa-page-not-found.png" />

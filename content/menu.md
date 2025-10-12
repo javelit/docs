@@ -737,11 +737,9 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Execution flow / st.rerun
-    url: /develop/api-reference/execution-flow/st.rerun
+  - category: Develop / API reference / Execution flow / Jt.rerun
+    url: /develop/api-reference/execution-flow/jt.rerun
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Execution flow / st.stop
     url: /develop/api-reference/execution-flow/st.stop
     isVersioned: true

@@ -5,12 +5,13 @@ slug: /develop/api-reference/execution-flow
 
 # Execution flow
 
-{/*
 ## Change execution
 
 By default, Jeamlit apps execute the script entirely, but we allow some functionality to handle control flow in your applications.
 
 <TileContainer>
+
+{/*
 
 <RefCard href="/develop/api-reference/execution-flow/st.dialog" size="full">
 
@@ -44,17 +45,21 @@ def fragment():
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/execution-flow/st.rerun">
+*/}
+
+<RefCard href="/develop/api-reference/execution-flow/jt.rerun">
 
 <h4>Rerun script</h4>
 
 Rerun the script immediately.
 
-```python
-st.rerun()
+```java
+Jt.rerun()
 ```
 
 </RefCard>
+
+{/*
 
 <RefCard href="/develop/api-reference/execution-flow/st.stop">
 
@@ -68,8 +73,10 @@ st.stop()
 
 </RefCard>
 
-</TileContainer>
 */}
+
+
+</TileContainer>
 
 ## Group multiple widgets
 
