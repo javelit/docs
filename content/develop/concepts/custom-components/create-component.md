@@ -1,6 +1,7 @@
 ---
 title: Create a Component
 slug: /develop/concepts/custom-components/create
+ignore: true
 ---
 
 # Create a Component

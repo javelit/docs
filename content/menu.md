@@ -110,12 +110,20 @@ site_menu:
     url: /develop/concepts/custom-components
   - category: Develop / Concepts / Custom components / Intro to custom components
     url: /develop/concepts/custom-components/intro
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Custom components / Create a Component
     url: /develop/concepts/custom-components/create
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Custom components / Publish a Component
     url: /develop/concepts/custom-components/publish
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Custom components / Limitations
     url: /develop/concepts/custom-components/limitations
+    visible: false
+    ignore: true
   - category: Develop / Concepts / Custom components / Component gallery
     url: https://streamlit.io/components
     visible: false

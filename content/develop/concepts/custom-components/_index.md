@@ -5,7 +5,13 @@ slug: /develop/concepts/custom-components
 
 # Custom Components
 
-Components are third-party Python modules that extend what's possible with Streamlit.
+Implementing a custom component is as simple as extending the `JtComponent` abstract class.
+
+<Tip>
+Work in progress. In the meantime, reach out on the [forum](https://github.com/jeamlit/jeamlit/discussions/) to get help. 
+</Tip>
+
+{/* ADD COMMUNITY COMPONENTS LINK 
 
 ## How to use a Component
 
@@ -40,6 +46,10 @@ Components are super easy to use:
    AgGrid(my_dataframe)
    ```
 
+*/}
+
+{/* 
+
 ## Making your own Component
 
 If you're interested in making your own component, check out the following resources:
@@ -49,8 +59,13 @@ If you're interested in making your own component, check out the following resou
 - [Components API](/develop/concepts/custom-components/intro)
 - [Blog post for when we launched Components!](https://blog.streamlit.io/introducing-streamlit-components/)
 
+*/}
+
+{/*
+
 Alternatively, if you prefer to learn using videos, our engineer Tim Conkling has put together some
 amazing tutorials:
+
 
 ##### Video tutorial, part 1
 
@@ -59,3 +74,5 @@ amazing tutorials:
 ##### Video tutorial, part 2
 
 <YouTube videoId="QjccJl_7Jco" />
+
+*/}

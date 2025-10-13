@@ -1,6 +1,7 @@
 ---
 title: Intro to custom components
 slug: /develop/concepts/custom-components/intro
+ignore: true
 ---
 
 # Intro to custom components

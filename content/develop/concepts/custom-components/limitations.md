@@ -1,6 +1,7 @@
 ---
 title: Limitations of custom components
 slug: /develop/concepts/custom-components/limitations
+ignore: true
 ---
 
 # Limitations of custom components

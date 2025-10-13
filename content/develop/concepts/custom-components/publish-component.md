@@ -1,6 +1,7 @@
 ---
 title: Publish a Component
 slug: /develop/concepts/custom-components/publish
+ignore: true
 ---
 
 # Publish a Component
