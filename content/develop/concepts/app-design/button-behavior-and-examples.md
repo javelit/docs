@@ -7,11 +7,24 @@ slug: /develop/concepts/design/buttons
 
 ## Summary
 
-Buttons created with [`st.button`](/develop/api-reference/widgets/st.button) do not retain state. They return `True` on the script rerun resulting from their click and immediately return to `False` on the next script rerun. If a displayed element is nested inside `if st.button('Click me'):`, the element will be visible when the button is clicked and disappear as soon as the user takes their next action. This is because the script reruns and the button return value becomes `False`.
+Buttons created with [`Jt.button`](/develop/api-reference/widgets/jt.button) do not retain state. They return `True` on 
+the app rerun resulting from their click and immediately return to `False` on the next app rerun. If a displayed 
+element is nested inside 
+```java
+if (Jt.button('Click me').use()) {
+    ...
+}
+```
+the element will be visible when the button is clicked and disappear as soon as the user takes their next action. 
+This is because the app reruns and the button return value becomes `False`.
 
-In this guide, we will illustrate the use of buttons and explain common misconceptions. Read on to see a variety of examples that expand on `st.button` using [`st.session_state`](/develop/api-reference/caching-and-state/st.session_state). [Anti-patterns](#anti-patterns) are included at the end. Go ahead and pull up your favorite code editor so you can `streamlit run` the examples as you read. Check out Streamlit's [Basic concepts](/get-started/fundamentals/main-concepts) if you haven't run your own Streamlit scripts yet.
+In this guide, we will illustrate the use of buttons and explain common misconceptions. Read on to see a variety of 
+examples that expand on `Jt.button` using [`Jt.sessionState`](/develop/api-reference/caching-and-state/jt.sessionstate). 
+[Anti-patterns](#anti-patterns) are included at the end. Go ahead and pull up your favorite code editor so you 
+can `jeamlit run` the examples as you read. Check out Jeamlit's [Basic concepts](/get-started/fundamentals/main-concepts) 
+if you haven't run your own Jeamlit apps yet.
 
-## When to use `if st.button()`
+## When to use `if (Jt.button().use())`
 
 When code is conditioned on a button's value, it will execute once in response to the button being clicked and not again (until the button is clicked again).
 
@@ -24,7 +37,7 @@ Good to nest inside buttons:
 Bad to nest inside buttons:
 
 - Displayed items that should persist as the user continues.
-- Other widgets which cause the script to rerun when used.
+- Other widgets which cause the app to rerun when used.
 - Processes that neither modify session state nor write to a file/database.\*
 
 \* This can be appropriate when disposable results are desired. If you
@@ -38,338 +51,448 @@ need to keep that info.
 
 If you want to give the user a quick button to check if an entry is valid, but not keep that check displayed as the user continues.
 
-In this example, a user can click a button to check if their `animal` string is in the `animal_shelter` list. When the user clicks "**Check availability**" they will see "We have that animal!" or "We don't have that animal." If they change the animal in [`st.text_input`](/develop/api-reference/widgets/st.text_input), the script reruns and the message disappears until they click "**Check availability**" again.
+In this example, a user can click a button to check if their `animal` string is in the `animal_shelter` list. When the user clicks "**Check availability**" they will see "We have that animal!" or "We don't have that animal." If they change the animal in [`Jt.textInput`](/develop/api-reference/widgets/jt.textinput), the app reruns and the message disappears until they click "**Check availability**" again.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
+import java.util.List;
 
-animal_shelter = ['cat', 'dog', 'rabbit', 'bird']
+public class App {
+    public static void main(String[] args) {
+        List<String> animalShelter = List.of("cat", "dog", "rabbit", "bird");
 
-animal = st.text_input('Type an animal')
+        String animal = Jt.textInput("Type an animal").use();
 
-if st.button('Check availability'):
-    have_it = animal.lower() in animal_shelter
-    'We have that animal!' if have_it else 'We don\'t have that animal.'
+        if (Jt.button("Check availability").use()) {
+            boolean haveIt = animalShelter.contains(animal.toLowerCase());
+            String message = haveIt ? "We have that animal!" : "We don't have that animal.";
+            Jt.text(message).use();
+        }
+    }
+}
 ```
-
-Note: The above example uses [magic](/develop/api-reference/write-magic/magic) to render the message on the frontend.
 
 ### Stateful button
 
-If you want a clicked button to continue to be `True`, create a value in `st.session_state` and use the button to set that value to `True` in a callback.
+If you want a clicked button to continue to be `True`, create a value in `Jt.sessionState()` and use the button to set that value to `True` in a callback.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-if 'clicked' not in st.session_state:
-    st.session_state.clicked = False
+public class App {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsentBoolean("clicked", k -> false);
 
-def click_button():
-    st.session_state.clicked = True
+        Jt.button("Click me")
+                .onClick(b -> Jt.sessionState().put("clicked", true))
+                .use();
 
-st.button('Click me', on_click=click_button)
-
-if st.session_state.clicked:
-    # The message and nested widget will remain on the page
-    st.write('Button clicked!')
-    st.slider('Select a value')
+        if (Jt.sessionState().getBoolean("clicked")) {
+            // The message and nested widget will remain on the page
+            Jt.text("Button clicked!").use();
+            Jt.slider("Select a value").use();
+        }
+    }
+}
 ```
 
 ### Toggle button
 
-If you want a button to work like a toggle switch, consider using [`st.checkbox`](/develop/api-reference/widgets/st.checkbox). Otherwise, you can use a button with a callback function to reverse a boolean value saved in `st.session_state`.
+If you want a button to work like a toggle switch, consider using [`Jt.checkbox`](/develop/api-reference/widgets/jt.checkbox) 
+or [`Jt.toggle`](/develop/api-reference/widgets/jt.toggle). 
+Otherwise, you can use a button with a callback function to reverse a boolean value saved in `Jt.sessionState()`.
 
-In this example, we use `st.button` to toggle another widget on and off. By displaying [`st.slider`](/develop/api-reference/widgets/st.slider) conditionally on a value in `st.session_state`, the user can interact with the slider without it disappearing.
+In this example, we use `Jt.button` to toggle another widget on and off. By displaying [`Jt.slider`](/develop/api-reference/widgets/jt.slider) conditionally on a value in `Jt.sessionState()`, the user can interact with the slider without it disappearing.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-if 'button' not in st.session_state:
-    st.session_state.button = False
+public class App {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsentBoolean("button", k -> false);
 
-def click_button():
-    st.session_state.button = not st.session_state.button
+        Jt.button("Click me")
+                .onClick(b -> {
+                    boolean current = Jt.sessionState().getBoolean("button");
+                    Jt.sessionState().put("button", !current);
+                })
+                .use();
 
-st.button('Click me', on_click=click_button)
-
-if st.session_state.button:
-    # The message and nested widget will remain on the page
-    st.write('Button is on!')
-    st.slider('Select a value')
-else:
-    st.write('Button is off!')
+        if (Jt.sessionState().getBoolean("button")) {
+            // The message and nested widget will remain on the page
+            Jt.text("Button is on!").use();
+            Jt.slider("Select a value").use();
+        } else {
+            Jt.text("Button is off!").use();
+        }
+    }
+}
 ```
 
-Alternatively, you can use the value in `st.session_state` on the slider's `disabled` parameter.
+Alternatively, you can use the value in `Jt.sessionState()` on the slider's `disabled` parameter.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-if 'button' not in st.session_state:
-    st.session_state.button = False
+public class App {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsentBoolean("button", k -> false);
 
-def click_button():
-    st.session_state.button = not st.session_state.button
+        Jt.button("Click me")
+                .onClick(b -> {
+                    boolean current = Jt.sessionState().getBoolean("button");
+                    Jt.sessionState().put("button", !current);
+                })
+                .use();
 
-st.button('Click me', on_click=click_button)
-
-st.slider('Select a value', disabled=st.session_state.button)
+        Jt.slider("Select a value")
+                .disabled(Jt.sessionState().getBoolean("button"))
+                .use();
+    }
+}
 ```
 
 ### Buttons to continue or control stages of a process
 
-Another alternative to nesting content inside a button is to use a value in `st.session_state` that designates the "step" or "stage" of a process. In this example, we have four stages in our script:
+Another alternative to nesting content inside a button is to use a value in `Jt.sessionState()` that designates the "step" or "stage" of a process. In this example, we have four stages in our app:
 
 0. Before the user begins.
 1. User enters their name.
 2. User chooses a color.
 3. User gets a thank-you message.
 
-A button at the beginning advances the stage from 0 to 1. A button at the end resets the stage from 3 to 0. The other widgets used in stage 1 and 2 have callbacks to set the stage. If you have a process with dependant steps and want to keep previous stages visible, such a callback forces a user to retrace subsequent stages if they change an earlier widget.
+A button at the beginning advances the stage from 0 to 1. A button at the end resets the stage from 3 to 0. The 
+other widgets used in stage 1 and 2 have callbacks to set the stage. If you have a process with dependant steps and 
+want to keep previous stages visible, such a callback forces a user to retrace subsequent stages if they change an earlier widget.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
+import java.util.List;
 
-if 'stage' not in st.session_state:
-    st.session_state.stage = 0
+public class TestApp {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsentInt("stage", k -> 0);
 
-def set_state(i):
-    st.session_state.stage = i
+        int stage = Jt.sessionState().getInt("stage");
 
-if st.session_state.stage == 0:
-    st.button('Begin', on_click=set_state, args=[1])
+        if (stage == 0) {
+            Jt.button("Begin")
+                    .onClick(b -> Jt.sessionState().put("stage", 1))
+                    .use();
+        }
 
-if st.session_state.stage >= 1:
-    name = st.text_input('Name', on_change=set_state, args=[2])
+        if (stage >= 1) {
+            Jt.textInput("Name")
+                    .key("name")
+                    .onChange(value -> Jt.sessionState().put("stage", 2))
+                    .use();
+        }
 
-if st.session_state.stage >= 2:
-    st.write(f'Hello {name}!')
-    color = st.selectbox(
-        'Pick a Color',
-        [None, 'red', 'orange', 'green', 'blue', 'violet'],
-        on_change=set_state, args=[3]
-    )
-    if color is None:
-        set_state(2)
+        if (stage >= 2) {
+            String name = Jt.componentsState().getString("name");
+            Jt.text("Hello " + name + "!").use();
 
-if st.session_state.stage >= 3:
-    st.write(f':{color}[Thank you!]')
-    st.button('Start Over', on_click=set_state, args=[0])
+            String color = Jt.selectbox("Pick a Color",
+                                        List.of("", "red", "orange", "green", "blue", "violet"))
+                    .key("color")
+                    .onChange(value -> {
+                        if (!Jt.componentsState().getString("color").isEmpty()) {
+                            Jt.sessionState().put("stage", 3);
+                        } else {
+                            Jt.sessionState().put("stage", 2);
+                        }
+                    })
+                    .use();
+        }
+
+        if (stage >= 3) {
+            String color = Jt.componentsState().getString("color");
+            Jt.markdown("You chose **" + color + "**, thank you!").use();
+            Jt.button("Start Over") //
+                    .onClick(b -> Jt.sessionState().put("stage", 0))
+                    .use();
+        }
+    }
+}
+
 ```
 
-### Buttons to modify `st.session_state`
+### Buttons to modify `Jt.sessionState()`
 
-If you modify `st.session_state` inside of a button, you must consider where that button is within the script.
+If you modify `Jt.sessionState()` inside of a button, you must consider where that button is within the app.
 
 #### A slight problem
 
-In this example, we access `st.session_state.name` both before and after the buttons which modify it. When a button ("**Jane**" or "**John**") is clicked, the script reruns. The info displayed before the buttons lags behind the info written after the button. The data in `st.session_state` before the button is not updated. When the script executes the button function, that is when the conditional code to update `st.session_state` creates the change. Thus, this change is reflected after the button.
+In this example, we access `Jt.sessionState().get("name")` both before and after the buttons which modify it. 
+When a button ("**Jane**" or "**John**") is clicked, the app reruns. The info displayed before the buttons lags behind 
+the info written after the button. The data in `Jt.sessionState()` before the button is not updated. When the app 
+executes the button function, that is when the conditional code to update `Jt.sessionState()` creates the change. Thus, 
+this change is reflected after the button.
 
-```python
-import streamlit as st
-import pandas as pd
+```java
+import io.jeamlit.core.Jt;
 
-if 'name' not in st.session_state:
-    st.session_state['name'] = 'John Doe'
+public class TestApp {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsent("name", k -> "John Doe");
 
-st.header(st.session_state['name'])
+        // First text - shows old value before button updates
+        Jt.markdown(Jt.sessionState().getString("name")).key("before").use();
 
-if st.button('Jane'):
-    st.session_state['name'] = 'Jane Doe'
+        if (Jt.button("Jane").use()) {
+            Jt.sessionState().put("name", "Jane Doe");
+        }
 
-if st.button('John'):
-    st.session_state['name'] = 'John Doe'
+        if (Jt.button("John").use()) {
+            Jt.sessionState().put("name", "John Doe");
+        }
 
-st.header(st.session_state['name'])
+        // Second text - shows updated value after button updates
+        Jt.markdown(Jt.sessionState().getString("name")).key("after").use();
+    }
+}
 ```
 
 #### Logic used in a callback
 
-Callbacks are a clean way to modify `st.session_state`. Callbacks are executed as a prefix to the script rerunning, so the position of the button relative to accessing data is not important.
+Callbacks are a clean way to modify `Jt.sessionState()`. Callbacks are executed as a prefix to the app rerunning, so 
+the position of the button relative to accessing data is not important.
 
-```python
-import streamlit as st
-import pandas as pd
+```java
+import io.jeamlit.core.Jt;
 
-if 'name' not in st.session_state:
-    st.session_state['name'] = 'John Doe'
+public class App {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsent("name", k -> "John Doe");
 
-def change_name(name):
-    st.session_state['name'] = name
+        // Both texts show the same value because callbacks run before the app reruns
+        Jt.markdown(Jt.sessionState().getString("name")).key("before").use();
 
-st.header(st.session_state['name'])
+        Jt.button("Jane")
+                .onClick(b -> Jt.sessionState().put("name", "Jane Doe"))
+                .use();
+        Jt.button("John")
+                .onClick(b -> Jt.sessionState().put("name", "John Doe"))
+                .use();
 
-st.button('Jane', on_click=change_name, args=['Jane Doe'])
-st.button('John', on_click=change_name, args=['John Doe'])
-
-st.header(st.session_state['name'])
+        Jt.markdown(Jt.sessionState().getString("name")).key("after").use();
+    }
+}
 ```
 
 #### Logic nested in a button with a rerun
 
-Although callbacks are often preferred to avoid extra reruns, our first 'John Doe'/'Jane Doe' example can be modified by adding [`st.rerun`](/develop/api-reference/execution-flow/st.rerun) instead. If you need to acces data in `st.session_state` before the button that modifies it, you can include `st.rerun` to rerun the script after the change has been committed. This means the script will rerun twice when a button is clicked.
+Although callbacks are often preferred to avoid extra reruns, our first 'John Doe'/'Jane Doe' example can be modified 
+by adding [`Jt.rerun`](/develop/api-reference/execution-flow/jt.rerun) instead. If you need to access data in `Jt.sessionState()` before 
+the button that modifies it, you can include `Jt.rerun()` to rerun the app after the change has been committed. 
+This means the app will rerun twice when a button is clicked.
 
-```python
-import streamlit as st
-import pandas as pd
+```java
+import io.jeamlit.core.Jt;
 
-if 'name' not in st.session_state:
-    st.session_state['name'] = 'John Doe'
+public class App {
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsent("name", k -> "John Doe");
 
-st.header(st.session_state['name'])
+        Jt.text(Jt.sessionState().getString("name")).key("before").use();
 
-if st.button('Jane'):
-    st.session_state['name'] = 'Jane Doe'
-    st.rerun()
+        if (Jt.button("Jane").use()) {
+            Jt.sessionState().put("name", "Jane Doe");
+            Jt.rerun();
+        }
 
-if st.button('John'):
-    st.session_state['name'] = 'John Doe'
-    st.rerun()
+        if (Jt.button("John").use()) {
+            Jt.sessionState().put("name", "John Doe");
+            Jt.rerun();
+        }
 
-st.header(st.session_state['name'])
+        Jt.text(Jt.sessionState().getString("name")).key("after").use();
+    }
+}
 ```
 
 ### Buttons to modify or reset other widgets
-
-When a button is used to modify or reset another widget, it is the same as the above examples to modify `st.session_state`. However, an extra consideration exists: you cannot modify a key-value pair in `st.session_state` if the widget with that key has already been rendered on the page for the current script run.
+When a button is used to modify a widget value, `Jt.componentsState()` cannot be used because it is immutable.
+You need to use `Jt.setComponentsState(key, value)`.
+An extra consideration exists: you cannot modify a key-value pair if the widget with that key has already been rendered 
+on the page for the current script run.
 
 <Important>
 
 Don't do this!
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-st.text_input('Name', key='name')
+public class TestApp {
+    public static void main(String[] args) {
+        String name = Jt.textInput("Name").key("name").use();
 
-# These buttons will error because their nested code changes
-# a widget's state after that widget within the script.
-if st.button('Clear name'):
-    st.session_state.name = ''
-if st.button('Streamlit!'):
-    st.session_state.name = ('Streamlit')
+        if (Jt.button("Clear name").use()) {
+            // this will throw an exception because this attempts to update 
+            // a widget's state after that widget's use() within the run  
+            Jt.setComponentState("name", "");
+        }
+    }
+}
 ```
 
 </Important>
 
-#### Option 1: Use a key for the button and put the logic before the widget
+#### Option 1: Use a callback
+Callbacks are triggered when the user interacts with the button and always run before the rest of script.
 
-If you assign a key to a button, you can condition code on a button's state by using its value in `st.session_state`. This means that logic depending on your button can be in your script before that button. In the following example, we use the `.get()` method on `st.session_state` because the keys for the buttons will not exist when the script runs for the first time. The `.get()` method will return `False` if it can't find the key. Otherwise, it will return the value of the key.
+```java
+import io.jeamlit.core.Jt;
 
-```python
-import streamlit as st
+public class App {
+    public static void main(String[] args) {
+        String name = Jt.textInput("Name").key("name").use();
 
-# Use the get method since the keys won't be in session_state
-# on the first script run
-if st.session_state.get('clear'):
-    st.session_state['name'] = ''
-if st.session_state.get('streamlit'):
-    st.session_state['name'] = 'Streamlit'
-
-st.text_input('Name', key='name')
-
-st.button('Clear name', key='clear')
-st.button('Streamlit!', key='streamlit')
+        Jt.button("Clear name")
+                .onClick(button -> Jt.setComponentState("name", ""))
+                .use();
+    }
+}
 ```
 
-#### Option 2: Use a callback
+#### Option 2: Use a key for the button and put the logic before the widget
 
-```python
-import streamlit as st
+If you assign a key to a button, you can condition code on a button's state by using its value in `Jt.componentsState()`.
+This means that logic depending on your button can be in your app before that button. In the following example,
+we use the `getOrDefault()` method on `Jt.componentsState()` because the keys for the buttons will not exist when the app runs for the first time.
 
-st.text_input('Name', key='name')
+```java
+import io.jeamlit.core.Jt;
 
-def set_name(name):
-    st.session_state.name = name
+public class App {
+    public static void main(String[] args) {
+        // Use getOrDefault since the button keys won't be in componentsState on the first app run
+        if (Jt.componentsState().getBoolean("clear", false)) {
+            Jt.setComponentState("name", "");
+        }
 
-st.button('Clear name', on_click=set_name, args=[''])
-st.button('Streamlit!', on_click=set_name, args=['Streamlit'])
+        String name = Jt.textInput("Name").key("name").use();
+        Jt.button("Clear name").key("clear").use();
+    }
+}
 ```
 
 #### Option 3: Use containers
+Jeamlit always executes top-to-bottom, but you can place components out-of-order with [containers](/develop/api-reference/layout/jt.container). 
 
-By using [`st.container`](/develop/api-reference/layout/st.container) you can have widgets appear in different orders in your script and frontend view (webpage).
+```java
+import io.jeamlit.core.Jt;
+import io.jeamlit.core.JtContainer;
 
-```python
-import streamlit as st
+public class App {
+    public static void main(String[] args) {
+        JtContainer begin = Jt.container().use();
 
-begin = st.container()
+        if (Jt.button("Clear name").use()) {
+            Jt.setComponentState("name", "");
+        }
 
-if st.button('Clear name'):
-    st.session_state.name = ''
-if st.button('Streamlit!'):
-    st.session_state.name = ('Streamlit')
-
-# The widget is second in logic, but first in display
-begin.text_input('Name', key='name')
+        // The widget is second in logic, but first in display
+        String name = Jt.textInput("Name").key("name").use(begin);
+    }
+}
 ```
 
 ### Buttons to add other widgets dynamically
 
-When dynamically adding widgets to the page, make sure to use an index to keep the keys unique and avoid a `DuplicateWidgetID` error. In this example, we define a function `display_input_row` which renders a row of widgets. That function accepts an `index` as a parameter. The widgets rendered by `display_input_row` use `index` within their keys so that `display_input_row` can be executed multiple times on a single script rerun without repeating any widget keys.
+When dynamically adding widgets to the page, make sure to use an index to keep the keys unique and avoid 
+a `DuplicateWidgetID` error. In this example, we define a function `displayInputRow` which renders a row of widgets. 
+That function accepts an `index` as a parameter. The widgets rendered by `displayInputRow` use `index` within their 
+keys so that `displayInputRow` can be executed multiple times on a single app rerun without repeating any widget keys.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-def display_input_row(index):
-    left, middle, right = st.columns(3)
-    left.text_input('First', key=f'first_{index}')
-    middle.text_input('Middle', key=f'middle_{index}')
-    right.text_input('Last', key=f'last_{index}')
+public class App {
 
-if 'rows' not in st.session_state:
-    st.session_state['rows'] = 0
+    static void displayInputRow(int index) {
+        var cols = Jt.columns(3).key("cols_" + index).use();
+        Jt.textInput("First").key("first_" + index).use(cols.col(0));
+        Jt.textInput("Middle").key("middle_" + index).use(cols.col(1));
+        Jt.textInput("Last").key("last_" + index).use(cols.col(2));
+    }
 
-def increase_rows():
-    st.session_state['rows'] += 1
+    public static void main(String[] args) {
+        Jt.sessionState().computeIfAbsentInt("rows", k -> 0);
 
-st.button('Add person', on_click=increase_rows)
+        Jt.button("Add person")
+                .onClick(b -> Jt.sessionState().computeInt("rows", (k, v) -> v + 1))
+                .use();
 
-for i in range(st.session_state['rows']):
-    display_input_row(i)
+        int rows = Jt.sessionState().getInt("rows");
+        for (int i = 0; i < rows; i++) {
+            displayInputRow(i);
+        }
 
-# Show the results
-st.subheader('People')
-for i in range(st.session_state['rows']):
-    st.write(
-        f'Person {i+1}:',
-        st.session_state[f'first_{i}'],
-        st.session_state[f'middle_{i}'],
-        st.session_state[f'last_{i}']
-    )
+        // Show the results
+        Jt.markdown("## People").use();
+        for (int i = 0; i < rows; i++) {
+            String first = Jt.componentsState().getString("first_" + i);
+            String middle = Jt.componentsState().getString("middle_" + i);
+            String last = Jt.componentsState().getString("last_" + i);
+            Jt.text("Person " + (i + 1) + ": " + first + " " + middle + " " + last).use();
+        }
+    }
+}
 ```
 
 ### Buttons to handle expensive or file-writing processes
 
-When you have expensive processes, set them to run upon clicking a button and save the results into `st.session_state`. This allows you to keep accessing the results of the process without re-executing it unnecessarily. This is especially helpful for processes that save to disk or write to a database. In this example, we have an `expensive_process` that depends on two parameters: `option` and `add`. Functionally, `add` changes the output, but `option` does not&mdash;`option` is there to provide a parameter
+When you have an expensive function result that is optional to show, set it to run upon clicking a button.
+Also save the results into a cache to avoid recomputing each time. Depending on the use case, it could be `Jt.sessionState()`, 
+`Jt.cache()` or a [custom cache](/develop/concepts/architecture/caching#controlling-cache-size-and-duration).
 
-```python
-import streamlit as st
-import pandas as pd
-import time
+```java
+import io.jeamlit.core.Jt;
+import io.jeamlit.core.JtContainer;
 
-def expensive_process(option, add):
-    with st.spinner('Processing...'):
-        time.sleep(5)
-    df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C':[7, 8, 9]}) + add
-    return (df, add)
+import java.util.Map;
+import java.util.HashMap;
 
-cols = st.columns(2)
-option = cols[0].selectbox('Select a number', options=['1', '2', '3'])
-add = cols[1].number_input('Add a number', min_value=0, max_value=10)
+public class TestApp {
 
-if 'processed' not in st.session_state:
-    st.session_state.processed = {}
+    public static void main(String[] args) {
+        String option = Jt
+                .selectbox("Select an industry", java.util.List.of("Technology", "Finance", "Food and Beverage"))
+                .use();
+        if (Jt.button("Show advanced analysis").use()) {
+            var advancedAnalysis = Jt.sessionState().computeIfAbsent(option, key -> computeAnalysis(key));
+            Jt.text("Result of the analysis: " + advancedAnalysis).use();
+        }
+    }
 
-# Process and save results
-if st.button('Process'):
-    result = expensive_process(option, add)
-    st.session_state.processed[option] = result
-    st.write(f'Option {option} processed with add {add}')
-    result[0]
+    private static String computeAnalysis(String option) {
+        var empty = Jt.empty().use();
+        Jt.text("Computing advanced analysis for %s ...".formatted(option)).use(empty);
+
+        // expensive computation simulated here
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        final String res;
+        if ("Technology".equals(option)) {
+            res = "BUY JEAMLIT! Sell NVDA!";
+        } else if ("Finance".equals(option)) {
+            res = "HOLD every finance stock !";
+        } else if ("Food and Beverage".equals(option)) {
+            res = "SELL every Food and Beverage Stock! ";
+        } else {
+            res = "Unknown industry";
+        }
+        Jt.text("").use(empty);
+        return res;
+    }
+}
 ```
-
-Astute observers may think, "This feels a little like caching." We are only saving results relative to one parameter, but the pattern could easily be expanded to save results relative to both parameters. In that sense, yes, it has some similarities to caching, but also some important differences. When you save results in `st.session_state`, the results are only available to the current user in their current session. If you use [`st.cache_data`](/develop/api-reference/caching-and-state/st.cache_data) instead, the results are available to all users across all sessions. Furthermore, if you want to update a saved result, you have to clear all saved results for that function to do so.
 
 ## Anti-patterns
 
@@ -377,43 +500,63 @@ Here are some simplified examples of how buttons can go wrong. Be on the lookout
 
 ### Buttons nested inside buttons
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-if st.button('Button 1'):
-    st.write('Button 1 was clicked')
-    if st.button('Button 2'):
-        # This will never be executed.
-        st.write('Button 2 was clicked')
+public class App {
+    public static void main(String[] args) {
+        if (Jt.button("Button 1").use()) {
+            Jt.text("Button 1 was clicked").use();
+            if (Jt.button("Button 2").use()) {
+                // This will never be executed. - when Button2 is clicked, Button 1 is false
+                Jt.text("Button 2 was clicked").use();
+            }
+        }
+    }
+}
 ```
 
 ### Other widgets nested inside buttons
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
 
-if st.button('Sign up'):
-    name = st.text_input('Name')
+public class App {
+    public static void main(String[] args) {
+        if (Jt.button("Sign up").use()) {
+            String name = Jt.textInput("Name").use();
 
-    if name:
-        # This will never be executed.
-        st.success(f'Welcome {name}')
+            if (!name.isEmpty()) {
+                // This will never be executed.
+                Jt.success("Welcome " + name).use();
+            }
+        }
+    }
+}
 ```
 
 ### Nesting a process inside a button without saving to session state
 
-```python
-import streamlit as st
-import pandas as pd
+```java
+import io.jeamlit.core.Jt;
+import java.io.File;
 
-file = st.file_uploader("Upload a file", type="csv")
+public class App {
+    public static void main(String[] args) {
+        File file = Jt.fileUploader("Upload a file").accept(".csv").use();
 
-if st.button('Get data'):
-    df = pd.read_csv(file)
-    # This display will go away with the user's next action.
-    st.write(df)
+        String content = null;
+        if (Jt.button("Get data").use()) {
+            content = readFile(file);
+            // This display will go away with the user's next action.
+            Jt.text("Data loaded from: " + file.getName()).use();
+            // FORGOT TO SAVE THE CONTENT IN SESSION STATE
+        }
 
-if st.button('Save'):
-    # This will always error.
-    df.to_csv('data.csv')
+        if (Jt.button("Save").use()) {
+            // content will always be null !  
+            safe(content);
+        }
+    }
+}
 ```

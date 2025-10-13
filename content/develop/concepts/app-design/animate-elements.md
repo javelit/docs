@@ -1,7 +1,6 @@
 ---
 title: Animate and update elements
 slug: /develop/concepts/design/animate
-description: st.add_rows appends a dataframe to the bottom of the current one in certain elements, for optimized data updates.
 ---
 
 # Animate and update elements
@@ -12,19 +11,26 @@ to update them in-place without rerunning the app.
 
 Updatable elements include the following:
 
-- `st.empty` containers can be written to in sequence and will always show the last thing written. They can also be cleared with an
-  additional `.empty()` called like a method.
+- `Jt.empty` containers can be written to in sequence and will always show the last thing written. {/* TODO IMPLEMENT REMOVE They can also be cleared with an additional `.empty()` called like a method. */}
+
+{/* TODO implement components  
+
 - `st.dataframe`, `st.table`, and many chart elements can be updated with the `.add_rows()` method which appends data.
 - `st.progress` elements can be updated with additional `.progress()` calls. They can also be cleared with a `.empty()` method call.
 - `st.status` containers have an `.update()` method to change their labels, expanded state, and status.
 - `st.toast` messages can be updated in place with additional `.toast()` calls.
 
-## `st.empty` containers
+*/}
 
-`st.empty` can hold a single element. When you write any element to an `st.empty` container, Streamlit discards its previous content
-displays the new element. You can also `st.empty` containers by calling `.empty()` as a method. If you want to update a set of elements, use
-a plain container (`st.container()`) inside `st.empty` and write contents to the plain container. Rewrite the plain container and its
+## `Jt.empty` containers
+
+`Jt.empty` can hold a single element. When you write any element to a `Jt.empty` container, Jeamlit discards its previous content and 
+displays the new element. {/* TODO IMPLEMENT REMOVE EMPTY You can also `Jt.empty` containers by calling `.empty()` as a method. */} 
+If you want to update a set of elements, use
+a plain container (`Jt.container()`) inside `Jt.empty` and write contents to the plain container. Rewrite the plain container and its
 contents as often as desired to update your app's display.
+
+{/*
 
 ## The `.add_rows()` method
 
@@ -46,3 +52,5 @@ for tick in range(10):
 
 st.button("Regenerate")
 ```
+
+*/}

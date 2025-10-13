@@ -288,7 +288,7 @@ In a multipage app, Session State variables are available across pages.
 **Components State** allows you to retrieve the value of any *keyed* input widget, at any point in the app logic, across reruns. 
 In a multipage app, **keyed** widget values are page-scoped. If the same key (e.g., `.key("my-key")`) is used on two 
 different pages, calling `Jt.componentsState().get("my-key")` will correctly return the value for the widget on the current page.   
-Components State is read-only to prevent out-of-order widget value mutations and to keep the framework mental model simple.
+`Jt.componentsState()` is not mutable to prevent mistakes. To update the value a of widget by key, you can use `Jt.setComponentState()`.
 
 By default, **keyed** input widget values are persisted even if the widget is not displayed in an app run.  
 This is simpler to understand with an example. Run: 
