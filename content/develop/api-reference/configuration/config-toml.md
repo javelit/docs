@@ -1,6 +1,7 @@
 ---
 title: config.toml
 slug: /develop/api-reference/configuration/config.toml
+ignore: true
 ---
 
 ## config.toml
