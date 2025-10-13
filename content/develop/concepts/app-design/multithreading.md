@@ -8,7 +8,7 @@ slug: /develop/concepts/design/multithreading
 Jeamlit uses threads within its architecture, which can make it difficult for app developers to include their own multithreaded processes.
 
 <Note>
-Jeamlit Threading experience is a work in progress. Reach out [on the forum](https://github.com/jeamlit/jeamlit/discussions/) for any question.
+Jeamlit Threading experience is a work in progress. Reach out [on the forum](https://github.com/jeamlit/jeamlit/discussions/) for any question. 
 </Note>
 
 Here is the current state:
