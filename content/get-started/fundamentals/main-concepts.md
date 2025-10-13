@@ -31,19 +31,17 @@ arguments get interpreted as arguments to Jeamlit itself.
 </Note>
 */}
 
-{/* TODO CYRIL - running from URL is not implemented
-
 <Tip>
 
 You can also pass a URL to `streamlit run`! This is great when combined with
 GitHub Gists. For example:
 
 ```bash
-streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/master/streamlit_app.py
+jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/main/examples/getting_started/App.java
 ```
 
 </Tip>
-*/}
+
 
 
 Another way of running Jeamlit is to run it [embedded](/get-started/installation/embedded-vanilla) in your existing Java project:
@@ -313,48 +311,49 @@ by chaining `.formatFunction(<your stringify Function>)` after `selectbox(...)`.
 ## Layout
 
 Jeamlit makes it easy to organize your widgets in a left panel sidebar with
-[`st.sidebar`](/develop/api-reference/layout/st.sidebar). Each element that's passed to
-[`st.sidebar`](/develop/api-reference/layout/st.sidebar) is pinned to the left, allowing
+[`Jt.SIDEBAR`](/develop/api-reference/layout/jt.sidebar). Each element that's passed to
+[`Jt.SIDEBAR`](/develop/api-reference/layout/jt.sidebar) is pinned to the left, allowing
 users to focus on the content in your app while still having access to UI
 controls.
 
 For example, if you want to add a selectbox and a slider to a sidebar,
-use `st.sidebar.slider` and `st.sidebar.selectbox` instead of `st.slider` and
-`st.selectbox`:
+use `Jt.slider(...).use(Jt.SIDEBAR)` and `Jt.selectbox(...).use(Jt.SIDEBAR)` instead of `.use()`:
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
+import java.util.List;
 
-# Add a selectbox to the sidebar:
-add_selectbox = st.sidebar.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone')
-)
+...
 
-# Add a slider to the sidebar:
-add_slider = st.sidebar.slider(
-    'Select a range of values',
-    0.0, 100.0, (25.0, 75.0)
-)
+// Add a selectbox to the sidebar:
+String selection = Jt
+        .selectbox("How would you like to be contacted?", List.of("Email", "Home phone", "Mobile phone"))
+        .use(Jt.SIDEBAR);
+
+// Add a slider to the sidebar:
+double value = Jt.slider("Select a value").min(0.0).max(100.0).value(50).use(Jt.SIDEBAR);
 ```
 
 Beyond the sidebar, Jeamlit offers several other ways to control the layout
-of your app. [`st.columns`](/develop/api-reference/layout/st.columns) lets you place widgets side-by-side, and
-[`st.expander`](/develop/api-reference/layout/st.expander) lets you conserve space by hiding away large content.
+of your app. [`Jt.columns`](/develop/api-reference/layout/jt.columns) lets you place widgets side-by-side, and
+[`Jt.expander`](/develop/api-reference/layout/jt.expander) lets you conserve space by hiding away large content.
 
-```python
-import streamlit as st
+```java
+import io.jeamlit.core.Jt;
+import java.util.List;
 
-left_column, right_column = st.columns(2)
-# You can use a column just like st.sidebar:
-left_column.button('Press me!')
+var columns = Jt.columns(2).use();
 
-# Or even better, call Jeamlit functions inside a "with" block:
-with right_column:
-    chosen = st.radio(
-        'Sorting hat',
-        ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
-    st.write(f"You are in {chosen} house!")
+// You can use a column by passing it to .use():
+Jt.button("Press me!").use(columns.col(0));
+
+// Place multiple elements in a column:
+String chosen = Jt.radio(
+    "Sorting hat",
+    List.of("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin")
+).use(columns.col(1));
+
+Jt.text("You are in " + chosen + " house!").use(columns.col(1));
 ```
 
 

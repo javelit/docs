@@ -283,7 +283,7 @@ export default function Article({
         <section className={styles.Container}>
           <SideBar slug={slug} menu={menu} />
           <Head>
-            <title>{data.title + " - Streamlit Docs"}</title>
+            <title>{data.title + " - Jeamlit Docs"}</title>
             <link rel="icon" href="/favicon.svg" />
             <link rel="alternate icon" href="/favicon32.ico" />
             <meta name="theme-color" content="#ffffff" />
@@ -304,11 +304,11 @@ export default function Article({
               />
             )}
             <meta
-              content={`${data.title} - Streamlit Docs`}
+              content={`${data.title} - Jeamlit Docs`}
               property="og:title"
             />
             <meta
-              content={`${data.title} - Streamlit Docs`}
+              content={`${data.title} - Jeamlit Docs`}
               name="twitter:title"
             />
             {data.description && (
