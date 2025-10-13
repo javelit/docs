@@ -1,5 +1,5 @@
 {
-  "0.38.0": {
+  "0.40.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
@@ -3487,6 +3487,34 @@
       ],
       "source": ""
     },
+    "Jt.setComponentState": {
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "String",
+              "default": null,
+              "name": "key",
+              "description": "<p>The key of the component (as set via <code>.key()</code>)</p>",
+              "is_optional": false
+            },
+            {
+              "type_name": "Object",
+              "default": null,
+              "name": "value",
+              "description": "<p>The new value to set</p>",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.setComponentState(String key, Object value)"
+        }
+      ],
+      "examples": "<p>Programmatically update a text input value\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class UpdateStateApp {\n     public static void main(String[] args) {\n         String name = Jt.textInput(\"Name\").key(\"name\").use();\n         Jt.button(\"Clear name\")\n           .onClick(b -&gt; Jt.setComponentState(\"name\", \"\"))\n           .use();\n         Jt.text(\"Hello \" + name).use();\n     }\n }\n</code></pre>\n <p></p>",
+      "name": "setComponentState",
+      "description": "<p>Update a component&#39;s value by its user-defined key.\n <p>\n This method allows programmatic updating of component state. Limits:\n <ul>\n     <li>You cannot modify the value of a component that has not been rendered with a <code>.key()</code> in the session yet.</li>\n     <li>You cannot modify the value of a component that has already been rendered in the current app run.</li>\n </ul>\n Learn more in the <a href=\"https://docs.jeamlit.io/develop/concepts/design/buttons#buttons-to-modify-or-reset-other-widgets\">modify widget examples</&gt;.\n <p>\n This method does not validate that the provided value is of the correct type for the component. If the type is incompatible, the component will throw a <code>ClassCastException</code> when its <code>use()</code> method is called.\n <p></p>",
+      "returns": [],
+      "source": ""
+    },
     "Jt.html": {
       "builderMethods": [
         {
@@ -6056,6 +6084,31 @@
           "return_name": null
         }
       ],
+      "source": ""
+    },
+    "Jt.rerun": {
+      "overloads": [
+        {
+          "args": [
+            {
+              "type_name": "boolean",
+              "default": null,
+              "name": "toHome",
+              "description": "<p>If <code>true</code>, rerun in <code>/</code> url path. If <code>false</code>, rerun in current path.</p>",
+              "is_optional": false
+            }
+          ],
+          "signature": "Jt.rerun(boolean toHome)"
+        },
+        {
+          "args": [],
+          "signature": "Jt.rerun()"
+        }
+      ],
+      "examples": "<p>Updating session state and triggering rerun\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class RerunApp {\n     public static void main(String[] args) {\n          Jt.sessionState().computeIfAbsent(\"value\", \"Title\");\n\n         // Display current value\n         Jt.title(Jt.sessionState().getString(\"value\")).use();\n\n         if (Jt.button(\"Foo\").use()) {\n             Jt.sessionState().put(\"value\", \"Foo\");\n             Jt.rerun(false);\n         }\n     }\n }\n</code></pre></p>",
+      "name": "rerun",
+      "description": "<p>Rerun the script immediately.\n <p>\n When <code>Jt.rerun()</code> is called, Jeamlit halts the current app run and executes no further statements. Jeamlit immediately\n queues the script to rerun. In a multipage app: by default, the rerun is for the same url path (same page). If the rerun could make\n the current page unavailable, pass <code>toHome = true</code> to send back to the home url and avoid 404 errors.\n <p></p>",
+      "returns": [],
       "source": ""
     },
     "Jt.radio": {
