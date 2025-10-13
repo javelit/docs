@@ -33,7 +33,7 @@ arguments get interpreted as arguments to Jeamlit itself.
 
 <Tip>
 
-You can also pass a URL to `streamlit run`! This is great when combined with
+You can also pass a URL to `jeamlit run`! This is great when combined with
 GitHub Gists. For example:
 
 ```bash
