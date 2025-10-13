@@ -1,6 +1,7 @@
 ---
 title: Chat elements
 slug: /develop/api-reference/chat
+ignore: true
 ---
 
 # Chat elements

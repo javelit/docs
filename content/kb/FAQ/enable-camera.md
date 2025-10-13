@@ -1,6 +1,6 @@
 ---
 title: Enabling camera or microphone access in your browser
-slug: /knowledge-base/using-streamlit/enable-camera
+slug: /knowledge-base/using-jeamlit/enable-camera
 ignore: true
 ---
 

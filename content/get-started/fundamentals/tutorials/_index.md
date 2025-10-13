@@ -3,7 +3,7 @@ title: First steps building Jeamlit apps
 slug: /get-started/tutorials
 ---
 
-# First steps building Streamlit apps
+# First steps building Jeamlit apps
 
 If you've just read through our [Basic concepts](/get-started/fundamentals/main-concepts) and want to get your hands on Jeamlit, check out these tutorials. Make sure you have [installed Jeamlit](/get-started/installation) so you can execute the code yourself.
 

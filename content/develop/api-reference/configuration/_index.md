@@ -1,6 +1,7 @@
 ---
 title: Configuration
 slug: /develop/api-reference/configuration
+ignore: true
 ---
 
 # Configuration

@@ -1,6 +1,6 @@
 ---
 title: How do I create an anchor link?
-slug: /knowledge-base/using-streamlit/create-anchor-link
+slug: /knowledge-base/using-jeamlit/create-anchor-link
 ignore: true
 ---
 

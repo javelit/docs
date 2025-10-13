@@ -88,7 +88,7 @@ Let’s walk through each line of the Dockerfile :
 
    <Tip>
 
-   You can also use your own base image, provided the image you use contains a [supported version of Python](/knowledge-base/using-streamlit/sanity-checks#check-0-are-you-using-a-streamlit-supported-version-of-python) for Streamlit. There is no one-size-fits-all approach to using any specific base image, nor is there an official Streamlit-specific base image.
+   You can also use your own base image, provided the image you use contains a [supported version of Python](/knowledge-base/using-jeamlit/sanity-checks#check-0-are-you-using-a-streamlit-supported-version-of-python) for Streamlit. There is no one-size-fits-all approach to using any specific base image, nor is there an official Streamlit-specific base image.
 
    </Tip>
 

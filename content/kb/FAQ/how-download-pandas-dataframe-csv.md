@@ -1,6 +1,6 @@
 ---
 title: How to download a Pandas DataFrame as a CSV?
-slug: /knowledge-base/using-streamlit/how-download-pandas-dataframe-csv
+slug: /knowledge-base/using-jeamlit/how-download-pandas-dataframe-csv
 ignore: true
 ---
 

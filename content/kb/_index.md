@@ -12,7 +12,7 @@ The knowledge base is a self-serve library of tips, step-by-step tutorials, and 
     color="acqua-100"
     icon="quiz"
     bold="FAQ"
-    href="/knowledge-base/using-streamlit"
+    href="/knowledge-base/using-jeamlit"
   >Here are some frequently asked questions about using Streamlit.</InlineCallout>
 
 {/*

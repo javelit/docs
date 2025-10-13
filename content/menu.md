@@ -184,6 +184,7 @@ site_menu:
   - category: Develop / API reference / Write and magic
     url: /develop/api-reference/write-magic
     visible: false
+    ignore: true
   - category: Develop / API reference / Write and magic / st.write
     url: /develop/api-reference/write-magic/st.write
     isVersioned: true
@@ -196,6 +197,8 @@ site_menu:
     ignore: true
   - category: Develop / API reference / Write and magic / magic
     url: /develop/api-reference/write-magic/magic
+    visible: false
+    ignore: true
   - category: Develop / API reference / Text elements
     url: /develop/api-reference/text
   - category: Develop / API reference / Text elements / HEADINGS AND BODY
@@ -241,6 +244,7 @@ site_menu:
     url: /develop/api-reference/text/st.latex
     isVersioned: true
     visible: false
+    ignore: true
   - category: Develop / API reference / Text elements / Jt.text
     url: /develop/api-reference/text/jt.text
     isVersioned: true
@@ -268,6 +272,7 @@ site_menu:
   - category: Develop / API reference / Data elements / st.column_config
     url: /develop/api-reference/data/st.column_config
     visible: false
+    ignore: true
   - category: Develop / API reference / Data elements / st.column_config / Column
     url: /develop/api-reference/data/st.column_config/st.column_config.column
     isVersioned: true
@@ -610,6 +615,7 @@ site_menu:
   - category: Develop / API reference / Chat elements
     url: /develop/api-reference/chat
     visible: false
+    ignore: true
   - category: Develop / API reference / Chat elements / st.chat_input
     url: /develop/api-reference/chat/st.chat_input
     isVersioned: true
@@ -883,6 +889,7 @@ site_menu:
     url: /develop/api-reference/configuration
     isVersioned: false
     visible: false
+    ignore: true
   - category: Develop / API reference / Configuration / config.toml
     url: /develop/api-reference/configuration/config.toml
   - category: Develop / API reference / Configuration / st.get_option
@@ -1307,69 +1314,69 @@ site_menu:
     color: acqua-100
     icon: school
   - category: Knowledge base / FAQ
-    url: /knowledge-base/using-streamlit
+    url: /knowledge-base/using-jeamlit
   - category: Knowledge base / FAQ / How do I create an anchor link?
-    url: /knowledge-base/using-streamlit/create-anchor-link
+    url: /knowledge-base/using-jeamlit/create-anchor-link
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Enabling camera access in your browser
-    url: /knowledge-base/using-streamlit/enable-camera
+    url: /knowledge-base/using-jeamlit/enable-camera
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to download a file in Streamlit?
-    url: /knowledge-base/using-streamlit/how-download-file-streamlit
+    url: /knowledge-base/using-jeamlit/how-download-file-streamlit
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to download a Pandas DataFrame as a CSV?
-    url: /knowledge-base/using-streamlit/how-download-pandas-dataframe-csv
+    url: /knowledge-base/using-jeamlit/how-download-pandas-dataframe-csv
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How do I upgrade to the latest version of Streamlit?
-    url: /knowledge-base/using-streamlit/how-upgrade-latest-version-streamlit
+    url: /knowledge-base/using-jeamlit/how-upgrade-latest-version-streamlit
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to insert elements out of order?
-    url: /knowledge-base/using-streamlit/insert-elements-out-of-order
+    url: /knowledge-base/using-jeamlit/insert-elements-out-of-order
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How can I make st.pydeck_chart use custom Mapbox styles?
-    url: /knowledge-base/using-streamlit/pydeck-chart-custom-mapbox-styles
+    url: /knowledge-base/using-jeamlit/pydeck-chart-custom-mapbox-styles
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to remove "· Streamlit" from the app title?
-    url: /knowledge-base/using-streamlit/remove-streamlit-app-title
+    url: /knowledge-base/using-jeamlit/remove-streamlit-app-title
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How do you retrieve the filename of a file uploaded with st.file_uploader?
-    url: /knowledge-base/using-streamlit/retrieve-filename-uploaded
+    url: /knowledge-base/using-jeamlit/retrieve-filename-uploaded
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Sanity checks
-    url: /knowledge-base/using-streamlit/sanity-checks
+    url: /knowledge-base/using-jeamlit/sanity-checks
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How can I make Streamlit watch for changes in other modules I'm importing in my app?
-    url: /knowledge-base/using-streamlit/streamlit-watch-changes-other-modules-importing-app
+    url: /knowledge-base/using-jeamlit/streamlit-watch-changes-other-modules-importing-app
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / What browsers does Streamlit support?
-    url: /knowledge-base/using-streamlit/supported-browsers
+    url: /knowledge-base/using-jeamlit/supported-browsers
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Where does st.file_uploader store uploaded files and when do they get deleted?
-    url: /knowledge-base/using-streamlit/where-file-uploader-store-when-deleted
+    url: /knowledge-base/using-jeamlit/where-file-uploader-store-when-deleted
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Widget updating for every second input when using session state
-    url: /knowledge-base/using-streamlit/widget-updating-session-state
+    url: /knowledge-base/using-jeamlit/widget-updating-session-state
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Why does Streamlit restrict nested st.columns?
-    url: /knowledge-base/using-streamlit/why-streamlit-restrict-nested-columns
+    url: /knowledge-base/using-jeamlit/why-streamlit-restrict-nested-columns
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / What is serializable session state?
-    url: /knowledge-base/using-streamlit/serializable-session-state
+    url: /knowledge-base/using-jeamlit/serializable-session-state
     visible: false
     ignore: true  
   - category: Knowledge base / Installing dependencies

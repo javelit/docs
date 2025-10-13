@@ -1,6 +1,7 @@
 ---
 title: st.write and magic commands
 slug: /develop/api-reference/write-magic
+ignore: true
 ---
 
 # st.write and magic commands

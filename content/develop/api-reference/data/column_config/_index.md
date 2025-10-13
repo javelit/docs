@@ -1,6 +1,7 @@
 ---
 title: st.column_config
 slug: /develop/api-reference/data/st.column_config
+ignore: true
 ---
 
 # Column configuration

@@ -1,6 +1,7 @@
 ---
 title: Magic
 slug: /develop/api-reference/write-magic/magic
+ignore: true
 ---
 
 ## Magic
