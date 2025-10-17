@@ -18,7 +18,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
             Home
           </Link>
           <Link
-            href="mailto:hello@streamlit.io?subject=Contact%20from%20documentation%20"
+            href="mailto:cdecatheu@hey.com?subject=Question%20about%20Jeamlit"
             className={`
               not-link
               ${styles.Link}
@@ -31,7 +31,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               not-link
               ${styles.Link}
             `}
-            href="https://discuss.streamlit.io"
+            href="https://github.com/jeamlit/jeamlit/discussions"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,7 +46,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               not-link
               ${styles.IconLink}
             `}
-            href="https://github.com/streamlit"
+            href="https://github.com/jeamlit/jeamlit"
             target="_blank"
             title="GitHub"
           >
@@ -67,6 +67,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
             </i>
           </a>
           {/* YouTube */}
+          {/*
           <a
             className={`
               group
@@ -93,7 +94,9 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               </svg>
             </i>
           </a>
+          */}
           {/* Twitter */}
+          {/*
           <a
             className={`
               group
@@ -119,6 +122,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               </svg>
             </i>
           </a>
+          */}
           {/* LinkedIn */}
           <a
             className={`
@@ -126,7 +130,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               not-link
               ${styles.IconLink}
             `}
-            href="https://www.linkedin.com/company/streamlit"
+            href="https://www.linkedin.com/in/cyril-de-catheu/"
             target="_blank"
             title="LinkedIn"
           >
@@ -152,7 +156,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               not-link
               ${styles.IconLink}
             `}
-            href="https://info.snowflake.com/streamlit-newsletter-sign-up.html"
+            href="https://world.hey.com/cdecatheu/"
             target="_blank"
             title="Newsletter"
           >

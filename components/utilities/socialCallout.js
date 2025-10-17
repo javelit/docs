@@ -128,11 +128,11 @@ const SocialCallout = () => {
           </a>
         </li>
         */}
-        {/* Newsletter TODO
+        {/* Newsletter */}
         <li className={`group ${styles.ListItem}`}>
           <a
             className={`${styles.Link} not-link`}
-            href="https://info.snowflake.com/streamlit-newsletter-sign-up.html"
+            href="https://world.hey.com/cdecatheu/"
             target="_blank"
           >
             <div className={`${styles.IconContainer} ${styles.Newsletter}`}>
@@ -155,13 +155,10 @@ const SocialCallout = () => {
             </div>
             <article>
               <h5 className={styles.Subtitle}>Newsletter</h5>
-              <p className={styles.Text}>
-                Sign up for communications from Streamlit.
-              </p>
+              <p className={styles.Text}>Subscribe to the Jeamlit dev diary</p>
             </article>
           </a>
         </li>
-        */}
       </ul>
     </section>
   );
