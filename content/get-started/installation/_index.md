@@ -19,7 +19,7 @@ Jeamlit requires A Java JDK >= `21`.
 1. Install: ([JBang](https://www.jbang.dev/) is highly recommended)
     ```bash
     # recommended: install with jbang
-    jbang app install io.jeamlit:jeamlit:${JEAMLIT_VERSION}:all@fatjar
+    jbang app install jeamlit@jeamlit
    
     # vanilla
     curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar

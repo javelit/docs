@@ -50,7 +50,7 @@ You have two options to install Jeamlit:
 
    ```bash
    # Install Jeamlit with JBang
-   jbang app install io.jeamlit:jeamlit:${JEAMLIT_VERSION}:all@fatjar
+   jbang app install jeamlit@jeamlit
    ```
 
 2. Verify the installation by running:

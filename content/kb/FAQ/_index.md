@@ -5,11 +5,20 @@ slug: /knowledge-base/using-jeamlit
 
 # FAQ
 
-We will add frequently asked questions about using Jeamlit here. In the meantime, please [open an issue](https://github.com/jeamlit/jeamlit/issues) 
-or [open a discussion thread](https://github.com/jeamlit/jeamlit/discussions) in the Github project.   
+Here are some frequently asked questions about using Jeamlit. If you can't find any answer to your question here, 
+please [open an issue](https://github.com/jeamlit/jeamlit/issues)or [open a discussion thread](https://github.com/jeamlit/jeamlit/discussions) in the Github project.
 
-If you feel something important is missing that everyone needs to know, 
-please [open a doc issue](https://github.com/jeamlit/docs/issues) or [submit a doc pull request](https://github.com/jeamlit/docs/pulls) and we'll be happy to review it!
+<Collapse title="How can I update the jeamlit CLI to the latest version" expanded={false} >
+```bash
+jbang app install --fresh --force jeamlit@jeamlit
+```
+</Collapse>
+
+<Collapse title="How can I install a specific version of the jeamlit CLI" expanded={false} >
+```bash
+jbang app install --force io.jeamlit:jeamlit:${JEAMLIT_VERSION}:all@fatjar
+```
+</Collapse>
 
 {/*
 
