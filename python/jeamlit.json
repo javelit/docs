@@ -1,5 +1,5 @@
 {
-  "0.44.0": {
+  "0.49.0": {
     "Jt.textInput": {
       "builderMethods": [
         {
@@ -3511,7 +3511,7 @@
       ],
       "examples": "<p>Programmatically update a text input value\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class UpdateStateApp {\n     public static void main(String[] args) {\n         String name = Jt.textInput(\"Name\").key(\"name\").use();\n         Jt.button(\"Clear name\")\n           .onClick(b -&gt; Jt.setComponentState(\"name\", \"\"))\n           .use();\n         Jt.text(\"Hello \" + name).use();\n     }\n }\n</code></pre>\n <p></p>",
       "name": "setComponentState",
-      "description": "<p>Update a component&#39;s value by its user-defined key.\n <p>\n This method allows programmatic updating of component state. Limits:\n <ul>\n     <li>You cannot modify the value of a component that has not been rendered with a <code>.key()</code> in the session yet.</li>\n     <li>You cannot modify the value of a component that has already been rendered in the current app run.</li>\n </ul>\n Learn more in the <a href=\"https://docs.jeamlit.io/develop/concepts/design/buttons#buttons-to-modify-or-reset-other-widgets\">modify widget examples</&gt;.\n <p>\n This method does not validate that the provided value is of the correct type for the component. If the type is incompatible, the component will throw a <code>ClassCastException</code> when its <code>use()</code> method is called.\n <p></p>",
+      "description": "<p>Update a component&#39;s value by its user-defined key.\n <p>\n This method allows programmatic updating of component state. Limits:\n <ul>\n     <li>You cannot modify the value of a component that has not been rendered with a <code>.key()</code> in the session yet.</li>\n     <li>You cannot modify the value of a component that has already been rendered in the current app run.</li>\n </ul>\n Learn more in the <a href=\"https://docs.jeamlit.io/develop/concepts/design/buttons#buttons-to-modify-or-reset-other-widgets\">modify widget examples</&gt;.\n <p>\n This method validates that the provided value is of the correct type and respects constraints if any (for instance, value range).\n <p></p>",
       "returns": [],
       "source": ""
     },
@@ -6957,14 +6957,14 @@
         {
           "args": [
             {
-              "type_name": "Map&lt;String, Values&gt;",
+              "type_name": "Map&lt;String, List&lt;Object&gt;&gt;",
               "default": null,
               "name": "cols",
               "description": "<p>A map where keys are column names and values are collections of column data</p>",
               "is_optional": false
             }
           ],
-          "signature": "Jt.tableFromListColumns(Map&lt;String, Values&gt; cols)"
+          "signature": "Jt.tableFromListColumns(Map&lt;String, List&lt;Object&gt;&gt; cols)"
         }
       ],
       "examples": "<p>Basic table with data objects\n <pre><code class=\"language-java\"> import tech.catheu.jeamlit.core.Jt;\n\n import java.util.List;\n\n public class TableApp {\n     public static void main(String[] args) {\n         record Person(String name, int age, String city) {\n         }\n\n         List&lt;Object&gt; data = List.of(new Person(\"Alice\", 25, \"New York\"),\n                                     new Person(\"Bob\", 30, \"San Francisco\"),\n                                     new Person(\"Charlie\", 35, \"Chicago\"));\n\n         Jt.table(data).use();\n     }\n }\n</code></pre></p>\n\n<p>Basic table with array of objects\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n public class TableArrayApp {\n     public static void main(String[] args) {\n         record Product(String name, double price, boolean inStock) {}\n\n         Product[] products = {\n             new Product(\"Laptop\", 999.99, true),\n             new Product(\"Mouse\", 25.50, false),\n             new Product(\"Keyboard\", 75.00, true)\n         };\n\n         Jt.table(products).use();\n     }\n }\n</code></pre></p>\n\n<p>Table from column arrays\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.Map;\n\n public class TableColumnsArrayApp {\n     public static void main(String[] args) {\n         Map&lt;String, Object[]&gt; salesData = Map.of(\n                 \"Month\", new String[]{\"Jan\", \"Feb\", \"Mar\", \"Apr\"},\n                 \"Sales\", new Integer[]{1200, 1350, 1100, 1450},\n                 \"Target\", new Integer[]{1000, 1300, 1200, 1400},\n                 \"Achieved\", new Boolean[]{true, true, false, true}\n         );\n\n         Jt.tableFromArrayColumns(salesData).use();\n     }\n }\n</code></pre></p>\n\n<p>Table from column lists\n <pre><code class=\"language-java\"> import io.jeamlit.core.Jt;\n\n import java.util.List;\n import java.util.Map;\n\n public class TableColumnsListApp {\n     public static void main(String[] args) {\n         Map&lt;String, List&lt;Object&gt;&gt; employeeData = Map.of(\n                 \"Name\", List.of(\"Alice\", \"Bob\", \"Charlie\", \"Diana\"),\n                 \"Department\", List.of(\"Engineering\", \"Sales\", \"Marketing\", \"Engineering\"),\n                 \"Salary\", List.of(95000, 75000, 68000, 102000),\n                 \"Remote\", List.of(true, false, true, true)\n         );\n\n         Jt.tableFromListColumns(employeeData).use();\n     }\n }\n</code></pre></p>",
