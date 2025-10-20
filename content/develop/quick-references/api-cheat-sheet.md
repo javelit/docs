@@ -23,6 +23,9 @@ This is a summary of the docs for the latest version of Jeamlit.
 
 // Import convention
 import io.jeamlit.core.Jt;
+import io.jeamlit.core.Server;
+
+Server.builder(MyApp.class, 8080).build().start();
 ```
 
 </CodeTile>
