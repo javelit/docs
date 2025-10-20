@@ -20,7 +20,15 @@ const SummaryTiles = () => {
         link="/develop/api-reference"
       />
 
-      {/* TODO CYRIL
+      <Tile
+        icon="grid_view"
+        title="Cheat Sheet"
+        text="All you need to know to start building, in a single page."
+        background="green-70"
+        link="/develop/quick-reference/cheat-sheet"
+      ></Tile>
+
+      {/* TODO CYRIL - replace cheat sheet with this later on ?
       <Tile
         icon="grid_view"
         title="App gallery"
