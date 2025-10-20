@@ -1,23 +1,23 @@
 ---
-title: Install and run Jeamlit standalone
+title: Install and run Javelit standalone
 slug: /get-started/installation/standalone
 ---
 
 <Note>
-Prefer to read code directly? Take a look at the [corresponding example project](https://github.com/jeamlit/jeamlit-example-standalone-vanilla) on GitHub.
+Prefer to read code directly? Take a look at the [corresponding example project](https://github.com/javelit/javelit-example-standalone-vanilla) on GitHub.
 </Note>
 
 
-# Jeamlit Standalone
+# Javelit Standalone
 
-This is the simplest and most bare-boned install method for Jeamlit.
+This is the simplest and most bare-boned install method for Javelit.
 This method is best for simple apps, education, testing, and JBang-like projects.
 
-This page will walk you through installing Jeamlit and creating a simple "Hello world" app. We'll show you two installation methods: using JBang (recommended) or downloading the JAR directly. At the end, you'll build a simple interactive app with a click counter and run it.
+This page will walk you through installing Javelit and creating a simple "Hello world" app. We'll show you two installation methods: using JBang (recommended) or downloading the JAR directly. At the end, you'll build a simple interactive app with a click counter and run it.
 
 ## Prerequisites
 
-As with any programming tool, in order to install Jeamlit you first need to make sure your
+As with any programming tool, in order to install Javelit you first need to make sure your
 computer is properly set up. More specifically, you'll need:
 
 1. **Java JDK >= 21**
@@ -31,47 +31,47 @@ computer is properly set up. More specifically, you'll need:
 
 2. **JBang (recommended)**
 
-    [JBang](https://www.jbang.dev/) makes it easy to install Jeamlit as a CLI.  
+    [JBang](https://www.jbang.dev/) makes it easy to install Javelit as a CLI.  
     Install JBang following the [official installation instructions](https://www.jbang.dev/download/).  
     
 3. **Jbang plugin (recommended)**  
-    Jeamlit uses the same dependency import feature as Jbang. 
+    Javelit uses the same dependency import feature as Jbang. 
     Install the JBang plugin in your IDE for better code completion and highlighting: 
     - IntelliJ IDEA: [JBang plugin](https://plugins.jetbrains.com/plugin/18257-jbang)
     - VS Code: [JBang extension](https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode)
 
-## Install Jeamlit
+## Install Javelit
 
-You have two options to install Jeamlit:
+You have two options to install Javelit:
 
 ### Option 1: Using JBang (recommended)
 
-1. Open a terminal and install Jeamlit:
+1. Open a terminal and install Javelit:
 
    ```bash
-   # Install Jeamlit with JBang
-   jbang app install jeamlit@jeamlit
+   # Install Javelit with JBang
+   jbang app install javelit@javelit
    ```
 
 2. Verify the installation by running:
 
    ```bash
-   jeamlit --version
+   javelit --version
    ```
 
 ### Option 2: Download JAR directly
 
-1. Open a terminal and download the Jeamlit JAR:
+1. Open a terminal and download the Javelit JAR:
 
    ```bash
-   # Download Jeamlit JAR
-   curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
+   # Download Javelit JAR
+   curl -L -o javelit.jar https://repo1.maven.org/maven2/io/javelit/javelit/${JEAMLIT_VERSION}/javelit-${JEAMLIT_VERSION}-all.jar
    ```
 
 2. Verify the installation by running:
 
    ```bash
-   java -jar jeamlit.jar --version
+   java -jar javelit.jar --version
    ```
 
 ## Create a "Hello World" app and run it
@@ -84,10 +84,10 @@ You have two options to install Jeamlit:
 // import a dependency with JBang-like imports (optional)
 //DEPS org.apache.commons:commons-math3:3.6.1
 
-// NOTE: this Jeamlit import is only here to help the IntelliJ JBang plugin - it is not strictly necessary
-//DEPS io.jeamlit:jeamlit:0.23.0
+// NOTE: this Javelit import is only here to help the IntelliJ JBang plugin - it is not strictly necessary
+//DEPS io.javelit:javelit:0.23.0
 
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class App {
@@ -123,21 +123,21 @@ public class App {
 }
 ```
 
-2. Run your Jeamlit app:
+2. Run your Javelit app:
 
    **If you installed with JBang:**
    ```bash
-   jeamlit run App.java
+   javelit run App.java
    ```
 
    **If you downloaded the JAR:**
    ```bash
-   java -jar jeamlit.jar run App.java
+   java -jar javelit.jar run App.java
    ```
 
-5. Your Jeamlit app should appear in a new tab in your web browser! Try clicking the button to see the counter increment.
+5. Your Javelit app should appear in a new tab in your web browser! Try clicking the button to see the counter increment.
 
-6. To stop the Jeamlit server, press `Ctrl+C` in the terminal.
+6. To stop the Javelit server, press `Ctrl+C` in the terminal.
 
 ## Development tips
 
@@ -147,4 +147,4 @@ public class App {
 
 ## What's next?
 
-Read about our [Basic concepts](/get-started/fundamentals/main-concepts) to understand Jeamlit's dataflow model.
+Read about our [Basic concepts](/get-started/fundamentals/main-concepts) to understand Javelit's dataflow model.

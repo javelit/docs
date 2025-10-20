@@ -207,7 +207,7 @@ const Autofunction = ({
         <Warning>
           <p>
             This method did not exist in version{" "}
-            <code>{currentNumericVersion}</code> of Jeamlit.
+            <code>{currentNumericVersion}</code> of Javelit.
           </p>
         </Warning>
       </div>

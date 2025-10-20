@@ -1,17 +1,17 @@
 ---
-title: jeamlit hello
+title: javelit hello
 slug: /develop/api-reference/cli/hello
 ignore: true
 ---
 
-## `$ jeamlit hello`
+## `$ javelit hello`
 
-Run the Hello app, an example Jeamlit app included with the Jeamlit library.
+Run the Hello app, an example Javelit app included with the Javelit library.
 
 ### Syntax
 
 ```
-jeamlit hello
+javelit hello
 ```
 
 ### Options
@@ -28,18 +28,18 @@ For a complete list of configuration options, see [`config.toml`](/develop/api-r
 
 #### Example 1: Run the Hello app with default settings
 
-To verify that Jeamlit is installed correctly, this command runs an example app included in the Jeamlit library. From any directory, execute the following:
+To verify that Javelit is installed correctly, this command runs an example app included in the Javelit library. From any directory, execute the following:
 
 ```
-jeamlit hello
+javelit hello
 ```
 
-Jeamlit will start the Hello app and open it in your default browser. The source for the Hello app can be [viewed in GitHub](https://github.com/jeamlit/jeamlit/tree/develop/lib/jeamlit/hello).
+Javelit will start the Hello app and open it in your default browser. The source for the Hello app can be [viewed in GitHub](https://github.com/javelit/javelit/tree/develop/lib/javelit/hello).
 
 #### Example 2: Run the Hello app with a custom config option value
 
 To run the Hello app with a blue accent color, from any directory, execute the following:
 
 ```
-jeamlit hello --theme.primaryColor=blue
+javelit hello --theme.primaryColor=blue
 ```

@@ -13,7 +13,7 @@ from pathlib import Path
 
 def read_menu_ignored_urls():
     """Read menu.md and extract URLs of entries with ignore: true"""
-    menu_path = "/Users/cyril/projects/jeamlit-docs/content/menu.md"
+    menu_path = "/Users/cyril/projects/javelit-docs/content/menu.md"
 
     try:
         with open(menu_path, 'r', encoding='utf-8') as f:
@@ -48,7 +48,7 @@ def read_menu_ignored_urls():
 
 def find_matching_content_files(ignored_urls):
     """Find content files with slugs matching the ignored URLs"""
-    api_ref_path = "/Users/cyril/projects/jeamlit-docs/content"
+    api_ref_path = "/Users/cyril/projects/javelit-docs/content"
     md_files = glob.glob(os.path.join(api_ref_path, "**", "*.md"), recursive=True)
 
     matches = []
@@ -157,7 +157,7 @@ def main():
 
     for match in matches:
         file_path = match['file_path']
-        relative_path = os.path.relpath(file_path, "/Users/cyril/projects/jeamlit-docs")
+        relative_path = os.path.relpath(file_path, "/Users/cyril/projects/javelit-docs")
 
         success, message = add_ignore_to_frontmatter(file_path)
 

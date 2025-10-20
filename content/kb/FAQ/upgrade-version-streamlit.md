@@ -1,6 +1,6 @@
 ---
 title: How do I upgrade to the latest version of Streamlit?
-slug: /knowledge-base/using-jeamlit/how-upgrade-latest-version-streamlit
+slug: /knowledge-base/using-javelit/how-upgrade-latest-version-streamlit
 ignore: true
 ---
 

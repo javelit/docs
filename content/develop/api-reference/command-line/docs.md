@@ -1,15 +1,15 @@
 ---
-title: jeamlit docs
+title: javelit docs
 slug: /develop/api-reference/cli/docs
 ignore: true
 ---
 
-## `$ jeamlit docs`
+## `$ javelit docs`
 
-Open the Jeamlit docs in your default browser.
+Open the Javelit docs in your default browser.
 
 ### Syntax
 
 ```
-jeamlit docs
+javelit docs
 ```

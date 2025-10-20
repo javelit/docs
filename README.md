@@ -1,8 +1,8 @@
-# Jeamlit Docs
+# Javelit Docs
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1ddc1b5a-ec21-4b66-987d-feeb68854c28/deploy-status?branch=main)](https://app.netlify.com/sites/streamlit-docs/deploys)
 
-We use Next.js and Netlify to build our [documentation site](https://docs.jeamlit.io/).
+We use Next.js and Netlify to build our [documentation site](https://docs.javelit.io/).
 
 ## Building
 
@@ -32,7 +32,7 @@ Make sure you have [`npm`](https://docs.npmjs.com/downloading-and-installing-nod
 ### 2. Clone this repo:
 
 ```bash
-git clone https://github.com/cyrilou242/jeamlit-docs.git
+git clone https://github.com/cyrilou242/javelit-docs.git
 cd docs/
 ```
 
@@ -92,9 +92,9 @@ Now that you've decided where the file should live and have named the file, it's
 
 **File format**:
 
-Every `.md` file has front matter at the very top that defines the page title which appears in the browser tab bar, and the URL slug which appears after the slash in `docs.jeamlit.io/` and `localhost:3000/`.
+Every `.md` file has front matter at the very top that defines the page title which appears in the browser tab bar, and the URL slug which appears after the slash in `docs.javelit.io/` and `localhost:3000/`.
 
-E.g. For a page titled "Create a component" that should exist at `docs.jeamlit.io/develop/concepts/custom-components/create`, the front matter at the top of `create-component.md` is:
+E.g. For a page titled "Create a component" that should exist at `docs.javelit.io/develop/concepts/custom-components/create`, the front matter at the top of `create-component.md` is:
 
 ```markdown
 ---
@@ -114,7 +114,7 @@ To add a callout (Note, Tip, Warning, Important), enter your Markdown text withi
 ```markdown
 <Note>
 
-This is a **note** that links to our [website](https://docs.jeamlit.io/).
+This is a **note** that links to our [website](https://docs.javelit.io/).
 
 </Note>
 ```
@@ -131,7 +131,7 @@ Embed code blocks like so:
 
 ````markdown
     ```java
-    import tech.catheu.jeamlit.core.Jt;
+    import tech.catheu.javelit.core.Jt;
 
     public class TestApp {
         public static void main(String[] args) {
@@ -181,7 +181,7 @@ However, a user has to know the URL to visit the page. The page is therefore _re
 
 How do you make the page you created appear in the Menu? Edit the special markdown file `content/menu.md`. All it has is front matter in YAML.
 
-Suppose you have created an "Quickstart" page that is available at `docs.jeamlit.io/get-started/installation/quickstart`. You want to it to appear in the Menu within the "Get started" section, nested under the "Installation" page.
+Suppose you have created an "Quickstart" page that is available at `docs.javelit.io/get-started/installation/quickstart`. You want to it to appear in the Menu within the "Get started" section, nested under the "Installation" page.
 
 To do so, find the lines that define the `category`, `url` and `visible` properties for "Get Started" in `menu.md` and add three new lines below it, containing:
 
@@ -204,11 +204,11 @@ To preview your changes, refresh your browser tab and visit the edited page!
 
 ### Add a new docstring to the API Reference
 
-Any time a new version of Jeamlit is released, the docstrings stored in `python/jeamlit.json` has to be updated by running `make docstrings`. This will update the json file with the documentation from the latest release on [maven.org](https://central.sonatype.com/artifact/tech.catheu/jeamlit).
+Any time a new version of Javelit is released, the docstrings stored in `python/javelit.json` has to be updated by running `make docstrings`. This will update the json file with the documentation from the latest release on [maven.org](https://central.sonatype.com/artifact/tech.catheu/javelit).
 
-If you need to regenerate all function signatures, across all versions, delete `python/jeamlit.json` and run `make docstrings`. This will generate the `jeamlit.json` file with documentation for the last N releases. N is controlled by the `LOOKBACK` constant in the [python/build_java.py](python/build_java.py) script.
+If you need to regenerate all function signatures, across all versions, delete `python/javelit.json` and run `make docstrings`. This will generate the `javelit.json` file with documentation for the last N releases. N is controlled by the `LOOKBACK` constant in the [python/build_java.py](python/build_java.py) script.
 
-Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to include in the "Chart elements" section of the API Reference:
+Suppose a new Javelit release includes a `Jt.myChart` method that you want to include in the "Chart elements" section of the API Reference:
 
 1. Run `make docstrings`
 2. Create Markdown file (`myChart.md`) in `content/develop/api/charts/`
@@ -261,10 +261,10 @@ Suppose a new Jeamlit release includes a `Jt.myChart` method that you want to in
 The Knowledge Base (KB) is divided into five sections:
 
 1. **FAQ:** ... frequently asked questions
-2. **Installing Dependencies:** System and Java dependency issues while using or deploying Jeamlit apps
-3. **Deployment Issues:** Articles about deploying Jeamlit apps
+2. **Installing Dependencies:** System and Java dependency issues while using or deploying Javelit apps
+3. **Deployment Issues:** Articles about deploying Javelit apps
 
-If you know the answer to a Jeamlit user's pain point and want to add it to the KB:
+If you know the answer to a Javelit user's pain point and want to add it to the KB:
 
 1. Decide which of the above sections your article belongs to
 2. Navigate to the relevant section's folder in `kb/` and
@@ -306,4 +306,4 @@ To publish your changes to the docs site:
 2. Create a Pull Request and mark cyrilou242 as reviewer.
 3. Once the checks have completed, checkout the Preview build.
 4. cyrilou242 will review your changes and merge your changes into the `main` branch.
-5. Once merged, your changes will be live at [https://docs.jeamlit.io/](https://docs.jeamlit.io/).
+5. Once merged, your changes will be live at [https://docs.javelit.io/](https://docs.javelit.io/).

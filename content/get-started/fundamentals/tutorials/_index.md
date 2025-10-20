@@ -1,11 +1,11 @@
 ---
-title: First steps building Jeamlit apps
+title: First steps building Javelit apps
 slug: /get-started/tutorials
 ---
 
-# First steps building Jeamlit apps
+# First steps building Javelit apps
 
-If you've just read through our [Basic concepts](/get-started/fundamentals/main-concepts) and want to get your hands on Jeamlit, check out these tutorials. Make sure you have [installed Jeamlit](/get-started/installation) so you can execute the code yourself.
+If you've just read through our [Basic concepts](/get-started/fundamentals/main-concepts) and want to get your hands on Javelit, check out these tutorials. Make sure you have [installed Javelit](/get-started/installation) so you can execute the code yourself.
 
 <InlineCalloutContainer>
     <InlineCallout

@@ -5,13 +5,13 @@ slug: /develop/concepts/architecture/caching
 
 # Caching overview
 
-Jeamlit runs your script from top to bottom at every user interaction or code change. This execution model 
+Javelit runs your script from top to bottom at every user interaction or code change. This execution model 
 makes development super easy. But it comes with two major challenges:
 
 1. Long-running functions run again and again, which slows down your app.
 2. Objects get recreated again and again, which makes it hard to persist them across reruns or sessions.
 
-But don't worry! Jeamlit lets you tackle both issues by providing a cache `Map` with `Jt.cache`. Cached values are stored 
+But don't worry! Javelit lets you tackle both issues by providing a cache `Map` with `Jt.cache`. Cached values are stored 
 globally and shared across all users and reruns. The pattern is simple: check if a value exists in the 
 cache, compute it if absent or retrieve it if present. This makes your app much faster 
 and helps with persisting objects across reruns. If you need 
@@ -66,9 +66,9 @@ If your app runs for a long time and constantly caches values, you might run int
 1. The app runs out of memory because the cache is too large.
 2. Objects in the cache become stale, e.g. because you cached old data from a database.
 
-As of today, Jeamlit is not opinionated on how these problems should be managed.
+As of today, Javelit is not opinionated on how these problems should be managed.
 We recommend using existing Cache implementations like [Guava cache](https://github.com/google/guava/wiki/cachesexplained). 
-Put the "advanced" cache implementation inside the Jeamlit cache.
+Put the "advanced" cache implementation inside the Javelit cache.
 
 Here is an example for a cache with a maximum size of 1000 elements and a TTL of 10 minutes:  
 ```java

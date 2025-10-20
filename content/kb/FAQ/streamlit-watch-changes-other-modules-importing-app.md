@@ -1,7 +1,7 @@
 ---
 title: How can I make Streamlit watch for changes in other modules I'm importing in
   my app?
-slug: /knowledge-base/using-jeamlit/streamlit-watch-changes-other-modules-importing-app
+slug: /knowledge-base/using-javelit/streamlit-watch-changes-other-modules-importing-app
 ignore: true
 ---
 

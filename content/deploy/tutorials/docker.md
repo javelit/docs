@@ -88,7 +88,7 @@ Let’s walk through each line of the Dockerfile :
 
    <Tip>
 
-   You can also use your own base image, provided the image you use contains a [supported version of Python](/knowledge-base/using-jeamlit/sanity-checks#check-0-are-you-using-a-streamlit-supported-version-of-python) for Streamlit. There is no one-size-fits-all approach to using any specific base image, nor is there an official Streamlit-specific base image.
+   You can also use your own base image, provided the image you use contains a [supported version of Python](/knowledge-base/using-javelit/sanity-checks#check-0-are-you-using-a-streamlit-supported-version-of-python) for Streamlit. There is no one-size-fits-all approach to using any specific base image, nor is there an official Streamlit-specific base image.
 
    </Tip>
 
@@ -154,7 +154,7 @@ Let’s walk through each line of the Dockerfile :
 
    Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 
-   If you have any questions, checkout our [documentation](https://docs.jeamlit.io) and [community
+   If you have any questions, checkout our [documentation](https://docs.javelit.io) and [community
    forums](https://discuss.streamlit.io).
 
    In the meantime, below is an example of what you can do with just a few lines of code:

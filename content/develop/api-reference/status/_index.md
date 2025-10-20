@@ -5,7 +5,7 @@ slug: /develop/api-reference/status
 
 # Display progress and status
 
-Jeamlit provides a few methods that allow you to add animation to your
+Javelit provides a few methods that allow you to add animation to your
 apps. These animations include progress bars, status messages (like
 warnings), and celebratory balloons.
 

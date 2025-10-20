@@ -1,14 +1,14 @@
 ---
-title: Threading in Jeamlit
+title: Threading in Javelit
 slug: /develop/concepts/design/multithreading
 ---
 
-# Multithreading in Jeamlit
+# Multithreading in Javelit
 
-Jeamlit uses threads within its architecture, which can make it difficult for app developers to include their own multithreaded processes.
+Javelit uses threads within its architecture, which can make it difficult for app developers to include their own multithreaded processes.
 
 <Note>
-Jeamlit Threading experience is a work in progress. Reach out [on the forum](https://github.com/jeamlit/jeamlit/discussions/) for any question. 
+Javelit Threading experience is a work in progress. Reach out [on the forum](https://github.com/javelit/javelit/discussions/) for any question. 
 </Note>
 
 Here is the current state:
@@ -61,46 +61,46 @@ Here is the current state:
 
 {/* 
 
-Multithreading is a type of concurrency, which improves the efficiency of computer programs. It's a way for processors to multitask. Jeamlit uses threads within its architecture, which can make it difficult for app developers to include their own multithreaded processes. Jeamlit does not officially support multithreading in app code, but this guide provides information on how it can be accomplished.
+Multithreading is a type of concurrency, which improves the efficiency of computer programs. It's a way for processors to multitask. Javelit uses threads within its architecture, which can make it difficult for app developers to include their own multithreaded processes. Javelit does not officially support multithreading in app code, but this guide provides information on how it can be accomplished.
 
 ## Prerequisites
 
-- You should have a basic understanding of Jeamlit's [architecture](/develop/concepts/architecture/architecture).
+- You should have a basic understanding of Javelit's [architecture](/develop/concepts/architecture/architecture).
 
 ## When to use multithreading
 
 Multithreading is just one type of concurrency. Multiprocessing and coroutines are other forms of concurrency. You need to understand how your code is bottlenecked to choose the correct kind of concurrency.
 
-Multiprocessing is inherently parallel, meaning that resources are split and multiple tasks are performed simultaneously. Therefore, multiprocessing is helpful with compute-bound operations. In contrast, multithreading and coroutines are not inherently parallel and instead allow resource switching. This makes them good choices when your code is stuck _waiting_ for something, like an IO operation. AsyncIO uses coroutines and may be preferable with very slow IO operations. Threading may be preferable with faster IO operations. For a helpful guide to using AsyncIO with Jeamlit, see this [Medium article by Sehmi-Conscious Thoughts](https://sehmi-conscious.medium.com/got-that-asyncio-feeling-f1a7c37cab8b).
+Multiprocessing is inherently parallel, meaning that resources are split and multiple tasks are performed simultaneously. Therefore, multiprocessing is helpful with compute-bound operations. In contrast, multithreading and coroutines are not inherently parallel and instead allow resource switching. This makes them good choices when your code is stuck _waiting_ for something, like an IO operation. AsyncIO uses coroutines and may be preferable with very slow IO operations. Threading may be preferable with faster IO operations. For a helpful guide to using AsyncIO with Javelit, see this [Medium article by Sehmi-Conscious Thoughts](https://sehmi-conscious.medium.com/got-that-asyncio-feeling-f1a7c37cab8b).
 
-Don't forget that Jeamlit has [fragments](/develop/concepts/architecture/fragments) and [caching](/develop/concepts/architecture/caching), too! Use caching to avoid unnecessarily repeating computations or IO operations. Use fragments to isolate a bit of code you want to update separately from the rest of the app. You can set fragments to rerun at a specified interval, so they can be used to stream updates to a chart or table.
+Don't forget that Javelit has [fragments](/develop/concepts/architecture/fragments) and [caching](/develop/concepts/architecture/caching), too! Use caching to avoid unnecessarily repeating computations or IO operations. Use fragments to isolate a bit of code you want to update separately from the rest of the app. You can set fragments to rerun at a specified interval, so they can be used to stream updates to a chart or table.
 
-## Threads created by Jeamlit
+## Threads created by Javelit
 
-Jeamlit creates two types of threads in Python:
+Javelit creates two types of threads in Python:
 
 - The **server thread** runs the Tornado web (HTTP + WebSocket) server.
 - A **script thread** runs page code &mdash; one thread for each script run in a session.
 
 When a user connects to your app, this creates a new session and runs a script thread to initialize the app for that user. As the script thread runs, it renders elements in the user's browser tab and reports state back to the server. When the user interacts with the app, another script thread runs, re-rendering the elements in the browser tab and updating state on the server.
 
-This is a simplifed illustration to show how Jeamlit works:
+This is a simplifed illustration to show how Javelit works:
 
-![Each user session uses script threads to communicate between the user's front end and the Jeamlit server.](/images/concepts/Streamlit-threading.svg)
+![Each user session uses script threads to communicate between the user's front end and the Javelit server.](/images/concepts/Streamlit-threading.svg)
 
 ## `streamlit.errors.NoSessionContext`
 
-Many Jeamlit commands, including `st.session_state`, expect to be called from a script thread. When Jeamlit is running as expected, such commands use the `ScriptRunContext` attached to the script thread to ensure they work within the intended session and update the correct user's view. When those Jeamlit commands can't find any `ScriptRunContext`, they raise a `streamlit.errors.NoSessionContext` exception. Depending on your logger settings, you may also see a console message identifying a thread by name and warning, "missing ScriptRunContext!"
+Many Javelit commands, including `st.session_state`, expect to be called from a script thread. When Javelit is running as expected, such commands use the `ScriptRunContext` attached to the script thread to ensure they work within the intended session and update the correct user's view. When those Javelit commands can't find any `ScriptRunContext`, they raise a `streamlit.errors.NoSessionContext` exception. Depending on your logger settings, you may also see a console message identifying a thread by name and warning, "missing ScriptRunContext!"
 
 ## Creating custom threads
 
-When you work with IO-heavy operations like remote query or data loading, you may need to mitigate delays. A general programming strategy is to create threads and let them work concurrently. However, if you do this in a Jeamlit app, these custom threads may have difficulty interacting with your Jeamlit server.
+When you work with IO-heavy operations like remote query or data loading, you may need to mitigate delays. A general programming strategy is to create threads and let them work concurrently. However, if you do this in a Javelit app, these custom threads may have difficulty interacting with your Javelit server.
 
-This section introduces two patterns to let you create custom threads in your Jeamlit app. These are only patterns to provide a starting point rather than complete solutions.
+This section introduces two patterns to let you create custom threads in your Javelit app. These are only patterns to provide a starting point rather than complete solutions.
 
-### Option 1: Do not use Jeamlit commands within a custom thread
+### Option 1: Do not use Javelit commands within a custom thread
 
-If you don't call Jeamlit commands from a custom thread, you can avoid the problem entirely. Luckily Python threading provides ways to start a thread and collect its result from another thread.
+If you don't call Javelit commands from a custom thread, you can avoid the problem entirely. Luckily Python threading provides ways to start a thread and collect its result from another thread.
 
 In the following example, five custom threads are created from the script thread. After the threads are finished running, their results are displayed in the app.
 
@@ -138,7 +138,7 @@ st.button("Rerun")
 
 <Cloud name="doc-multithreading-no-st-commands-batched" height="700px" />
 
-If you want to display results in your app as various custom threads finish running, use containers. In the following example, five custom threads are created similarly to the previous example. However, five containers are initialized before running the custom threads and a `while` loop is used to display results as they become available. Since the Jeamlit `write` command is called outside of the custom threads, this does not raise an exception.
+If you want to display results in your app as various custom threads finish running, use containers. In the following example, five custom threads are created similarly to the previous example. However, five containers are initialized before running the custom threads and a `while` loop is used to display results as they become available. Since the Javelit `write` command is called outside of the custom threads, this does not raise an exception.
 
 ```python
 import streamlit as st
@@ -187,12 +187,12 @@ st.button("Rerun")
 
 ### Option 2: Expose `ScriptRunContext` to the thread
 
-If you want to call Jeamlit commands from within your custom threads, you must attach the correct `ScriptRunContext` to the thread.
+If you want to call Javelit commands from within your custom threads, you must attach the correct `ScriptRunContext` to the thread.
 
 <Warning>
 
-- This is not officially supported and may change in a future version of Jeamlit.
-- This may not work with all Jeamlit commands.
+- This is not officially supported and may change in a future version of Javelit.
+- This may not work with all Javelit commands.
 - Ensure custom threads do not outlive the script thread owning the `ScriptRunContext`. Leaking of `ScriptRunContext` may cause security vulnerabilities, fatal errors, or unexpected behavior.
 
 </Warning>
@@ -213,7 +213,7 @@ class WorkerThread(Thread):
         self.target = target
 
     def run(self):
-        # runs in custom thread, but can call Jeamlit APIs
+        # runs in custom thread, but can call Javelit APIs
         start_time = time.time()
         time.sleep(self.delay)
         end_time = time.time()

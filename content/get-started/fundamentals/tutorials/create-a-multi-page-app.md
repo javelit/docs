@@ -20,11 +20,11 @@ Before starting, ensure you have:
 2. Required models pulled: `ollama pull gemma3:270m` and `ollama pull gemma3:1b`
 
 <Tip>
-You can find the app files here: https://github.com/jeamlit/jeamlit/tree/main/examples/multipage_ai
+You can find the app files here: https://github.com/javelit/javelit/tree/main/examples/multipage_ai
 
 **Try it out before reading further with:**
 ```bash
-jeamlit run  https://github.com/jeamlit/jeamlit/tree/main/examples/multipage_ai
+javelit run  https://github.com/javelit/javelit/tree/main/examples/multipage_ai
 ```
 </Tip>
 
@@ -48,7 +48,7 @@ appear on every page. The current page is run via `currentPage.run()`.
 ```java
 /// usr/bin/env jbang "$0" "$@" ; exit $?
 
-//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS io.javelit:javelit:${JEAMLIT_VERSION}
 //DEPS dev.langchain4j:langchain4j:0.36.2
 //DEPS dev.langchain4j:langchain4j-ollama:0.36.2
 
@@ -56,8 +56,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.Shared;
+import io.javelit.core.Jt;
+import io.javelit.core.Shared;
 import pages.ChatPage;
 import pages.ClassificationPage;
 
@@ -189,7 +189,7 @@ Elements placed *before* and *after* `currentPage.run()` appear on **all pages**
 - Model selection dropdown
 - Connection status
 
-Remember, Jeamlit apps are resolved top to bottom. While the `Jt.navigation` and `currentPage.run()` automatically add 
+Remember, Javelit apps are resolved top to bottom. While the `Jt.navigation` and `currentPage.run()` automatically add 
 a table of content in the sidebar and URL paths management, the app is still executed top to bottom. In this demo, 
 the entrypoint app does not call the current page if the ollama model is not available. The preconditions checks are not 
 duplicated in all pages! 
@@ -219,14 +219,14 @@ Now let's create the two page classes. Each page is a separate Java class with a
 ```java
 package pages;
 
-//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS io.javelit:javelit:${JEAMLIT_VERSION}
 //DEPS dev.langchain4j:langchain4j:0.36.2
 //DEPS dev.langchain4j:langchain4j-ollama:0.36.2
 
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.UserMessage;
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class ClassificationPage {
 
@@ -334,7 +334,7 @@ public class ClassificationPage {
 ```java
 package pages;
 
-//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS io.javelit:javelit:${JEAMLIT_VERSION}
 //DEPS dev.langchain4j:langchain4j:0.36.2
 //DEPS dev.langchain4j:langchain4j-ollama:0.36.2
 
@@ -343,8 +343,8 @@ import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.JtContainer;
+import io.javelit.core.Jt;
+import io.javelit.core.JtContainer;
 
 public class ChatPage {
 
@@ -428,7 +428,7 @@ The Chat page demonstrates two advanced patterns for better user experience:
 
 **1. Forms for controlled reruns**
 
-As explained in the [basic concepts](/get-started/fundamentals/main-concepts#data-flow), a Jeamlit app re-runs 
+As explained in the [basic concepts](/get-started/fundamentals/main-concepts#data-flow), a Javelit app re-runs 
 top-to-bottom every time a widget value is changed. Without a form, changing the text area or temperature slider 
 would trigger a full app rerun. With a form, the app only reruns when the submit button `Get answer` is clicked.
 Forms prevent the app from rerunning on every widget change. 
@@ -462,7 +462,7 @@ Learn more: [Animation documentation](/develop/concepts/design/animate)
 To run your multipage app:
 
 ```bash
-jeamlit run AIAssistant.java
+javelit run AIAssistant.java
 ```
 
 The app will:
@@ -478,13 +478,13 @@ The app will:
 Congratulations! 🎉 If you've read this far, chances are you've learned to create both single-page and 
 multipage apps. Where you go from here is entirely up to your creativity! We’re excited to see what you’ll 
 build now that adding additional pages to your apps is easier than ever. Try adding more pages to the app 
-we've just built as an exercise. Also, stop by the [forum](https://github.com/jeamlit/jeamlit/discussions/) to show 
-off your multipage apps with the Jeamlit community! 🚡
+we've just built as an exercise. Also, stop by the [forum](https://github.com/javelit/javelit/discussions/) to show 
+off your multipage apps with the Javelit community! 🚡
 
 Here are some resources to continue learning:
 
-- Post a question or share your multipage app on our [community forum](https://github.com/jeamlit/jeamlit/discussions/).
+- Post a question or share your multipage app on our [community forum](https://github.com/javelit/javelit/discussions/).
 - Explore the full [Multipage apps documentation](/develop/concepts/multipage-apps)
 - Learn about [Forms](/develop/concepts/architecture/forms) for controlled reruns
 - Discover [Animation techniques](/develop/concepts/design/animate) with empty containers
-- Browse the [API reference](/develop/api-reference/) for all Jeamlit components
+- Browse the [API reference](/develop/api-reference/) for all Javelit components

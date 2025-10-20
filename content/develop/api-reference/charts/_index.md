@@ -5,10 +5,10 @@ slug: /develop/api-reference/charts
 
 # Chart elements
 
-Jeamlit only supports Apache Echarts for charting, but our goal is to continually add support for more charting libraries.
+Javelit only supports Apache Echarts for charting, but our goal is to continually add support for more charting libraries.
 
 {/*
-Jeamlit supports several different charting libraries, and our goal is to
+Javelit supports several different charting libraries, and our goal is to
 continually add support for more. Right now, the most basic library in our
 arsenal is [Matplotlib](https://matplotlib.org/). Then there are also
 interactive charting libraries like [Vega

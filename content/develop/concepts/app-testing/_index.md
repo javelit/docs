@@ -1,19 +1,19 @@
 ---
-title: Jeamlit's testing utilities
+title: Javelit's testing utilities
 slug: /develop/concepts/app-testing
 ---
 
-# Jeamlit's native app testing framework
+# Javelit's native app testing framework
 
-Jeamlit provides Playwright end-to-end test utilities to make it simple for developers to build and run automated tests.
+Javelit provides Playwright end-to-end test utilities to make it simple for developers to build and run automated tests.
 
 ### Import the test dependencies:
 
 **maven** (`pom.xml`):
 ```
 <dependency>
-    <groupId>io.jeamlit</groupId>
-    <artifactId>jeamlit</artifactId>
+    <groupId>io.javelit</groupId>
+    <artifactId>javelit</artifactId>
     <version>0.19.0</version>
     <type>test-jar</type>
     <scope>test</scope>
@@ -22,14 +22,14 @@ Jeamlit provides Playwright end-to-end test utilities to make it simple for deve
 
 <Warning>
 The testing utilities depend on JUnit.
-Please reach out on [Github](https://github.com/jeamlit/jeamlit/discussions) to get help with other testing frameworks.
+Please reach out on [Github](https://github.com/javelit/javelit/discussions) to get help with other testing frameworks.
 </Warning>
 
 ### Test your app 
 
 ```java
-import io.jeamlit.e2e.helpers.PlaywrightUtils;
-import static io.jeamlit.e2e.helpers.PlaywrightUtils.WAIT_1_SEC_MAX;
+import io.javelit.e2e.helpers.PlaywrightUtils;
+import static io.javelit.e2e.helpers.PlaywrightUtils.WAIT_1_SEC_MAX;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
@@ -47,12 +47,12 @@ public void testMyApp(TestInfo testInfo) {
 ```
 Explanations : 
 - `TestInfo` is injected by JUnit.  
-- `app` is the Jeamlit app as a `String`, a `Path` or a `Class`. See full documentation below.
+- `app` is the Javelit app as a `String`, a `Path` or a `Class`. See full documentation below.
 - `page` is a `com.microsoft.playwright.Page`. For more information, visit the [Playwright For Java documentation](https://playwright.dev/java/) 
-- `PlaywrightUtils.runInSharedBrowser` takes care of starting a Jeamlit server, launching a headless browser on an available port and navigating to the app page.
-- `WAIT_1_SEC_MAX` means the timeout for the check is 1 second. The default timeout in Playwright is often 30 seconds. A lot of option constants with lower timeout values are provided, just type `WAIT_` in your IDE when filling options of a Playwright method, it should suggest all relevant constants from `io.jeamlit.e2e.helpers.PlaywrightUtils`.
+- `PlaywrightUtils.runInSharedBrowser` takes care of starting a Javelit server, launching a headless browser on an available port and navigating to the app page.
+- `WAIT_1_SEC_MAX` means the timeout for the check is 1 second. The default timeout in Playwright is often 30 seconds. A lot of option constants with lower timeout values are provided, just type `WAIT_` in your IDE when filling options of a Playwright method, it should suggest all relevant constants from `io.javelit.e2e.helpers.PlaywrightUtils`.
 
-The Jeamlit server runs with the test classpath.  
+The Javelit server runs with the test classpath.  
 Test traces are written in the `target/playwright-traces/` folder.
 
 
@@ -61,7 +61,7 @@ Test traces are written in the `target/playwright-traces/` folder.
 ```java
 // run in a shared browser (recommended, faster) 
 // The tests run on different pages in the browser, but the browser is shared so cookies, storage, etc... are shared
-// Thread safe. Each call launches a Jeamlit server.  
+// Thread safe. Each call launches a Javelit server.  
 PlaywrightUtils.runInSharedBrowser(String testName, Path appFile, Consumer<Page> run);
 PlaywrightUtils.runInSharedBrowser(String testName, String app, Consumer<Page> run);
 

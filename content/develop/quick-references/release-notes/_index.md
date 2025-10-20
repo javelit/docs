@@ -8,16 +8,16 @@ ignore: true
 
 # Release notes
 
-This page lists highlights, bug fixes, and known issues for the latest release of Jeamlit. 
+This page lists highlights, bug fixes, and known issues for the latest release of Javelit. 
 {/*
 If you're looking for information about nightly releases or experimental features, see [Pre-release features](/develop/quick-reference/prerelease).
 */}
 
-## Upgrade Jeamlit
+## Upgrade Javelit
 
 <Tip>
 
-Find the latest version of Jeamlit in the [maven central repository](https://central.sonatype.com/artifact/io.jeamlit/jeamlit).
+Find the latest version of Javelit in the [maven central repository](https://central.sonatype.com/artifact/io.javelit/javelit).
 
 </Tip>
 

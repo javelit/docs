@@ -1,18 +1,18 @@
 ---
-title: jeamlit init
+title: javelit init
 slug: /develop/api-reference/cli/init
 draft: true
 ignore: true
 ---
 
-## `$ jeamlit init`
+## `$ javelit init`
 
-This command creates the files for a new Jeamlit app.
+This command creates the files for a new Javelit app.
 
 ### Syntax
 
 ```
-jeamlit init <directory>
+javelit init <directory>
 ```
 
 ### Arguments
@@ -26,42 +26,42 @@ jeamlit init <directory>
 1. In your current working directory (CWD), execute the following:
 
    ```bash
-   jeamlit init
+   javelit init
    ```
 
-   Jeamlit creates the following files:
+   Javelit creates the following files:
 
    ```
    CWD/
    ├── requirements.txt
-   └── jeamlit_app.py
+   └── javelit_app.py
    ```
 
-2. In your terminal, Jeamlit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
+2. In your terminal, Javelit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
 
-   This is equivalent to executing `jeamlit run jeamlit_app.py` from your current working directory.
+   This is equivalent to executing `javelit run javelit_app.py` from your current working directory.
 
-3. Begin editing your `jeamlit_app.py` file and save your changes.
+3. Begin editing your `javelit_app.py` file and save your changes.
 
 #### Example 2: Create project files in another directory
 
 1. In your current working directory (CWD), execute the following:
 
    ```bash
-   jeamlit init project
+   javelit init project
    ```
 
-   Jeamlit creates the following files:
+   Javelit creates the following files:
 
    ```
    CWD/
    └── project/
        ├── requirements.txt
-       └── jeamlit_app.py
+       └── javelit_app.py
    ```
 
-2. In your terminal, Jeamlit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
+2. In your terminal, Javelit prompts, `❓ Run the app now? [Y/n]`. Enter `Y` for yes.
 
-   This is equivalent to executing `jeamlit run project/jeamlit_app.py` from your current working directory.
+   This is equivalent to executing `javelit run project/javelit_app.py` from your current working directory.
 
-3. Begin editing your `jeamlit_app.py` file and save your changes.
+3. Begin editing your `javelit_app.py` file and save your changes.

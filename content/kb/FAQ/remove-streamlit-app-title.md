@@ -1,6 +1,6 @@
 ---
 title: "How to remove \"\xB7 Streamlit\" from the app title?"
-slug: /knowledge-base/using-jeamlit/remove-streamlit-app-title
+slug: /knowledge-base/using-javelit/remove-streamlit-app-title
 ignore: true
 ---
 

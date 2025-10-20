@@ -29,7 +29,7 @@ Understand how buttons work with explanations and examples to avoid common mista
 
 <h5>Dataframes</h5>
 
-Dataframes are a great way to display and edit data in a tabular format. Understand the UI and options available in Jeamlit.
+Dataframes are a great way to display and edit data in a tabular format. Understand the UI and options available in Javelit.
 
 </RefCard>
 
@@ -39,9 +39,9 @@ Dataframes are a great way to display and edit data in a tabular format. Underst
 
 <RefCard href="/develop/concepts/design/custom-classes">
 
-<h5>Using custom Python classes in your Jeamlit app</h5>
+<h5>Using custom Python classes in your Javelit app</h5>
 
-Understand the impact of defining your own Python classes within Jeamlit's rerun model.
+Understand the impact of defining your own Python classes within Javelit's rerun model.
 
 </RefCard>
 
@@ -51,7 +51,7 @@ Understand the impact of defining your own Python classes within Jeamlit's rerun
 
 <h5>Multithreading</h5>
 
-Understand how to use multithreading within Jeamlit apps.
+Understand how to use multithreading within Javelit apps.
 
 </RefCard>
 

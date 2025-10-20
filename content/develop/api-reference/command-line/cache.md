@@ -1,15 +1,15 @@
 ---
-title: jeamlit cache
+title: javelit cache
 slug: /develop/api-reference/cli/cache
 ignore: true
 ---
 
-## `$ jeamlit cache clear`
+## `$ javelit cache clear`
 
-Clear persisted files from the on-disk [Jeamlit cache](/develop/api-reference/caching-and-state), if present.
+Clear persisted files from the on-disk [Javelit cache](/develop/api-reference/caching-and-state), if present.
 
 ### Syntax
 
 ```
-jeamlit cache clear
+javelit cache clear
 ```

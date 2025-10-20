@@ -1,6 +1,6 @@
 ---
 title: How do you retrieve the filename of a file uploaded with st.file_uploader?
-slug: /knowledge-base/using-jeamlit/retrieve-filename-uploaded
+slug: /knowledge-base/using-javelit/retrieve-filename-uploaded
 ignore: true
 ---
 

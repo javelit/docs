@@ -1,11 +1,11 @@
 ---
-title: Jeamlit API cheat sheet
+title: Javelit API cheat sheet
 slug: /develop/quick-reference/cheat-sheet
 ---
 
-# Jeamlit API cheat sheet
+# Javelit API cheat sheet
 
-This is a summary of the docs for the latest version of Jeamlit.
+This is a summary of the docs for the latest version of Javelit.
 
 <Masonry>
 
@@ -17,13 +17,13 @@ This is a summary of the docs for the latest version of Jeamlit.
 <!-- Add to pom.xml -->
 <dependency>
     <groupId>tech.catheu</groupId>
-    <artifactId>jeamlit</artifactId>    
+    <artifactId>javelit</artifactId>    
     <version>${JEAMLIT_VERSION}</version>
 </dependency>
 
 // Import convention
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.Server;
+import io.javelit.core.Jt;
+import io.javelit.core.Server;
 
 Server.builder(MyApp.class, 8080).build().start();
 ```
@@ -34,15 +34,15 @@ Server.builder(MyApp.class, 8080).build().start();
 #### ... or run standalone
 Recommended: use JBang
 ```bash
-jbang app install jeamlit@jeamlit
-jeamlit hello
-jeamlit run MyApp.java
+jbang app install javelit@javelit
+javelit hello
+javelit run MyApp.java
 ```
 Vanilla: run the fat jar
 ```bash
-curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
-java -jar jeamlit.jar hello
-java -jar jeamlit-all.jar run MyApp.java
+curl -L -o javelit.jar https://repo1.maven.org/maven2/io/javelit/javelit/${JEAMLIT_VERSION}/javelit-${JEAMLIT_VERSION}-all.jar
+java -jar javelit.jar hello
+java -jar javelit-all.jar run MyApp.java
 ```
 
 
@@ -54,11 +54,11 @@ java -jar jeamlit-all.jar run MyApp.java
 #### Basic App Structure
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class MyApp {
     public static void main(String[] args) {
-        Jt.title("My Jeamlit App").use();
+        Jt.title("My Javelit App").use();
         Jt.text("Hello World!").use();
     }
 }
@@ -322,7 +322,7 @@ Jt.slider("Disabled").disabled(true).use();
 #### Builder Pattern Examples
 
 ```java
-// All Jeamlit components use builder pattern
+// All Javelit components use builder pattern
 var slider = Jt.slider("Temperature")
     .min(-10.0)
     .max(40.0)
@@ -395,7 +395,7 @@ Double temperature = Jt.slider("Temp")
 #### Complete App Example
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import java.time.LocalDate;
 import java.util.List;
 

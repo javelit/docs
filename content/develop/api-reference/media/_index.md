@@ -5,7 +5,7 @@ slug: /develop/api-reference/media
 
 # Media elements
 
-It's easy to embed images, videos, and audio files directly into your Jeamlit apps.
+It's easy to embed images, videos, and audio files directly into your Javelit apps.
 
 ***Coming soon.***
 

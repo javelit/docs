@@ -1,7 +1,7 @@
 ---
 title: Multipage apps
 slug: /develop/concepts/multipage-apps
-description: Jeamlit provides a simple way to create multipage apps.
+description: Javelit provides a simple way to create multipage apps.
 ---
 
 # Multipage apps
@@ -12,7 +12,7 @@ description: Jeamlit provides a simple way to create multipage apps.
 
 <h5>Overview of multipage apps</h5>
 
-Jeamlit provides multiple ways to define multipage apps. Understand the terminology and basic comparison between methods.
+Javelit provides multiple ways to define multipage apps. Understand the terminology and basic comparison between methods.
 
 </RefCard>
 

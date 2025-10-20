@@ -15,7 +15,7 @@ Learn the fundamental concepts of app deployment. There are three main processes
 - Securely handle your secrets and private information.
 - Remote start your app (`streamlit run`).
 
-If you're using Jeamlit Community Cloud, we'll do most of the work for you!
+If you're using Javelit Community Cloud, we'll do most of the work for you!
 
 */}
 

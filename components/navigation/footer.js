@@ -18,7 +18,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
             Home
           </Link>
           <Link
-            href="mailto:cdecatheu@hey.com?subject=Question%20about%20Jeamlit"
+            href="mailto:cdecatheu@hey.com?subject=Question%20about%20Javelit"
             className={`
               not-link
               ${styles.Link}
@@ -31,7 +31,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               not-link
               ${styles.Link}
             `}
-            href="https://github.com/jeamlit/jeamlit/discussions"
+            href="https://github.com/javelit/javelit/discussions"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,7 +46,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
               not-link
               ${styles.IconLink}
             `}
-            href="https://github.com/jeamlit/jeamlit"
+            href="https://github.com/javelit/javelit"
             target="_blank"
             title="GitHub"
           >
@@ -185,7 +185,7 @@ const Footer = ({ setIsTelemetryModalVisible }) => {
         </section>
         <div className={styles.Copyright}>
           <span>
-            &copy; {new Date().getFullYear()} Jeamlit - Cyril de Catheu
+            &copy; {new Date().getFullYear()} Javelit - Cyril de Catheu
           </span>
           <button
             className="hover:opacity-80 ml-2"

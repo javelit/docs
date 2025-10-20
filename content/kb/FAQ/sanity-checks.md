@@ -1,6 +1,6 @@
 ---
 title: Sanity checks
-slug: /knowledge-base/using-jeamlit/sanity-checks
+slug: /knowledge-base/using-javelit/sanity-checks
 ignore: true
 ---
 

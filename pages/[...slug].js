@@ -72,7 +72,7 @@ import Warning from "../components/blocks/warning";
 import YouTube from "../components/blocks/youTube";
 import Cloud from "../components/blocks/cloud";
 import SnowflakeTrial from "../components/blocks/snowflakeTrial";
-import JeamlitVersion from "../components/utilities/jeamlitVersion";
+import JavelitVersion from "../components/utilities/javelitVersion";
 
 import styles from "../components/layouts/container.module.css";
 
@@ -181,7 +181,7 @@ export default function Article({
     Download,
     Flex,
     SnowflakeTrial,
-    JeamlitVersion,
+    JavelitVersion,
     Autofunction: (props) => (
       <Autofunction
         {...props}
@@ -283,7 +283,7 @@ export default function Article({
         <section className={styles.Container}>
           <SideBar slug={slug} menu={menu} />
           <Head>
-            <title>{data.title + " - Jeamlit Docs"}</title>
+            <title>{data.title + " - Javelit Docs"}</title>
             <link rel="icon" href="/favicon.svg" />
             <link rel="alternate icon" href="/favicon32.ico" />
             <meta name="theme-color" content="#ffffff" />
@@ -304,11 +304,11 @@ export default function Article({
               />
             )}
             <meta
-              content={`${data.title} - Jeamlit Docs`}
+              content={`${data.title} - Javelit Docs`}
               property="og:title"
             />
             <meta
-              content={`${data.title} - Jeamlit Docs`}
+              content={`${data.title} - Javelit Docs`}
               name="twitter:title"
             />
             {data.description && (
@@ -319,7 +319,7 @@ export default function Article({
               </React.Fragment>
             )}
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://docs.jeamlit.io/" />
+            <meta property="og:url" content="https://docs.javelit.io/" />
             <meta content="summary_large_image" name="twitter:card" />
             <meta
               property="og:image"

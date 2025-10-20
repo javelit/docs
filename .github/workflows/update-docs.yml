@@ -30,11 +30,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add python/jeamlit.json public/feed.atom
+          git add python/javelit.json public/feed.atom
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update jeamlit.json api reference and feed"
+            git commit -m "Update javelit.json api reference and feed"
             git push
           fi

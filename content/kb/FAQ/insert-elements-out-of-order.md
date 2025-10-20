@@ -1,6 +1,6 @@
 ---
 title: How to insert elements out of order?
-slug: /knowledge-base/using-jeamlit/insert-elements-out-of-order
+slug: /knowledge-base/using-javelit/insert-elements-out-of-order
 ignore: true
 ---
 

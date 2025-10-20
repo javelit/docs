@@ -41,7 +41,7 @@ site_menu:
     url: /develop/concepts/architecture
   - category: Develop / Concepts / Architecture and execution / Running your app
     url: /develop/concepts/architecture/run-your-app
-  - category: Develop / Concepts / Architecture and execution / Jeamlit's architecture
+  - category: Develop / Concepts / Architecture and execution / Javelit's architecture
     url: /develop/concepts/architecture/architecture
   - category: Develop / Concepts / Architecture and execution / The app chrome
     url: /develop/concepts/architecture/app-chrome
@@ -452,7 +452,7 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Input widgets / Jt.formSubmitButton
-    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.formsubmitbutton
+    url: https://docs.javelit.io/develop/api-reference/execution-flow/jt.formsubmitbutton
     isVersioned: true
   - category: Develop / API reference / Input widgets / st.link_button
     url: /develop/api-reference/widgets/st.link_button
@@ -523,7 +523,7 @@ site_menu:
     ignore: true
   - category: Develop / API reference / Input widgets / TEXT
   - category: Develop / API reference / Input widgets / st.chat_input
-    url: https://docs.jeamlit.io/develop/api-reference/chat/st.chat_input
+    url: https://docs.javelit.io/develop/api-reference/chat/st.chat_input
     isVersioned: true
     visible: false
     ignore: true
@@ -545,7 +545,7 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Input widgets / st.data_editor
-    url: https://docs.jeamlit.io/develop/api-reference/data/st.data_editor
+    url: https://docs.javelit.io/develop/api-reference/data/st.data_editor
     isVersioned: true
     visible: false
     ignore: true
@@ -588,7 +588,7 @@ site_menu:
     url: /develop/api-reference/layout/jt.container
     isVersioned: true
   - category: Develop / API reference / Layouts and containers / st.dialog
-    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/st.dialog
+    url: https://docs.javelit.io/develop/api-reference/execution-flow/st.dialog
     isVersioned: true
     visible: false
     ignore: true
@@ -599,7 +599,7 @@ site_menu:
     url: /develop/api-reference/layout/jt.expander
     isVersioned: true
   - category: Develop / API reference / Layouts and containers / Jt.form
-    url: https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.form
+    url: https://docs.javelit.io/develop/api-reference/execution-flow/jt.form
     isVersioned: true
   - category: Develop / API reference / Layouts and containers / Jt.popover
     url: /develop/api-reference/layout/jt.popover
@@ -627,12 +627,12 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / API reference / Chat elements / st.status
-    url: https://docs.jeamlit.io/develop/api-reference/status/st.status
+    url: https://docs.javelit.io/develop/api-reference/status/st.status
     isVersioned: true
     visible: false
     ignore: true
   - category: Develop / API reference / Chat elements / st.write_stream
-    url: https://docs.jeamlit.io/develop/api-reference/write-magic/st.write_stream
+    url: https://docs.javelit.io/develop/api-reference/write-magic/st.write_stream
     isVersioned: true
     visible: false
     ignore: true
@@ -728,7 +728,7 @@ site_menu:
     url: /develop/api-reference/navigation/jt.page
     isVersioned: true
   - category: Develop / API reference / Navigation and pages / Jt.pageLink
-    url: https://docs.jeamlit.io/develop/api-reference/widgets/jt.pagelink
+    url: https://docs.javelit.io/develop/api-reference/widgets/jt.pagelink
     isVersioned: true
   - category: Develop / API reference / Navigation and pages / Jt.switchPage
     url: /develop/api-reference/navigation/jt.switchpage
@@ -912,7 +912,7 @@ site_menu:
   - category: Develop / API reference / TOOLS
   - category: Develop / API reference / App testing
     # url: /develop/api-reference/app-testing - for the moment no reference, simply linking to the concepts 
-    url: https://docs.jeamlit.io/develop/concepts/app-testing
+    url: https://docs.javelit.io/develop/concepts/app-testing
   - category: Develop / API reference / App testing / st.testing.v1.AppTest
     url: /develop/api-reference/app-testing/st.testing.v1.apptest
     isVersioned: true
@@ -941,15 +941,15 @@ site_menu:
     url: /develop/api-reference/cli/hello
     visible: false
     ignore: true
-  - category: Develop / API reference / Command line / jeamlit --help
+  - category: Develop / API reference / Command line / javelit --help
     url: /develop/api-reference/cli/help
   - category: Develop / API reference / Command line / streamlit init
     url: /develop/api-reference/cli/init
     visible: false
     ignore: true
-  - category: Develop / API reference / Command line / jeamlit run
+  - category: Develop / API reference / Command line / javelit run
     url: /develop/api-reference/cli/run
-  - category: Develop / API reference / Command line / jeamlit --version
+  - category: Develop / API reference / Command line / javelit --version
     url: /develop/api-reference/cli/version
   - category: Develop / Tutorials
     url: /develop/tutorials
@@ -1141,7 +1141,7 @@ site_menu:
     visible: false
     ignore: true
   - category: Develop / Quick reference/ Roadmap
-    url: https://github.com/jeamlit/jeamlit/discussions/39
+    url: https://github.com/javelit/javelit/discussions/39
 
   - category: Deploy
     url: /deploy
@@ -1316,69 +1316,69 @@ site_menu:
     color: acqua-100
     icon: school
   - category: Knowledge base / FAQ
-    url: /knowledge-base/using-jeamlit
+    url: /knowledge-base/using-javelit
   - category: Knowledge base / FAQ / How do I create an anchor link?
-    url: /knowledge-base/using-jeamlit/create-anchor-link
+    url: /knowledge-base/using-javelit/create-anchor-link
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Enabling camera access in your browser
-    url: /knowledge-base/using-jeamlit/enable-camera
+    url: /knowledge-base/using-javelit/enable-camera
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to download a file in Streamlit?
-    url: /knowledge-base/using-jeamlit/how-download-file-streamlit
+    url: /knowledge-base/using-javelit/how-download-file-streamlit
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to download a Pandas DataFrame as a CSV?
-    url: /knowledge-base/using-jeamlit/how-download-pandas-dataframe-csv
+    url: /knowledge-base/using-javelit/how-download-pandas-dataframe-csv
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How do I upgrade to the latest version of Streamlit?
-    url: /knowledge-base/using-jeamlit/how-upgrade-latest-version-streamlit
+    url: /knowledge-base/using-javelit/how-upgrade-latest-version-streamlit
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to insert elements out of order?
-    url: /knowledge-base/using-jeamlit/insert-elements-out-of-order
+    url: /knowledge-base/using-javelit/insert-elements-out-of-order
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How can I make st.pydeck_chart use custom Mapbox styles?
-    url: /knowledge-base/using-jeamlit/pydeck-chart-custom-mapbox-styles
+    url: /knowledge-base/using-javelit/pydeck-chart-custom-mapbox-styles
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How to remove "· Streamlit" from the app title?
-    url: /knowledge-base/using-jeamlit/remove-streamlit-app-title
+    url: /knowledge-base/using-javelit/remove-streamlit-app-title
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How do you retrieve the filename of a file uploaded with st.file_uploader?
-    url: /knowledge-base/using-jeamlit/retrieve-filename-uploaded
+    url: /knowledge-base/using-javelit/retrieve-filename-uploaded
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Sanity checks
-    url: /knowledge-base/using-jeamlit/sanity-checks
+    url: /knowledge-base/using-javelit/sanity-checks
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / How can I make Streamlit watch for changes in other modules I'm importing in my app?
-    url: /knowledge-base/using-jeamlit/streamlit-watch-changes-other-modules-importing-app
+    url: /knowledge-base/using-javelit/streamlit-watch-changes-other-modules-importing-app
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / What browsers does Streamlit support?
-    url: /knowledge-base/using-jeamlit/supported-browsers
+    url: /knowledge-base/using-javelit/supported-browsers
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Where does st.file_uploader store uploaded files and when do they get deleted?
-    url: /knowledge-base/using-jeamlit/where-file-uploader-store-when-deleted
+    url: /knowledge-base/using-javelit/where-file-uploader-store-when-deleted
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Widget updating for every second input when using session state
-    url: /knowledge-base/using-jeamlit/widget-updating-session-state
+    url: /knowledge-base/using-javelit/widget-updating-session-state
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / Why does Streamlit restrict nested st.columns?
-    url: /knowledge-base/using-jeamlit/why-streamlit-restrict-nested-columns
+    url: /knowledge-base/using-javelit/why-streamlit-restrict-nested-columns
     visible: false
     ignore: true
   - category: Knowledge base / FAQ / What is serializable session state?
-    url: /knowledge-base/using-jeamlit/serializable-session-state
+    url: /knowledge-base/using-javelit/serializable-session-state
     visible: false
     ignore: true  
   - category: Knowledge base / Installing dependencies

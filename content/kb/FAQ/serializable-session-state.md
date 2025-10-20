@@ -1,6 +1,6 @@
 ---
 title: What is serializable session state?
-slug: /knowledge-base/using-jeamlit/serializable-session-state
+slug: /knowledge-base/using-javelit/serializable-session-state
 ignore: true
 ---
 

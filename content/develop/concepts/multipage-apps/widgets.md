@@ -6,8 +6,8 @@ description: Understand how widgets interact with pages
 
 # Working with widgets in multipage apps
 
-When you create a widget in a Jeamlit app, Jeamlit generates a widget ID and uses it to make your widget stateful. 
-As your app reruns with user interaction, Jeamlit keeps track of the widget's value by associating its value to its ID. 
+When you create a widget in a Javelit app, Javelit generates a widget ID and uses it to make your widget stateful. 
+As your app reruns with user interaction, Javelit keeps track of the widget's value by associating its value to its ID. 
 In particular, a widget's ID depends on the page where it's created. 
 
 This guide explains three strategies to deal with the behavior if you'd like to have a widget remain stateful across 
@@ -18,7 +18,7 @@ see [Understanding widget behavior](/develop/concepts/architecture/widget-behavi
 ## Option 1: Execute your widget command in your entrypoint file
 
 When you define your multipage app with `Jt.page` and `Jt.navigation`, your entrypoint file becomes a frame of common 
-elements around your pages. When you execute a widget command in your entrypoint file, Jeamlit associates the widget 
+elements around your pages. When you execute a widget command in your entrypoint file, Javelit associates the widget 
 to your entrypoint file instead of a particular page. Since your entrypoint file is executed in every app rerun, any 
 widget in your entrypoint file will remain stateful as your users switch between pages.
 
@@ -37,7 +37,7 @@ your-repository/
 **`App.java`:**
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main() {
@@ -60,5 +60,5 @@ and in the [Session State and Components State advanced concepts](/develop/conce
 
 Here is an example:
 ```
-jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/WidgetPersistenceMultiPage.java
+javelit run https://raw.githubusercontent.com/javelit/javelit/refs/heads/main/examples/WidgetPersistenceMultiPage.java
 ```

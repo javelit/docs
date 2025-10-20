@@ -11,7 +11,7 @@ slug: /develop/quick-reference
 
 <h5>Cheatsheet</h5>
 
-A dense list of Jeamlit commands with example syntax.
+A dense list of Javelit commands with example syntax.
 
 </RefCard>
 
@@ -21,7 +21,7 @@ A dense list of Jeamlit commands with example syntax.
 
 <h5>Release notes</h5>
 
-See how Jeamlit has changed with each new version.
+See how Javelit has changed with each new version.
 
 </RefCard>
 
@@ -35,7 +35,7 @@ Understand how we introduce new features and how you can get your hands on them 
 
 */}
 
-<RefCard href="https://github.com/jeamlit/jeamlit/discussions/39">
+<RefCard href="https://github.com/javelit/javelit/discussions/39">
 
 <h5>Roadmap</h5>
 

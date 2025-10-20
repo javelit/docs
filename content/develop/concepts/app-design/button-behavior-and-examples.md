@@ -21,8 +21,8 @@ This is because the app reruns and the button return value becomes `False`.
 In this guide, we will illustrate the use of buttons and explain common misconceptions. Read on to see a variety of 
 examples that expand on `Jt.button` using [`Jt.sessionState`](/develop/api-reference/caching-and-state/jt.sessionstate). 
 [Anti-patterns](#anti-patterns) are included at the end. Go ahead and pull up your favorite code editor so you 
-can `jeamlit run` the examples as you read. Check out Jeamlit's [Basic concepts](/get-started/fundamentals/main-concepts) 
-if you haven't run your own Jeamlit apps yet.
+can `javelit run` the examples as you read. Check out Javelit's [Basic concepts](/get-started/fundamentals/main-concepts) 
+if you haven't run your own Javelit apps yet.
 
 ## When to use `if (Jt.button().use())`
 
@@ -54,7 +54,7 @@ If you want to give the user a quick button to check if an entry is valid, but n
 In this example, a user can click a button to check if their `animal` string is in the `animal_shelter` list. When the user clicks "**Check availability**" they will see "We have that animal!" or "We don't have that animal." If they change the animal in [`Jt.textInput`](/develop/api-reference/widgets/jt.textinput), the app reruns and the message disappears until they click "**Check availability**" again.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import java.util.List;
 
 public class App {
@@ -77,7 +77,7 @@ public class App {
 If you want a clicked button to continue to be `True`, create a value in `Jt.sessionState()` and use the button to set that value to `True` in a callback.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -105,7 +105,7 @@ Otherwise, you can use a button with a callback function to reverse a boolean va
 In this example, we use `Jt.button` to toggle another widget on and off. By displaying [`Jt.slider`](/develop/api-reference/widgets/jt.slider) conditionally on a value in `Jt.sessionState()`, the user can interact with the slider without it disappearing.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -132,7 +132,7 @@ public class App {
 Alternatively, you can use the value in `Jt.sessionState()` on the slider's `disabled` parameter.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -166,7 +166,7 @@ other widgets used in stage 1 and 2 have callbacks to set the stage. If you have
 want to keep previous stages visible, such a callback forces a user to retrace subsequent stages if they change an earlier widget.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import java.util.List;
 
 public class TestApp {
@@ -230,7 +230,7 @@ executes the button function, that is when the conditional code to update `Jt.se
 this change is reflected after the button.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class TestApp {
     public static void main(String[] args) {
@@ -259,7 +259,7 @@ Callbacks are a clean way to modify `Jt.sessionState()`. Callbacks are executed 
 the position of the button relative to accessing data is not important.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -288,7 +288,7 @@ the button that modifies it, you can include `Jt.rerun()` to rerun the app after
 This means the app will rerun twice when a button is clicked.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -322,7 +322,7 @@ on the page for the current script run.
 Don't do this!
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class TestApp {
     public static void main(String[] args) {
@@ -343,7 +343,7 @@ public class TestApp {
 Callbacks are triggered when the user interacts with the button and always run before the rest of script.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -363,7 +363,7 @@ This means that logic depending on your button can be in your app before that bu
 we use the `getOrDefault()` method on `Jt.componentsState()` because the keys for the buttons will not exist when the app runs for the first time.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -379,11 +379,11 @@ public class App {
 ```
 
 #### Option 3: Use containers
-Jeamlit always executes top-to-bottom, but you can place components out-of-order with [containers](/develop/api-reference/layout/jt.container). 
+Javelit always executes top-to-bottom, but you can place components out-of-order with [containers](/develop/api-reference/layout/jt.container). 
 
 ```java
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.JtContainer;
+import io.javelit.core.Jt;
+import io.javelit.core.JtContainer;
 
 public class App {
     public static void main(String[] args) {
@@ -407,7 +407,7 @@ That function accepts an `index` as a parameter. The widgets rendered by `displa
 keys so that `displayInputRow` can be executed multiple times on a single app rerun without repeating any widget keys.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
 
@@ -449,8 +449,8 @@ Also save the results into a cache to avoid recomputing each time. Depending on 
 `Jt.cache()` or a [custom cache](/develop/concepts/architecture/caching#controlling-cache-size-and-duration).
 
 ```java
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.JtContainer;
+import io.javelit.core.Jt;
+import io.javelit.core.JtContainer;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -501,7 +501,7 @@ Here are some simplified examples of how buttons can go wrong. Be on the lookout
 ### Buttons nested inside buttons
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -519,7 +519,7 @@ public class App {
 ### Other widgets nested inside buttons
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
     public static void main(String[] args) {
@@ -538,7 +538,7 @@ public class App {
 ### Nesting a process inside a button without saving to session state
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import java.io.File;
 
 public class App {

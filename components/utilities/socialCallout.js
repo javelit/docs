@@ -30,7 +30,7 @@ const SocialCallout = () => {
             <article>
               <h5 className={styles.Subtitle}>GitHub</h5>
               <p className={styles.Text}>
-                View the Jeamlit source code and issue tracker.
+                View the Javelit source code and issue tracker.
               </p>
             </article>
           </a>
@@ -155,7 +155,7 @@ const SocialCallout = () => {
             </div>
             <article>
               <h5 className={styles.Subtitle}>Newsletter</h5>
-              <p className={styles.Text}>Subscribe to the Jeamlit dev diary</p>
+              <p className={styles.Text}>Subscribe to the Javelit dev diary</p>
             </article>
           </a>
         </li>

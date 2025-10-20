@@ -24,7 +24,7 @@ Updatable elements include the following:
 
 ## `Jt.empty` containers
 
-`Jt.empty` can hold a single element. When you write any element to a `Jt.empty` container, Jeamlit discards its previous content and 
+`Jt.empty` can hold a single element. When you write any element to a `Jt.empty` container, Javelit discards its previous content and 
 displays the new element. {/* TODO IMPLEMENT REMOVE EMPTY You can also `Jt.empty` containers by calling `.empty()` as a method. */} 
 If you want to update a set of elements, use
 a plain container (`Jt.container()`) inside `Jt.empty` and write contents to the plain container. Rewrite the plain container and its

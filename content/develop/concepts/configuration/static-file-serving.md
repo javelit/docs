@@ -5,7 +5,7 @@ slug: /develop/concepts/configuration/serving-static-files
 
 # Static file serving
 
-Jeamlit apps can host and serve small, static media files to support media embedding use cases that
+Javelit apps can host and serve small, static media files to support media embedding use cases that
 won't work with the normal [media elements](/develop/api-reference/media).
 
 
@@ -29,12 +29,12 @@ In **Embedded** mode, it is the folder `./static/` relative to the ***resources*
     Any other file will be sent with header `Content-Type:text/plain` which will cause browsers to render in plain text.
     This is included for security - other file types that need to render should be hosted outside the app.
     */}
-- Jeamlit sets `X-Content-Type-Options:nosniff` for all files rendered from the static directory.
-- Jeamlit sets `Cache-Control: max-age=3600` for all files. This means static files are cached 1 hour by the browser. If you edit a static file, empty your browser cache to get the newest version.
+- Javelit sets `X-Content-Type-Options:nosniff` for all files rendered from the static directory.
+- Javelit sets `Cache-Control: max-age=3600` for all files. This means static files are cached 1 hour by the browser. If you edit a static file, empty your browser cache to get the newest version.
 
 
 {/* CLOUD not supported
-- For apps running on Jeamlit Community Cloud:
+- For apps running on Javelit Community Cloud:
   - Files available in the Github repo will always be served. Any files generated while the app is running,
     such as based on user interaction (file upload, etc), are not guaranteed to persist across user sessions.
   - Apps which store and serve many files, or large files, may run into resource limits and be shut down.
@@ -43,12 +43,12 @@ In **Embedded** mode, it is the folder `./static/` relative to the ***resources*
 ## Example usage
 
 - Put an image `cat.png` in the folder `./static/`
-{/*- Add `enableStaticServing = true` under `[server]` in your `.jeamlit/config.toml`*/}
+{/*- Add `enableStaticServing = true` under `[server]` in your `.javelit/config.toml`*/}
 - Any media in the `./static/` folder is served at the relative URL like `app/static/cat.png`
 
 {/*
 ```toml
-# .jeamlit/config.toml
+# .javelit/config.toml
 
 [server]
 enableStaticServing = true
@@ -56,7 +56,7 @@ enableStaticServing = true
 */}
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class StaticExample  {
     public static void main(String[] args) {
@@ -70,7 +70,7 @@ public class StaticExample  {
 {/*
 Additional resources:
 
-- [https://docs.jeamlit.io/develop/concepts/configuration](https://docs.jeamlit.io/develop/concepts/configuration)
+- [https://docs.javelit.io/develop/concepts/configuration](https://docs.javelit.io/develop/concepts/configuration)
 - [https://static-file-serving.streamlit.app/](https://static-file-serving.streamlit.app/)
 
 <Cloud name="static-file-serving" height="1000px" />

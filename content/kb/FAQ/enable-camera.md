@@ -1,6 +1,6 @@
 ---
 title: Enabling camera or microphone access in your browser
-slug: /knowledge-base/using-jeamlit/enable-camera
+slug: /knowledge-base/using-javelit/enable-camera
 ignore: true
 ---
 

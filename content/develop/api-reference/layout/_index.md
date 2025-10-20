@@ -7,7 +7,7 @@ slug: /develop/api-reference/layout
 
 ## Complex layouts
 
-Jeamlit provides several options for controlling how different elements are laid out on the screen.
+Javelit provides several options for controlling how different elements are laid out on the screen.
 
 <TileContainer>
 <RefCard href="/develop/api-reference/layout/jt.columns">

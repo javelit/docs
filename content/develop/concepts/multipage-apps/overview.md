@@ -9,7 +9,7 @@ description: Understand Streamlit's features for creating multipage apps
 ## `Jt.page` and `Jt.navigation`
 
 With `Jt.navigation` and `Jt.page` you can declare any Java class {/* TODO implement callable support or `Callable` */} 
-as a page in your app. Furthermore, you can define common elements for your pages in your entrypoint file (the file you pass to `jeamlit run`). 
+as a page in your app. Furthermore, you can define common elements for your pages in your entrypoint file (the file you pass to `javelit run`). 
 With these methods, your entrypoint file becomes like a picture frame shared by all your pages.
 
 You must include `Jt.navigation` in your entrypoint file to configure your app's navigation menu. This is also how 
@@ -40,12 +40,12 @@ Typically, the page icon and favicon are the same, but it's possible make them d
 
 ## Automatic page labels and URLs
 
-If you use `Jt.page` without declaring the page title or URL pathname, Jeamlit automatically determines 
+If you use `Jt.page` without declaring the page title or URL pathname, Javelit automatically determines 
 the page title and URL path based on the Class name. This section describes this naming convention.
 
 For example, `Jt.page(MyPage.class)` will have: 
-- **title**: `My Page` → Jeamlit assumes Camel Case
-- **url path**: `/MyPage` → Jeamlit simply uses the class simple name
+- **title**: `My Page` → Javelit assumes Camel Case
+- **url path**: `/MyPage` → Javelit simply uses the class simple name
 
 ## Navigating between pages
 
@@ -64,7 +64,7 @@ Users can also navigate between pages using URLs as noted above.
 <Important>
     Navigating between pages by URL creates a new browser session. In particular, clicking markdown links to other pages 
 resets the [Session State](/develop/concepts/architecture/session-state). In order to retain values in 
-`Jt.session_state`, handle page switching through Jeamlit navigation commands and widgets, like `Jt.navigation`, 
+`Jt.session_state`, handle page switching through Javelit navigation commands and widgets, like `Jt.navigation`, 
 `Jt.switchPage`, `Jt.pageLink`, and the built-in navigation menu.
 </Important>
 

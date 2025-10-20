@@ -1,14 +1,14 @@
 ---
-title: jeamlit version
+title: javelit version
 slug: /develop/api-reference/cli/version
 ---
 
-## `$ jeamlit version`
+## `$ javelit version`
 
-Print Jeamlit's version number. This command is equivalent to executing `jeamlit --version`.
+Print Javelit's version number. This command is equivalent to executing `javelit --version`.
 
 ### Syntax
 
 ```
-jeamlit version
+javelit version
 ```

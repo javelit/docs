@@ -11,7 +11,7 @@ with tabs[0]:
         st.subheader("Form")
         st.text_input("Text input")
         st.form_submit_button("Submit button")
-    st.link_button("Link button", url="https://jeamlit.io", icon=":material/open_in_new:")
+    st.link_button("Link button", url="https://javelit.io", icon=":material/open_in_new:")
     st.page_link("widgets.py", label="Page link (this page)", icon=":material/my_location:")
     st.page_link("text.py", label="Page link (next page)", icon=":material/skip_next:")
 

@@ -19,8 +19,8 @@ frame-ancestors 'self' ; \
 frame-src https: ; \
 connect-src \
   'self' \
-  https://*.jeamlit.app/ \
-  wss://*.jeamlit.app/ \
+  https://*.javelit.app/ \
+  wss://*.javelit.app/ \
   https://*.streamlit.app/ \
   wss://*.streamlit.app/ \
   https://streamlit.ghost.io/ghost/api/ \

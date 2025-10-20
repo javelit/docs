@@ -66,11 +66,11 @@ const NavChild = ({ slug, page, color, className }) => {
   let url = page.url || ""; //Unset or empty url designates a divider
 
   const isRelativePath = url.startsWith("/");
-  // Passing an absolute, docs.jeamlit.io path indicates a duplicate or
+  // Passing an absolute, docs.javelit.io path indicates a duplicate or
   // cross-link in the menu. The full https:// path is required to simplify
   // string replacement later when it is converted to a relative path (for
   // performance and versioning).
-  const isAbsolutePath = url.startsWith("https://docs.jeamlit.io");
+  const isAbsolutePath = url.startsWith("https://docs.javelit.io");
   const isDivider = url === "";
   const isExternal = !isRelativePath && !isAbsolutePath && !isDivider;
 
@@ -80,7 +80,7 @@ const NavChild = ({ slug, page, color, className }) => {
   }
 
   if (isAbsolutePath) {
-    url = url.replace("https://docs.jeamlit.io", "");
+    url = url.replace("https://docs.javelit.io", "");
     icon = <i className={styles.CrossLinkedIcon}>link</i>;
   }
 

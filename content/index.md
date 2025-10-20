@@ -1,5 +1,5 @@
 ---
-title: Welcome to Jeamlit
+title: Welcome to Javelit
 features:
   - title: Get started
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -78,4 +78,4 @@ news:
 next: get-started
 ---
 
-[Jeamlit](https://jeamlit.io) is an open-source Java library that makes it easy to create and share beautiful, custom web apps for machine learning, data science, and admin. In just a few minutes you can build and deploy powerful data apps - so let’s get started!
+[Javelit](https://javelit.io) is an open-source Java library that makes it easy to create and share beautiful, custom web apps for machine learning, data science, and admin. In just a few minutes you can build and deploy powerful data apps - so let’s get started!

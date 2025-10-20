@@ -45,7 +45,7 @@ def process_markdown_files(content_dir: Path) -> List[Dict[str, Optional[str]]]:
             if not url:
                 continue
 
-            url = f"https://docs.jeamlit.io{url}"
+            url = f"https://docs.javelit.io{url}"
 
             # Add to catalog
             content_catalog.append({"url": url, "content": post.content})

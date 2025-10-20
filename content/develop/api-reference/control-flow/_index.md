@@ -7,7 +7,7 @@ slug: /develop/api-reference/execution-flow
 
 ## Change execution
 
-By default, Jeamlit apps execute the script entirely, but we allow some functionality to handle control flow in your applications.
+By default, Javelit apps execute the script entirely, but we allow some functionality to handle control flow in your applications.
 
 <TileContainer>
 
@@ -80,7 +80,7 @@ st.stop()
 
 ## Group multiple widgets
 
-By default, Jeamlit reruns your script everytime a user interacts with your app.
+By default, Javelit reruns your script everytime a user interacts with your app.
 However, sometimes it's a better user experience to wait until a group of related
 widgets is filled before actually rerunning the script. That's what `Jt.form` is for!
 

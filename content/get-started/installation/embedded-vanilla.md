@@ -1,19 +1,19 @@
 ---
-title: Embed Jeamlit in a Maven/Gradle project
+title: Embed Javelit in a Maven/Gradle project
 slug: /get-started/installation/embedded-vanilla
 ---
 
 <Note>
-Prefer to read code directly? Take a look at the [corresponding example project](https://github.com/jeamlit/jeamlit-example-embedded-maven) on GitHub.
+Prefer to read code directly? Take a look at the [corresponding example project](https://github.com/javelit/javelit-example-embedded-maven) on GitHub.
 </Note>
 
 
-# Jeamlit Embedded
+# Javelit Embedded
 
-This method embeds Jeamlit as a dependency in your existing Maven or Gradle project.
+This method embeds Javelit as a dependency in your existing Maven or Gradle project.
 This method is best for complex apps, existing systems, and production deployments.
 
-This page will walk you through adding Jeamlit to your Maven or Gradle project, creating a simple interactive app, and launching an embedded server. You'll build the same click counter app but with full control over the server lifecycle.
+This page will walk you through adding Javelit to your Maven or Gradle project, creating a simple interactive app, and launching an embedded server. You'll build the same click counter app but with full control over the server lifecycle.
 
 ## Prerequisites
 
@@ -35,19 +35,19 @@ As with any Java project, you'll need:
 
 3. **An IDE (recommended)**
 
-   We recommend [IntelliJ IDEA](https://www.jetbrains.com/idea/) for the best hot-reload experience with Jeamlit.
+   We recommend [IntelliJ IDEA](https://www.jetbrains.com/idea/) for the best hot-reload experience with Javelit.
 
 ## Setup
 
 ### With Maven
 
-1. Add the Jeamlit dependency to your `pom.xml`:
+1. Add the Javelit dependency to your `pom.xml`:
 
    ```xml
    <dependencies>
     <dependency>
-        <groupId>io.jeamlit</groupId>
-        <artifactId>jeamlit</artifactId>
+        <groupId>io.javelit</groupId>
+        <artifactId>javelit</artifactId>
         <version>${JEAMLIT_VERSION}</version>
     </dependency>
 
@@ -79,11 +79,11 @@ As with any Java project, you'll need:
 
 ### With Gradle
 
-1. Add the Jeamlit dependency to your `build.gradle`:
+1. Add the Javelit dependency to your `build.gradle`:
 
    ```gradle
    dependencies {
-    implementation 'io.jeamlit:jeamlit:${JEAMLIT_VERSION}'
+    implementation 'io.javelit:javelit:${JEAMLIT_VERSION}'
     // Optional: Add any other dependencies your app needs
     implementation 'org.apache.commons:commons-math3:3.6.1'
 
@@ -102,12 +102,12 @@ As with any Java project, you'll need:
    }
    ```
 
-## Create your Jeamlit app
+## Create your Javelit app
 
-1. Create `src/main/java/App.java` with your Jeamlit application:
+1. Create `src/main/java/App.java` with your Javelit application:
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class App {
@@ -146,7 +146,7 @@ public class App {
 2. Create `src/main/java/Launcher.java` to start the embedded server:
 
 ```java
-import io.jeamlit.core.Server;
+import io.javelit.core.Server;
 
 public class Launcher {
 
@@ -166,7 +166,7 @@ public class Launcher {
    ./mvnw clean install
    ```
 
-2. Run the Jeamlit server:
+2. Run the Javelit server:
    ```bash
    ./mvnw compile exec:java -Dexec.mainClass="Launcher"
    ```
@@ -182,7 +182,7 @@ public class Launcher {
    ./gradlew build
    ```
 
-2. Run the Jeamlit server:
+2. Run the Javelit server:
    ```bash
    ./gradlew run --main-class=Launcher
    ```
@@ -208,5 +208,5 @@ public class Launcher {
 
 
 ## What's next?
-Read about our [Basic concepts](/get-started/fundamentals/main-concepts) to understand Jeamlit's dataflow model
+Read about our [Basic concepts](/get-started/fundamentals/main-concepts) to understand Javelit's dataflow model
 

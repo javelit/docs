@@ -9,13 +9,13 @@ const Psa = () => {
         <p className={styles.Text}>
           Go to our{" "}
           <a
-            href="https://github.com/jeamlit/jeamlit/discussions"
+            href="https://github.com/javelit/javelit/discussions"
             target="_blank"
             className={styles.Link}
           >
             discussions forum
           </a>{" "}
-          for helpful information and advice from Jeamlit experts.
+          for helpful information and advice from Javelit experts.
         </p>
       </article>
     </section>

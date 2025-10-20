@@ -1,6 +1,6 @@
 ---
 title: What browsers does Streamlit support?
-slug: /knowledge-base/using-jeamlit/supported-browsers
+slug: /knowledge-base/using-javelit/supported-browsers
 ignore: true
 ---
 

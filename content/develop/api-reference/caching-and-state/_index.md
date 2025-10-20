@@ -9,7 +9,7 @@ Optimize performance and add statefulness to your app!
 
 ## Caching
 
-Jeamlit provides powerful [cache primitives](/develop/concepts/architecture/caching) for data and global resources. 
+Javelit provides powerful [cache primitives](/develop/concepts/architecture/caching) for data and global resources. 
 They allow your app to stay performant even when loading data from the web, manipulating large datasets, or performing expensive computations.
 
 <TileContainer>
@@ -34,7 +34,7 @@ var conn = Jt.cache().computeIfAbsent("connection", k -> connectToDb());
 
 ## Browser and server state
 
-Jeamlit re-executes your script with each user interaction. 
+Javelit re-executes your script with each user interaction. 
 Widgets have built-in statefulness between reruns, but Session State lets you do more!
 
 <TileContainer>

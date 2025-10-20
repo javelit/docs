@@ -2,7 +2,7 @@ import streamlit as st
 
 st.markdown(
     """This is Markdown test. This is `inline code` in Markdown.
-    This is a link to the [Streamlit docs](https://docs.jeamlit.io).
+    This is a link to the [Streamlit docs](https://docs.javelit.io).
     """
 )
 st.code("""import streamlit as st\n\nst.write("Hello World!")""")
@@ -13,7 +13,7 @@ with cols[0]:
 with cols[1]:
     st.button("Secondary button")
 with cols[2]:
-    st.link_button("Link button", "https://docs.jeamlit.io", icon=":material/open_in_new:")
+    st.link_button("Link button", "https://docs.javelit.io", icon=":material/open_in_new:")
 
 with st.sidebar:
     st.number_input("Count", 0, 100, 50)

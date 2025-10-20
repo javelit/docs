@@ -22,11 +22,11 @@ send their updated values to the Java backend.
 <Tip>
 Run the example above with:
 ```bash
-jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/form/FormExample.java
+javelit run https://raw.githubusercontent.com/javelit/javelit/refs/heads/main/examples/form/FormExample.java
 ```
 </Tip>
 
-{/* TODO create gif for jeamlit - avoir reusing streamlit example */}
+{/* TODO create gif for javelit - avoir reusing streamlit example */}
 
 {/*
 
@@ -88,7 +88,7 @@ if (formSubmitted) {
 
 ## Data flow
 
-The purpose of a form is to override the default behavior of Jeamlit which reruns a script as soon as the user makes a change. For widgets outside of a form, the logical flow is:
+The purpose of a form is to override the default behavior of Javelit which reruns a script as soon as the user makes a change. For widgets outside of a form, the logical flow is:
 
 1. The user changes a widget's value on the frontend.
 2. The widget's value in `Jt.sessionState` and in the Java backend (server) is updated.

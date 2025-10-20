@@ -7,10 +7,10 @@ slug: /develop/api-reference/data
 
 When you're working with data, it is extremely valuable to visualize that
 data quickly, interactively, and from multiple different angles. That's what
-Jeamlit is actually built and optimized for.
+Javelit is actually built and optimized for.
 
 You can display data via [charts](/develop/api-reference/charts), and you can display it in
-raw form. These are the Jeamlit commands you can use to display and interact with raw data.
+raw form. These are the Javelit commands you can use to display and interact with raw data.
 
 <TileContainer>
 

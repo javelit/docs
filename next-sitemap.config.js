@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_HOSTNAME || "https://docs.jeamlit.io",
+  siteUrl: process.env.NEXT_PUBLIC_HOSTNAME || "https://docs.javelit.io",
   generateRobotsTxt: false,
   exclude: [
     "/menu",

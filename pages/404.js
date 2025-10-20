@@ -12,26 +12,26 @@ export default function Home({ window, menu }) {
   return (
     <Layout window={window}>
       <Head>
-        <title>404 | Jeamlit Docs</title>
+        <title>404 | Javelit Docs</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="alternate icon" href="/favicon32.ico" />
         <meta name="theme-color" content="#ffffff" />
         <meta
-          content="Jeamlit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
+          content="Javelit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
           name="description"
         />
-        <meta content="Jeamlit Docs" property="og:title" />
+        <meta content="Javelit Docs" property="og:title" />
         <meta
-          content="Jeamlit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
+          content="Javelit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
           property="og:description"
         />
-        <meta content="Jeamlit Docs" name="twitter:title" />
+        <meta content="Javelit Docs" name="twitter:title" />
         <meta
-          content="Jeamlit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
+          content="Javelit is an open-source app framework for backend, data and ML teams. Create beautiful data apps in hours, not weeks. All in pure Java. All for free."
           name="twitter:description"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://docs.jeamlit.io/" />
+        <meta property="og:url" content="https://docs.javelit.io/" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta
           property="og:image"

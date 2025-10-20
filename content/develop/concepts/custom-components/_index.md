@@ -8,7 +8,7 @@ slug: /develop/concepts/custom-components
 Implementing a custom component is as simple as extending the `JtComponent` abstract class.
 
 <Tip>
-Work in progress. In the meantime, reach out on the [forum](https://github.com/jeamlit/jeamlit/discussions/) to get help. 
+Work in progress. In the meantime, reach out on the [forum](https://github.com/javelit/javelit/discussions/) to get help. 
 </Tip>
 
 {/* ADD COMMUNITY COMPONENTS LINK 

@@ -1,17 +1,17 @@
 ---
-title: Advanced concepts of Jeamlit
+title: Advanced concepts of Javelit
 slug: /get-started/fundamentals/advanced-concepts
 ---
 
-# Advanced concepts of Jeamlit
+# Advanced concepts of Javelit
 
-Now that you know how a Jeamlit app runs and handles data, let's talk about being efficient. Caching allows you to save the output of a function so you can skip over it on rerun. Session State lets you save information for each user that is preserved between reruns. This not only allows you to avoid unecessary recalculation, but also allows you to create dynamic pages and handle progressive processes.
+Now that you know how a Javelit app runs and handles data, let's talk about being efficient. Caching allows you to save the output of a function so you can skip over it on rerun. Session State lets you save information for each user that is preserved between reruns. This not only allows you to avoid unecessary recalculation, but also allows you to create dynamic pages and handle progressive processes.
 
 ## Caching
 
 Caching allows your app to stay performant even when loading data from the web, manipulating large datasets, or performing expensive computations.
 
-To cache a value in Jeamlit, you simply need to put it in a dedicated `Map` that is shared between all users: `Jt.cache()`.
+To cache a value in Javelit, you simply need to put it in a dedicated `Map` that is shared between all users: `Jt.cache()`.
 
 Example:
 
@@ -56,14 +56,14 @@ Remember that widgets handle their statefulness all by themselves, so you won't 
 
 ### What is a session?
 
-A session is a single instance of viewing an app. If you view an app from two different tabs in your browser, each tab will have its own session. So each viewer of an app will have a Session State tied to their specific view. Jeamlit maintains this session as the user interacts with the app. If the user refreshes their browser page or reloads the URL to the app, their Session State resets and they begin again with a new session.
+A session is a single instance of viewing an app. If you view an app from two different tabs in your browser, each tab will have its own session. So each viewer of an app will have a Session State tied to their specific view. Javelit maintains this session as the user interacts with the app. If the user refreshes their browser page or reloads the URL to the app, their Session State resets and they begin again with a new session.
 
 ### Examples of using Session State
 
 Here's a simple app that counts the number of times the page has been run. Every time you click the button, the script will rerun.
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class TestApp {
 
@@ -78,7 +78,7 @@ public class TestApp {
 }
 ```
 
-- **First run:** The first time the app runs for each user, Session State is empty. Therefore, a key-value pair is created (`"counter":0`). As the method continues, the counter is immediately incremented (`"counter":1`) and the result is displayed: "This page has run 1 times." When the page has fully rendered, the script has finished and the Jeamlit server waits for the user to do something. When that user clicks the button, a rerun begins.
+- **First run:** The first time the app runs for each user, Session State is empty. Therefore, a key-value pair is created (`"counter":0`). As the method continues, the counter is immediately incremented (`"counter":1`) and the result is displayed: "This page has run 1 times." When the page has fully rendered, the script has finished and the Javelit server waits for the user to do something. When that user clicks the button, a rerun begins.
 
 - **Second run:** Since "counter" is already a key in Session State, it is not reinitialized. As the script continues, the counter is incremented (`"counter":2`) and the result is displayed: "This page has run 2 times."
 
@@ -91,13 +91,13 @@ If you are pulling the same data for all users, you'd likely put the value in th
 
 As mentioned in [Basic concepts](/get-started/fundamentals/main-concepts#widgets), widgets work in a similar way as Session State, but widgets states are handled automatically. 
 As an advanced feature however, you can read their values from the Components State `Map` with `Jt.componentsState()`. 
-After you finish understanding the basics of Jeamlit, check out our guide on [Widget behavior](/develop/concepts/architecture/widget-behavior) to dig in the details if you're interested.
+After you finish understanding the basics of Javelit, check out our guide on [Widget behavior](/develop/concepts/architecture/widget-behavior) to dig in the details if you're interested.
 
 
 {/* TODO 
 ## Connections
 
-As hinted above, you can use `@st.cache_resource` to cache connections. This is the most general solution which allows you to use almost any connection from any Python library. However, Jeamlit also offers a convenient way to handle some of the most popular connections, like SQL! `st.connection` takes care of the caching for you so you can enjoy fewer lines of code. Getting data from your database can be as easy as:
+As hinted above, you can use `@st.cache_resource` to cache connections. This is the most general solution which allows you to use almost any connection from any Python library. However, Javelit also offers a convenient way to handle some of the most popular connections, like SQL! `st.connection` takes care of the caching for you so you can enjoy fewer lines of code. Getting data from your database can be as easy as:
 
 ```python
 import streamlit as st
@@ -107,7 +107,7 @@ df = conn.query("select * from my_table")
 st.dataframe(df)
 ```
 
-Of course, you may be wondering where your username and password go. Jeamlit has a convenient mechanism for [Secrets management](/develop/concepts/connections/secrets-management). For now, let's just see how `st.connection` works very nicely with secrets. In your local project directory, you can save a `.streamlit/secrets.toml` file. You save your secrets in the toml file and `st.connection` just uses them! For example, if you have an app file `streamlit_app.py` your project directory may look like this:
+Of course, you may be wondering where your username and password go. Javelit has a convenient mechanism for [Secrets management](/develop/concepts/connections/secrets-management). For now, let's just see how `st.connection` works very nicely with secrets. In your local project directory, you can save a `.streamlit/secrets.toml` file. You save your secrets in the toml file and `st.connection` just uses them! For example, if you have an app file `streamlit_app.py` your project directory may look like this:
 
 ```bash
 your-LOCAL-repository/
@@ -129,6 +129,6 @@ For the above SQL example, your `secrets.toml` file might look like the followin
     database="mydb" # Database name
 ```
 
-Since you don't want to commit your `secrets.toml` file to your repository, you'll need to learn how your host handles secrets when you're ready to publish your app. Each host platform may have a different way for you to pass your secrets. If you use Jeamlit Community Cloud for example, each deployed app has a settings menu where you can load your secrets. After you've written an app and are ready to deploy, you can read all about how to [Deploy your app](/deploy/streamlit-community-cloud/deploy-your-app) on Community Cloud.
+Since you don't want to commit your `secrets.toml` file to your repository, you'll need to learn how your host handles secrets when you're ready to publish your app. Each host platform may have a different way for you to pass your secrets. If you use Javelit Community Cloud for example, each deployed app has a settings menu where you can load your secrets. After you've written an app and are ready to deploy, you can read all about how to [Deploy your app](/deploy/streamlit-community-cloud/deploy-your-app) on Community Cloud.
 
 */}

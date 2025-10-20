@@ -1,14 +1,14 @@
 ---
-title: jeamlit --help
+title: javelit --help
 slug: /develop/api-reference/cli/help
 ---
 
-## `$ jeamlit --help`
+## `$ javelit --help`
 
-Print the available commands for the Jeamlit CLI tool.
+Print the available commands for the Javelit CLI tool.
 
 ### Syntax
 
 ```
-jeamlit --help
+javelit --help
 ```

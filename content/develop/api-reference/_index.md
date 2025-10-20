@@ -5,7 +5,7 @@ slug: /develop/api-reference
 
 # API reference
 
-Jeamlit makes it easy for you to visualize, mutate, and share data. The API
+Javelit makes it easy for you to visualize, mutate, and share data. The API
 reference is organized by activity type, like displaying data or optimizing
 performance. Each section includes methods associated with the activity type,
 including examples.
@@ -51,7 +51,7 @@ st.write_stream(my_llm_stream)
 
 <h4>Magic</h4>
 
-Any time Jeamlit sees either a variable or literal value on its own line, it automatically writes that to your app using `st.write`
+Any time Javelit sees either a variable or literal value on its own line, it automatically writes that to your app using `st.write`
 
 ```java
 "Hello **world**!"
@@ -260,7 +260,7 @@ Jt.html("<p>Foo bar.</p>").use();
 
 <h4>Annotated text</h4>
 
-Display annotated text in Jeamlit apps. Created by [@tvst](https://github.com/tvst).
+Display annotated text in Javelit apps. Created by [@tvst](https://github.com/tvst).
 
 ```java
 annotated_text("This ", ("is", "verb"), " some ", ("annotated", "adj"), ("text", "noun"), " for those of ", ("you", "pronoun"), " who ", ("like", "verb"), " this sort of ", ("thing", "noun"), ".")
@@ -288,7 +288,7 @@ st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke
 
 <h4>Tags</h4>
 
-Add tags to your Jeamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
+Add tags to your Javelit apps. Created by [@gagan3012](https://github.com/gagan3012).
 
 ```java
 st_tags(label='# Enter Keywords:', text='Press enter to add more', value=['Zero', 'One', 'Two'], suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'], maxtags = 4, key='1')
@@ -314,12 +314,12 @@ nlu.load("sentiment").predict("I love NLU! <3")
 
 <Image pure alt="screenshot" src="/images/api/components/extras-mentions.jpg" />
 
-<h4>Jeamlit Extras</h4>
+<h4>Javelit Extras</h4>
 
-A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Javelit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```java
-mention(label="An awesome Jeamlit App", icon="streamlit",  url="https://extras.streamlit.app",)
+mention(label="An awesome Javelit App", icon="streamlit",  url="https://extras.streamlit.app",)
 ```
 
 </ComponentCard>
@@ -427,9 +427,9 @@ st.json(my_dict)
 
 <Image pure alt="screenshot" src="/images/api/components/aggrid.jpg" />
 
-<h4>Jeamlit Aggrid</h4>
+<h4>Javelit Aggrid</h4>
 
-Implementation of Ag-Grid component for Jeamlit. Created by [@PablocFonseca](https://github.com/PablocFonseca).
+Implementation of Ag-Grid component for Javelit. Created by [@PablocFonseca](https://github.com/PablocFonseca).
 
 ```java
 df = pd.DataFrame({'col1': [1, 2, 3], 'col2': [4, 5, 6]})
@@ -444,9 +444,9 @@ new_df = grid_return['data']
 
 <Image pure alt="screenshot" src="/images/api/components/folium.jpg" />
 
-<h4>Jeamlit Folium</h4>
+<h4>Javelit Folium</h4>
 
-Jeamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
+Javelit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
 
 ```java
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
@@ -463,7 +463,7 @@ st_data = st_folium(m, width=725)
 
 <h4>Pandas Profiling</h4>
 
-Pandas profiling component for Jeamlit. Created by [@okld](https://github.com/okld/).
+Pandas profiling component for Javelit. Created by [@okld](https://github.com/okld/).
 
 ```java
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
@@ -512,9 +512,9 @@ selected_points = plotly_events(fig)
 
 <Image pure alt="screenshot" src="/images/api/components/extras-metric-cards.jpg" />
 
-<h4>Jeamlit Extras</h4>
+<h4>Javelit Extras</h4>
 
-A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Javelit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```java
 from streamlit_extras.metric_cards import style_metric_cards
@@ -710,7 +710,7 @@ st.graphviz_chart(my_graphviz_spec)
 
 <h4>Plost</h4>
 
-A deceptively simple plotting library for Jeamlit. Created by [@tvst](https://github.com/tvst).
+A deceptively simple plotting library for Javelit. Created by [@tvst](https://github.com/tvst).
 
 ```java
 import plost
@@ -753,9 +753,9 @@ st_echarts(options=options)
 
 <Image pure alt="screenshot" src="/images/api/components/folium.jpg" />
 
-<h4>Jeamlit Folium</h4>
+<h4>Javelit Folium</h4>
 
-Jeamlit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
+Javelit Component for rendering Folium maps. Created by [@randyzwitch](https://github.com/randyzwitch).
 
 ```java
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
@@ -768,9 +768,9 @@ st_data = st_folium(m, width=725)
 
 <Image pure alt="screenshot" src="/images/api/components/spacy.jpg" />
 
-<h4>Spacy-Jeamlit</h4>
+<h4>Spacy-Javelit</h4>
 
-spaCy building blocks and visualizers for Jeamlit apps. Created by [@explosion](https://github.com/explosion).
+spaCy building blocks and visualizers for Javelit apps. Created by [@explosion](https://github.com/explosion).
 
 ```java
 models = ["en_core_web_sm", "en_core_web_md"]
@@ -783,9 +783,9 @@ spacy_streamlit.visualize(models, "Sundar Pichai is the CEO of Google.")
 
 <Image pure alt="screenshot" src="/images/api/components/agraph.jpg" />
 
-<h4>Jeamlit Agraph</h4>
+<h4>Javelit Agraph</h4>
 
-A Jeamlit Graph Vis, based on [react-grah-vis](https://github.com/crubier/react-graph-vis). Created by [@ChrisDelClea](https://github.com/ChrisDelClea).
+A Javelit Graph Vis, based on [react-grah-vis](https://github.com/crubier/react-graph-vis). Created by [@ChrisDelClea](https://github.com/ChrisDelClea).
 
 ```java
 from streamlit_agraph import agraph, Node, Edge, Config
@@ -798,9 +798,9 @@ agraph(nodes=nodes, edges=edges, config=config)
 
 <Image pure alt="screenshot" src="/images/api/components/lottie.jpg" />
 
-<h4>Jeamlit Lottie</h4>
+<h4>Javelit Lottie</h4>
 
-Integrate [Lottie](https://lottiefiles.com/) animations inside your Jeamlit app. Created by [@andfanilo](https://github.com/andfanilo).
+Integrate [Lottie](https://lottiefiles.com/) animations inside your Javelit app. Created by [@andfanilo](https://github.com/andfanilo).
 
 ```java
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
@@ -828,9 +828,9 @@ selected_points = plotly_events(fig)
 
 <Image pure alt="screenshot" src="/images/api/components/extras-chart-annotations.jpg" />
 
-<h4>Jeamlit Extras</h4>
+<h4>Javelit Extras</h4>
 
-A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Javelit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```java
 chart += get_annotations_chart(annotations=[("Mar 01, 2008", "Pretty good day for GOOG"), ("Dec 01, 2007", "Something's going wrong for GOOG & AAPL"), ("Nov 01, 2008", "Market starts again thanks to..."), ("Dec 01, 2009", "Small crash for GOOG after..."),],)
@@ -877,7 +877,7 @@ st.download_button("Download file", file)
 
 </RefCard>
 */}
-<RefCard href="https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.formsubmitbutton">
+<RefCard href="https://docs.javelit.io/develop/api-reference/execution-flow/jt.formsubmitbutton">
 
 <Image pure alt="screenshot" src="/images/api/form_submit_button.svg" />
 
@@ -1225,9 +1225,9 @@ image = st.camera_input("Take a picture")
 
 <Image pure alt="screenshot" src="/images/api/components/elements.jpg" />
 
-<h4>Jeamlit Elements</h4>
+<h4>Javelit Elements</h4>
 
-Create a draggable and resizable dashboard in Jeamlit. Created by [@okls](https://github.com/okls).
+Create a draggable and resizable dashboard in Javelit. Created by [@okls](https://github.com/okls).
 
 ```java
 from streamlit_elements import elements, mui, html
@@ -1244,7 +1244,7 @@ with elements("new_element"):
 
 <h4>Tags</h4>
 
-Add tags to your Jeamlit apps. Created by [@gagan3012](https://github.com/gagan3012).
+Add tags to your Javelit apps. Created by [@gagan3012](https://github.com/gagan3012).
 
 ```java
 from streamlit_tags import st_tags
@@ -1278,7 +1278,7 @@ for _ in stqdm(range(50)):
 
 <h4>Timeline</h4>
 
-Display a Timeline in Jeamlit apps using [TimelineJS](https://timeline.knightlab.com/). Created by [@innerdoc](https://github.com/innerdoc).
+Display a Timeline in Javelit apps using [TimelineJS](https://timeline.knightlab.com/). Created by [@innerdoc](https://github.com/innerdoc).
 
 ```java
 from streamlit_timeline import timeline
@@ -1310,9 +1310,9 @@ st.image(value)
 
 <Image pure alt="screenshot" src="/images/api/components/ace.jpg" />
 
-<h4>Jeamlit Ace</h4>
+<h4>Javelit Ace</h4>
 
-Ace editor component for Jeamlit. Created by [@okld](https://github.com/okld).
+Ace editor component for Javelit. Created by [@okld](https://github.com/okld).
 
 ```java
 from streamlit_ace import st_ace
@@ -1327,9 +1327,9 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/chat.jpg" />
 
-<h4>Jeamlit Chat</h4>
+<h4>Javelit Chat</h4>
 
-Jeamlit Component for a Chatbot UI. Created by [@AI-Yash](https://github.com/AI-Yash).
+Javelit Component for a Chatbot UI. Created by [@AI-Yash](https://github.com/AI-Yash).
 
 ```java
 from streamlit_chat import message
@@ -1344,7 +1344,7 @@ message("Hello bot!", is_user=True)  # align's the message to the right
 
 <Image pure alt="screenshot" src="/images/api/components/option-menu.jpg" />
 
-<h4>Jeamlit Option Menu</h4>
+<h4>Javelit Option Menu</h4>
 
 Select a single item from a list of options in a menu. Created by [@victoryhb](https://github.com/victoryhb).
 
@@ -1361,9 +1361,9 @@ option_menu("Main Menu", ["Home", 'Settings'],
 
 <Image pure alt="screenshot" src="/images/api/components/extras-toggle.jpg" />
 
-<h4>Jeamlit Extras</h4>
+<h4>Javelit Extras</h4>
 
-A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Javelit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```java
 from streamlit_extras.stoggle import stoggle
@@ -1468,9 +1468,9 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 
 <Image pure alt="screenshot" src="/images/api/components/webrtc.jpg" />
 
-<h4>Jeamlit Webrtc</h4>
+<h4>Javelit Webrtc</h4>
 
-Handling and transmitting real-time video/audio streams with Jeamlit. Created by [@whitphx](https://github.com/whitphx).
+Handling and transmitting real-time video/audio streams with Javelit. Created by [@whitphx](https://github.com/whitphx).
 
 ```java
 from streamlit_webrtc import webrtc_streamer
@@ -1516,9 +1516,9 @@ image_comparison(img1="image1.jpg", img2="image2.jpg",)
 
 <Image pure alt="screenshot" src="/images/api/components/cropper.jpg" />
 
-<h4>Jeamlit Cropper</h4>
+<h4>Javelit Cropper</h4>
 
-A simple image cropper for Jeamlit. Created by [@turner-anderson](https://github.com/turner-anderson).
+A simple image cropper for Javelit. Created by [@turner-anderson](https://github.com/turner-anderson).
 
 ```java
 from streamlit_cropper import st_cropper
@@ -1548,9 +1548,9 @@ streamlit_image_coordinates("https://placekitten.com/200/300")
 
 <Image pure alt="screenshot" src="/images/api/components/lottie.jpg" />
 
-<h4>Jeamlit Lottie</h4>
+<h4>Javelit Lottie</h4>
 
-Integrate [Lottie](https://lottiefiles.com/) animations inside your Jeamlit app. Created by [@andfanilo](https://github.com/andfanilo).
+Integrate [Lottie](https://lottiefiles.com/) animations inside your Javelit app. Created by [@andfanilo](https://github.com/andfanilo).
 
 ```java
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
@@ -1704,9 +1704,9 @@ Jt.text("This is tab 2").use(tabs.tab(1));
 
 <Image pure alt="screenshot" src="/images/api/components/elements.jpg" />
 
-<h4>Jeamlit Elements</h4>
+<h4>Javelit Elements</h4>
 
-Create a draggable and resizable dashboard in Jeamlit. Created by [@okls](https://github.com/okls).
+Create a draggable and resizable dashboard in Javelit. Created by [@okls](https://github.com/okls).
 
 ```java
 from streamlit_elements import elements, mui, html
@@ -1723,7 +1723,7 @@ with elements("new_element"):
 
 <h4>Pydantic</h4>
 
-Auto-generate Jeamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
+Auto-generate Javelit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
 
 ```java
 import streamlit_pydantic as sp
@@ -1738,9 +1738,9 @@ sp.pydantic_form(key="my_form",
 
 <Image pure alt="screenshot" src="/images/api/components/pages.jpg" />
 
-<h4>Jeamlit Pages</h4>
+<h4>Javelit Pages</h4>
 
-An experimental version of Jeamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
+An experimental version of Javelit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
 
 ```java
 from st_pages import Page, show_pages, add_page_title
@@ -1760,9 +1760,9 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 
 <br />
 
-Jeamlit provides a few commands to help you build conversational apps. These chat elements are designed to be used in conjunction with each other, but you can also use them separately.
+Javelit provides a few commands to help you build conversational apps. These chat elements are designed to be used in conjunction with each other, but you can also use them separately.
 
-`st.chat_message` lets you insert a chat message container into the app so you can display messages from the user or the app. Chat containers can contain other Jeamlit elements, including charts, tables, text, and more. `st.chat_input` lets you display a chat input widget so the user can type in a message.
+`st.chat_message` lets you insert a chat message container into the app so you can display messages from the user or the app. Chat containers can contain other Javelit elements, including charts, tables, text, and more. `st.chat_input` lets you display a chat input widget so the user can type in a message.
 
 <TileContainer>
 <RefCard href="/develop/api-reference/chat/st.chat_input">
@@ -2035,9 +2035,9 @@ custom_notification_box(icon='info', textDisplay='We are almost done with your r
 
 <Image pure alt="screenshot" src="/images/api/components/extras-emojis.jpg" />
 
-<h4>Jeamlit Extras</h4>
+<h4>Javelit Extras</h4>
 
-A library with useful Jeamlit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
+A library with useful Javelit extras. Created by [@arnaudmiribel](https://github.com/arnaudmiribel/).
 
 ```java
 from streamlit_extras.let_it_rain import rain
@@ -2289,7 +2289,7 @@ st_autorefresh(interval=2000, limit=100,
 
 <h4>Pydantic</h4>
 
-Auto-generate Jeamlit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
+Auto-generate Javelit UI from Pydantic Models and Dataclasses. Created by [@lukasmasuch](https://github.com/lukasmasuch).
 
 ```java
 import streamlit_pydantic as sp
@@ -2304,9 +2304,9 @@ sp.pydantic_form(key="my_form",
 
 <Image pure alt="screenshot" src="/images/api/components/pages.jpg" />
 
-<h4>Jeamlit Pages</h4>
+<h4>Javelit Pages</h4>
 
-An experimental version of Jeamlit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
+An experimental version of Javelit Multi-Page Apps. Created by [@blackary](https://github.com/blackary).
 
 ```java
 from st_pages import Page, show_pages, add_page_title
@@ -2516,7 +2516,7 @@ OpenAI_key = "<YOUR_SECRET_KEY>"
 
 <ComponentSlider>
 
-<ComponentCard href="https://github.com/mkhorasani/Jeamlit-Authenticator">
+<ComponentCard href="https://github.com/mkhorasani/Javelit-Authenticator">
 
 <Image pure alt="screenshot" src="/images/api/components/authenticator.jpg" />
 
@@ -2554,9 +2554,9 @@ st.write('ret: ' + ret)
 
 <Image pure alt="screenshot" src="/images/api/components/auth0.jpg" />
 
-<h4>Jeamlit Auth0</h4>
+<h4>Javelit Auth0</h4>
 
-The fastest way to provide comprehensive login inside Jeamlit. Created by [@conradbez](https://github.com/conradbez).
+The fastest way to provide comprehensive login inside Javelit. Created by [@conradbez](https://github.com/conradbez).
 
 ```java
 from auth0_component import login_button
@@ -2620,7 +2620,7 @@ Load a remote URL in an iframe.
 ```java
 from st.components.v1 import iframe
 iframe(
-    "docs.jeamlit.io"
+    "docs.javelit.io"
 )
 ```
 
@@ -2703,7 +2703,7 @@ st.set_page_config(
 
 <h4>App Testing</h4>
 
-Learn how to test your Jeamlit applications with unit tests, integration tests, and automated testing frameworks. Ensure your apps work correctly across different scenarios and user interactions.
+Learn how to test your Javelit applications with unit tests, integration tests, and automated testing frameworks. Ensure your apps work correctly across different scenarios and user interactions.
 
 ```java
 @Test
@@ -2821,7 +2821,7 @@ at.button[0].click().run()
 A representation of `st.chat_input`.
 
 ```java
-at.chat_input[0].set_value("What is Jeamlit?").run()
+at.chat_input[0].set_value("What is Javelit?").run()
 ```
 
 </RefCard>
@@ -2942,7 +2942,7 @@ at.slider[0].set_range(2,5).run()
 A representation of `st.text_area`.
 
 ```java
-at.text_area[0].input("Jeamlit is awesome!").run()
+at.text_area[0].input("Javelit is awesome!").run()
 ```
 
 </RefCard>
@@ -2954,7 +2954,7 @@ at.text_area[0].input("Jeamlit is awesome!").run()
 A representation of `st.text_input`.
 
 ```java
-at.text_input[0].input("Jeamlit").run()
+at.text_input[0].input("Javelit").run()
 ```
 
 </RefCard>
@@ -2997,7 +2997,7 @@ at.toggle[0].set_value("True").run()
 
 <h4>Pandas Profiling</h4>
 
-Pandas profiling component for Jeamlit. Created by [@okld](https://github.com/okld/).
+Pandas profiling component for Javelit. Created by [@okld](https://github.com/okld/).
 
 ```java
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
@@ -3012,9 +3012,9 @@ st_profile_report(pr)
 
 <Image pure alt="screenshot" src="/images/api/components/ace.jpg" />
 
-<h4>Jeamlit Ace</h4>
+<h4>Javelit Ace</h4>
 
-Ace editor component for Jeamlit. Created by [@okld](https://github.com/okld).
+Ace editor component for Javelit. Created by [@okld](https://github.com/okld).
 
 ```java
 from streamlit_ace import st_ace
@@ -3029,7 +3029,7 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/analytics.jpg" />
 
-<h4>Jeamlit Analytics</h4>
+<h4>Javelit Analytics</h4>
 
 Track & visualize user interactions with your streamlit app. Created by [@jrieke](https://github.com/jrieke).
 

@@ -5,7 +5,7 @@ slug: /develop
 
 # Develop
 
-Get all the information you need to build beautiful, performant web apps with Jeamlit!
+Get all the information you need to build beautiful, performant web apps with Javelit!
 
 <InlineCalloutContainer>
     <InlineCallout
@@ -13,7 +13,7 @@ Get all the information you need to build beautiful, performant web apps with Je
         icon="book"
         bold="Concepts."
         href="/develop/concepts"
-    >Learn how Jeamlit works with in-depth guides to our execution model and features.</InlineCallout>
+    >Learn how Javelit works with in-depth guides to our execution model and features.</InlineCallout>
     <InlineCallout
         color="yellow-80"
         icon="list"

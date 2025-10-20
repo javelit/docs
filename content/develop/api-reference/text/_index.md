@@ -5,7 +5,7 @@ slug: /develop/api-reference/text
 
 # Text elements
 
-Jeamlit apps usually start with a call to `Jt.title` to set the
+Javelit apps usually start with a call to `Jt.title` to set the
 app's title. {/*After that, there are 2 heading levels you can use:
 `st.header` and `st.subheader`.*/}
 

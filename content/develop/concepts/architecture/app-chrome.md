@@ -5,7 +5,7 @@ slug: /develop/concepts/architecture/app-chrome
 
 # The app chrome
 
-Your Jeamlit app has a few widgets in the top right to help you as you develop. These widgets also help your viewers as they use your app. We call this things “the app chrome”. The chrome includes a status area, toolbar, and app menu.
+Your Javelit app has a few widgets in the top right to help you as you develop. These widgets also help your viewers as they use your app. We call this things “the app chrome”. The chrome includes a status area, toolbar, and app menu.
 
 {/* TODO CYRIL - configurable app menu
 Your app menu is configurable. By default,
@@ -13,7 +13,7 @@ Your app menu is configurable. By default,
 
 While viewing an app, click the icon in the upper-right corner to access the menu.
 The developer options are only visible when viewing an app locally. 
-{/* TODO-cloud or on Jeamlit Community Cloud while logged into an account with administrative access */}
+{/* TODO-cloud or on Javelit Community Cloud while logged into an account with administrative access */}
 
 ![App menu](/images/app-menu/app-menu-developer.png)
 
@@ -129,7 +129,7 @@ The whole process looks like this:
 {/* TODO implement about 
 ### About
 
-You can conveniently check what version of Jeamlit is running from the "**About**" option. Developers also have the option to customize the message shown here using [`st.set_page_config`](/develop/api-reference/configuration/st.set_page_config).
+You can conveniently check what version of Javelit is running from the "**About**" option. Developers also have the option to customize the message shown here using [`st.set_page_config`](/develop/api-reference/configuration/st.set_page_config).
 */}
 
 ## Developer options
@@ -157,7 +157,7 @@ This will remove all cached entries for [`Jt.cache`](/develop/api-reference/cach
 
 ### Deploy this app
 
-If you are running an app locally from within a git repo, you can deploy your app to Jeamlit Community Cloud in a few easy clicks! Make sure your work has been pushed to your online GitHub repository before beginning. For the greatest convenience, make sure you have already created your [Community Cloud account](/deploy/streamlit-community-cloud/get-started/create-your-account) and are signed in.
+If you are running an app locally from within a git repo, you can deploy your app to Javelit Community Cloud in a few easy clicks! Make sure your work has been pushed to your online GitHub repository before beginning. For the greatest convenience, make sure you have already created your [Community Cloud account](/deploy/streamlit-community-cloud/get-started/create-your-account) and are signed in.
 
 1. Click "**Deploy**" next to the app menu icon (<i style={{ verticalAlign: "-.25em" }} className={{ class: "material-icons-sharp" }}>more_vert</i>).
 
@@ -171,7 +171,7 @@ If you are running an app locally from within a git repo, you can deploy your ap
     <Image src="/images/app-menu/app-menu-deploy-1.png" alt="Settings" />
 </div>
 
-3. You will be taken to Community Cloud's "Deploy an app" page. Your app's repository, branch, and file name will be prefilled to match your current app! Learn more about [deploying an app](/deploy/streamlit-community-cloud/deploy-your-app) on Jeamlit Community Cloud.
+3. You will be taken to Community Cloud's "Deploy an app" page. Your app's repository, branch, and file name will be prefilled to match your current app! Learn more about [deploying an app](/deploy/streamlit-community-cloud/deploy-your-app) on Javelit Community Cloud.
 
 The whole process looks like this:
 
@@ -190,7 +190,7 @@ Using `client.toolbarMode` in your app's [configuration](/develop/concepts/confi
 
 - `"developer"` &mdash; Show the developer options to all viewers.
 - `"viewer"` &mdash; Hide the developer options from all viewers.
-- `"minimal"` &mdash; Show only those options set externally. These options can be declared through [`st.set_page_config`](/develop/api-reference/configuration/st.set_page_config) or populated through Jeamlit Community Cloud.
-- `"auto"` &mdash; This is the default and will show the developer options when accessed through localhost or through Jeamlit Community Cloud when logged into an administrative account for the app. Otherwise, the developer options will not show.
+- `"minimal"` &mdash; Show only those options set externally. These options can be declared through [`st.set_page_config`](/develop/api-reference/configuration/st.set_page_config) or populated through Javelit Community Cloud.
+- `"auto"` &mdash; This is the default and will show the developer options when accessed through localhost or through Javelit Community Cloud when logged into an administrative account for the app. Otherwise, the developer options will not show.
 
 */} 

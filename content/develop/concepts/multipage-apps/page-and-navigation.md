@@ -32,8 +32,8 @@ your-repository/
 **`App.java`:**
 
 ```java
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.JtPage;
+import io.javelit.core.Jt;
+import io.javelit.core.JtPage;
 
 public class App {
     public static void main(String[] args) {
@@ -48,7 +48,7 @@ public class App {
 `Jt.page` lets you define a page builder. The first and only required argument defines your page class {/* TODO multipage callable which can be a Python file or function */}. 
 Pass the page builders to `Jt.navigation` to register them as pages in your app.
 
-If you don't define your page title or URL pathname, Jeamlit will infer them from the Class name name as described in 
+If you don't define your page title or URL pathname, Javelit will infer them from the Class name name as described in 
 the multipage apps [Overview](/develop/concepts/multipage-apps/overview#automatic-page-labels-and-urls). 
 However, `Jt.page` lets you configure them manually. See [Jt.page API reference](/develop/api-reference/navigation/jt.page). 
 
@@ -92,7 +92,7 @@ custom navigation menu with `Jt.pageLink`.
 
 Additionally, you can dynamically change which pages you pass to `Jt.navigation`. However, only the page 
 returned by `Jt.navigation` accepts the `.run()` method. If a user enters a URL with a pathname, and that pathname is 
-not associated to a page in `Jt.navigation`, Jeamlit will return a "Page not found" page.
+not associated to a page in `Jt.navigation`, Javelit will return a "Page not found" page.
 
 ### Adding section headers
 
@@ -103,13 +103,13 @@ while keeping it accessible, you'll need to hide the default navigation menu and
 
 The following example creates a login wall. When a user starts a new session, they are not logged in. 
 In this case, the only available page is the login page. If a user tries to access another page by URL, it will create 
-a new session and Jeamlit will not recognize the page. The user will be diverted to the login page. However, 
+a new session and Javelit will not recognize the page. The user will be diverted to the login page. However, 
 after a user logs in, they will see a navigation menu with different pages and be directed to the dashboard as the app's default page (i.e. homepage).
 
 **`App.java`:**
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class App {
 
@@ -158,7 +158,7 @@ and imported by the entrypoint `App` class.*
 
 You can try this app with:
 ```
-jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/login/App.java
+javelit run https://raw.githubusercontent.com/javelit/javelit/refs/heads/main/examples/login/App.java
 ```
 
 {/* TODO implement sections   

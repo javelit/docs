@@ -66,7 +66,7 @@ export default function Home({ window, menu }) {
   return (
     <Layout window={window}>
       <Head>
-        <title>Jeamlit documentation</title>
+        <title>Javelit documentation</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="alternate icon" href="/favicon32.ico" />
         <meta name="theme-color" content="#ffffff" />
@@ -74,8 +74,8 @@ export default function Home({ window, menu }) {
           rel="canonical"
           href={`https://${process.env.NEXT_PUBLIC_HOSTNAME}`}
         />
-        <meta content="Jeamlit Docs" property="og:title" />
-        <meta content="Jeamlit Docs" name="twitter:title" />
+        <meta content="Javelit Docs" property="og:title" />
+        <meta content="Javelit Docs" name="twitter:title" />
         {description && (
           <React.Fragment>
             <meta content={description} name="description" />
@@ -84,7 +84,7 @@ export default function Home({ window, menu }) {
           </React.Fragment>
         )}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://docs.jeamlit.io/" />
+        <meta property="og:url" content="https://docs.javelit.io/" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta
           property="og:image"
@@ -116,9 +116,9 @@ export default function Home({ window, menu }) {
         <SideBar menu={menu} slug={[]} />
         <section className={styles.InnerContainer}>
           <article>
-            <H1>Jeamlit documentation</H1>
+            <H1>Javelit documentation</H1>
             <p>
-              <a href="https://jeamlit.io">Jeamlit</a> is an open-source Java
+              <a href="https://javelit.io">Javelit</a> is an open-source Java
               framework for data and backend engineers to deliver dynamic data
               apps with only a few lines of code. Build and deploy powerful data
               apps in minutes. Let's get started!
@@ -145,7 +145,7 @@ export default function Home({ window, menu }) {
                 bold="Get started"
                 href="/get-started"
               >
-                with Jeamlit! Set up your development environment and learn the
+                with Javelit! Set up your development environment and learn the
                 fundamental concepts, and start coding!
               </InlineCallout>
               <InlineCallout
@@ -154,7 +154,7 @@ export default function Home({ window, menu }) {
                 bold="Develop"
                 href="/develop"
               >
-                your Jeamlit app! Our API reference explains each Jeamlit
+                your Javelit app! Our API reference explains each Javelit
                 function with examples. Dive deep into all of our features with
                 conceptual guides. Try out our step-by-step tutorials.
               </InlineCallout>
@@ -164,8 +164,8 @@ export default function Home({ window, menu }) {
                 bold="Deploy"
                 href="/deploy"
               >
-                your Jeamlit app!{" "}
-                {/* Jeamlit Community Cloud our free platform  for deploying and sharing Jeamlit apps. Jeamlit in Snowflake
+                your Javelit app!{" "}
+                {/* Javelit Community Cloud our free platform  for deploying and sharing Javelit apps. Javelit in Snowflake
                 is an enterprise-class solution where you can house your data
                 and apps in one, unified, global system. Explore all your
                 options! */}
@@ -177,7 +177,7 @@ export default function Home({ window, menu }) {
                 href="/knowledge-base"
               >
                 is a self-serve library of tips, tricks, and articles that
-                answer your questions about creating and deploying Jeamlit apps.
+                answer your questions about creating and deploying Javelit apps.
               </InlineCallout>
               {/* <InlineCallout color="green-70" icon="code" bold="Cookbook" href="/cookbook">
                 provides short code snippets that you can copy in for specific use cases.
@@ -193,7 +193,7 @@ export default function Home({ window, menu }) {
             <TileContainer>
               <RefCard
                 size="third"
-                href="/develop/api-reference/media/st.pdf?utm_source=jeamlit"
+                href="/develop/api-reference/media/st.pdf?utm_source=javelit"
               >
                 <i className="material-icons-sharp">description</i>
                 <h4>PDF viewer</h4>
@@ -203,7 +203,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/data/st.dataframe?utm_source=jeamlit"
+                href="/develop/api-reference/data/st.dataframe?utm_source=javelit"
               >
                 <i className="material-icons-sharp">ads_click</i>
                 <h4>Dataframe cell selection</h4>
@@ -214,7 +214,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/data/st.metric?utm_source=jeamlit"
+                href="/develop/api-reference/data/st.metric?utm_source=javelit"
               >
                 <i className="material-icons-sharp">show_chart</i>
                 <h4>Metric sparklines</h4>
@@ -224,7 +224,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/data/st.column_config/st.column_config.listcolumn?utm_source=jeamlit"
+                href="/develop/api-reference/data/st.column_config/st.column_config.listcolumn?utm_source=javelit"
               >
                 <i className="material-icons-sharp">settings</i>
                 <h4>
@@ -236,7 +236,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/widgets/st.file_uploader?utm_source=jeamlit"
+                href="/develop/api-reference/widgets/st.file_uploader?utm_source=javelit"
               >
                 <i className="material-icons-sharp">folder</i>
                 <h4>Directory upload</h4>
@@ -247,7 +247,7 @@ export default function Home({ window, menu }) {
               </RefCard>
               <RefCard
                 size="third"
-                href="/develop/api-reference/status/st.toast?utm_source=jeamlit"
+                href="/develop/api-reference/status/st.toast?utm_source=javelit"
               >
                 <i className="material-icons-sharp">timer</i>
                 <h4>Toast duration</h4>
@@ -261,7 +261,7 @@ export default function Home({ window, menu }) {
             <H2 className="no-b-m">Latest news from the Dev Diary</H2>
             <NewsContainer>
               {/* previous from streamlit, using ghost <NewsFeed /> */}
-              {/* Jeamlit one using RSS feed from Hey World */}
+              {/* Javelit one using RSS feed from Hey World */}
               <NewsRssFeed />
 
               <Button link="https://world.hey.com/cdecatheu" target="_blank">
@@ -274,10 +274,10 @@ export default function Home({ window, menu }) {
             <NoteSplit
               background="gray-20"
               title="Join the community"
-              copy="Jeamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas, contribute to the codebase and help each other make their work better. Please come join us on the community forum. We love to hear your questions, ideas, and help you work through your bugs — stop by today!"
+              copy="Javelit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas, contribute to the codebase and help each other make their work better. Please come join us on the community forum. We love to hear your questions, ideas, and help you work through your bugs — stop by today!"
               button={{
                 text: "View forum",
-                link: "https://github.com/jeamlit/jeamlit/discussions/",
+                link: "https://github.com/javelit/javelit/discussions/",
                 target: "_blank",
               }}
               image="/join.png"

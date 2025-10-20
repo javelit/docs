@@ -100,8 +100,8 @@ def sort_content_by_menu_order(
         url = entry.get("url", "")
         if url:
             # Remove the base URL part to match with menu URLs
-            # e.g., "https://docs.jeamlit.io/develop" -> "develop"
-            url_path = url.replace("https://docs.jeamlit.io/", "")
+            # e.g., "https://docs.javelit.io/develop" -> "develop"
+            url_path = url.replace("https://docs.javelit.io/", "")
             order_pos = url_ordering.get(url_path, len(url_ordering))
             return (order_pos, url_path)
         return (len(url_ordering), "")
@@ -320,7 +320,7 @@ def process_markdown_files(content_dir: Path) -> List[Dict[str, Optional[str]]]:
             if not url:
                 continue
 
-            url = f"https://docs.jeamlit.io{url}"
+            url = f"https://docs.javelit.io{url}"
 
             # Add to catalog
             content_catalog.append({"url": url, "content": post.content})

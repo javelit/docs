@@ -5,11 +5,11 @@ slug: /get-started/tutorials/create-an-app
 
 # Create an app
 
-If you've made it this far, chances are you've [installed Jeamlit](/get-started/installation) and run through the basics in [Basic concepts](/get-started/fundamentals/main-concepts) and [Advanced concepts](/get-started/fundamentals/advanced-concepts). If not, now is a good time to take a look.
+If you've made it this far, chances are you've [installed Javelit](/get-started/installation) and run through the basics in [Basic concepts](/get-started/fundamentals/main-concepts) and [Advanced concepts](/get-started/fundamentals/advanced-concepts). If not, now is a good time to take a look.
 
-The easiest way to learn how to use Jeamlit is to try things out yourself. As you read through this guide, test each method. As long as your app is running, every time you add a new element to your script and save, Jeamlit's UI will ask if you'd like to rerun the app and view the changes. This allows you to work in a fast interactive loop: you write some code, save it, review the output, write some more, and so on, until you're happy with the results. The goal is to use Jeamlit to create an interactive app for your data or model and along the way to use Jeamlit to review, debug, perfect, and share your code.
+The easiest way to learn how to use Javelit is to try things out yourself. As you read through this guide, test each method. As long as your app is running, every time you add a new element to your script and save, Javelit's UI will ask if you'd like to rerun the app and view the changes. This allows you to work in a fast interactive loop: you write some code, save it, review the output, write some more, and so on, until you're happy with the results. The goal is to use Javelit to create an interactive app for your data or model and along the way to use Javelit to review, debug, perfect, and share your code.
 
-In this guide, you're going to use Jeamlit's core features to
+In this guide, you're going to use Javelit's core features to
 create an interactive app; exploring a public Uber dataset for pickups and
 drop-offs in New York City. When you're finished, you'll know how to fetch
 and cache data, draw charts, plot information on a map, and use interactive
@@ -24,8 +24,8 @@ is available below](#lets-put-it-all-together).
 
 ## Create your first app
 
-Jeamlit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas 
-and help each other make their work better. Please come join us on the [community forum](https://github.com/jeamlit/jeamlit/discussions/). We love to hear your questions, 
+Javelit is more than just a way to make data apps, it's also a community of creators that share their apps and ideas 
+and help each other make their work better. Please come join us on the [community forum](https://github.com/javelit/javelit/discussions/). We love to hear your questions, 
 ideas, and help you work through your bugs. Stop by today!
 
 1. The first step is to create a new Java file. Let's call it
@@ -37,10 +37,10 @@ ideas, and help you work through your bugs. Stop by today!
    ```java
    ///usr/bin/env jbang "$0" "$@" ; exit $?
 
-   //DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+   //DEPS io.javelit:javelit:${JEAMLIT_VERSION}
    //DEPS tech.tablesaw:tablesaw-core:0.44.4
 
-   import io.jeamlit.core.Jt;
+   import io.javelit.core.Jt;
    ```
 
 3. Every good app has a title, so let's add one:
@@ -53,18 +53,18 @@ ideas, and help you work through your bugs. Stop by today!
    }
    ```
 
-4. Now it's time to run Jeamlit from the command line:
+4. Now it's time to run Javelit from the command line:
 
    ```bash
-   jeamlit run App.java
+   javelit run App.java
    ```
 
    <Tip>
 
-   Did you know you can also pass a URL to `jeamlit run`? This is great when combined with GitHub. For example:
+   Did you know you can also pass a URL to `javelit run`? This is great when combined with GitHub. For example:
 
    ```bash
-   jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/main/examples/getting_started/App.java
+   javelit run https://raw.githubusercontent.com/javelit/javelit/main/examples/getting_started/App.java
    ```
 
    </Tip>
@@ -101,7 +101,7 @@ dataset for pickups and drop-offs in New York City.
    ```java
    static Table loadData(int nrows) {
        final String DATE_COLUMN = "date/time";
-       final String DATA_URL = "https://github.com/jeamlit/public_assets/raw/refs/heads/main/examples/uber-raw-data-sep14.csv.gz";
+       final String DATA_URL = "https://github.com/javelit/public_assets/raw/refs/heads/main/examples/uber-raw-data-sep14.csv.gz";
        try (InputStream in = URI.create(DATA_URL).toURL().openStream();
             GZIPInputStream gzipIn = new GZIPInputStream(in);
             InputStreamReader reader = new InputStreamReader(gzipIn);
@@ -160,7 +160,7 @@ Ok, that's underwhelming...
 
 It turns out that it takes a long time to download data and load 10,000 lines
 into a dataframe. You don't want to reload the data each time the app is updated –
-luckily Jeamlit allows you to cache the data.
+luckily Javelit allows you to cache the data.
 
 ## Effortless caching
 
@@ -176,7 +176,7 @@ luckily Jeamlit allows you to cache the data.
    Jt.text("Loading data...done!").use();
    ```
 
-2. Then save the script, and Jeamlit will automatically rerun your app. Since
+2. Then save the script, and Javelit will automatically rerun your app. Since
    this is the first time you're running the script with `Jt.cache()`, you won't
    see anything change. Let's tweak your file a little bit more so that you can
    see the power of caching.
@@ -204,7 +204,7 @@ refactoring it so you can use `Jt.cache()`, if possible. Please read [Caching](/
 
 </Tip>
 
-Now that you know how caching with Jeamlit works, let's get back to the Uber
+Now that you know how caching with Javelit works, let's get back to the Uber
 pickup data.
 
 ## Inspect the raw data
@@ -250,7 +250,7 @@ Uber's busiest hours are in New York City.
    Table counts = data.intColumn("hour").countByCategory().sortOn("Category");
    ```
 
-3. Now, let's use Jeamlit's
+3. Now, let's use Javelit's
    [`Jt.echarts()`](/develop/api-reference/charts/jt.echarts) method to draw this
    histogram.
 
@@ -268,8 +268,8 @@ Uber's busiest hours are in New York City.
 4. Save your script. This histogram should show up in your app right away.
    After a quick review, it looks like the busiest time is 17:00 (5 P.M.).
 
-To draw this diagram we used Jeamlit's `echarts()` method with Apache ECharts, a powerful
-charting library. Jeamlit supports complex visualizations through ECharts.
+To draw this diagram we used Javelit's `echarts()` method with Apache ECharts, a powerful
+charting library. Javelit supports complex visualizations through ECharts.
 {/* TODO CYRIL - add when there are more supported libariries
 For a full list, see [supported charting libraries](/develop/api-reference/charts).
 */}
@@ -281,7 +281,7 @@ times are for pickups, but what if we wanted to figure out where pickups were
 concentrated throughout the city. While you could use a bar chart to show this
 data, it wouldn't be easy to interpret unless you were intimately familiar with
 latitudinal and longitudinal coordinates in the city. To show pickup
-concentration, let's use Jeamlit [`Jt.echarts()`](/develop/api-reference/charts/jt.echarts)
+concentration, let's use Javelit [`Jt.echarts()`](/develop/api-reference/charts/jt.echarts)
 with a geographic visualization to overlay the data on a map of Manhattan.
 
 1. Add a subheader for the section:
@@ -333,7 +333,7 @@ with a geographic visualization to overlay the data on a map of Manhattan.
                               .setSymbolSize(5)
                               .setItemStyle(new ItemStyle().setColor("#b02a02").setOpacity(0.6)));
    // Plot the chart
-   String mapBaseGeoJson = "https://raw.githubusercontent.com/jeamlit/public_assets/refs/heads/main/examples/manhattan.geo.json";
+   String mapBaseGeoJson = "https://raw.githubusercontent.com/javelit/public_assets/refs/heads/main/examples/manhattan.geo.json";
    Jt.echarts(mapOption).withMap("manhattan", URI.create(mapBaseGeoJson)).height(600).border(true).use();
    ```
 
@@ -347,7 +347,7 @@ This allows you to create rich, interactive geographic visualizations.
 
 In the last section, when you drew the map, the time used to filter results was
 hardcoded into the script, but what if we wanted to let a reader dynamically
-filter the data in real time? Using Jeamlit's widgets you can. Let's add a
+filter the data in real time? Using Javelit's widgets you can. Let's add a
 slider to the app with the `Jt.slider()` method.
 
 1. Locate `hourToFilter` and replace it with this code snippet:
@@ -381,7 +381,7 @@ table at the top of your app.
    }
    ```
 
-We're sure you've got your own ideas. When you're done with this tutorial, check out all the widgets that Jeamlit exposes in our [API Reference](/develop/api-reference).
+We're sure you've got your own ideas. When you're done with this tutorial, check out all the widgets that Javelit exposes in our [API Reference](/develop/api-reference).
 
 ## Let's put it all together
 
@@ -390,14 +390,14 @@ That's it, you've made it to the end. Here's the complete script for our interac
 <Tip>
 
 If you've skipped ahead, after you've created your script, the command to run
-Jeamlit is `jeamlit run App.java`.
+Javelit is `javelit run App.java`.
 
 </Tip>
 
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 
-//DEPS io.jeamlit:jeamlit:${JEAMLIT_VERSION}
+//DEPS io.javelit:javelit:${JEAMLIT_VERSION}
 //DEPS tech.tablesaw:tablesaw-core:0.44.4
 
 import java.io.BufferedReader;
@@ -413,7 +413,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 import java.util.zip.GZIPInputStream;
 
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import org.icepear.echarts.Bar;
 import org.icepear.echarts.Option;
 import org.icepear.echarts.charts.scatter.ScatterSeries;
@@ -492,13 +492,13 @@ public class App {
                                    .setSymbolSize(5)
                                    .setItemStyle(new ItemStyle().setColor("#b02a02").setOpacity(0.6)));
         // plot the chart
-        String mapBaseGeoJson = "https://raw.githubusercontent.com/jeamlit/public_assets/refs/heads/main/examples/manhattan.geo.json";
+        String mapBaseGeoJson = "https://raw.githubusercontent.com/javelit/public_assets/refs/heads/main/examples/manhattan.geo.json";
         Jt.echarts(mapOption).withMap("manhattan", URI.create(mapBaseGeoJson)).height(600).border(true).use();
     }
 
     static Table loadData(int nrows) {
         final String DATE_COLUMN = "date/time";
-        final String DATA_URL = "https://github.com/jeamlit/public_assets/raw/refs/heads/main/examples/uber-raw-data-sep14.csv.gz";
+        final String DATA_URL = "https://github.com/javelit/public_assets/raw/refs/heads/main/examples/uber-raw-data-sep14.csv.gz";
         try (InputStream in = URI.create(DATA_URL).toURL().openStream();
              GZIPInputStream gzipIn = new GZIPInputStream(in);
              InputStreamReader reader = new InputStreamReader(gzipIn);
@@ -537,13 +537,13 @@ public class App {
 
 ## Share your app
 
-After you've built a Jeamlit app, it's time to share it! To show it off to the world you can share your Java file directly.
+After you've built a Javelit app, it's time to share it! To show it off to the world you can share your Java file directly.
 
 It works in simple steps:
 
 1. Put your app in a public GitHub repo
-2. Share the URL with others - they can run it directly with `jeamlit run <URL>` 
-3. Or share the Java file and others can run it locally with `jeamlit run App.java` 
+2. Share the URL with others - they can run it directly with `javelit run <URL>` 
+3. Or share the Java file and others can run it locally with `javelit run App.java` 
 
 That's it! 🚠 You now have a shareable app.
 
@@ -552,9 +552,9 @@ That's it! 🚠 You now have a shareable app.
 That's it for getting started, now you can go and build your own apps! If you
 run into difficulties here are a few things you can do.
 
-- Check out our [community forum](https://github.com/jeamlit/jeamlit/discussions/) and post a question
-- Quick help from command line with `jeamlit --help` and `jeamlit run --help`
-- Go through our [Knowledge Base](/knowledge-base) for tips, step-by-step tutorials, and articles that answer your questions about creating and deploying Jeamlit apps.
+- Check out our [community forum](https://github.com/javelit/javelit/discussions/) and post a question
+- Quick help from command line with `javelit --help` and `javelit run --help`
+- Go through our [Knowledge Base](/knowledge-base) for tips, step-by-step tutorials, and articles that answer your questions about creating and deploying Javelit apps.
 - Read more documentation! Check out:
   - [Concepts](/develop/concepts) for things like caching, {/* TODO CYRIL THEMING NOT IMPLEM theming, */}and adding statefulness to apps.
-  - [API reference](/develop/api-reference/) for examples of every Jeamlit command.
+  - [API reference](/develop/api-reference/) for examples of every Javelit command.

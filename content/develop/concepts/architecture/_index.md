@@ -1,9 +1,9 @@
 ---
-title: Working with Jeamlit's execution model
+title: Working with Javelit's execution model
 slug: /develop/concepts/architecture
 ---
 
-# Working with Jeamlit's execution model
+# Working with Javelit's execution model
 
 <TileContainer layout="list">
 
@@ -11,15 +11,15 @@ slug: /develop/concepts/architecture
 
 <h5>Run your app</h5>
 
-Understand how to start your Jeamlit app.
+Understand how to start your Javelit app.
 
 </RefCard>
 
 <RefCard href="/develop/concepts/architecture/architecture">
 
-<h5>Jeamlit's architecture</h5>
+<h5>Javelit's architecture</h5>
 
-Understand Jeamlit's client-server architecture and related considerations.
+Understand Javelit's client-server architecture and related considerations.
 
 </RefCard>
 
@@ -27,7 +27,7 @@ Understand Jeamlit's client-server architecture and related considerations.
 
 <h5>The app chrome</h5>
 
-Every Jeamlit app has a few widgets in the top right to help you as you develop your app and help your users as they view your app. This is called the app chrome.
+Every Javelit app has a few widgets in the top right to help you as you develop your app and help your users as they view your app. This is called the app chrome.
 
 </RefCard>
 

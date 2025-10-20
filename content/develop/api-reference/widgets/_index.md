@@ -5,7 +5,7 @@ slug: /develop/api-reference/widgets
 
 # Input widgets
 
-With widgets, Jeamlit allows you to bake interactivity directly into your apps with buttons, sliders, text inputs, and more.
+With widgets, Javelit allows you to bake interactivity directly into your apps with buttons, sliders, text inputs, and more.
 
 ## Button elements
 
@@ -40,7 +40,7 @@ st.download_button("Download file", file)
 </RefCard>
 */}
 
-<RefCard href="https://docs.jeamlit.io/develop/api-reference/execution-flow/jt.formsubmitbutton">
+<RefCard href="https://docs.javelit.io/develop/api-reference/execution-flow/jt.formsubmitbutton">
 
 <Image pure alt="screenshot" src="/images/api/form_submit_button.svg" />
 

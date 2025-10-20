@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to download javadoc JARs from Maven Central and extract jeamlit.json files.
+Script to download javadoc JARs from Maven Central and extract javelit.json files.
 Creates a combined JSON file with all versions.
 """
 
@@ -13,10 +13,10 @@ import os
 from pathlib import Path
 
 # Constants
-MAVEN_METADATA_URL = "https://repo1.maven.org/maven2/io/jeamlit/jeamlit/maven-metadata.xml"
-MAVEN_JAR_URL_TEMPLATE = "https://repo1.maven.org/maven2/io/jeamlit/jeamlit/{version}/jeamlit-{version}-javadoc.jar"
+MAVEN_METADATA_URL = "https://repo1.maven.org/maven2/io/javelit/javelit/maven-metadata.xml"
+MAVEN_JAR_URL_TEMPLATE = "https://repo1.maven.org/maven2/io/javelit/javelit/{version}/javelit-{version}-javadoc.jar"
 LOOKBACK = 1
-OUTPUT_FILE = "jeamlit.json"
+OUTPUT_FILE = "javelit.json"
 
 
 def fetch_versions():
@@ -39,7 +39,7 @@ def fetch_versions():
 
 
 def load_existing_versions():
-    """Load existing versions from jeamlit.json if it exists."""
+    """Load existing versions from javelit.json if it exists."""
     if not os.path.exists(OUTPUT_FILE):
         print(f"No existing {OUTPUT_FILE} found")
         return set(), {}
@@ -56,7 +56,7 @@ def load_existing_versions():
 
 
 def download_and_extract_json(version_str):
-    """Download javadoc JAR for a version and extract jeamlit.json."""
+    """Download javadoc JAR for a version and extract javelit.json."""
     jar_url = MAVEN_JAR_URL_TEMPLATE.format(version=version_str)
     print(f"Processing version {version_str}")
     print(f"  Downloading: {jar_url}")
@@ -65,7 +65,7 @@ def download_and_extract_json(version_str):
         # Create temporary directory
         with tempfile.TemporaryDirectory() as temp_dir:
             # Download JAR file
-            jar_path = os.path.join(temp_dir, f"jeamlit-{version_str}-javadoc.jar")
+            jar_path = os.path.join(temp_dir, f"javelit-{version_str}-javadoc.jar")
             urllib.request.urlretrieve(jar_url, jar_path)
             print(f"  Downloaded to: {jar_path}")
 
@@ -75,20 +75,20 @@ def download_and_extract_json(version_str):
                 zip_ref.extractall(extract_dir)
             print(f"  Extracted to: {extract_dir}")
 
-            # Find jeamlit.json (always at root of extracted JAR)
-            jeamlit_json_path = os.path.join(extract_dir, "jeamlit.json")
+            # Find javelit.json (always at root of extracted JAR)
+            javelit_json_path = os.path.join(extract_dir, "javelit.json")
 
-            if os.path.exists(jeamlit_json_path):
-                print(f"  Found jeamlit.json at: {jeamlit_json_path}")
+            if os.path.exists(javelit_json_path):
+                print(f"  Found javelit.json at: {javelit_json_path}")
 
                 # Read and parse JSON
-                with open(jeamlit_json_path, 'r', encoding='utf-8') as f:
+                with open(javelit_json_path, 'r', encoding='utf-8') as f:
                     json_content = json.load(f)
 
                 print(f"  Loaded JSON with {len(json_content)} entries")
                 return json_content
             else:
-                print(f"  WARNING: jeamlit.json not found in {version_str} JAR")
+                print(f"  WARNING: javelit.json not found in {version_str} JAR")
                 return None
 
     except Exception as e:
@@ -125,7 +125,7 @@ def main():
     # Download Atom feed
     download_atom_feed()
 
-    print("Starting jeamlit documentation build process...")
+    print("Starting javelit documentation build process...")
     # Fetch versions to process
     versions = fetch_versions()
     if not versions:

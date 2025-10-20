@@ -1,11 +1,11 @@
 ---
-title: Install Jeamlit
+title: Install Javelit
 slug: /get-started/installation
 ---
 
-# Install Jeamlit
+# Install Javelit
 
-There are 2 main ways to install and run Jeamlit:
+There are 2 main ways to install and run Javelit:
 - as a [standalone CLI and app runner](#standalone-cli-and-app-runner)
 - [embedded in an existing Java project](#embedded-server)
 
@@ -13,25 +13,25 @@ Read the [details](#details) to get more information about each option.
 
 ## Short Version
 
-Jeamlit requires A Java JDK >= `21`.
+Javelit requires A Java JDK >= `21`.
 
 ### Standalone CLI and app runner
 1. Install: ([JBang](https://www.jbang.dev/) is highly recommended)
     ```bash
     # recommended: install with jbang
-    jbang app install jeamlit@jeamlit
+    jbang app install javelit@javelit
    
     # vanilla
-    curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
+    curl -L -o javelit.jar https://repo1.maven.org/maven2/io/javelit/javelit/${JEAMLIT_VERSION}/javelit-${JEAMLIT_VERSION}-all.jar
     ```
 
 2. Validate the installation by running the Hello app:
    ```bash
    # jbang
-   jeamlit hello 
+   javelit hello 
    
    # vanilla
-   java -jar jeamlit.jar hello
+   java -jar javelit.jar hello
    ```
 4. Jump to our [Basic concepts](/get-started/fundamentals/main-concepts).
 
@@ -39,22 +39,22 @@ Jeamlit requires A Java JDK >= `21`.
 1. Add the dependency to your project
    ```xml
    <dependency>
-     <groupId>io.jeamlit</groupId>
-     <artifactId>jeamlit</artifactId>
+     <groupId>io.javelit</groupId>
+     <artifactId>javelit</artifactId>
      <version>${JEAMLIT_VERSION}</version>
    </dependency>
    ```
 2. Launch the server in your project:
    ```java
-   void startJeamlitServer() {
-     // the Jeamlit app class
+   void startJavelitServer() {
+     // the Javelit app class
      class MyApp {
          public static void main(String[] args) {
              Jt.text("Hello World").use();
          }
      }
     
-     // prepare a Jeamlit server
+     // prepare a Javelit server
      var server = Server.builder(MyApp.class, 8888).build();
     
      // start the server - this is non-blocking
@@ -88,7 +88,7 @@ Best for complex apps, existing systems and production systems.
 
 <h5>Option 3: Embedded in a Spring project</h5>
 
-Best for ... integrating Jeamlit in a Spring project. 
+Best for ... integrating Javelit in a Spring project. 
 
 </RefCard>
 

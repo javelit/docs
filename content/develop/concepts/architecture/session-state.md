@@ -7,16 +7,16 @@ slug: /develop/concepts/architecture/session-state
 
 ## What is State?
 
-We define access to a Jeamlit app in a browser tab as a **session**. For each browser tab that connects to the Jeamlit server, a new session is created. Jeamlit reruns your script from top to bottom every time you interact with your app. Each reruns takes place in a blank slate: no variables are shared between runs.
+We define access to a Javelit app in a browser tab as a **session**. For each browser tab that connects to the Javelit server, a new session is created. Javelit reruns your script from top to bottom every time you interact with your app. Each reruns takes place in a blank slate: no variables are shared between runs.
 
-Session State is a way to share variables between reruns, for each user session. In addition to the ability to store and persist state, Jeamlit also exposes the ability to manipulate state using Callbacks. Session state also persists across pages inside a [multipage app](/develop/concepts/multipage-apps).
+Session State is a way to share variables between reruns, for each user session. In addition to the ability to store and persist state, Javelit also exposes the ability to manipulate state using Callbacks. Session state also persists across pages inside a [multipage app](/develop/concepts/multipage-apps).
 
 In this guide, we will illustrate the usage of **Session State**, **Components State** and **Callbacks** as we build a stateful Counter app.
 
 For details on the Session State and Callbacks API, please refer to our [Session State API Reference Guide](/develop/api-reference/caching-and-state/jt.sessionstate).
 
 {/* TODO dev rel video
-Also, check out this Session State basics tutorial video by Jeamlit Developer Advocate Dr. Marisa Smith to get started:
+Also, check out this Session State basics tutorial video by Javelit Developer Advocate Dr. Marisa Smith to get started:
 <YouTube videoId="92jUAXBmZyU" />
 */}
 
@@ -25,7 +25,7 @@ Also, check out this Session State basics tutorial video by Jeamlit Developer Ad
 Let's call our app `Counter.java`. It initializes a `count` variable and has a button to increment the value stored in the `count` variable:
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class Counter {
     public static void main(String[] args) {
@@ -45,10 +45,10 @@ public class Counter {
 
 No matter how many times we press the **_Increment_** button in the above app, the `count` remains at 1. Let's understand why:
 
-- Each time we press the **_Increment_** button, Jeamlit reruns `Counter.java` from top to bottom, and with every run, `count` gets initialized to `0`.
+- Each time we press the **_Increment_** button, Javelit reruns `Counter.java` from top to bottom, and with every run, `count` gets initialized to `0`.
 - Pressing **_Increment_** subsequently adds 1 to 0, thus `count=1` no matter how many times we press **_Increment_**.
 
-As we'll see later, we can avoid this issue by storing `count` as a Session State variable. By doing so, we're indicating to Jeamlit that it should maintain the value stored inside a Session State variable across app reruns.
+As we'll see later, we can avoid this issue by storing `count` as a Session State variable. By doing so, we're indicating to Javelit that it should maintain the value stored inside a Session State variable across app reruns.
 
 Let's learn more about the API to use Session State.
 
@@ -117,7 +117,7 @@ Let's now take a look at a few examples that illustrate how to add Session State
 Now that we've got a hang of the Session State API, let's update our Counter app to use Session State:
 
 ```java
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class Counter {
     public static void main(String[] args) {
@@ -153,7 +153,7 @@ our [Session State API Reference Guide](/develop/api-reference/caching-and-state
 */}
 
 ```java 
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 
 public class Counter {
     public static void main(String[] args) {
@@ -180,8 +180,8 @@ Say we now want to not only increment the `count`, but also store when it was la
 We illustrate doing this using forms, callbacks and components state:
 
 ```java
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.JtContainer;
+import io.javelit.core.Jt;
+import io.javelit.core.JtContainer;
 import java.time.LocalTime;
 
 public class Counter {
@@ -235,8 +235,8 @@ The same app could be implemented in a simpler fashion:
 
 <Collapse title="Click to see the simpler implementation" expanded={false} >
 ```java
-import io.jeamlit.core.Jt;
-import io.jeamlit.core.JtContainer;
+import io.javelit.core.Jt;
+import io.javelit.core.JtContainer;
 import java.time.LocalTime;
 
 public class Counter {
@@ -293,7 +293,7 @@ different pages, calling `Jt.componentsState().get("my-key")` will correctly ret
 By default, **keyed** input widget values are persisted even if the widget is not displayed in an app run.  
 This is simpler to understand with an example. Run: 
 ```bash
-jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/WidgetPersistenceAfterNoRender.java
+javelit run https://raw.githubusercontent.com/javelit/javelit/refs/heads/main/examples/WidgetPersistenceAfterNoRender.java
 ```
 This can be disabled by calling `.noPersist()`. 
 
@@ -302,7 +302,7 @@ then return to Page1, the *keyed* widget values on Page1 remain intact.
 To force a page to clear all its **keyed** values when left, use `Jt.page(...).noPersistWhenLeft`.
 Here is an example you can run:
 ```bash
-jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/examples/WidgetPersistenceMultiPage.java
+javelit run https://raw.githubusercontent.com/javelit/javelit/refs/heads/main/examples/WidgetPersistenceMultiPage.java
 ```
 
 
@@ -310,8 +310,8 @@ jeamlit run https://raw.githubusercontent.com/jeamlit/jeamlit/refs/heads/main/ex
 
 Here are some limitations to keep in mind when using Session State and Components State
 
-- Session State exists for as long as the tab is open and connected to the Jeamlit server. As soon as you close the tab, everything stored in Session State is lost.
-- Session State is not persisted. If the Jeamlit server crashes, then everything stored in Session State gets wiped
+- Session State exists for as long as the tab is open and connected to the Javelit server. As soon as you close the tab, everything stored in Session State is lost.
+- Session State is not persisted. If the Javelit server crashes, then everything stored in Session State gets wiped
 - the same applies for Components State
 
 {/* TODO improve jt.sessionstate doc

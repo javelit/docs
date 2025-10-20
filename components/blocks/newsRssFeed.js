@@ -59,7 +59,7 @@ function NewsRssFeed() {
             };
           })
           .filter(
-            (post) => !post.title.toLowerCase().includes("introducing jeamlit"),
+            (post) => !post.title.toLowerCase().includes("introducing javelit"),
           )
           .slice(0, 3);
 
