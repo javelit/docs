@@ -29,12 +29,16 @@ import io.jeamlit.core.Jt;
 
 <CodeTile featured>
 #### ... or run standalone
+Recommended: use JBang
 ```bash
-# find the latest version at https://central.sonatype.com/artifact/io.jeamlit/jeamlit
-JEAMLIT_VERSION="0.19.0"
-# download the fat jar
-wget -O jeamlit-all.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
-# run your app
+jbang app install jeamlit@jeamlit
+jeamlit hello
+jeamlit run MyApp.java
+```
+Vanilla: run the fat jar
+```bash
+curl -L -o jeamlit.jar https://repo1.maven.org/maven2/io/jeamlit/jeamlit/${JEAMLIT_VERSION}/jeamlit-${JEAMLIT_VERSION}-all.jar
+java -jar jeamlit.jar hello
 java -jar jeamlit-all.jar run MyApp.java
 ```
 
@@ -177,13 +181,11 @@ Jt.echarts(chartJson).use();
 #### Sidebar
 
 ```java
-import io.jeamlit.core.JtContainer;
-
-// Add elements to sidebar
-Jt.title("Sidebar Title").use(JtContainer.SIDEBAR);
+// Add elements to the sidebar
+Jt.title("Sidebar Title").use(Jt.SIDEBAR);
 Double value = Jt.slider("Pick value")
     .min(0).max(100).value(50)
-    .use(JtContainer.SIDEBAR);
+    .use(Jt.SIDEBAR);
 ```
 
 </CodeTile>
@@ -400,9 +402,9 @@ public class WeatherApp {
 
         // Sidebar controls
         String city = Jt.selectBox("City", List.of("New York", "London", "Tokyo"))
-            .use(JtContainer.SIDEBAR);
+            .use(Jt.SIDEBAR);
         LocalDate date = Jt.dateInput("Date")
-            .use(JtContainer.SIDEBAR);
+            .use(Jt.SIDEBAR);
 
         // Main content
         Jt.text("Weather for " + city + " on " + date).use();
