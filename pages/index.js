@@ -34,6 +34,7 @@ import NoteSplit from "../components/blocks/noteSplit";
 import { attributes } from "../content/index.md";
 
 import styles from "../components/layouts/container.module.css";
+import NewsRssFeed from "../components/blocks/newsRssFeed";
 
 export default function Home({ window, menu }) {
   let { description } = attributes;
@@ -257,17 +258,18 @@ export default function Home({ window, menu }) {
             </TileContainer>
             */}
 
-            {/*
-
-            <H2 className="no-b-m">Latest blog posts</H2>
+            <H2 className="no-b-m">Latest news from the Dev Diary</H2>
             <NewsContainer>
-              <NewsFeed />
+              {/* previous from streamlit, using ghost <NewsFeed /> */}
+              {/* Jeamlit one using RSS feed from Hey World */}
+              <NewsRssFeed />
 
-              <Button link="https://blog.jeamlit.io/" target="_blank">
+              <Button link="https://world.hey.com/cdecatheu" target="_blank">
                 View all updates
               </Button>
             </NewsContainer>
-            */}
+            {/*
+             */}
 
             <NoteSplit
               background="gray-20"

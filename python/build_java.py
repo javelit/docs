@@ -96,8 +96,35 @@ def download_and_extract_json(version_str):
         return None
 
 
+def download_atom_feed():
+    """Download Atom feed and save to public directory."""
+    feed_url = "https://world.hey.com/cdecatheu/feed.atom"
+    output_path = Path(__file__).parent.parent / "public" / "feed.atom"
+    print(f"\nDownloading Atom feed from {feed_url}")
+    try:
+        # passing a user-agent to avoid 403
+        req = urllib.request.Request(
+            feed_url,
+            headers={'User-Agent': 'curl/8.7.1'}
+        )
+
+        with urllib.request.urlopen(req) as response:
+            feed_content = response.read()
+
+        # Write to file
+        with open(output_path, 'wb') as f:
+            f.write(feed_content)
+
+        print(f"Successfully saved feed to {output_path}")
+    except Exception as e:
+        print(f"ERROR downloading Atom feed: {e}")
+        raise e
+
 def main():
     """Main function to orchestrate the process."""
+    # Download Atom feed
+    download_atom_feed()
+
     print("Starting jeamlit documentation build process...")
     # Fetch versions to process
     versions = fetch_versions()
