@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "main"
+  workflow_dispatch:
 
 # This allows a subsequently queued workflow run to interrupt previous runs
 concurrency:
