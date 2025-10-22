@@ -11,14 +11,14 @@ This page assumes you understand the [Page terminology](/develop/concepts/multip
 ## App structure
 
 When using `Jt.navigation`, your entrypoint file acts like a page router. Each page is an app executed from your 
-entrypoint file. You can define a page from a Java class {/* TODO IMPLEMENT CALLABLE or function */}. If you include 
+entrypoint file. You can define a page from a Java `Runnable`. If you include 
 elements or widgets in your entrypoint file, they become common elements between your pages. In this case, you can 
 think of your entrypoint file like a picture frame around each of your pages.
 
 You can only call `Jt.navigation` once per app run and you must call it from your entrypoint file. When a user selects 
 a page in navigation (or is routed through a command like `Jt.switchPage`), `Jt.navigation` returns the selected page. 
 You must manually execute that page with the `.run()` method. The following example is a two-page app where each page 
-is defined by a Java class.
+is defined by a Java `Runnable`.
 
 **Directory structure:**
 
@@ -38,19 +38,20 @@ import io.javelit.core.JtPage;
 public class App {
     public static void main(String[] args) {
         JtPage currentPage = Jt.navigation(
-                Jt.page(Page1.class), Jt.page(Page2.class)).use();
+                Jt.page("/page1", () -> page1()), 
+                Jt.page("/page2", () -> page2())).use();
     }
 }
 ```
 
 ## Defining pages
 
-`Jt.page` lets you define a page builder. The first and only required argument defines your page class {/* TODO multipage callable which can be a Python file or function */}. 
+`Jt.page` lets you define a page builder. The required arguments are a path and a Java `Runnable` that contains the page logic. 
 Pass the page builders to `Jt.navigation` to register them as pages in your app.
 
-If you don't define your page title or URL pathname, Javelit will infer them from the Class name name as described in 
+If you don't define your page title, Javelit will infer it from the url path as described in 
 the multipage apps [Overview](/develop/concepts/multipage-apps/overview#automatic-page-labels-and-urls). 
-However, `Jt.page` lets you configure them manually. See [Jt.page API reference](/develop/api-reference/navigation/jt.page). 
+However, `Jt.page` lets you configure it manually. See [Jt.page API reference](/develop/api-reference/navigation/jt.page). 
 
 {/* 
 The following example uses `st.set_page_config` to set a page title and favicon consistently across pages. Each page will have its own label and icon in the navigation menu, but the browser tab will show a consistent title and favicon on all pages.
@@ -117,43 +118,38 @@ public class App {
         boolean loggedIn = Jt.sessionState().computeIfAbsentBoolean("logged_in", k -> false);
 
         if (!loggedIn) {
-            var currentPage = Jt.navigation(Jt.page(LoginPage.class)).hidden().use();
+            var currentPage = Jt.navigation(Jt.page("/login", () -> login())).hidden().use();
             currentPage.run();
         } else {
-            var currentPage = Jt.navigation(Jt.page(DashboardPage.class).home(), Jt.page(LogoutPage.class)).use();
+            var currentPage = Jt.navigation(Jt.page("/dashboard", () -> dashboard()).home(), 
+                                            Jt.page("/logout", () -> logout())).use();
             currentPage.run();
         }
     }
 
-    public class LoginPage {
-        public static void main(String[] args) {
-            if (Jt.button("Log in").use()) {
-                Jt.sessionState().put("logged_in", Boolean.TRUE);
-                Jt.rerun(true);
-            }
+    public static void login() {
+        if (Jt.button("Log in").use()) {
+            Jt.sessionState().put("logged_in", Boolean.TRUE);
+            Jt.rerun(true);
         }
     }
 
-    public class LogoutPage {
-        public static void main(String[] args) {
-            if (Jt.button("Log out").use()) {
-                Jt.sessionState().put("logged_in", Boolean.FALSE);
-                Jt.rerun(true);
-            }
+    public static void logout() {
+        if (Jt.button("Log out").use()) {
+            Jt.sessionState().put("logged_in", Boolean.FALSE);
+            Jt.rerun(true);
         }
     }
 
-    public class DashboardPage {
-        public static void main(String[] args) {
-            Jt.title("The dashboards").use();
-            Jt.text("This dashboard page is only available if the user is logged in.").use();
-            Jt.markdown("*the dashboard is not implemented, this is for example purpose*").use();
-        }
+    public static void dashboard() {
+        Jt.title("The dashboards").use();
+        Jt.text("This dashboard page is only available if the user is logged in.").use();
+        Jt.markdown("*the dashboard is not implemented, this is for example purpose*").use();
     }
 }
 ```
 
-*Note: in a real project, the `LoginPage`, `LogoutPage` and `DashboardPage` classes would be written to dedicated files 
+*Note: in a real project, the `login`, `logout` and `dashboard` may be written to dedicated files 
 and imported by the entrypoint `App` class.*
 
 You can try this app with:

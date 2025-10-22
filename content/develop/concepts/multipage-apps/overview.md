@@ -8,7 +8,7 @@ description: Understand Streamlit's features for creating multipage apps
 
 ## `Jt.page` and `Jt.navigation`
 
-With `Jt.navigation` and `Jt.page` you can declare any Java class {/* TODO implement callable support or `Callable` */} 
+With `Jt.navigation` and `Jt.page` you can declare any Java `Runnable`  
 as a page in your app. Furthermore, you can define common elements for your pages in your entrypoint file (the file you pass to `javelit run`). 
 With these methods, your entrypoint file becomes like a picture frame shared by all your pages.
 
@@ -19,7 +19,7 @@ your entrypoint file serves as the router between your pages.
 
 A page has three identifying pieces as follows:
 
-- **Page class**: This is a Java class {/* or callable function */} with the page's source code.
+- **Page Runnable**: This is a Java `Runnable` with the page's code.
 - **Page title**: This is how the page is identified within the navigation menu and the browser tab. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_one</i> and <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_two</i>.
 - **Page URL path**: This is the relative path of the page from the root URL of the app. See <i style={{ verticalAlign: "-.25em" }} class="material-icons-sharp">looks_3</i>.
 
@@ -40,12 +40,10 @@ Typically, the page icon and favicon are the same, but it's possible make them d
 
 ## Automatic page labels and URLs
 
-If you use `Jt.page` without declaring the page title or URL pathname, Javelit automatically determines 
-the page title and URL path based on the Class name. This section describes this naming convention.
-
-For example, `Jt.page(MyPage.class)` will have: 
-- **title**: `My Page` → Javelit assumes Camel Case
-- **url path**: `/MyPage` → Javelit simply uses the class simple name
+If you use `Jt.page` without declaring the page title, Javelit automatically determines 
+the page title based on the url path. `-` and `_` are replaced by space and the words are capitalized.  
+For example: the default title of `Jt.page("/my-page", () -> myPage()` is `My Page`. 
+You can customize the title with `.title("My Custom Title")`.
 
 ## Navigating between pages
 

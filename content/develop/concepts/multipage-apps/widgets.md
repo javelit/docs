@@ -41,10 +41,12 @@ import io.javelit.core.Jt;
 
 public class App {
     public static void main() {
-        var currentPage = Jt.navigation(Jt.page(Page1.class), Jt.page(Page2.class)).use();
-        
+        var currentPage = Jt.navigation(
+                Jt.page("/page1", () -> page1()), 
+                Jt.page("/page2", () -> page2())).use();
+
         Jt.slider("Size").key("size").use(Jt.SIDEBAR);
-        
+
         currentPage.run();
     }
 }

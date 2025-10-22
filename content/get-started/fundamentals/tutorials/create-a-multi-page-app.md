@@ -57,6 +57,7 @@ import java.net.URL;
 import java.util.List;
 
 import io.javelit.core.Jt;
+import io.javelit.core.JtPage;
 import io.javelit.core.Shared;
 import pages.ChatPage;
 import pages.ClassificationPage;
@@ -77,8 +78,8 @@ public class AIAssistant {
 
         // Define navigation with multiple pages
         JtPage currentPage = Jt
-                .navigation(Jt.page(ClassificationPage.class).title("Classification").home(),
-                            Jt.page(ChatPage.class).title("Chat"))
+                .navigation(Jt.page("/classification", ClassificationPage::app).title("Classification").home(),
+                            Jt.page("/chat", ChatPage::app).title("Chat"))
                 .use();
 
         // Model selector in sidebar - appears on ALL pages
@@ -175,12 +176,12 @@ The `Jt.navigation()` method defines which pages are available:
 
 ```java
 JtPage currentPage = Jt
-    .navigation(Jt.page(ClassificationPage.class).title("Classification").home(),
-                Jt.page(ChatPage.class).title("Chat"))
+    .navigation(Jt.page("/classification", ClassificationPage::app).title("Classification").home(),
+                Jt.page("/chat", ChatPage::app).title("Chat"))
     .use();
 ```
 
-This returns a `JtPage` object representing the currently selected page. Call `currentPage.run()` to execute that page's `main()` method.
+This returns a `JtPage` object representing the currently selected page. Call `currentPage.run()` to execute that page's `app()` method.
 
 **2. The Canvas Pattern**
 
@@ -210,7 +211,7 @@ This pattern is crucial for multipage apps - the model selection in the sidebar 
 
 ## Create the pages
 
-Now let's create the two page classes. Each page is a separate Java class with a `main()` method.
+Now let's create the two page classes. Each page is a separate Java class with an `app` method.
 
 ### Classification Page
 
@@ -243,7 +244,7 @@ public class ClassificationPage {
         Sentiment analyzeSentimentOf(String text);
     }
 
-    public static void main(String[] args) {
+    public static void app() {
         Jt.title("🏷️ Sentiment Classification").use();
 
         Jt.markdown("""
@@ -355,7 +356,7 @@ public class ChatPage {
         String chat(@V("question") String question);
     }
 
-    public static void main(String[] args) {
+    public static void app() {
         Jt.title("💬 Chat Assistant").use();
 
         Jt.markdown("""

@@ -59,8 +59,8 @@ This makes the app easier to manage as a developer and easier to navigate as a u
 powerful way to create multipage apps using [`Jt.page`](/develop/api-reference/navigation/jt.page) and [`Jt.navigation`](/develop/api-reference/navigation/jt.navigation). 
 Just create your pages and connect them with navigation as follows:
 
-1. Create an entry point class that defines and connects your pages
-2. Create separate Java classes for each page's content
+1. Create an entry point class (or method in _embedded_ mode) that defines and connects your pages
+2. Create separate Java methods for each page's content. They are passed as Java `Runnable`.
 3. Use [`Jt.page`](/develop/api-reference/navigation/jt.page) to define your pages and [`Jt.navigation`](/develop/api-reference/navigation/jt.navigation) to connect them
 
 Here's an example of a three-page app:
@@ -77,35 +77,26 @@ public class App {
 
     public static void main(String[] args) {
         // register the pages
-        var currentPage = Jt.navigation(Jt.page(MainPage.class).title("Main Page").icon("🎈"),
-                                        Jt.page(Page2.class).title("Page 2").icon("❄️"),
-                                        Jt.page(Page3.class).title("Page 3").icon("🎉")).use();
+        var currentPage = Jt.navigation(Jt.page("/main", () -> home()).title("Home").icon("🎈"),
+                                        Jt.page("/page2", () -> page2()).title("Page 2").icon("❄️"),
+                                        Jt.page("/page3", () -> page3()).title("Page 3").icon("🎉")).use();
         // run the current page
         currentPage.run();
     }
 
-    // Page 1
-    public static class MainPage {
-        public static void main(String[] args) {
-            Jt.title("Main Page 🎈").use();
-            Jt.markdown("Welcome to the main page!").use();
-        }
+    public static void home() {
+        Jt.title("Main Page 🎈").use();
+        Jt.markdown("Welcome to the main page!").use();
     }
 
-    // Page 2
-    public static class Page2 {
-        public static void main(String[] args) {
-            Jt.title("Page 2 ❄️").use();
-            Jt.text("This is the second page").use();
-        }
+    public static void page2() {
+        Jt.title("Page 2 ❄️").use();
+        Jt.text("This is the second page").use();
     }
 
-    // Page 3
-    public static class Page3 {
-        public static void main(String[] args) {
-            Jt.title("Page 3 🎉").use();
-            Jt.markdown("This is the **third** page!").use();
-        }
+    public static void page3() {
+        Jt.title("Page 3 🎉").use();
+        Jt.markdown("This is the **third** page!").use();
     }
 }
 ```
