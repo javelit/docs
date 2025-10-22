@@ -16,12 +16,14 @@ slug: /develop/api-reference/navigation
 Configure the available pages in a multipage app.
 
 ```java
-Map<String, List<Object>> pages = Map.of(
-    "Your account", List.of(logOut, settings),
-    "Reports", List.of(overview, usage),
-    "Tools", List.of(search)
-);
-Jt.navigation(pages).use();
+var currentPage =
+        Jt.navigation(
+            Jt.page("/dashboard", DashboardPage::app).title("Home").home(),
+            Jt.page("/users", () -> users()).icon("👥"),
+            Jt.page("/queries", () -> {Jt.title("Queries").use(); ...}))
+        .use();
+
+currentPage.run();
 ```
 
 </RefCard>
@@ -35,11 +37,9 @@ Jt.navigation(pages).use();
 Define a page in a multipage app.
 
 ```java
-Object home = Jt.page(
-    "home.java",
-    "Home",
-    ":material/home:"
-);
+Jt.page("/settings", () -> settings())
+        .title("Settings")
+        .icon(":settings:");
 ```
 
 </RefCard>
@@ -53,8 +53,11 @@ Object home = Jt.page(
 Display a link to another page in a multipage app.
 
 ```java
-Jt.pageLink("App.java", "Home", "🏠").use();
-Jt.pageLink("pages/Profile.java", "My profile").use();
+Jt.pageLink("/dashboard").use();
+Jt.pageLink("/users").label("See Users").use();
+
+// external page
+Jt.pageLink("https://github.com/javelit/javelit", "Github project").icon(":link:").use();
 ```
 
 </RefCard>
@@ -66,7 +69,10 @@ Jt.pageLink("pages/Profile.java", "My profile").use();
 Programmatically navigates to a specified page.
 
 ```java
-Jt.switchPage("pages/MyPage.java");
+Jt.switchPage("/users");
+
+// go home
+Jt.switchPage(null);
 ```
 
 </RefCard>

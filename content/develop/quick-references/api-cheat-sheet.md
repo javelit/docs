@@ -279,8 +279,8 @@ if (Jt.formSubmitButton("Login").use(form)) {
 
 // Multi-page navigation
 var nav = Jt.navigation(
-    Jt.page(HomePage.class).title("Home").icon("🏠"),
-    Jt.page(SettingsPage.class).title("Settings").icon("⚙️")
+    Jt.page("/home", () -> home()).title("Home").icon("🏠"),
+    Jt.page("/settings", () -> settings()).title("Settings").icon("⚙️")
 ).use();
 
 // Page links

@@ -79,8 +79,13 @@ st.link_button("Go to gallery", url)
 Display a link to another page in a multipage app.
 
 ```java
-Jt.pageLink(HomePage.class).use();
-Jt.pageLink("https://example.com", "Go to site").use();
+Jt.pageLink("/settings").use();
+
+// link to home
+Jt.pageLink(null).use();
+
+// external page
+Jt.pageLink("https://github.com/javelit/javelit", "Github project").icon(":link:").use();
 ```
 
 </RefCard>
