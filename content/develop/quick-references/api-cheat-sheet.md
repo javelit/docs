@@ -16,7 +16,7 @@ This is a summary of the docs for the latest version of Javelit.
 ```markup
 <!-- Add to pom.xml -->
 <dependency>
-    <groupId>tech.catheu</groupId>
+    <groupId>io.javelit</groupId>
     <artifactId>javelit</artifactId>    
     <version>${JEAMLIT_VERSION}</version>
 </dependency>
@@ -25,7 +25,15 @@ This is a summary of the docs for the latest version of Javelit.
 import io.javelit.core.Jt;
 import io.javelit.core.Server;
 
-Server.builder(MyApp.class, 8080).build().start();
+...
+
+void app() {
+      Jt.text("Hello World").use();
+}
+
+...
+
+Server.builder(() -> app(), 8080).build().start();
 ```
 
 </CodeTile>

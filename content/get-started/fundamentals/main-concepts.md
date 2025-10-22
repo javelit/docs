@@ -48,10 +48,15 @@ Another way of running Javelit is to run it [embedded](/get-started/installation
 
 ```java
 import io.javelit.core.Server;
+import io.javelit.core.Jt;
 
 void runJavelitServer() {
-    final var server = Server.builder(YourApp.class, 8080).build();
+    final var server = Server.builder(() -> app(), 8080).build();
     server.start();
+}
+
+void app() {
+    Jt.text("Hello World").use();
 }
 ```
 

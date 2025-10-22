@@ -104,15 +104,21 @@ As with any Java project, you'll need:
 
 ## Create your Javelit app
 
-1. Create `src/main/java/App.java` with your Javelit application:
-
+1. Create `src/main/java/Main.java`:
 ```java
 import io.javelit.core.Jt;
+import io.javelit.core.Server;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
-public class App {
+public class Launcher {
 
     public static void main(String[] args) {
+        final var server = Server.builder(() -> app(), 8080).build();
+        server.start();
+    }
+
+    // the javelit app
+    public static void app() {
         Jt.title("Hello World !").use();
 
         Jt.markdown("## A simple click app").use();
@@ -143,20 +149,6 @@ public class App {
 }
 ```
 
-2. Create `src/main/java/Launcher.java` to start the embedded server:
-
-```java
-import io.javelit.core.Server;
-
-public class Launcher {
-
-    public static void main(String[] args) {
-        final var server = Server.builder(App.class, 8080).build();
-        server.start();
-    }
-}
-```
-
 ## Build and run
 
 ### With Maven
@@ -168,7 +160,7 @@ public class Launcher {
 
 2. Run the Javelit server:
    ```bash
-   ./mvnw compile exec:java -Dexec.mainClass="Launcher"
+   ./mvnw compile exec:java -Dexec.mainClass="Main"
    ```
 3. Open your browser at http://localhost:8080 to see your app!
 
@@ -184,7 +176,7 @@ public class Launcher {
 
 2. Run the Javelit server:
    ```bash
-   ./gradlew run --main-class=Launcher
+   ./gradlew run --main-class=Main
    ```
 
 3. Open your browser at [http://localhost:8080](http://localhost:8080) to see your app!
@@ -196,15 +188,15 @@ public class Launcher {
 ### IntelliJ IDEA Setup
 
 1. Open your project in IntelliJ IDEA
-2. Run `Launcher.java` in **Debug mode** (not Run mode)
+2. Run `Main.java` in **Debug mode** (not Run mode)
 3. Open your browser at [http://localhost:8080](http://localhost:8080)
-4. Edit `App.java` and add some code, for example:
+4. Edit the `app` method. For example add this code:
    ```java
    Jt.markdown("**OMG THE HOT-RELOAD IS REAL**").use();
    ```
 5. When you see the "Code Change" modal in IntelliJ, click it to hot-reload
    <Image src="/images/get-started/intellij_hot_reload.png" clean />
-6. Refresh your browser to see the changes instantly!
+6. Refresh the page in your browser to see the changes!
 
 
 ## What's next?

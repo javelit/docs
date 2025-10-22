@@ -15,16 +15,14 @@ The classpath resolution mechanism depends on the solution.
 Javelit can be launched as an embedded server in an existing project with the following code:
 
 ```java
+// the javelit app
+void app() {
+    Jt.text("Hello World").use();
+}
+
 void startJavelitServer() {
-    // the Javelit app class
-    class MyApp {
-        public static void main(String[] args) {
-            Jt.text("Hello World").use();
-        }
-    }
-    
     // prepare a Javelit server
-    var server = Server.builder(MyApp.class, 8888).build();
+    var server = Server.builder(() -> app(), 8888).build();
     
     // start the server - this is non-blocking
     server.start();
@@ -65,7 +63,7 @@ In standalone mode, there are 2 ways to add dependencies to the Javelit app:
     //DEPS org.apache.commons:commons-math3:3.6.1
     //DEPS com.fasterxml.jackson.core:jackson-core:2.15.2
     
-    import tech.catheu.javelit.core.Jt;
+    import io.javelit.javelit.core.Jt;
     import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
     
     public class MyDataApp {

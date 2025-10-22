@@ -131,7 +131,7 @@ Embed code blocks like so:
 
 ````markdown
     ```java
-    import tech.catheu.javelit.core.Jt;
+    import io.javelit.core.Jt;
 
     public class TestApp {
         public static void main(String[] args) {
@@ -204,7 +204,7 @@ To preview your changes, refresh your browser tab and visit the edited page!
 
 ### Add a new docstring to the API Reference
 
-Any time a new version of Javelit is released, the docstrings stored in `python/javelit.json` has to be updated by running `make docstrings`. This will update the json file with the documentation from the latest release on [maven.org](https://central.sonatype.com/artifact/tech.catheu/javelit).
+Any time a new version of Javelit is released, the docstrings stored in `python/javelit.json` has to be updated by running `make docstrings`. This will update the json file with the documentation from the latest release on [maven.org](https://central.sonatype.com/artifact/io.javelit/javelit).
 
 If you need to regenerate all function signatures, across all versions, delete `python/javelit.json` and run `make docstrings`. This will generate the `javelit.json` file with documentation for the last N releases. N is controlled by the `LOOKBACK` constant in the [python/build_java.py](python/build_java.py) script.
 

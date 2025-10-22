@@ -46,16 +46,14 @@ Javelit requires A Java JDK >= `21`.
    ```
 2. Launch the server in your project:
    ```java
+   // the javelit app
+   void app() {
+      Jt.text("Hello World").use();
+   }
+   
    void startJavelitServer() {
-     // the Javelit app class
-     class MyApp {
-         public static void main(String[] args) {
-             Jt.text("Hello World").use();
-         }
-     }
-    
      // prepare a Javelit server
-     var server = Server.builder(MyApp.class, 8888).build();
+     var server = Server.builder(() -> app(), 8888).build();
     
      // start the server - this is non-blocking
      server.start();
