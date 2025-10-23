@@ -635,21 +635,15 @@ site_menu:
   - category: Develop / API reference / Status elements
     url: /develop/api-reference/status
   - category: Develop / API reference / Status elements / CALLOUTS
-  - category: Develop / API reference / Status elements / st.success
-    url: /develop/api-reference/status/st.success
+  - category: Develop / API reference / Status elements / Jt.success
+    url: /develop/api-reference/status/jt.success
     isVersioned: true
-    visible: false
-    ignore: true
-  - category: Develop / API reference / Status elements / st.info
-    url: /develop/api-reference/status/st.info
+  - category: Develop / API reference / Status elements / Jt.info
+    url: /develop/api-reference/status/jt.info
     isVersioned: true
-    visible: false
-    ignore: true
-  - category: Develop / API reference / Status elements / st.warning
-    url: /develop/api-reference/status/st.warning
+  - category: Develop / API reference / Status elements / Jt.warning
+    url: /develop/api-reference/status/jt.warning
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Status elements / Jt.error
     url: /develop/api-reference/status/jt.error
     isVersioned: true

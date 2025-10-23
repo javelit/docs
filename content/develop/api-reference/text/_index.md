@@ -7,7 +7,7 @@ slug: /develop/api-reference/text
 
 Javelit apps usually start with a call to `Jt.title` to set the
 app's title. {/*After that, there are 2 heading levels you can use:
-`st.header` and `st.subheader`.*/}
+`Jt.header` and `Jt.subheader`.*/}
 
 Pure text is entered with `Jt.text`, and Markdown with
 `Jt.markdown`.
@@ -48,7 +48,7 @@ Jt.title("The app title").use();
 
 </RefCard>
 
-<RefCard href="/develop/api-reference/text/st.header">
+<RefCard href="/develop/api-reference/text/jt.header">
 
 <Image pure alt="screenshot" src="/images/api/header.jpg" />
 
@@ -61,7 +61,7 @@ Jt.header("This is a header").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.subheader">
+<RefCard href="/develop/api-reference/text/jt.subheader">
 
 <Image pure alt="screenshot" src="/images/api/subheader.jpg" />
 

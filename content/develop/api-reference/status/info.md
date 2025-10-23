@@ -1,8 +1,7 @@
 ---
-title: st.info
-slug: /develop/api-reference/status/st.info
-description: st.info displays an informational message.
-ignore: true
+title: Jt.info
+slug: /develop/api-reference/status/jt.info
+description: Jt.info displays an informational message.
 ---
 
-<Autofunction function="streamlit.info" />
+<Autofunction function="Jt.info" />

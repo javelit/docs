@@ -95,7 +95,7 @@ Jt.title("The app title").use();
 ```
 </RefCard>
 
-<RefCard href="/develop/api-reference/text/st.header">
+<RefCard href="/develop/api-reference/text/jt.header">
 
 <Image pure alt="screenshot" src="/images/api/header.jpg" />
 
@@ -108,7 +108,7 @@ Jt.header("This is a header").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/text/st.subheader">
+<RefCard href="/develop/api-reference/text/jt.subheader">
 
 <Image pure alt="screenshot" src="/images/api/subheader.jpg" />
 
@@ -1923,7 +1923,10 @@ st.snow()
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/status/st.success">
+
+*/}
+
+<RefCard href="/develop/api-reference/status/jt.success">
 
 <Image pure alt="screenshot" src="/images/api/success.jpg" />
 
@@ -1932,11 +1935,11 @@ st.snow()
 Display a success message.
 
 ```java
-st.success("Match found!")
+Jt.success("Match found!").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/status/st.info">
+<RefCard href="/develop/api-reference/status/jt.info">
 
 <Image pure alt="screenshot" src="/images/api/info.jpg" />
 
@@ -1945,11 +1948,11 @@ st.success("Match found!")
 Display an informational message.
 
 ```java
-st.info("Dataset is updated every day at midnight.")
+Jt.info("Dataset is updated every day at midnight.").use();
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/status/st.warning">
+<RefCard href="/develop/api-reference/status/jt.warning">
 
 <Image pure alt="screenshot" src="/images/api/warning.jpg" />
 
@@ -1958,11 +1961,11 @@ st.info("Dataset is updated every day at midnight.")
 Display warning message.
 
 ```java
-st.warning("Unable to fetch image. Skipping...")
+Jt.warning("Unable to fetch image. Skipping...").use();
 ```
 
 </RefCard>
-*/}
+
 <RefCard href="/develop/api-reference/status/jt.error">
 
 <Image pure alt="screenshot" src="/images/api/error.jpg" />
