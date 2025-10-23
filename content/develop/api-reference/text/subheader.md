@@ -1,8 +1,7 @@
 ---
-title: st.subheader
-slug: /develop/api-reference/text/st.subheader
-description: st.subheader displays text in subheader formatting.
-ignore: true
+title: Jt.subheader
+slug: /develop/api-reference/text/jt.subheader
+description: Jt.subheader displays text in subheader formatting.
 ---
 
 <Autofunction function="Jt.subheader" />

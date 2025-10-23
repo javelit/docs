@@ -47,7 +47,7 @@ Jt.title("The app title").use();
 ```
 
 </RefCard>
-{/*
+
 <RefCard href="/develop/api-reference/text/st.header">
 
 <Image pure alt="screenshot" src="/images/api/header.jpg" />
@@ -57,7 +57,7 @@ Jt.title("The app title").use();
 Display text in header formatting.
 
 ```java
-st.header("This is a header")
+Jt.header("This is a header").use();
 ```
 
 </RefCard>
@@ -70,11 +70,10 @@ st.header("This is a header")
 Display text in subheader formatting.
 
 ```java
-st.subheader("This is a subheader")
+Jt.subheader("This is a subheader").use();
 ```
 
 </RefCard>
-*/}
 </TileContainer>
 
 ## Formatted text

@@ -205,16 +205,12 @@ site_menu:
   - category: Develop / API reference / Text elements / Jt.title
     url: /develop/api-reference/text/jt.title
     isVersioned: true
-  - category: Develop / API reference / Text elements / st.header
-    url: /develop/api-reference/text/st.header
+  - category: Develop / API reference / Text elements / Jt.header
+    url: /develop/api-reference/text/jt.header
     isVersioned: true
-    visible: false
-    ignore: true
-  - category: Develop / API reference / Text elements / st.subheader
-    url: /develop/api-reference/text/st.subheader
+  - category: Develop / API reference / Text elements / Jt.subheader
+    url: /develop/api-reference/text/jt.subheader
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Text elements / Jt.markdown
     url: /develop/api-reference/text/jt.markdown
     isVersioned: true

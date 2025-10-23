@@ -93,10 +93,8 @@ Display text in title formatting.
 ```java
 Jt.title("The app title").use();
 ```
-
-{/*
-
 </RefCard>
+
 <RefCard href="/develop/api-reference/text/st.header">
 
 <Image pure alt="screenshot" src="/images/api/header.jpg" />
@@ -106,7 +104,7 @@ Jt.title("The app title").use();
 Display text in header formatting.
 
 ```java
-st.header("This is a header")
+Jt.header("This is a header").use();
 ```
 
 </RefCard>
@@ -119,10 +117,12 @@ st.header("This is a header")
 Display text in subheader formatting.
 
 ```java
-st.subheader("This is a subheader")
+Jt.subheader("This is a subheader").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/text/st.badge">
 
 <Image pure alt="screenshot" src="/images/api/badge.jpg" />
@@ -148,9 +148,9 @@ Display text in small font.
 st.caption("This is written small caption text")
 ```
 
+</RefCard>
 */}
 
-</RefCard>
 <RefCard href="/develop/api-reference/text/jt.code">
 
 <Image pure alt="screenshot" src="/images/api/code.jpg" />
@@ -217,7 +217,7 @@ Jt.text("Hello world").use();
 Display a horizontal rule.
 
 ```java
-Jt.divider().use();
+Jt.divider("div-1").use();
 ```
 
 {/*
