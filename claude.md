@@ -22,7 +22,8 @@ Python/Streamlit → Java/Jeamlit:
 To make a component visible in the doc because it is now available:
 
 - [ ] edit [menu](content/menu.md)
-  - make visible , remove ignore
+  - make visible (remove `visible: false`)
+  - remove `ignore: true`
   - replace st by Jt/jt where relevant
 - [ ] edit api reference [_index.md](content/develop/api-reference/_index.md)
   - **properly uncomment JSX blocks `{/* */}` - note that large blocks may contain multiple components, so you may need to either uncomment the entire block or restructure the comments to keep other components commented while exposing only the target component**

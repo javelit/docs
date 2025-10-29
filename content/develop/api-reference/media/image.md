@@ -1,8 +1,7 @@
 ---
-title: st.image
-slug: /develop/api-reference/media/st.image
-description: st.image displays an image or list of images.
-ignore: true
+title: Jt.image
+slug: /develop/api-reference/media/jt.image
+description: Jt.image displays an image.
 ---
 
-<Autofunction function="streamlit.image" />
+<Autofunction function="Jt.image" />

@@ -9,8 +9,7 @@ It's easy to embed images, videos, and audio files directly into your Javelit ap
 
 <TileContainer>
 
-{/*
-<RefCard href="/develop/api-reference/media/st.image">
+<RefCard href="/develop/api-reference/media/jt.image">
 
 <Image pure alt="screenshot" src="/images/api/image.jpg" />
 
@@ -18,14 +17,15 @@ It's easy to embed images, videos, and audio files directly into your Javelit ap
 
 Display an image or list of images.
 
-```python
-st.image(numpy_array)
-st.image(image_bytes)
-st.image(file)
-st.image("https://example.com/myimage.jpg")
+```java
+Jt.image(byteArray).use();
+Jt.image(Path.of("image.jpg")).use();
+Jt.image("https://example.com/myimage.jpg").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/media/st.logo">
 
 <Image pure alt="screenshot" src="/images/api/logo.jpg" />
