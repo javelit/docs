@@ -1381,12 +1381,12 @@ stoggle(
 
 */}
 
-{/*
 ### Media elements
 
 <br />
 
 <TileContainer>
+{/*
 <RefCard href="/develop/api-reference/media/st.image">
 
 <Image pure alt="screenshot" src="/images/api/image.jpg" />
@@ -1429,7 +1429,10 @@ st.pdf("my_document.pdf")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/media/st.audio">
+
+*/}
+
+<RefCard href="/develop/api-reference/media/jt.audio">
 
 <Image pure alt="screenshot" src="/images/api/audio.jpg" />
 
@@ -1438,13 +1441,14 @@ st.pdf("my_document.pdf")
 Display an audio player.
 
 ```java
-st.audio(numpy_array)
-st.audio(audio_bytes)
-st.audio(file)
-st.audio("https://example.com/myaudio.mp3", format="audio/mp3")
+Jt.audio(byteArray).use();
+Jt.audio(file).use();
+Jt.audio("https://example.com/myaudio.mp3").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/media/st.video">
 
 <Image pure alt="screenshot" src="/images/api/video.jpg" />
@@ -1461,6 +1465,9 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 ```
 
 </RefCard>
+
+*/}
+
 </TileContainer>
 
 {/*

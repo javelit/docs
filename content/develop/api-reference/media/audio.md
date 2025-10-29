@@ -1,8 +1,7 @@
 ---
-title: st.audio
-slug: /develop/api-reference/media/st.audio
-description: st.audio displays an audio player.
-ignore: true
+title: Jt.audio
+slug: /develop/api-reference/media/jt.audio
+description: Jt.audio displays an audio player.
 ---
 
-<Autofunction function="streamlit.audio" />
+<Autofunction function="Jt.audio" />

@@ -550,11 +550,9 @@ site_menu:
     isVersioned: true
   - category: Develop / API reference / Media elements
     url: /develop/api-reference/media
-  - category: Develop / API reference / Media elements / st.audio
-    url: /develop/api-reference/media/st.audio
+  - category: Develop / API reference / Media elements / Jt.audio
+    url: /develop/api-reference/media/jt.audio
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Media elements / st.image
     url: /develop/api-reference/media/st.image
     isVersioned: true
