@@ -561,11 +561,9 @@ site_menu:
     isVersioned: true
     visible: false
     ignore: true
-  - category: Develop / API reference / Media elements / st.pdf
-    url: /develop/api-reference/media/st.pdf
+  - category: Develop / API reference / Media elements / Jt.pdf
+    url: /develop/api-reference/media/jt.pdf
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Media elements / st.video
     url: /develop/api-reference/media/st.video
     isVersioned: true

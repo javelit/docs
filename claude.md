@@ -26,12 +26,16 @@ To make a component visible in the doc because it is now available:
   - remove `ignore: true`
   - replace st by Jt/jt where relevant
 - [ ] edit api reference [_index.md](content/develop/api-reference/_index.md)
-  - **properly uncomment JSX blocks `{/* */}` - note that large blocks may contain multiple components, so you may need to either uncomment the entire block or restructure the comments to keep other components commented while exposing only the target component**
+  - **properly uncomment JSX blocks `{/* */}` - IMPORTANT: you must move/restructure the comment tags, not just remove them**
+    - Large blocks may contain multiple components
+    - When uncommenting one component, move the `*/}` closing tag to end BEFORE your uncommented component
+    - Add `{/*` opening tag AFTER your uncommented component to keep remaining components commented
+    - Example: if uncommenting component B from `{/* A B C */}`, result should be `{/* A */} B {/* C */}`
   - edit the code
   - replace st by Jt/jt where relevant
   - update the url - should match url in menu.md
 - [ ] edit sub folder index.md
-  - **same JSX comment handling as above - understand the comment structure before making changes**
+  - **same JSX comment handling as above - properly move comment tags, don't just remove them**
   - same changes as in the file above
 - [ ] edit md file
   - remove ignore: true

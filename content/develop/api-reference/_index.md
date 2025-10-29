@@ -1416,7 +1416,9 @@ st.logo("logo.jpg")
 ```
 
 </RefCard>
-<RefCard href="/develop/api-reference/media/st.pdf">
+*/}
+
+<RefCard href="/develop/api-reference/media/jt.pdf">
 
 <Image pure alt="screenshot" src="/images/api/pdf.jpg" />
 
@@ -1425,12 +1427,12 @@ st.logo("logo.jpg")
 Display a PDF file.
 
 ```java
-st.pdf("my_document.pdf")
+Jt.pdf(byteArray).use();
+Jt.pdf(Path.of("document.pdf")).use();
+Jt.pdf("https://example.com/mydocument.pdf").use();
 ```
 
 </RefCard>
-
-*/}
 
 <RefCard href="/develop/api-reference/media/jt.audio">
 

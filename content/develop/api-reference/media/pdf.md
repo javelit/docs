@@ -1,8 +1,7 @@
 ---
-title: st.pdf
-slug: /develop/api-reference/media/st.pdf
-description: st.pdf displays a PDF viewer
-ignore: true
+title: Jt.pdf
+slug: /develop/api-reference/media/jt.pdf
+description: Jt.pdf displays a PDF viewer.
 ---
 
-<Autofunction function="streamlit.pdf" />
+<Autofunction function="Jt.pdf" />
