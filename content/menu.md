@@ -1279,6 +1279,8 @@ site_menu:
     url: /deploy/streamlit-community-cloud/status
     visible: false
     ignore: true
+  - category: Deploy / Railway
+    url: /deploy/railway
   - category: Deploy / Snowflake
     url: /deploy/snowflake
     ignore: true

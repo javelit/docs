@@ -38,3 +38,6 @@ Get all the information you need to deploy your app and share it with your users
 
     */}
 </InlineCalloutContainer>
+
+Documentation per hosting platform: 
+- [Railway](/deploy/railway) - 🚡 **Recommended for _standalone_ apps** 🚡
