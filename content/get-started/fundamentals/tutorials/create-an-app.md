@@ -537,18 +537,26 @@ public class App {
 
 ## Share your app
 
-After you've built a Javelit app, it's time to share it! To show it off to the world you can share your Java file directly.
+After you've built a Javelit app, it's time to share it!
 
-It works in simple steps:
+<Tip>
+We recommend [Railway](https://railway.com/?referralCode=NFgD4z) to deploy simple Javelit apps. Railway is a great PaaS that makes 
+it easy to build, deploy, and manage your applications. A ready-to-use Javelit template lets you deploy your apps in one click.  
+Using Railway also supports the Javelit project. [Learn more](/deploy/railway).
+
+If you want to share the app with a user who will run it locally, they can simply run:  
+`javelit run \<Github URL\>`.
+</Tip>
+
+Follow these simple steps:
 
 1. Put your app in a public GitHub repo 
-2. Open the <a href="https://railway.com/new/template/javelit-app?referralCode=NFgD4z" target="_blank">Railway one-click deploy Javelit template</a> and sign-in if prompted. 
-3. Paste your GitHub project URL 
-4. Click Deploy.
+2. Open the <a href="https://railway.com/deploy/javelit-app?referralCode=NFgD4z&utm_medium=integration&utm_source=template&utm_campaign=documentation" target="_blank">Railway one-click deploy Javelit template</a>. 
+3. Click _Deploy Now_. Login/Sign-in if prompted.
+4. Paste your GitHub project URL 
+4. Click _Deploy_.
 
 That's it! 🚠 You now have a shareable app.
-
-_If you want to share the app with a user who will run it locally, they can simply run: `javelit run <Github URL>`._ 
 
 ## Get help
 
