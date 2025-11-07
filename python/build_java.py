@@ -116,14 +116,66 @@ def download_atom_feed():
             f.write(feed_content)
 
         print(f"Successfully saved feed to {output_path}")
+        return feed_content
     except Exception as e:
         print(f"ERROR downloading Atom feed: {e}")
         raise e
+
+
+def generate_feed_summary_entries():
+    """Create empty summary entries for new feed posts."""
+    print("\n=== Updating feed summaries ===")
+    feed_path = Path(__file__).parent.parent / "public" / "feed.atom"
+    summaries_path = Path(__file__).parent.parent / "public" / "feed-summaries.json"
+    existing_summaries = {}
+    if summaries_path.exists():
+        try:
+            with open(summaries_path, 'r', encoding='utf-8') as f:
+                existing_summaries = json.load(f)
+            print(f"Loaded {len(existing_summaries)} existing summaries")
+        except Exception as e:
+            print(f"Error loading existing summaries: {e}")
+    if not feed_path.exists():
+        print(f"ERROR: Feed file not found at {feed_path}")
+        return
+    try:
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+        # Handle Atom namespace
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        entries = root.findall('atom:entry', ns)
+        print(f"Found {len(entries)} entries in feed")
+        new_entries = 0
+        for entry in entries:
+            # Extract URL as unique ID
+            link = entry.find('atom:link[@rel="alternate"]', ns)
+            if link is None:
+                continue
+            url = link.get('href')
+            # Skip if we already have an entry (preserve manual summaries)
+            if url in existing_summaries:
+                print(f"  Skipping {url} (already exists)")
+                continue
+            # Add empty summary for new posts
+            existing_summaries[url] = ""
+            new_entries += 1
+            print(f"  Added empty entry for {url}")
+        # Save summaries
+        with open(summaries_path, 'w', encoding='utf-8') as f:
+            json.dump(existing_summaries, f, indent=2, ensure_ascii=False)
+        print(f"\nSaved {len(existing_summaries)} entries to {summaries_path}")
+        if new_entries > 0:
+            print(f"  ({new_entries} new empty entries added - fill them in manually)")
+    except Exception as e:
+        print(f"ERROR updating summaries: {e}")
 
 def main():
     """Main function to orchestrate the process."""
     # Download Atom feed
     download_atom_feed()
+
+    # Generate summaries for feed entries
+    generate_feed_summary_entries()
 
     print("Starting javelit documentation build process...")
     # Fetch versions to process

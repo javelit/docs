@@ -34,6 +34,7 @@
 .Text {
   @apply text-sm tracking-tight leading-normal;
   @apply text-gray-90 !important;
+  white-space: pre-line;
 }
 
 :global(.dark) .Container {

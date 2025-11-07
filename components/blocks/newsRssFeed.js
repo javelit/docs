@@ -6,10 +6,19 @@ function NewsRssFeed() {
 
   useEffect(() => {
     const feedUrl = "/feed.atom";
+    const summariesUrl = "/feed-summaries.json";
 
-    fetch(feedUrl)
-      .then((response) => response.text())
-      .then((xmlText) => {
+    // Fetch both feed and summaries
+    Promise.all([
+      fetch(feedUrl).then((response) => response.text()),
+      fetch(summariesUrl)
+        .then((response) => response.json())
+        .catch(() => {
+          console.warn("No summaries file found, using empty excerpts");
+          return {};
+        }),
+    ])
+      .then(([xmlText, summaries]) => {
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(xmlText, "text/xml");
 
@@ -26,13 +35,12 @@ function NewsRssFeed() {
             const publishedEl = entry.querySelector("published");
             const published_at = publishedEl ? publishedEl.textContent : "";
 
-            // Extract summary/excerpt
-            const summaryEl = entry.querySelector("summary");
-            const excerpt = summaryEl ? summaryEl.textContent : "";
-
             // Extract link
             const linkEl = entry.querySelector("link[rel='alternate']");
             const url = linkEl ? linkEl.getAttribute("href") : "";
+
+            // Get summary from summaries JSON, or empty string
+            const excerpt = summaries[url] || "";
 
             // Try to extract featured image from content
             let feature_image = null;
