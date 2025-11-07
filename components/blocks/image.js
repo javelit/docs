@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import styles from "./image.module.css";
 
-const Image = ({ caption, pure, src, alt, clean, frame }) => {
+const Image = ({ caption, pure, src, alt, clean, frame, no_modal }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -71,6 +71,18 @@ const Image = ({ caption, pure, src, alt, clean, frame }) => {
     block = (
       <section>
         <img onClick={openModal} src={src} alt={alt} className={captionClass} />
+        {customCaption}
+      </section>
+    );
+  } else if (no_modal) {
+    block = (
+      <section>
+        <img
+          src={src}
+          alt={alt}
+          className={captionClass}
+          style={{ height: "100%", maxHeight: "300px" }}
+        />
         {customCaption}
       </section>
     );

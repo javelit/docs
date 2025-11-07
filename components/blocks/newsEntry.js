@@ -25,7 +25,7 @@ const NewsEntry = ({ date, title, text, link, image, target }) => {
     <article
       className={classNames(styles.Container, image && styles.flexContainer)}
     >
-      {image && <Image src={image} clean={true} />}
+      {image && <Image src={image} no_modal={true} />}
       <div className={styles.TextContainer}>
         <time className={styles.Date} dateTime="date">
           {niceDate(date)}
