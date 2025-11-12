@@ -258,7 +258,7 @@ export default function Home({ window, menu }) {
             </TileContainer>
             */}
 
-            <H2 className="no-b-m">Latest news from the Dev Diary</H2>
+            <H2 className="no-b-m mt-0">Latest news from the Dev Diary</H2>
             <NewsContainer>
               {/* previous from streamlit, using ghost <NewsFeed /> */}
               {/* Javelit one using RSS feed from Hey World */}
