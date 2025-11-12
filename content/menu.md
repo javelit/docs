@@ -1281,6 +1281,8 @@ site_menu:
     ignore: true
   - category: Deploy / Railway
     url: /deploy/railway
+  - category: Deploy / Embed your app
+    url: /deploy/embed-your-app
   - category: Deploy / Snowflake
     url: /deploy/snowflake
     ignore: true

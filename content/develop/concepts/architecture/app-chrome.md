@@ -34,6 +34,9 @@ As a shortcut, without opening the app menu, you can rerun your app by pressing 
 keyboard (if you aren't currently focused on an input element).
 */}
 
+### Get embed code
+Get an html snippet to embed your Javelit app in your own website. Learn more in the [embed your app](/deploy/embed-your-app) page.  
+
 ### Settings
 
 With the "**Settings**" option, you can control the appearance of your app while it is running. 
