@@ -530,11 +530,9 @@ site_menu:
     url: /develop/api-reference/widgets/jt.textinput
     isVersioned: true
   - category: Develop / API reference / Input widgets / MEDIA AND FILES
-  - category: Develop / API reference / Input widgets / st.audio_input
-    url: /develop/api-reference/widgets/st.audio_input
+  - category: Develop / API reference / Input widgets / Jt.audioInput
+    url: /develop/api-reference/widgets/jt.audioinput
     isVersioned: true
-    visible: false
-    ignore: true
   - category: Develop / API reference / Input widgets / st.camera_input
     url: /develop/api-reference/widgets/st.camera_input
     isVersioned: true

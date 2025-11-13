@@ -360,8 +360,7 @@ if prompt:
 
 <TileContainer>
 
-{/*
-<RefCard href="/develop/api-reference/widgets/st.audio_input">
+<RefCard href="/develop/api-reference/widgets/jt.audioinput">
 
 <Image pure alt="screenshot" src="/images/api/audio_input.jpg" />
 
@@ -370,10 +369,12 @@ if prompt:
 Display a widget that allows users to record with their microphone.
 
 ```java
-speech = st.audio_input("Record a voice message")
+speech = Jt.audioInput("Record a voice message").use();
 ```
 
 </RefCard>
+
+{/*
 <RefCard href="/develop/api-reference/data/st.data_editor">
 
 <Image pure alt="screenshot" src="/images/api/data_editor.jpg" />

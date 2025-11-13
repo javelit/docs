@@ -1,8 +1,7 @@
 ---
-title: st.audio_input
-slug: /develop/api-reference/widgets/st.audio_input
-description: st.audio_input displays a widget to upload audio from a microphone
-ignore: true
+title: Jt.audioInput
+slug: /develop/api-reference/widgets/jt.audioinput
+description: Jt.audioInput displays a widget to upload audio from a microphone
 ---
 
-<Autofunction function="streamlit.audio_input" oldName="streamlit.experimental_audio_input" />
+<Autofunction function="Jt.audioInput" />
