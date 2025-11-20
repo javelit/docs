@@ -20,6 +20,19 @@ jbang app install --force io.javelit:javelit:${JEAMLIT_VERSION}:all@fatjar
 ```
 </Collapse>
 
+<Collapse title="How can I run Javelit on a subpath, behind a proxy ?" expanded={false} >
+Javelit expects to be served at the root "/" of a domain. This is important for the websocket, media and page urls.
+If Javelit is served behind a proxy on a sub-path, for instance `example.com/behind/proxy`:
+- if the proxy sets the `X-Forwarded-Prefix` header, Javelit will work with no additional configuration
+- if the header above is not set, you need to pass the `--base-path` flag manually:
+   - Standalone, in Javelit CLI: `javelit run --base-path=/behind/proxy ...`.
+   - Embedded, programmatically: `Server.builder(...).basePath("/behind/proxy").build()`.
+
+If `--base-path` is set and you need to access the app on localhost directly (not behind the proxy) pass the `?ignoreBasePath=true` query parameter.  
+Example: `localhost:8080/?ignoreBasePath=true`.
+In dev mode, the browser automatically opens with `?ignoreBasePath=true`.
+</Collapse>
+
 {/*
 
 Here are some frequently asked questions about using Streamlit. If you feel something important is missing that everyone needs to know, please [open an issue](https://github.com/streamlit/docs/issues) or [submit a pull request](https://github.com/streamlit/docs/pulls) and we'll be happy to review it!
