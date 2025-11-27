@@ -33,6 +33,23 @@ Example: `localhost:8080/?ignoreBasePath=true`.
 In dev mode, the browser automatically opens with `?ignoreBasePath=true`.
 </Collapse>
 
+<Collapse title="How can I customize the CSS? How can I use a custom theme? What about dark mode?">
+Dark mode - as in switching between light and dark mode - is not supported yet.  
+You can pass your own custom theme as an `.html` file through custom headers.
+```bash
+javelit run --headers-file custom_theme.html YourApp.java
+```
+Or embedded:
+```
+Server.builder(....).headersFile(<Path to custom_theme.html>).build().start();
+```
+You can find example of custom themes in this [folder](https://github.com/javelit/javelit/tree/main/examples/dark_mode).
+If you wish to make an LLM generate a custom theme, provide the [original theme](https://github.com/javelit/javelit/blob/main/src/main/resources/design_system.html.mustache) 
+as input.
+
+For more info, join the discussion in this [thread](https://github.com/javelit/javelit/discussions/39#discussioncomment-14841955).
+</Collapse>
+
 {/*
 
 Here are some frequently asked questions about using Streamlit. If you feel something important is missing that everyone needs to know, please [open an issue](https://github.com/streamlit/docs/issues) or [submit a pull request](https://github.com/streamlit/docs/pulls) and we'll be happy to review it!
