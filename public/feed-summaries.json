@@ -2,5 +2,6 @@
   "https://world.hey.com/cdecatheu/javelit-diary-02-rendering-media-the-good-old-http-way-cda70926": "- Presenting at Devoxx France 2026.\n  - Introducing media components: image, audio and pdf.\n - Under the hood: serving media bytes.",
   "https://world.hey.com/cdecatheu/javelit-diary-01-naming-and-renaming-this-project-cb6994f7": "- Javelit x Google Gemini AI articles by Guillaume Laforge.\n  - Introducing status and header components.\n - Under the hood: naming this project.",
   "https://world.hey.com/cdecatheu/javelit-diary-00-building-a-roadmap-as-a-late-mover-32be2b52": "- Feedbacks from the Reddit community.\n  - Introducing Javelit: 30+ components, multipage and forms.\n - Under the hood: roadmap and feature prioritization.",
-  "https://world.hey.com/cdecatheu/introducing-javelit-8b1ccb18": ""
+  "https://world.hey.com/cdecatheu/introducing-javelit-8b1ccb18": "",
+  "https://world.hey.com/cdecatheu/javelit-diary-03-one-click-deploy-javelit-apps-everywhere-23198775": "- First (mini) meetup in Paris\n- Introducing one-click deploy with Railway\n- Under the hood: Javelit Playground and live apps alongside doc examples"
 }

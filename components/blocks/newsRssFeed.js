@@ -42,15 +42,20 @@ function NewsRssFeed() {
             // Get summary from summaries JSON, or empty string
             const excerpt = summaries[url] || "";
 
-            // Try to extract featured image from content
+            // Try to extract featured image from content (skip GIFs)
             let feature_image = null;
             const contentEl = entry.querySelector("content");
             if (contentEl) {
               const content = contentEl.textContent;
-              // Look for img tags in the content
-              const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
-              if (imgMatch) {
-                feature_image = imgMatch[1];
+              // Find all img tags in the content
+              const imgMatches = content.matchAll(/<img[^>]+src="([^">]+)"/g);
+              // Find first non-GIF image
+              for (const match of imgMatches) {
+                const src = match[1];
+                if (!src.toLowerCase().includes(".gif")) {
+                  feature_image = src;
+                  break;
+                }
               }
             }
 
