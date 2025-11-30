@@ -4,11 +4,11 @@
   <link rel="alternate" type="text/html" href="https://world.hey.com/cdecatheu"/>
   <link rel="self" type="application/atom+xml" href="https://world.hey.com/cdecatheu/feed.atom"/>
   <title>Cyril de Catheu</title>
-  <updated>2025-11-28T14:03:09Z</updated>
+  <updated>2025-11-28T14:30:26Z</updated>
   <entry>
     <id>tag:world.hey.com,2005:World::Post/45885</id>
     <published>2025-11-28T10:13:53Z</published>
-    <updated>2025-11-28T14:03:09Z</updated>
+    <updated>2025-11-28T14:30:25Z</updated>
     <link rel="alternate" type="text/html" href="https://world.hey.com/cdecatheu/javelit-diary-03-one-click-deploy-javelit-apps-everywhere-23198775"/>
     <title>Javelit Diary #03 - One-click deploy, Javelit apps everywhere</title>
     <content type="html">&lt;div class="trix-content"&gt;
@@ -24,7 +24,7 @@
       &lt;a download="embedded_apps_in_docs_2.png" title="Download embedded_apps_in_docs_2.png" data-click-proxy-target="lightbox_link_blob_2356303834" href="https://world.hey.com/cdecatheu/23198775/blobs/eyJfcmFpbHMiOnsiZGF0YSI6MjM1NjMwMzgzNCwicHVyIjoiYmxvYl9pZCJ9fQ--f549f6af0187b5e3c2f10e973fc06873399c4a6eaab452b93b07de7fed98bab8/embedded_apps_in_docs_2.png?disposition=attachment"&gt;
         &lt;img src="https://world.hey.com/cdecatheu/23198775/representations/eyJfcmFpbHMiOnsiZGF0YSI6MjM1NjMwMzgzNCwicHVyIjoiYmxvYl9pZCJ9fQ--f549f6af0187b5e3c2f10e973fc06873399c4a6eaab452b93b07de7fed98bab8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszODQwLDI1NjBdLCJxdWFsaXR5Ijo2MCwibG9hZGVyIjp7InBhZ2UiOm51bGx9LCJjb2FsZXNjZSI6dHJ1ZX0sInB1ciI6InZhcmlhdGlvbiJ9fQ--7edc7b21f6fad97fa22412618822c4d19725431f296c7ce47dc174b61535d27c/embedded_apps_in_docs_2.png" alt="embedded_apps_in_docs_2.png" decoding="async" loading="lazy"&gt;
 &lt;/a&gt;
-  &lt;/figure&gt;&lt;br&gt;&lt;br&gt;I currently have 85 Javelit apps deployed on Railway. &lt;br&gt;Here's an extract of how it looks for API reference apps: &lt;br&gt;  &lt;figure class="attachment attachment--preview attachment--lightboxable attachment--png"&gt;
+  &lt;/figure&gt;&lt;br&gt;&lt;br&gt;I currently have 85 Javelit apps deployed on Railway. &lt;br&gt;Here's an extract of how it looks for doc apps: &lt;br&gt;  &lt;figure class="attachment attachment--preview attachment--lightboxable attachment--png"&gt;
       &lt;a download="Screenshot 2025-11-28 at 10.52.49.png" title="Download Screenshot 2025-11-28 at 10.52.49.png" data-click-proxy-target="lightbox_link_blob_2356307331" href="https://world.hey.com/cdecatheu/23198775/blobs/eyJfcmFpbHMiOnsiZGF0YSI6MjM1NjMwNzMzMSwicHVyIjoiYmxvYl9pZCJ9fQ--3cfcf089ec17018e936ba1d81e2ebc69204cc2555a947998f3b92e15a3b4e7dc/Screenshot%202025-11-28%20at%2010.52.49.png?disposition=attachment"&gt;
         &lt;img src="https://world.hey.com/cdecatheu/23198775/representations/eyJfcmFpbHMiOnsiZGF0YSI6MjM1NjMwNzMzMSwicHVyIjoiYmxvYl9pZCJ9fQ--3cfcf089ec17018e936ba1d81e2ebc69204cc2555a947998f3b92e15a3b4e7dc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszODQwLDI1NjBdLCJxdWFsaXR5Ijo2MCwibG9hZGVyIjp7InBhZ2UiOm51bGx9LCJjb2FsZXNjZSI6dHJ1ZX0sInB1ciI6InZhcmlhdGlvbiJ9fQ--7edc7b21f6fad97fa22412618822c4d19725431f296c7ce47dc174b61535d27c/Screenshot%202025-11-28%20at%2010.52.49.png" alt="Screenshot 2025-11-28 at 10.52.49.png" decoding="async" loading="lazy"&gt;
 &lt;/a&gt;
