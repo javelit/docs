@@ -9,7 +9,7 @@ const SocialCallout = () => {
         <li className={`group ${styles.ListItem}`}>
           <a
             className={`${styles.Link} not-link`}
-            href="https://github.com/streamlit"
+            href="https://github.com/javelit/javelit"
             target="_blank"
           >
             <div className={`${styles.IconContainer} ${styles.GitHub}`}>
