@@ -63,7 +63,9 @@ the same page, you will get a `DuplicateWidgetIDException` error. In this case, 
 
 <Note>
 
-**Widgets vs Display Components**: The `DuplicateWidgetIDException` only applies to **interactive widgets** that maintain state (buttons, inputs, sliders, etc.). Display-only components like `Jt.text()`, `Jt.markdown()`, `Jt.divider()`, `Jt.image()` can be used multiple times without unique keys since they don't maintain state.
+**Widgets vs Display Components**  
+The `DuplicateWidgetIDException` only applies to **interactive widgets** that maintain state (buttons, inputs, sliders, etc.) and **layouts** (columns, tabs, etc...). 
+Display-only components like `Jt.text()`, `Jt.markdown()`, `Jt.divider()`, `Jt.image()` can be used multiple times without unique keys since they don't maintain state.
 
 </Note>
 

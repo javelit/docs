@@ -237,7 +237,7 @@ public class TestApp {
         Jt.sessionState().computeIfAbsent("name", k -> "John Doe");
 
         // First text - shows old value before button updates
-        Jt.markdown(Jt.sessionState().getString("name")).key("before").use();
+        Jt.markdown(Jt.sessionState().getString("name")).use();
 
         if (Jt.button("Jane").use()) {
             Jt.sessionState().put("name", "Jane Doe");
@@ -248,7 +248,7 @@ public class TestApp {
         }
 
         // Second text - shows updated value after button updates
-        Jt.markdown(Jt.sessionState().getString("name")).key("after").use();
+        Jt.markdown(Jt.sessionState().getString("name")).use();
     }
 }
 ```
@@ -266,7 +266,7 @@ public class App {
         Jt.sessionState().computeIfAbsent("name", k -> "John Doe");
 
         // Both texts show the same value because callbacks run before the app reruns
-        Jt.markdown(Jt.sessionState().getString("name")).key("before").use();
+        Jt.markdown(Jt.sessionState().getString("name")).use();
 
         Jt.button("Jane")
                 .onClick(b -> Jt.sessionState().put("name", "Jane Doe"))
@@ -275,7 +275,7 @@ public class App {
                 .onClick(b -> Jt.sessionState().put("name", "John Doe"))
                 .use();
 
-        Jt.markdown(Jt.sessionState().getString("name")).key("after").use();
+        Jt.markdown(Jt.sessionState().getString("name")).use();
     }
 }
 ```
@@ -294,7 +294,7 @@ public class App {
     public static void main(String[] args) {
         Jt.sessionState().computeIfAbsent("name", k -> "John Doe");
 
-        Jt.text(Jt.sessionState().getString("name")).key("before").use();
+        Jt.text(Jt.sessionState().getString("name")).use();
 
         if (Jt.button("Jane").use()) {
             Jt.sessionState().put("name", "Jane Doe");
@@ -306,7 +306,7 @@ public class App {
             Jt.rerun();
         }
 
-        Jt.text(Jt.sessionState().getString("name")).key("after").use();
+        Jt.text(Jt.sessionState().getString("name")).use();
     }
 }
 ```
