@@ -55,18 +55,28 @@ Widget keys serve three purposes:
 2. Enable access of a widget's value through `Jt.componentsState`.
 3. Persist a widget’s value across app reruns, even if the widget isn't called.   
 
-Whenever possible, Javelit updates widgets incrementally on the frontend instead of rebuilding them with each rerun. 
-This means Javelit assigns an ID to each widget from the arguments passed to the widget function. A widget's ID is based 
-on the page it is running in (for multipage apps) and its parameters such as label, min or max value, default value, 
-placeholder text, help text, and key. If you have two widgets of the same type with the same arguments on 
+Whenever possible, Javelit updates widgets incrementally on the frontend instead of rebuilding them with each rerun.
+This means Javelit assigns an ID to each widget from the arguments passed to the widget function. A widget's ID is based
+on the page it is running in (for multipage apps) and its parameters such as label, min or max value, default value,
+placeholder text, help text, and key. If you have two **widgets** of the same type with the same arguments on
 the same page, you will get a `DuplicateWidgetIDException` error. In this case, assign unique keys to the two widgets.
+
+<Note>
+
+**Widgets vs Display Components**: The `DuplicateWidgetIDException` only applies to **interactive widgets** that maintain state (buttons, inputs, sliders, etc.). Display-only components like `Jt.text()`, `Jt.markdown()`, `Jt.divider()`, `Jt.image()` can be used multiple times without unique keys since they don't maintain state.
+
+</Note>
 
 #### Javelit can't understand two identical widgets on the same page
 
 ```java
-// This will throw a DuplicateWidgetIDException.
+// This will throw a DuplicateWidgetIDException (buttons are widgets).
 Jt.button("OK").use();
 Jt.button("OK").use();
+
+// But this is perfectly fine (text is display-only):
+Jt.text("Welcome").use();
+Jt.text("Welcome").use();
 ```
 
 #### Use keys to distinguish otherwise identical widgets
